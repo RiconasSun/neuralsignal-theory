@@ -1,0 +1,21 @@
+{
+  "status": "FROZEN_BEFORE_MODEL_FITTING_AND_VALIDATION_SCORING",
+  "covariates": "same combined task/timing/strictly-causal history/drift Poisson GLM offsets in every family; validation one-SE choice among M3 combined ridge candidates; coefficients fitted training only, counted as fitted parameters",
+  "discrete": "Poisson HMM; train EM exact forward-backward; state-specific unit intercepts plus common offset",
+  "continuous": "Poisson linear Gaussian latent dynamics; fixed initial N(0,I), fixed process covariance I, fitted full A and observation C/intercept; exp log link",
+  "hybrid": "switching linear Gaussian latent dynamics with Markov discrete states, state-specific A and intercept, shared C, fixed initial N(0,I)/process covariance I",
+  "latent_fit": "Gaussian-chain/discrete-chain mean-field variational EM with analytic expected Poisson log likelihood; Laplace covariance fixed-point updates; ELBO only training objective, never predictive endpoint",
+  "initialization": "training residual log(count+0.5) SVD for latent initialization only; real likelihood remains Poisson; identical seeds from M0",
+  "training_iterations": 500,
+  "tolerance_nats_per_unit_bin": 0.00001,
+  "convergence": "five consecutive finite objective changes below tolerance; required candidate/seed failure stops before final test access",
+  "numerical": "transition probabilities floored1e-12 and renormalized; emission weighted M-step ridge1e-6; A M-step ridge1e-6; no validation-driven numerical repair or family removal",
+  "metric": "joint population count predictive log likelihood integrated before any current-bin assimilation; normalize by identical observed unit-bins",
+  "inference": "exact HMM filter; bootstrap joint state/latent particle filter for continuous/hybrid, trials reset; systematic resampling after scoring each bin",
+  "mc_budgets": [64, 256, 1024],
+  "accuracy_validation": "independent repeated particle estimates plus higher-budget reference; reference16384 and32768 with4 independent seeds, compare errors and repeat SE; reference uncertainty and candidate total conservative discrepancy <=0.001 nats/unit-bin required; otherwise INCONCLUSIVE and scientific gate FAIL",
+  "selection": "training-converged models only; whole-validation-trial one-SE selection using fitted free parameter count, then dimension/state count; final holdout requires frozen all selections and estimator accuracy PASS",
+  "free_parameters": "all training-fitted common GLM coefficients plus HMM K*U+K*(K-1)+(K-1); continuous U*D+U+D*D; hybrid U*D+K*U+K*D*D+K*(K-1)+(K-1). Fixed covariances excluded; raw fitted parameter counts, rotation nonidentifiability disclosed",
+  "external_identity": "no persistent neuron or learned emission transfer across sessions",
+  "dependencies": {"numpy": "2.4.6", "scipy": "1.17.1"}
+}

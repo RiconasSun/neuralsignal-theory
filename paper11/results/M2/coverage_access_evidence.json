@@ -1,0 +1,23 @@
+{
+  "checked_at_utc": "2026-10-11T04:58:58Z",
+  "method": "curl.exe -I -L --max-time 30; no signal response body downloaded",
+  "requests": [
+    {"url": "https://gin.g-node.org/USZ_NCH/Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/raw/0b27b34ecd0da217e4403bdd080b4a0d78f155fd/data_nix/Data_Subject_01_Session_01.h5", "status": 403},
+    {"url": "https://gin.g-node.org/doi/Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/raw/master/data_nix/Data_Subject_01_Session_01.h5", "status": 403},
+    {"url": "https://gin.g-node.org/USZ_NCH/Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/raw/master/data_nix/Data_Subject_01_Session_01.h5", "status": 403}
+  ],
+  "local_nix_files_found": 0,
+  "selected_sessions_missing_coverage_sources": 23,
+  "alternative_checks": [
+    "Pinned Git tree contains no exact per-unit trial-array coverage inventory.",
+    "Pinned converter marks array existence before spike iteration, so empty arrays can mean observed zeros; cardinality alone cannot establish exact trial membership.",
+    "NEMAR availability-report.json says complete=false and files_present=0, not a verified coverage substitute.",
+    "Pinned NEMAR .nemar/metadata.json offers no documented independent coverage inventory or direct storage mirror.",
+    "The Git blob for Data_Subject_01_Session_01.h5 is a 103-byte annex pointer, not neural signal data.",
+    "OpenNeuro companion iEEG trial/electrode metadata cannot establish microwire unit-array coverage.",
+    "DANDI different-task data cannot replace the frozen primary dataset."
+  ],
+  "restoration": "Provide checksum-matching original NIX files in paper11/raw/NIX using acquired *_sessions.tsv names/checksums; run metadata-only audit and M2 reproduction before M3.",
+  "alternative": "An authoritative exact unit/trial-array inventory bound to original checksums could avoid full raw acquisition, but requires a separately documented validator; no inventory is invented here.",
+  "holdout_timestamp_values_read": false
+}

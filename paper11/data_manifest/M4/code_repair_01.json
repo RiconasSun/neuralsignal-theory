@@ -1,0 +1,12 @@
+{
+  "classification": "SEMANTICALLY_EQUIVALENT_OUTPUT_REPAIR",
+  "failure": "NumPy bool scalar in model convergence field was not JSON serializable; no model results or scientific gate emitted",
+  "repair": "Convert NumPy scalar fields to Python scalars; preserve stderr in PowerShell; catch serialization errors for fail-closed evidence",
+  "scientific_contract_changes": [],
+  "model_validation_scores_emitted_before_repair": 0,
+  "final_test_count_access": false,
+  "original_contract_preserved": "model_contract_lock.json",
+  "repaired_source_binding": "model_contract_lock.v2.json",
+  "negative_evidence": "paper11/results/M4/attempts/serialization/",
+  "regression": "test_numpy_scalar_serialization"
+}

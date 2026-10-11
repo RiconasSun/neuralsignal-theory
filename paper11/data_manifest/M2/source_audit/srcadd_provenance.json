@@ -1,0 +1,607 @@
+{
+ "created": "2026-10-07",
+ "tool": "harness/srcadd_stage.py",
+ "note": "G-Node GIN repository doi:10.12751/g-node.d76994 (Boran et al., Human MTL units, scalp EEG and iEEG, verbal working memory), CC BY-SA 4.0, commit 2019-12-04 (git metadata not copied). Files byte for byte except: NIX/HDF5 object timestamps (created_at/updated_at, export times Nov-Dec 2019) day-of-month masked to 01 (attributes only; no data array changed).",
+ "mat_header_rule": "MAT-file header 'Created on' weekday -> '---', day-of-month -> 01; no other byte changed",
+ "sources": [
+  {
+   "src": "LICENSE",
+   "bytes": 14442,
+   "sha256": "4fb9ea6c63f9a441416ba4110e111be34b4b0e3fcda5b39387e1f288705f31d0",
+   "mode": "copy"
+  },
+  {
+   "src": "NIX_File_Structure.pdf",
+   "bytes": 15759,
+   "sha256": "aab82f0c67e0dff461fb115b57d0721d7d4f8cd72f7eee7aee3f501393bc6c75",
+   "mode": "copy"
+  },
+  {
+   "src": "README.md",
+   "bytes": 4577,
+   "sha256": "e3375798891e2444c61db0b0bd5616ad5a62f6828691e7d97ca711ff2f81ddd1",
+   "mode": "copy"
+  },
+  {
+   "src": "Subject_Characteristics.pdf",
+   "bytes": 6505,
+   "sha256": "60d2dec69b7ad8aa4440a9d11bd4b80319ec93eb04e87284f66a6f2db1886381",
+   "mode": "copy"
+  },
+  {
+   "src": "Load_Data_Example_Script.m",
+   "bytes": 9157,
+   "sha256": "ee85c9be9d7893cfcf59e7acce332ae67c0468d1591818367035553d3d050c87",
+   "mode": "copy"
+  },
+  {
+   "src": "datacite.yml",
+   "bytes": 4645,
+   "sha256": "a7a78f013b5d5832f6fe321017f0e7d7d3c3f01ec3018c71a574a7baf50a6927",
+   "mode": "copy"
+  },
+  {
+   "src": "Data_Subject_01_Session_01.h5",
+   "bytes": 410499073,
+   "sha256": "625c36b87b9558ac7d5ed64f1d3e6fd6f3fe39ede3358e86bb5007f858ee0e92",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_01_Session_02.h5",
+   "bytes": 400978077,
+   "sha256": "b8c87c9fd0ed8c2ede11b5a363b3e6f408b59d90e5de3f7a6b1e34ce0d03f3d9",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_01_Session_03.h5",
+   "bytes": 350691220,
+   "sha256": "07ba969f32d560b907bc3a8f2dc701676f83687cc515facf5058365977d2adc8",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_01_Session_04.h5",
+   "bytes": 350691300,
+   "sha256": "a9f81b50a6d3bf8af1bd9c4b7d1a7714f83251cf6460a52c8e4bea1db2fb6302",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_02_Session_01.h5",
+   "bytes": 549350502,
+   "sha256": "65789f65d32dc57a124dc034b890f2e46687c3d182765ed23c341f0297b2bef2",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_02_Session_02.h5",
+   "bytes": 543058297,
+   "sha256": "e2d5db8efca44d29ac72cc7b14ff28475521600a3b82a69be2f12e1136e62f8e",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_02_Session_03.h5",
+   "bytes": 512607442,
+   "sha256": "a82a9e7adda779a5e4b286b48430cf8f20f72498e4c21800cde5c80e85724280",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_02_Session_04.h5",
+   "bytes": 506955128,
+   "sha256": "79d061abc2b30ebab44a2496516ca8cc25cf55cb557b4179124451087c0304d1",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_02_Session_05.h5",
+   "bytes": 432983632,
+   "sha256": "7382c7f99dd767c93ba8809800d1d3c493682a81763cd36426c6b648b5406598",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_02_Session_06.h5",
+   "bytes": 466230060,
+   "sha256": "280fe9623dc44ea1717be546efb27fd5f7527419d497a4efdb9cd1781caf1869",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_02_Session_07.h5",
+   "bytes": 461134282,
+   "sha256": "2e4f2583e629edd0fccef333b3bf6441db3a685a2a29f9b01907c83ae5369871",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_03_Session_01.h5",
+   "bytes": 296073321,
+   "sha256": "d7b011d5f24aaf11db60e8a984ea323dbc72ee17b0d5679da6601989838af2b5",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_03_Session_02.h5",
+   "bytes": 322784157,
+   "sha256": "9d5afa6f1a97ab21878c5737509e3a5d162a9491e10262236e5bbef238a34a01",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_03_Session_03.h5",
+   "bytes": 325530310,
+   "sha256": "f8266dab98b225a8fcf3f188a16cad8b4f650100e67593ce1e871a205b897271",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_04_Session_01.h5",
+   "bytes": 660963000,
+   "sha256": "33207f2a0c981e63c9b265a3b483d588d2ac1744d626c82203a6152c2cf8551a",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_04_Session_02.h5",
+   "bytes": 668238184,
+   "sha256": "87899921b72cc03e9e5f3af98568f9bf5dc5cebcf6ba0def415b8b4b0e077be3",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_05_Session_01.h5",
+   "bytes": 262917168,
+   "sha256": "86a41715b2fae8d55473c8de2a65b10d54f9d250b9e16c5a3e90a38ac4973ca2",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_05_Session_02.h5",
+   "bytes": 261382061,
+   "sha256": "e9c5524e3ef782915083db2864e92725321dd5c4ef38229d823187e607f6b3e5",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_05_Session_03.h5",
+   "bytes": 259083131,
+   "sha256": "6b1b18c90c8f4a8a5af00d8572c623e5f916a1ae131a7dd3dde4b435b62c3aa6",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_06_Session_01.h5",
+   "bytes": 505929755,
+   "sha256": "4db8348b7ef7c6e9d236617fc50cef427ce26288f1656e3721349a4bb561e975",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_06_Session_02.h5",
+   "bytes": 510372818,
+   "sha256": "c666442aea5b64f812bf5f544b41a9f3e2298c2ddc2169961908918aebd90594",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_06_Session_03.h5",
+   "bytes": 498871030,
+   "sha256": "eed82203e249396e821c6eb380c853bc054ff82d2bd0529ff19912c90ac66b7a",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_06_Session_04.h5",
+   "bytes": 446740947,
+   "sha256": "d7eb827aa0e02a04103e0dc38482d89b1667a05694cb3d971f8dfbf730526951",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_06_Session_05.h5",
+   "bytes": 446740907,
+   "sha256": "bac1d40c0da32ddb3d4450e278fff0120c1701000fe823e374b919a4b6dc31f7",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_06_Session_06.h5",
+   "bytes": 446740355,
+   "sha256": "d1aae765c57fa4ae2feaeb73c28b4160bc608d94680c8f176b46c906990eb579",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_06_Session_07.h5",
+   "bytes": 446741419,
+   "sha256": "6301b2baa87573fdf7bdc9f94997134f9b892164d842f1281ca493cae2d99f3f",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_07_Session_01.h5",
+   "bytes": 436560878,
+   "sha256": "d97b1f8d8a1b1bae0908a3946af97ebc643a21177b3fb14ac0a4d9be71095a00",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_07_Session_02.h5",
+   "bytes": 558641399,
+   "sha256": "5d9fd92b18f6c54f3bc478909c6ba1a01342b21fc1954c2a714840b38ab7f849",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_07_Session_03.h5",
+   "bytes": 537733002,
+   "sha256": "038071bbc9acad4e70c9f38d85e60192bd5e81cd17f964010e672a8b31fa55a3",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_07_Session_04.h5",
+   "bytes": 523039960,
+   "sha256": "c63e97e1d3c8076bd0bfe483f58539ed67faa76fab014911514b97e24d114538",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_08_Session_01.h5",
+   "bytes": 583108837,
+   "sha256": "4d38576782c31995610904d35ae5fd55dc49e28f6e2b5da44e8ed8d54b68b21a",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_08_Session_02.h5",
+   "bytes": 557623416,
+   "sha256": "9d0e6619bf7db351304e0f97eabd7ed2f3d53efde48e37659e4345256456a9c4",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_08_Session_03.h5",
+   "bytes": 559045051,
+   "sha256": "2064259537fd9f4765fe820d30001a0e208f8024d1ad037642f13d1e61fbe6bc",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_08_Session_04.h5",
+   "bytes": 569544702,
+   "sha256": "b83b43b7238287b7294802a8079f4d7564088049141108f70eb5d2e7d80b0e78",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_08_Session_05.h5",
+   "bytes": 575211229,
+   "sha256": "a5f0dde5ab76c6ebd4ab2d613d21c4a90f132c2b45def1a130406bbfbcb9e424",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_09_Session_01.h5",
+   "bytes": 521116846,
+   "sha256": "c902afe026d54c55c5d8f14c9020b46263d498c3aa4417bb5dce15fc17373857",
+   "mode": "copy_nixmask"
+  },
+  {
+   "src": "Data_Subject_09_Session_02.h5",
+   "bytes": 533291779,
+   "sha256": "db6cfb10398516d59ba37da0fa0a16eda827d77264052ae65580f2a2930cb5f8",
+   "mode": "copy_nixmask"
+  }
+ ],
+ "files": [
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/LICENSE",
+   "bytes": 14442,
+   "sha256_original": "4fb9ea6c63f9a441416ba4110e111be34b4b0e3fcda5b39387e1f288705f31d0",
+   "sha256_public": "4fb9ea6c63f9a441416ba4110e111be34b4b0e3fcda5b39387e1f288705f31d0",
+   "mat_header_day_masked": false
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/NIX_File_Structure.pdf",
+   "bytes": 15759,
+   "sha256_original": "aab82f0c67e0dff461fb115b57d0721d7d4f8cd72f7eee7aee3f501393bc6c75",
+   "sha256_public": "aab82f0c67e0dff461fb115b57d0721d7d4f8cd72f7eee7aee3f501393bc6c75",
+   "mat_header_day_masked": false
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/README.md",
+   "bytes": 4577,
+   "sha256_original": "e3375798891e2444c61db0b0bd5616ad5a62f6828691e7d97ca711ff2f81ddd1",
+   "sha256_public": "e3375798891e2444c61db0b0bd5616ad5a62f6828691e7d97ca711ff2f81ddd1",
+   "mat_header_day_masked": false
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/Subject_Characteristics.pdf",
+   "bytes": 6505,
+   "sha256_original": "60d2dec69b7ad8aa4440a9d11bd4b80319ec93eb04e87284f66a6f2db1886381",
+   "sha256_public": "60d2dec69b7ad8aa4440a9d11bd4b80319ec93eb04e87284f66a6f2db1886381",
+   "mat_header_day_masked": false
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/code_MATLAB/Load_Data_Example_Script.m",
+   "bytes": 9157,
+   "sha256_original": "ee85c9be9d7893cfcf59e7acce332ae67c0468d1591818367035553d3d050c87",
+   "sha256_public": "ee85c9be9d7893cfcf59e7acce332ae67c0468d1591818367035553d3d050c87",
+   "mat_header_day_masked": false
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/datacite.yml",
+   "bytes": 4645,
+   "sha256_original": "a7a78f013b5d5832f6fe321017f0e7d7d3c3f01ec3018c71a574a7baf50a6927",
+   "sha256_public": "a7a78f013b5d5832f6fe321017f0e7d7d3c3f01ec3018c71a574a7baf50a6927",
+   "mat_header_day_masked": false
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_01_Session_01.h5",
+   "bytes": 410499073,
+   "sha256_original": "625c36b87b9558ac7d5ed64f1d3e6fd6f3fe39ede3358e86bb5007f858ee0e92",
+   "sha256_public": "9e3a396fa264af81a289cff1413ff6ea93b9d6a238639e210ed90a12be43ef5a",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 14154
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_01_Session_02.h5",
+   "bytes": 400978077,
+   "sha256_original": "b8c87c9fd0ed8c2ede11b5a363b3e6f408b59d90e5de3f7a6b1e34ce0d03f3d9",
+   "sha256_public": "73489433d4e5e1640ac6b402de4da0aee26e698ddb65fef8836e61c4ccf3d9ed",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 12342
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_01_Session_03.h5",
+   "bytes": 350691220,
+   "sha256_original": "07ba969f32d560b907bc3a8f2dc701676f83687cc515facf5058365977d2adc8",
+   "sha256_public": "1f5c278a7e86e9b65c377b90aa9a6711e8acd4a2639d24905411a7036fd52dec",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 2480
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_01_Session_04.h5",
+   "bytes": 350691300,
+   "sha256_original": "a9f81b50a6d3bf8af1bd9c4b7d1a7714f83251cf6460a52c8e4bea1db2fb6302",
+   "sha256_public": "e3b121bbd8fe29ba3a43297fa515a073237aa0d7f59467d77b5116e6825250bf",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 2480
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_02_Session_01.h5",
+   "bytes": 549350502,
+   "sha256_original": "65789f65d32dc57a124dc034b890f2e46687c3d182765ed23c341f0297b2bef2",
+   "sha256_public": "f6351a9db5a96e601cb9469bb9125ec6686e7630f2586cea1da12e594dbec101",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 24040
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_02_Session_02.h5",
+   "bytes": 543058297,
+   "sha256_original": "e2d5db8efca44d29ac72cc7b14ff28475521600a3b82a69be2f12e1136e62f8e",
+   "sha256_public": "416c79267a96e56b20d074b3426251fa0127c6b0422f6804950bfdae8d495506",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 26208
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_02_Session_03.h5",
+   "bytes": 512607442,
+   "sha256_original": "a82a9e7adda779a5e4b286b48430cf8f20f72498e4c21800cde5c80e85724280",
+   "sha256_public": "72fa6cfd0f80377ef5d340561e2fbd5e7dc077468dd33c01d4e25337cc29a6f8",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 15458
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_02_Session_04.h5",
+   "bytes": 506955128,
+   "sha256_original": "79d061abc2b30ebab44a2496516ca8cc25cf55cb557b4179124451087c0304d1",
+   "sha256_public": "49a9b11382fc5288ca7c9c5284f328f26ec1e37a13a50754d93bacb539d4a57e",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 17762
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_02_Session_05.h5",
+   "bytes": 432983632,
+   "sha256_original": "7382c7f99dd767c93ba8809800d1d3c493682a81763cd36426c6b648b5406598",
+   "sha256_public": "52af867d7db14a5c3866780fe763b0651ea5ef3749028d8d11c7b8e5b57f6ff9",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 7872
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_02_Session_06.h5",
+   "bytes": 466230060,
+   "sha256_original": "280fe9623dc44ea1717be546efb27fd5f7527419d497a4efdb9cd1781caf1869",
+   "sha256_public": "43d1de300689d09b7e71985786162e0226c5195639f1456db093d5efb9e1f68b",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 8512
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_02_Session_07.h5",
+   "bytes": 461134282,
+   "sha256_original": "2e4f2583e629edd0fccef333b3bf6441db3a685a2a29f9b01907c83ae5369871",
+   "sha256_public": "4792e454a8735724aed07ae8d9e3d45580d1ba8657b00c136641a3b45d230ea0",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 8352
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_03_Session_01.h5",
+   "bytes": 296073321,
+   "sha256_original": "d7b011d5f24aaf11db60e8a984ea323dbc72ee17b0d5679da6601989838af2b5",
+   "sha256_public": "deaa76c15ebd65ab457e52fc2f6bae053b0af3b6591a4285c4f4e09f630f2e12",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 7320
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_03_Session_02.h5",
+   "bytes": 322784157,
+   "sha256_original": "9d5afa6f1a97ab21878c5737509e3a5d162a9491e10262236e5bbef238a34a01",
+   "sha256_public": "bbc6ba69213abc1597ba5f254d4899564eb73f3e88b86e754dc220c2a493aea9",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 8972
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_03_Session_03.h5",
+   "bytes": 325530310,
+   "sha256_original": "f8266dab98b225a8fcf3f188a16cad8b4f650100e67593ce1e871a205b897271",
+   "sha256_public": "193dab9ebe14fd57d6ff1d3bf4657850e8316c08ac3d4f2c8f11b01aa45aee7a",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 9878
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_04_Session_01.h5",
+   "bytes": 660963000,
+   "sha256_original": "33207f2a0c981e63c9b265a3b483d588d2ac1744d626c82203a6152c2cf8551a",
+   "sha256_public": "a5a3141990d70d485cfcc783ba28a75448627eba754d35b3d0e551fa4ece9e93",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 44168
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_04_Session_02.h5",
+   "bytes": 668238184,
+   "sha256_original": "87899921b72cc03e9e5f3af98568f9bf5dc5cebcf6ba0def415b8b4b0e077be3",
+   "sha256_public": "a30ecb0b3136d6607226acc68b6af4ce285fa0317b50f9c4c6a5d839e1c1a9fe",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 44148
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_05_Session_01.h5",
+   "bytes": 262917168,
+   "sha256_original": "86a41715b2fae8d55473c8de2a65b10d54f9d250b9e16c5a3e90a38ac4973ca2",
+   "sha256_public": "4102175d94c9c447a20b1e2350e42ee584eeac4ebdcfc929b184e8177727da76",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 4696
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_05_Session_02.h5",
+   "bytes": 261382061,
+   "sha256_original": "e9c5524e3ef782915083db2864e92725321dd5c4ef38229d823187e607f6b3e5",
+   "sha256_public": "25f20aadb66ad2ecc2a1fa2f3146731abdf0fc446b703e19ce077fb684126301",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 4092
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_05_Session_03.h5",
+   "bytes": 259083131,
+   "sha256_original": "6b1b18c90c8f4a8a5af00d8572c623e5f916a1ae131a7dd3dde4b435b62c3aa6",
+   "sha256_public": "51a1f87f2f3de0da27b6262d1326cc2b89831ffbd7df704755360aa28900c32a",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 3186
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_06_Session_01.h5",
+   "bytes": 505929755,
+   "sha256_original": "4db8348b7ef7c6e9d236617fc50cef427ce26288f1656e3721349a4bb561e975",
+   "sha256_public": "203bc4df8d4b3b7b669e096f303759896a0ee73fa4bd80d7205d61cb46c9be52",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 14250
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_06_Session_02.h5",
+   "bytes": 510372818,
+   "sha256_original": "c666442aea5b64f812bf5f544b41a9f3e2298c2ddc2169961908918aebd90594",
+   "sha256_public": "3d75a422c21704c9d71da607444fce003b02c80bf1604783e082dff998f3135d",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 15156
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_06_Session_03.h5",
+   "bytes": 498871030,
+   "sha256_original": "eed82203e249396e821c6eb380c853bc054ff82d2bd0529ff19912c90ac66b7a",
+   "sha256_public": "a62e79fb290b9de3e4cfeef48821896da09c9be79f09ec3b762debc8cd17e4e7",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 14568
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_06_Session_04.h5",
+   "bytes": 446740947,
+   "sha256_original": "d7eb827aa0e02a04103e0dc38482d89b1667a05694cb3d971f8dfbf730526951",
+   "sha256_public": "60d20b822d26d4ec40b56cdc31d044e870cb9c6bfb79a75a890ee9147522843f",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 2576
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_06_Session_05.h5",
+   "bytes": 446740907,
+   "sha256_original": "bac1d40c0da32ddb3d4450e278fff0120c1701000fe823e374b919a4b6dc31f7",
+   "sha256_public": "fe2eccf382f224c16b57b6a2d1de0488b787438f1acae65713fcc8e6f3d000a6",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 2576
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_06_Session_06.h5",
+   "bytes": 446740355,
+   "sha256_original": "d1aae765c57fa4ae2feaeb73c28b4160bc608d94680c8f176b46c906990eb579",
+   "sha256_public": "73e9510c4aea7eb4c8e81b11b4e06487ed54497d0cbe6e6cf105a55cbbbc2708",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 2576
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_06_Session_07.h5",
+   "bytes": 446741419,
+   "sha256_original": "6301b2baa87573fdf7bdc9f94997134f9b892164d842f1281ca493cae2d99f3f",
+   "sha256_public": "57a7a5bc42bcc922d67ed9cf7d386fbd7c963f9cf14b8ceb77a1db07166de488",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 2576
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_07_Session_01.h5",
+   "bytes": 436560878,
+   "sha256_original": "d97b1f8d8a1b1bae0908a3946af97ebc643a21177b3fb14ac0a4d9be71095a00",
+   "sha256_public": "53168416d1d1c17245db3a9c79010632876e1c4a442d46ef830d90ca6ca785a8",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 2534
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_07_Session_02.h5",
+   "bytes": 558641399,
+   "sha256_original": "5d9fd92b18f6c54f3bc478909c6ba1a01342b21fc1954c2a714840b38ab7f849",
+   "sha256_public": "ef40551a0bcafbdb4efbec0d30cb40c446fd98e0b8fd6db5298f86ee75299954",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 27622
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_07_Session_03.h5",
+   "bytes": 537733002,
+   "sha256_original": "038071bbc9acad4e70c9f38d85e60192bd5e81cd17f964010e672a8b31fa55a3",
+   "sha256_public": "9dad113da0454e3c9acfd37c22b21a7c92e7d704facf7376f72f166a887f1482",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 20592
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_07_Session_04.h5",
+   "bytes": 523039960,
+   "sha256_original": "c63e97e1d3c8076bd0bfe483f58539ed67faa76fab014911514b97e24d114538",
+   "sha256_public": "073fe3d791892a941d6109a18acdec00684266213b93f55bf6156f80574c2f2d",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 17572
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_08_Session_01.h5",
+   "bytes": 583108837,
+   "sha256_original": "4d38576782c31995610904d35ae5fd55dc49e28f6e2b5da44e8ed8d54b68b21a",
+   "sha256_public": "dd4736ff1ce18366578da6b7c4622d838bc10d4b1ce63f045a653a050cafce3d",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 28734
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_08_Session_02.h5",
+   "bytes": 557623416,
+   "sha256_original": "9d0e6619bf7db351304e0f97eabd7ed2f3d53efde48e37659e4345256456a9c4",
+   "sha256_public": "dccc7daaa896e85d78acb04fbce56bfb70509fb9300b23f2577abfdfcb62ec38",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 23902
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_08_Session_03.h5",
+   "bytes": 559045051,
+   "sha256_original": "2064259537fd9f4765fe820d30001a0e208f8024d1ad037642f13d1e61fbe6bc",
+   "sha256_public": "f8920773f66038aa3c2a4016905d688ad3e0f49839d978a1ef5dddbc3b106b90",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 23902
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_08_Session_04.h5",
+   "bytes": 569544702,
+   "sha256_original": "b83b43b7238287b7294802a8079f4d7564088049141108f70eb5d2e7d80b0e78",
+   "sha256_public": "d27a9c6a2b9f9df63a7cd6b4ce1b811b18dd9e34eb65ef2d43ed0889abec5148",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 26016
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_08_Session_05.h5",
+   "bytes": 575211229,
+   "sha256_original": "a5f0dde5ab76c6ebd4ab2d613d21c4a90f132c2b45def1a130406bbfbcb9e424",
+   "sha256_public": "faaedcee24767177336e3dae86ac2664bfde9de5f109e8116719043ac62fbafe",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 28764
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_09_Session_01.h5",
+   "bytes": 521116846,
+   "sha256_original": "c902afe026d54c55c5d8f14c9020b46263d498c3aa4417bb5dce15fc17373857",
+   "sha256_public": "66477bdf5ab36358b7e3866563c8c90c0fea284f4635c754664aeec31fd8e80c",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 20372
+  },
+  {
+   "path": "sourcedata/gin-USZ_NCH-Human_MTL_units_scalp_EEG_and_iEEG_verbal_WM/data_nix/Data_Subject_09_Session_02.h5",
+   "bytes": 533291779,
+   "sha256_original": "db6cfb10398516d59ba37da0fa0a16eda827d77264052ae65580f2a2930cb5f8",
+   "sha256_public": "104d895dfb20dc61316054a4558ae41bec164207967c2b9a28c430d448561f4f",
+   "mat_header_day_masked": false,
+   "nix_timestamps_day_masked": 21080
+  }
+ ],
+ "excluded": []
+}

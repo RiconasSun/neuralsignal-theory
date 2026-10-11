@@ -1,0 +1,23 @@
+{
+  "mission": {"id": "paper11-m2", "objective": "Implement and execute P11 M2 only: leakage-safe train-only spike-count population features under the frozen protocol."},
+  "target": {"workdir": "C:/Users/85993/Desktop/codebase/neuralsignal institute", "files": ["paper11/scripts/run_m2.py", "paper11/tests/test_m2.py", "paper11/scripts/reproduce-m2.ps1", "paper11/REPRODUCE_M2.md", "paper11/results/M2", "paper11/data_manifest/M2"]},
+  "instructions": {
+    "context": ["M0 and M1 gates PASS. Read protocol, M1 splits/lock, receipts, unit_qc/session_qc and existing scripts before coding. Do not rerun M1 or change its outputs. Main orchestrator owns milestone status and ops files."],
+    "requirements": [
+      "Use apply_patch edits. Stdlib preferred; no environment or dependency changes needed for M2. Validate prior gates and ALL relevant source/input SHA256 identities, M0 verify, M1 actual split and metadata hashes, raw spike receipt hashes and primary unit selection checksum before extraction.",
+      "Generate TRAIN partition counts only, 60 bins per trial [-6,0), 100ms left-closed/right-open, all 613 selected session-local hippocampal units across 23 eligible sessions, keep all zero counts and 0.1s exposure. Read trial_id first and skip non-train rows BEFORE decoding unit or timestamp. Never access validation/test timestamps even for QC. Preserve all frozen files.",
+      "Store per-session train features as deterministic JSON or CSV, IDs/trial/session/hemisphere/macro contact plus task/set-size and phase/time metadata. No response/correctness/reaction-time or future covariates used as predictors. Set-size becomes known ONLY from encoding at -5s, not during fixation. History always resets each trial. No smoothing/scaling/projection.",
+      "Boundary computation must robustly honor decimal 100ms grid including exact boundaries; use Decimal string timestamp indexing if appropriate. Invalid training timestamps fail closed. Aggregate preprobe counts must exactly equal M1 train-spike counts for chosen units. Explicit observation coverage from M1 source array coverage.",
+      "Execute smoke one session, small cohort first two subjects, full eligible cohort in strict order; output real stage QC and integer counts/exposure. Training-only sparsity feasibility review describes observed sparsity and retains frozen 100ms without manufacturing a new sparsity exclusion threshold; no convergence claim before models are fitted.",
+      "Add unit tests for boundaries -6,-5.9,-0.1,0, complete zero arrays, trial reset, malformed heldout timestamps/units ignored, mismatch/hash rejection, real shapes/count conservation and eligibility. Temp tests within workspace. Test fixtures not scientific findings.",
+      "Produce run_m2.py executable, automated tests real tests.txt, execution logs, QC_REPORT.md and qc_report.json, gate_result.json, claim_audit.json, feature manifest SHA256, reproducibility docs and one-command PowerShell runner. Gate must derive from actual checks/tests, not hardcoded PASS. Test subprocess failures FAIL. Record validation/test timestamp access false, scientific verdict NOT_EVALUATED. No M3 or other milestone. Main orchestrator reviews then advances. Do NOT edit MILESTONE_STATUS or ops or git commits.",
+      "Run PowerShell reproduction in staging, then orchestrator reruns in actual workspace. Avoid git-ignored raw acquisition changes. Preserve negative runs. Return changed files and exact execution evidence."
+    ],
+    "constraints": ["No paper1-paper10 changes, M0/M1 source/results/locks mutations, holdout inspection, external calls, simulated findings, downstream model code or scientific verdicts."],
+    "nonGoals": ["M3-M7 execution", "bin width amendment", "iEEG feature pooling"]
+  },
+  "acceptance": {"criteria": ["M2 real training cohort features/tests pass; all count sums match frozen M1 and hashes unchanged; zero heldout count access"], "validation": ["powershell -NoProfile -ExecutionPolicy Bypass -File paper11/scripts/reproduce-m2.ps1"]},
+  "codex": {"sandbox": "workspace-write", "approval": "on-request"},
+  "policy": {"write": {"mode": "strict", "allow": ["paper11/scripts/run_m2.py", "paper11/tests/test_m2.py", "paper11/scripts/reproduce-m2.ps1", "paper11/REPRODUCE_M2.md", "paper11/results/M2/**", "paper11/data_manifest/M2/**"], "allowDelete": false, "maxFilesChanged": 100, "maxBytesChanged": 50000000}},
+  "openrouter": {"enabled": false}
+}

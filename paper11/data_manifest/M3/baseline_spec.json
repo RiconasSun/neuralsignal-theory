@@ -1,0 +1,21 @@
+{
+  "status": "PREPARED_BEFORE_VALIDATION_ACCESS",
+  "primary_bin_ms": 100,
+  "count_likelihood": "joint independent-unit Poisson given causal covariates; normalized by common observed unit-bin mask",
+  "families": ["stationary", "history", "task", "timing", "drift", "combined"],
+  "history_lags_bins": [1, 2, 3, 4, 5],
+  "history_transform": "log1p(count); strictly previous bins, reset every trial",
+  "task": "encoding and maintenance indicators; load-6 indicators interacted with encoding/maintenance, zero during fixation",
+  "timing": "six prespecified harmonics sin/cos over six-second trial and two task-phase indicators",
+  "drift": "recorded trial number/metadata total trials, linear and quadratic; known schedule, no heldout count fitting",
+  "scaling": "training design mean/std only, intercept unscaled, constant column scale1",
+  "ridge_grid": [0.01, 0.1, 1.0, 10.0],
+  "ridge_objective": "sum over units of per-bin mean negative Poisson log likelihood plus alpha/2 times squared nonintercept coefficients; separable per-unit fits",
+  "solver": "scipy L-BFGS-B analytic gradient, maxiter500, ftol1e-12, gtol1e-6; validate finite objective and gradient <=1e-4; any required candidate failure stops gate",
+  "selection": "whole validation trial nats/unit-bin means; standard error of best candidate trial scores; keep candidates >=bestmean-bestSE, prefer fewest fitted parameters then larger ridge then family lexical order",
+  "fit": "all six baselines, no final test access; full training fit per session-local unit; stationary exact MLE",
+  "free_parameters": "one intercept per unit plus all fitted nonintercept coefficients per unit",
+  "scientific_scope": "validation selection only; no inferential family winner or final holdout statistic",
+  "software": {"numpy": "2.4.6", "scipy": "1.17.1"},
+  "execution_prerequisite": "M2 scientific PASS including exact NIX observation coverage"
+}

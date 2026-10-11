@@ -1,0 +1,14 @@
+{
+  "classification": "ACCURACY_ORACLE_BUG_REPAIR",
+  "finding": "Four-run mean and its standard error certified a single run returned for selection",
+  "repair": "Validate actual single-run estimator using worst independent replicate discrepancy and single-run spread; no averaging to exceed frozen per-run particle budget",
+  "budget_changes": [],
+  "tolerance_changes": [],
+  "model_or_covariate_changes": [],
+  "negative_evidence": "results/M4/attempts/accuracy-estimator-mismatch/",
+  "old_contract_preserved": "model_contract_lock.v2.json",
+  "corrected_binding": "model_contract_lock.v3.json",
+  "final_test_count_access": false,
+  "training_cache": "Only checksum-verified prior models whose fitting code and all M3 input hashes remain unchanged; every required seed remains present and checked",
+  "regression": "test_mean_accuracy_cannot_certify_single_run"
+}
