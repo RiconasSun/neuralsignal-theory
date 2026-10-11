@@ -1,0 +1,509 @@
+{
+  "allowed_claim": "The streaming runner can generate final-route and fs_default84 smoke connectomes without retaining every raw DWI locally.",
+  "cleanup_large_intermediates": true,
+  "experiment": "P7-E6-streaming-connectome-batch",
+  "forbidden_claims": [
+    "100-subject cohort connectomes are complete.",
+    "The structural prediction hypothesis has been tested.",
+    "Subject-specific structure improves transition prediction."
+  ],
+  "keep_raw_dwi": false,
+  "n_subjects": 5,
+  "n_subjects_pass_or_skipped": 5,
+  "paper": "Paper 7",
+  "status": "PASS_STREAMING_BATCH",
+  "subject_results": [
+    {
+      "cleanup": {
+        "removed": [
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\113619\\dwi.mif",
+            "size_bytes": 4214436324
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\113619\\5tt.mif",
+            "size_bytes": 420472700
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\113619\\5tt_dwi.mif",
+            "size_bytes": 73168340
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\113619\\gmwmi_seed.mif",
+            "size_bytes": 14635052
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\113619\\wmfod_ext4.mif",
+            "size_bytes": 658522032
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\113619\\gm_ext4.mif",
+            "size_bytes": 14652432
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\113619\\csf_ext4.mif",
+            "size_bytes": 14652432
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\113619\\tracks_5k_ext4_msmt.tck",
+            "size_bytes": 2984964
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\113619\\sift2_weights_ext4_msmt.txt",
+            "size_bytes": 55049
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\113619\\connectome_sift2_ext4_msmt_smoke.csv",
+            "size_bytes": 8290214
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\113619\\assignments_ext4_msmt.csv",
+            "size_bytes": 40459
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper5\\data_hcp_ya_2025\\downloads\\HCP_1200\\113619\\T1w\\Diffusion\\data.nii.gz",
+            "reason": "streaming_download_cleanup",
+            "size_bytes": 1387825447
+          }
+        ],
+        "removed_bytes": 6809735445,
+        "removed_count": 12,
+        "subject": "113619"
+      },
+      "download": {
+        "download_status": "downloaded",
+        "downloaded_by_this_run": true,
+        "key": "HCP_1200/113619/T1w/Diffusion/data.nii.gz",
+        "local_path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper5\\data_hcp_ya_2025\\downloads\\HCP_1200\\113619\\T1w\\Diffusion\\data.nii.gz",
+        "local_size_bytes": 1387825447,
+        "subject": "113619"
+      },
+      "labelconvert": {
+        "connectome": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\113619\\connectome_sift2_ext4_msmt_fsdefault84_smoke.csv",
+        "connectome_qc": {
+          "assignments_rows": 5001,
+          "bytes": 32086,
+          "columns": 84,
+          "exists": true,
+          "max_weight": 8.94823947548866,
+          "nonzero_edges": 1158,
+          "rows": 84,
+          "total_weight": 924.0612287223339
+        },
+        "load_bearing_tck2connectome_warning": false,
+        "status": "PASS_LABELCONVERT_CONNECTOME_QC"
+      },
+      "route": {
+        "connectome": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\113619\\connectome_sift2_ext4_msmt_smoke.csv",
+        "connectome_qc": {
+          "assignments_rows": 5001,
+          "bytes": 8290214,
+          "columns": 2035,
+          "exists": true,
+          "max_weight": 40.7699,
+          "nonzero_edges": 1190,
+          "rows": 2035,
+          "total_weight": 2076.6892977999996
+        },
+        "status": "PASS_SUBJECT_FINAL_ROUTE_SMOKE"
+      },
+      "status": "PASS_STREAMING_SUBJECT_CONNECTOME",
+      "subject": "113619"
+    },
+    {
+      "cleanup": {
+        "removed": [
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\113922\\dwi.mif",
+            "size_bytes": 4214436344
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\113922\\5tt.mif",
+            "size_bytes": 420472700
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\113922\\5tt_dwi.mif",
+            "size_bytes": 73168340
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\113922\\gmwmi_seed.mif",
+            "size_bytes": 14635052
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\113922\\wmfod_ext4.mif",
+            "size_bytes": 658522056
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\113922\\gm_ext4.mif",
+            "size_bytes": 14652456
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\113922\\csf_ext4.mif",
+            "size_bytes": 14652456
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\113922\\tracks_5k_ext4_msmt.tck",
+            "size_bytes": 2745940
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\113922\\sift2_weights_ext4_msmt.txt",
+            "size_bytes": 53652
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\113922\\connectome_sift2_ext4_msmt_smoke.csv",
+            "size_bytes": 8290100
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\113922\\assignments_ext4_msmt.csv",
+            "size_bytes": 40859
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper5\\data_hcp_ya_2025\\downloads\\HCP_1200\\113922\\T1w\\Diffusion\\data.nii.gz",
+            "reason": "streaming_download_cleanup",
+            "size_bytes": 1391193338
+          }
+        ],
+        "removed_bytes": 6812863293,
+        "removed_count": 12,
+        "subject": "113922"
+      },
+      "download": {
+        "download_status": "downloaded",
+        "downloaded_by_this_run": true,
+        "key": "HCP_1200/113922/T1w/Diffusion/data.nii.gz",
+        "local_path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper5\\data_hcp_ya_2025\\downloads\\HCP_1200\\113922\\T1w\\Diffusion\\data.nii.gz",
+        "local_size_bytes": 1391193338,
+        "subject": "113922"
+      },
+      "labelconvert": {
+        "connectome": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\113922\\connectome_sift2_ext4_msmt_fsdefault84_smoke.csv",
+        "connectome_qc": {
+          "assignments_rows": 5001,
+          "bytes": 30580,
+          "columns": 84,
+          "exists": true,
+          "max_weight": 8.44745898246765,
+          "nonzero_edges": 1076,
+          "rows": 84,
+          "total_weight": 840.5320667475462
+        },
+        "load_bearing_tck2connectome_warning": false,
+        "status": "PASS_LABELCONVERT_CONNECTOME_QC"
+      },
+      "route": {
+        "connectome": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\113922\\connectome_sift2_ext4_msmt_smoke.csv",
+        "connectome_qc": {
+          "assignments_rows": 5001,
+          "bytes": 8290100,
+          "columns": 2035,
+          "exists": true,
+          "max_weight": 40.6389,
+          "nonzero_edges": 1196,
+          "rows": 2035,
+          "total_weight": 2109.229637399996
+        },
+        "status": "PASS_SUBJECT_FINAL_ROUTE_SMOKE"
+      },
+      "status": "PASS_STREAMING_SUBJECT_CONNECTOME",
+      "subject": "113922"
+    },
+    {
+      "cleanup": {
+        "removed": [
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\114419\\dwi.mif",
+            "size_bytes": 4214436312
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\114419\\5tt.mif",
+            "size_bytes": 420472700
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\114419\\5tt_dwi.mif",
+            "size_bytes": 73168340
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\114419\\gmwmi_seed.mif",
+            "size_bytes": 14635052
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\114419\\wmfod_ext4.mif",
+            "size_bytes": 658522020
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\114419\\gm_ext4.mif",
+            "size_bytes": 14652420
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\114419\\csf_ext4.mif",
+            "size_bytes": 14652420
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\114419\\tracks_5k_ext4_msmt.tck",
+            "size_bytes": 3020080
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\114419\\sift2_weights_ext4_msmt.txt",
+            "size_bytes": 53386
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\114419\\connectome_sift2_ext4_msmt_smoke.csv",
+            "size_bytes": 8289544
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\114419\\assignments_ext4_msmt.csv",
+            "size_bytes": 40698
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper5\\data_hcp_ya_2025\\downloads\\HCP_1200\\114419\\T1w\\Diffusion\\data.nii.gz",
+            "reason": "streaming_download_cleanup",
+            "size_bytes": 1464060815
+          }
+        ],
+        "removed_bytes": 6886003787,
+        "removed_count": 12,
+        "subject": "114419"
+      },
+      "download": {
+        "download_status": "downloaded",
+        "downloaded_by_this_run": true,
+        "key": "HCP_1200/114419/T1w/Diffusion/data.nii.gz",
+        "local_path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper5\\data_hcp_ya_2025\\downloads\\HCP_1200\\114419\\T1w\\Diffusion\\data.nii.gz",
+        "local_size_bytes": 1464060815,
+        "subject": "114419"
+      },
+      "labelconvert": {
+        "connectome": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\114419\\connectome_sift2_ext4_msmt_fsdefault84_smoke.csv",
+        "connectome_qc": {
+          "assignments_rows": 5001,
+          "bytes": 30944,
+          "columns": 84,
+          "exists": true,
+          "max_weight": 11.3046455830336,
+          "nonzero_edges": 1092,
+          "rows": 84,
+          "total_weight": 875.625677138567
+        },
+        "load_bearing_tck2connectome_warning": false,
+        "status": "PASS_LABELCONVERT_CONNECTOME_QC"
+      },
+      "route": {
+        "connectome": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\114419\\connectome_sift2_ext4_msmt_smoke.csv",
+        "connectome_qc": {
+          "assignments_rows": 5001,
+          "bytes": 8289544,
+          "columns": 2035,
+          "exists": true,
+          "max_weight": 36.1609,
+          "nonzero_edges": 1106,
+          "rows": 2035,
+          "total_weight": 2059.2248562000004
+        },
+        "status": "PASS_SUBJECT_FINAL_ROUTE_SMOKE"
+      },
+      "status": "PASS_STREAMING_SUBJECT_CONNECTOME",
+      "subject": "114419"
+    },
+    {
+      "cleanup": {
+        "removed": [
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\115320\\dwi.mif",
+            "size_bytes": 4214436312
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\115320\\5tt.mif",
+            "size_bytes": 420472700
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\115320\\5tt_dwi.mif",
+            "size_bytes": 73168340
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\115320\\gmwmi_seed.mif",
+            "size_bytes": 14635052
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\115320\\wmfod_ext4.mif",
+            "size_bytes": 658522020
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\115320\\gm_ext4.mif",
+            "size_bytes": 14652420
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\115320\\csf_ext4.mif",
+            "size_bytes": 14652420
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\115320\\tracks_5k_ext4_msmt.tck",
+            "size_bytes": 2760640
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\115320\\sift2_weights_ext4_msmt.txt",
+            "size_bytes": 56309
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\115320\\connectome_sift2_ext4_msmt_smoke.csv",
+            "size_bytes": 8290452
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\115320\\assignments_ext4_msmt.csv",
+            "size_bytes": 40533
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper5\\data_hcp_ya_2025\\downloads\\HCP_1200\\115320\\T1w\\Diffusion\\data.nii.gz",
+            "reason": "streaming_download_cleanup",
+            "size_bytes": 1154859625
+          }
+        ],
+        "removed_bytes": 6576546823,
+        "removed_count": 12,
+        "subject": "115320"
+      },
+      "download": {
+        "download_status": "downloaded",
+        "downloaded_by_this_run": true,
+        "key": "HCP_1200/115320/T1w/Diffusion/data.nii.gz",
+        "local_path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper5\\data_hcp_ya_2025\\downloads\\HCP_1200\\115320\\T1w\\Diffusion\\data.nii.gz",
+        "local_size_bytes": 1154859625,
+        "subject": "115320"
+      },
+      "labelconvert": {
+        "connectome": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\115320\\connectome_sift2_ext4_msmt_fsdefault84_smoke.csv",
+        "connectome_qc": {
+          "assignments_rows": 5001,
+          "bytes": 31682,
+          "columns": 84,
+          "exists": true,
+          "max_weight": 7.51002691686153,
+          "nonzero_edges": 1142,
+          "rows": 84,
+          "total_weight": 1054.7967469096184
+        },
+        "load_bearing_tck2connectome_warning": false,
+        "status": "PASS_LABELCONVERT_CONNECTOME_QC"
+      },
+      "route": {
+        "connectome": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\115320\\connectome_sift2_ext4_msmt_smoke.csv",
+        "connectome_qc": {
+          "assignments_rows": 5001,
+          "bytes": 8290452,
+          "columns": 2035,
+          "exists": true,
+          "max_weight": 31.6012,
+          "nonzero_edges": 1234,
+          "rows": 2035,
+          "total_weight": 2179.6037214000053
+        },
+        "status": "PASS_SUBJECT_FINAL_ROUTE_SMOKE"
+      },
+      "status": "PASS_STREAMING_SUBJECT_CONNECTOME",
+      "subject": "115320"
+    },
+    {
+      "cleanup": {
+        "removed": [
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\116524\\dwi.mif",
+            "size_bytes": 4214436216
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\116524\\5tt.mif",
+            "size_bytes": 420472700
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\116524\\5tt_dwi.mif",
+            "size_bytes": 73168340
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\116524\\gmwmi_seed.mif",
+            "size_bytes": 14635052
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\116524\\wmfod_ext4.mif",
+            "size_bytes": 658521924
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\116524\\gm_ext4.mif",
+            "size_bytes": 14652324
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\116524\\csf_ext4.mif",
+            "size_bytes": 14652324
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\116524\\tracks_5k_ext4_msmt.tck",
+            "size_bytes": 2784556
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\116524\\sift2_weights_ext4_msmt.txt",
+            "size_bytes": 55169
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\116524\\connectome_sift2_ext4_msmt_smoke.csv",
+            "size_bytes": 8289932
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\116524\\assignments_ext4_msmt.csv",
+            "size_bytes": 40551
+          },
+          {
+            "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper5\\data_hcp_ya_2025\\downloads\\HCP_1200\\116524\\T1w\\Diffusion\\data.nii.gz",
+            "reason": "streaming_download_cleanup",
+            "size_bytes": 1301063599
+          }
+        ],
+        "removed_bytes": 6722772687,
+        "removed_count": 12,
+        "subject": "116524"
+      },
+      "download": {
+        "download_status": "downloaded",
+        "downloaded_by_this_run": true,
+        "key": "HCP_1200/116524/T1w/Diffusion/data.nii.gz",
+        "local_path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper5\\data_hcp_ya_2025\\downloads\\HCP_1200\\116524\\T1w\\Diffusion\\data.nii.gz",
+        "local_size_bytes": 1301063599,
+        "subject": "116524"
+      },
+      "labelconvert": {
+        "connectome": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\116524\\connectome_sift2_ext4_msmt_fsdefault84_smoke.csv",
+        "connectome_qc": {
+          "assignments_rows": 5001,
+          "bytes": 31518,
+          "columns": 84,
+          "exists": true,
+          "max_weight": 12.4856868088245,
+          "nonzero_edges": 1126,
+          "rows": 84,
+          "total_weight": 949.056346669793
+        },
+        "load_bearing_tck2connectome_warning": false,
+        "status": "PASS_LABELCONVERT_CONNECTOME_QC"
+      },
+      "route": {
+        "connectome": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\116524\\connectome_sift2_ext4_msmt_smoke.csv",
+        "connectome_qc": {
+          "assignments_rows": 5001,
+          "bytes": 8289932,
+          "columns": 2035,
+          "exists": true,
+          "max_weight": 35.2509,
+          "nonzero_edges": 1146,
+          "rows": 2035,
+          "total_weight": 2024.4636962000031
+        },
+        "status": "PASS_SUBJECT_FINAL_ROUTE_SMOKE"
+      },
+      "status": "PASS_STREAMING_SUBJECT_CONNECTOME",
+      "subject": "116524"
+    }
+  ],
+  "subjects": [
+    "113619",
+    "113922",
+    "114419",
+    "115320",
+    "116524"
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "experiment": "P3-E1",
+  "status": "PASS_READY_FOR_E2_RELIABILITY",
+  "blockers": [],
+  "warnings": [
+    "ds004469: no repeated run labels available for cross-run reliability"
+  ],
+  "datasets": [
+    {
+      "dataset": "ds001635",
+      "state_file": "paper1\\state_extraction\\stage_states.csv",
+      "status": "AUDITED",
+      "n_states": 2291,
+      "n_transitions": 1523,
+      "n_subjects": 16,
+      "n_subject_runs": 48,
+      "n_roi_features": 216,
+      "stage_counts": {
+        "ENCODE": 768,
+        "MAINTAIN": 768,
+        "PROBE": 755
+      },
+      "transition_counts": {
+        "ENCODE_TO_MAINTAIN": 768,
+        "MAINTAIN_TO_PROBE": 755
+      },
+      "run_counts": {
+        "run-01": 764,
+        "run-02": 765,
+        "run-03": 762
+      },
+      "has_repeated_runs_for_cross_run_reliability": true,
+      "subjects_missing_any_primary_stage": 0,
+      "primary_stage_completeness": true
+    },
+    {
+      "dataset": "ds001634",
+      "state_file": "paper1\\external_validation\\stage_states_external.csv",
+      "status": "AUDITED",
+      "n_states": 3066,
+      "n_transitions": 2040,
+      "n_subjects": 19,
+      "n_subject_runs": 57,
+      "n_roi_features": 216,
+      "stage_counts": {
+        "ENCODE": 1026,
+        "MAINTAIN": 1026,
+        "PROBE": 1014
+      },
+      "transition_counts": {
+        "ENCODE_TO_MAINTAIN": 1026,
+        "MAINTAIN_TO_PROBE": 1014
+      },
+      "run_counts": {
+        "run-01": 1021,
+        "run-02": 1022,
+        "run-03": 1023
+      },
+      "has_repeated_runs_for_cross_run_reliability": true,
+      "subjects_missing_any_primary_stage": 0,
+      "primary_stage_completeness": true
+    },
+    {
+      "dataset": "ds004469",
+      "state_file": "paper2\\external_holdout\\stage_states_dataset_c.csv",
+      "status": "AUDITED",
+      "n_states": 2268,
+      "n_transitions": 1512,
+      "n_subjects": 63,
+      "n_subject_runs": 63,
+      "n_roi_features": 216,
+      "stage_counts": {
+        "ENCODE": 756,
+        "MAINTAIN": 756,
+        "PROBE": 756
+      },
+      "transition_counts": {
+        "ENCODE_TO_MAINTAIN": 756,
+        "MAINTAIN_TO_PROBE": 756
+      },
+      "run_counts": {
+        "run-unknown": 2268
+      },
+      "has_repeated_runs_for_cross_run_reliability": false,
+      "subjects_missing_any_primary_stage": 0,
+      "primary_stage_completeness": true
+    }
+  ],
+  "summary_csv": "paper3/results/e1_dataset_audit_summary.csv",
+  "subject_counts_csv": "paper3/results/e1_subject_stage_counts.csv",
+  "subject_run_counts_csv": "paper3/results/e1_subject_run_stage_counts.csv",
+  "next_experiment": "P3-E2 transition reproducibility",
+  "claim_boundary": "E1 is an input/state audit only; it does not test reproducibility or validate CWP."
+}

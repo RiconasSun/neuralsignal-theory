@@ -1,0 +1,36 @@
+{
+  "claim_allowed_cwp_clearly_outperforms_task_labels": false,
+  "claim_allowed_cwp_foundation_holds": false,
+  "experiment": "E8",
+  "paper_positioning": "CWP-style compositional representations improve within-dataset out-of-distribution brain-state prediction, but do not yet generalize across independent datasets.",
+  "core_boundary": "Local compositional advantage != general cognitive primitive.",
+  "v1_freeze_rule": "Do not tune CWP v1 ontology, preprocessing, alignment, model structure, success thresholds, or metric choice against ds001634 to rescue Gate C.",
+  "e0_audit": {
+    "status": "PASS",
+    "n_events": 48,
+    "n_roi_timeseries": 48,
+    "n_bold": 48,
+    "n_confounds": 0,
+    "external_stage_states_present": true
+  },
+  "e1_state_extraction": {
+    "primary_ds001635_states_extracted": 2291,
+    "external_ds001634_states_extracted": 3066,
+    "roi_count": 216,
+    "atlas": "native image-space grid"
+  },
+  "gate_a_incremental": "INCONCLUSIVE",
+  "gate_b_components": {
+    "E4_unseen_combination": "PASSED",
+    "E5_unseen_domain": "PASSED"
+  },
+  "gate_b_ood": "PASSED",
+  "gate_c_external": "FAILED",
+  "no_invented_results": true,
+  "outputs": {
+    "primary_metrics": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper1\\results\\primary_metrics.csv",
+    "subject_level_effects": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper1\\results\\subject_level_effects.csv"
+  },
+  "remaining_blockers": [],
+  "status": "completed_audit_not_claim_validated"
+}

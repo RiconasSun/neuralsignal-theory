@@ -1,0 +1,69 @@
+{
+  "allowed_claim": "A one-subject final-route ACT/iFOD2/SIFT2 smoke connectome can be generated from nonzero MSMT-CSD FOD for HCP 100307.",
+  "connectome_summary": {
+    "exists": true,
+    "max_weight": 147.396,
+    "n_cols": 2035,
+    "n_nonzero_values": 356,
+    "n_rows": 2035,
+    "n_values": 4141225,
+    "nonzero_fraction": 8.596490168971742e-05,
+    "sum_weights": 2120.5358420000007
+  },
+  "experiment": "P7-final-route-single-subject-ACT-iFOD2-SIFT2-smoke",
+  "files": {
+    "assignments": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\assignments_ext4_msmt.csv",
+      "size_bytes": 35442
+    },
+    "connectome": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\connectome_sift2_ext4_msmt_smoke.csv",
+      "size_bytes": 8284698
+    },
+    "five_tissue": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\5tt_dwi.mif",
+      "size_bytes": 73168332
+    },
+    "gmwmi_seed": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\gmwmi_seed.mif",
+      "size_bytes": 14635040
+    },
+    "msmt_wmfod_ext4": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\wmfod_ext4.mif",
+      "size_bytes": 658521916
+    },
+    "nodes": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\nodes_dwi.mif",
+      "size_bytes": 14634256
+    },
+    "sift2_weights": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\sift2_weights_ext4_msmt.txt",
+      "size_bytes": 61853
+    },
+    "tracks": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\tracks_5k_ext4_msmt.tck",
+      "size_bytes": 1417632
+    }
+  },
+  "forbidden_claims": [
+    "P7 cohort connectomes generated",
+    "P7 structural hypothesis tested",
+    "subject-specific structural grounding supported",
+    "CWP validated",
+    "NAP structurally grounded"
+  ],
+  "next_action": "Scale only to a 3-subject smoke after downloading complete HCP structural inputs and freezing atlas/label-conversion QC handling.",
+  "paper": "Paper 7",
+  "protocol_deviation": "This is a 5,000-streamline smoke test using FreeSurfer-5TT and ext4-generated MSMT-CSD FOD. It is not the planned full-streamline cohort connectome generation.",
+  "qc_warning": "Raw aparc+aseg labels were used for the smoke connectome; tck2connectome reported missing/unassigned nodes. A final cohort run still needs a frozen atlas/label conversion QC gate.",
+  "status": "PASS_SINGLE_SUBJECT_FINAL_ROUTE_SMOKE",
+  "subject": "100307"
+}

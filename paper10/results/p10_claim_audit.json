@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-09-07T05:16:16+00:00",
+  "paper": "P10",
+  "audit_result": "PASS",
+  "claim_allowed_candidate_dynamic_motif_families": false,
+  "claim_allowed_discrete_motifs_preferred_over_all_baselines": false,
+  "claim_allowed_continuous_manifold_preferred": true,
+  "claim_allowed_discrete_NAP_supported": false,
+  "claim_allowed_CWP_v2_semantics_supported": false,
+  "claim_allowed_neural_grammar_supported": false,
+  "claim_allowed_external_direct_replication": false,
+  "claim_allowed_external_convergent_structure": true,
+  "primary_summary": {
+    "real_heldout_discrete_reconstruction_mse": 0.8256234307495551,
+    "null_heldout_discrete_reconstruction_mse_mean": 0.7604857770370481,
+    "null_heldout_discrete_reconstruction_mse_min": 0.6803877945001886,
+    "null_heldout_discrete_reconstruction_mse_max": 0.9147315714358931,
+    "real_heldout_latent_quantization_mse": 129.49544117124432,
+    "real_better_than_null_count": 1,
+    "null_count": 3,
+    "passed_all_available_nulls": false,
+    "continuous_pca_reconstruction_mse": 0.6639429592698992,
+    "continuous_preferred_over_discrete_reconstruction": true
+  },
+  "selected_k": 2,
+  "forbidden_claims": [
+    "NAP is validated.",
+    "Dynamic motifs are cognitive primitives.",
+    "CWP v2 semantics are supported.",
+    "Neural grammar exists.",
+    "External direct motif replication is established.",
+    "Universal neural primitives exist.",
+    "P10 proves region-specific motifs are absent.",
+    "P10 proves all brain regions are continuous."
+  ],
+  "interpretation": "P10 may report a negative/boundary result for the current global discrete-motif model under the tested P6-derived bandpower feature regime: discrete motif discovery is not supported and a continuous low-dimensional global representation is preferred. This does not test whether individual regions or networks have local motif-like, local continuous-manifold, or hierarchical dynamics. NAP, semantic, grammar, and universal claims remain disallowed."
+}

@@ -1,0 +1,62 @@
+{
+  "allowed_claim": "High-fidelity-route ACT/iFOD2/SIFT2 engineering/QC scale-up completed only if status is PASS. This remains pre-hypothesis-test readiness and does not test structural prediction.",
+  "experiment": "P7-e6-diagnostic-133928-final-route",
+  "forbidden_claims": [
+    "100-subject cohort connectomes generated",
+    "P7 structural hypothesis tested",
+    "subject-specific structural grounding supported",
+    "CWP validated",
+    "NAP structurally grounded"
+  ],
+  "n_subjects": 1,
+  "next_action": "If the 10-subject QC passes, freeze atlas/label QC and only then prepare the 100-subject final structural prediction test.",
+  "paper": "Paper 7",
+  "status": "FAILED_E6_DIAGNOSTIC_133928_FINAL_ROUTE",
+  "subject_results": [
+    {
+      "commands": [
+        {
+          "command": "mrconvert '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/133928/T1w/Diffusion/data.nii.gz' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/133928/dwi.mif' -fslgrad '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/133928/T1w/Diffusion/bvecs' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/133928/T1w/Diffusion/bvals' -force",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "mrconvert",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\133928\\dwi.mif",
+          "target_bytes": 4214436200
+        },
+        {
+          "command": "mkdir -p $HOME/p7_msmt_csd_ext4_diagnostic/133928 && if [ ! -s $HOME/p7_msmt_csd_ext4_diagnostic/133928/dwi.mif ]; then cp '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/133928/dwi.mif' $HOME/p7_msmt_csd_ext4_diagnostic/133928/dwi.mif; fi && if [ ! -s $HOME/p7_msmt_csd_ext4_diagnostic/133928/mask.nii.gz ]; then cp '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/133928/T1w/Diffusion/nodif_brain_mask.nii.gz' $HOME/p7_msmt_csd_ext4_diagnostic/133928/mask.nii.gz; fi && touch '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/133928/.ext4_inputs_ready'",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "prepare_ext4_inputs",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\133928\\.ext4_inputs_ready",
+          "target_bytes": 0
+        },
+        {
+          "command": "cd $HOME/p7_msmt_csd_ext4_diagnostic/133928 && dwi2response dhollander dwi.mif wm.txt gm.txt csf.txt -mask mask.nii.gz -force -nthreads 4 && cp wm.txt '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/133928/wm.txt' && cp gm.txt '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/133928/gm.txt' && cp csf.txt '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/133928/csf.txt'",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "dwi2response_ext4",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\133928\\wm.txt",
+          "target_bytes": 546
+        },
+        {
+          "command": "5ttgen freesurfer '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/133928/T1w/aparc+aseg.nii.gz' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/133928/5tt.mif' -lut '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/resources/FreeSurferColorLUT.txt' -force -nocrop",
+          "duration_seconds": 2.78,
+          "returncode": 1,
+          "stderr_tail": "5ttgen: \n5ttgen: Note that this script makes use of commands / algorithms that have relevant articles for citation. Please consult the help page (-help option) for more information.\n5ttgen: \n5ttgen: Generated scratch directory: /mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/5ttgen-tmp-80Q9CK/\nCommand:  mrconvert '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/133928/T1w/aparc+aseg.nii.gz' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/5ttgen-tmp-80Q9CK/input.mif'\n\n5ttgen: [ERROR] mrconvert '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/133928/T1w/aparc+aseg.nii.gz' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/5ttgen-tmp-80Q9CK/input.mif' (freesurfer.py:39)\n5ttgen: [ERROR] Information from failed command:\n5ttgen:\n        mrconvert: uncompressing image \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/133928/T1w/aparc+aseg.nii.gz\"... [==================================================]\n        mrconvert: [ERROR] cannot resize file \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/5ttgen-tmp-80Q9CK/input.mif\": No space left on device\n        mrconvert: [ERROR] error creating image \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/5ttgen-tmp-80Q9CK/input.mif\"\n5ttgen:\n5ttgen: [ERROR] For debugging, inspect contents of scratch directory: /mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/5ttgen-tmp-80Q9CK/\n5ttgen: Scratch directory retained; location: /mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/5ttgen-tmp-80Q9CK/\n",
+          "stdout_tail": "",
+          "step": "5ttgen_freesurfer",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\133928\\5tt.mif",
+          "target_bytes_after": 0,
+          "target_exists_after": false
+        }
+      ],
+      "failed_step": "5ttgen_freesurfer",
+      "status": "FAILED_SUBJECT_FINAL_ROUTE_SMOKE",
+      "subject": "133928"
+    }
+  ],
+  "subjects": [
+    "133928"
+  ]
+}

@@ -1,0 +1,482 @@
+{
+  "allowed_current_claim": "Paper 7 generated 100 fs_default84 ACT/iFOD2/SIFT2 connectomes, excluded 100307 by the frozen pre-modeling QC rule, and ran the final 99-subject primary structural prediction analysis. The final gates did not support subject-specific structural grounding under the tested state-prediction interface.",
+  "available_fsdefault_connectome_n_subjects": 100,
+  "available_fsdefault_connectome_nonzero_edges_max": 1180,
+  "available_fsdefault_connectome_nonzero_edges_mean": 1088.64,
+  "available_fsdefault_connectome_nonzero_edges_min": 282,
+  "available_fsdefault_connectome_summary_status": "PASS_AVAILABLE_FSDEFAULT_CONNECTOME_SUMMARY",
+  "blockers": [
+    "No unresolved P7 structural test blocker remains; the final result is a constrained negative result, not a missing experiment.",
+    "Do not claim subject-specific structural grounding, NAP structural grounding, or CWP validation from this result."
+  ],
+  "can_claim_high_fidelity_connectomes_generated": true,
+  "can_claim_single_subject_final_route_smoke": true,
+  "can_claim_structural_incremental_value": false,
+  "can_claim_structural_mechanism_established": false,
+  "can_claim_subject_specific_structure_matters": false,
+  "e0_status": "BLOCKED_HIGH_FIDELITY_TRACTOGRAPHY_REQUIREMENTS",
+  "engineering_diagnostic_status": "P7_HIGH_FIDELITY_ROUTE_PARTIAL_5TT_READY_TRACTOGRAPHY_NOT_READY",
+  "environment_recovery_status": "P7_WSL_MRTRIX_PARTIAL_RECOVERY_CONNECTOME_NOT_GENERATED",
+  "final_figures": [
+    "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\figures\\paper7_final_structural_hypothesis_delta_mse.png",
+    "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\figures\\paper7_final_structural_hypothesis_delta_mse.svg"
+  ],
+  "final_figures_status": "PASS_FINAL_FIGURE_GENERATION",
+  "final_route_single_subject_connectome": {
+    "exists": true,
+    "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\connectome_sift2_ext4_msmt_smoke.csv",
+    "size_bytes": 8284698
+  },
+  "final_route_single_subject_qc_warning": "Raw aparc+aseg labels were used for the smoke connectome; tck2connectome reported missing/unassigned nodes. A final cohort run still needs a frozen atlas/label conversion QC gate.",
+  "final_route_single_subject_smoke_status": "PASS_SINGLE_SUBJECT_FINAL_ROUTE_SMOKE",
+  "final_structural_hypothesis_gates": {
+    "gate_a_structure_matters_true_greater_than_no_structure": false,
+    "gate_b_individual_structure_matters_true_greater_than_group_mean": false,
+    "gate_c_anatomical_specificity_true_greater_than_distance": false,
+    "gate_c_anatomical_specificity_true_greater_than_swap_and_rewire": false
+  },
+  "final_structural_hypothesis_n_available_connectomes_before_qc_exclusion": 100,
+  "final_structural_hypothesis_n_subjects": 99,
+  "final_structural_hypothesis_status": "FINAL_STRUCTURAL_HYPOTHESIS_NOT_SUPPORTED",
+  "final_structural_hypothesis_summary": {
+    "delta_mse_true_vs_distance": {
+      "ci95": [
+        -0.0017304848089362637,
+        0.001632986932691901
+      ],
+      "mean": -0.00011630311156764175,
+      "median": -0.002277076244354248,
+      "n_positive_subjects": 20,
+      "n_subjects": 99,
+      "sign_flip_p_one_sided_greater_than_zero": 0.5649435056494351
+    },
+    "delta_mse_true_vs_group_mean": {
+      "ci95": [
+        -0.0008002848637224448,
+        -0.0001093463614733534
+      ],
+      "mean": -0.0004944054767338917,
+      "median": -0.0006040334701538086,
+      "n_positive_subjects": 27,
+      "n_subjects": 99,
+      "sign_flip_p_one_sided_greater_than_zero": 0.9995000499950005
+    },
+    "delta_mse_true_vs_no_structure": {
+      "ci95": [
+        -0.0016091329732326545,
+        0.0017226507416879281
+      ],
+      "mean": -3.241348748255258e-05,
+      "median": -0.0023268461227416992,
+      "n_positive_subjects": 22,
+      "n_subjects": 99,
+      "sign_flip_p_one_sided_greater_than_zero": 0.5142485751424858
+    },
+    "delta_mse_true_vs_rewire": {
+      "ci95": [
+        -0.0018537967268264656,
+        -3.9867063363394124e-05
+      ],
+      "mean": -0.0008220178912384342,
+      "median": -0.00036841630935668945,
+      "n_positive_subjects": 40,
+      "n_subjects": 99,
+      "sign_flip_p_one_sided_greater_than_zero": 0.9752024797520248
+    },
+    "delta_mse_true_vs_swap": {
+      "ci95": [
+        -0.0016994423562228078,
+        5.801067207798797e-06
+      ],
+      "mean": -0.000681199509688098,
+      "median": -7.414817810058594e-05,
+      "n_positive_subjects": 47,
+      "n_subjects": 99,
+      "sign_flip_p_one_sided_greater_than_zero": 0.9558044195580442
+    }
+  },
+  "forbidden_claims": [
+    "Subject-specific structural connectivity constrains brain-state dynamics.",
+    "Structural mechanism is established.",
+    "NAP is structurally grounded.",
+    "CWP is validated."
+  ],
+  "labelconvert_all_load_bearing_tck2connectome_warnings_removed": false,
+  "labelconvert_connectome_qc_status": "PASS_LABELCONVERT_CONNECTOME_QC",
+  "labelconvert_load_bearing_tck2connectome_warning_subjects": [
+    "100307"
+  ],
+  "manuscript_pdf": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\output\\pdf\\paper7_manuscript_preview.pdf",
+  "manuscript_pdf_status": "PASS_MANUSCRIPT_PDF_GENERATED",
+  "paper": "Paper 7",
+  "pre_100_subject_qc_freeze_v0_2_exists": true,
+  "pre_100_subject_qc_freeze_v0_2_path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\protocol\\PAPER7_PRE_100_SUBJECT_QC_FREEZE_v0_2.md",
+  "preliminary_structural_model_n_subjects": 94,
+  "preliminary_structural_model_smoke_gates": {
+    "smoke_gate_true_greater_than_distance": false,
+    "smoke_gate_true_greater_than_group_mean": false,
+    "smoke_gate_true_greater_than_no_structure": false,
+    "smoke_gate_true_greater_than_swap_and_rewire": false
+  },
+  "preliminary_structural_model_smoke_status": "PASS_PRELIMINARY_STRUCTURAL_MODEL_SMOKE",
+  "preliminary_structural_model_summary": {
+    "delta_mse_true_vs_distance": {
+      "ci95": [
+        -0.001939733437401183,
+        0.0013747355088274524
+      ],
+      "mean": -0.0004100945401698985,
+      "median": -0.002246946096420288,
+      "n_positive_subjects": 18,
+      "n_subjects": 94,
+      "sign_flip_p_one_sided_greater_than_zero": 0.6773322667733227
+    },
+    "delta_mse_true_vs_group_mean": {
+      "ci95": [
+        -0.0008042391706654366,
+        -9.696809376807947e-05
+      ],
+      "mean": -0.0004909539476354071,
+      "median": -0.0005987435579299927,
+      "n_positive_subjects": 27,
+      "n_subjects": 94,
+      "sign_flip_p_one_sided_greater_than_zero": 0.9983001699830018
+    },
+    "delta_mse_true_vs_no_structure": {
+      "ci95": [
+        -0.0018591661402519713,
+        0.001405192340942139
+      ],
+      "mean": -0.00030666716555331617,
+      "median": -0.00230291485786438,
+      "n_positive_subjects": 20,
+      "n_subjects": 94,
+      "sign_flip_p_one_sided_greater_than_zero": 0.638936106389361
+    },
+    "delta_mse_true_vs_rewire": {
+      "ci95": [
+        -0.00187409445643425,
+        2.9107317962544926e-05
+      ],
+      "mean": -0.0007934024993409502,
+      "median": -0.00035563111305236816,
+      "n_positive_subjects": 38,
+      "n_subjects": 94,
+      "sign_flip_p_one_sided_greater_than_zero": 0.9586041395860414
+    },
+    "delta_mse_true_vs_swap": {
+      "ci95": [
+        -0.0018484017237069758,
+        -1.8587018898193188e-05
+      ],
+      "mean": -0.0007383788519717277,
+      "median": -8.392333984375e-05,
+      "n_positive_subjects": 44,
+      "n_subjects": 94,
+      "sign_flip_p_one_sided_greater_than_zero": 0.9667033296670333
+    }
+  },
+  "status": "FINAL_STRUCTURAL_HYPOTHESIS_NOT_SUPPORTED",
+  "streaming_batch_12_3_n_pass_or_skipped": 3,
+  "streaming_batch_12_3_n_subjects": 3,
+  "streaming_batch_12_3_status": "PASS_STREAMING_BATCH",
+  "streaming_batch_12_3_subjects": [
+    "110411",
+    "111312",
+    "111716"
+  ],
+  "streaming_batch_15_5_n_pass_or_skipped": 5,
+  "streaming_batch_15_5_n_subjects": 5,
+  "streaming_batch_15_5_status": "PASS_STREAMING_BATCH",
+  "streaming_batch_15_5_subjects": [
+    "113619",
+    "113922",
+    "114419",
+    "115320",
+    "116524"
+  ],
+  "streaming_batch_20_5_n_pass_or_skipped": 5,
+  "streaming_batch_20_5_n_subjects": 5,
+  "streaming_batch_20_5_status": "PASS_STREAMING_BATCH",
+  "streaming_batch_20_5_subjects": [
+    "117122",
+    "118528",
+    "118730",
+    "118932",
+    "120111"
+  ],
+  "streaming_batch_25_5_n_pass_or_skipped": 5,
+  "streaming_batch_25_5_n_subjects": 5,
+  "streaming_batch_25_5_status": "PASS_STREAMING_BATCH",
+  "streaming_batch_25_5_subjects": [
+    "122317",
+    "122620",
+    "123117",
+    "123925",
+    "124422"
+  ],
+  "streaming_batch_30_5_n_pass_or_skipped": 5,
+  "streaming_batch_30_5_n_subjects": 5,
+  "streaming_batch_30_5_status": "PASS_STREAMING_BATCH",
+  "streaming_batch_30_5_subjects": [
+    "125525",
+    "126325",
+    "127630",
+    "127933",
+    "128127"
+  ],
+  "streaming_batch_35_5_n_pass_or_skipped": 5,
+  "streaming_batch_35_5_n_subjects": 5,
+  "streaming_batch_35_5_status": "PASS_STREAMING_BATCH",
+  "streaming_batch_35_5_subjects": [
+    "128632",
+    "129028",
+    "130013",
+    "130316",
+    "131217"
+  ],
+  "streaming_batch_40_5_n_pass_or_skipped": 5,
+  "streaming_batch_40_5_n_subjects": 5,
+  "streaming_batch_40_5_status": "PASS_STREAMING_BATCH",
+  "streaming_batch_40_5_subjects": [
+    "131722",
+    "133019",
+    "133928",
+    "135225",
+    "135932"
+  ],
+  "streaming_batch_45_5_n_pass_or_skipped": 5,
+  "streaming_batch_45_5_n_subjects": 5,
+  "streaming_batch_45_5_status": "PASS_STREAMING_BATCH",
+  "streaming_batch_45_5_subjects": [
+    "136833",
+    "138534",
+    "139637",
+    "140925",
+    "144832"
+  ],
+  "streaming_batch_50_5_n_pass_or_skipped": 5,
+  "streaming_batch_50_5_n_subjects": 5,
+  "streaming_batch_50_5_status": "PASS_STREAMING_BATCH",
+  "streaming_batch_50_5_subjects": [
+    "146432",
+    "147737",
+    "148335",
+    "148840",
+    "149337"
+  ],
+  "streaming_batch_55_5_n_pass_or_skipped": 5,
+  "streaming_batch_55_5_n_subjects": 5,
+  "streaming_batch_55_5_status": "PASS_STREAMING_BATCH",
+  "streaming_batch_55_5_subjects": [
+    "149539",
+    "149741",
+    "151223",
+    "151526",
+    "151627"
+  ],
+  "streaming_batch_60_5_n_pass_or_skipped": 5,
+  "streaming_batch_60_5_n_subjects": 5,
+  "streaming_batch_60_5_status": "PASS_STREAMING_BATCH",
+  "streaming_batch_60_5_subjects": [
+    "153025",
+    "154734",
+    "156637",
+    "159340",
+    "160123"
+  ],
+  "streaming_batch_65_5_n_pass_or_skipped": 5,
+  "streaming_batch_65_5_n_subjects": 5,
+  "streaming_batch_65_5_status": "PASS_STREAMING_BATCH",
+  "streaming_batch_65_5_subjects": [
+    "161731",
+    "162733",
+    "163129",
+    "176542",
+    "178950"
+  ],
+  "streaming_batch_70_5_n_pass_or_skipped": 5,
+  "streaming_batch_70_5_n_subjects": 5,
+  "streaming_batch_70_5_status": "PASS_STREAMING_BATCH",
+  "streaming_batch_70_5_subjects": [
+    "188347",
+    "189450",
+    "190031",
+    "192540",
+    "196750"
+  ],
+  "streaming_batch_75_5_n_pass_or_skipped": 5,
+  "streaming_batch_75_5_n_subjects": 5,
+  "streaming_batch_75_5_status": "PASS_STREAMING_BATCH",
+  "streaming_batch_75_5_subjects": [
+    "198451",
+    "199655",
+    "201111",
+    "208226",
+    "211417"
+  ],
+  "streaming_batch_80_5_n_pass_or_skipped": 5,
+  "streaming_batch_80_5_n_subjects": 5,
+  "streaming_batch_80_5_status": "PASS_STREAMING_BATCH",
+  "streaming_batch_80_5_subjects": [
+    "211720",
+    "212318",
+    "214423",
+    "221319",
+    "239944"
+  ],
+  "streaming_batch_85_5_n_pass_or_skipped": 5,
+  "streaming_batch_85_5_n_subjects": 5,
+  "streaming_batch_85_5_status": "PASS_STREAMING_BATCH",
+  "streaming_batch_85_5_subjects": [
+    "245333",
+    "280739",
+    "298051",
+    "366446",
+    "397760"
+  ],
+  "streaming_batch_90_5_n_pass_or_skipped": 5,
+  "streaming_batch_90_5_n_subjects": 5,
+  "streaming_batch_90_5_status": "PASS_STREAMING_BATCH",
+  "streaming_batch_90_5_subjects": [
+    "414229",
+    "499566",
+    "654754",
+    "672756",
+    "751348"
+  ],
+  "streaming_batch_95_5_n_pass_or_skipped": 5,
+  "streaming_batch_95_5_n_subjects": 5,
+  "streaming_batch_95_5_status": "PASS_STREAMING_BATCH",
+  "streaming_batch_95_5_subjects": [
+    "756055",
+    "792564",
+    "856766",
+    "857263",
+    "899885"
+  ],
+  "streaming_batch_allowed_claim": "The streaming runner can generate final-route and fs_default84 smoke connectomes without retaining every raw DWI locally.",
+  "streaming_batch_cleanup_large_intermediates": true,
+  "streaming_batch_n_pass_or_skipped": 2,
+  "streaming_batch_n_subjects": 2,
+  "streaming_batch_status": "PASS_STREAMING_BATCH",
+  "streaming_batch_subjects": [
+    "106016",
+    "108828"
+  ],
+  "streaming_cleanup_audit_status": "PASS_STREAMING_CLEANUP_AUDIT",
+  "streaming_cleanup_subjects": [
+    "106016",
+    "108828",
+    "110411",
+    "111312",
+    "111716",
+    "113619",
+    "113922",
+    "114419",
+    "115320",
+    "116524",
+    "117122",
+    "118528",
+    "118730",
+    "118932",
+    "120111",
+    "122317",
+    "122620",
+    "123117",
+    "123925",
+    "124422",
+    "125525",
+    "126325",
+    "127630",
+    "127933",
+    "128127",
+    "128632",
+    "129028",
+    "130013",
+    "130316",
+    "131217",
+    "131722",
+    "133019",
+    "133928",
+    "135225",
+    "135932",
+    "136833",
+    "138534",
+    "139637",
+    "140925",
+    "144832",
+    "146432",
+    "147737",
+    "148335",
+    "148840",
+    "149337",
+    "149539",
+    "149741",
+    "151223",
+    "151526",
+    "151627",
+    "153025",
+    "154734",
+    "156637",
+    "159340",
+    "160123",
+    "161731",
+    "162733",
+    "163129",
+    "176542",
+    "178950",
+    "188347",
+    "189450",
+    "190031",
+    "192540",
+    "196750",
+    "198451",
+    "199655",
+    "201111",
+    "208226",
+    "211417",
+    "211720",
+    "212318",
+    "214423",
+    "221319",
+    "239944",
+    "245333",
+    "280739",
+    "298051",
+    "366446",
+    "397760",
+    "414229",
+    "499566",
+    "654754",
+    "672756",
+    "751348",
+    "756055",
+    "792564",
+    "856766",
+    "857263",
+    "899885"
+  ],
+  "streamline_sensitivity_100307_load_bearing_warning": true,
+  "streamline_sensitivity_100307_nonzero_edges": 370,
+  "streamline_sensitivity_100307_status": "PASS_STREAMLINE_SENSITIVITY",
+  "ten_subject_connectome_qc_status": "PASS_10_SUBJECT_CONNECTOME_QC_SMOKE",
+  "ten_subject_connectome_qc_subjects": [
+    "100307",
+    "100408",
+    "101107",
+    "101309",
+    "101915",
+    "103111",
+    "103414",
+    "103818",
+    "105014",
+    "105115"
+  ],
+  "three_subject_final_route_smoke_status": "PASS_THREE_SUBJECT_FINAL_ROUTE_SMOKE",
+  "three_subject_final_route_subjects": [
+    "100307",
+    "100408",
+    "101107"
+  ]
+}

@@ -1,0 +1,248 @@
+paper_id: paper_01
+title: CWP-style Compositional Representations Improve Within-dataset OOD Brain-state Prediction but Do Not Yet Generalize Across Independent Datasets
+status: completed_v1_external_boundary_result
+paper_type: Method Paper
+program: CWP-NAP Foundation Program v1
+core_question: Do CWP-style compositional labels improve within-dataset OOD prediction, and do they survive independent external validation?
+core_design: same data, same model capacity, same prediction target, same holdout, only change label representation
+result_status: COMPLETED_STRONG_CLAIM_NOT_SUPPORTED
+current_positioning: Local compositional advantage does not establish a general cognitive primitive.
+v1_freeze_rule: Do not tune CWP v1 ontology, preprocessing, alignment, or model structure against ds001634 to rescue Gate C.
+evidence_policy:
+  no_invented_results: true
+  dataset_details_require_verification: true
+  unknown_marker: TO_BE_FILLED
+  decision_marker: DECISION_REQUIRED
+  unrun_marker: NOT_YET_RUN
+hypotheses:
+  primary: P(S_t+1 | S_t, CWP, Context) > P(S_t+1 | S_t, TaskLabel)
+  incremental: Task + CWP > Task
+  ood: CWP > Task in unseen combination/domain
+  external: second dataset direction is consistent
+datasets:
+  primary:
+    id: ds001635
+    source: OpenNeuro
+    role: CWP discovery and validation against flat task labels
+    user_provided_structure:
+      subjects: 16
+      runs_per_subject: 3
+      stages:
+        - Cue
+        - Encode
+        - Maintain_or_Manipulate
+        - Probe
+        - Rest
+      domains:
+        - number
+        - spatial
+      loads:
+        - low
+        - high
+      operations:
+        - Maintain
+        - Manipulate
+      manipulation_examples:
+        - number_plus_3
+        - spatial_rotation_90_degrees
+    metadata_status: TO_BE_FILLED
+  external_holdout:
+    id: ds001634
+    source: OpenNeuro
+    role: zero-change external replication
+    cwp_targets:
+      - ENCODE
+      - MAINTAIN
+      - PROBE
+    metadata_status: TO_BE_FILLED
+  final_cross_task:
+    id: ds002105
+    source: MDTB
+    role: leave-one-entire-task-out generalization
+    metadata_status: TO_BE_FILLED
+cwp_ontology_v1:
+  primary:
+    ENCODE: Convert external stimulus into working-memory representation.
+    MAINTAIN: Preserve an existing representation without actively changing it.
+    PROBE: Probe/retrieval-stage macroscopic state; mixed suboperations remain a limitation.
+  exploratory:
+    TRANSFORM: Candidate Level 2 primitive; not treated as established in primary analysis.
+constructs:
+  cwp: cognitive operation being performed
+  context: domain, load, stimulus content, transformation rule
+  task_label: dataset-specific full condition name
+brain_state:
+  representation: fixed-atlas ROI vector
+  atlas: DECISION_REQUIRED
+  roi_count_range: 200-400
+  leakage_rule: Do not generate ROI definitions using full data.
+  states:
+    - S_Encode
+    - S_Maintain
+    - S_Probe
+  deltas:
+    Delta_S_Encode: S_Encode - S_Baseline
+    Delta_S_Maintain: S_Maintain - S_Encode
+    Delta_S_Probe: S_Probe - S_Maintain
+  hrf_delay_handling: TO_BE_FILLED
+experiments:
+  E0:
+    name: Data/QC Audit
+    purpose: Confirm data, events, motion, missing values, and trial counts.
+    outputs:
+      - dataset_manifest.csv
+      - trial_counts.csv
+      - qc_subjects.csv
+    checks:
+      - subjects
+      - runs
+      - events_tsv
+      - bold
+      - confounds
+      - three_runs_per_subject
+      - condition_trial_counts
+      - high_low_balance
+      - Num_Pos_Add_Rot_balance_when_present
+      - motion_anomalies
+      - missing_responses
+      - event_timing_correctness
+      - trial_type_load_type_processing_stage_available
+  E1:
+    name: Brain-State Extraction
+    purpose: Convert each stage into S_t and Delta S.
+    no_deep_learning_first: true
+    required:
+      - fixed_atlas_200_to_400_roi
+      - hrf_delay_handling
+      - same_preprocessing_for_all_models
+  E2:
+    name: CWP Existence
+    purpose: Test Encode / Maintain / Probe brain-state distinction.
+    sanity_check: Encode != Maintain != Probe
+    methods:
+      - held_out_subject_run_classification
+      - representational_similarity
+    stop_condition: If stage sanity check fails, stop downstream modeling and repair E0/E1.
+    exploratory_only:
+      - Maintain_vs_Transform
+  E3:
+    name: Task vs CWP
+    purpose: Run M0-M4 model faceoff.
+    primary_comparison: M4 > M2
+    secondary_ood_comparison: M3 > M2 on OOD
+  E4:
+    name: Unseen Combination
+    purpose: Test compositionality.
+    split: leave_one_cell_out
+    cell_space: Domain x Load x CWP
+    example_holdout: Pos + High + Encode
+    expected_evidence: Error_CWP < Error_Task
+  E5:
+    name: Unseen Domain
+    purpose: Test cross-content/domain generalization.
+    implementation: scripts/e5_unseen_domain.py
+    output: results/e5_unseen_domain_metrics.csv
+    directions:
+      - Number_to_Spatial
+      - Spatial_to_Number
+    core_question: A_Encode^Number -> Encode^Spatial ?
+  E6:
+    name: Null/Falsification
+    purpose: Exclude time, label, motion, and false semantic explanations.
+    implementation: scripts/e6_null_falsification.py
+    output: results/e6_null_falsification_metrics.csv
+    nulls:
+      - label_shuffle
+      - pseudo_cwp_ontology
+      - time_baseline
+      - random_boundary_or_boundary_jitter
+      - domain_preserving_shuffle
+      - motion_only_model
+      - subject_shuffle
+    survival_criterion: True CWP > 99% Pseudo CWP
+    unavailable_without_extra_inputs:
+      - motion_only_model requires confounds.tsv or motion columns.
+      - boundary_jitter requires event-level perturbation followed by E1 rerun.
+  E7:
+    name: External Dataset
+    purpose: Test ds001634 with zero ontology/model changes.
+    implementation: scripts/e7_external_dataset.py
+    required_input: external_validation/stage_states_external.csv
+    output: external_validation/e7_external_dataset_metrics.csv
+    rule: no ontology changes after E0-E6
+    transfer: Train/Develop on ds001635 -> Test on ds001634
+  E8:
+    name: Statistics + Reproduction
+    purpose: Freeze conclusions and support one-command rerun.
+    implementation: scripts/e8_statistics_reproduction.py
+    outputs:
+      - results/primary_metrics.csv
+      - results/subject_level_effects.csv
+      - results/claim_audit.json
+    statistical_unit: subject
+    methods:
+      - subject_level_paired_comparison
+      - bootstrap_95_ci
+      - permutation_test
+      - fdr_correction
+models:
+  M0_state:
+    formula: S_t+1 = F(S_t)
+  M1_flat_task:
+    formula: S_t+1 = F(S_t, TaskID)
+  M2_strong_task:
+    formula: S_t+1 = F(S_t, TaskID, Domain, Load)
+  M3_cwp:
+    formula: S_t+1 = F(S_t, CWP, Domain, Load)
+  M4_task_plus_cwp:
+    formula: S_t+1 = F(S_t, TaskID, CWP, Domain, Load)
+holdouts:
+  A_unseen_combination:
+    example: Encode + Spatial + High
+  B_unseen_domain:
+    examples:
+      - Train Number -> Test Spatial
+      - Train Spatial -> Test Number
+  C_unseen_task_dataset:
+    examples:
+      - Train ds001635 -> Test ds001634
+      - Leave one entire MDTB task out
+  evidence_strength: A < B < C
+metrics:
+  primary:
+    - held_out_predictive_error
+    - held_out_predictive_log_likelihood
+  secondary:
+    - R2
+    - MSE
+    - cosine_similarity
+    - effect_size
+    - ci_95
+figures:
+  Figure_1: CWP framework
+  Figure_2: Stage sanity check
+  Figure_3: M0-M4 comparison
+  Figure_4: Unseen-combination
+  Figure_5: Unseen-domain
+  Figure_6: Null tests
+  Figure_7: External replication
+reproduction:
+  command: make reproduce
+  output_dir: results
+  expected_outputs:
+    - results/primary_metrics.csv
+    - results/subject_level_effects.csv
+    - results/null_distributions/
+    - results/external_replication/
+    - results/figures/
+    - results/claim_audit.json
+    - results/environment.lock
+gates:
+  Gate_A_incremental: Task + CWP > Task
+  Gate_B_ood: CWP > Task in unseen combination/domain
+  Gate_C_external: second dataset direction is consistent
+interpretation_rules:
+  all_gates_pass: CWP Foundation Paper holds.
+  only_gate_a_passes: CWP has extra information, but generalization advantage is not proven.
+  gate_a_b_fail: Strong CWP hypothesis fails.
+  current_result: Strong CWP foundation claim is rejected for v1; within-dataset compositional OOD signal remains a narrower positive finding.

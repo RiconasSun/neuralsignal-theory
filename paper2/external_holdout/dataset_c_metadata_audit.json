@@ -1,0 +1,44 @@
+{
+  "dataset_id": "ds004469",
+  "version": "1.1.3",
+  "dataset_doi": "doi:10.18112/openneuro.ds004469.v1.1.3",
+  "name": "Temporal Lobe Epilepsy - UNAM",
+  "license": "CC0",
+  "metadata_only_download": true,
+  "participants_tsv_rows": 74,
+  "participants_total_unique": 74,
+  "task_fmri_vw_included_subjects": 62,
+  "events_files": 63,
+  "bold_json_files": 128,
+  "sternberg_bold_json_files": 63,
+  "event_columns_required": [
+    "onset",
+    "duration",
+    "trial_type"
+  ],
+  "observed_trial_types": {
+    "Coding": 756,
+    "Retention": 756,
+    "Test": 756
+  },
+  "duration_by_trial_type": {
+    "Coding": {
+      "4.0": 756
+    },
+    "Retention": {
+      "10.0": 756
+    },
+    "Test": {
+      "4.0": 756
+    }
+  },
+  "frozen_stage_mapping": {
+    "Coding": "ENCODE",
+    "Retention": "MAINTAIN",
+    "Test": "PROBE"
+  },
+  "dataset_c_lock_recommendation": true,
+  "lock_rationale": "Events expose Coding, Retention, and Test phases that map directly to ENCODE, MAINTAIN, and PROBE. This dataset can test stage-level CWP transfer but cannot test TRANSFORM because no manipulation phase is encoded.",
+  "final_performance_inspected": false,
+  "bold_nii_downloaded_for_final_evaluation": false
+}

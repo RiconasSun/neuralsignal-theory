@@ -1,0 +1,54 @@
+{
+  "allowed_claim": "This sensitivity tests whether the 100307 labelconvert warning is partly a low-streamline-count smoke artifact.",
+  "commands": [
+    {
+      "result": {
+        "command": "tckgen '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/wmfod_ext4.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/tracks_20000_ext4_msmt_sensitivity.tck' -algorithm iFOD2 -act '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/5tt_dwi.mif' -backtrack -crop_at_gmwmi -seed_gmwmi '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/gmwmi_seed.mif' -select 20000 -maxlength 250 -cutoff 0.01 -force -nthreads 1",
+        "duration_seconds": 23.749,
+        "returncode": 0,
+        "stderr_tail": "tckgen: [WARNING] existing output files will be overwritten\ntckgen: [  0%]        1 seeds,        0 streamlines,        0 selected\ntckgen: [  0%]        7 seeds,        2 streamlines,        1 selected\ntckgen: [  0%]        8 seeds,        2 streamlines,        1 selected\ntckgen: [  0%]       21 seeds,        5 streamlines,        3 selected\ntckgen: [  0%]      221 seeds,       59 streamlines,       33 selected\ntckgen: [  0%]     1461 seeds,      374 streamlines,      194 selected\ntckgen: [  3%]     5591 seeds,     1378 streamlines,      732 selected\ntckgen: [ 12%]    18665 seeds,     4525 streamlines,     2400 selected\ntckgen: [ 32%]    49793 seeds,    12229 streamlines,     6400 selected\ntckgen: [ 74%]   116261 seeds,    28648 streamlines,    14928 selected\ntckgen: [100%]   155691 seeds,    38291 streamlines,    20000 selected\n",
+        "stdout_tail": ""
+      },
+      "step": "tckgen_iFOD2_ACT_20000"
+    },
+    {
+      "result": {
+        "command": "tcksift2 '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/tracks_20000_ext4_msmt_sensitivity.tck' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/wmfod_ext4.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/sift2_weights_20000_ext4_msmt_sensitivity.txt' -act '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/5tt_dwi.mif' -force -nthreads 4",
+        "duration_seconds": 16.967,
+        "returncode": 0,
+        "stderr_tail": "tcksift2: [WARNING] existing output files will be overwritten\ntcksift2: segmenting FODs... [==================================================]\ntcksift2: mapping tracks to image... [==================================================]\ntcksift2:   Iteration     CF (data)      CF (reg)     Streamlines\n..tcksift2: [.   ]         1        48.947%         0.271%        19972\n..tcksift2: [ .  ]         2        43.671%         0.632%        19972\n..tcksift2: [  . ]         3        42.495%         0.902%        19972\n......tcksift2: [  . ]         6        41.581%         1.272%        19972\n..........tcksift2: [  . ]        11        41.309%         1.433%        19972\n........tcksift2: [done]        13        41.275%         1.457%        19972\n",
+        "stdout_tail": ""
+      },
+      "step": "tcksift2_20000"
+    },
+    {
+      "result": {
+        "command": "tck2connectome '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/tracks_20000_ext4_msmt_sensitivity.tck' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/nodes_fsdefault_dwi.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/connectome_sift2_ext4_msmt_fsdefault84_20000_sensitivity.csv' -tck_weights_in '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/sift2_weights_20000_ext4_msmt_sensitivity.txt' -symmetric -zero_diagonal -out_assignment '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/assignments_ext4_msmt_fsdefault84_20000_sensitivity.csv' -force",
+        "duration_seconds": 1.182,
+        "returncode": 0,
+        "stderr_tail": "tck2connectome: [WARNING] existing output files will be overwritten\ntck2connectome: Constructing connectome... [==================================================]\ntck2connectome: [WARNING] The following nodes do not have any streamlines assigned:\ntck2connectome: [WARNING] 2, 3, 4, 7, 9, 16, 17, 20, 21, 22, 23, 24, 26, 27, 28, 30, 33, 51, 52, 53, 56, 58, 65, 66, 69, 70, 71, 72, 73, 76, 77, 79, 82\ntck2connectome: [WARNING] (This may indicate a poor registration)\n",
+        "stdout_tail": ""
+      },
+      "step": "tck2connectome_fsdefault84_20000"
+    }
+  ],
+  "connectome": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\connectome_sift2_ext4_msmt_fsdefault84_20000_sensitivity.csv",
+  "connectome_qc": {
+    "assignments_rows": 20001,
+    "bytes": 19676,
+    "columns": 84,
+    "exists": true,
+    "max_weight": 132.426391601562,
+    "nonzero_edges": 370,
+    "rows": 84,
+    "total_weight": 4465.097461879252
+  },
+  "forbidden_claims": [
+    "The final P7 tractography streamline count is fixed.",
+    "P7 structural prediction was tested."
+  ],
+  "load_bearing_tck2connectome_warning": true,
+  "status": "PASS_STREAMLINE_SENSITIVITY",
+  "streamlines": 20000,
+  "subject": "100307"
+}

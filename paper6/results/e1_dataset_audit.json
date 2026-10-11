@@ -1,0 +1,133 @@
+{
+  "central_question": "Do reproducible macroscopic brain-state transitions contain reproducible subsecond neural dynamics?",
+  "claim_audit": {
+    "allowed_current_claim": "P6 has a frozen protocol and an initial public dataset audit; neural dynamics tests have not yet been run.",
+    "can_claim_cross_dataset_replication": false,
+    "can_claim_fast_dynamics_existence": false,
+    "can_claim_nap_exists": false,
+    "can_claim_transition_specificity": false,
+    "forbidden_claims": [
+      "NAP is validated.",
+      "CWP maps to NAP.",
+      "Macro transitions are mechanistically explained.",
+      "Fast neural dynamics are universal primitives."
+    ]
+  },
+  "experiment": "P6-E1-dataset-audit",
+  "paper_type": "Explanation Paper",
+  "primary_candidate": "ds004752",
+  "rows": [
+    {
+      "bids_version": "1.4.0",
+      "dataset_doi": "doi:10.18112/openneuro.ds004752.v1.0.1",
+      "dataset_id": "ds004752",
+      "dataset_name_from_metadata": "Dataset of intracranial EEG, scalp EEG and beamforming sources from epilepsy patients performing a verbal working memory task",
+      "expected_transition_semantics": [
+        "encoding",
+        "maintenance",
+        "recall"
+      ],
+      "initial_e1_status": "PASS_INITIAL_E1",
+      "license": "CC0",
+      "metadata_errors": {
+        "dataset_description": null,
+        "participants": null,
+        "readme": null
+      },
+      "modality": "iEEG + scalp EEG + beamforming derivatives",
+      "modality_keyword_hits": {
+        "beamforming": true,
+        "eeg": true,
+        "ieeg": true,
+        "intracranial": true,
+        "meg": false,
+        "scalp": true
+      },
+      "n_participants_from_tsv": 15,
+      "name": "Intracranial EEG, scalp EEG and beamforming sources during verbal working memory",
+      "p6_use": "best current P6 fit because encoding, maintenance and recall are temporally separated and iEEG is present",
+      "role": "primary_candidate",
+      "source_url": "https://openneuro.org/datasets/ds004752",
+      "transition_keyword_hits": {
+        "encoding": true,
+        "maintenance": true,
+        "recall": true
+      }
+    },
+    {
+      "bids_version": "1.1.1",
+      "dataset_doi": "10.82901/nemar.on002550",
+      "dataset_id": "ds002550",
+      "dataset_name_from_metadata": "Differential brain mechanisms of selection and maintenance of information during working memory (MEG data)",
+      "expected_transition_semantics": [
+        "selection",
+        "maintenance",
+        "working memory"
+      ],
+      "initial_e1_status": "PASS_INITIAL_E1",
+      "license": "CC0",
+      "metadata_errors": {
+        "dataset_description": null,
+        "participants": null,
+        "readme": null
+      },
+      "modality": "MEG",
+      "modality_keyword_hits": {
+        "beamforming": false,
+        "eeg": false,
+        "ieeg": false,
+        "intracranial": false,
+        "meg": true,
+        "scalp": false
+      },
+      "n_participants_from_tsv": 22,
+      "name": "Differential brain mechanisms of selection and maintenance of information during working memory",
+      "p6_use": "strong external MEG candidate if events expose selection/maintenance timing",
+      "role": "external_candidate",
+      "source_url": "https://openneuro.org/datasets/ds002550",
+      "transition_keyword_hits": {
+        "maintenance": true,
+        "selection": true,
+        "working memory": true
+      }
+    },
+    {
+      "bids_version": "1.7.0",
+      "dataset_doi": "doi:10.18112/openneuro.ds004117.v1.0.1",
+      "dataset_id": "ds004117",
+      "dataset_name_from_metadata": "Sternberg Working Memory",
+      "expected_transition_semantics": [
+        "letter sequence presentation",
+        "maintenance",
+        "probe"
+      ],
+      "initial_e1_status": "PASS_INITIAL_E1",
+      "license": "CC0",
+      "metadata_errors": {
+        "dataset_description": null,
+        "participants": null,
+        "readme": null
+      },
+      "modality": "EEG",
+      "modality_keyword_hits": {
+        "beamforming": false,
+        "eeg": true,
+        "ieeg": false,
+        "intracranial": false,
+        "meg": false,
+        "scalp": true
+      },
+      "n_participants_from_tsv": 23,
+      "name": "Modified Sternberg Working Memory Experiment",
+      "p6_use": "EEG Sternberg candidate for lower-resolution replication if event semantics are usable",
+      "role": "external_candidate",
+      "source_url": "https://openneuro.org/datasets/ds004117",
+      "transition_keyword_hits": {
+        "letter sequence presentation": true,
+        "maintenance": true,
+        "probe": true
+      }
+    }
+  ],
+  "status": "PASS_INITIAL_E1"
+}

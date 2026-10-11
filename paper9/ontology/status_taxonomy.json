@@ -1,0 +1,27 @@
+{
+  "status_labels": [
+    "OBSERVED",
+    "REPRODUCIBLE",
+    "OOD_SUPPORTED",
+    "EXTERNALLY_REPLICATED",
+    "CANDIDATE",
+    "NOT_SUPPORTED",
+    "FAILED_PRIMARY_GATE",
+    "CONFOUNDED",
+    "DATA_BLOCKED",
+    "TOOLCHAIN_BLOCKED",
+    "UNTESTED"
+  ],
+  "upgrade_rules": {
+    "OBSERVED": "A phenomenon is measured above basic sanity/null checks in a specified dataset and measurement regime.",
+    "REPRODUCIBLE": "The same object recurs across predefined runs, sessions, subjects, or equivalent repeated units.",
+    "OOD_SUPPORTED": "The object improves a preregistered out-of-distribution endpoint without changing post-holdout definitions.",
+    "EXTERNALLY_REPLICATED": "The object survives a locked independent dataset using frozen definitions and model rules."
+  },
+  "downgrade_rules": {
+    "NOT_SUPPORTED": "The preregistered primary gate fails or strong baseline/null remains unbeaten.",
+    "CONFOUNDED": "A plausible competing explanation remains unresolved or performs materially well.",
+    "DATA_BLOCKED": "The required variable/data object is absent; this is not evidence against the hypothesis.",
+    "TOOLCHAIN_BLOCKED": "The required computational route is not complete enough for a scientific hypothesis test."
+  }
+}

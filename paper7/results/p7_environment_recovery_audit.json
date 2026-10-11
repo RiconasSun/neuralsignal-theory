@@ -1,0 +1,60 @@
+{
+  "attempts": [
+    {
+      "attempt": "native_command_lookup",
+      "result": "MRtrix3 and FSL commands not found on Windows PATH",
+      "status": "UNAVAILABLE"
+    },
+    {
+      "attempt": "docker_daemon_check",
+      "result": "Docker CLI installed but daemon unavailable; Docker Desktop startup did not yield a responsive daemon within the run window",
+      "status": "UNAVAILABLE_IN_CURRENT_AUTONOMOUS_RUN"
+    },
+    {
+      "attempt": "wsl_ubuntu_check",
+      "result": "Ubuntu WSL2 starts; apt-get and Python 3.12.3 are available",
+      "status": "WSL_AVAILABLE"
+    },
+    {
+      "attempt": "wsl_apt_package_check",
+      "result": "mrtrix3 candidate exists; fsl has no candidate in current apt sources",
+      "status": "PARTIAL_PACKAGE_AVAILABILITY"
+    },
+    {
+      "attempt": "wsl_mrtrix3_install",
+      "result": "sudo: a password is required",
+      "status": "HUMAN_ADMIN_PASSWORD_REQUIRED"
+    },
+    {
+      "attempt": "wsl_user_space_micromamba_install",
+      "result": "micromamba 2.9.0 installed under /home/a5993/.local/bin without sudo",
+      "status": "PASS"
+    },
+    {
+      "attempt": "wsl_user_space_mrtrix3_install",
+      "result": "mrtrix3 3.0.8 installed under /home/a5993/mamba-envs/p7-neuro",
+      "status": "PASS"
+    },
+    {
+      "attempt": "wsl_mrtrix_dwi_io_smoke",
+      "result": "mrinfo read HCP subject 100307 DWI and mrconvert generated dwi.mif",
+      "status": "PASS_IO_ONLY"
+    },
+    {
+      "attempt": "wsl_full_act_sift2_smoke",
+      "result": "full-volume response/FOD stage exceeded the interactive run window and was interrupted before connectome generation",
+      "status": "NOT_COMPLETED"
+    }
+  ],
+  "blocker": "Gold-standard ACT/SIFT2 cohort connectome generation is not complete: MRtrix3 is available through WSL user-space micromamba, but FSL remains unavailable, Docker daemon remains unavailable, and the full-volume smoke did not complete within the interactive run window.",
+  "data_blocker": "Only 1 local HCP subject currently satisfies the complete P7 modeling-input audit.",
+  "forbidden_claims": [
+    "Gold-standard ACT/SIFT2 connectomes were generated",
+    "Subject-specific structural connectivity constrains brain-state dynamics",
+    "Paper 7 supports or refutes the structural hypothesis",
+    "NAP is structurally grounded",
+    "CWP is validated"
+  ],
+  "paper": "Paper 7",
+  "status": "P7_WSL_MRTRIX_PARTIAL_RECOVERY_CONNECTOME_NOT_GENERATED"
+}

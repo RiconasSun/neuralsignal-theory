@@ -1,0 +1,83 @@
+{
+  "claim_boundary": "P7 remains open. A one-subject ext4 MSMT-CSD final-route smoke can unblock engineering scale-up, but it does not test the structural hypothesis.",
+  "diagnostic_connectome_exists": true,
+  "experiment": "P7-MSMT-FOD-readiness-validator",
+  "files": {
+    "csf_response": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\csf.txt",
+      "size_bytes": 282
+    },
+    "diagnostic_connectome": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\connectome_sift2_csd_diagnostic.csv",
+      "size_bytes": 8289664
+    },
+    "diagnostic_single_tissue_wmfod": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\wmfod_csd_smoke.mif",
+      "size_bytes": 658522360
+    },
+    "dwi": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\dwi.mif",
+      "size_bytes": 4214436204
+    },
+    "final_route_connectome": {
+      "exists": false,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\connectome_sift2_smoke.csv",
+      "size_bytes": 0
+    },
+    "final_route_ext4_connectome": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\connectome_sift2_ext4_msmt_smoke.csv",
+      "size_bytes": 8284698
+    },
+    "gm_response": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\gm.txt",
+      "size_bytes": 280
+    },
+    "msmt_wmfod": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\wmfod.mif",
+      "size_bytes": 658522860
+    },
+    "msmt_wmfod_explicit": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\wmfod_msmt_explicit.mif",
+      "size_bytes": 658522928
+    },
+    "msmt_wmfod_ext4": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\wmfod_ext4.mif",
+      "size_bytes": 658521916
+    },
+    "wm_response": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\wm.txt",
+      "size_bytes": 546
+    }
+  },
+  "final_route_connectome_exists": false,
+  "final_route_ext4_connectome_exists": true,
+  "gate": {
+    "allow_3_subject_scale": true,
+    "allow_final_route_tractography": true,
+    "msmt_fod_nonzero_validated": true,
+    "msmt_response_files_nonzero": true
+  },
+  "known_zero_msmt_outputs_from_mrstats": [
+    "msmt_wmfod",
+    "msmt_wmfod_explicit"
+  ],
+  "next_action": "If PASS, continue to 3-subject smoke and then 10-subject QC. If BLOCKED, regenerate MSMT-CSD until ext4 WM FOD and final-route connectome pass.",
+  "paper": "Paper 7",
+  "response_nonzero": {
+    "csf": true,
+    "gm": true,
+    "wm": true
+  },
+  "status": "PASS_EXT4_MSMT_FOD_AND_SINGLE_SUBJECT_FINAL_ROUTE_READY",
+  "subject": "100307"
+}

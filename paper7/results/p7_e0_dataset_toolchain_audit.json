@@ -1,0 +1,92 @@
+{
+  "blockers": [
+    "MRtrix3 command set is incomplete: missing mrconvert, dwi2response, dwi2fod, 5ttgen, tckgen, tcksift2, tck2connectome, labelconvert.",
+    "FSL command set is incomplete: missing flirt, bet, eddy, topup."
+  ],
+  "claim_boundary": "P7 cannot run or claim high-fidelity structural grounding until HCP DWI/FreeSurfer/tfMRI inputs and MRtrix3 commands are available.",
+  "eligible_subjects_preview": [
+    "100307"
+  ],
+  "experiment": "P7-E0-dataset-feasibility-toolchain-audit",
+  "forbidden_claims": [
+    "High-fidelity ACT/iFOD2/SIFT2 connectomes were generated.",
+    "Subject-specific structural connectivity constrains brain-state dynamics.",
+    "P7 structural mechanism is established.",
+    "CWP/NAP structural grounding is established."
+  ],
+  "fsl_ready": false,
+  "local_hcp_root": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper5\\data_hcp_ya_2025\\downloads\\HCP_1200",
+  "mrtrix_ready": false,
+  "n_local_subject_dirs": 100,
+  "n_subjects_eligible_for_p7_modeling": 1,
+  "release_rule": "Use HCP-YA 2025 only; do not mix with 2017 S1200 processing.",
+  "selected_dataset": "HCP-YA 2025",
+  "status": "BLOCKED_HIGH_FIDELITY_TRACTOGRAPHY_REQUIREMENTS",
+  "toolchain": [
+    {
+      "available": false,
+      "command": "mrconvert",
+      "path": null
+    },
+    {
+      "available": true,
+      "command": "mrinfo",
+      "path": "C:\\Windows\\system32\\mrinfo.EXE"
+    },
+    {
+      "available": false,
+      "command": "dwi2response",
+      "path": null
+    },
+    {
+      "available": false,
+      "command": "dwi2fod",
+      "path": null
+    },
+    {
+      "available": false,
+      "command": "5ttgen",
+      "path": null
+    },
+    {
+      "available": false,
+      "command": "tckgen",
+      "path": null
+    },
+    {
+      "available": false,
+      "command": "tcksift2",
+      "path": null
+    },
+    {
+      "available": false,
+      "command": "tck2connectome",
+      "path": null
+    },
+    {
+      "available": false,
+      "command": "labelconvert",
+      "path": null
+    },
+    {
+      "available": false,
+      "command": "flirt",
+      "path": null
+    },
+    {
+      "available": false,
+      "command": "bet",
+      "path": null
+    },
+    {
+      "available": false,
+      "command": "eddy",
+      "path": null
+    },
+    {
+      "available": false,
+      "command": "topup",
+      "path": null
+    }
+  ]
+}

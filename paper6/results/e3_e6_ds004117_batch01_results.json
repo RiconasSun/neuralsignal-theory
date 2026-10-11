@@ -1,0 +1,673 @@
+{
+  "bands": {
+    "alpha_8_12": [
+      8.0,
+      12.0
+    ],
+    "beta_13_30": [
+      13.0,
+      30.0
+    ],
+    "low_gamma_30_55": [
+      30.0,
+      55.0
+    ],
+    "theta_4_8": [
+      4.0,
+      8.0
+    ]
+  },
+  "claim_audit": {
+    "allowed_current_claim": "Initial ds004117 multi-run EEG analysis has been run; any positive finding is preliminary until full cohort and external replication.",
+    "can_claim_cross_dataset_replication": false,
+    "can_claim_fast_dynamics_existence": true,
+    "can_claim_nap_exists": false,
+    "can_claim_transition_specificity": true,
+    "forbidden_claims": [
+      "NAP is validated.",
+      "CWP maps to NAP.",
+      "Fast neural dynamics are universal primitives.",
+      "P6 is complete."
+    ]
+  },
+  "dataset": "ds004117",
+  "e4_existence": {
+    "delta_similarity": 1.488251954317093,
+    "random_window_odd_even_centroid_similarity": -0.5113843083381653,
+    "same_transition_odd_even_centroid_similarity": 0.9768676459789276
+  },
+  "e5_specificity": {
+    "accuracy": 0.7080200501253133,
+    "folds": [
+      {
+        "accuracy": 0.66,
+        "heldout_group": "sub-001/ses-01/eeg/sub-001_ses-01_task-WorkingMemory_run-1_events.tsv",
+        "n_test": 50
+      },
+      {
+        "accuracy": 0.76,
+        "heldout_group": "sub-001/ses-01/eeg/sub-001_ses-01_task-WorkingMemory_run-2_events.tsv",
+        "n_test": 50
+      },
+      {
+        "accuracy": 0.88,
+        "heldout_group": "sub-001/ses-01/eeg/sub-001_ses-01_task-WorkingMemory_run-3_events.tsv",
+        "n_test": 50
+      },
+      {
+        "accuracy": 0.72,
+        "heldout_group": "sub-001/ses-01/eeg/sub-001_ses-01_task-WorkingMemory_run-4_events.tsv",
+        "n_test": 50
+      },
+      {
+        "accuracy": 0.6,
+        "heldout_group": "sub-002/ses-01/eeg/sub-002_ses-01_task-WorkingMemory_run-1_events.tsv",
+        "n_test": 50
+      },
+      {
+        "accuracy": 0.78,
+        "heldout_group": "sub-002/ses-01/eeg/sub-002_ses-01_task-WorkingMemory_run-2_events.tsv",
+        "n_test": 50
+      },
+      {
+        "accuracy": 0.8,
+        "heldout_group": "sub-002/ses-01/eeg/sub-002_ses-01_task-WorkingMemory_run-3_events.tsv",
+        "n_test": 50
+      },
+      {
+        "accuracy": 0.76,
+        "heldout_group": "sub-002/ses-01/eeg/sub-002_ses-01_task-WorkingMemory_run-4_events.tsv",
+        "n_test": 50
+      },
+      {
+        "accuracy": 0.58,
+        "heldout_group": "sub-003/ses-01/eeg/sub-003_ses-01_task-WorkingMemory_run-1_events.tsv",
+        "n_test": 50
+      },
+      {
+        "accuracy": 0.68,
+        "heldout_group": "sub-003/ses-01/eeg/sub-003_ses-01_task-WorkingMemory_run-2_events.tsv",
+        "n_test": 50
+      },
+      {
+        "accuracy": 0.64,
+        "heldout_group": "sub-003/ses-01/eeg/sub-003_ses-01_task-WorkingMemory_run-3_events.tsv",
+        "n_test": 50
+      },
+      {
+        "accuracy": 0.5,
+        "heldout_group": "sub-003/ses-01/eeg/sub-003_ses-01_task-WorkingMemory_run-4_events.tsv",
+        "n_test": 50
+      },
+      {
+        "accuracy": 0.74,
+        "heldout_group": "sub-004/ses-01/eeg/sub-004_ses-01_task-WorkingMemory_run-1_events.tsv",
+        "n_test": 50
+      },
+      {
+        "accuracy": 0.7708333333333334,
+        "heldout_group": "sub-004/ses-01/eeg/sub-004_ses-01_task-WorkingMemory_run-2_events.tsv",
+        "n_test": 48
+      },
+      {
+        "accuracy": 0.74,
+        "heldout_group": "sub-004/ses-01/eeg/sub-004_ses-01_task-WorkingMemory_run-3_events.tsv",
+        "n_test": 50
+      },
+      {
+        "accuracy": 0.72,
+        "heldout_group": "sub-004/ses-01/eeg/sub-004_ses-01_task-WorkingMemory_run-4_events.tsv",
+        "n_test": 50
+      }
+    ],
+    "n_folds": 16,
+    "n_predictions": 798
+  },
+  "e5_subject_accuracy_bootstrap": {
+    "ci95": [
+      0.6112500000000001,
+      0.7981565656565657
+    ],
+    "mean": 0.7269065656565656,
+    "n": 4,
+    "n_boot": 5000
+  },
+  "e5_subject_level": {
+    "binomial_p_gt_chance": 0.0625,
+    "mean_accuracy": 0.7269065656565656,
+    "median_accuracy": 0.7713131313131314,
+    "n_subjects": 4,
+    "n_subjects_above_chance": 4,
+    "subjects": [
+      {
+        "accuracy": 0.81,
+        "n_folds": 4,
+        "n_predictions": 200,
+        "subject": "sub-001"
+      },
+      {
+        "accuracy": 0.78,
+        "n_folds": 4,
+        "n_predictions": 200,
+        "subject": "sub-002"
+      },
+      {
+        "accuracy": 0.555,
+        "n_folds": 4,
+        "n_predictions": 200,
+        "subject": "sub-003"
+      },
+      {
+        "accuracy": 0.7626262626262627,
+        "n_folds": 4,
+        "n_predictions": 198,
+        "subject": "sub-004"
+      }
+    ]
+  },
+  "e6_nulls": {
+    "label_shuffle_accuracy_null": {
+      "n_perm": 20,
+      "null_ci95": [
+        0.4711152882205514,
+        0.5263784461152883
+      ],
+      "null_mean_accuracy": 0.4976190476190475,
+      "null_mode": "heldout_prediction_label_shuffle",
+      "observed_accuracy": 0.7080200501253133,
+      "p_one_sided_observed_greater": 0.047619047619047616
+    },
+    "phase_randomization_note": "This control preserves Fourier amplitude by design; with bandpower-delta features it tests phase-insensitivity of the current feature family, not phase-specific neural dynamics.",
+    "phase_randomized_bandpower_specificity_accuracy": {
+      "accuracy": 0.6779448621553885,
+      "folds": [
+        {
+          "accuracy": 0.64,
+          "heldout_group": "sub-001/ses-01/eeg/sub-001_ses-01_task-WorkingMemory_run-1_events.tsv",
+          "n_test": 50
+        },
+        {
+          "accuracy": 0.76,
+          "heldout_group": "sub-001/ses-01/eeg/sub-001_ses-01_task-WorkingMemory_run-2_events.tsv",
+          "n_test": 50
+        },
+        {
+          "accuracy": 0.7,
+          "heldout_group": "sub-001/ses-01/eeg/sub-001_ses-01_task-WorkingMemory_run-3_events.tsv",
+          "n_test": 50
+        },
+        {
+          "accuracy": 0.76,
+          "heldout_group": "sub-001/ses-01/eeg/sub-001_ses-01_task-WorkingMemory_run-4_events.tsv",
+          "n_test": 50
+        },
+        {
+          "accuracy": 0.64,
+          "heldout_group": "sub-002/ses-01/eeg/sub-002_ses-01_task-WorkingMemory_run-1_events.tsv",
+          "n_test": 50
+        },
+        {
+          "accuracy": 0.58,
+          "heldout_group": "sub-002/ses-01/eeg/sub-002_ses-01_task-WorkingMemory_run-2_events.tsv",
+          "n_test": 50
+        },
+        {
+          "accuracy": 0.76,
+          "heldout_group": "sub-002/ses-01/eeg/sub-002_ses-01_task-WorkingMemory_run-3_events.tsv",
+          "n_test": 50
+        },
+        {
+          "accuracy": 0.7,
+          "heldout_group": "sub-002/ses-01/eeg/sub-002_ses-01_task-WorkingMemory_run-4_events.tsv",
+          "n_test": 50
+        },
+        {
+          "accuracy": 0.56,
+          "heldout_group": "sub-003/ses-01/eeg/sub-003_ses-01_task-WorkingMemory_run-1_events.tsv",
+          "n_test": 50
+        },
+        {
+          "accuracy": 0.66,
+          "heldout_group": "sub-003/ses-01/eeg/sub-003_ses-01_task-WorkingMemory_run-2_events.tsv",
+          "n_test": 50
+        },
+        {
+          "accuracy": 0.6,
+          "heldout_group": "sub-003/ses-01/eeg/sub-003_ses-01_task-WorkingMemory_run-3_events.tsv",
+          "n_test": 50
+        },
+        {
+          "accuracy": 0.58,
+          "heldout_group": "sub-003/ses-01/eeg/sub-003_ses-01_task-WorkingMemory_run-4_events.tsv",
+          "n_test": 50
+        },
+        {
+          "accuracy": 0.8,
+          "heldout_group": "sub-004/ses-01/eeg/sub-004_ses-01_task-WorkingMemory_run-1_events.tsv",
+          "n_test": 50
+        },
+        {
+          "accuracy": 0.7708333333333334,
+          "heldout_group": "sub-004/ses-01/eeg/sub-004_ses-01_task-WorkingMemory_run-2_events.tsv",
+          "n_test": 48
+        },
+        {
+          "accuracy": 0.66,
+          "heldout_group": "sub-004/ses-01/eeg/sub-004_ses-01_task-WorkingMemory_run-3_events.tsv",
+          "n_test": 50
+        },
+        {
+          "accuracy": 0.68,
+          "heldout_group": "sub-004/ses-01/eeg/sub-004_ses-01_task-WorkingMemory_run-4_events.tsv",
+          "n_test": 50
+        }
+      ],
+      "n_folds": 16,
+      "n_predictions": 798
+    },
+    "random_window_specificity_accuracy": {
+      "accuracy": 0.503125,
+      "folds": [
+        {
+          "accuracy": 0.55,
+          "heldout_group": "sub-001/ses-01/eeg/sub-001_ses-01_task-WorkingMemory_run-1_events.tsv",
+          "n_test": 40
+        },
+        {
+          "accuracy": 0.525,
+          "heldout_group": "sub-001/ses-01/eeg/sub-001_ses-01_task-WorkingMemory_run-2_events.tsv",
+          "n_test": 40
+        },
+        {
+          "accuracy": 0.45,
+          "heldout_group": "sub-001/ses-01/eeg/sub-001_ses-01_task-WorkingMemory_run-3_events.tsv",
+          "n_test": 40
+        },
+        {
+          "accuracy": 0.6,
+          "heldout_group": "sub-001/ses-01/eeg/sub-001_ses-01_task-WorkingMemory_run-4_events.tsv",
+          "n_test": 40
+        },
+        {
+          "accuracy": 0.5,
+          "heldout_group": "sub-002/ses-01/eeg/sub-002_ses-01_task-WorkingMemory_run-1_events.tsv",
+          "n_test": 40
+        },
+        {
+          "accuracy": 0.425,
+          "heldout_group": "sub-002/ses-01/eeg/sub-002_ses-01_task-WorkingMemory_run-2_events.tsv",
+          "n_test": 40
+        },
+        {
+          "accuracy": 0.55,
+          "heldout_group": "sub-002/ses-01/eeg/sub-002_ses-01_task-WorkingMemory_run-3_events.tsv",
+          "n_test": 40
+        },
+        {
+          "accuracy": 0.525,
+          "heldout_group": "sub-002/ses-01/eeg/sub-002_ses-01_task-WorkingMemory_run-4_events.tsv",
+          "n_test": 40
+        },
+        {
+          "accuracy": 0.5,
+          "heldout_group": "sub-003/ses-01/eeg/sub-003_ses-01_task-WorkingMemory_run-1_events.tsv",
+          "n_test": 40
+        },
+        {
+          "accuracy": 0.55,
+          "heldout_group": "sub-003/ses-01/eeg/sub-003_ses-01_task-WorkingMemory_run-2_events.tsv",
+          "n_test": 40
+        },
+        {
+          "accuracy": 0.525,
+          "heldout_group": "sub-003/ses-01/eeg/sub-003_ses-01_task-WorkingMemory_run-3_events.tsv",
+          "n_test": 40
+        },
+        {
+          "accuracy": 0.475,
+          "heldout_group": "sub-003/ses-01/eeg/sub-003_ses-01_task-WorkingMemory_run-4_events.tsv",
+          "n_test": 40
+        },
+        {
+          "accuracy": 0.6,
+          "heldout_group": "sub-004/ses-01/eeg/sub-004_ses-01_task-WorkingMemory_run-1_events.tsv",
+          "n_test": 40
+        },
+        {
+          "accuracy": 0.35,
+          "heldout_group": "sub-004/ses-01/eeg/sub-004_ses-01_task-WorkingMemory_run-2_events.tsv",
+          "n_test": 40
+        },
+        {
+          "accuracy": 0.35,
+          "heldout_group": "sub-004/ses-01/eeg/sub-004_ses-01_task-WorkingMemory_run-3_events.tsv",
+          "n_test": 40
+        },
+        {
+          "accuracy": 0.575,
+          "heldout_group": "sub-004/ses-01/eeg/sub-004_ses-01_task-WorkingMemory_run-4_events.tsv",
+          "n_test": 40
+        }
+      ],
+      "n_folds": 16,
+      "n_predictions": 640
+    },
+    "time_shift_specificity_accuracy": {
+      "accuracy": 0.5157232704402516,
+      "folds": [
+        {
+          "accuracy": 0.52,
+          "heldout_group": "sub-001/ses-01/eeg/sub-001_ses-01_task-WorkingMemory_run-1_events.tsv",
+          "n_test": 50
+        },
+        {
+          "accuracy": 0.48,
+          "heldout_group": "sub-001/ses-01/eeg/sub-001_ses-01_task-WorkingMemory_run-2_events.tsv",
+          "n_test": 50
+        },
+        {
+          "accuracy": 0.42857142857142855,
+          "heldout_group": "sub-001/ses-01/eeg/sub-001_ses-01_task-WorkingMemory_run-3_events.tsv",
+          "n_test": 49
+        },
+        {
+          "accuracy": 0.5625,
+          "heldout_group": "sub-001/ses-01/eeg/sub-001_ses-01_task-WorkingMemory_run-4_events.tsv",
+          "n_test": 48
+        },
+        {
+          "accuracy": 0.5,
+          "heldout_group": "sub-002/ses-01/eeg/sub-002_ses-01_task-WorkingMemory_run-1_events.tsv",
+          "n_test": 50
+        },
+        {
+          "accuracy": 0.5,
+          "heldout_group": "sub-002/ses-01/eeg/sub-002_ses-01_task-WorkingMemory_run-2_events.tsv",
+          "n_test": 50
+        },
+        {
+          "accuracy": 0.56,
+          "heldout_group": "sub-002/ses-01/eeg/sub-002_ses-01_task-WorkingMemory_run-3_events.tsv",
+          "n_test": 50
+        },
+        {
+          "accuracy": 0.5,
+          "heldout_group": "sub-002/ses-01/eeg/sub-002_ses-01_task-WorkingMemory_run-4_events.tsv",
+          "n_test": 50
+        },
+        {
+          "accuracy": 0.56,
+          "heldout_group": "sub-003/ses-01/eeg/sub-003_ses-01_task-WorkingMemory_run-1_events.tsv",
+          "n_test": 50
+        },
+        {
+          "accuracy": 0.56,
+          "heldout_group": "sub-003/ses-01/eeg/sub-003_ses-01_task-WorkingMemory_run-2_events.tsv",
+          "n_test": 50
+        },
+        {
+          "accuracy": 0.48,
+          "heldout_group": "sub-003/ses-01/eeg/sub-003_ses-01_task-WorkingMemory_run-3_events.tsv",
+          "n_test": 50
+        },
+        {
+          "accuracy": 0.5,
+          "heldout_group": "sub-003/ses-01/eeg/sub-003_ses-01_task-WorkingMemory_run-4_events.tsv",
+          "n_test": 50
+        },
+        {
+          "accuracy": 0.56,
+          "heldout_group": "sub-004/ses-01/eeg/sub-004_ses-01_task-WorkingMemory_run-1_events.tsv",
+          "n_test": 50
+        },
+        {
+          "accuracy": 0.5625,
+          "heldout_group": "sub-004/ses-01/eeg/sub-004_ses-01_task-WorkingMemory_run-2_events.tsv",
+          "n_test": 48
+        },
+        {
+          "accuracy": 0.54,
+          "heldout_group": "sub-004/ses-01/eeg/sub-004_ses-01_task-WorkingMemory_run-3_events.tsv",
+          "n_test": 50
+        },
+        {
+          "accuracy": 0.44,
+          "heldout_group": "sub-004/ses-01/eeg/sub-004_ses-01_task-WorkingMemory_run-4_events.tsv",
+          "n_test": 50
+        }
+      ],
+      "n_folds": 16,
+      "n_predictions": 795
+    }
+  },
+  "experiment": "P6-E3-E6-ds004117-multi-run",
+  "feature_family": "per-channel 1-second pre/post transition log bandpower deltas",
+  "feature_file": "paper6\\features\\ds004117_multi_run\\ds004117_batch01_bandpower_delta_features.csv",
+  "gates": {
+    "E4_existence_real_similarity_gt_random_windows": true,
+    "E5_specificity_accuracy_gt_label_shuffle_ci95": true,
+    "E6_specificity_accuracy_gt_random_windows": true,
+    "E6_specificity_accuracy_gt_time_shift": true
+  },
+  "n_event_files": 16,
+  "n_phase_randomized_windows": 798,
+  "n_random_windows": 640,
+  "n_subjects": 4,
+  "n_time_shift_windows": 795,
+  "n_windows": 798,
+  "phase_randomized_feature_file": "paper6\\features\\ds004117_multi_run\\ds004117_batch01_phase_randomized_bandpower_delta_features.csv",
+  "random_feature_file": "paper6\\features\\ds004117_multi_run\\ds004117_batch01_random_window_bandpower_delta_features.csv",
+  "run_meta": [
+    {
+      "duration_s": 652.952,
+      "event_file": "sub-001/ses-01/eeg/sub-001_ses-01_task-WorkingMemory_run-1_events.tsv",
+      "n_channels": 69,
+      "phase_randomized_windows_extracted": 50,
+      "random_windows_extracted": 40,
+      "sfreq": 250.0,
+      "time_shift_seconds": 10.0,
+      "time_shift_windows_extracted": 50,
+      "windows_extracted": 50,
+      "windows_requested": 50,
+      "windows_skipped": 0
+    },
+    {
+      "duration_s": 615.048,
+      "event_file": "sub-001/ses-01/eeg/sub-001_ses-01_task-WorkingMemory_run-2_events.tsv",
+      "n_channels": 69,
+      "phase_randomized_windows_extracted": 50,
+      "random_windows_extracted": 40,
+      "sfreq": 250.0,
+      "time_shift_seconds": 10.0,
+      "time_shift_windows_extracted": 50,
+      "windows_extracted": 50,
+      "windows_requested": 50,
+      "windows_skipped": 0
+    },
+    {
+      "duration_s": 617.024,
+      "event_file": "sub-001/ses-01/eeg/sub-001_ses-01_task-WorkingMemory_run-3_events.tsv",
+      "n_channels": 69,
+      "phase_randomized_windows_extracted": 50,
+      "random_windows_extracted": 40,
+      "sfreq": 250.0,
+      "time_shift_seconds": 10.0,
+      "time_shift_windows_extracted": 49,
+      "windows_extracted": 50,
+      "windows_requested": 50,
+      "windows_skipped": 0
+    },
+    {
+      "duration_s": 583.284,
+      "event_file": "sub-001/ses-01/eeg/sub-001_ses-01_task-WorkingMemory_run-4_events.tsv",
+      "n_channels": 69,
+      "phase_randomized_windows_extracted": 50,
+      "random_windows_extracted": 40,
+      "sfreq": 250.0,
+      "time_shift_seconds": 10.0,
+      "time_shift_windows_extracted": 48,
+      "windows_extracted": 50,
+      "windows_requested": 50,
+      "windows_skipped": 0
+    },
+    {
+      "duration_s": 724.484,
+      "event_file": "sub-002/ses-01/eeg/sub-002_ses-01_task-WorkingMemory_run-1_events.tsv",
+      "n_channels": 69,
+      "phase_randomized_windows_extracted": 50,
+      "random_windows_extracted": 40,
+      "sfreq": 250.0,
+      "time_shift_seconds": 10.0,
+      "time_shift_windows_extracted": 50,
+      "windows_extracted": 50,
+      "windows_requested": 50,
+      "windows_skipped": 0
+    },
+    {
+      "duration_s": 762.98,
+      "event_file": "sub-002/ses-01/eeg/sub-002_ses-01_task-WorkingMemory_run-2_events.tsv",
+      "n_channels": 69,
+      "phase_randomized_windows_extracted": 50,
+      "random_windows_extracted": 40,
+      "sfreq": 250.0,
+      "time_shift_seconds": 10.0,
+      "time_shift_windows_extracted": 50,
+      "windows_extracted": 50,
+      "windows_requested": 50,
+      "windows_skipped": 0
+    },
+    {
+      "duration_s": 764.904,
+      "event_file": "sub-002/ses-01/eeg/sub-002_ses-01_task-WorkingMemory_run-3_events.tsv",
+      "n_channels": 69,
+      "phase_randomized_windows_extracted": 50,
+      "random_windows_extracted": 40,
+      "sfreq": 250.0,
+      "time_shift_seconds": 10.0,
+      "time_shift_windows_extracted": 50,
+      "windows_extracted": 50,
+      "windows_requested": 50,
+      "windows_skipped": 0
+    },
+    {
+      "duration_s": 725.416,
+      "event_file": "sub-002/ses-01/eeg/sub-002_ses-01_task-WorkingMemory_run-4_events.tsv",
+      "n_channels": 69,
+      "phase_randomized_windows_extracted": 50,
+      "random_windows_extracted": 40,
+      "sfreq": 250.0,
+      "time_shift_seconds": 10.0,
+      "time_shift_windows_extracted": 50,
+      "windows_extracted": 50,
+      "windows_requested": 50,
+      "windows_skipped": 0
+    },
+    {
+      "duration_s": 727.164,
+      "event_file": "sub-003/ses-01/eeg/sub-003_ses-01_task-WorkingMemory_run-1_events.tsv",
+      "n_channels": 69,
+      "phase_randomized_windows_extracted": 50,
+      "random_windows_extracted": 40,
+      "sfreq": 250.0,
+      "time_shift_seconds": 10.0,
+      "time_shift_windows_extracted": 50,
+      "windows_extracted": 50,
+      "windows_requested": 50,
+      "windows_skipped": 0
+    },
+    {
+      "duration_s": 783.996,
+      "event_file": "sub-003/ses-01/eeg/sub-003_ses-01_task-WorkingMemory_run-2_events.tsv",
+      "n_channels": 69,
+      "phase_randomized_windows_extracted": 50,
+      "random_windows_extracted": 40,
+      "sfreq": 250.0,
+      "time_shift_seconds": 10.0,
+      "time_shift_windows_extracted": 50,
+      "windows_extracted": 50,
+      "windows_requested": 50,
+      "windows_skipped": 0
+    },
+    {
+      "duration_s": 784.34,
+      "event_file": "sub-003/ses-01/eeg/sub-003_ses-01_task-WorkingMemory_run-3_events.tsv",
+      "n_channels": 69,
+      "phase_randomized_windows_extracted": 50,
+      "random_windows_extracted": 40,
+      "sfreq": 250.0,
+      "time_shift_seconds": 10.0,
+      "time_shift_windows_extracted": 50,
+      "windows_extracted": 50,
+      "windows_requested": 50,
+      "windows_skipped": 0
+    },
+    {
+      "duration_s": 672.884,
+      "event_file": "sub-003/ses-01/eeg/sub-003_ses-01_task-WorkingMemory_run-4_events.tsv",
+      "n_channels": 69,
+      "phase_randomized_windows_extracted": 50,
+      "random_windows_extracted": 40,
+      "sfreq": 250.0,
+      "time_shift_seconds": 10.0,
+      "time_shift_windows_extracted": 50,
+      "windows_extracted": 50,
+      "windows_requested": 50,
+      "windows_skipped": 0
+    },
+    {
+      "duration_s": 673.052,
+      "event_file": "sub-004/ses-01/eeg/sub-004_ses-01_task-WorkingMemory_run-1_events.tsv",
+      "n_channels": 69,
+      "phase_randomized_windows_extracted": 50,
+      "random_windows_extracted": 40,
+      "sfreq": 250.0,
+      "time_shift_seconds": 10.0,
+      "time_shift_windows_extracted": 50,
+      "windows_extracted": 50,
+      "windows_requested": 50,
+      "windows_skipped": 0
+    },
+    {
+      "duration_s": 736.284,
+      "event_file": "sub-004/ses-01/eeg/sub-004_ses-01_task-WorkingMemory_run-2_events.tsv",
+      "n_channels": 69,
+      "phase_randomized_windows_extracted": 48,
+      "random_windows_extracted": 40,
+      "sfreq": 250.0,
+      "time_shift_seconds": 10.0,
+      "time_shift_windows_extracted": 48,
+      "windows_extracted": 48,
+      "windows_requested": 48,
+      "windows_skipped": 0
+    },
+    {
+      "duration_s": 634.688,
+      "event_file": "sub-004/ses-01/eeg/sub-004_ses-01_task-WorkingMemory_run-3_events.tsv",
+      "n_channels": 69,
+      "phase_randomized_windows_extracted": 50,
+      "random_windows_extracted": 40,
+      "sfreq": 250.0,
+      "time_shift_seconds": 10.0,
+      "time_shift_windows_extracted": 50,
+      "windows_extracted": 50,
+      "windows_requested": 50,
+      "windows_skipped": 0
+    },
+    {
+      "duration_s": 660.864,
+      "event_file": "sub-004/ses-01/eeg/sub-004_ses-01_task-WorkingMemory_run-4_events.tsv",
+      "n_channels": 69,
+      "phase_randomized_windows_extracted": 50,
+      "random_windows_extracted": 40,
+      "sfreq": 250.0,
+      "time_shift_seconds": 10.0,
+      "time_shift_windows_extracted": 50,
+      "windows_extracted": 50,
+      "windows_requested": 50,
+      "windows_skipped": 0
+    }
+  ],
+  "scope": "Full available ds004117 EEG cohort from transition-window manifest; no cross-dataset replication.",
+  "status": "PASS_E3_E6_FULL_COHORT",
+  "time_shift_feature_file": "paper6\\features\\ds004117_multi_run\\ds004117_batch01_time_shift_bandpower_delta_features.csv"
+}

@@ -1,0 +1,137 @@
+{
+  "allowed_current_claim": "Paper 8 found HCP WM measured physiology files and ran an 18-subject measured-physiology ladder smoke, but the preregistered raw SameTransition > DifferentTransition gate was not reproduced. No physiological-survival claim is allowed.",
+  "blockers": [],
+  "can_claim_aggressive_nuisance_survival": false,
+  "can_claim_measured_motion_survival": false,
+  "can_claim_measured_physiology_survival": false,
+  "can_claim_neural_origin_proven": false,
+  "can_claim_raw_transition_reproduced": false,
+  "ds005795_extension": {
+    "aggregate_results": {
+      "N0_state_only": {
+        "mean_mse": 258.35043966024784,
+        "mean_r2": 0.4622668457330365,
+        "n_subjects": 3
+      },
+      "N1_state_plus_cardiac_resp": {
+        "mean_mse": 235.06135470791529,
+        "mean_r2": 0.5102416897604687,
+        "n_subjects": 3
+      },
+      "N2_state_plus_metadata": {
+        "mean_mse": 254.9492194210518,
+        "mean_r2": 0.46845530523983386,
+        "n_subjects": 3
+      },
+      "N3_state_plus_physio_metadata": {
+        "mean_mse": 234.11638976870344,
+        "mean_r2": 0.5112086573192399,
+        "n_subjects": 3
+      }
+    },
+    "allowed_claim": "The ds005795 extension has a three-subject BOLD/physiology/metadata interface smoke. It does not establish physiology-robust transition dynamics.",
+    "download_status": "PASS_DS005795_SMALL_PHYSIO_SMOKE_DOWNLOADED",
+    "feature_status": "PASS_DS005795_TR_PHYSIO_FEATURES_BUILT",
+    "ladder_status": "PASS_DS005795_MULTI_SUBJECT_NUISANCE_LADDER_INTERFACE_SMOKE",
+    "manifest_status": "PASS_DS005795_MANIFEST_AUDITED",
+    "n_subjects": 3,
+    "role": "convergent measured-physiology validation, not direct Encode/Maintain/Probe replication",
+    "subjects": [
+      "sub-01",
+      "sub-02",
+      "sub-03"
+    ]
+  },
+  "ds005795_streaming_extension": {
+    "aggregate_results": {
+      "N0_state_only": {
+        "mean_mse": 308.0080973658899,
+        "mean_r2": 0.48063244668522936,
+        "n_subjects": 5
+      },
+      "N1_state_plus_cardiac_resp": {
+        "mean_mse": 288.6289253078573,
+        "mean_r2": 0.516281397837814,
+        "n_subjects": 5
+      },
+      "N2_state_plus_metadata": {
+        "mean_mse": 304.12157077033197,
+        "mean_r2": 0.4857931759443188,
+        "n_subjects": 5
+      },
+      "N3_state_plus_physio_metadata": {
+        "mean_mse": 286.173931912775,
+        "mean_r2": 0.5190032787446749,
+        "n_subjects": 5
+      }
+    },
+    "allowed_claim": "The ds005795 streaming extension completed all manifest-available learning subjects with complete BOLD/physio/events files. It shows physiology regressors improve global-signal prediction in this convergent task, but it does not rescue the failed HCP primary transition-reproducibility gate.",
+    "claim_boundary": "This is a convergent ds005795 measured-physiology nuisance-ladder analysis over global BOLD signal. It is not a direct HCP working-memory transition replication and does not rescue the failed P8 HCP primary gate.",
+    "delta_vs_state_only": {
+      "N1_state_plus_cardiac_resp": {
+        "delta_mse_vs_state_only": 19.379172058032623,
+        "delta_r2_vs_state_only": 0.03564895115258465
+      },
+      "N2_state_plus_metadata": {
+        "delta_mse_vs_state_only": 3.886526595557939,
+        "delta_r2_vs_state_only": 0.005160729259089447
+      },
+      "N3_state_plus_physio_metadata": {
+        "delta_mse_vs_state_only": 21.834165453114906,
+        "delta_r2_vs_state_only": 0.038370832059445525
+      }
+    },
+    "figure_png": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\figures\\figure5_p8_ds005795_streaming_nuisance_ladder.png",
+    "figure_status": "PASS_P8_DS005795_STREAMING_FIGURE",
+    "n_subjects_passed": 5,
+    "n_subjects_requested": 5,
+    "role": "convergent measured-physiology nuisance-ladder analysis over global BOLD signal; not direct Encode/Maintain/Probe replication",
+    "status": "PASS_DS005795_STREAMING_NUISANCE_LADDER",
+    "subjects_passed": [
+      "sub-01",
+      "sub-02",
+      "sub-03",
+      "sub-04",
+      "sub-05"
+    ],
+    "subjects_requested": [
+      "sub-01",
+      "sub-02",
+      "sub-03",
+      "sub-04",
+      "sub-05"
+    ]
+  },
+  "e0_status": "PASS_E0_REMOTE_PHYSIO_FOUND",
+  "e1_download_status": "PASS_E1_PHYSIO_DOWNLOADED",
+  "e1_e6_ladder_status": "FAIL_RAW_TRANSITION_NOT_REPRODUCED",
+  "e1_e6_raw_reproduction_preflight": {
+    "claim_boundary": "The HCP measured-physiology ladder cannot be regenerated from raw CIFTI inputs in this environment because matched large HCP dtseries/dlabel/EV/motion files are incomplete locally. Existing result artifacts may be used for package assembly, but this step is not a fresh raw-data rerun.",
+    "existing_result_available": true,
+    "n_missing_required_paths": 36,
+    "status": "NEED_HCP_CIFTI_AND_MATCHED_RUN_FILES_FOR_RAW_REPRODUCTION"
+  },
+  "forbidden_claims": [
+    "physiology eliminated",
+    "motion fully excluded",
+    "neural origin proven",
+    "CWP validated",
+    "NAP validated"
+  ],
+  "ladder_gates": {
+    "Gate_A_raw_transition_reproduced": false,
+    "Gate_B_measured_motion_survival": false,
+    "Gate_C_measured_physiology_survival": false,
+    "Gate_D_aggressive_nuisance_survival": false,
+    "Gate_E_external_replication": false
+  },
+  "ladder_scope": "18-subject / 36-run HCP-YA WM measured-physiology smoke using available downloaded Physio_log files; not full Paper 8 final.",
+  "manuscript_pdf": {
+    "claim_boundary": "Preview PDF generated from current manuscript and figures. Author, affiliation, ethics, contributions, conflicts, and funding metadata still require submitter confirmation.",
+    "n_pages": 11,
+    "pdf": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\output\\pdf\\paper8_manuscript_preview.pdf",
+    "status": "PASS_MANUSCRIPT_PDF_GENERATED"
+  },
+  "paper": "Paper 8",
+  "status": "P8_E1_E6_HCP_PHYSIO_SMOKE_RAW_GATE_FAILED"
+}

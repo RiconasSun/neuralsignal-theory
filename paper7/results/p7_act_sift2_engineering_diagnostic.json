@@ -1,0 +1,127 @@
+{
+  "claim_boundary": "P7 remains open. The high-fidelity structural hypothesis has not been tested and no subject-specific structural-grounding result is available.",
+  "diagnostic_findings": [
+    "HCP 100307 DWI, gradients, mask, aparc+aseg, wmparc, WM dtseries, and movement files are locally available for the current FreeSurfer-5TT route.",
+    "WSL user-space MRtrix3 can generate DWI MIF, tissue response files, MSMT-CSD output files, FreeSurfer 5TT, DWI-grid 5TT, and DWI-grid parcellation intermediates.",
+    "Initial MSMT-CSD WM FOD output was all zero under the completed smoke run, making ACT/iFOD2 tractography invalid.",
+    "Explicit-shell MSMT-CSD was attempted but exceeded the interactive runtime window and was interrupted before a usable replacement FOD could be validated.",
+    "Single-tissue CSD generated a nonzero diagnostic FOD, and diagnostic ACT/iFOD2/SIFT2/tck2connectome completed. This proves the MRtrix back half can execute, but it is not the frozen P7 final-route MSMT-CSD result and cannot support a structural hypothesis claim."
+  ],
+  "experiment": "P7-ACT-SIFT2-engineering-diagnostic",
+  "forbidden_claims": [
+    "P7 high-fidelity cohort connectomes generated",
+    "P7 structural hypothesis supported",
+    "P7 structural hypothesis falsified",
+    "single-tissue diagnostic FOD equals the frozen MSMT-CSD pipeline"
+  ],
+  "input_audit_status": "PARTIAL_P7_STRUCTURAL_INPUTS_READY",
+  "next_required_engineering_step": "Resolve MSMT-CSD zero-FOD/runtime issue, then rerun checkpointed E2 until ACT/iFOD2/SIFT2 connectome_sift2_smoke.csv exists for 100307 before scaling to 3 subjects.",
+  "paper": "Paper 7",
+  "ready_subjects_after_input_audit": [
+    "100307"
+  ],
+  "smoke_completed_steps": [
+    "mrconvert",
+    "dwi2response",
+    "dwi2fod",
+    "5ttgen_freesurfer",
+    "5tt_resample_to_dwi",
+    "nodes_resample_to_dwi",
+    "5tt2gmwmi",
+    "tckgen_iFOD2_ACT_5k"
+  ],
+  "smoke_status": "FAILED_WSL_MRTRIX_ACT_SIFT2_SMOKE",
+  "status": "P7_HIGH_FIDELITY_ROUTE_PARTIAL_5TT_READY_TRACTOGRAPHY_NOT_READY",
+  "tracked_files": {
+    "5tt.mif": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\5tt.mif",
+      "size_bytes": 420472700
+    },
+    "5tt_dwi.mif": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\5tt_dwi.mif",
+      "size_bytes": 73168332
+    },
+    "assignments_csd_diagnostic.csv": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\assignments_csd_diagnostic.csv",
+      "size_bytes": 40761
+    },
+    "connectome_sift2_csd_diagnostic.csv": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\connectome_sift2_csd_diagnostic.csv",
+      "size_bytes": 8289664
+    },
+    "connectome_sift2_smoke.csv": {
+      "exists": false,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\connectome_sift2_smoke.csv",
+      "size_bytes": 0
+    },
+    "csf.txt": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\csf.txt",
+      "size_bytes": 282
+    },
+    "dwi.mif": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\dwi.mif",
+      "size_bytes": 4214436204
+    },
+    "gm.txt": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\gm.txt",
+      "size_bytes": 280
+    },
+    "gmwmi_seed.mif": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\gmwmi_seed.mif",
+      "size_bytes": 14635040
+    },
+    "nodes_dwi.mif": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\nodes_dwi.mif",
+      "size_bytes": 14634256
+    },
+    "sift2_weights_csd_diagnostic.txt": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\sift2_weights_csd_diagnostic.txt",
+      "size_bytes": 46607
+    },
+    "tracks_5k.tck": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\tracks_5k.tck",
+      "size_bytes": 1532
+    },
+    "tracks_5k_csd_diagnostic.tck": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\tracks_5k_csd_diagnostic.tck",
+      "size_bytes": 2243212
+    },
+    "wm.txt": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\wm.txt",
+      "size_bytes": 546
+    },
+    "wm_tournier.txt": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\wm_tournier.txt",
+      "size_bytes": 271
+    },
+    "wmfod.mif": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\wmfod.mif",
+      "size_bytes": 658522860
+    },
+    "wmfod_csd_smoke.mif": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\wmfod_csd_smoke.mif",
+      "size_bytes": 658522360
+    },
+    "wmfod_msmt_explicit.mif": {
+      "exists": true,
+      "path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\wmfod_msmt_explicit.mif",
+      "size_bytes": 658522928
+    }
+  }
+}

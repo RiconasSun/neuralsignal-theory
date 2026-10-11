@@ -1,0 +1,76 @@
+{
+  "allowed_current_claim": "P6 has a frozen protocol, public dataset/event-semantics audit, ds004117 transition-window manifest, one-run real EEG signal extraction smoke, and full available ds004117 E3-E6 positive within-dataset result. ds004752 provides external convergent encoding-vs-maintenance evidence, but no direct cross-dataset transition-boundary replication has been run.",
+  "can_claim_cross_dataset_replication": false,
+  "can_claim_external_convergent_stage_specificity": true,
+  "can_claim_fast_dynamics_existence": true,
+  "can_claim_nap_exists": false,
+  "can_claim_transition_specificity": true,
+  "can_run_e3_signal_extraction_after_data_download": true,
+  "e0_protocol_frozen": true,
+  "e1_dataset_audit": "PASS_INITIAL_E1",
+  "e2_event_semantics": "PASS_INITIAL_E2_FOR_ds004117",
+  "e2_transition_windows": "PASS_TRANSITION_WINDOWS_READY",
+  "e3_e6_full_ds004117": "PASS_E3_E6_FULL_COHORT_BATCHED",
+  "e3_e6_initial_multi_run": "PASS_E3_E6_INITIAL",
+  "e3_signal_smoke": "PASS_SIGNAL_SMOKE",
+  "e7_ds004752_external_convergent": "PASS_E7_EXTERNAL_CONVERGENT_NOT_DIRECT_REPLICATION",
+  "e7_ds004752_primary_results": {
+    "feature_family": "per-virtual-sensor log bandpower features from LCMV_encoding and LCMV_maintenance trials",
+    "label_shuffle_null_ci95": [
+      0.47998839907192575,
+      0.5183077146171694
+    ],
+    "label_shuffle_null_mean_accuracy": 0.49868184454756376,
+    "label_shuffle_one_sided_p": 0.004975124378109453,
+    "leave_one_subject_out_accuracy": 0.6276102088167054,
+    "subject_bootstrap_ci95": [
+      0.5773691737749553,
+      0.6830378459547412
+    ],
+    "subject_mean_accuracy": 0.6288650530091637,
+    "subjects": 15,
+    "trials": 3448
+  },
+  "forbidden_claims": [
+    "NAP is validated.",
+    "CWP maps to NAP.",
+    "Macro transitions are mechanistically explained.",
+    "Fast neural dynamics are universal primitives.",
+    "P6 is complete."
+  ],
+  "full_ds004117_primary_results": {
+    "label_shuffle_null_ci95": [
+      0.48591885441527444,
+      0.5164677804295943
+    ],
+    "label_shuffle_null_mean_accuracy": 0.5009307875894987,
+    "label_shuffle_one_sided_p": 0.004975124378109453,
+    "leave_one_run_out_accuracy": 0.6806682577565633,
+    "phase_randomized_bandpower_specificity_accuracy": 0.7047732696897375,
+    "random_window_odd_even_centroid_similarity": -0.029297083616256714,
+    "random_window_specificity_accuracy": 0.5053160070880095,
+    "same_transition_odd_even_centroid_similarity": 0.994146078824997,
+    "subject_bootstrap_ci95": [
+      0.6779915892328661,
+      0.7447466470064257
+    ],
+    "subject_mean_accuracy": 0.7116372328567145,
+    "time_shift_specificity_accuracy": 0.5100459937061245
+  },
+  "full_ds004117_scope": {
+    "feature_family": "per-channel 1-second pre/post transition log bandpower deltas",
+    "phase_randomized_windows": 4190,
+    "random_windows": 3386,
+    "runs_event_files": 85,
+    "subjects": 23,
+    "time_shift_windows": 4131,
+    "transition_windows": 4190
+  },
+  "scope_limits": [
+    "within-dataset ds004117 result only",
+    "external ds004752 result is convergent stage specificity, not direct transition-boundary replication",
+    "no NAP validation",
+    "phase-randomized bandpower specificity remains high",
+    "current feature family is amplitude/bandpower-family evidence rather than phase-specific dynamics"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "allowed_claim": "The streaming runner can generate final-route and fs_default84 smoke connectomes without retaining every raw DWI locally.",
+  "cleanup_large_intermediates": true,
+  "experiment": "P7-E6-streaming-connectome-batch",
+  "forbidden_claims": [
+    "100-subject cohort connectomes are complete.",
+    "The structural prediction hypothesis has been tested.",
+    "Subject-specific structure improves transition prediction."
+  ],
+  "keep_raw_dwi": false,
+  "n_subjects": 2,
+  "n_subjects_pass_or_skipped": 2,
+  "paper": "Paper 7",
+  "status": "PASS_STREAMING_BATCH",
+  "subject_results": [
+    {
+      "labelconvert": {
+        "connectome": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\106016\\connectome_sift2_ext4_msmt_fsdefault84_smoke.csv",
+        "connectome_qc": {
+          "bytes": 30140,
+          "columns": 84,
+          "exists": true,
+          "max_weight": 9.89737296849489,
+          "nonzero_edges": 1050,
+          "rows": 84,
+          "total_weight": 1015.0866627767683
+        },
+        "load_bearing_tck2connectome_warning": null,
+        "status": "SKIPPED_FINAL_CONNECTOME_ALREADY_EXISTS"
+      },
+      "status": "SKIPPED_FINAL_CONNECTOME_ALREADY_EXISTS",
+      "subject": "106016"
+    },
+    {
+      "labelconvert": {
+        "connectome": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\108828\\connectome_sift2_ext4_msmt_fsdefault84_smoke.csv",
+        "connectome_qc": {
+          "bytes": 31034,
+          "columns": 84,
+          "exists": true,
+          "max_weight": 8.89579734951258,
+          "nonzero_edges": 1106,
+          "rows": 84,
+          "total_weight": 934.3222943171859
+        },
+        "load_bearing_tck2connectome_warning": null,
+        "status": "SKIPPED_FINAL_CONNECTOME_ALREADY_EXISTS"
+      },
+      "status": "SKIPPED_FINAL_CONNECTOME_ALREADY_EXISTS",
+      "subject": "108828"
+    }
+  ],
+  "subjects": [
+    "106016",
+    "108828"
+  ]
+}

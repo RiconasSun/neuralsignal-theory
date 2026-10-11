@@ -1,0 +1,199 @@
+{
+  "generated_at": "2026-09-06T04:46:38+00:00",
+  "schema": "CWP-NAP Ontology v2",
+  "encoded_papers": [
+    {
+      "paper": "P1",
+      "source_paths": [
+        "paper1/results/claim_audit.json",
+        "paper1/submission/SUBMISSION_CLAIM_AUDIT.json"
+      ],
+      "objects": [
+        {
+          "type": "ClaimBoundary",
+          "id": "p1_claim_boundary",
+          "allowed_claim": "CWP-style compositional labels improved within-dataset OOD prediction in ds001635.",
+          "disallowed_claim": "CWP is validated; CWP clearly outperforms task labels overall; CWP externally replicates.",
+          "evidence_status": "OOD_SUPPORTED"
+        },
+        {
+          "type": "CompetingExplanation",
+          "id": "p1_primary_competing_explanation",
+          "baseline_or_null": "survived_planned_matched_nulls_as_recorded_in_P1_package",
+          "test_result": "PARTIAL",
+          "resolution_status": "OOD_SUPPORTED"
+        }
+      ],
+      "ontology_use": "Treat as evidence for local compositional dynamics, not as validated primitive ontology."
+    },
+    {
+      "paper": "P2",
+      "source_paths": [
+        "paper2/results/e9_8_claim_audit.json",
+        "paper2/results/CURRENT_RESULTS.md"
+      ],
+      "objects": [
+        {
+          "type": "ClaimBoundary",
+          "id": "p2_claim_boundary",
+          "allowed_claim": "Compositional structure helps, but CWP-specific cross-dataset superiority is not supported.",
+          "disallowed_claim": "Revised CWP ontology solved cross-dataset generalization.",
+          "evidence_status": "NOT_SUPPORTED"
+        },
+        {
+          "type": "CompetingExplanation",
+          "id": "p2_primary_competing_explanation",
+          "baseline_or_null": "random_ontology_remained_material_competing_explanation",
+          "test_result": "FAILED_STRONG_SUPERIORITY",
+          "resolution_status": "NOT_SUPPORTED"
+        }
+      ],
+      "ontology_use": "Mark semantic CWP specificity as unsupported while preserving generic compositional signal."
+    },
+    {
+      "paper": "P3",
+      "source_paths": [
+        "paper3/results/e8_claim_audit.json",
+        "paper3/results/CURRENT_RESULTS.md"
+      ],
+      "objects": [
+        {
+          "type": "ClaimBoundary",
+          "id": "p3_claim_boundary",
+          "allowed_claim": "Macroscopic transition dynamics show reproducibility within the tested boundaries.",
+          "disallowed_claim": "Reproducibility proves CWP as a natural neural primitive.",
+          "evidence_status": "REPRODUCIBLE"
+        },
+        {
+          "type": "CompetingExplanation",
+          "id": "p3_primary_competing_explanation",
+          "baseline_or_null": "recorded_in_paper3_null_tables",
+          "test_result": "SUPPORTED_WITH_BOUNDARIES",
+          "resolution_status": "REPRODUCIBLE"
+        }
+      ],
+      "ontology_use": "Upgrade transition-family object above candidate status where P3 gates passed."
+    },
+    {
+      "paper": "P4",
+      "source_paths": [
+        "paper4/results/e8_claim_audit.json",
+        "paper4/results/CURRENT_RESULTS.md"
+      ],
+      "objects": [
+        {
+          "type": "ClaimBoundary",
+          "id": "p4_claim_boundary",
+          "allowed_claim": "Some transition structure survives falsification, but measured physiology remains unresolved and dynamics are noise-sensitive.",
+          "disallowed_claim": "Motion, physiology, and scanner confounds have been eliminated.",
+          "evidence_status": "CONFOUNDED"
+        },
+        {
+          "type": "CompetingExplanation",
+          "id": "p4_primary_competing_explanation",
+          "baseline_or_null": "partial_survival_with_unresolved_measured_physiology",
+          "test_result": "SUPPORTED_WITH_CONFOUNDS",
+          "resolution_status": "CONFOUNDED"
+        }
+      ],
+      "ontology_use": "Attach confound flags to transition-family evidence rather than deleting the transition object."
+    },
+    {
+      "paper": "P5",
+      "source_paths": [
+        "paper5/results/e8_hcp_claim_audit.json",
+        "paper5/results/PAPER5_FINAL_CONCLUSION.md"
+      ],
+      "objects": [
+        {
+          "type": "ClaimBoundary",
+          "id": "p5_claim_boundary",
+          "allowed_claim": "Subject-specific BedpostX-dyad structural proxy did not add stable predictive constraint.",
+          "disallowed_claim": "Subject-specific structural connectome constrains macro transitions.",
+          "evidence_status": "NOT_SUPPORTED"
+        },
+        {
+          "type": "CompetingExplanation",
+          "id": "p5_primary_competing_explanation",
+          "baseline_or_null": "structural_nulls_not_defeated",
+          "test_result": "FAILED_PRIMARY_GATE",
+          "resolution_status": "NOT_SUPPORTED"
+        }
+      ],
+      "ontology_use": "Downgrade structural-grounding link; preserve method limitation that proxy is not full ACT/SIFT2 connectome."
+    },
+    {
+      "paper": "P6",
+      "source_paths": [
+        "paper6/results/e8_claim_audit.json",
+        "paper6/results/CURRENT_RESULTS.md"
+      ],
+      "objects": [
+        {
+          "type": "ClaimBoundary",
+          "id": "p6_claim_boundary",
+          "allowed_claim": "Fast-dynamics bridge remains candidate-level and measurement-regime bounded.",
+          "disallowed_claim": "NAP is validated as a fast neural primitive.",
+          "evidence_status": "CANDIDATE"
+        },
+        {
+          "type": "CompetingExplanation",
+          "id": "p6_primary_competing_explanation",
+          "baseline_or_null": "recorded_in_paper6_null_outputs",
+          "test_result": "CANDIDATE_WITH_BOUNDARIES",
+          "resolution_status": "CANDIDATE"
+        }
+      ],
+      "ontology_use": "Create CandidateNAP only when linked to observed transition evidence and mark as non-validated."
+    },
+    {
+      "paper": "P7",
+      "source_paths": [
+        "paper7/results/p7_e8_claim_audit.json",
+        "paper7/results/PAPER7_FINAL_CONCLUSION.md"
+      ],
+      "objects": [
+        {
+          "type": "ClaimBoundary",
+          "id": "p7_claim_boundary",
+          "allowed_claim": "High-fidelity structural route produced engineering/QC progress and preliminary negative structural-model interface results, but final 100-subject ACT/SIFT2 structural hypothesis remains not run.",
+          "disallowed_claim": "High-fidelity ACT/SIFT2 structural grounding is established.",
+          "evidence_status": "TOOLCHAIN_BLOCKED"
+        },
+        {
+          "type": "CompetingExplanation",
+          "id": "p7_primary_competing_explanation",
+          "baseline_or_null": "preliminary_true_structure_superiority_not_supported",
+          "test_result": "TOOLCHAIN_AND_COHORT_BOUNDARY",
+          "resolution_status": "TOOLCHAIN_BLOCKED"
+        }
+      ],
+      "ontology_use": "Keep structural mechanism as unresolved; do not upgrade from P7 engineering readiness alone."
+    },
+    {
+      "paper": "P8",
+      "source_paths": [
+        "paper8/results/p8_e8_claim_audit.json",
+        "paper8/results/PAPER8_FINAL_CONCLUSION.md"
+      ],
+      "objects": [
+        {
+          "type": "ClaimBoundary",
+          "id": "p8_claim_boundary",
+          "allowed_claim": "Task classification does not equal transition reproducibility; metadata confounding is a serious competing explanation; measured-physiology extension remains convergent, not direct replication.",
+          "disallowed_claim": "Condition decodability proves transition reproducibility; measured physiology is resolved.",
+          "evidence_status": "CONFOUNDED"
+        },
+        {
+          "type": "CompetingExplanation",
+          "id": "p8_primary_competing_explanation",
+          "baseline_or_null": "metadata_baseline_material",
+          "test_result": "FAILED_PRIMARY_GATE",
+          "resolution_status": "CONFOUNDED"
+        }
+      ],
+      "ontology_use": "Force metadata/timing/physiology competing explanations into every future dynamics claim."
+    }
+  ],
+  "program_level_boundary": "Reproducible computational cognitive neurodynamics remain; CWP/NAP ontology, structural mechanism, and measured-physiology exclusion remain unproven."
+}

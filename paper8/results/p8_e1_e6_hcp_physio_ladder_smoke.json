@@ -1,0 +1,2525 @@
+{
+  "claim_boundary": "This is a measured-physiology smoke test only. It cannot support full P8 survival, physiology-elimination, or neural-origin claims.",
+  "experiment": "P8-E1-E6-HCP-WM-measured-physio-ladder-smoke",
+  "feature_files": {
+    "N0_raw_basic": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\state_extraction\\hcp_physio_ladder\\p8_N0_raw_basic_transition_features.csv",
+    "N1_motion": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\state_extraction\\hcp_physio_ladder\\p8_N1_motion_transition_features.csv",
+    "N2_respiration": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\state_extraction\\hcp_physio_ladder\\p8_N2_respiration_transition_features.csv",
+    "N3_cardiac_pulse": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\state_extraction\\hcp_physio_ladder\\p8_N3_cardiac_pulse_transition_features.csv",
+    "N4_motion_respiration_cardiac": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\state_extraction\\hcp_physio_ladder\\p8_N4_motion_respiration_cardiac_transition_features.csv"
+  },
+  "forbidden_claims": [
+    "physiology eliminated",
+    "motion fully excluded",
+    "neural origin proven",
+    "CWP validated",
+    "NAP validated",
+    "Paper 8 is complete"
+  ],
+  "gates": {
+    "Gate_A_raw_transition_reproduced": false,
+    "Gate_B_measured_motion_survival": false,
+    "Gate_C_measured_physiology_survival": false,
+    "Gate_D_aggressive_nuisance_survival": false,
+    "Gate_E_external_replication": false
+  },
+  "rung_results": {
+    "N0_raw_basic": {
+      "leave_one_run_out_classification": {
+        "accuracy": 0.7152777777777778,
+        "folds": [
+          {
+            "accuracy": 0.875,
+            "heldout_group": "100307_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "100307_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.375,
+            "heldout_group": "101309_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.5,
+            "heldout_group": "101309_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "101915_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "101915_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "103111_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "103111_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "103414_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "103414_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "103818_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.5,
+            "heldout_group": "103818_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "105014_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "105014_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "105115_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "105115_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "106016_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "106016_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.5,
+            "heldout_group": "108828_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 1.0,
+            "heldout_group": "108828_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "110411_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "110411_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 1.0,
+            "heldout_group": "111312_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "111312_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.5,
+            "heldout_group": "111716_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "111716_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.375,
+            "heldout_group": "113619_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "113619_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "113922_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "113922_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "114419_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "114419_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "115320_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "115320_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.5,
+            "heldout_group": "116524_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "116524_tfMRI_WM_RL",
+            "n_test": 8
+          }
+        ],
+        "n_folds": 36,
+        "n_predictions": 288
+      },
+      "n_rows": 288,
+      "n_subjects": 18,
+      "nuisance_meta": [
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "100307"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "100307"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "101309"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "101309"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "101915"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "101915"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "103111"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "103111"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "103414"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "103414"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "103818"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "103818"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "105014"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "105014"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "105115"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "105115"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "106016"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "106016"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "108828"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "108828"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "110411"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "110411"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "111312"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "111312"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "111716"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "111716"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "113619"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "113619"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "113922"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "113922"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "114419"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "114419"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "115320"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "115320"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "116524"
+        },
+        {
+          "n_confounds": 0,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "116524"
+        }
+      ],
+      "same_vs_different_transition": {
+        "contrast": -0.03314831197024515,
+        "different_transition_similarity": 0.959253839987835,
+        "same_transition_similarity": 0.9261055280175898
+      },
+      "subject_level_statistics": {
+        "n_subjects_with_contrast": 18,
+        "subject_bootstrap_ci95": [
+          -0.16175083649624267,
+          0.01857442639560676
+        ],
+        "subject_mean_transition_contrast": -0.07327079551780696,
+        "subject_sign_flip_p": 0.9346065393460654
+      }
+    },
+    "N1_motion": {
+      "leave_one_run_out_classification": {
+        "accuracy": 0.7534722222222222,
+        "folds": [
+          {
+            "accuracy": 0.625,
+            "heldout_group": "100307_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "100307_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "101309_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "101309_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "101915_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "101915_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "103111_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "103111_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "103414_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "103414_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "103818_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "103818_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "105014_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "105014_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "105115_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "105115_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "106016_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "106016_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "108828_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 1.0,
+            "heldout_group": "108828_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "110411_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "110411_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 1.0,
+            "heldout_group": "111312_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 1.0,
+            "heldout_group": "111312_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "111716_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "111716_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "113619_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "113619_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "113922_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "113922_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "114419_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "114419_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "115320_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "115320_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.375,
+            "heldout_group": "116524_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "116524_tfMRI_WM_RL",
+            "n_test": 8
+          }
+        ],
+        "n_folds": 36,
+        "n_predictions": 288
+      },
+      "n_rows": 288,
+      "n_subjects": 18,
+      "nuisance_meta": [
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "100307"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "100307"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "101309"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "101309"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "101915"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "101915"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "103111"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "103111"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "103414"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "103414"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "103818"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "103818"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "105014"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "105014"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "105115"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "105115"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "106016"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "106016"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "108828"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "108828"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "110411"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "110411"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "111312"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "111312"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "111716"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "111716"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "113619"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "113619"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "113922"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "113922"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "114419"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "114419"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "115320"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "115320"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "116524"
+        },
+        {
+          "n_confounds": 48,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "116524"
+        }
+      ],
+      "same_vs_different_transition": {
+        "contrast": -0.01599469651597718,
+        "different_transition_similarity": 0.9477293781440437,
+        "same_transition_similarity": 0.9317346816280665
+      },
+      "subject_level_statistics": {
+        "n_subjects_with_contrast": 18,
+        "subject_bootstrap_ci95": [
+          -0.18365453138422405,
+          0.010641407307072033
+        ],
+        "subject_mean_transition_contrast": -0.08340703682554097,
+        "subject_sign_flip_p": 0.9427057294270573
+      }
+    },
+    "N2_respiration": {
+      "leave_one_run_out_classification": {
+        "accuracy": 0.7326388888888888,
+        "folds": [
+          {
+            "accuracy": 1.0,
+            "heldout_group": "100307_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "100307_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.375,
+            "heldout_group": "101309_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.5,
+            "heldout_group": "101309_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "101915_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "101915_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.5,
+            "heldout_group": "103111_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "103111_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "103414_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "103414_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "103818_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "103818_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "105014_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 1.0,
+            "heldout_group": "105014_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "105115_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "105115_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.5,
+            "heldout_group": "106016_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "106016_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "108828_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 1.0,
+            "heldout_group": "108828_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "110411_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "110411_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "111312_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "111312_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.375,
+            "heldout_group": "111716_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "111716_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.375,
+            "heldout_group": "113619_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "113619_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "113922_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 1.0,
+            "heldout_group": "113922_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "114419_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "114419_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "115320_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "115320_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.5,
+            "heldout_group": "116524_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "116524_tfMRI_WM_RL",
+            "n_test": 8
+          }
+        ],
+        "n_folds": 36,
+        "n_predictions": 288
+      },
+      "n_rows": 288,
+      "n_subjects": 18,
+      "nuisance_meta": [
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "100307"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "100307"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "101309"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "101309"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "101915"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "101915"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "103111"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "103111"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "103414"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "103414"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "103818"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "103818"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "105014"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "105014"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "105115"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "105115"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "106016"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "106016"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "108828"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "108828"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "110411"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "110411"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "111312"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "111312"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "111716"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "111716"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "113619"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "113619"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "113922"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "113922"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "114419"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "114419"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "115320"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "115320"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "116524"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "116524"
+        }
+      ],
+      "same_vs_different_transition": {
+        "contrast": -0.04013185968881772,
+        "different_transition_similarity": 0.9572331085844089,
+        "same_transition_similarity": 0.9171012488955912
+      },
+      "subject_level_statistics": {
+        "n_subjects_with_contrast": 18,
+        "subject_bootstrap_ci95": [
+          -0.18440232308025398,
+          -0.015802042692388673
+        ],
+        "subject_mean_transition_contrast": -0.09790994253636746,
+        "subject_sign_flip_p": 0.982001799820018
+      }
+    },
+    "N3_cardiac_pulse": {
+      "leave_one_run_out_classification": {
+        "accuracy": 0.7291666666666666,
+        "folds": [
+          {
+            "accuracy": 1.0,
+            "heldout_group": "100307_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "100307_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "101309_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "101309_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "101915_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "101915_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.5,
+            "heldout_group": "103111_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "103111_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "103414_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "103414_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "103818_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "103818_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "105014_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 1.0,
+            "heldout_group": "105014_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "105115_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "105115_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.5,
+            "heldout_group": "106016_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "106016_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.5,
+            "heldout_group": "108828_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 1.0,
+            "heldout_group": "108828_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "110411_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "110411_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 1.0,
+            "heldout_group": "111312_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "111312_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.5,
+            "heldout_group": "111716_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "111716_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "113619_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.375,
+            "heldout_group": "113619_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "113922_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "113922_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "114419_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.5,
+            "heldout_group": "114419_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "115320_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "115320_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.5,
+            "heldout_group": "116524_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "116524_tfMRI_WM_RL",
+            "n_test": 8
+          }
+        ],
+        "n_folds": 36,
+        "n_predictions": 288
+      },
+      "n_rows": 288,
+      "n_subjects": 18,
+      "nuisance_meta": [
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "100307"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "100307"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "101309"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "101309"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "101915"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "101915"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "103111"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "103111"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "103414"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "103414"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "103818"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "103818"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "105014"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "105014"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "105115"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "105115"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "106016"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "106016"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "108828"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "108828"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "110411"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "110411"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "111312"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "111312"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "111716"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "111716"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "113619"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "113619"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "113922"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "113922"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "114419"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "114419"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "115320"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "115320"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "116524"
+        },
+        {
+          "n_confounds": 6,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "116524"
+        }
+      ],
+      "same_vs_different_transition": {
+        "contrast": -0.03793662843425072,
+        "different_transition_similarity": 0.9510140988922148,
+        "same_transition_similarity": 0.9130774704579641
+      },
+      "subject_level_statistics": {
+        "n_subjects_with_contrast": 18,
+        "subject_bootstrap_ci95": [
+          -0.17993240986749778,
+          0.011700139504389456
+        ],
+        "subject_mean_transition_contrast": -0.08738658737832176,
+        "subject_sign_flip_p": 0.9492050794920508
+      }
+    },
+    "N4_motion_respiration_cardiac": {
+      "leave_one_run_out_classification": {
+        "accuracy": 0.7569444444444444,
+        "folds": [
+          {
+            "accuracy": 0.875,
+            "heldout_group": "100307_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "100307_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "101309_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.5,
+            "heldout_group": "101309_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "101915_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "101915_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.5,
+            "heldout_group": "103111_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "103111_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.5,
+            "heldout_group": "103414_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "103414_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "103818_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "103818_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "105014_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "105014_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "105115_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "105115_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "106016_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "106016_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "108828_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 1.0,
+            "heldout_group": "108828_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "110411_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "110411_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 1.0,
+            "heldout_group": "111312_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 1.0,
+            "heldout_group": "111312_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "111716_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "111716_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.5,
+            "heldout_group": "113619_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "113619_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.625,
+            "heldout_group": "113922_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "113922_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "114419_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "114419_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.75,
+            "heldout_group": "115320_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.875,
+            "heldout_group": "115320_tfMRI_WM_RL",
+            "n_test": 8
+          },
+          {
+            "accuracy": 0.5,
+            "heldout_group": "116524_tfMRI_WM_LR",
+            "n_test": 8
+          },
+          {
+            "accuracy": 1.0,
+            "heldout_group": "116524_tfMRI_WM_RL",
+            "n_test": 8
+          }
+        ],
+        "n_folds": 36,
+        "n_predictions": 288
+      },
+      "n_rows": 288,
+      "n_subjects": 18,
+      "nuisance_meta": [
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "100307"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "100307"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "101309"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "101309"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "101915"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "101915"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "103111"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "103111"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "103414"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "103414"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "103818"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "103818"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "105014"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "105014"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "105115"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "105115"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "106016"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "106016"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "108828"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "108828"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "110411"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "110411"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "111312"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "111312"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "111716"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "111716"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "113619"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "113619"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "113922"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "113922"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "114419"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "114419"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "115320"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "115320"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_LR",
+          "subject": "116524"
+        },
+        {
+          "n_confounds": 66,
+          "n_events": 8,
+          "n_parcels": 68,
+          "n_timepoints": 405,
+          "run": "tfMRI_WM_RL",
+          "subject": "116524"
+        }
+      ],
+      "same_vs_different_transition": {
+        "contrast": -0.018814376122519016,
+        "different_transition_similarity": 0.9306912241110639,
+        "same_transition_similarity": 0.9118768479885448
+      },
+      "subject_level_statistics": {
+        "n_subjects_with_contrast": 18,
+        "subject_bootstrap_ci95": [
+          -0.17404133913544428,
+          0.06098411263385172
+        ],
+        "subject_mean_transition_contrast": -0.059500699287602675,
+        "subject_sign_flip_p": 0.8293170682931706
+      }
+    }
+  },
+  "scope": "18-subject / 36-run HCP-YA WM measured-physiology smoke using available downloaded Physio_log files; not full Paper 8 final.",
+  "status": "FAIL_RAW_TRANSITION_NOT_REPRODUCED",
+  "subjects": [
+    "100307",
+    "101309",
+    "101915",
+    "103111",
+    "103414",
+    "103818",
+    "105014",
+    "105115",
+    "106016",
+    "108828",
+    "110411",
+    "111312",
+    "111716",
+    "113619",
+    "113922",
+    "114419",
+    "115320",
+    "116524"
+  ]
+}

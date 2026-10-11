@@ -1,0 +1,343 @@
+{
+  "allowed_claim": "High-fidelity-route ACT/iFOD2/SIFT2 engineering/QC scale-up completed only if status is PASS. This remains pre-hypothesis-test readiness and does not test structural prediction.",
+  "experiment": "P7-e3-three-subject-final-route-smoke",
+  "forbidden_claims": [
+    "100-subject cohort connectomes generated",
+    "P7 structural hypothesis tested",
+    "subject-specific structural grounding supported",
+    "CWP validated",
+    "NAP structurally grounded"
+  ],
+  "n_subjects": 3,
+  "next_action": "If the 10-subject QC passes, freeze atlas/label QC and only then prepare the 100-subject final structural prediction test.",
+  "paper": "Paper 7",
+  "status": "PASS_THREE_SUBJECT_FINAL_ROUTE_SMOKE",
+  "subject_results": [
+    {
+      "commands": [
+        {
+          "command": "mrconvert '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/100307/T1w/Diffusion/data.nii.gz' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/dwi.mif' -fslgrad '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/100307/T1w/Diffusion/bvecs' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/100307/T1w/Diffusion/bvals' -force",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "mrconvert",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\dwi.mif",
+          "target_bytes": 4214436204
+        },
+        {
+          "command": "mkdir -p $HOME/p7_msmt_csd_ext4_diagnostic/100307 && if [ ! -s $HOME/p7_msmt_csd_ext4_diagnostic/100307/dwi.mif ]; then cp '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/dwi.mif' $HOME/p7_msmt_csd_ext4_diagnostic/100307/dwi.mif; fi && if [ ! -s $HOME/p7_msmt_csd_ext4_diagnostic/100307/mask.nii.gz ]; then cp '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/100307/T1w/Diffusion/nodif_brain_mask.nii.gz' $HOME/p7_msmt_csd_ext4_diagnostic/100307/mask.nii.gz; fi && touch '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/.ext4_inputs_ready'",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "prepare_ext4_inputs",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\.ext4_inputs_ready",
+          "target_bytes": 0
+        },
+        {
+          "command": "cd $HOME/p7_msmt_csd_ext4_diagnostic/100307 && dwi2response dhollander dwi.mif wm.txt gm.txt csf.txt -mask mask.nii.gz -force -nthreads 4 && cp wm.txt '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/wm.txt' && cp gm.txt '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/gm.txt' && cp csf.txt '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/csf.txt'",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "dwi2response_ext4",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\wm.txt",
+          "target_bytes": 546
+        },
+        {
+          "command": "5ttgen freesurfer '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/100307/T1w/aparc+aseg.nii.gz' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/5tt.mif' -lut '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/resources/FreeSurferColorLUT.txt' -force -nocrop",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "5ttgen_freesurfer",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\5tt.mif",
+          "target_bytes": 420472700
+        },
+        {
+          "command": "cd $HOME/p7_msmt_csd_ext4_diagnostic/100307 && dwi2fod msmt_csd dwi.mif wm.txt wmfod_ext4.mif gm.txt gm_ext4.mif csf.txt csf_ext4.mif -mask mask.nii.gz -shells 5,998,1998,2996 -force -nthreads 4 && cp wmfod_ext4.mif '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/wmfod_ext4.mif' && cp gm_ext4.mif '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/gm_ext4.mif' && cp csf_ext4.mif '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/csf_ext4.mif'",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "dwi2fod_msmt_csd_ext4",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\wmfod_ext4.mif",
+          "target_bytes": 658521916
+        },
+        {
+          "command": "mrtransform '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/5tt.mif' -template '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/wmfod_ext4.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/5tt_dwi.mif' -interp nearest -force",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "5tt_resample_to_dwi",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\5tt_dwi.mif",
+          "target_bytes": 73168332
+        },
+        {
+          "command": "mrtransform '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/100307/T1w/aparc+aseg.nii.gz' -template '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/wmfod_ext4.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/nodes_dwi.mif' -interp nearest -force",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "nodes_resample_to_dwi",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\nodes_dwi.mif",
+          "target_bytes": 14634256
+        },
+        {
+          "command": "5tt2gmwmi '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/5tt_dwi.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/gmwmi_seed.mif' -force",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "5tt2gmwmi",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\gmwmi_seed.mif",
+          "target_bytes": 14635040
+        },
+        {
+          "command": "tckgen '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/wmfod_ext4.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/tracks_5k_ext4_msmt.tck' -algorithm iFOD2 -act '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/5tt_dwi.mif' -backtrack -crop_at_gmwmi -seed_gmwmi '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/gmwmi_seed.mif' -select 5000 -maxlength 250 -cutoff 0.01 -force -nthreads 1",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "tckgen_iFOD2_ACT_5k",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\tracks_5k_ext4_msmt.tck",
+          "target_bytes": 1417632
+        },
+        {
+          "command": "tcksift2 '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/tracks_5k_ext4_msmt.tck' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/wmfod_ext4.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/sift2_weights_ext4_msmt.txt' -act '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/5tt_dwi.mif' -force -nthreads 4",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "tcksift2",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\sift2_weights_ext4_msmt.txt",
+          "target_bytes": 61853
+        },
+        {
+          "command": "tck2connectome '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/tracks_5k_ext4_msmt.tck' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/nodes_dwi.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/connectome_sift2_ext4_msmt_smoke.csv' -tck_weights_in '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/sift2_weights_ext4_msmt.txt' -symmetric -zero_diagonal -out_assignment '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/assignments_ext4_msmt.csv' -force",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "tck2connectome",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\connectome_sift2_ext4_msmt_smoke.csv",
+          "target_bytes": 8284698
+        }
+      ],
+      "connectome": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\connectome_sift2_ext4_msmt_smoke.csv",
+      "connectome_bytes": 8284698,
+      "connectome_qc": {
+        "assignments_rows": 5001,
+        "bytes": 8284698,
+        "columns": 2035,
+        "exists": true,
+        "max_weight": 147.396,
+        "nonzero_edges": 356,
+        "rows": 2035,
+        "total_weight": 2120.5358420000007
+      },
+      "qc_warnings": [],
+      "status": "PASS_SUBJECT_FINAL_ROUTE_SMOKE",
+      "subject": "100307"
+    },
+    {
+      "commands": [
+        {
+          "command": "mrconvert '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/100408/T1w/Diffusion/data.nii.gz' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/dwi.mif' -fslgrad '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/100408/T1w/Diffusion/bvecs' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/100408/T1w/Diffusion/bvals' -force",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "mrconvert",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100408\\dwi.mif",
+          "target_bytes": 4214436328
+        },
+        {
+          "command": "mkdir -p $HOME/p7_msmt_csd_ext4_diagnostic/100408 && if [ ! -s $HOME/p7_msmt_csd_ext4_diagnostic/100408/dwi.mif ]; then cp '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/dwi.mif' $HOME/p7_msmt_csd_ext4_diagnostic/100408/dwi.mif; fi && if [ ! -s $HOME/p7_msmt_csd_ext4_diagnostic/100408/mask.nii.gz ]; then cp '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/100408/T1w/Diffusion/nodif_brain_mask.nii.gz' $HOME/p7_msmt_csd_ext4_diagnostic/100408/mask.nii.gz; fi && touch '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/.ext4_inputs_ready'",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "prepare_ext4_inputs",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100408\\.ext4_inputs_ready",
+          "target_bytes": 0
+        },
+        {
+          "command": "cd $HOME/p7_msmt_csd_ext4_diagnostic/100408 && dwi2response dhollander dwi.mif wm.txt gm.txt csf.txt -mask mask.nii.gz -force -nthreads 4 && cp wm.txt '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/wm.txt' && cp gm.txt '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/gm.txt' && cp csf.txt '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/csf.txt'",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "dwi2response_ext4",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100408\\wm.txt",
+          "target_bytes": 544
+        },
+        {
+          "command": "5ttgen freesurfer '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/100408/T1w/aparc+aseg.nii.gz' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/5tt.mif' -lut '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/resources/FreeSurferColorLUT.txt' -force -nocrop",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "5ttgen_freesurfer",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100408\\5tt.mif",
+          "target_bytes": 420472700
+        },
+        {
+          "command": "cd $HOME/p7_msmt_csd_ext4_diagnostic/100408 && dwi2fod msmt_csd dwi.mif wm.txt wmfod_ext4.mif gm.txt gm_ext4.mif csf.txt csf_ext4.mif -mask mask.nii.gz -shells 5,998,1998,2996 -force -nthreads 4 && cp wmfod_ext4.mif '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/wmfod_ext4.mif' && cp gm_ext4.mif '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/gm_ext4.mif' && cp csf_ext4.mif '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/csf_ext4.mif'",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "dwi2fod_msmt_csd_ext4",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100408\\wmfod_ext4.mif",
+          "target_bytes": 658522040
+        },
+        {
+          "command": "mrtransform '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/5tt.mif' -template '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/wmfod_ext4.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/5tt_dwi.mif' -interp nearest -force",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "5tt_resample_to_dwi",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100408\\5tt_dwi.mif",
+          "target_bytes": 73168340
+        },
+        {
+          "command": "mrtransform '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/100408/T1w/aparc+aseg.nii.gz' -template '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/wmfod_ext4.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/nodes_dwi.mif' -interp nearest -force",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "nodes_resample_to_dwi",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100408\\nodes_dwi.mif",
+          "target_bytes": 14634268
+        },
+        {
+          "command": "5tt2gmwmi '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/5tt_dwi.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/gmwmi_seed.mif' -force",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "5tt2gmwmi",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100408\\gmwmi_seed.mif",
+          "target_bytes": 14635052
+        },
+        {
+          "command": "tckgen '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/wmfod_ext4.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/tracks_5k_ext4_msmt.tck' -algorithm iFOD2 -act '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/5tt_dwi.mif' -backtrack -crop_at_gmwmi -seed_gmwmi '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/gmwmi_seed.mif' -select 5000 -maxlength 250 -cutoff 0.01 -force -nthreads 1",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "tckgen_iFOD2_ACT_5k",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100408\\tracks_5k_ext4_msmt.tck",
+          "target_bytes": 2807044
+        },
+        {
+          "command": "tcksift2 '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/tracks_5k_ext4_msmt.tck' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/wmfod_ext4.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/sift2_weights_ext4_msmt.txt' -act '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/5tt_dwi.mif' -force -nthreads 4",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "tcksift2",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100408\\sift2_weights_ext4_msmt.txt",
+          "target_bytes": 54118
+        },
+        {
+          "command": "tck2connectome '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/tracks_5k_ext4_msmt.tck' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/nodes_dwi.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/connectome_sift2_ext4_msmt_smoke.csv' -tck_weights_in '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/sift2_weights_ext4_msmt.txt' -symmetric -zero_diagonal -out_assignment '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/assignments_ext4_msmt.csv' -force",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "tck2connectome",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100408\\connectome_sift2_ext4_msmt_smoke.csv",
+          "target_bytes": 8289902
+        }
+      ],
+      "connectome": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100408\\connectome_sift2_ext4_msmt_smoke.csv",
+      "connectome_bytes": 8289902,
+      "connectome_qc": {
+        "assignments_rows": 5001,
+        "bytes": 8289902,
+        "columns": 2035,
+        "exists": true,
+        "max_weight": 28.7022,
+        "nonzero_edges": 1154,
+        "rows": 2035,
+        "total_weight": 2071.108896599998
+      },
+      "qc_warnings": [],
+      "status": "PASS_SUBJECT_FINAL_ROUTE_SMOKE",
+      "subject": "100408"
+    },
+    {
+      "commands": [
+        {
+          "command": "mrconvert '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/101107/T1w/Diffusion/data.nii.gz' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/dwi.mif' -fslgrad '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/101107/T1w/Diffusion/bvecs' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/101107/T1w/Diffusion/bvals' -force",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "mrconvert",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\101107\\dwi.mif",
+          "target_bytes": 4214436324
+        },
+        {
+          "command": "mkdir -p $HOME/p7_msmt_csd_ext4_diagnostic/101107 && if [ ! -s $HOME/p7_msmt_csd_ext4_diagnostic/101107/dwi.mif ]; then cp '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/dwi.mif' $HOME/p7_msmt_csd_ext4_diagnostic/101107/dwi.mif; fi && if [ ! -s $HOME/p7_msmt_csd_ext4_diagnostic/101107/mask.nii.gz ]; then cp '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/101107/T1w/Diffusion/nodif_brain_mask.nii.gz' $HOME/p7_msmt_csd_ext4_diagnostic/101107/mask.nii.gz; fi && touch '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/.ext4_inputs_ready'",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "prepare_ext4_inputs",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\101107\\.ext4_inputs_ready",
+          "target_bytes": 0
+        },
+        {
+          "command": "cd $HOME/p7_msmt_csd_ext4_diagnostic/101107 && dwi2response dhollander dwi.mif wm.txt gm.txt csf.txt -mask mask.nii.gz -force -nthreads 4 && cp wm.txt '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/wm.txt' && cp gm.txt '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/gm.txt' && cp csf.txt '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/csf.txt'",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "dwi2response_ext4",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\101107\\wm.txt",
+          "target_bytes": 545
+        },
+        {
+          "command": "5ttgen freesurfer '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/101107/T1w/aparc+aseg.nii.gz' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/5tt.mif' -lut '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/resources/FreeSurferColorLUT.txt' -force -nocrop",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "5ttgen_freesurfer",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\101107\\5tt.mif",
+          "target_bytes": 420472700
+        },
+        {
+          "command": "cd $HOME/p7_msmt_csd_ext4_diagnostic/101107 && dwi2fod msmt_csd dwi.mif wm.txt wmfod_ext4.mif gm.txt gm_ext4.mif csf.txt csf_ext4.mif -mask mask.nii.gz -shells 5,998,1998,2996 -force -nthreads 4 && cp wmfod_ext4.mif '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/wmfod_ext4.mif' && cp gm_ext4.mif '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/gm_ext4.mif' && cp csf_ext4.mif '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/csf_ext4.mif'",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "dwi2fod_msmt_csd_ext4",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\101107\\wmfod_ext4.mif",
+          "target_bytes": 658522032
+        },
+        {
+          "command": "mrtransform '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/5tt.mif' -template '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/wmfod_ext4.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/5tt_dwi.mif' -interp nearest -force",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "5tt_resample_to_dwi",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\101107\\5tt_dwi.mif",
+          "target_bytes": 73168340
+        },
+        {
+          "command": "mrtransform '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/101107/T1w/aparc+aseg.nii.gz' -template '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/wmfod_ext4.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/nodes_dwi.mif' -interp nearest -force",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "nodes_resample_to_dwi",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\101107\\nodes_dwi.mif",
+          "target_bytes": 14634268
+        },
+        {
+          "command": "5tt2gmwmi '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/5tt_dwi.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/gmwmi_seed.mif' -force",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "5tt2gmwmi",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\101107\\gmwmi_seed.mif",
+          "target_bytes": 14635052
+        },
+        {
+          "command": "tckgen '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/wmfod_ext4.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/tracks_5k_ext4_msmt.tck' -algorithm iFOD2 -act '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/5tt_dwi.mif' -backtrack -crop_at_gmwmi -seed_gmwmi '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/gmwmi_seed.mif' -select 5000 -maxlength 250 -cutoff 0.01 -force -nthreads 1",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "tckgen_iFOD2_ACT_5k",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\101107\\tracks_5k_ext4_msmt.tck",
+          "target_bytes": 2763712
+        },
+        {
+          "command": "tcksift2 '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/tracks_5k_ext4_msmt.tck' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/wmfod_ext4.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/sift2_weights_ext4_msmt.txt' -act '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/5tt_dwi.mif' -force -nthreads 4",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "tcksift2",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\101107\\sift2_weights_ext4_msmt.txt",
+          "target_bytes": 55961
+        },
+        {
+          "command": "tck2connectome '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/tracks_5k_ext4_msmt.tck' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/nodes_dwi.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/connectome_sift2_ext4_msmt_smoke.csv' -tck_weights_in '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/sift2_weights_ext4_msmt.txt' -symmetric -zero_diagonal -out_assignment '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/assignments_ext4_msmt.csv' -force",
+          "returncode": 0,
+          "skipped_existing_output": true,
+          "step": "tck2connectome",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\101107\\connectome_sift2_ext4_msmt_smoke.csv",
+          "target_bytes": 8289838
+        }
+      ],
+      "connectome": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\101107\\connectome_sift2_ext4_msmt_smoke.csv",
+      "connectome_bytes": 8289838,
+      "connectome_qc": {
+        "assignments_rows": 5001,
+        "bytes": 8289838,
+        "columns": 2035,
+        "exists": true,
+        "max_weight": 33.2704,
+        "nonzero_edges": 1140,
+        "rows": 2035,
+        "total_weight": 2018.2329244000002
+      },
+      "qc_warnings": [],
+      "status": "PASS_SUBJECT_FINAL_ROUTE_SMOKE",
+      "subject": "101107"
+    }
+  ],
+  "subjects": [
+    "100307",
+    "100408",
+    "101107"
+  ]
+}

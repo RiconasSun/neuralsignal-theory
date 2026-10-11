@@ -1,0 +1,243 @@
+{
+  "primary": {
+    "dataset": "ds004117_real",
+    "source_path": "paper6\\features\\ds004117_multi_run\\ds004117_multi_run_bandpower_delta_features.csv",
+    "rows": 600,
+    "subjects": 3,
+    "train_subjects": [
+      "sub-001",
+      "sub-002"
+    ],
+    "test_subjects": [
+      "sub-003"
+    ],
+    "features": 276,
+    "latent_components": 10,
+    "pca_explained_variance": 0.726439586260594,
+    "selected_k": 2,
+    "k_selection_rows": [
+      {
+        "k": 2,
+        "train_silhouette": 0.16505621801574222,
+        "train_entropy": 0.9969501570069956
+      },
+      {
+        "k": 3,
+        "train_silhouette": 0.14399465201533057,
+        "train_entropy": 1.5616969221253454
+      },
+      {
+        "k": 4,
+        "train_silhouette": 0.14060890802011725,
+        "train_entropy": 1.9613975470240348
+      },
+      {
+        "k": 5,
+        "train_silhouette": 0.13392918028158773,
+        "train_entropy": 2.3002477008937943
+      },
+      {
+        "k": 6,
+        "train_silhouette": 0.12325409369420999,
+        "train_entropy": 2.5463773263874665
+      },
+      {
+        "k": 7,
+        "train_silhouette": 0.1192748441458992,
+        "train_entropy": 2.7626593200633476
+      },
+      {
+        "k": 8,
+        "train_silhouette": 0.11725854846527049,
+        "train_entropy": 2.960535760944281
+      }
+    ],
+    "train_quantization_mse": 162.27088430052828,
+    "heldout_quantization_mse": 129.49544117124432,
+    "train_discrete_reconstruction_mse": 0.8614984003355232,
+    "heldout_discrete_reconstruction_mse": 0.8256234307495551,
+    "continuous_pca_reconstruction_mse": 0.6639429592698992,
+    "heldout_assignment_entropy": 0.8931734583778568,
+    "motif_counts_heldout": {
+      "0": 62,
+      "1": 138
+    },
+    "metadata_nmi": 0.017570822682773875,
+    "metadata_label": "transition"
+  },
+  "nulls": [
+    {
+      "dataset": "ds004117_phase_randomized",
+      "source_path": "paper6\\features\\ds004117_multi_run\\ds004117_multi_run_phase_randomized_bandpower_delta_features.csv",
+      "rows": 600,
+      "subjects": 3,
+      "train_subjects": [
+        "sub-001",
+        "sub-002"
+      ],
+      "test_subjects": [
+        "sub-003"
+      ],
+      "features": 276,
+      "latent_components": 10,
+      "pca_explained_variance": 0.5123964767797513,
+      "selected_k": 2,
+      "k_selection_rows": [],
+      "train_quantization_mse": 114.34301741767442,
+      "heldout_quantization_mse": 94.98551367491982,
+      "train_discrete_reconstruction_mse": 0.9018898182118221,
+      "heldout_discrete_reconstruction_mse": 0.9147315714358931,
+      "continuous_pca_reconstruction_mse": 0.8177572458246568,
+      "heldout_assignment_entropy": 0.9426831892554922,
+      "motif_counts_heldout": {
+        "0": 128,
+        "1": 72
+      },
+      "metadata_nmi": 0.01164450506997433,
+      "metadata_label": "transition"
+    },
+    {
+      "dataset": "ds004117_time_shift",
+      "source_path": "paper6\\features\\ds004117_multi_run\\ds004117_multi_run_time_shift_bandpower_delta_features.csv",
+      "rows": 597,
+      "subjects": 3,
+      "train_subjects": [
+        "sub-001",
+        "sub-002"
+      ],
+      "test_subjects": [
+        "sub-003"
+      ],
+      "features": 276,
+      "latent_components": 10,
+      "pca_explained_variance": 0.7712793055312314,
+      "selected_k": 2,
+      "k_selection_rows": [],
+      "train_quantization_mse": 165.0043997830775,
+      "heldout_quantization_mse": 114.63219999374112,
+      "train_discrete_reconstruction_mse": 0.8265627226683243,
+      "heldout_discrete_reconstruction_mse": 0.6803877945001886,
+      "continuous_pca_reconstruction_mse": 0.51769796872091,
+      "heldout_assignment_entropy": 0.9467554496831931,
+      "motif_counts_heldout": {
+        "0": 73,
+        "1": 127
+      },
+      "metadata_nmi": 0.0007195674037132582,
+      "metadata_label": "transition"
+    },
+    {
+      "dataset": "ds004117_random_window",
+      "source_path": "paper6\\features\\ds004117_multi_run\\ds004117_multi_run_random_window_bandpower_delta_features.csv",
+      "rows": 480,
+      "subjects": 3,
+      "train_subjects": [
+        "sub-001",
+        "sub-002"
+      ],
+      "test_subjects": [
+        "sub-003"
+      ],
+      "features": 276,
+      "latent_components": 10,
+      "pca_explained_variance": 0.7850059781581756,
+      "selected_k": 2,
+      "k_selection_rows": [],
+      "train_quantization_mse": 177.86305591158415,
+      "heldout_quantization_mse": 117.53143815079389,
+      "train_discrete_reconstruction_mse": 0.8594253838403175,
+      "heldout_discrete_reconstruction_mse": 0.6863379651750626,
+      "continuous_pca_reconstruction_mse": 0.5601167062129101,
+      "heldout_assignment_entropy": 0.9959386076315955,
+      "motif_counts_heldout": {
+        "0": 74,
+        "1": 86
+      },
+      "metadata_nmi": 0.0,
+      "metadata_label": "transition"
+    }
+  ],
+  "summary": {
+    "real_heldout_discrete_reconstruction_mse": 0.8256234307495551,
+    "null_heldout_discrete_reconstruction_mse_mean": 0.7604857770370481,
+    "null_heldout_discrete_reconstruction_mse_min": 0.6803877945001886,
+    "null_heldout_discrete_reconstruction_mse_max": 0.9147315714358931,
+    "real_heldout_latent_quantization_mse": 129.49544117124432,
+    "real_better_than_null_count": 1,
+    "null_count": 3,
+    "passed_all_available_nulls": false,
+    "continuous_pca_reconstruction_mse": 0.6639429592698992,
+    "continuous_preferred_over_discrete_reconstruction": true
+  },
+  "external": {
+    "status": "PASS_CONVERGENT_NOT_DIRECT_REPLICATION",
+    "result": {
+      "dataset": "ds004752_external_convergent",
+      "source_path": "paper6\\features\\ds004752_external\\ds004752_lcmv_encoding_maintenance_bandpower_features.csv",
+      "rows": 972,
+      "subjects": 4,
+      "train_subjects": [
+        "sub-10",
+        "sub-11",
+        "sub-14"
+      ],
+      "test_subjects": [
+        "sub-15"
+      ],
+      "features": 104,
+      "latent_components": 10,
+      "pca_explained_variance": 0.8889313461269048,
+      "selected_k": 3,
+      "k_selection_rows": [
+        {
+          "k": 2,
+          "train_silhouette": 0.4072969235857578,
+          "train_entropy": 0.9990702531566404
+        },
+        {
+          "k": 3,
+          "train_silhouette": 0.5154383975745888,
+          "train_entropy": 1.3724169538204678
+        },
+        {
+          "k": 4,
+          "train_silhouette": 0.4497637854257487,
+          "train_entropy": 1.6815705265090166
+        },
+        {
+          "k": 5,
+          "train_silhouette": 0.3057751724826231,
+          "train_entropy": 2.19907107873236
+        },
+        {
+          "k": 6,
+          "train_silhouette": 0.31147985734662076,
+          "train_entropy": 2.430497739130704
+        },
+        {
+          "k": 7,
+          "train_silhouette": 0.2792182073365345,
+          "train_entropy": 2.6931027562097856
+        },
+        {
+          "k": 8,
+          "train_silhouette": 0.275677503120229,
+          "train_entropy": 2.87446945056345
+        }
+      ],
+      "train_quantization_mse": 31.003241146687074,
+      "heldout_quantization_mse": 268.39049936219465,
+      "train_discrete_reconstruction_mse": 0.4091767393110808,
+      "heldout_discrete_reconstruction_mse": 2.9285181767765565,
+      "continuous_pca_reconstruction_mse": 0.8076193596924773,
+      "heldout_assignment_entropy": 0.1460942501201363,
+      "motif_counts_heldout": {
+        "0": 4,
+        "2": 188
+      },
+      "metadata_nmi": 0.007000547831378339,
+      "metadata_label": "stage"
+    },
+    "claim_boundary": "Feature spaces differ from ds004117; this is an external convergent motif-structure check, not direct cross-dataset motif replication."
+  }
+}

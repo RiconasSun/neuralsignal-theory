@@ -1,0 +1,161 @@
+{
+  "aggregate_results": {
+    "N0_state_only": {
+      "mean_mse": 258.35043966024784,
+      "mean_r2": 0.4622668457330365,
+      "n_subjects": 3
+    },
+    "N1_state_plus_cardiac_resp": {
+      "mean_mse": 235.06135470791529,
+      "mean_r2": 0.5102416897604687,
+      "n_subjects": 3
+    },
+    "N2_state_plus_metadata": {
+      "mean_mse": 254.9492194210518,
+      "mean_r2": 0.46845530523983386,
+      "n_subjects": 3
+    },
+    "N3_state_plus_physio_metadata": {
+      "mean_mse": 234.11638976870344,
+      "mean_r2": 0.5112086573192399,
+      "n_subjects": 3
+    }
+  },
+  "claim_boundary": "This multi-subject global-signal smoke validates BOLD/physiology/metadata integration. It is not a transition reproducibility test and cannot support or reject measured-physiology robustness.",
+  "experiment": "P8-final-extension-ds005795-nuisance-ladder-smoke",
+  "n_subjects": 3,
+  "paper": "Paper 8",
+  "primary_interpretation": "interface smoke only",
+  "status": "PASS_DS005795_MULTI_SUBJECT_NUISANCE_LADDER_INTERFACE_SMOKE",
+  "subject_results": [
+    {
+      "bold_path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\data_ds005795_smoke\\sub-01\\func\\sub-01_task-learning_bold.nii.gz",
+      "bold_shape": [
+        112,
+        112,
+        58,
+        816
+      ],
+      "brain_mask_voxels": 499206,
+      "feature_path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\state_extraction\\ds005795_physio_extension\\p8_ds005795_sub01_learning_physio_tr_features.csv",
+      "repetition_time": 2,
+      "results": {
+        "N0_state_only": {
+          "mse": 403.3125742222217,
+          "r2": 0.554563922461514,
+          "test_rows": 245,
+          "train_rows": 570
+        },
+        "N1_state_plus_cardiac_resp": {
+          "mse": 358.5381603917311,
+          "r2": 0.60401474682324,
+          "test_rows": 245,
+          "train_rows": 570
+        },
+        "N2_state_plus_metadata": {
+          "mse": 397.67923232062196,
+          "r2": 0.560785632074513,
+          "test_rows": 245,
+          "train_rows": 570
+        },
+        "N3_state_plus_physio_metadata": {
+          "mse": 357.5445131062795,
+          "r2": 0.605112174420537,
+          "test_rows": 245,
+          "train_rows": 570
+        }
+      },
+      "subject": "sub-01",
+      "task": "learning",
+      "usable_transition_rows": 815
+    },
+    {
+      "bold_path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\data_ds005795_smoke\\sub-02\\func\\sub-02_task-learning_bold.nii.gz",
+      "bold_shape": [
+        112,
+        112,
+        58,
+        816
+      ],
+      "brain_mask_voxels": 488951,
+      "feature_path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\state_extraction\\ds005795_physio_extension\\p8_ds005795_sub02_learning_physio_tr_features.csv",
+      "repetition_time": 2,
+      "results": {
+        "N0_state_only": {
+          "mse": 254.33127834471247,
+          "r2": 0.38303366886965684,
+          "test_rows": 245,
+          "train_rows": 570
+        },
+        "N1_state_plus_cardiac_resp": {
+          "mse": 244.07078322080392,
+          "r2": 0.40792396185044644,
+          "test_rows": 245,
+          "train_rows": 570
+        },
+        "N2_state_plus_metadata": {
+          "mse": 250.3157258842248,
+          "r2": 0.3927747462752076,
+          "test_rows": 245,
+          "train_rows": 570
+        },
+        "N3_state_plus_physio_metadata": {
+          "mse": 241.05403273159564,
+          "r2": 0.41524210806264705,
+          "test_rows": 245,
+          "train_rows": 570
+        }
+      },
+      "subject": "sub-02",
+      "task": "learning",
+      "usable_transition_rows": 815
+    },
+    {
+      "bold_path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\data_ds005795_smoke\\sub-03\\func\\sub-03_task-learning_bold.nii.gz",
+      "bold_shape": [
+        112,
+        112,
+        58,
+        816
+      ],
+      "brain_mask_voxels": 471345,
+      "feature_path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\state_extraction\\ds005795_physio_extension\\p8_ds005795_sub03_learning_physio_tr_features.csv",
+      "repetition_time": 2,
+      "results": {
+        "N0_state_only": {
+          "mse": 117.40746641380937,
+          "r2": 0.44920294586793863,
+          "test_rows": 245,
+          "train_rows": 570
+        },
+        "N1_state_plus_cardiac_resp": {
+          "mse": 102.57512051121087,
+          "r2": 0.5187863606077197,
+          "test_rows": 245,
+          "train_rows": 570
+        },
+        "N2_state_plus_metadata": {
+          "mse": 116.85270005830859,
+          "r2": 0.4518055373697809,
+          "test_rows": 245,
+          "train_rows": 570
+        },
+        "N3_state_plus_physio_metadata": {
+          "mse": 103.75062346823513,
+          "r2": 0.5132716894745357,
+          "test_rows": 245,
+          "train_rows": 570
+        }
+      },
+      "subject": "sub-03",
+      "task": "learning",
+      "usable_transition_rows": 815
+    }
+  ],
+  "subjects": [
+    "sub-01",
+    "sub-02",
+    "sub-03"
+  ],
+  "task": "learning"
+}

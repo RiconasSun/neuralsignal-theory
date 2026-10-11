@@ -1,0 +1,541 @@
+{
+  "all_load_bearing_tck2connectome_warnings_removed": false,
+  "allowed_claim": "FreeSurfer aparc+aseg labels were converted to MRtrix fs_default84 node labels and used to regenerate 5k-streamline SIFT2-weighted connectomes for the tested subjects.",
+  "experiment": "P7-E5-labelconvert-connectome-QC",
+  "forbidden_claims": [
+    "This atlas is final for 100-subject structural prediction.",
+    "The P7 structural hypothesis was tested.",
+    "Subject-specific structural grounding is supported."
+  ],
+  "load_bearing_tck2connectome_warning_subjects": [
+    "100307"
+  ],
+  "n_subjects": 10,
+  "n_subjects_pass": 10,
+  "paper": "Paper 7",
+  "status": "PASS_LABELCONVERT_CONNECTOME_QC",
+  "subject_results": [
+    {
+      "commands": [
+        {
+          "command": "labelconvert '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/100307/T1w/aparc+aseg.nii.gz' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/resources/FreeSurferColorLUT.txt' /home/a5993/mamba-envs/p7-neuro/share/mrtrix3/labelconvert/fs_default.txt '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/nodes_fsdefault.mif' -force",
+          "duration_seconds": 5.135,
+          "returncode": 0,
+          "stderr_tail": "labelconvert: [WARNING] existing output files will be overwritten\nlabelconvert: Image \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/100307/T1w/aparc+aseg.nii.gz\" stored with floating-point type; need to check for non-integer or negative values\nlabelconvert: uncompressing image \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/100307/T1w/aparc+aseg.nii.gz\"... [==================================================]\nlabelconvert: Verifying parcellation image... [==================================================]\nlabelconvert: uncompressing image \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/100307/T1w/aparc+aseg.nii.gz\"... [==================================================]\n",
+          "stdout_tail": "",
+          "step": "labelconvert_fsdefault84",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\nodes_fsdefault.mif",
+          "target_bytes_after": 84095152,
+          "target_exists_after": true
+        },
+        {
+          "command": "mrtransform '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/nodes_fsdefault.mif' -template '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/wmfod_ext4.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/nodes_fsdefault_dwi.mif' -interp nearest -force",
+          "duration_seconds": 1.014,
+          "returncode": 0,
+          "stderr_tail": "mrtransform: [WARNING] existing output files will be overwritten\nmrtransform: preloading data for \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/nodes_fsdefault.mif\"... [==================================================]\nmrtransform: reslicing \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/nodes_fsdefault.mif\"... [==================================================]\n",
+          "stdout_tail": "",
+          "step": "nodes_fsdefault_resample_to_dwi",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\nodes_fsdefault_dwi.mif",
+          "target_bytes_after": 14634816,
+          "target_exists_after": true
+        },
+        {
+          "command": "tck2connectome '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/tracks_5k_ext4_msmt.tck' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/nodes_fsdefault_dwi.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/connectome_sift2_ext4_msmt_fsdefault84_smoke.csv' -tck_weights_in '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/sift2_weights_ext4_msmt.txt' -symmetric -zero_diagonal -out_assignment '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100307/assignments_ext4_msmt_fsdefault84.csv' -force",
+          "duration_seconds": 0.301,
+          "returncode": 0,
+          "stderr_tail": "tck2connectome: [WARNING] existing output files will be overwritten\ntck2connectome: Constructing connectome... [==================================================]\ntck2connectome: [WARNING] The following nodes do not have any streamlines assigned:\ntck2connectome: [WARNING] 2, 3, 4, 7, 9, 16, 17, 20, 21, 22, 23, 24, 26, 27, 28, 30, 33, 36, 43, 51, 52, 53, 56, 58, 61, 65, 66, 69, 70, 71, 72, 73, 76, 77, 79, 82\ntck2connectome: [WARNING] (This may indicate a poor registration)\n",
+          "stdout_tail": "",
+          "step": "tck2connectome_fsdefault84",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\connectome_sift2_ext4_msmt_fsdefault84_smoke.csv",
+          "target_bytes_after": 18410,
+          "target_exists_after": true
+        }
+      ],
+      "connectome": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100307\\connectome_sift2_ext4_msmt_fsdefault84_smoke.csv",
+      "connectome_qc": {
+        "assignments_rows": 5001,
+        "bytes": 18410,
+        "columns": 84,
+        "exists": true,
+        "max_weight": 16.9461743831635,
+        "nonzero_edges": 282,
+        "rows": 84,
+        "total_weight": 643.3401402235032
+      },
+      "load_bearing_tck2connectome_warning": true,
+      "status": "PASS_LABELCONVERT_CONNECTOME_QC",
+      "subject": "100307"
+    },
+    {
+      "commands": [
+        {
+          "command": "labelconvert '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/100408/T1w/aparc+aseg.nii.gz' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/resources/FreeSurferColorLUT.txt' /home/a5993/mamba-envs/p7-neuro/share/mrtrix3/labelconvert/fs_default.txt '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/nodes_fsdefault.mif' -force",
+          "duration_seconds": 1.234,
+          "returncode": 0,
+          "stderr_tail": "labelconvert: [WARNING] existing output files will be overwritten\nlabelconvert: Image \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/100408/T1w/aparc+aseg.nii.gz\" stored with floating-point type; need to check for non-integer or negative values\nlabelconvert: uncompressing image \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/100408/T1w/aparc+aseg.nii.gz\"... [==================================================]\nlabelconvert: Verifying parcellation image... [==================================================]\nlabelconvert: uncompressing image \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/100408/T1w/aparc+aseg.nii.gz\"... [==================================================]\n",
+          "stdout_tail": "",
+          "step": "labelconvert_fsdefault84",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100408\\nodes_fsdefault.mif",
+          "target_bytes_after": 84095152,
+          "target_exists_after": true
+        },
+        {
+          "command": "mrtransform '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/nodes_fsdefault.mif' -template '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/wmfod_ext4.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/nodes_fsdefault_dwi.mif' -interp nearest -force",
+          "duration_seconds": 0.788,
+          "returncode": 0,
+          "stderr_tail": "mrtransform: [WARNING] existing output files will be overwritten\nmrtransform: preloading data for \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/nodes_fsdefault.mif\"... [==================================================]\nmrtransform: reslicing \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/nodes_fsdefault.mif\"... [==================================================]\n",
+          "stdout_tail": "",
+          "step": "nodes_fsdefault_resample_to_dwi",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100408\\nodes_fsdefault_dwi.mif",
+          "target_bytes_after": 14634816,
+          "target_exists_after": true
+        },
+        {
+          "command": "tck2connectome '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/tracks_5k_ext4_msmt.tck' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/nodes_fsdefault_dwi.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/connectome_sift2_ext4_msmt_fsdefault84_smoke.csv' -tck_weights_in '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/sift2_weights_ext4_msmt.txt' -symmetric -zero_diagonal -out_assignment '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/100408/assignments_ext4_msmt_fsdefault84.csv' -force",
+          "duration_seconds": 0.353,
+          "returncode": 0,
+          "stderr_tail": "tck2connectome: [WARNING] existing output files will be overwritten\ntck2connectome: Constructing connectome... [==================================================]\n",
+          "stdout_tail": "",
+          "step": "tck2connectome_fsdefault84",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100408\\connectome_sift2_ext4_msmt_fsdefault84_smoke.csv",
+          "target_bytes_after": 31284,
+          "target_exists_after": true
+        }
+      ],
+      "connectome": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\100408\\connectome_sift2_ext4_msmt_fsdefault84_smoke.csv",
+      "connectome_qc": {
+        "assignments_rows": 5001,
+        "bytes": 31284,
+        "columns": 84,
+        "exists": true,
+        "max_weight": 7.1766172721982,
+        "nonzero_edges": 1114,
+        "rows": 84,
+        "total_weight": 933.6373501718044
+      },
+      "load_bearing_tck2connectome_warning": false,
+      "status": "PASS_LABELCONVERT_CONNECTOME_QC",
+      "subject": "100408"
+    },
+    {
+      "commands": [
+        {
+          "command": "labelconvert '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/101107/T1w/aparc+aseg.nii.gz' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/resources/FreeSurferColorLUT.txt' /home/a5993/mamba-envs/p7-neuro/share/mrtrix3/labelconvert/fs_default.txt '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/nodes_fsdefault.mif' -force",
+          "duration_seconds": 1.263,
+          "returncode": 0,
+          "stderr_tail": "labelconvert: [WARNING] existing output files will be overwritten\nlabelconvert: Image \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/101107/T1w/aparc+aseg.nii.gz\" stored with floating-point type; need to check for non-integer or negative values\nlabelconvert: uncompressing image \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/101107/T1w/aparc+aseg.nii.gz\"... [==================================================]\nlabelconvert: Verifying parcellation image... [==================================================]\nlabelconvert: uncompressing image \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/101107/T1w/aparc+aseg.nii.gz\"... [==================================================]\n",
+          "stdout_tail": "",
+          "step": "labelconvert_fsdefault84",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\101107\\nodes_fsdefault.mif",
+          "target_bytes_after": 84095152,
+          "target_exists_after": true
+        },
+        {
+          "command": "mrtransform '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/nodes_fsdefault.mif' -template '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/wmfod_ext4.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/nodes_fsdefault_dwi.mif' -interp nearest -force",
+          "duration_seconds": 0.801,
+          "returncode": 0,
+          "stderr_tail": "mrtransform: [WARNING] existing output files will be overwritten\nmrtransform: preloading data for \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/nodes_fsdefault.mif\"... [==================================================]\nmrtransform: reslicing \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/nodes_fsdefault.mif\"... [==================================================]\n",
+          "stdout_tail": "",
+          "step": "nodes_fsdefault_resample_to_dwi",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\101107\\nodes_fsdefault_dwi.mif",
+          "target_bytes_after": 14634816,
+          "target_exists_after": true
+        },
+        {
+          "command": "tck2connectome '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/tracks_5k_ext4_msmt.tck' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/nodes_fsdefault_dwi.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/connectome_sift2_ext4_msmt_fsdefault84_smoke.csv' -tck_weights_in '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/sift2_weights_ext4_msmt.txt' -symmetric -zero_diagonal -out_assignment '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101107/assignments_ext4_msmt_fsdefault84.csv' -force",
+          "duration_seconds": 0.353,
+          "returncode": 0,
+          "stderr_tail": "tck2connectome: [WARNING] existing output files will be overwritten\ntck2connectome: Constructing connectome... [==================================================]\n",
+          "stdout_tail": "",
+          "step": "tck2connectome_fsdefault84",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\101107\\connectome_sift2_ext4_msmt_fsdefault84_smoke.csv",
+          "target_bytes_after": 31176,
+          "target_exists_after": true
+        }
+      ],
+      "connectome": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\101107\\connectome_sift2_ext4_msmt_fsdefault84_smoke.csv",
+      "connectome_qc": {
+        "assignments_rows": 5001,
+        "bytes": 31176,
+        "columns": 84,
+        "exists": true,
+        "max_weight": 9.87482046335936,
+        "nonzero_edges": 1108,
+        "rows": 84,
+        "total_weight": 980.0762000083923
+      },
+      "load_bearing_tck2connectome_warning": false,
+      "status": "PASS_LABELCONVERT_CONNECTOME_QC",
+      "subject": "101107"
+    },
+    {
+      "commands": [
+        {
+          "command": "labelconvert '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/101309/T1w/aparc+aseg.nii.gz' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/resources/FreeSurferColorLUT.txt' /home/a5993/mamba-envs/p7-neuro/share/mrtrix3/labelconvert/fs_default.txt '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101309/nodes_fsdefault.mif' -force",
+          "duration_seconds": 1.253,
+          "returncode": 0,
+          "stderr_tail": "labelconvert: [WARNING] existing output files will be overwritten\nlabelconvert: Image \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/101309/T1w/aparc+aseg.nii.gz\" stored with floating-point type; need to check for non-integer or negative values\nlabelconvert: uncompressing image \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/101309/T1w/aparc+aseg.nii.gz\"... [==================================================]\nlabelconvert: Verifying parcellation image... [==================================================]\nlabelconvert: uncompressing image \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/101309/T1w/aparc+aseg.nii.gz\"... [==================================================]\n",
+          "stdout_tail": "",
+          "step": "labelconvert_fsdefault84",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\101309\\nodes_fsdefault.mif",
+          "target_bytes_after": 84095152,
+          "target_exists_after": true
+        },
+        {
+          "command": "mrtransform '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101309/nodes_fsdefault.mif' -template '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101309/wmfod_ext4.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101309/nodes_fsdefault_dwi.mif' -interp nearest -force",
+          "duration_seconds": 0.796,
+          "returncode": 0,
+          "stderr_tail": "mrtransform: [WARNING] existing output files will be overwritten\nmrtransform: preloading data for \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101309/nodes_fsdefault.mif\"... [==================================================]\nmrtransform: reslicing \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101309/nodes_fsdefault.mif\"... [==================================================]\n",
+          "stdout_tail": "",
+          "step": "nodes_fsdefault_resample_to_dwi",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\101309\\nodes_fsdefault_dwi.mif",
+          "target_bytes_after": 14634816,
+          "target_exists_after": true
+        },
+        {
+          "command": "tck2connectome '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101309/tracks_5k_ext4_msmt.tck' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101309/nodes_fsdefault_dwi.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101309/connectome_sift2_ext4_msmt_fsdefault84_smoke.csv' -tck_weights_in '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101309/sift2_weights_ext4_msmt.txt' -symmetric -zero_diagonal -out_assignment '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101309/assignments_ext4_msmt_fsdefault84.csv' -force",
+          "duration_seconds": 0.354,
+          "returncode": 0,
+          "stderr_tail": "tck2connectome: [WARNING] existing output files will be overwritten\ntck2connectome: Constructing connectome... [==================================================]\n",
+          "stdout_tail": "",
+          "step": "tck2connectome_fsdefault84",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\101309\\connectome_sift2_ext4_msmt_fsdefault84_smoke.csv",
+          "target_bytes_after": 29632,
+          "target_exists_after": true
+        }
+      ],
+      "connectome": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\101309\\connectome_sift2_ext4_msmt_fsdefault84_smoke.csv",
+      "connectome_qc": {
+        "assignments_rows": 5001,
+        "bytes": 29632,
+        "columns": 84,
+        "exists": true,
+        "max_weight": 10.2748423814774,
+        "nonzero_edges": 1014,
+        "rows": 84,
+        "total_weight": 938.3033776730299
+      },
+      "load_bearing_tck2connectome_warning": false,
+      "status": "PASS_LABELCONVERT_CONNECTOME_QC",
+      "subject": "101309"
+    },
+    {
+      "commands": [
+        {
+          "command": "labelconvert '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/101915/T1w/aparc+aseg.nii.gz' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/resources/FreeSurferColorLUT.txt' /home/a5993/mamba-envs/p7-neuro/share/mrtrix3/labelconvert/fs_default.txt '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101915/nodes_fsdefault.mif' -force",
+          "duration_seconds": 1.232,
+          "returncode": 0,
+          "stderr_tail": "labelconvert: [WARNING] existing output files will be overwritten\nlabelconvert: Image \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/101915/T1w/aparc+aseg.nii.gz\" stored with floating-point type; need to check for non-integer or negative values\nlabelconvert: uncompressing image \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/101915/T1w/aparc+aseg.nii.gz\"... [==================================================]\nlabelconvert: Verifying parcellation image... [==================================================]\nlabelconvert: uncompressing image \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/101915/T1w/aparc+aseg.nii.gz\"... [==================================================]\n",
+          "stdout_tail": "",
+          "step": "labelconvert_fsdefault84",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\101915\\nodes_fsdefault.mif",
+          "target_bytes_after": 84095152,
+          "target_exists_after": true
+        },
+        {
+          "command": "mrtransform '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101915/nodes_fsdefault.mif' -template '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101915/wmfod_ext4.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101915/nodes_fsdefault_dwi.mif' -interp nearest -force",
+          "duration_seconds": 0.795,
+          "returncode": 0,
+          "stderr_tail": "mrtransform: [WARNING] existing output files will be overwritten\nmrtransform: preloading data for \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101915/nodes_fsdefault.mif\"... [==================================================]\nmrtransform: reslicing \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101915/nodes_fsdefault.mif\"... [==================================================]\n",
+          "stdout_tail": "",
+          "step": "nodes_fsdefault_resample_to_dwi",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\101915\\nodes_fsdefault_dwi.mif",
+          "target_bytes_after": 14634816,
+          "target_exists_after": true
+        },
+        {
+          "command": "tck2connectome '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101915/tracks_5k_ext4_msmt.tck' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101915/nodes_fsdefault_dwi.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101915/connectome_sift2_ext4_msmt_fsdefault84_smoke.csv' -tck_weights_in '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101915/sift2_weights_ext4_msmt.txt' -symmetric -zero_diagonal -out_assignment '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/101915/assignments_ext4_msmt_fsdefault84.csv' -force",
+          "duration_seconds": 0.367,
+          "returncode": 0,
+          "stderr_tail": "tck2connectome: [WARNING] existing output files will be overwritten\ntck2connectome: Constructing connectome... [==================================================]\n",
+          "stdout_tail": "",
+          "step": "tck2connectome_fsdefault84",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\101915\\connectome_sift2_ext4_msmt_fsdefault84_smoke.csv",
+          "target_bytes_after": 31384,
+          "target_exists_after": true
+        }
+      ],
+      "connectome": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\101915\\connectome_sift2_ext4_msmt_fsdefault84_smoke.csv",
+      "connectome_qc": {
+        "assignments_rows": 5001,
+        "bytes": 31384,
+        "columns": 84,
+        "exists": true,
+        "max_weight": 8.95150156319141,
+        "nonzero_edges": 1120,
+        "rows": 84,
+        "total_weight": 1027.713651880622
+      },
+      "load_bearing_tck2connectome_warning": false,
+      "status": "PASS_LABELCONVERT_CONNECTOME_QC",
+      "subject": "101915"
+    },
+    {
+      "commands": [
+        {
+          "command": "labelconvert '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/103111/T1w/aparc+aseg.nii.gz' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/resources/FreeSurferColorLUT.txt' /home/a5993/mamba-envs/p7-neuro/share/mrtrix3/labelconvert/fs_default.txt '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/103111/nodes_fsdefault.mif' -force",
+          "duration_seconds": 1.244,
+          "returncode": 0,
+          "stderr_tail": "labelconvert: [WARNING] existing output files will be overwritten\nlabelconvert: Image \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/103111/T1w/aparc+aseg.nii.gz\" stored with floating-point type; need to check for non-integer or negative values\nlabelconvert: uncompressing image \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/103111/T1w/aparc+aseg.nii.gz\"... [==================================================]\nlabelconvert: Verifying parcellation image... [==================================================]\nlabelconvert: uncompressing image \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/103111/T1w/aparc+aseg.nii.gz\"... [==================================================]\n",
+          "stdout_tail": "",
+          "step": "labelconvert_fsdefault84",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\103111\\nodes_fsdefault.mif",
+          "target_bytes_after": 84095152,
+          "target_exists_after": true
+        },
+        {
+          "command": "mrtransform '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/103111/nodes_fsdefault.mif' -template '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/103111/wmfod_ext4.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/103111/nodes_fsdefault_dwi.mif' -interp nearest -force",
+          "duration_seconds": 0.792,
+          "returncode": 0,
+          "stderr_tail": "mrtransform: [WARNING] existing output files will be overwritten\nmrtransform: preloading data for \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/103111/nodes_fsdefault.mif\"... [==================================================]\nmrtransform: reslicing \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/103111/nodes_fsdefault.mif\"... [==================================================]\n",
+          "stdout_tail": "",
+          "step": "nodes_fsdefault_resample_to_dwi",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\103111\\nodes_fsdefault_dwi.mif",
+          "target_bytes_after": 14634816,
+          "target_exists_after": true
+        },
+        {
+          "command": "tck2connectome '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/103111/tracks_5k_ext4_msmt.tck' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/103111/nodes_fsdefault_dwi.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/103111/connectome_sift2_ext4_msmt_fsdefault84_smoke.csv' -tck_weights_in '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/103111/sift2_weights_ext4_msmt.txt' -symmetric -zero_diagonal -out_assignment '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/103111/assignments_ext4_msmt_fsdefault84.csv' -force",
+          "duration_seconds": 0.353,
+          "returncode": 0,
+          "stderr_tail": "tck2connectome: [WARNING] existing output files will be overwritten\ntck2connectome: Constructing connectome... [==================================================]\n",
+          "stdout_tail": "",
+          "step": "tck2connectome_fsdefault84",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\103111\\connectome_sift2_ext4_msmt_fsdefault84_smoke.csv",
+          "target_bytes_after": 29888,
+          "target_exists_after": true
+        }
+      ],
+      "connectome": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\103111\\connectome_sift2_ext4_msmt_fsdefault84_smoke.csv",
+      "connectome_qc": {
+        "assignments_rows": 5001,
+        "bytes": 29888,
+        "columns": 84,
+        "exists": true,
+        "max_weight": 8.47168517112732,
+        "nonzero_edges": 1026,
+        "rows": 84,
+        "total_weight": 882.8593354672194
+      },
+      "load_bearing_tck2connectome_warning": false,
+      "status": "PASS_LABELCONVERT_CONNECTOME_QC",
+      "subject": "103111"
+    },
+    {
+      "commands": [
+        {
+          "command": "labelconvert '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/103414/T1w/aparc+aseg.nii.gz' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/resources/FreeSurferColorLUT.txt' /home/a5993/mamba-envs/p7-neuro/share/mrtrix3/labelconvert/fs_default.txt '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/103414/nodes_fsdefault.mif' -force",
+          "duration_seconds": 1.233,
+          "returncode": 0,
+          "stderr_tail": "labelconvert: [WARNING] existing output files will be overwritten\nlabelconvert: Image \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/103414/T1w/aparc+aseg.nii.gz\" stored with floating-point type; need to check for non-integer or negative values\nlabelconvert: uncompressing image \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/103414/T1w/aparc+aseg.nii.gz\"... [==================================================]\nlabelconvert: Verifying parcellation image... [==================================================]\nlabelconvert: uncompressing image \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/103414/T1w/aparc+aseg.nii.gz\"... [==================================================]\n",
+          "stdout_tail": "",
+          "step": "labelconvert_fsdefault84",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\103414\\nodes_fsdefault.mif",
+          "target_bytes_after": 84095152,
+          "target_exists_after": true
+        },
+        {
+          "command": "mrtransform '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/103414/nodes_fsdefault.mif' -template '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/103414/wmfod_ext4.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/103414/nodes_fsdefault_dwi.mif' -interp nearest -force",
+          "duration_seconds": 0.801,
+          "returncode": 0,
+          "stderr_tail": "mrtransform: [WARNING] existing output files will be overwritten\nmrtransform: preloading data for \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/103414/nodes_fsdefault.mif\"... [==================================================]\nmrtransform: reslicing \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/103414/nodes_fsdefault.mif\"... [==================================================]\n",
+          "stdout_tail": "",
+          "step": "nodes_fsdefault_resample_to_dwi",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\103414\\nodes_fsdefault_dwi.mif",
+          "target_bytes_after": 14634816,
+          "target_exists_after": true
+        },
+        {
+          "command": "tck2connectome '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/103414/tracks_5k_ext4_msmt.tck' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/103414/nodes_fsdefault_dwi.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/103414/connectome_sift2_ext4_msmt_fsdefault84_smoke.csv' -tck_weights_in '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/103414/sift2_weights_ext4_msmt.txt' -symmetric -zero_diagonal -out_assignment '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/103414/assignments_ext4_msmt_fsdefault84.csv' -force",
+          "duration_seconds": 0.34,
+          "returncode": 0,
+          "stderr_tail": "tck2connectome: [WARNING] existing output files will be overwritten\ntck2connectome: Constructing connectome... [==================================================]\n",
+          "stdout_tail": "",
+          "step": "tck2connectome_fsdefault84",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\103414\\connectome_sift2_ext4_msmt_fsdefault84_smoke.csv",
+          "target_bytes_after": 31138,
+          "target_exists_after": true
+        }
+      ],
+      "connectome": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\103414\\connectome_sift2_ext4_msmt_fsdefault84_smoke.csv",
+      "connectome_qc": {
+        "assignments_rows": 5001,
+        "bytes": 31138,
+        "columns": 84,
+        "exists": true,
+        "max_weight": 9.58073459565639,
+        "nonzero_edges": 1098,
+        "rows": 84,
+        "total_weight": 989.3078708648682
+      },
+      "load_bearing_tck2connectome_warning": false,
+      "status": "PASS_LABELCONVERT_CONNECTOME_QC",
+      "subject": "103414"
+    },
+    {
+      "commands": [
+        {
+          "command": "labelconvert '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/103818/T1w/aparc+aseg.nii.gz' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/resources/FreeSurferColorLUT.txt' /home/a5993/mamba-envs/p7-neuro/share/mrtrix3/labelconvert/fs_default.txt '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/103818/nodes_fsdefault.mif' -force",
+          "duration_seconds": 1.266,
+          "returncode": 0,
+          "stderr_tail": "labelconvert: [WARNING] existing output files will be overwritten\nlabelconvert: Image \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/103818/T1w/aparc+aseg.nii.gz\" stored with floating-point type; need to check for non-integer or negative values\nlabelconvert: uncompressing image \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/103818/T1w/aparc+aseg.nii.gz\"... [==================================================]\nlabelconvert: Verifying parcellation image... [==================================================]\nlabelconvert: uncompressing image \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/103818/T1w/aparc+aseg.nii.gz\"... [==================================================]\n",
+          "stdout_tail": "",
+          "step": "labelconvert_fsdefault84",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\103818\\nodes_fsdefault.mif",
+          "target_bytes_after": 84095152,
+          "target_exists_after": true
+        },
+        {
+          "command": "mrtransform '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/103818/nodes_fsdefault.mif' -template '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/103818/wmfod_ext4.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/103818/nodes_fsdefault_dwi.mif' -interp nearest -force",
+          "duration_seconds": 0.802,
+          "returncode": 0,
+          "stderr_tail": "mrtransform: [WARNING] existing output files will be overwritten\nmrtransform: preloading data for \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/103818/nodes_fsdefault.mif\"... [==================================================]\nmrtransform: reslicing \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/103818/nodes_fsdefault.mif\"... [==================================================]\n",
+          "stdout_tail": "",
+          "step": "nodes_fsdefault_resample_to_dwi",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\103818\\nodes_fsdefault_dwi.mif",
+          "target_bytes_after": 14634816,
+          "target_exists_after": true
+        },
+        {
+          "command": "tck2connectome '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/103818/tracks_5k_ext4_msmt.tck' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/103818/nodes_fsdefault_dwi.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/103818/connectome_sift2_ext4_msmt_fsdefault84_smoke.csv' -tck_weights_in '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/103818/sift2_weights_ext4_msmt.txt' -symmetric -zero_diagonal -out_assignment '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/103818/assignments_ext4_msmt_fsdefault84.csv' -force",
+          "duration_seconds": 0.356,
+          "returncode": 0,
+          "stderr_tail": "tck2connectome: [WARNING] existing output files will be overwritten\ntck2connectome: Constructing connectome... [==================================================]\n",
+          "stdout_tail": "",
+          "step": "tck2connectome_fsdefault84",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\103818\\connectome_sift2_ext4_msmt_fsdefault84_smoke.csv",
+          "target_bytes_after": 31914,
+          "target_exists_after": true
+        }
+      ],
+      "connectome": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\103818\\connectome_sift2_ext4_msmt_fsdefault84_smoke.csv",
+      "connectome_qc": {
+        "assignments_rows": 5001,
+        "bytes": 31914,
+        "columns": 84,
+        "exists": true,
+        "max_weight": 12.222619920969,
+        "nonzero_edges": 1148,
+        "rows": 84,
+        "total_weight": 1098.3747781440616
+      },
+      "load_bearing_tck2connectome_warning": false,
+      "status": "PASS_LABELCONVERT_CONNECTOME_QC",
+      "subject": "103818"
+    },
+    {
+      "commands": [
+        {
+          "command": "labelconvert '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/105014/T1w/aparc+aseg.nii.gz' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/resources/FreeSurferColorLUT.txt' /home/a5993/mamba-envs/p7-neuro/share/mrtrix3/labelconvert/fs_default.txt '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/105014/nodes_fsdefault.mif' -force",
+          "duration_seconds": 1.232,
+          "returncode": 0,
+          "stderr_tail": "labelconvert: [WARNING] existing output files will be overwritten\nlabelconvert: Image \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/105014/T1w/aparc+aseg.nii.gz\" stored with floating-point type; need to check for non-integer or negative values\nlabelconvert: uncompressing image \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/105014/T1w/aparc+aseg.nii.gz\"... [==================================================]\nlabelconvert: Verifying parcellation image... [==================================================]\nlabelconvert: uncompressing image \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/105014/T1w/aparc+aseg.nii.gz\"... [==================================================]\n",
+          "stdout_tail": "",
+          "step": "labelconvert_fsdefault84",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\105014\\nodes_fsdefault.mif",
+          "target_bytes_after": 84095152,
+          "target_exists_after": true
+        },
+        {
+          "command": "mrtransform '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/105014/nodes_fsdefault.mif' -template '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/105014/wmfod_ext4.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/105014/nodes_fsdefault_dwi.mif' -interp nearest -force",
+          "duration_seconds": 0.809,
+          "returncode": 0,
+          "stderr_tail": "mrtransform: [WARNING] existing output files will be overwritten\nmrtransform: preloading data for \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/105014/nodes_fsdefault.mif\"... [==================================================]\nmrtransform: reslicing \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/105014/nodes_fsdefault.mif\"... [==================================================]\n",
+          "stdout_tail": "",
+          "step": "nodes_fsdefault_resample_to_dwi",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\105014\\nodes_fsdefault_dwi.mif",
+          "target_bytes_after": 14634816,
+          "target_exists_after": true
+        },
+        {
+          "command": "tck2connectome '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/105014/tracks_5k_ext4_msmt.tck' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/105014/nodes_fsdefault_dwi.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/105014/connectome_sift2_ext4_msmt_fsdefault84_smoke.csv' -tck_weights_in '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/105014/sift2_weights_ext4_msmt.txt' -symmetric -zero_diagonal -out_assignment '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/105014/assignments_ext4_msmt_fsdefault84.csv' -force",
+          "duration_seconds": 0.31,
+          "returncode": 0,
+          "stderr_tail": "tck2connectome: [WARNING] existing output files will be overwritten\ntck2connectome: Constructing connectome... [==================================================]\n",
+          "stdout_tail": "",
+          "step": "tck2connectome_fsdefault84",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\105014\\connectome_sift2_ext4_msmt_fsdefault84_smoke.csv",
+          "target_bytes_after": 30938,
+          "target_exists_after": true
+        }
+      ],
+      "connectome": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\105014\\connectome_sift2_ext4_msmt_fsdefault84_smoke.csv",
+      "connectome_qc": {
+        "assignments_rows": 5001,
+        "bytes": 30938,
+        "columns": 84,
+        "exists": true,
+        "max_weight": 9.10869996249676,
+        "nonzero_edges": 1092,
+        "rows": 84,
+        "total_weight": 943.4739301353693
+      },
+      "load_bearing_tck2connectome_warning": false,
+      "status": "PASS_LABELCONVERT_CONNECTOME_QC",
+      "subject": "105014"
+    },
+    {
+      "commands": [
+        {
+          "command": "labelconvert '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/105115/T1w/aparc+aseg.nii.gz' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/resources/FreeSurferColorLUT.txt' /home/a5993/mamba-envs/p7-neuro/share/mrtrix3/labelconvert/fs_default.txt '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/105115/nodes_fsdefault.mif' -force",
+          "duration_seconds": 1.25,
+          "returncode": 0,
+          "stderr_tail": "labelconvert: [WARNING] existing output files will be overwritten\nlabelconvert: Image \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/105115/T1w/aparc+aseg.nii.gz\" stored with floating-point type; need to check for non-integer or negative values\nlabelconvert: uncompressing image \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/105115/T1w/aparc+aseg.nii.gz\"... [==================================================]\nlabelconvert: Verifying parcellation image... [==================================================]\nlabelconvert: uncompressing image \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper5/data_hcp_ya_2025/downloads/HCP_1200/105115/T1w/aparc+aseg.nii.gz\"... [==================================================]\n",
+          "stdout_tail": "",
+          "step": "labelconvert_fsdefault84",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\105115\\nodes_fsdefault.mif",
+          "target_bytes_after": 84095152,
+          "target_exists_after": true
+        },
+        {
+          "command": "mrtransform '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/105115/nodes_fsdefault.mif' -template '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/105115/wmfod_ext4.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/105115/nodes_fsdefault_dwi.mif' -interp nearest -force",
+          "duration_seconds": 0.8,
+          "returncode": 0,
+          "stderr_tail": "mrtransform: [WARNING] existing output files will be overwritten\nmrtransform: preloading data for \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/105115/nodes_fsdefault.mif\"... [==================================================]\nmrtransform: reslicing \"/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/105115/nodes_fsdefault.mif\"... [==================================================]\n",
+          "stdout_tail": "",
+          "step": "nodes_fsdefault_resample_to_dwi",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\105115\\nodes_fsdefault_dwi.mif",
+          "target_bytes_after": 14634816,
+          "target_exists_after": true
+        },
+        {
+          "command": "tck2connectome '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/105115/tracks_5k_ext4_msmt.tck' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/105115/nodes_fsdefault_dwi.mif' '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/105115/connectome_sift2_ext4_msmt_fsdefault84_smoke.csv' -tck_weights_in '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/105115/sift2_weights_ext4_msmt.txt' -symmetric -zero_diagonal -out_assignment '/mnt/c/Users/85993/Desktop/codebase/neuralsignal institute/paper7/structural_connectomes/mrtrix_act_sift2_smoke/105115/assignments_ext4_msmt_fsdefault84.csv' -force",
+          "duration_seconds": 0.309,
+          "returncode": 0,
+          "stderr_tail": "tck2connectome: [WARNING] existing output files will be overwritten\ntck2connectome: Constructing connectome... [==================================================]\n",
+          "stdout_tail": "",
+          "step": "tck2connectome_fsdefault84",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\105115\\connectome_sift2_ext4_msmt_fsdefault84_smoke.csv",
+          "target_bytes_after": 31402,
+          "target_exists_after": true
+        }
+      ],
+      "connectome": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper7\\structural_connectomes\\mrtrix_act_sift2_smoke\\105115\\connectome_sift2_ext4_msmt_fsdefault84_smoke.csv",
+      "connectome_qc": {
+        "assignments_rows": 5001,
+        "bytes": 31402,
+        "columns": 84,
+        "exists": true,
+        "max_weight": 7.89001812040806,
+        "nonzero_edges": 1128,
+        "rows": 84,
+        "total_weight": 980.0950569212437
+      },
+      "load_bearing_tck2connectome_warning": false,
+      "status": "PASS_LABELCONVERT_CONNECTOME_QC",
+      "subject": "105115"
+    }
+  ],
+  "subjects": [
+    "100307",
+    "100408",
+    "101107",
+    "101309",
+    "101915",
+    "103111",
+    "103414",
+    "103818",
+    "105014",
+    "105115"
+  ]
+}

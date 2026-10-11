@@ -1,0 +1,80 @@
+{
+  "allowed_claim": "The primary same-transition reproducibility endpoint remains unsupported, while the secondary 0/2-back condition-classification signal exceeds simple label-shuffle nulls in this HCP smoke set.",
+  "experiment": "P8-v2-signal-separation-audit",
+  "forbidden_claims": [
+    "physiology eliminated",
+    "neural origin proven",
+    "transition reproducibility rescued by classification",
+    "CWP validated",
+    "NAP validated"
+  ],
+  "paper": "Paper 8 v2",
+  "purpose": "Separate preregistered same-transition reproducibility failure from secondary condition-classification signal.",
+  "results": {
+    "N0_raw_basic": {
+      "classification_domain_preserving_shuffle_ci95": [
+        0.4340277777777778,
+        0.5661458333333332
+      ],
+      "classification_domain_preserving_shuffle_mean": 0.5014583333333333,
+      "classification_label_shuffle_ci95": [
+        0.42855902777777777,
+        0.5573784722222223
+      ],
+      "classification_label_shuffle_mean": 0.4940277777777778,
+      "classification_vs_domain_preserving_shuffle_p_greater": 0.009900990099009901,
+      "classification_vs_label_shuffle_p_greater": 0.009900990099009901,
+      "label_shuffle_contrast_ci95": [
+        -0.04722490326502229,
+        0.009251884224047607
+      ],
+      "label_shuffle_contrast_mean": -0.017728600745758934,
+      "metadata_only_logo_accuracy": 0.625,
+      "n_groups": 36,
+      "n_permutations": 100,
+      "n_rows": 288,
+      "pseudo_ontology_contrast_ci95": [
+        -0.05675870596305997,
+        0.0032149457172901204
+      ],
+      "pseudo_ontology_contrast_mean": -0.018207065528449258,
+      "rung": "N0_raw_basic",
+      "true_contrast_vs_label_shuffle_p_greater": 0.8811881188118812,
+      "true_logo_classification_accuracy": 0.7152777777777778,
+      "true_same_minus_different_contrast": -0.03314831197024515
+    },
+    "N4_motion_respiration_cardiac": {
+      "classification_domain_preserving_shuffle_ci95": [
+        0.4373263888888889,
+        0.5798611111111112
+      ],
+      "classification_domain_preserving_shuffle_mean": 0.4977430555555556,
+      "classification_label_shuffle_ci95": [
+        0.41649305555555555,
+        0.5434895833333333
+      ],
+      "classification_label_shuffle_mean": 0.48864583333333345,
+      "classification_vs_domain_preserving_shuffle_p_greater": 0.009900990099009901,
+      "classification_vs_label_shuffle_p_greater": 0.009900990099009901,
+      "label_shuffle_contrast_ci95": [
+        -0.06289809160388597,
+        0.008727890151979079
+      ],
+      "label_shuffle_contrast_mean": -0.02289712604752408,
+      "metadata_only_logo_accuracy": 0.625,
+      "n_groups": 36,
+      "n_permutations": 100,
+      "n_rows": 288,
+      "pseudo_ontology_contrast_ci95": [
+        -0.0765247950831541,
+        0.0028989783668780097
+      ],
+      "pseudo_ontology_contrast_mean": -0.027359132402473733,
+      "rung": "N4_motion_respiration_cardiac",
+      "true_contrast_vs_label_shuffle_p_greater": 0.40594059405940597,
+      "true_logo_classification_accuracy": 0.7569444444444444,
+      "true_same_minus_different_contrast": -0.018814376122519016
+    }
+  },
+  "status": "PASS_SIGNAL_SEPARATION_AUDIT"
+}

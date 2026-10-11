@@ -1,0 +1,45 @@
+{
+  "experiment": "P5-E8",
+  "status": "P5_HCP_YA_2025_STRUCTURAL_PROXY_TEST_COMPLETE",
+  "paper5_primary_dataset": "HCP-YA 2025 / HCP_1200",
+  "cohort": "100 Unrelated Subjects",
+  "phase0_openneuro_status": "ARCHIVED_AS_FEASIBILITY_AUDIT_NOT_PRIMARY_P5",
+  "balsa_access_status": "OPEN_ACCESS_TERMS_AGREED_AND_S3_DOWNLOAD_COMPLETED_FOR_CURRENT_PIPELINE",
+  "analysis_completed": {
+    "hcp_access": true,
+    "minimal_hcp_wm_diffusion_package_download": true,
+    "e2_fmri_state_extraction": true,
+    "e3_no_structure_baseline": true,
+    "e4_subject_structural_proxy_generation": true,
+    "e5_structural_falsification": true,
+    "e6_subject_specificity_proxy_test": true,
+    "e7_subject_level_statistics": true
+  },
+  "analysis_limits": {
+    "gold_standard_act_sift2_connectomes": false,
+    "schaefer_200_plus_subcortex": false,
+    "locked_200_subject_development_holdout_split": false,
+    "current_proxy": "cortical aparc68 BedpostX dyad1 endpoint-propagation proxy"
+  },
+  "claim_allowed_structure_matters": false,
+  "claim_allowed_individual_structure_matters": false,
+  "claim_allowed_anatomical_specificity": false,
+  "claim_allowed_locked_replication": false,
+  "claim_allowed_cwp_validated": false,
+  "claim_allowed_hcp_data_and_pipeline_completed": true,
+  "allowed_conclusion": "In a 100-subject HCP-YA 2025 WM analysis using cortical aparc68 states and a BedpostX dyad structural proxy, the strong subject-specific structural-constraint hypothesis was not supported.",
+  "forbidden_claims": [
+    "Subject-specific structural connectivity constrains brain-state dynamics.",
+    "All Paper 5 structural gates passed.",
+    "CWP/NAP structural grounding is established.",
+    "This is a gold-standard ACT/SIFT2 tractography result."
+  ],
+  "primary_evidence": [
+    "paper5/results/hcp_smoke_validate.json",
+    "paper5/results/hcp_e2_e3_smoke_states.json",
+    "paper5/results/paper5_e4_e8_structural_proxy_results.json",
+    "paper5/results/paper5_e4_connectome_proxy_qc.csv",
+    "paper5/results/paper5_e4_e7_structural_proxy_subject_metrics.csv"
+  ],
+  "no_invented_results": true
+}

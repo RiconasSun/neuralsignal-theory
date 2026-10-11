@@ -1,0 +1,196 @@
+{
+  "schema_name": "CWP-NAP Ontology v2",
+  "version": "0.2.0-post-p10",
+  "generated_at": "2026-09-06T04:46:38+00:00",
+  "principle": "Observable -> State -> Transition -> Continuous Latent Trajectory -> Candidate Semantics -> Flow Rules",
+  "objects": {
+    "Observable": {
+      "required_fields": [
+        "id",
+        "dataset",
+        "modality",
+        "measurement_regime",
+        "preprocessing_state",
+        "evidence_status"
+      ],
+      "may_link_to": [
+        "NeuralState",
+        "CompetingExplanation"
+      ]
+    },
+    "NeuralState": {
+      "required_fields": [
+        "id",
+        "state_vector_definition",
+        "time_window",
+        "atlas_or_sensor_space",
+        "evidence_status"
+      ],
+      "may_link_to": [
+        "TransitionFamily",
+        "ContextModifier"
+      ]
+    },
+    "TransitionFamily": {
+      "required_fields": [
+        "id",
+        "source_state",
+        "target_state",
+        "transition_metric",
+        "reproducibility_status",
+        "confound_status"
+      ],
+      "may_link_to": [
+        "DynamicMotif",
+        "ContinuousLatentTrajectory",
+        "CandidateCWP",
+        "CompetingExplanation"
+      ]
+    },
+    "DynamicMotif": {
+      "required_fields": [
+        "id",
+        "discovery_method",
+        "temporal_scale",
+        "recurrence_metric",
+        "holdout_status",
+        "evidence_status"
+      ],
+      "may_link_to": [
+        "CandidateNAP",
+        "CandidateCWP"
+      ]
+    },
+    "ContinuousLatentTrajectory": {
+      "required_fields": [
+        "id",
+        "latent_representation_method",
+        "z_t_definition",
+        "velocity_definition",
+        "trajectory_geometry_features",
+        "holdout_status",
+        "evidence_status"
+      ],
+      "may_link_to": [
+        "CandidateCWP",
+        "FlowRule",
+        "CompetingExplanation"
+      ]
+    },
+    "CandidateNAP": {
+      "required_fields": [
+        "id",
+        "motif_link",
+        "fast_dynamics_feature",
+        "null_tests",
+        "evidence_status"
+      ],
+      "may_link_to": [
+        "CandidateCWP",
+        "MeasurementRegime"
+      ]
+    },
+    "CandidateCWP": {
+      "required_fields": [
+        "id",
+        "latent_factor",
+        "latent_trajectory_feature",
+        "trajectory_geometry",
+        "context_modifier",
+        "semantic_interpretation",
+        "evidence_status"
+      ],
+      "may_link_to": [
+        "CognitiveProgram",
+        "ClaimBoundary"
+      ]
+    },
+    "FlowRule": {
+      "required_fields": [
+        "id",
+        "vector_field_definition",
+        "context_dependence",
+        "trajectory_prediction_endpoint",
+        "baseline_comparison",
+        "null_tests",
+        "evidence_status"
+      ],
+      "may_link_to": [
+        "ContinuousLatentTrajectory",
+        "CandidateCWP",
+        "ClaimBoundary"
+      ]
+    },
+    "CognitiveProgram": {
+      "required_fields": [
+        "id",
+        "candidate_cwp_sequence",
+        "latent_flow_pattern",
+        "task_context",
+        "behavioral_endpoint",
+        "evidence_status"
+      ],
+      "may_link_to": [
+        "ContextModifier",
+        "ClaimBoundary"
+      ]
+    },
+    "ContextModifier": {
+      "required_fields": [
+        "id",
+        "domain",
+        "load",
+        "rule",
+        "timing",
+        "metadata",
+        "evidence_status"
+      ],
+      "may_link_to": [
+        "TransitionFamily",
+        "CandidateCWP"
+      ]
+    },
+    "CompetingExplanation": {
+      "required_fields": [
+        "id",
+        "type",
+        "baseline_or_null",
+        "test_result",
+        "resolution_status"
+      ],
+      "types": [
+        "task_label",
+        "timing",
+        "metadata",
+        "motion",
+        "physiology",
+        "scanner",
+        "random_ontology",
+        "structural_proxy",
+        "continuous_manifold"
+        ,
+        "generic_vector_field",
+        "metadata_only_flow"
+      ]
+    },
+    "ClaimBoundary": {
+      "required_fields": [
+        "id",
+        "allowed_claim",
+        "disallowed_claim",
+        "supporting_evidence",
+        "downgrade_trigger"
+      ]
+    }
+  },
+  "default_claim_permissions": {
+    "claim_allowed_dynamic_motifs_exist": false,
+    "claim_allowed_continuous_latent_dynamics_preferred": true,
+    "claim_allowed_discrete_NAP_supported": false,
+    "claim_allowed_CWP_v2_semantics_supported": false,
+    "claim_allowed_neural_grammar_supported": false,
+    "claim_allowed_neural_dynamical_syntax_supported": false,
+    "claim_allowed_external_replication": false,
+    "claim_allowed_universal_theory": false
+  }
+}

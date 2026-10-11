@@ -1,0 +1,438 @@
+{
+  "aggregate_results": {
+    "N0_state_only": {
+      "mean_mse": 308.0080973658899,
+      "mean_r2": 0.48063244668522936,
+      "n_subjects": 5
+    },
+    "N1_state_plus_cardiac_resp": {
+      "mean_mse": 288.6289253078573,
+      "mean_r2": 0.516281397837814,
+      "n_subjects": 5
+    },
+    "N2_state_plus_metadata": {
+      "mean_mse": 304.12157077033197,
+      "mean_r2": 0.4857931759443188,
+      "n_subjects": 5
+    },
+    "N3_state_plus_physio_metadata": {
+      "mean_mse": 286.173931912775,
+      "mean_r2": 0.5190032787446749,
+      "n_subjects": 5
+    }
+  },
+  "claim_boundary": "This is a convergent ds005795 measured-physiology nuisance-ladder analysis over global BOLD signal. It is not a direct HCP working-memory transition replication and does not rescue the failed P8 HCP primary gate.",
+  "delta_vs_state_only": {
+    "N1_state_plus_cardiac_resp": {
+      "delta_mse_vs_state_only": 19.379172058032623,
+      "delta_r2_vs_state_only": 0.03564895115258465
+    },
+    "N2_state_plus_metadata": {
+      "delta_mse_vs_state_only": 3.886526595557939,
+      "delta_r2_vs_state_only": 0.005160729259089447
+    },
+    "N3_state_plus_physio_metadata": {
+      "delta_mse_vs_state_only": 21.834165453114906,
+      "delta_r2_vs_state_only": 0.038370832059445525
+    }
+  },
+  "experiment": "P8-final-extension-ds005795-streaming-nuisance-ladder",
+  "n_subjects_passed": 5,
+  "n_subjects_requested": 5,
+  "paper": "Paper 8",
+  "status": "PASS_DS005795_STREAMING_NUISANCE_LADDER",
+  "subject_results": [
+    {
+      "bold_removed_after_processing": true,
+      "bold_shape": [
+        112,
+        112,
+        58,
+        816
+      ],
+      "bold_size_bytes": 404403222,
+      "brain_mask_voxels": 499206,
+      "downloads": [
+        {
+          "path": "physio.json",
+          "size_bytes": 437,
+          "status": "exists",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\data_ds005795_smoke\\physio.json"
+        },
+        {
+          "path": "sub-01/func/sub-01_task-learning_events.tsv",
+          "size_bytes": 48097,
+          "status": "exists",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\data_ds005795_smoke\\sub-01\\func\\sub-01_task-learning_events.tsv"
+        },
+        {
+          "path": "sub-01/func/sub-01_task-learning_physio.tsv.gz",
+          "size_bytes": 3392765,
+          "status": "exists",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\data_ds005795_smoke\\sub-01\\func\\sub-01_task-learning_physio.tsv.gz"
+        },
+        {
+          "path": "sub-01/func/sub-01_task-learning_bold.json",
+          "size_bytes": 4155,
+          "status": "exists",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\data_ds005795_smoke\\sub-01\\func\\sub-01_task-learning_bold.json"
+        },
+        {
+          "path": "sub-01/func/sub-01_task-learning_bold.nii.gz",
+          "size_bytes": 404403222,
+          "status": "exists",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\data_ds005795_smoke\\sub-01\\func\\sub-01_task-learning_bold.nii.gz"
+        }
+      ],
+      "feature_path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\state_extraction\\ds005795_physio_extension\\p8_ds005795_sub01_learning_physio_tr_features.csv",
+      "repetition_time": 2,
+      "results": {
+        "N0_state_only": {
+          "mse": 403.3125742222217,
+          "r2": 0.554563922461514,
+          "test_rows": 245,
+          "train_rows": 570
+        },
+        "N1_state_plus_cardiac_resp": {
+          "mse": 358.5381603917311,
+          "r2": 0.60401474682324,
+          "test_rows": 245,
+          "train_rows": 570
+        },
+        "N2_state_plus_metadata": {
+          "mse": 397.67923232062196,
+          "r2": 0.560785632074513,
+          "test_rows": 245,
+          "train_rows": 570
+        },
+        "N3_state_plus_physio_metadata": {
+          "mse": 357.5445131062795,
+          "r2": 0.605112174420537,
+          "test_rows": 245,
+          "train_rows": 570
+        }
+      },
+      "status": "PASS_STREAMING_SUBJECT_LADDER",
+      "subject": "sub-01",
+      "task": "learning",
+      "usable_transition_rows": 815
+    },
+    {
+      "bold_removed_after_processing": true,
+      "bold_shape": [
+        112,
+        112,
+        58,
+        816
+      ],
+      "bold_size_bytes": 412370586,
+      "brain_mask_voxels": 488951,
+      "downloads": [
+        {
+          "path": "physio.json",
+          "size_bytes": 437,
+          "status": "exists",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\data_ds005795_smoke\\physio.json"
+        },
+        {
+          "path": "sub-02/func/sub-02_task-learning_events.tsv",
+          "size_bytes": 48176,
+          "status": "exists",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\data_ds005795_smoke\\sub-02\\func\\sub-02_task-learning_events.tsv"
+        },
+        {
+          "path": "sub-02/func/sub-02_task-learning_physio.tsv.gz",
+          "size_bytes": 3288551,
+          "status": "exists",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\data_ds005795_smoke\\sub-02\\func\\sub-02_task-learning_physio.tsv.gz"
+        },
+        {
+          "path": "sub-02/func/sub-02_task-learning_bold.json",
+          "size_bytes": 4158,
+          "status": "exists",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\data_ds005795_smoke\\sub-02\\func\\sub-02_task-learning_bold.json"
+        },
+        {
+          "path": "sub-02/func/sub-02_task-learning_bold.nii.gz",
+          "size_bytes": 412370586,
+          "status": "exists",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\data_ds005795_smoke\\sub-02\\func\\sub-02_task-learning_bold.nii.gz"
+        }
+      ],
+      "feature_path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\state_extraction\\ds005795_physio_extension\\p8_ds005795_sub02_learning_physio_tr_features.csv",
+      "repetition_time": 2,
+      "results": {
+        "N0_state_only": {
+          "mse": 254.33127834471247,
+          "r2": 0.38303366886965684,
+          "test_rows": 245,
+          "train_rows": 570
+        },
+        "N1_state_plus_cardiac_resp": {
+          "mse": 244.07078322080392,
+          "r2": 0.40792396185044644,
+          "test_rows": 245,
+          "train_rows": 570
+        },
+        "N2_state_plus_metadata": {
+          "mse": 250.3157258842248,
+          "r2": 0.3927747462752076,
+          "test_rows": 245,
+          "train_rows": 570
+        },
+        "N3_state_plus_physio_metadata": {
+          "mse": 241.05403273159564,
+          "r2": 0.41524210806264705,
+          "test_rows": 245,
+          "train_rows": 570
+        }
+      },
+      "status": "PASS_STREAMING_SUBJECT_LADDER",
+      "subject": "sub-02",
+      "task": "learning",
+      "usable_transition_rows": 815
+    },
+    {
+      "bold_removed_after_processing": true,
+      "bold_shape": [
+        112,
+        112,
+        58,
+        816
+      ],
+      "bold_size_bytes": 392253251,
+      "brain_mask_voxels": 471345,
+      "downloads": [
+        {
+          "path": "physio.json",
+          "size_bytes": 437,
+          "status": "exists",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\data_ds005795_smoke\\physio.json"
+        },
+        {
+          "path": "sub-03/func/sub-03_task-learning_events.tsv",
+          "size_bytes": 47642,
+          "status": "exists",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\data_ds005795_smoke\\sub-03\\func\\sub-03_task-learning_events.tsv"
+        },
+        {
+          "path": "sub-03/func/sub-03_task-learning_physio.tsv.gz",
+          "size_bytes": 3389789,
+          "status": "exists",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\data_ds005795_smoke\\sub-03\\func\\sub-03_task-learning_physio.tsv.gz"
+        },
+        {
+          "path": "sub-03/func/sub-03_task-learning_bold.json",
+          "size_bytes": 4159,
+          "status": "exists",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\data_ds005795_smoke\\sub-03\\func\\sub-03_task-learning_bold.json"
+        },
+        {
+          "path": "sub-03/func/sub-03_task-learning_bold.nii.gz",
+          "size_bytes": 392253251,
+          "status": "exists",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\data_ds005795_smoke\\sub-03\\func\\sub-03_task-learning_bold.nii.gz"
+        }
+      ],
+      "feature_path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\state_extraction\\ds005795_physio_extension\\p8_ds005795_sub03_learning_physio_tr_features.csv",
+      "repetition_time": 2,
+      "results": {
+        "N0_state_only": {
+          "mse": 117.40746641380937,
+          "r2": 0.44920294586793863,
+          "test_rows": 245,
+          "train_rows": 570
+        },
+        "N1_state_plus_cardiac_resp": {
+          "mse": 102.57512051121087,
+          "r2": 0.5187863606077197,
+          "test_rows": 245,
+          "train_rows": 570
+        },
+        "N2_state_plus_metadata": {
+          "mse": 116.85270005830859,
+          "r2": 0.4518055373697809,
+          "test_rows": 245,
+          "train_rows": 570
+        },
+        "N3_state_plus_physio_metadata": {
+          "mse": 103.75062346823513,
+          "r2": 0.5132716894745357,
+          "test_rows": 245,
+          "train_rows": 570
+        }
+      },
+      "status": "PASS_STREAMING_SUBJECT_LADDER",
+      "subject": "sub-03",
+      "task": "learning",
+      "usable_transition_rows": 815
+    },
+    {
+      "bold_removed_after_processing": true,
+      "bold_shape": [
+        112,
+        112,
+        58,
+        816
+      ],
+      "bold_size_bytes": 402171091,
+      "brain_mask_voxels": 475232,
+      "downloads": [
+        {
+          "path": "physio.json",
+          "size_bytes": 437,
+          "status": "exists",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\data_ds005795_smoke\\physio.json"
+        },
+        {
+          "path": "sub-04/func/sub-04_task-learning_events.tsv",
+          "size_bytes": 48129,
+          "status": "exists",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\data_ds005795_smoke\\sub-04\\func\\sub-04_task-learning_events.tsv"
+        },
+        {
+          "path": "sub-04/func/sub-04_task-learning_physio.tsv.gz",
+          "size_bytes": 3456300,
+          "status": "exists",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\data_ds005795_smoke\\sub-04\\func\\sub-04_task-learning_physio.tsv.gz"
+        },
+        {
+          "path": "sub-04/func/sub-04_task-learning_bold.json",
+          "size_bytes": 4156,
+          "status": "exists",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\data_ds005795_smoke\\sub-04\\func\\sub-04_task-learning_bold.json"
+        },
+        {
+          "path": "sub-04/func/sub-04_task-learning_bold.nii.gz",
+          "size_bytes": 402171091,
+          "status": "downloaded",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\data_ds005795_smoke\\sub-04\\func\\sub-04_task-learning_bold.nii.gz",
+          "url_used": "https://s3.amazonaws.com/openneuro.org/ds005795/sub-04/func/sub-04_task-learning_bold.nii.gz"
+        }
+      ],
+      "feature_path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\state_extraction\\ds005795_physio_extension\\p8_ds005795_sub04_learning_physio_tr_features.csv",
+      "repetition_time": 2,
+      "results": {
+        "N0_state_only": {
+          "mse": 336.7518512877316,
+          "r2": 0.6513265982624602,
+          "test_rows": 245,
+          "train_rows": 570
+        },
+        "N1_state_plus_cardiac_resp": {
+          "mse": 323.884231115695,
+          "r2": 0.6646497526281867,
+          "test_rows": 245,
+          "train_rows": 570
+        },
+        "N2_state_plus_metadata": {
+          "mse": 322.3424137817374,
+          "r2": 0.6662461527448695,
+          "test_rows": 245,
+          "train_rows": 570
+        },
+        "N3_state_plus_physio_metadata": {
+          "mse": 316.5325883160587,
+          "r2": 0.6722616552606633,
+          "test_rows": 245,
+          "train_rows": 570
+        }
+      },
+      "status": "PASS_STREAMING_SUBJECT_LADDER",
+      "subject": "sub-04",
+      "task": "learning",
+      "usable_transition_rows": 815
+    },
+    {
+      "bold_removed_after_processing": true,
+      "bold_shape": [
+        112,
+        112,
+        58,
+        816
+      ],
+      "bold_size_bytes": 424604633,
+      "brain_mask_voxels": 510968,
+      "downloads": [
+        {
+          "path": "physio.json",
+          "size_bytes": 437,
+          "status": "exists",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\data_ds005795_smoke\\physio.json"
+        },
+        {
+          "path": "sub-05/func/sub-05_task-learning_events.tsv",
+          "size_bytes": 48189,
+          "status": "exists",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\data_ds005795_smoke\\sub-05\\func\\sub-05_task-learning_events.tsv"
+        },
+        {
+          "path": "sub-05/func/sub-05_task-learning_physio.tsv.gz",
+          "size_bytes": 3471089,
+          "status": "exists",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\data_ds005795_smoke\\sub-05\\func\\sub-05_task-learning_physio.tsv.gz"
+        },
+        {
+          "path": "sub-05/func/sub-05_task-learning_bold.json",
+          "size_bytes": 4157,
+          "status": "exists",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\data_ds005795_smoke\\sub-05\\func\\sub-05_task-learning_bold.json"
+        },
+        {
+          "path": "sub-05/func/sub-05_task-learning_bold.nii.gz",
+          "size_bytes": 424604633,
+          "status": "downloaded",
+          "target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\data_ds005795_smoke\\sub-05\\func\\sub-05_task-learning_bold.nii.gz",
+          "url_used": "https://s3.amazonaws.com/openneuro.org/ds005795/sub-05/func/sub-05_task-learning_bold.nii.gz"
+        }
+      ],
+      "feature_path": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper8\\state_extraction\\ds005795_physio_extension\\p8_ds005795_sub05_learning_physio_tr_features.csv",
+      "repetition_time": 2,
+      "results": {
+        "N0_state_only": {
+          "mse": 428.23731656097425,
+          "r2": 0.3650350979645769,
+          "test_rows": 245,
+          "train_rows": 570
+        },
+        "N1_state_plus_cardiac_resp": {
+          "mse": 414.07633129984555,
+          "r2": 0.3860321672794772,
+          "test_rows": 245,
+          "train_rows": 570
+        },
+        "N2_state_plus_metadata": {
+          "mse": 433.41778180676704,
+          "r2": 0.357353811257223,
+          "test_rows": 245,
+          "train_rows": 570
+        },
+        "N3_state_plus_physio_metadata": {
+          "mse": 411.987901941706,
+          "r2": 0.3891287665049914,
+          "test_rows": 245,
+          "train_rows": 570
+        }
+      },
+      "status": "PASS_STREAMING_SUBJECT_LADDER",
+      "subject": "sub-05",
+      "task": "learning",
+      "usable_transition_rows": 815
+    }
+  ],
+  "subjects_passed": [
+    "sub-01",
+    "sub-02",
+    "sub-03",
+    "sub-04",
+    "sub-05"
+  ],
+  "subjects_requested": [
+    "sub-01",
+    "sub-02",
+    "sub-03",
+    "sub-04",
+    "sub-05"
+  ],
+  "task": "learning"
+}

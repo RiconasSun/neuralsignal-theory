@@ -1,0 +1,9 @@
+# A4 Full Baseline / Competing-Explanation Results
+
+Primary competing explanation: same-transition reliability is no higher than different-transition similarity.
+
+| dataset | same_transition_mean_cosine | different_transition_null_mean_cosine | same_minus_different | supports_within_run_reproducibility |
+| --- | --- | --- | --- | --- |
+| ds001634 | 0.7765306274806373 | -0.6692277776863865 | 1.4457584051670238 | True |
+| ds001635 | 0.6674587699598806 | -0.4712997771762725 | 1.1387585471361532 | True |
+| ds004469 | 0.4939706236331221 | -0.3166544002510807 | 0.8106250238842029 | True |
