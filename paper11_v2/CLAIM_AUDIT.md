@@ -54,3 +54,34 @@ fits/seeds are retained and none selects a biological winner. Model complexity
 includes shared fitted offset plus extra coefficients; R2 must report actual
 development parameter frontiers and patient-level uncertainty before inference.
 No withheld data, past failures or five archived scientific gaps were cleared.
+
+R2 new controlled oracle success concerns exact batch arithmetic, not biology.
+The real development cohort is previously exposed/exploratory. The complete
+baseline and family grids are executed; regime verdict remains INCONCLUSIVE.
+Some optimizer successes are relative-objective stops after one
+iteration with gradients above gtol. The frozen stopping policy is unchanged;
+success does not establish global optimality or adequate identification.
+The original design_rank diagnostic describes the first unit's design only;
+nominal total coefficients, not that rank, control the complexity comparison.
+An append-only saved-evidence auditor preserves constructor failures even
+when theta is absent; this changes no fit, criterion, source or original gate.
+External support/access preparation is not an independent empirical result.
+All old scientific failures/gaps, oldtest protection and external60/40lock remain.
+
+R2 STOP: FAIL / DATA_INSUFFICIENT from the registered external recording-boundary
+procedure,47supported and5unknown candidate sessions. This is a support-evidence
+limitation, not proof that recordings lack hippocampal activity or that fewer
+than8external patients are eligible. External physiological eligibility and
+final validation were NOT EXECUTED; no external neural values were decoded.
+All3,887primary fits converged. Selected discrete/continuous/hybrid development
+scores were-0.5471759733/-0.5680885964/-0.5462372511nats/unit-bin versus strongest
+baseline-0.5349213147. Post-selection development inference is exploratory.
+One-SE selection is not biological preference; optimizer success is not global
+optimality. Only8of200count-null cohort replicates completed; no partial-null
+p-values, circular-shift or task-control success claims are permitted.
+Raw grid maxima differ:hybrid K4/lag5/ridge0.001 scores-0.514053175318272,
+above strongest baseline, but is not the frozen one-SE selected model.
+Do not generalize selected-family negative contrasts to every configuration;
+all57scores remain in the parameter frontier and none is externally validated.
+R2 overall and R3 cannot be claimed PASS. A new support rule or dataset requires
+separate prospective authorization; the current scientific failure is immutable.

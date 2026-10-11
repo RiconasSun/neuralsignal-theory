@@ -1,5 +1,23 @@
 # Current Authorized Mission
 
+Mission: paper11-v2-r2, user autonomous R2-only scientific execution from6f5e33e.
+State: WAIT_FOR_HUMAN_INPUT for any future separately registered recovery;
+current R2 scientific execution STOPPED, FAIL / DATA_INSUFFICIENT. R0/R1 frozen
+PASS unchanged. All9patients23sessions and3,887development fits completed.
+External support47of52sessions;5unknown recording-start boundaries triggered
+mandatory STOP. No candidate pruning or criterion change. Eight count-null
+cohort replicates completed; remaining nulls and independent validation incomplete.
+New34initial tests/108oracle cases PASS; prior51unique tests re-executed PASS.
+No R2 scientific success or preferred regime. No external spikes/final scores.
+Saved-only PowerShell exit0:59R2tests and6,783saved fit scores/objectives verified,
+zero discrepancies. Six scientific/evidence warnings remain;10of14requirements
+verified. Complete negative STOP evidence is not completed R2 scientific PASS.
+R3 forbidden by current scope. Evidence: ../paper11_v2/results/R2/ and
+evidence/2026-10-11/paper11-v2-r2/. Publish negative STOP evidence to origin/test
+only after exact-file review; no main/PR promotion or scientific PASS implied.
+
+## Historical R1 Checkpoint (Preserved)
+
 Mission: paper11-v2-r1, following authorized controlled R0-TRIAL-1 amendment.
 State: PASS for scoped R0/R1 implementation, verification and review;
 publication handled by final exact-file closure. R0 admission PASS:

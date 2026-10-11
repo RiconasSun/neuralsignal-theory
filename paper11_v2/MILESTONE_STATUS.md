@@ -94,3 +94,39 @@ Independent mathematical/evidence review cleared P0/P1:13source,
 identities present; independently reconstructed objectives agree to4.441e-16.
 Real development fitting, null tests, subject effects and external physiological
 coverage/final validation remain NOT EXECUTED; R2/R3 are not implied PASS.
+
+## R2 Execution From 6f5e33e
+
+R0/R1 frozen evidence remains unchanged. R2 prospective source/policy lock was
+created before any new tests or real fitting. New34controlled tests PASS;
+108batch-kernel oracle cases:maximum score error1.1102230246251565e-15
+nats/unit-bin and gradient error3.1667389197020945e-11. Prior33R0 and18R1
+unique regression tests were re-executed successfully in new evidence logs.
+
+All9patients23sessions passed input/split/task/QC verification. All3,887
+frozen development fits converged, including1,403baseline fits. Patient-level
+10,000bootstrap intervals,512exact sign flips and Holm6 were executed.
+Selected discrete/continuous/hybrid models scored below the strongest baseline;
+these exposed-development comparisons are exploratory, not biological verdicts.
+
+R2 scientific gate FAIL / DATA_INSUFFICIENT; regime INCONCLUSIVE. The registered
+external metadata observation-support procedure certified47of52candidate
+sessions, with5UNKNOWN_SUPPORT. Four first TTL labels were1.0 and one99.0,
+not the required recording-start55. Failure does not prove unusable recordings.
+No candidate was dropped or boundary rule changed. External unit eligibility
+was not physiologically verified; no external spikes or final scores accessed.
+
+Scientific execution stopped immediately at the critical external gate. Eight
+count-permutation cohort replicates completed, with2,896saved null fit records;
+remaining count/time/event null procedures are INCOMPLETE_STOPPED, not PASS.
+The external60/40split and oldtest protections remain unchanged. R3 NOT_EXECUTED.
+Only saved-result audits/reporting may continue. Evidence:results/R2,
+results/R2_external_support_code2,results/R2_stop and
+ops/evidence/2026-10-11/paper11-v2-r2. Never overwrite or restart this attempt.
+
+Saved-only PowerShell reproduce-r2-audit.ps1 executed:exit0,59R2tests PASS,
+6,783saved primary/partial-null records independently reconstructed with zero
+score/objective discrepancy;6,997original output hashes verified. Prior51unique
+R0/R1 regression tests also passed. These110unique tests are engineering proof,
+not null-suite completion or scientific success. All57configuration frontier,
+six patient contrasts and conditional session/patient CIs are exported.
