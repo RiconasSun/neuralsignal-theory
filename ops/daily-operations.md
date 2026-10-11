@@ -1,3 +1,18 @@
+# Current Boundary Audit Mission
+
+Mission:P11-v2-R2-BOUNDARY-AUDIT-1, explicitly authorized metadata-only audit.
+State:WAIT_FOR_HUMAN_INPUT for a distinctprospectivefollow-up; currentauditSTOP.
+Scientific verdictINCONCLUSIVE:52/52audited,47previousdocumentedsupport,
+5unknown,0contradictions. All52lackdirectrawElectricalSeries timestamps.
+18testsPASS; actualsavedPowerShell0; repeat-safePowerShell0twice;10,257prior
+trackedfilesunchanged. OriginalR2FAILand60/40holdoutunchanged; no spikes,
+newfinaloutcomes,models,nulls orR3. Stop here; do not automatically resumeR2.
+Evidence:../paper11_v2/boundary_audit1/results/ and
+evidence/2026-10-11/p11-v2-r2-boundary-audit-1/.
+Further native recording-header/gap/clock evidence or alternative-cohort
+metadata study requires separate authorization. Independentreview/closure
+does not authorize scientific continuation or reclassification.
+
 # Current Authorized Mission
 
 Mission: paper11-v2-r2, user autonomous R2-only scientific execution from6f5e33e.

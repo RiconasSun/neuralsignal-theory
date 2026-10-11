@@ -1,0 +1,98 @@
+{
+  "asset_id": "5f8737c1-8cc2-4ea2-8c00-085722c15db0",
+  "event_span_contains_scored_epochs": true,
+  "fetched_bytes": 258616,
+  "metadata": {
+    "acquisition_groups": [
+      {
+        "name": "events",
+        "neurodata_type": "AnnotationSeries"
+      },
+      {
+        "name": "experiment_ids",
+        "neurodata_type": "TimeSeries"
+      }
+    ],
+    "decode_ledger": [
+      {
+        "index": "scalar",
+        "path": "session_description",
+        "value": "New/Old recognition task for ID: 99. "
+      },
+      {
+        "index": "scalar",
+        "path": "session_start_time",
+        "value": "2014-12-01T00:00:00-08:00"
+      },
+      {
+        "index": "scalar",
+        "path": "timestamps_reference_time",
+        "value": "2014-12-01T00:00:00-08:00"
+      },
+      {
+        "index": 0,
+        "path": "acquisition/events/data",
+        "value": "1.0"
+      },
+      {
+        "index": 0,
+        "path": "acquisition/events/timestamps",
+        "value": 2441.036415
+      },
+      {
+        "index": -1,
+        "path": "acquisition/events/timestamps",
+        "value": 4111.08037
+      }
+    ],
+    "event_first_time": 2441.036415,
+    "event_last_time": 4111.08037,
+    "event_text": {
+      "attribute:comments": "no comments",
+      "attribute:description": " The events coorespond to the TTL markers for each trial. For the learning trials, the TTL markers \n            are the following: 55 = start of the experiment, 1 = stimulus ON, 2 = stimulus OFF, 3 = Question Screen Onset [\u201cIs this an animal?\u201d], \n            20 = Yes (21 = NO) during learning, 6 = End of Delay after Response, 66 = End of Experiment. For the recognition trials, \n            the TTL markers are the following: 55 = start of experiment, 1 = stimulus ON, 2 = stimulus OFF, 3 = Question Screen Onset [\u201cHave you seen this image before?\u201d], \n            31:36 = Confidence (Yes vs. No) response [31 (new, confident), 32 (new, probably), 33 (new, guess), 34 (old, guess), \n            35 (old, probably), 36 (old, confident)], 66 = End of Experiment"
+    },
+    "event_timestamp_attributes": {
+      "unit": "seconds"
+    },
+    "event_timestamp_shape": [
+      1002
+    ],
+    "first_TTL": "1.0",
+    "nwb_version": "2.1.0",
+    "raw_streams": [],
+    "root": {
+      "session_description": "New/Old recognition task for ID: 99. ",
+      "session_start_time": "2014-12-01T00:00:00-08:00",
+      "timestamps_reference_time": "2014-12-01T00:00:00-08:00"
+    }
+  },
+  "path": "sub-P48HMH/sub-P48HMH_ses-20141201_ecephys+image.nwb",
+  "patient": "sub-P48HMH",
+  "published_sha256": "23b2f7399cc448a33700428d96402e59b3ad9cbbd16b330edd9bd337094f8274",
+  "range_receipts": [
+    {
+      "sha256": "e05e64d3c0df518f8c14db0c4def1c9a293c9db90d65668c2c4b0f87628f9aaf",
+      "start": 0,
+      "stop": 65535
+    },
+    {
+      "sha256": "21b83dea9e41daa6c1e6abb10c1071d4268b21446dd1cd749732d1dadefcf6b8",
+      "start": 72089600,
+      "stop": 72155135
+    },
+    {
+      "sha256": "1d2b20ccffcf8d6b9a29797ae0aa6b83c15eb0e5572a1735a6f378baa7516bf9",
+      "start": 73269248,
+      "stop": 73331255
+    },
+    {
+      "sha256": "b0d1515f17e8f94f055c067620581fbfb65c58f1118c99b3f0e934744c08fded",
+      "start": 72155136,
+      "stop": 72220671
+    }
+  ],
+  "raw_streams_present": false,
+  "reason": "No independent complete raw-recording boundary/common-clock/continuity witness; event1/99is not recordingstart",
+  "size": 73331256,
+  "verdict": "INCONCLUSIVE"
+}

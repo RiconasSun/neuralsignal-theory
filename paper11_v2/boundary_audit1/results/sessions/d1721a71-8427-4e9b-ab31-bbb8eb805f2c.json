@@ -1,0 +1,98 @@
+{
+  "all_scored_epochs_contained": true,
+  "asset_id": "d1721a71-8427-4e9b-ab31-bbb8eb805f2c",
+  "documented_support_only": true,
+  "fetched_bytes": 206368,
+  "metadata": {
+    "acquisition_groups": [
+      {
+        "name": "events",
+        "neurodata_type": "AnnotationSeries"
+      },
+      {
+        "name": "experiment_ids",
+        "neurodata_type": "TimeSeries"
+      }
+    ],
+    "decode_ledger": [
+      {
+        "index": "scalar",
+        "path": "session_description",
+        "value": "New/Old recognition task for ID: 32. "
+      },
+      {
+        "index": "scalar",
+        "path": "session_start_time",
+        "value": "2008-05-01T00:00:00-07:00"
+      },
+      {
+        "index": "scalar",
+        "path": "timestamps_reference_time",
+        "value": "2008-05-01T00:00:00-07:00"
+      },
+      {
+        "index": 0,
+        "path": "acquisition/events/data",
+        "value": "55.0"
+      },
+      {
+        "index": 0,
+        "path": "acquisition/events/timestamps",
+        "value": 4286.133405
+      },
+      {
+        "index": -1,
+        "path": "acquisition/events/timestamps",
+        "value": 5924.254427
+      }
+    ],
+    "event_first_time": 4286.133405,
+    "event_last_time": 5924.254427,
+    "event_text": {
+      "attribute:comments": "no comments",
+      "attribute:description": " The events coorespond to the TTL markers for each trial. For the learning trials, the TTL markers \n            are the following: 55 = start of the experiment, 1 = stimulus ON, 2 = stimulus OFF, 3 = Question Screen Onset [\u201cIs this an animal?\u201d], \n            20 = Yes (21 = NO) during learning, 6 = End of Delay after Response, 66 = End of Experiment. For the recognition trials, \n            the TTL markers are the following: 55 = start of experiment, 1 = stimulus ON, 2 = stimulus OFF, 3 = Question Screen Onset [\u201cHave you seen this image before?\u201d], \n            31:36 = Confidence (Yes vs. No) response [31 (new, confident), 32 (new, probably), 33 (new, guess), 34 (old, guess), \n            35 (old, probably), 36 (old, confident)], 66 = End of Experiment"
+    },
+    "event_timestamp_attributes": {
+      "unit": "seconds"
+    },
+    "event_timestamp_shape": [
+      1004
+    ],
+    "first_TTL": "55.0",
+    "nwb_version": "2.1.0",
+    "raw_streams": [],
+    "root": {
+      "session_description": "New/Old recognition task for ID: 32. ",
+      "session_start_time": "2008-05-01T00:00:00-07:00",
+      "timestamps_reference_time": "2008-05-01T00:00:00-07:00"
+    }
+  },
+  "path": "sub-P17HMH/sub-P17HMH_ses-20080501_ecephys+image.nwb",
+  "patient": "sub-P17HMH",
+  "published_sha256": "25b4be1538366a1423d17952eecfb33889d0f5add8a9d7a74ca824bf06b7dc17",
+  "range_receipts": [
+    {
+      "sha256": "5b6e27b5bb9380dfc357f25bc7e2359c83cd6f33966982fe728bababe4a23c59",
+      "start": 0,
+      "stop": 65535
+    },
+    {
+      "sha256": "a777ddfa800eed120b11ed8127320b845348e2ebc3011eceec90243ccadb0561",
+      "start": 72089600,
+      "stop": 72155135
+    },
+    {
+      "sha256": "cbe0b7cfac89f146d2b98b6f04751dea9e3e5a2f74a6c38ed220fb6a8e2d9efe",
+      "start": 73138176,
+      "stop": 73147935
+    },
+    {
+      "sha256": "b49b93cfb39a2a2dc50566c425c1ab5a7ca7cdb227c5c455dfad1d50e3a8abea",
+      "start": 72155136,
+      "stop": 72220671
+    }
+  ],
+  "reason": "Source-backed original55/66experiment envelope; no raw dropout certificate",
+  "size": 73147936,
+  "verdict": "PASS"
+}
