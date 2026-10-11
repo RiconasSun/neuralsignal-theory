@@ -127,6 +127,22 @@ unchanged; amended diagnostics in results/M4_amendment1. Full84 tests passed.
 No dynamical-regime preference or neural-primitives conclusion follows.
 
 ## 4. Discussion
+### Controlled Numerical Feasibility (NUM3)
+Independent Gauss-Hermite32/48/64 and finite-domain Gauss-Legendre64/96/128
+integrals agreed on the first controlled d2 fixture, with empirical reference
+sensitivity9.436895781820573e-15 nats/unit-bin, not certified absolute error.
+A corrected guided filter using independently scrambled Sobol nets completed
+all16 prescribed replicates at8192,32768 and131072 particles. At131072,
+maximum raw per-bin discrepancy was0.0006401831552509396; the registered
+worst-replica-plus1.96SD-and-reference-sensitivity statistic was
+0.0011686586847694219, above0.001. The trial-mean statistic was
+0.00033673041189710744 but cannot replace the registered per-bin criterion.
+The controlled gate therefore failed. Remaining fixtures, real models/cohort
+and M5-M7 were not executed. These are algorithmic results, not hippocampal
+findings. Separate bias, variance, reference and integration limitations are
+reported in results/M4_amendment3/NUMERICAL_LIMITATIONS.md. This failure does
+not establish that all numerical methods must fail the0.001 requirement.
+
 The evidence supports reproducible training counts, explicit anatomical
 eligibility and train-fit/validation-select baseline execution, not a regime
 preference. Exact array metadata resolves missing-array uncertainty; it does not

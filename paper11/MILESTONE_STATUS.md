@@ -11,6 +11,7 @@ P11 - Hippocampal Dynamical Regime
 | M4 | FAIL | [gate](results/M4/gate_result.json), [QC](results/M4/QC_REPORT.md); integration accuracy not established |
 | M4-NUM-1 | FAIL | [amended gate](results/M4_amendment1/gate_result.json), [numerical audit](results/M4_amendment1/numerical_audit.json); original failure preserved |
 | M4-NUM-2 | FAIL | [proposal oracle gate](results/M4_amendment2/gate_result.json); no revised real-data evaluation activated |
+| M4-NUM-3 | FAIL | [controlled gate](results/M4_amendment3/gate_result.json), [numerical limitations](results/M4_amendment3/NUMERICAL_LIMITATIONS.md); remediation stopped |
 | M5 | NOT_STARTED | Requires preceding gate and separate execution |
 | M6 | NOT_STARTED | Requires preceding gate and separate execution |
 | M7 | NOT_STARTED | Requires preceding gate and separate execution |
@@ -70,3 +71,20 @@ under results/M4_amendment2/attempts/initial-collection. Corrected runner stops
 on the first failure; no budgets/seeds/thresholds changed. Five scientific gaps
 remain open. This is a controlled-fixture numerical limitation, not a new
 hippocampal PLDS finding. See REPRODUCE_M4_NUM2.md and separate QC_REPORT.md.
+
+## NUM3 Numerical Feasibility Stop
+Prospectively registered independent GH32/48/64 and GL64/96/128 oracles,
+scrambled-Sobol guided importance evaluation, budgets8192/32768/131072 and16
+fixed repetitions. Initial engineering interruption and lock preserved; r2
+corrected equivalent inverse-CDF memory usage and enforced final source identity,
+without any numerical-policy change. First mandatory original K1/D2 fixture:
+oracle sensitivity9.436895781820573e-15 (not certified absolute error);
+final worst-bin acceptance statistic0.0011686586847694219 >0.001.
+Raw maximum bin error0.0006401831552509396; trial statistic0.00033673041189710744.
+The additional registered per-bin uncertainty criterion failed, not the trial-mean
+statistic. No substitution of a favorable endpoint after failure.14/14 focused,
+111/111 full regression and6/6 saved-artifact tests PASS. Numerical PowerShell
+and saved audit exit1 at the preserved FAIL. No later fixture, real neural
+evaluation, full M4 competition or M5-M7. Final holdout remains locked.
+Five scientific warnings OPEN. M4 remains INCONCLUSIVE; this does not prove
+0.001 infeasible for every numerical method. See REPRODUCE_M4_NUM3_AUDIT.md.
