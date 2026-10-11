@@ -4,18 +4,16 @@ P11 - Hippocampal Dynamical Regime
 
 | Milestone | Status | Evidence |
 | --- | --- | --- |
-| M0 | PASS | [gate](results/M0/gate_result.json), [QC](results/M0/qc_report.json), [tests](results/M0/tests.txt) |
-| M1 | NOT_STARTED | Requires preceding gate; not executed |
-| M2 | NOT_STARTED | Requires preceding gate; not executed |
-| M3 | NOT_STARTED | Requires preceding gate; not executed |
-| M4 | NOT_STARTED | Requires preceding gate; not executed |
-| M5 | NOT_STARTED | Requires preceding gate; not executed |
-| M6 | NOT_STARTED | Requires preceding gate; not executed |
-| M7 | NOT_STARTED | Requires preceding gate; not executed |
+| M0 | PASS | [frozen gate](results/M0/gate_result.json), unchanged |
+| M1 | PASS | [gate](results/M1/gate_result.json), [QC](results/M1/qc_report.json), [tests](results/M1/tests.txt) |
+| M2 | NOT_STARTED | Requires preceding gate and separate execution |
+| M3 | NOT_STARTED | Requires preceding gate and separate execution |
+| M4 | NOT_STARTED | Requires preceding gate and separate execution |
+| M5 | NOT_STARTED | Requires preceding gate and separate execution |
+| M6 | NOT_STARTED | Requires preceding gate and separate execution |
+| M7 | NOT_STARTED | Requires preceding gate and separate execution |
 
-Scientific verdict: NOT_EVALUATED (not a final scientific verdict).
-Eligible hippocampal coverage: NOT_ASSESSED; M1 required.
-No spikes, features, models or heldout outcomes were analyzed in M0.
-Stop after M0. A separate authorized execution is required for M1.
-
-See [reproduction](REPRODUCE_M0.md).
+Eligible subjects: 9; no model comparison performed.
+Scientific verdict: NOT_EVALUATED
+M0 protocol and frozen holdouts unchanged. Stop after M1.
+See [reproduction](REPRODUCE_M1.md).

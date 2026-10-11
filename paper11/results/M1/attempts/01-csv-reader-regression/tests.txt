@@ -1,0 +1,37 @@
+test_artifact_trial_excluded_before_split (test_m1.M1Tests.test_artifact_trial_excluded_before_split) ... ok
+test_count_epoch_half_open_and_nonfinite_training_flag (test_m1.M1Tests.test_count_epoch_half_open_and_nonfinite_training_flag) ... ok
+test_duplicate_trial_and_phase_fail (test_m1.M1Tests.test_duplicate_trial_and_phase_fail) ... ok
+test_each_companion_field_mismatch_rejected (test_m1.M1Tests.test_each_companion_field_mismatch_rejected) ... ok
+test_explicit_hippocampus_and_hemisphere (test_m1.M1Tests.test_explicit_hippocampus_and_hemisphere) ... ok
+test_frozen_population_and_subject_thresholds (test_m1.M1Tests.test_frozen_population_and_subject_thresholds) ... ok
+test_git_blob_checksum_is_content_bound (test_m1.M1Tests.test_git_blob_checksum_is_content_bound) ... ok
+test_missing_companion_is_labelled_unpaired (test_m1.M1Tests.test_missing_companion_is_labelled_unpaired) ... ok
+test_mixed_anatomy_is_ambiguous (test_m1.M1Tests.test_mixed_anatomy_is_ambiguous) ... ok
+test_other_mtl_never_promoted_to_hippocampus (test_m1.M1Tests.test_other_mtl_never_promoted_to_hippocampus) ... ok
+test_raw_experimental_files_not_in_git (test_m1.M1Tests.test_raw_experimental_files_not_in_git) ... ok
+test_real_acquisition_receipts_and_no_iEEG_signal (test_m1.M1Tests.test_real_acquisition_receipts_and_no_iEEG_signal) ... ok
+test_real_preceding_gate_and_frozen_protocol (test_m1.M1Tests.test_real_preceding_gate_and_frozen_protocol) ... ok
+test_real_primary_units_require_eligible_population_session (test_m1.M1Tests.test_real_primary_units_require_eligible_population_session) ... ERROR
+test_real_splits_and_metadata_integrity (test_m1.M1Tests.test_real_splits_and_metadata_integrity) ... ok
+test_session_identity_is_not_neuron_identity (test_m1.M1Tests.test_session_identity_is_not_neuron_identity) ... ok
+test_spike_qc_ignores_heldout_timestamp_and_unit_values (test_m1.M1Tests.test_spike_qc_ignores_heldout_timestamp_and_unit_values) ... ok
+test_split_lock_never_overwrites_or_reassigns (test_m1.M1Tests.test_split_lock_never_overwrites_or_reassigns) ... ok
+test_trial_alignment_and_incorrect_trial_retained (test_m1.M1Tests.test_trial_alignment_and_incorrect_trial_retained) ... ok
+test_trial_epoch_must_cover_frozen_preprobe_window (test_m1.M1Tests.test_trial_epoch_must_cover_frozen_preprobe_window) ... ok
+
+======================================================================
+ERROR: test_real_primary_units_require_eligible_population_session (test_m1.M1Tests.test_real_primary_units_require_eligible_population_session)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper11\tests\test_m1.py", line 138, in test_real_primary_units_require_eligible_population_session
+    sessions = {r["subject"] + "/" + r["session"]: r for r in m.rows(m.RESULTS / "session_qc.csv")}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper11\tests\test_m1.py", line 138, in <dictcomp>
+    sessions = {r["subject"] + "/" + r["session"]: r for r in m.rows(m.RESULTS / "session_qc.csv")}
+                ~^^^^^^^^^^^
+KeyError: 'subject'
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.620s
+
+FAILED (errors=1)
