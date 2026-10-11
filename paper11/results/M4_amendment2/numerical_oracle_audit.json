@@ -1,0 +1,43 @@
+{
+  "errors": [
+    "Controlled sequence numerical oracle FAIL: K1/seed1103"
+  ],
+  "finished_at_utc": "2026-10-11T15:23:05.363788+00:00",
+  "fixtures_not_experimental_findings": true,
+  "gate": "FAIL",
+  "proposal_sha256": "c5280e72a794997f30139c8674ec7091d6ab53d4fc5a4f69f65714168b4b9855",
+  "real_neural_data_access": false,
+  "rows": [
+    {
+      "diagnostics": {
+        "laplace_gradient_max": 1.5969611744104384e-09,
+        "laplace_nonconverged_guides": 0,
+        "latent_proposal": "90% shared state Laplace guide +10% ancestor-specific transition prior; full mixture density correction",
+        "maximum_particle_weight": 0.000931172224905701,
+        "mean_ess_fraction": 0.8880933107731019,
+        "minimum_ess_fraction": 0.8296796225990829,
+        "overflow_rates": 0,
+        "roundoff_resampling_boundary_count": 0,
+        "state_proposal": "original prior; state log correction evaluated explicitly"
+      },
+      "fixture": "controlled_K1_D2",
+      "maximum_error_nats_unit_bin": 0.001736609669442446,
+      "oracle_budget_shift_nats_unit_bin": 2.220446049250313e-16,
+      "oracle_scores": [
+        -5.009704525419002,
+        -5.177278626817237,
+        -3.461400961929091
+      ],
+      "particle_scores": [
+        -5.008823255786959,
+        -5.184225065495006,
+        -3.455315242091653
+      ],
+      "particles": 8192,
+      "seed": 1103
+    }
+  ],
+  "source_sha256": "a69ce5d920fbb92cc5ffd70b9576065db987adb0bf7f7891117aaa09b0c09642",
+  "tests_exit_code": 0,
+  "tests_sha256": "6b92a4d0cfdf2b9defec71a853bc681604912dd12b43cde43a944cfc7d5ab878"
+}

@@ -10,6 +10,7 @@ P11 - Hippocampal Dynamical Regime
 | M3 | PASS | [gate](results/M3/gate_result.json), [QC](results/M3/QC_REPORT.md), 483 candidates |
 | M4 | FAIL | [gate](results/M4/gate_result.json), [QC](results/M4/QC_REPORT.md); integration accuracy not established |
 | M4-NUM-1 | FAIL | [amended gate](results/M4_amendment1/gate_result.json), [numerical audit](results/M4_amendment1/numerical_audit.json); original failure preserved |
+| M4-NUM-2 | FAIL | [proposal oracle gate](results/M4_amendment2/gate_result.json); no revised real-data evaluation activated |
 | M5 | NOT_STARTED | Requires preceding gate and separate execution |
 | M6 | NOT_STARTED | Requires preceding gate and separate execution |
 | M7 | NOT_STARTED | Requires preceding gate and separate execution |
@@ -57,3 +58,15 @@ discrepancy0.0016818397769194165 >0.001, reference uncertainty0.0003261110384436
 Whole grid/cohort incomplete; d3/Hybrid/M5-M7 not executed after failed gate.
 Final holdout remains locked. See REPRODUCE_M4_AMENDMENT1.md and the separate
 results/M4_amendment1 directory; original scientific verdict remains INCONCLUSIVE.
+
+## NUM2 Proposal Oracle Stop
+Implemented observation-guided defensive Laplace importance proposal with exact
+ancestor-transition/mixture-q correction and explicit initial/state correction.
+13 formula/fail-fast tests pass. Controlled oracle gate FAIL at first fixed
+K1/D2 seed1103: maximum per-bin error0.001736609669442446 nats/unit-bin.
+No real NUM2 evaluation, registration activation or full cohort follows failure.
+Original pre-fail-fast collection (16 replicas,12 failures) and source preserved
+under results/M4_amendment2/attempts/initial-collection. Corrected runner stops
+on the first failure; no budgets/seeds/thresholds changed. Five scientific gaps
+remain open. This is a controlled-fixture numerical limitation, not a new
+hippocampal PLDS finding. See REPRODUCE_M4_NUM2.md and separate QC_REPORT.md.

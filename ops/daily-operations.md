@@ -1,12 +1,14 @@
 # Current Authorized Mission
 
-Mission: paper11-m4-remediation; amended gate failed, execution stopped
-Source: user controlled numerical-method amendment authorization.
+Mission: paper11-m4-num2; proposal-controlled oracle gate failed, execution stopped
+Source: user targeted guided-importance proposal authorization.
 State: M0-M3 PASS; M4 scientific gate FAIL; execution stopped, no final holdout access.
-Evidence: evidence/2026-10-10/paper11-m4-remediation/ and ../paper11/results/M4_amendment1/
+Evidence: evidence/2026-10-11/paper11-m4-num2/ and ../paper11/results/M4_amendment2/
 Target: origin/test at https://github.com/RiconasSun/neuralsignal-theory.git
 Latest request permits M5-M7 only after full amended M4 PASS; stop on failure.
 Do not enter M5. M4-NUM-1 failed d2 integration accuracy at8192 particles.
+M4-NUM-2 real registration/evaluation not activated: controlled oracle failed;
+original M4/NUM1 failures unchanged. No final holdout access.
 Earlier M2 access failure resolved with documented
 public annex objects and exact inventory; negative attempts retained.
 
