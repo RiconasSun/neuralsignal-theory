@@ -1,3 +1,25 @@
+# Current Alternative Cohort Audit
+
+Mission:P11-ALT-COHORT-AUDIT-1; separately authorized metadata-only OSFVH5KQ
+feasibility and conditional Figshare14905317next-candidate metadata assessment.
+State:WAIT_FOR_HUMAN_INPUT for genuinely new standalone metadata/authorization;
+current auditSTOP. Both scientific feasibility gatesINCONCLUSIVE.
+Uniform complete OSF snapshot:2,585files/14folders/46event session labels/
+15patient filename labels;3standaloneREADME providerSHA matches. Published
+Table1shows11patient potentials with some>=5hippo units, not11admitted patients.
+Descriptor16/table15denominator unresolved. No native header/gap/clock witness,
+exact unit dictionary or validtrialcoverage. All difficult candidates retained.
+Figsharev1CCBY4public1mixedZIP12,256,930,819bytes inventory only; no archive
+opened, independentphysiologicaleligibility unknown.25testsPASS; actual complete
+WindowsPowerShell replay exit0; initial script-policy failure preserved separately.
+10437priortrackedfileshash-verified; all oldfailures/splits/locksunchanged.
+Baseline6/10VERIFIED;4required evidence conditions remain unverified;warn_count7.
+No spikes/outcomes, models/finalvalidation, replacement split/admission orR3.
+Evidence:../paper11_v2/alt_cohort_audit1/ and
+evidence/2026-10-11/p11-alt-cohort-audit-1/.
+Stop; author metadata contact or broader archive-directory/header access needs
+separate prospective authorization. Do not reclassify originalR2orDANDIfailure.
+
 # Current Boundary Audit Mission
 
 Mission:P11-v2-R2-BOUNDARY-AUDIT-1, explicitly authorized metadata-only audit.
