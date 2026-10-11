@@ -1,0 +1,31 @@
+R1-CODE-1 and all original failed artifacts verified.
+{"exception": "ValueError", "message": "late verification failure", "rows": [{"family": "fixture"}], "synthetic_only": true, "holdouts_locked": true}
+Preserved fatal execution failure; cannot replay as PASS.
+{"exception": "ValueError", "message": "post-gate finalization failure", "rows": [], "synthetic_only": true, "holdouts_locked": true}
+Preserved fatal execution failure; cannot replay as PASS.
+{"exception": "ValueError", "message": "fixture constructor failed", "rows": [{"family": "fixture", "converged": true}], "synthetic_only": true, "holdouts_locked": true}
+Preserved fatal execution failure; cannot replay as PASS.
+{"saved_only": true, "gate_verdict": "PASS", "scientific_verdict": "NOT_EVALUATED", "holdouts_locked": true}
+test_batch_permutation_and_single_trial_identical (test_r1_code1.DeterminismTests.test_batch_permutation_and_single_trial_identical) ... ok
+test_controlled_glm_optimizer (test_r1_models.ModelTests.test_controlled_glm_optimizer) ... ok
+test_history_and_design_independent_indexing (test_r1_models.ModelTests.test_history_and_design_independent_indexing) ... ok
+test_independent_numerical_audit (test_r1_models.ModelTests.test_independent_numerical_audit) ... ok
+test_no_clipping_and_invalid_inputs (test_r1_models.ModelTests.test_no_clipping_and_invalid_inputs) ... ok
+test_numerical_failure_is_retained (test_r1_models.ModelTests.test_numerical_failure_is_retained) ... ok
+test_parameter_accounting_and_gauge (test_r1_models.ModelTests.test_parameter_accounting_and_gauge) ... ok
+test_recurrent_zero_readout_reduction (test_r1_models.ModelTests.test_recurrent_zero_readout_reduction) ... ok
+test_seed_reproducibility_and_objective_normalization (test_r1_models.ModelTests.test_seed_reproducibility_and_objective_normalization) ... ok
+test_state_reductions (test_r1_models.ModelTests.test_state_reductions) ... ok
+test_stationary_exact_mle_and_zero_rate (test_r1_models.ModelTests.test_stationary_exact_mle_and_zero_rate) ... ok
+test_archive_hashes_come_from_original_registration_and_are_verified (test_r1_runner.RunnerTests.test_archive_hashes_come_from_original_registration_and_are_verified) ... ok
+test_changed_preceding_output_refused_before_registration (test_r1_runner.RunnerTests.test_changed_preceding_output_refused_before_registration) ... ok
+test_existing_diagnostics_survive_late_failure_with_terminal_evidence (test_r1_runner.RunnerTests.test_existing_diagnostics_survive_late_failure_with_terminal_evidence) ... ok
+test_fatal_after_saved_pass_cannot_replay_as_success (test_r1_runner.RunnerTests.test_fatal_after_saved_pass_cannot_replay_as_success) ... ok
+test_fatal_exception_preserves_progress_and_failed_replay (test_r1_runner.RunnerTests.test_fatal_exception_preserves_progress_and_failed_replay) ... ok
+test_missing_or_corrupt_locked_artifact_never_falls_back_to_execution (test_r1_runner.RunnerTests.test_missing_or_corrupt_locked_artifact_never_falls_back_to_execution) ... ok
+test_started_namespace_refused_without_execution_or_overwrite (test_r1_runner.RunnerTests.test_started_namespace_refused_without_execution_or_overwrite) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 1.033s
+
+OK

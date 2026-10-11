@@ -1,5 +1,41 @@
 # Current Authorized Mission
 
+Mission: paper11-v2-r1, following authorized controlled R0-TRIAL-1 amendment.
+State: PASS for scoped R0/R1 implementation, verification and review;
+publication handled by final exact-file closure. R0 admission PASS:
+9patients23sessions592session-local units622train201development trials.
+Minimum32usable/train24/dev8 user-authorized before QC; original >=40 failure
+remains immutable DATA_INSUFFICIENT.33R0 tests PASS; actual code1 PowerShell0.
+Evidence: ../paper11_v2/results/R0_amendment1_code1/ and
+evidence/2026-10-11/paper11-v2-r0-amend1/.
+R1-CODE-1 PASS after independent mathematical/evidence review; original R1
+failure preserved.51unique tests,220oracle cases,54causal checks,
+169/169controlled fits; actual PowerShell reproduction0. Evidence:
+../paper11_v2/results/R1_code1/ and evidence/2026-10-11/paper11-v2-r1/.
+Completed scope: R1 tractable model/oracle correctness only; no cohort fitting,
+oldtest, external spike access or scientific winner. R2/R3 not executed.
+Target origin/test only; clean reviewed scoped package ready for exact-file
+commit/push. Next scientific phase is R2, not yet executed or claimed PASS.
+
+## Historical Original R0 Stop (Preserved)
+
+Mission: paper11-v2-r0; separately registered scientific recovery study.
+Source: user P11-v2 R0-R3 directive; verified gates only, stop on inadequacy.
+State: WAIT_FOR_HUMAN_INPUT. Combined R0 FAIL / DATA_INSUFFICIENT:
+minimum40usable train+validation trials/session and8development patients;
+after old final-test exclusion, at most2patients meet the trial threshold.
+External metadata subgate PASS is not combined R0 PASS:87files,36candidate
+patients,52sessions,712hippocampal labeled units; no neural values decoded.
+20R0 tests PASS; one-command PowerShell correctly reproduces stop exit2.
+Evidence: ../paper11_v2/results/R0_final/ and evidence/2026-10-11/paper11-v2-r0/.
+Next: human decides retain threshold/stop or separately authorize prospective
+v2 eligibility amendment before any new neural/model access. No R1-R3 started.
+Do not modify any P11-v1/P1-P10 evidence or reclassify prior numerical failures.
+Old primary test and entire external final data remain LOCKED.
+Target remains origin/test; no current mission commit/push or PR performed.
+
+## Archived P11-v1 Mission Status (Unchanged Below)
+
 Mission: paper11-m4-num3; controlled numerical feasibility FAIL, remediation stopped
 Source: user NUM3 feasibility authorization; STOP on mandatory numerical failure.
 State: M0-M3 PASS; M4 scientific gate FAIL; execution stopped, no final holdout access.

@@ -1,0 +1,13 @@
+{
+  "study": "P11-v2",
+  "amendment": "R0-TRIAL-1",
+  "authority": "User explicitly authorizes option2:32usable development trials/session, train>=24, development validation>=8; metadata-coverage-based, no further threshold reductions",
+  "reason": "Availability of previously exposed primary train/validation trial IDs, not any new predictive outcomes. Original40usable threshold failed and remains final in its own namespace.",
+  "development_eligibility_override": {"minimum_usable_trials_session": 32, "minimum_training_trials": 24, "minimum_validation_trials": 8},
+  "unchanged": {"minimum_independent_subjects": 8, "minimum_simultaneous_hippocampal_units": 5, "minimum_training_spikes_unit": 20, "epoch_seconds": [-6, 0], "bin_ms": 100, "primary_old_test_forbidden": true, "external_final_forbidden": true, "external60_40_split_unchanged": true},
+  "QC": "Exact source-bound anatomy, resolved hemisphere, finite coordinates, consistent companion mapping where present, correct unit/microwire/trial NIX arrays, numeric finite training timestamps in published[-6,2]s trial window. Train-only>=20spikes in[-6,0), then frozen unit mask; development validation used for integrity/count verification only, never unit selection. Reconstructed training counts must equal archived M2 counts for common units. Decode only frozen train/validation array values; never other regions, oldtest, external spikes or waveforms.",
+  "observation_boundary": "Fresh allowed unit/trial NIX array existence/schema verifies observed trial arrays, including empty arrays, under published8second trial convention. Not independent per-bin acquisition dropout certification. Unknown SU/MU upstream retained.",
+  "candidate_scope": "Re-audit all23checksum-bound previously admitted hippocampal sessions. Other frozen sessions retain recorded anatomy/unit/trial exclusions, not admitted on unverified old flags. No new session may be claimed without its source QC.",
+  "sensitivity": {"trial_minima_report_only": [32, 36, 40], "unit_minima_report_only": [5, 10, 20], "leave_one_subject_out_report": true, "sign_flip_resolution_subject_counts": [6, 7, 8, 9], "predictive_sensitivity": "Not computed in R0; predefined eligible sample counts and theoretical exact sign-flip resolution only. Model effect/power sensitivity requires later development study; do not treat neurons/trials as subjects."},
+  "STOP": "Fewer than8actual QC-admitted independent subjects =>DATA_INSUFFICIENT; no further automatic lowering, no R1. Any source integrity or leakage failure stops admission. R0 PASS is cohort/protocol admission, not a model-family finding. R1 automatically only after all conditions and tests PASS."
+}

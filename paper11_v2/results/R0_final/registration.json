@@ -1,0 +1,16 @@
+{
+  "before_model_or_spike_access": true,
+  "criterion": "At least8 development patients, each with one eligible session with at least40 usable train+validation trials. Old forbidden test cannot supply trial coverage for the v2 study. Unit/rate QC can only reduce this upper bound.",
+  "denominator_limit": "Original protocol did not explicitly distinguish total recorded vs usable trials. Conservatively apply usable trials; do not reinterpret to pass. A change requires a prospective human-approved amendment before model/count access.",
+  "input_sha256": {
+    "paper11_v2/scripts/preflight_r0.py": "dd69a4be3f8210daf244ff16e3b7eda2e56a721400b19ea9bfd7c1b435d0671e",
+    "paper11_v2/scripts/reproduce.ps1": "a40bd48b53ac11aff181b89fff6b1f24a3559aad79226faff55b86e1975f8001",
+    "paper11_v2/tests/test_r0_preflight.py": "cf35e6c11ac7244c4a60f36fce73469c374630dc62f4d60be043e0224043c6d2"
+  },
+  "milestone": "R0",
+  "prior_metadata_exposure": "Primary split lengths already inspected. No new model/count outcome access. This audit applies existing registered minimums rather than optimizing an eligibility threshold.",
+  "purpose": "Evaluate all R0 conditions, not only external candidate coverage",
+  "registered_utc": "2026-10-11T17:55:17.632381+00:00",
+  "source_support": "Descriptor https://www.nature.com/articles/s41597-020-0415-9 describes continuously acquired recordings and stable isolated units during the task. Eligible external1s windows fall within >=2.502144s stimulus presentations. No unit obs_intervals in any87 NWB files; no dropout-mask verification claimed. R2 must resolve source-supported observation coverage before any counts and must never infer it from first/last spikes.",
+  "study": "P11-v2"
+}

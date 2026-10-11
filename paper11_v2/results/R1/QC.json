@@ -1,0 +1,31 @@
+{
+  "R2_executed": false,
+  "controlled_runs": 0,
+  "external_spikes_accessed": false,
+  "failures": [
+    "Automated model correctness tests failed",
+    "Independent numerical audit: AssertionError: \nArrays are not equal\n\nMismatched elements: 1 / 6 (16.7%)\nMismatch at index:\n [0, 1, 0]: -0.001935502574413721 (ACTUAL), -0.0019355025744137219 (DESIRED)\nMax absolute difference among violations: 8.67361738e-19\nMax relative difference among violations: 4.48132567e-16\n ACTUAL: array([[[-0.049037, -0.234774],\n        [-0.001936, -0.203055],\n        [ 0.152379, -0.033265]]])\n DESIRED: array([[[-0.049037, -0.234774],\n        [-0.001936, -0.203055],\n        [ 0.152379, -0.033265]]])"
+  ],
+  "final_holdout_locked": true,
+  "gate_verdict": "FAIL",
+  "milestone": "R1",
+  "numpy": "2.4.6",
+  "oldtest_accessed": false,
+  "oracle": {},
+  "real_cohort_fitted": false,
+  "scientific_verdict": "NOT_EVALUATED",
+  "scipy": "1.17.1",
+  "source_sha256": {
+    "paper11_v2/protocol/protocol.json": "423351b2e7907e7b4b71f59eca8183fd23cb86eb4548113e8fec551c28e5030a",
+    "paper11_v2/protocol/r0_amendment1.json": "1d5e5f7df96c4d220ce4ba75a890cfbbd7fa3b53c805edf304a5dc9aba2e646d",
+    "paper11_v2/protocol/r1_implementation.json": "aa07162d4c6cbd1e67f4d829ae0240db460b50f621a08475edad96a45475b342",
+    "paper11_v2/requirements.txt": "16ed4af66434a3cafc9a022247b947f18e0424e8230fe0c67e9c498297ea654f",
+    "paper11_v2/scripts/predictive_models.py": "0dbaeb67b54e6a198e2f08464cbb52bb68f8d04488b9582559dd67ac03c82aca",
+    "paper11_v2/scripts/reproduce-r1.ps1": "72cd2b16f8170c16ac8d320d18ee13debd2550b96ab5c368256572fdf45ae013",
+    "paper11_v2/scripts/run_r1.py": "603948165ed9ca21ff7d32a79c7856e595da521aa99057ea9cf91170b7a9594e",
+    "paper11_v2/tests/test_r1_models.py": "7e953f2e7ade256617d379fcb0b3906e552bcd4bc938c3f5b7904fb5a49bb259",
+    "paper11_v2/tests/test_r1_runner.py": "1ab3802998aa04112e0604bd9282c1bc8ef2d40cbd12a47f165c63925265c04b"
+  },
+  "study": "P11-v2",
+  "tests_exit_code": 1
+}

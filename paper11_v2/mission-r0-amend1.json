@@ -1,0 +1,10 @@
+{
+  "mission": {"id": "paper11-v2-r0-amend1", "objective": "Implement the explicitly authorized metadata-based32usable-trial R0 amendment, fresh real hippocampal train/dev QC, no holdout access, immutable failures and reproducible fail-closed admission gate."},
+  "target": {"workdir": "C:/Users/85993/Desktop/codebase/neuralsignal institute/paper11_v2", "files": ["scripts/run_r0_amend1.py", "tests/test_r0_amend1.py", "scripts/reproduce-r0-amend1.ps1", "REPRODUCE_R0_AMEND1.md"]},
+  "instructions": {"constraints": ["Do not change any existing frozen source or result file", "Do not decode oldtest or any DANDI spike array", "Register new amendment before real QC", "Only new namespace files listed may be generated", "At least8actual qualifying subjects or STOP, no further threshold changes"]},
+  "acceptance": {"criteria": ["Actual hipp-only train QC, dev integrity, >=8subjects, sensitivity table, automated tests, PowerShell reproduction", "No v1 reclassification or physical-regime claim"]},
+  "codex": {"sandbox": "workspace-write", "approval": "never"},
+  "openrouter": {"enabled": false},
+  "policy": {"write": {"allow": ["scripts/run_r0_amend1.py", "tests/test_r0_amend1.py", "scripts/reproduce-r0-amend1.ps1", "REPRODUCE_R0_AMEND1.md"], "maxFiles": 4, "maxBytes": 100000, "allowDelete": false}},
+  "metadata": {"user_authorized": true, "scope": "P11-v2 R0 controlled eligibility amendment only"}
+}

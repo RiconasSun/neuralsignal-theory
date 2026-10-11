@@ -1,0 +1,18 @@
+{
+  "study": "P11-v2",
+  "milestone": "R1",
+  "scope": "Tractable implementation and numerical correctness only, synthetic fixtures explicitly not experimental findings",
+  "prior_gate": "R0-TRIAL-1-CODE-1 PASS with independent review clearance",
+  "scientific_protocol_unchanged": "protocol.json and r0_amendment1.json immutable",
+  "counts": "integer nonnegative observed counts; log expected counts per100ms, exact log factorial; no intensity clipping",
+  "likelihood": "joint one-step population predictive log likelihood conditional on observed past, normalized by actual unit-bin count, trial resets",
+  "common_offset": "Combined own-history/context/drift Poisson GLM fitted on training only; fixed offset shared across every dynamical family",
+  "fixture": {"seed": 20261011, "trials": 4, "bins": 6, "units": 2, "context": "known elapsed-bin coordinate and bin0 onset pulse, no duplicate context intercept; trial positions fixed before simulation", "generator": "independent Poisson counts with exp(-0.3+0.1*elapsed_coordinate); controlled software fixture only"},
+  "grid": {"states": [2,4], "dimensions": [1,2,4], "hybrid_lags": [1,5], "ridge": [0.001,0.01,0.1,1.0], "seeds": [11,23,37]},
+  "optimization": {"method": "SciPy L-BFGS-B with analytical gradients", "maximum_iterations": 500, "ftol": 0.00001, "gtol": 0.00001, "coefficient_bounds": [-8,8], "normalization": "negative total training log likelihood divided by observed unit-bin count plus ridge times half squared coefficients", "failure": "retain every run; any mandatory fit nonconvergence/nonfinite/score error stops R1, never drop seeds or families", "purpose": "Validate optimizer implementation on controlled fixtures, not rank models"},
+  "parameter_accounting": "State prior/transition reference-logit gauge uses K-1 plus K*(K-1) free logits; emissions K*U plus hybrid K*U*L; recurrent d*d+d*U+d*X+U*d; GLM U*F; shared GLM parameters reported separately",
+  "verification": {"score_accuracy_nats_per_unit_bin": 1e-10, "gradient_relative_or_absolute_tolerance": 0.000001, "central_difference_step": 0.00001, "oracles": ["scalar math Poisson log PMF", "independent exhaustive hidden-state path enumeration", "prefix log probability differences", "independent scalar recurrent calculation", "analytical-gradient central finite differences", "K1/zero-AR/identical-emission reductions", "current/future count perturbation and trial-reset checks"], "failure": "Any required numerical check fails, preserve all evidence and stop"},
+  "comparison_policy": "All seeds, configurations and ridges retained. Equal observed units/bins, identical shared training-only offset, full free parameter counts and same optimization budget; one-SE/complexity frontier selection reserved for exposed development R2, never fixture winners or external retuning",
+  "access": {"real_cohort_fit": false, "primary_oldtest": false, "external_calibration_spikes": false, "external_final": false, "split_changes": false},
+  "reproduction": "Register source hashes and preceding artifact hashes before tests/fits; preserve immutable run evidence and verify saved-output replay before any fresh fixture run"
+}

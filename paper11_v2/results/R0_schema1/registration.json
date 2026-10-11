@@ -1,0 +1,31 @@
+{
+  "amendment": "R0-SCHEMA-1",
+  "checksums": {
+    "paper11_v2/scripts/reproduce-r0-schema.ps1": "299541066db3af859e7491612d1cba0c68ae582e72e9e90ae98efd2bebc6ec30",
+    "paper11_v2/scripts/run_r0_schema.py": "a16853fc98cd5c9e0c86fec964a106930b0bf299e8156d58faae48754bad10d7",
+    "paper11_v2/tests/test_r0_schema.py": "99dab2cffdbfba90af8d03a988498ee0a1ccb5e136e1aa95f2cd3c6b495ac3cf"
+  },
+  "exposure_read_correction": "Initial broad text scan already executed; archive outcome access cannot be undone. Audit it explicitly, treat primary development as exposed. Original gate receipts report no final spike/count access. Revised audits use exact provenance paths only; no outcome JSON or prediction summaries decoded. External physiological/final outputs were not present or read.",
+  "external_null_detail": "For each unit and trial separately circularly rotate counts by uniformly seeded nonzero integer offset modulo its bin count (1..T-1), retain every trial count and partition. For external T=10 use 5,6,7,8,9 bins, never10 or20 identity; primary T=60 use5..20 bins. Event timing null rotates covariate sequence separately within trial using same admissible shifts, not response/future event attributes. These define the 500-2000ms policy within bounded epochs before any neural outcome access.",
+  "observation_coverage_rule": "Before any physiological access in R2, require explicit unit obs_intervals or independently documented continuous recording support covering every frozen scored bin. Never use first/last spike as support. Unknown support cannot become zero counts; fail DATA_INSUFFICIENT and keep external locked. No final-bin pruning based on spikes or scores.",
+  "original_failure_retained": "results/R0/gate_result.json",
+  "original_registration_sha256": "9401aef20443a93d01db32f76a6d224166606232a6cb274ef6ccda20564bc5f4",
+  "patient_mapping": "Retain complete site-qualified P-number or TWH-number; strip only explicit repeated-session suffix _integer. Site-qualified IDs never merged across hospitals.",
+  "phase_mapping": {
+    "learn": "learning",
+    "learning": "learning",
+    "recog": "recognition",
+    "recognition": "recognition"
+  },
+  "reason": "Original parser expected recognition rather than actual recog, and rejected site-qualified sub-TWH identifiers. Metadata-only bugs, not physiological results.",
+  "registered_utc": "2026-10-11T17:50:48.917785+00:00",
+  "semantic_equivalence": "recog is recognition in the source experiment; sub-TWHxxx is Toronto site-qualified identity. No spike/outcome exposure, threshold or predictive protocol change.",
+  "source": "https://www.nature.com/articles/s41597-020-0415-9",
+  "study": "P11-v2",
+  "unchanged_minimum": {
+    "hippocampal_units": 5,
+    "recognition_trials": 40,
+    "subjects": 8
+  },
+  "unknown_phase_or_alias": "fail closed, not exclude as an unfavorable result"
+}

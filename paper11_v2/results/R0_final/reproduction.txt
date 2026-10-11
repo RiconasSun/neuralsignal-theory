@@ -1,0 +1,34 @@
+Combined R0 gate registered, unchanged thresholds and no model/count access.
+{
+  "study": "P11-v2",
+  "milestone": "R0",
+  "gate_verdict": "FAIL",
+  "scientific_verdict": "DATA_INSUFFICIENT",
+  "execution_exit_class": "WAIT_FOR_HUMAN_INPUT",
+  "reason": "Only2 development subjects can meet the registered40 usable trials/session; minimum8. External metadata adequacy cannot compensate.",
+  "development_candidate_upper_bound": 2,
+  "development_candidate_subjects": [
+    "sub-03",
+    "sub-06"
+  ],
+  "minimum_development_subjects": 8,
+  "minimum_usable_trials_per_session": 40,
+  "external_metadata_subgate": "PASS",
+  "external_candidate_subjects": 36,
+  "external_candidate_sessions": 52,
+  "tests_exit_code": 0,
+  "archived_v1_unchanged": true,
+  "new_neural_values_accessed": false,
+  "external_final_locked": true,
+  "old_final_test_locked": true,
+  "R1_R2_R3_executed": false,
+  "source_identity": {
+    "paper11_v2/scripts/preflight_r0.py": "dd69a4be3f8210daf244ff16e3b7eda2e56a721400b19ea9bfd7c1b435d0671e",
+    "paper11_v2/scripts/reproduce.ps1": "a40bd48b53ac11aff181b89fff6b1f24a3559aad79226faff55b86e1975f8001",
+    "paper11_v2/tests/test_r0_preflight.py": "cf35e6c11ac7244c4a60f36fce73469c374630dc62f4d60be043e0224043c6d2"
+  },
+  "artifact_lock_sha256": "8ea8df26c898c8171aa1ecd94024e0089789d61eb17ce6151bc03318208f0857",
+  "finished_utc": "2026-10-11T17:58:57.380257+00:00",
+  "next_action": "Human decision: retain registered40 usable-trial minimum and stop, or authorize a prospective eligibility amendment for this distinct v2 study. Never reclassify v1 gates or use old final test."
+}
+R0 DATA_INSUFFICIENT / WAIT_FOR_HUMAN_INPUT reproduced. R1-R3 and final holdouts remain locked.

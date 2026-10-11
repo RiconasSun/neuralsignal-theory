@@ -1,0 +1,389 @@
+test_controlled_glm_optimizer (test_r1_models.ModelTests.test_controlled_glm_optimizer) ... ok
+test_history_and_design_independent_indexing (test_r1_models.ModelTests.test_history_and_design_independent_indexing) ... ok
+test_independent_numerical_audit (test_r1_models.ModelTests.test_independent_numerical_audit) ... FAIL
+test_no_clipping_and_invalid_inputs (test_r1_models.ModelTests.test_no_clipping_and_invalid_inputs) ... ok
+test_numerical_failure_is_retained (test_r1_models.ModelTests.test_numerical_failure_is_retained) ... ok
+test_parameter_accounting_and_gauge (test_r1_models.ModelTests.test_parameter_accounting_and_gauge) ... ok
+test_recurrent_zero_readout_reduction (test_r1_models.ModelTests.test_recurrent_zero_readout_reduction) ... ok
+test_seed_reproducibility_and_objective_normalization (test_r1_models.ModelTests.test_seed_reproducibility_and_objective_normalization) ... ok
+test_state_reductions (test_r1_models.ModelTests.test_state_reductions) ... ok
+test_stationary_exact_mle_and_zero_rate (test_r1_models.ModelTests.test_stationary_exact_mle_and_zero_rate) ... ok
+test_archive_hashes_come_from_original_registration_and_are_verified (test_r1_runner.RunnerTests.test_archive_hashes_come_from_original_registration_and_are_verified) ... ERROR
+test_archive_hashes_come_from_original_registration_and_are_verified (test_r1_runner.RunnerTests.test_archive_hashes_come_from_original_registration_and_are_verified) ... ERROR
+test_changed_preceding_output_refused_before_registration (test_r1_runner.RunnerTests.test_changed_preceding_output_refused_before_registration) ... ERROR
+test_changed_preceding_output_refused_before_registration (test_r1_runner.RunnerTests.test_changed_preceding_output_refused_before_registration) ... ERROR
+test_existing_diagnostics_survive_late_failure_with_terminal_evidence (test_r1_runner.RunnerTests.test_existing_diagnostics_survive_late_failure_with_terminal_evidence) ... ERROR
+test_existing_diagnostics_survive_late_failure_with_terminal_evidence (test_r1_runner.RunnerTests.test_existing_diagnostics_survive_late_failure_with_terminal_evidence) ... ERROR
+test_fatal_after_saved_pass_cannot_replay_as_success (test_r1_runner.RunnerTests.test_fatal_after_saved_pass_cannot_replay_as_success) ... ERROR
+test_fatal_after_saved_pass_cannot_replay_as_success (test_r1_runner.RunnerTests.test_fatal_after_saved_pass_cannot_replay_as_success) ... ERROR
+test_fatal_exception_preserves_progress_and_failed_replay (test_r1_runner.RunnerTests.test_fatal_exception_preserves_progress_and_failed_replay) ... ERROR
+test_fatal_exception_preserves_progress_and_failed_replay (test_r1_runner.RunnerTests.test_fatal_exception_preserves_progress_and_failed_replay) ... ERROR
+test_missing_or_corrupt_locked_artifact_never_falls_back_to_execution (test_r1_runner.RunnerTests.test_missing_or_corrupt_locked_artifact_never_falls_back_to_execution) ... ERROR
+test_missing_or_corrupt_locked_artifact_never_falls_back_to_execution (test_r1_runner.RunnerTests.test_missing_or_corrupt_locked_artifact_never_falls_back_to_execution) ... ERROR
+test_started_namespace_refused_without_execution_or_overwrite (test_r1_runner.RunnerTests.test_started_namespace_refused_without_execution_or_overwrite) ... ERROR
+test_started_namespace_refused_without_execution_or_overwrite (test_r1_runner.RunnerTests.test_started_namespace_refused_without_execution_or_overwrite) ... ERROR
+
+======================================================================
+ERROR: test_archive_hashes_come_from_original_registration_and_are_verified (test_r1_runner.RunnerTests.test_archive_hashes_come_from_original_registration_and_are_verified)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{348ae8f9-2dae-4eed-a6cb-9e0c04322c10}\\AC\\Temp\\tmpkuyn9tj_\\results\\R1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper11_v2\tests\test_r1_runner.py", line 19, in setUp
+    self.out.mkdir(parents=True)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1120, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{348ae8f9-2dae-4eed-a6cb-9e0c04322c10}\\AC\\Temp\\tmpkuyn9tj_\\results'
+
+======================================================================
+ERROR: test_archive_hashes_come_from_original_registration_and_are_verified (test_r1_runner.RunnerTests.test_archive_hashes_come_from_original_registration_and_are_verified)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{348ae8f9-2dae-4eed-a6cb-9e0c04322c10}\\AC\\Temp\\tmpkuyn9tj_'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{348ae8f9-2dae-4eed-a6cb-9e0c04322c10}\\AC\\Temp\\tmpkuyn9tj_'
+
+======================================================================
+ERROR: test_changed_preceding_output_refused_before_registration (test_r1_runner.RunnerTests.test_changed_preceding_output_refused_before_registration)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{348ae8f9-2dae-4eed-a6cb-9e0c04322c10}\\AC\\Temp\\tmpdypgjs8w\\results\\R1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper11_v2\tests\test_r1_runner.py", line 19, in setUp
+    self.out.mkdir(parents=True)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1120, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{348ae8f9-2dae-4eed-a6cb-9e0c04322c10}\\AC\\Temp\\tmpdypgjs8w\\results'
+
+======================================================================
+ERROR: test_changed_preceding_output_refused_before_registration (test_r1_runner.RunnerTests.test_changed_preceding_output_refused_before_registration)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{348ae8f9-2dae-4eed-a6cb-9e0c04322c10}\\AC\\Temp\\tmpdypgjs8w'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{348ae8f9-2dae-4eed-a6cb-9e0c04322c10}\\AC\\Temp\\tmpdypgjs8w'
+
+======================================================================
+ERROR: test_existing_diagnostics_survive_late_failure_with_terminal_evidence (test_r1_runner.RunnerTests.test_existing_diagnostics_survive_late_failure_with_terminal_evidence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{348ae8f9-2dae-4eed-a6cb-9e0c04322c10}\\AC\\Temp\\tmpn_hcddsg\\results\\R1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper11_v2\tests\test_r1_runner.py", line 19, in setUp
+    self.out.mkdir(parents=True)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1120, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{348ae8f9-2dae-4eed-a6cb-9e0c04322c10}\\AC\\Temp\\tmpn_hcddsg\\results'
+
+======================================================================
+ERROR: test_existing_diagnostics_survive_late_failure_with_terminal_evidence (test_r1_runner.RunnerTests.test_existing_diagnostics_survive_late_failure_with_terminal_evidence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{348ae8f9-2dae-4eed-a6cb-9e0c04322c10}\\AC\\Temp\\tmpn_hcddsg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{348ae8f9-2dae-4eed-a6cb-9e0c04322c10}\\AC\\Temp\\tmpn_hcddsg'
+
+======================================================================
+ERROR: test_fatal_after_saved_pass_cannot_replay_as_success (test_r1_runner.RunnerTests.test_fatal_after_saved_pass_cannot_replay_as_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{348ae8f9-2dae-4eed-a6cb-9e0c04322c10}\\AC\\Temp\\tmpfdjilpad\\results\\R1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper11_v2\tests\test_r1_runner.py", line 19, in setUp
+    self.out.mkdir(parents=True)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1120, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{348ae8f9-2dae-4eed-a6cb-9e0c04322c10}\\AC\\Temp\\tmpfdjilpad\\results'
+
+======================================================================
+ERROR: test_fatal_after_saved_pass_cannot_replay_as_success (test_r1_runner.RunnerTests.test_fatal_after_saved_pass_cannot_replay_as_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{348ae8f9-2dae-4eed-a6cb-9e0c04322c10}\\AC\\Temp\\tmpfdjilpad'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{348ae8f9-2dae-4eed-a6cb-9e0c04322c10}\\AC\\Temp\\tmpfdjilpad'
+
+======================================================================
+ERROR: test_fatal_exception_preserves_progress_and_failed_replay (test_r1_runner.RunnerTests.test_fatal_exception_preserves_progress_and_failed_replay)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{348ae8f9-2dae-4eed-a6cb-9e0c04322c10}\\AC\\Temp\\tmpcxhvm202\\results\\R1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper11_v2\tests\test_r1_runner.py", line 19, in setUp
+    self.out.mkdir(parents=True)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1120, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{348ae8f9-2dae-4eed-a6cb-9e0c04322c10}\\AC\\Temp\\tmpcxhvm202\\results'
+
+======================================================================
+ERROR: test_fatal_exception_preserves_progress_and_failed_replay (test_r1_runner.RunnerTests.test_fatal_exception_preserves_progress_and_failed_replay)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{348ae8f9-2dae-4eed-a6cb-9e0c04322c10}\\AC\\Temp\\tmpcxhvm202'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{348ae8f9-2dae-4eed-a6cb-9e0c04322c10}\\AC\\Temp\\tmpcxhvm202'
+
+======================================================================
+ERROR: test_missing_or_corrupt_locked_artifact_never_falls_back_to_execution (test_r1_runner.RunnerTests.test_missing_or_corrupt_locked_artifact_never_falls_back_to_execution)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{348ae8f9-2dae-4eed-a6cb-9e0c04322c10}\\AC\\Temp\\tmpo284qu84\\results\\R1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper11_v2\tests\test_r1_runner.py", line 19, in setUp
+    self.out.mkdir(parents=True)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1120, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{348ae8f9-2dae-4eed-a6cb-9e0c04322c10}\\AC\\Temp\\tmpo284qu84\\results'
+
+======================================================================
+ERROR: test_missing_or_corrupt_locked_artifact_never_falls_back_to_execution (test_r1_runner.RunnerTests.test_missing_or_corrupt_locked_artifact_never_falls_back_to_execution)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{348ae8f9-2dae-4eed-a6cb-9e0c04322c10}\\AC\\Temp\\tmpo284qu84'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{348ae8f9-2dae-4eed-a6cb-9e0c04322c10}\\AC\\Temp\\tmpo284qu84'
+
+======================================================================
+ERROR: test_started_namespace_refused_without_execution_or_overwrite (test_r1_runner.RunnerTests.test_started_namespace_refused_without_execution_or_overwrite)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{348ae8f9-2dae-4eed-a6cb-9e0c04322c10}\\AC\\Temp\\tmput4ius11\\results\\R1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper11_v2\tests\test_r1_runner.py", line 19, in setUp
+    self.out.mkdir(parents=True)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1120, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{348ae8f9-2dae-4eed-a6cb-9e0c04322c10}\\AC\\Temp\\tmput4ius11\\results'
+
+======================================================================
+ERROR: test_started_namespace_refused_without_execution_or_overwrite (test_r1_runner.RunnerTests.test_started_namespace_refused_without_execution_or_overwrite)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{348ae8f9-2dae-4eed-a6cb-9e0c04322c10}\\AC\\Temp\\tmput4ius11'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{348ae8f9-2dae-4eed-a6cb-9e0c04322c10}\\AC\\Temp\\tmput4ius11'
+
+======================================================================
+FAIL: test_independent_numerical_audit (test_r1_models.ModelTests.test_independent_numerical_audit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper11_v2\tests\test_r1_models.py", line 251, in test_independent_numerical_audit
+    audit = numerical_audit()
+            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper11_v2\tests\test_r1_models.py", line 236, in numerical_audit
+    errors['causal_checks_tested'] = causal_checks()
+                                     ^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper11_v2\tests\test_r1_models.py", line 188, in causal_checks
+    np.testing.assert_array_equal(model.log_means(theta)[1:], separate.log_means(theta))
+  File "C:\Users\85993\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\numpy\testing\_private\utils.py", line 1121, in assert_array_equal
+    assert_array_compare(operator.__eq__, actual, desired, err_msg=err_msg,
+  File "C:\Users\85993\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\numpy\testing\_private\utils.py", line 983, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Arrays are not equal
+
+Mismatched elements: 1 / 6 (16.7%)
+Mismatch at index:
+ [0, 1, 0]: -0.001935502574413721 (ACTUAL), -0.0019355025744137219 (DESIRED)
+Max absolute difference among violations: 8.67361738e-19
+Max relative difference among violations: 4.48132567e-16
+ ACTUAL: array([[[-0.049037, -0.234774],
+        [-0.001936, -0.203055],
+        [ 0.152379, -0.033265]]])
+ DESIRED: array([[[-0.049037, -0.234774],
+        [-0.001936, -0.203055],
+        [ 0.152379, -0.033265]]])
+
+----------------------------------------------------------------------
+Ran 17 tests in 1.006s
+
+FAILED (failures=1, errors=14)
