@@ -30,3 +30,17 @@ Budgets 64/256 also failed. No full-cohort regime comparison or final holdout
 statistics exist. All 70 final regression tests passed; numerical FAIL remains.
 Continuation requires a documented prospective numerical-method amendment,
 not routine milestone approval or a relaxed criterion after seeing this outcome.
+
+## Latest M3/M4 Requested-Scope Audit
+
+Saved-output audit: [gate](results/M3_M4_scope_audit/gate_result.json),
+[tables and diagnostics](results/M3_M4_scope_audit/QC_REPORT.md).
+483 session/candidate rows; 189 subject/candidate rows (9 subjects x21 fixed
+candidates; equal session weight within subject). Forty corrected-run smoke
+seed fits, four exact HMM validation configurations. Continuous accuracy FAIL;
+hybrid not run, not silently excluded or counted as losing.
+Requested B0 matches constant Poisson; B1 matches rate/history. Existing task
+and timing are separate, so joint B2 is not executed under the frozen grid.
+Own-unit five-lag log1p-history ridge-Poisson fits can cover that specific B3
+definition, not cross-unit/raw-count AR. Scientific amendment decisions pending.
+Report reproduction does not upgrade any milestone gate. No M5-M7 execution.
