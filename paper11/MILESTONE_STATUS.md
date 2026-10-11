@@ -9,6 +9,7 @@ P11 - Hippocampal Dynamical Regime
 | M2 | PASS | [gate](results/M2/gate_result.json), [coverage audit](results/M2/coverage_audit.json), [QC](results/M2/QC_REPORT.md) |
 | M3 | PASS | [gate](results/M3/gate_result.json), [QC](results/M3/QC_REPORT.md), 483 candidates |
 | M4 | FAIL | [gate](results/M4/gate_result.json), [QC](results/M4/QC_REPORT.md); integration accuracy not established |
+| M4-NUM-1 | FAIL | [amended gate](results/M4_amendment1/gate_result.json), [numerical audit](results/M4_amendment1/numerical_audit.json); original failure preserved |
 | M5 | NOT_STARTED | Requires preceding gate and separate execution |
 | M6 | NOT_STARTED | Requires preceding gate and separate execution |
 | M7 | NOT_STARTED | Requires preceding gate and separate execution |
@@ -44,3 +45,15 @@ and timing are separate, so joint B2 is not executed under the frozen grid.
 Own-unit five-lag log1p-history ridge-Poisson fits can cover that specific B3
 definition, not cross-unit/raw-count AR. Scientific amendment decisions pending.
 Report reproduction does not upgrade any milestone gate. No M5-M7 execution.
+
+## Authorized Numerical Remediation
+M4-NUM-1 registered before revised evaluation; numerical threshold remains0.001.
+Candidate particles2048/4096/8192; eight repetitions; references16384/32768,
+eight repetitions. Original M0-M3 gates, splits and results/M4 unchanged.
+First continuous d1 diagnostic passed at4096, discrepancy0.0007312952775541941;
+this is partial numerical progress only. Continuous d2 failed at8192:
+discrepancy0.0016818397769194165 >0.001, reference uncertainty0.0003261110384436511.
+48 smoke seed fits converged (40 reused with checksum checks,8 freshly trained).
+Whole grid/cohort incomplete; d3/Hybrid/M5-M7 not executed after failed gate.
+Final holdout remains locked. See REPRODUCE_M4_AMENDMENT1.md and the separate
+results/M4_amendment1 directory; original scientific verdict remains INCONCLUSIVE.

@@ -112,6 +112,20 @@ prevents a valid matched regime comparison; it is not evidence against continuou
 hippocampal dynamics. Hybrid code exists but its real-data fitting did not execute.
 Full-cohort regime fitting did not execute. Final regression: 70 tests passed.
 
+### 3.3 Authorized Numerical Remediation
+The post-development-exposure amendment M4-NUM-1 retained the0.001 threshold
+and original training grids. It tested2048/4096/8192 particles with8 independent
+replicas and16384/32768 references with8 each, retaining the single first-seed
+endpoint. The d1 smoke configuration passed at4096 (discrepancy0.0007312953).
+The d2 configuration failed at8192 (discrepancy0.0016818398; reference uncertainty
+0.0003261110), despite all8 training seeds converging. Its worst observed
+ESS/N at8192 was0.00037744 and largest weight0.5261, consistent with substantial
+bootstrap proposal concentration. No candidate-run rate overflow was observed.
+These empirical diagnostics do not prove absolute error or absence of log-score
+bias. Execution stopped before d3, Hybrid, full cohort or M5-M7. Original failure
+unchanged; amended diagnostics in results/M4_amendment1. Full84 tests passed.
+No dynamical-regime preference or neural-primitives conclusion follows.
+
 ## 4. Discussion
 The evidence supports reproducible training counts, explicit anatomical
 eligibility and train-fit/validation-select baseline execution, not a regime

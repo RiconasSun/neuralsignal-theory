@@ -1,0 +1,22 @@
+{
+  "id": "M4-NUM-1",
+  "authorization": "User controlled numerical remediation instruction",
+  "development_exposure": "Original sub-01/ses-01 validation diagnostic exposed before this amendment; not initial preregistration",
+  "threshold_nats_unit_bin": 0.001,
+  "candidate_particles": [2048, 4096, 8192],
+  "candidate_repetitions": 8,
+  "candidate_seeds": [51001, 151004, 251007, 351010, 451013, 551016, 651019, 751022],
+  "reference_particles": [16384, 32768],
+  "reference_seeds": [82001, 182004, 282007, 382010, 482013, 582016, 682019, 782022],
+  "trial_seed_stride": 1009,
+  "proposal": "unchanged bootstrap prior transition; systematic resampling; log-space weights; instrument ESS/max-weight/stability",
+  "variance_reduction": "Systematic resampling retained. Independent repetitions diagnose single-run variability, not an ensemble mean endpoint. Antithetics/observation-guided proposal not introduced without correction/oracle validation.",
+  "reference_uncertainty": "max trial abs(high-reference mean minus low-reference mean) plus1.96 high-reference replicate SD/sqrt(8)",
+  "single_run_discrepancy": "max over trials of max over candidate replicas abs(replica minus high-reference mean) plus1.96 candidate replicate SD plus reference uncertainty",
+  "selection": "Evaluate every prescribed budget; least budget satisfying both reference and single-run discrepancy<=0.001. Endpoint always first prespecified candidate seed, never best replica or mean.",
+  "bias_audit": "Report candidate mean-minus-reference and replicate SD per trial at every budget, reference budget shift. Log of nonnegative likelihood estimate has Jensen bias; repetitions/budget agreement cannot prove absolute accuracy.",
+  "fairness": "Exact HMM without MC error; identical candidate/reference budgets,seeds,repetitions,threshold for all continuous/hybrid dimensions/states; original training grid,seeds,covariates,convergence and complexity policy unchanged.",
+  "compute": "1 BLAS thread; record wall time per budget/reference and training; stream trials/replicas without storing particle trajectories. Maximum selected8192, reference32768. No budget reduction to obtain PASS.",
+  "failure": "Any nonconverged required seed or failed integration diagnostic stops; INCONCLUSIVE, no holdout.",
+  "warnings": "Five prior warnings are incomplete R05/R06/R07/R08/R13, not five known code bugs; each remains open until its scientific evidence exists."
+}
