@@ -20,10 +20,10 @@ unrecorded. This mission does not repair historical scientific evidence gaps.
 | ID | Requirement | Verification | Status |
 | --- | --- | --- | --- |
 | REQ-001 | Preserve existing local files and research content | No deletion or product edits; upload-only diff | VERIFIED |
-| REQ-002 | Upload the selected project scope to origin/test | Remote commit equals local commit | OPEN |
+| REQ-002 | Upload the selected project scope to origin/test | Remote commit equals local commit | VERIFIED |
 | REQ-003 | Exclude credentials and runtime caches | Explicit file inventory and secret-pattern scan | VERIFIED |
 | REQ-004 | Exclude raw neuroimaging; retain it locally | User-approved scope; ignored-file audit | VERIFIED |
-| REQ-005 | Record inventory, review, and final upload evidence | Evidence files and remote readback | OPEN |
+| REQ-005 | Record inventory, review, and final upload evidence | Evidence files and remote readback | VERIFIED |
 | REQ-006 | Add source/version/access/sample/processing references for P1-P10 | Per-paper availability guides and source inventory | VERIFIED |
 | REQ-007 | Link published figures to generation scripts and analysis inputs | Figure provenance table and local-link validation | VERIFIED |
 | REQ-008 | Record checksums and reproducible publication instructions | Generated SHA256 inventory and validation command | VERIFIED |
