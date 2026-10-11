@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "paper": "P11",
+  "title": "Hippocampal Dynamical Regime",
+  "paper_type": "Explanation Paper",
+  "research_question": "Do human hippocampal population dynamics favor discrete, continuous, or hybrid state-space models?",
+  "north_star": "Discover a reproducible, predictive neural dynamics language.",
+  "execution": {"milestone": "M0", "stop_after_gate": true, "allowed_downloads": "pinned dataset metadata only", "previous_gates_required": []},
+  "data": {
+    "primary_spikes": {"id": "nm000363", "version": "v1.0.0", "git_commit": "b054fbef57f9c4fb93477ecc5c88c6114dbc5662", "doi": "10.82901/nemar.nm000363", "license": "CC-BY-SA-4.0"},
+    "companion_ieeg": {"id": "ds004752", "version": "1.0.1", "git_commit": "234fd4c04dea66ab9b0fd5ddbf4ec51f56b6ad02", "doi": "10.18112/openneuro.ds004752.v1.0.1", "pooled_with_spikes": false},
+    "external": {"id": "000004", "archive": "DANDI", "version": "0.220126.1852", "role": "independent convergent test conditional on anatomy/task audit", "direct_replication_claim_allowed": false, "access": "OpenAccess"}
+  },
+  "eligibility": {
+    "primary_anatomy": "explicit hippocampus label; hemisphere retained",
+    "other_mtl": "entorhinal cortex, amygdala and unknown labels excluded from primary; separately labeled exploratory only",
+    "unit_type": "sorted units; SU versus MU identity unconfirmed until M1, never call all units single-neuron recordings",
+    "session_identity": "units are session-local; no persistent neuron identity assumed",
+    "paired_alignment": "verify subject/session/trial crosswalk; unpaired sessions remain explicitly unpaired and cannot enter paired iEEG analyses",
+    "minimum_valid_trials_per_session": 40,
+    "minimum_train_selected_hippocampal_units": 5,
+    "unit_qc": "finite timestamps, confirmed hippocampal label, valid observation coverage; at least 20 training-window spikes; publish quality fields and SU/MU uncertainty; no heldout-rate filtering",
+    "minimum_subjects_for_confirmatory_comparison": 6,
+    "insufficiency": "DATA_INSUFFICIENT if primary trial/unit/subject coverage fails; publish descriptive QC and stop before confirmatory model comparison",
+    "m0_data_coverage": "NOT_ASSESSED; M1 gate required"
+  },
+  "features": {
+    "primary_bin_ms": 100,
+    "observation_epoch_seconds_relative_to_probe": [-6, 0],
+    "bin_boundary": "left closed, right open; spike exactly at probe onset excluded",
+    "feasibility_review": "training-only sparsity, coverage and convergence review before M2; retain 100 ms primary or document protocol amendment before any test access; 50/200 ms sensitivity only",
+    "preprocessing": "fit unit selection, scaling, projections and parameters on training partition only; validation only for predefined selection; test only at frozen evaluation",
+    "observations": "nonnegative integer spike counts and exposure; no Gaussianized counts substituted for predictive scoring",
+    "ieeg": "separate modality and likelihood; never pool into primary spike-count endpoint"
+  },
+  "splits": {
+    "algorithm": "chronological whole-trial 60/20/20 per subject-session after metadata-only validity audit",
+    "train_fraction": 0.6,
+    "validation_fraction": 0.2,
+    "rounding": "floor(n*0.6), floor(n*0.2), remainder test",
+    "trial_key": ["dataset", "subject", "session", "trial"],
+    "ordering": "recorded trial number increasing; reject duplicate or missing trial identities; no shuffle",
+    "purge": "no windows cross trials; reset latent filter and spike history at each trial; no carryover from validation/test to train",
+    "manifest_creation": "M1 metadata audit, hashed and immutable before any spike-content preprocessing; no trial roster claimed at M0",
+    "subject_generalization": "outer leave-one-subject-out selection of shared regime/hyperparameter policy using other subjects only; test subject gets session-local emissions fitted only to its training trials under the frozen policy",
+    "generalization_boundary": "transfer of regime/policy with train-only target adaptation, not transfer of neuron identity or unseen-subject zero-shot count prediction",
+    "external": "DANDI version locked now; independent heldout trials and anatomy/task compatibility manifest frozen before external count inspection; primary policy never retuned on external data"
+  },
+  "baselines": ["per-unit stationary firing-rate Poisson", "regularized causal spike-history Poisson GLM", "task-event and set-size Poisson GLM", "within-trial phase/time-basis Poisson GLM", "trial-position and session-drift Poisson GLM", "combined task/timing/history/drift Poisson GLM"],
+  "models": {
+    "discrete": {"family": "Poisson HMM", "states": [2, 3, 4, 6]},
+    "continuous": {"family": "Poisson latent dynamical model", "latent_dimensions": [1, 2, 3]},
+    "hybrid": {"family": "Poisson switching latent dynamical model", "states": [2, 3], "latent_dimensions": [1, 2]},
+    "shared": {"observation_link": "log link with unit-specific intercept and matched exposure", "covariates": "same causal task, timing and history covariates in all families; matched count masks", "initialization_seeds": [11, 23, 37, 53, 71, 89, 107, 131], "training_budget": "maximum 500 iterations per candidate/seed; tolerance 1e-5; report convergence and wall-clock time", "selection": "training fits; validation-only one-standard-error selection using whole validation trials; prefer fewer free parameters, then smaller latent dimension/state count; no test selection", "complexity": "report all fitted free parameters, state/dimension grids, same seeds and convergence rules; validation Pareto frontier and matched-complexity sensitivity; nonconverged required candidates cause gate failure, never silent family removal", "integration": "marginal predictive count likelihood, not plug-in reconstructions or ELBO comparisons; fixed Monte Carlo budgets 64/256/1024 chosen on validation for error <=0.001 nats per unit-bin; freeze estimator and RNG seeds before test; failed accuracy gate is INCONCLUSIVE"}
+  },
+  "primary_metric": {
+    "name": "heldout_one_step_spike_count_predictive_log_likelihood",
+    "formula": "sum(log p(y_t | y_<t, known causal covariates, training-fitted parameters)) / observed unit-bin count",
+    "units": "nats per observed unit-bin",
+    "higher_is_better": true,
+    "scoring": "predict before assimilating y_t; never smooth latent state with future or current scored counts; integrate latent uncertainty; identical trial/bin/unit masks across candidates",
+    "aggregation": "equal-weight session means within each subject, then equal-weight subject means; subject is independent unit",
+    "comparisons": "paired subject-level model-family differences and differences vs validation-selected strongest baseline",
+    "minimum_practical_gain": 0.01
+  },
+  "statistics": {
+    "independent_unit": "subject",
+    "confidence_intervals": "10000 subject bootstrap resamples, seed 20261010, paired 95% intervals; do not resample bins as independent observations",
+    "hypothesis_test": "paired subject sign-flip test, exact enumeration for <=20 subjects; symmetry/exchangeability assumptions disclosed; Holm correction over three pairwise family comparisons and three family-vs-baseline tests",
+    "alpha": 0.05,
+    "null_replicates": 1000,
+    "null_family_correction": "Holm across prespecified null contrasts, separately from model-family comparisons",
+    "winner_rule": "family exceeds each other family and strongest baseline by >=0.01 mean nats/unit-bin, paired CI lower bound >0 and Holm p<0.05; within-subject reproducibility and prespecified falsification gates required; otherwise INCONCLUSIVE",
+    "external_rule": "independent convergent result reported separately after anatomy/task audit; no direct replication across differing tasks"
+  },
+  "null_tests": [
+    {"id": "rate_preserving", "control": "independently permute bin positions within unit/trial, preserving trial counts/exposure; partition-local; refit full frozen pipeline"},
+    {"id": "spike_jitter", "control": "25/50/100/200 ms independent bounded jitter; reflect at trial epoch boundaries; preserve per-unit trial count; partition-local; prespecified scale curve"},
+    {"id": "time_shift", "control": "independent per-unit circular offsets uniform 500-2000 ms within six-second trial epoch; preserve counts and no cross-partition borrowing"},
+    {"id": "trial_position", "control": "combined causal trial-position/session-drift baseline plus split-local trial permutations within task/set-size strata; distinguish drift from task-aligned dynamics"},
+    {"id": "random_segmentation", "control": "random boundaries matched to number and duration distribution of training event segments; partition-local application; match evaluation masks and refit"}
+  ],
+  "reproducibility": {
+    "within_subject": "repeat chronological heldout assessment on session-local units; assess paired direction consistency across sessions and train-only split-halves; no identity correspondence across sessions",
+    "gate": "winner must have positive differences against alternatives and strongest baseline in both chronological heldout trial halves for at least 75% of eligible subjects; report session-level direction consistency separately; test halves used only for locked assessment, never selection",
+    "falsification_gate": "observed winner gain over strongest baseline must exceed rate-preserving, time-shift and random-segmentation null distributions under paired subject contrasts with Holm-corrected p<0.05; trial-position adjusted gain must meet primary threshold; jitter scale curve reported at all four scales without post-hoc scale selection",
+    "model_label_alignment": "align state labels using training emissions only; permutation-invariant comparisons",
+    "negative_results": "retain failed fits, excluded sessions, missing mappings, null outcomes and deviations",
+    "upstream_sorting_limitation": "published units were sorted upstream at session scale; downstream train-only filtering cannot establish that upstream spike sorting was blind to heldout recordings; disclose this boundary"
+  },
+  "final_verdicts": ["DISCRETE_PREFERRED", "CONTINUOUS_PREFERRED", "HYBRID_PREFERRED", "INCONCLUSIVE", "DATA_INSUFFICIENT"],
+  "forbidden_claims": ["NAP validated", "CWP validated", "global P10 result rules out hippocampal discrete dynamics", "metadata coverage equals eligible hippocampal coverage", "engineering PASS equals scientific success", "different-task external convergence is direct replication"],
+  "amendments": "never overwrite freeze or holdout; version amendment and disclose reason before affected test access; already accessed test cannot remain a clean confirmatory holdout"
+}

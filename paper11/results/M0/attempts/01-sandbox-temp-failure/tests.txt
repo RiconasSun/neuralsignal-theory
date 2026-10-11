@@ -1,0 +1,66 @@
+test_all_metadata_sources_pinned_no_experimental_download (test_m0.ProtocolTests.test_all_metadata_sources_pinned_no_experimental_download) ... ok
+test_complete_contract (test_m0.ProtocolTests.test_complete_contract) ... ok
+test_corrupt_or_missing_frozen_input_fails_closed (test_m0.ProtocolTests.test_corrupt_or_missing_frozen_input_fails_closed) ... ERROR
+test_duplicate_and_noninteger_trial_rejected (test_m0.ProtocolTests.test_duplicate_and_noninteger_trial_rejected) ... ok
+test_freeze_refuses_overwrite (test_m0.ProtocolTests.test_freeze_refuses_overwrite) ... ok
+test_frozen_artifact_and_environment_integrity (test_m0.ProtocolTests.test_frozen_artifact_and_environment_integrity) ... ok
+test_insufficient_trials_rejected (test_m0.ProtocolTests.test_insufficient_trials_rejected) ... ok
+test_models_cannot_be_removed (test_m0.ProtocolTests.test_models_cannot_be_removed) ... ok
+test_no_direct_external_replication (test_m0.ProtocolTests.test_no_direct_external_replication) ... ok
+test_no_draft_external (test_m0.ProtocolTests.test_no_draft_external) ... ok
+test_no_modality_pooling (test_m0.ProtocolTests.test_no_modality_pooling) ... ok
+test_no_next_milestone (test_m0.ProtocolTests.test_no_next_milestone) ... ok
+test_required_null_cannot_be_removed (test_m0.ProtocolTests.test_required_null_cannot_be_removed) ... ok
+test_split_rounding_and_no_trial_omission (test_m0.ProtocolTests.test_split_rounding_and_no_trial_omission) ... ok
+test_split_whole_trials_disjoint_and_chronological (test_m0.ProtocolTests.test_split_whole_trials_disjoint_and_chronological) ... ok
+test_subject_independent_unit (test_m0.ProtocolTests.test_subject_independent_unit) ... ok
+
+======================================================================
+ERROR: test_corrupt_or_missing_frozen_input_fails_closed (test_m0.ProtocolTests.test_corrupt_or_missing_frozen_input_fails_closed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper11\tests\test_m0.py", line 104, in test_corrupt_or_missing_frozen_input_fails_closed
+    path.write_text("contract fixture, not scientific data", encoding="utf-8")
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1078, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{47c5cc07-b313-450e-af54-8342ebb4b031}\\AC\\Temp\\tmpidouc024\\fixture.txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{47c5cc07-b313-450e-af54-8342ebb4b031}\\AC\\Temp\\tmpidouc024'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper11\tests\test_m0.py", line 101, in test_corrupt_or_missing_frozen_input_fails_closed
+    with tempfile.TemporaryDirectory() as directory:
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 943, in __exit__
+    self.cleanup()
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{47c5cc07-b313-450e-af54-8342ebb4b031}\\AC\\Temp\\tmpidouc024'
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.364s
+
+FAILED (errors=1)
