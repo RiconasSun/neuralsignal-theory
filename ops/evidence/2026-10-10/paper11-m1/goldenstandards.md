@@ -43,9 +43,13 @@ No open material decisions. Frozen M0 thresholds apply without alteration.
 | REQ-005 | Freeze real split manifests before train-only spike QC | Immutable locks, checksums and heldout-isolation tests | VERIFIED |
 | REQ-006 | Report eligible coverage and DATA_INSUFFICIENT if thresholds fail | Subject/session/unit QC and gate tests | VERIFIED |
 | REQ-007 | Executable code, real outputs, tests, QC, gate, claims, status and PowerShell reproduction | Real complete M1 run | VERIFIED |
-| REQ-008 | Scoped review, closure evidence and origin/test upload | Exact staging, final source identity and remote match | IMPLEMENTED_UNVERIFIED |
+| REQ-008 | Scoped review, closure evidence and origin/test upload | Exact staging, final source identity and remote match | VERIFIED |
 
 baseline_requirement_count: 8
+verified_baseline_count: 8
+Post-commit offline replay: 305ed4b3b80014656c77de09749807400a242319,
+22 tests passed without skips; origin/test matched that implementation commit.
+Final closure changes only evidence and preserve source/protocol/split hashes.
 Test level: focused parser, provenance, split immutability and heldout-isolation
 regressions plus real offline replay of complete acquired data. No UI/channels.
 Gate: all required source/parse/alignment/integrity checks and tests pass AND

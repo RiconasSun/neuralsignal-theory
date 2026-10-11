@@ -47,5 +47,7 @@ No heldout timestamp evaluation, model fitting, M2 features or external test.
 No NAP/CWP or discrete/continuous/hybrid preference claim.
 Final post-commit verification binds the gate to the candidate; subsequent
 evidence-only commits preserve the same source/split/protocol SHA256 identity.
+Verified implementation commit: 305ed4b3b80014656c77de09749807400a242319.
+Post-commit PowerShell replay exited 0; 22 tests passed, no skips.
 Review: M1-only upload approved. Push: origin/test, final remote match verified.
 Remaining blockers: none for M1. Next required action: stop after M1.
