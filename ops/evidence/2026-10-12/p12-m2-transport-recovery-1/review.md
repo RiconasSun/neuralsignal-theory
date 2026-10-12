@@ -33,3 +33,7 @@ hashes match; start/endmanifest af709e12 identical; old79/current30 tests PASS,
 saved FAIL/INCONCLUSIVE reconstructed. STOPPED_EVIDENCE_PUBLICATION_ALLOWED for
 exact mission-file archive onorigin/test only, with REQ026 still pending actual
 commit/push. No scientific PASS, MERGE_ALLOWED or continuation authorization.
+
+Closure readback subsequently recorded inarchive_closure.json;REQ026verified.
+Finalatomiccounts20verified/6blocked. Primarycandidatebyte identity unchanged;
+closure-only metadata update cannot cure the preserved runtimefailure.

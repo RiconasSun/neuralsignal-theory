@@ -29,7 +29,7 @@ Baseline:26 items, frozen in goldenstandards.md/registration.json before source.
 |023|VERIFIED|No finalrelease request/evaluation;null completion notclaimed|
 |024|VERIFIED|Finalreplay exit0; start/endaf709e12,old79+new30tests,FAILgatepreserved; reproduction_receipt.json|
 |025|VERIFIED|Independentreview,correctedreporters,claim/QC/gates|
-|026|IMPLEMENTED_UNVERIFIED|Exactmission archive staging/commit/testremote readback pending closure|
+|026|VERIFIED|Archivefc2d1e4 pushedorigin/test;actualGitHubreadback/cleantree inarchive_closure.json|
 
-19 verified,6 blocked,1 closure verification pending. Conditional stop compliance does not replace missing full
+20 verified,6 blocked. Conditional stop compliance does not replace missing full
 cohort science. No PASS, no silent contraction, no alternate dataset or threshold.

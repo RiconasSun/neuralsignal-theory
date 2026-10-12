@@ -7,7 +7,7 @@ engineering_blocker: TRANSPORT_CHECKPOINT_COMMIT_PERMISSION_DENIED (WinError 5)
 bug_count: 1
 warn_count: 2
 baseline_requirement_count: 26
-verified_baseline_count: 19 (REQ-026 closure readback pending)
+verified_baseline_count: 20
 required_items_omitted: 0
 required_behaviors_silently_reduced: 0
 unapproved_existing_behaviors_removed: 0
@@ -43,3 +43,7 @@ PASS is scoped synthetic security proof, not successful transport or biology.
 Publication is a scoped failed-research evidence archive on origin/test, not a
 production promotion or scientific PASS. Exact commit/push readback is recorded
 in closure evidence; no main/force/PR or neural/secret staging is permitted.
+
+Archive fc2d1e4e3120d502ce688b1aaae85073e8ec8b24 pushed and read back fromGitHub.
+Saved replay verifiedold79+new30 tests with unchangedaf709e12manifest andFAILgate.
+20/26 atomicrequirements verified;6blocked,including resumablecheckpointcommit.
