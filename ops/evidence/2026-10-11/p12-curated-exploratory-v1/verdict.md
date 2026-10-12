@@ -12,6 +12,8 @@ baseline_requirement_count=32. M1and stopped-audit requirements are verified;
 M2physiological QC and conditional scientific requirements remain explicitly
 blocked,not APPROVED_EQUIVALENT,N/A or fullstudyPASS.
 Individual preservation/verification locations:verdict.json.
+After reviewed payload publication:verified_baseline_count=25/32;7scientific
+requirements remain BLOCKED_HUMAN_INPUT;noOPENpublication item or fullstudyPASS.
 
 Scientific:M1registrationPASS;M2FAIL/INCONCLUSIVE;M3-M7NOT_EXECUTED.
 Candidate animals13development/13final;actually eligible countNOT_ASSESSED in

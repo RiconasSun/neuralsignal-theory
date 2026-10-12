@@ -23,3 +23,8 @@ Staging detected nativeCRLF in exact CSV/testlog bytes. Scoped .gitattributes
 permits cr-at-eol,not other whitespace/errors;no scientific file bytes changed
 or log reformatted. Final56file seal and fresh nativePowerShell replay replace
 the55file pre-attribute candidate. Allscientific gates/locks unchanged.
+
+Publication completed:68file payloada7fd37cd3f68a26f981161089306638a05545f9a,
+origin/test push0 and exactremote readback,clean tree.25/32requirements verified,
+7scientific requirements remain human-blocked. publication.json captures actual
+payload evidence;this final counter/receipt update changes ops artifacts only.
