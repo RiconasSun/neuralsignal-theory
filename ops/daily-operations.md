@@ -1,7 +1,7 @@
 # Current P12 Isolated Custody Recovery
 
 Mission:P12-M2-ISOLATED-CUSTODY-1;explicit new custody authorization.
-Mode:CLOSURE_MODE for reviewed stopped evidence;next execution WAIT_FOR_HUMAN_INPUT.
+State:WAIT_FOR_HUMAN_INPUT;reviewed stopped evidence published toorigin/test.
 Prospective amendment preserves alloldM1/M2/gates/animal/trial/unit/source locks.
 Original tool sandbox failed actualfile/key/DACL probes;not used as analysis.
 New native no-capability AppContainer passed Python/runtime,network,file/key,

@@ -4,8 +4,8 @@ Mission:P12-M2-ISOLATED-CUSTODY-1.
 Final status:WAIT_FOR_HUMAN_INPUT.
 Scientific newM2:FAIL / INCONCLUSIVE;original M1PASS/M2FAIL preserved.
 bug_count=0;warn_count=2(required fullcohort QC and conditional continuation incomplete).
-baseline_requirement_count=24;verified_baseline_count=21 before publication.
-Publication REQ-024 remains IMPLEMENTED_UNVERIFIED until actual Git receipt.
+baseline_requirement_count=24;verified_baseline_count=22 after publication.
+Publication REQ-024 VERIFIED by actual Git push/readback in publication.md.
 No MERGE_ALLOWED,no scientific validation PASS,no manuscript-completion claim.
 
 Blocker:source779839471 ReadTimeoutError;8completed,1failed,17notexecuted.
