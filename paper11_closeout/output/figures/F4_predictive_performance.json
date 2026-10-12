@@ -1,0 +1,108 @@
+{
+  "caption": "The baseline dot is the strongest raw-score reference, NOT the global baseline one-SE selection. Dynamics dots are family one-SE selections. Diamonds were not substituted for frozen selections.",
+  "input_sha256": {
+    "paper11_v2/results/R2/baseline_selection.json": "be6a72f31c9f12d615cbad109b59cfa36e101d0c890745f104c2318e22820810",
+    "paper11_v2/results/R2/model_selection_manifest.json": "175c88bf0c2345d49ad7bfc57e80bba9f88ddc628ef759f14be32347d4b09738",
+    "paper11_v2/results/R2/subject_statistics.json": "2bdbd72a2ca9dbbc1bb000573a8acb8ea0e4b8ca0e5bd82a06cf4490a9c1589a",
+    "paper11_v2/results/R2_development_report/report/all57configurations.csv": "830072f0b33e572a0dd15e6aa335fc1eb73abb8e23b8884b116189891e62b131"
+  },
+  "interpretation": "Saved descriptive evidence or protocol schematic; no new fitting/inference",
+  "render_code_sha256": "640efd6538a04d55d6763763acbdbf1e98133a16d2d05957986bf301ed8471ef",
+  "values": {
+    "raw_maxima": {
+      "baseline": {
+        "extra_parameters": "304.05555555555554",
+        "family": "combined",
+        "lags": "",
+        "patient_weighted_dev_mean": "-0.534921314741683",
+        "ridge": "0.001",
+        "seed_rule": "training objective minimum; order11,23,37 tie-break",
+        "shared_offset_parameters": "0.0",
+        "size": "",
+        "total_nominal_parameters": "304.05555555555554"
+      },
+      "continuous": {
+        "extra_parameters": "227.11111111111111",
+        "family": "continuous",
+        "lags": "0",
+        "patient_weighted_dev_mean": "-0.5373780191428293",
+        "ridge": "0.001",
+        "seed_rule": "training objective minimum; order11,23,37 tie-break",
+        "shared_offset_parameters": "304.05555555555554",
+        "size": "4",
+        "total_nominal_parameters": "531.1666666666666"
+      },
+      "discrete": {
+        "extra_parameters": "108.55555555555556",
+        "family": "discrete",
+        "lags": "0",
+        "patient_weighted_dev_mean": "-0.5153939231286009",
+        "ridge": "0.001",
+        "seed_rule": "training objective minimum; order11,23,37 tie-break",
+        "shared_offset_parameters": "304.05555555555554",
+        "size": "4",
+        "total_nominal_parameters": "412.6111111111111"
+      },
+      "hybrid": {
+        "extra_parameters": "576.3333333333334",
+        "family": "hybrid",
+        "lags": "5",
+        "patient_weighted_dev_mean": "-0.514053175318272",
+        "ridge": "0.001",
+        "seed_rule": "training objective minimum; order11,23,37 tie-break",
+        "shared_offset_parameters": "304.05555555555554",
+        "size": "4",
+        "total_nominal_parameters": "880.3888888888889"
+      }
+    },
+    "selected": [
+      {
+        "config": {
+          "family": "combined",
+          "ridge": 0.001
+        },
+        "family": "baseline",
+        "mean": -0.5349213147416831,
+        "selection_role": "raw strongest baseline reference",
+        "total_parameters": 304.05555555555554
+      },
+      {
+        "config": {
+          "family": "discrete",
+          "lags": 0,
+          "ridge": 0.01,
+          "size": 2
+        },
+        "family": "discrete",
+        "mean": -0.5471759733084931,
+        "selection_role": "frozen family one-SE",
+        "total_parameters": 353.8333333333333
+      },
+      {
+        "config": {
+          "family": "continuous",
+          "lags": 0,
+          "ridge": 1.0,
+          "size": 1
+        },
+        "family": "continuous",
+        "mean": -0.5680885963548558,
+        "selection_role": "frozen family one-SE",
+        "total_parameters": 357.8333333333333
+      },
+      {
+        "config": {
+          "family": "hybrid",
+          "lags": 1,
+          "ridge": 0.01,
+          "size": 2
+        },
+        "family": "hybrid",
+        "mean": -0.5462372511131538,
+        "selection_role": "frozen family one-SE",
+        "total_parameters": 400.6111111111111
+      }
+    ],
+    "stationary_one_SE": -0.5412912375626756
+  }
+}

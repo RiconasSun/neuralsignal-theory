@@ -1,0 +1,43 @@
+{
+  "caption": "Model schematics reflect the frozen code. All predictions use only past counts and permitted current context; every trial resets states/history.",
+  "input_sha256": {
+    "paper11_v2/protocol/protocol.json": "423351b2e7907e7b4b71f59eca8183fd23cb86eb4548113e8fec551c28e5030a",
+    "paper11_v2/scripts/predictive_models.py": "0dbaeb67b54e6a198e2f08464cbb52bb68f8d04488b9582559dd67ac03c82aca",
+    "paper11_v2/scripts/predictive_models_code1.py": "63df719f159c0ef38dc955cf51ae684d641441aaa9c2578dbd565923e432d459"
+  },
+  "interpretation": "Saved descriptive evidence or protocol schematic; no new fitting/inference",
+  "render_code_sha256": "640efd6538a04d55d6763763acbdbf1e98133a16d2d05957986bf301ed8471ef",
+  "values": {
+    "models": [
+      [
+        "Discrete HMM",
+        [
+          "Past counts\nforward filter",
+          "Categorical state\nK = 2 or 4",
+          "Common offset +\nstate bias"
+        ],
+        "Exact state-path marginal; no sampled continuous latent"
+      ],
+      [
+        "Continuous recurrent",
+        [
+          "Past counts +\nknown context",
+          "Deterministic h(t)\nd = 1, 2 or 4",
+          "Common offset +\nC h(t)"
+        ],
+        "Observed-history conditional likelihood; NOT a PLDS"
+      ],
+      [
+        "Hybrid switching AR",
+        [
+          "Past counts\nforward filter",
+          "Categorical state +\nown history L=1,5",
+          "Common offset +\nstate/history terms"
+        ],
+        "Exact conditional state-path marginal; NOT a stochastic SLDS"
+      ]
+    ],
+    "observation": "Poisson counts",
+    "reset": "every trial"
+  }
+}

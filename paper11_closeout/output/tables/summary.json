@@ -1,0 +1,181 @@
+{
+  "baseline_one_SE": {
+    "family": "stationary",
+    "ridge": 0.0
+  },
+  "cross_family_one_SE": {
+    "family": "discrete",
+    "lags": 0,
+    "ridge": 0.01,
+    "size": 2
+  },
+  "gate": {
+    "R2_A": "PASS",
+    "R2_B": "INCOMPLETE_STOPPED",
+    "R2_C": "FAIL_OBSERVATION_SUPPORT",
+    "R3": "NOT_EXECUTED",
+    "attempted_development_fits": 3887,
+    "completed_null_cohort_replicates": 8,
+    "completed_null_fit_records": 2896,
+    "converged_development_fits": 3887,
+    "eligible_external_subjects_physiologically_verified": null,
+    "external_60_40_split_sha256": "27fad80c753cfdef00977d056b379da5210f1e0247efba803a4e098e593e93e3",
+    "external_spikes_accessed": false,
+    "external_training_unit_QC_executed": false,
+    "failures": [
+      "Mandatory external observation support unresolved for5of52frozen candidate sessions; stop without pruning or relaxed boundary criterion."
+    ],
+    "final_holdout_locked": true,
+    "fit_seconds": 805.5225947985891,
+    "gate_verdict": "FAIL",
+    "independent_subjects": 9,
+    "initial_R2_tests": 34,
+    "mandatory_development_fits": 3887,
+    "milestone": "R2",
+    "numerical_oracle": {
+      "cases": 108,
+      "gradient_error": 3.1667389197020945e-11,
+      "oracle": "Independent exhaustive path enumeration and finite differences, plus sequential frozen kernel parity",
+      "score_error_nats_unit_bin": 1.1102230246251565e-15
+    },
+    "oldtest_accessed": false,
+    "regime_verdict": "INCONCLUSIVE",
+    "registered_null_replicates_per_type": 200,
+    "registered_null_types": 3,
+    "scientific_success_not_claimed": true,
+    "scientific_verdict": "DATA_INSUFFICIENT",
+    "scope_of_failure": "Current registered metadata-boundary audit cannot certify complete external support; not evidence that neural recordings or hippocampal regimes are absent.",
+    "sessions": 23,
+    "source_gate_path": "paper11_v2/results/R2_external_support_code2/gate_result.json",
+    "source_gate_sha256": "2a9c7327e8121c180dbec225122c5dcfec4a560dbf5617753e19975e2c6a7c3c",
+    "source_hashes_unchanged": true,
+    "statistics_scope": "Previously exposed exploratory development only; exact512subject sign flips and10000paired subject bootstraps, Holm6.",
+    "stop_mechanism": "CTRL_C own execution after independent metadata gate FAIL, exit1. No numerical failure invented.",
+    "study": "P11-v2",
+    "support_sessions": 47,
+    "tests_exit_code": 0,
+    "unexecuted_development_fits": 0,
+    "unsupported_or_unknown_sessions": 5
+  },
+  "optimizer": {
+    "first_unit_rank_only": true,
+    "global_optima_verified": false,
+    "gradient_max": 0.05650881035057017,
+    "one_iteration_records": 117,
+    "records": 3887,
+    "termination_messages": {
+      "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL": 545,
+      "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH": 3319,
+      "Exact constant-rate maximum likelihood": 23
+    }
+  },
+  "patients": [
+    "sub-01",
+    "sub-02",
+    "sub-03",
+    "sub-04",
+    "sub-05",
+    "sub-06",
+    "sub-07",
+    "sub-08",
+    "sub-09"
+  ],
+  "raw_maxima": {
+    "baseline": {
+      "extra_parameters": "304.05555555555554",
+      "family": "combined",
+      "lags": "",
+      "patient_weighted_dev_mean": "-0.534921314741683",
+      "ridge": "0.001",
+      "seed_rule": "training objective minimum; order11,23,37 tie-break",
+      "shared_offset_parameters": "0.0",
+      "size": "",
+      "total_nominal_parameters": "304.05555555555554"
+    },
+    "continuous": {
+      "extra_parameters": "227.11111111111111",
+      "family": "continuous",
+      "lags": "0",
+      "patient_weighted_dev_mean": "-0.5373780191428293",
+      "ridge": "0.001",
+      "seed_rule": "training objective minimum; order11,23,37 tie-break",
+      "shared_offset_parameters": "304.05555555555554",
+      "size": "4",
+      "total_nominal_parameters": "531.1666666666666"
+    },
+    "discrete": {
+      "extra_parameters": "108.55555555555556",
+      "family": "discrete",
+      "lags": "0",
+      "patient_weighted_dev_mean": "-0.5153939231286009",
+      "ridge": "0.001",
+      "seed_rule": "training objective minimum; order11,23,37 tie-break",
+      "shared_offset_parameters": "304.05555555555554",
+      "size": "4",
+      "total_nominal_parameters": "412.6111111111111"
+    },
+    "hybrid": {
+      "extra_parameters": "576.3333333333334",
+      "family": "hybrid",
+      "lags": "5",
+      "patient_weighted_dev_mean": "-0.514053175318272",
+      "ridge": "0.001",
+      "seed_rule": "training objective minimum; order11,23,37 tie-break",
+      "shared_offset_parameters": "304.05555555555554",
+      "size": "4",
+      "total_nominal_parameters": "880.3888888888889"
+    }
+  },
+  "selected": [
+    {
+      "config": {
+        "family": "combined",
+        "ridge": 0.001
+      },
+      "family": "baseline",
+      "mean": -0.5349213147416831,
+      "selection_role": "raw strongest baseline reference",
+      "total_parameters": 304.05555555555554
+    },
+    {
+      "config": {
+        "family": "discrete",
+        "lags": 0,
+        "ridge": 0.01,
+        "size": 2
+      },
+      "family": "discrete",
+      "mean": -0.5471759733084931,
+      "selection_role": "frozen family one-SE",
+      "total_parameters": 353.8333333333333
+    },
+    {
+      "config": {
+        "family": "continuous",
+        "lags": 0,
+        "ridge": 1.0,
+        "size": 1
+      },
+      "family": "continuous",
+      "mean": -0.5680885963548558,
+      "selection_role": "frozen family one-SE",
+      "total_parameters": 357.8333333333333
+    },
+    {
+      "config": {
+        "family": "hybrid",
+        "lags": 1,
+        "ridge": 0.01,
+        "size": 2
+      },
+      "family": "hybrid",
+      "mean": -0.5462372511131538,
+      "selection_role": "frozen family one-SE",
+      "total_parameters": 400.6111111111111
+    }
+  ],
+  "shared_offset": {
+    "family": "combined",
+    "ridge": 0.01
+  }
+}

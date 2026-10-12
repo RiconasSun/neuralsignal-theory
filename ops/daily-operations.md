@@ -1,3 +1,26 @@
+# Completed Manuscript Closeout
+
+Mission:P11-MANUSCRIPT-CLOSEOUT-1; explicitly authorized exploratory manuscript
+scope change only. State:PASS for separate manuscript reporting/delivery contract,
+not scientific validation. Verdict:MANUSCRIPT_COMPLETE;
+SCIENTIFIC_VALIDATION_PASS=false;submission_ready=false pending author declarations.
+Main13pagePDF,supplement9pagePDF,sevenpublicationfigures/inputhashsidecars,
+full57configuration table,all9patient sixpairedeffects/savedCIs,3887optimizer
+records,A1-A10,claim/reference audit andlimitations completed. Actualoffline
+one-commandWindowsPowerShell replay exit0:21tests;tables/text/figuresbyteparity,
+all22PDFpages text/pixelparity;allpagesrendered/nonblank/glyphboundschecked.
+10807priortrackedfilesverifiedunchanged;originaloperationshistorypreserved.
+Strongestcombined.001baseline,stationarybaselineone-SE,combined.01offset,
+familyone-SEselections andrawmaxima remain explicitly distinct.
+No datasets/metadata/reference searches,newfits,inference,nulls,cohortsubstitution
+orholdoutaccess. Allv1numericalfailures,v2R2FAIL/DATA_INSUFFICIENT,originalR3
+NOTEXECUTED and externalauditfailuresremainunchanged. Historicalscientific
+warningsnotcleared. Completepaperdoesnotproveaneuralmechanism/NAP/CWP.
+Evidence:../paper11_closeout/evidence/ and
+evidence/2026-10-11/p11-manuscript-closeout-1/.
+Stopafterpapercloseout;no additionaldataset audit,competition,validationorrescue.
+Author/declarationapprovalrequiredbeforesubmission;no submissionauthorizedhere.
+
 # Current Alternative Cohort Audit
 
 Mission:P11-ALT-COHORT-AUDIT-1; separately authorized metadata-only OSFVH5KQ

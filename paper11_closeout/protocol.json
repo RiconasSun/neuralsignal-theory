@@ -1,0 +1,13 @@
+{
+  "mission":"P11-MANUSCRIPT-CLOSEOUT-1",
+  "scope_change":"Separately authorized exploratory manuscript closeout, not a retrospective scientific-gate amendment or original R3 execution",
+  "title":"Predictive Representations of Human Hippocampal Spiking: An Exploratory Benchmark of Discrete, Continuous, and Hybrid Models",
+  "frozen_prechange_commit":"33dc10db016d69b656dd2491be041b1f6d15826c",
+  "allowed":"Read explicit saved summaries, archived protocols/source code and gate/limitations documents; opaque SHA256 preservation hashing; arithmetic consistency checks, figures, formatting and faithful copying of saved statistics",
+  "forbidden":["Model fitting/importing fit runners","Raw spikes/count feature arrays or any oldtest/final physiological data decoding","Network/dataset/reference metadata searches","New bootstrap/sign-flip/null/statistical experiments","Selection-rule changes or reselection","Cohort substitution","P1-P10orarchivedP11modification"],
+  "score_policy":"Preserve saved patient/session weighting and all57rows. Four recorded summary scores use strongest combined baseline plus three one-SEfamily candidates. Also disclose stationary one-SEbaseline, shared offset and cross-family discrete one-SEselection. Raw maxima are descriptive postselection, never frozen selections or confirmatory preferences.",
+  "statistics_policy":"Copy existing patient-level6contrasts,9paired effects,10000bootstrap intervals and512sign-flips/Holm-six. Do not re-bootstrap, retest or use trials/neurons as subjects.",
+  "figure_policy":"Seven publication figures:design/coverage,architecture,numericalverification,performance,patientheterogeneity,complexityfrontier,evidenceboundaries. Each has explicit input paths/SHA256, rendering-codeSHA and data sidecar. Schematics derive from frozen model/protocol metadata, not simulated neuronal trajectories.",
+  "gate":{"MANUSCRIPT_COMPLETE":"Required sections, tables,57configs, seven figures, supplement,A1-A10,claimmap, saved-only PowerShell generation/validation and visualQA all verified; unknown declarations explicitly disclosed","SCIENTIFIC_VALIDATION_PASS":false,"original_R2":"FAIL / DATA_INSUFFICIENT","original_R3":"NOT EXECUTED","submission_ready":"Requires author/declaration approval, never inferred"},
+  "stop":"Finish paper; no next dataset audit, competition or rescue"
+}

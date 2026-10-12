@@ -1,0 +1,3 @@
+# Final Limitations Report
+
+Originalv1numerical gates failed;v2R2FAIL/DATA_INSUFFICIENT;originalR3NOTEXECUTED. No external scientific validation. Developmentdataexposed, n9patients. Fullnulls incomplete. Selectinglowcomplexityone-SEmodels and reportingrawmaxima answersdifferentquestions. Commonoffsetridge.01 differsstrongestbaseline.001. Tractablecontinuityisdeterministicrecurrence,notPLDS. Nominalcomplexitynotrank;optimizerconvergencenotglobaloptima. ClinicalSUA/MUA/sourcecuration/dropoutlimitationspersist. Authors/funding/competinginterestsunprovided;submissionreadinessrequiresapproval. MANUSCRIPT_COMPLETE nevermeans SCIENTIFIC_VALIDATION_PASS. No newscience/search/rescue authorized.
