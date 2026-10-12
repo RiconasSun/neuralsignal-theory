@@ -1,0 +1,74 @@
+{
+  "allowed_output_probe": {
+    "child_appcontainer": true,
+    "created": true,
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "dacl_probe": {
+    "child_appcontainer": true,
+    "created": true,
+    "exit_code": 5,
+    "timed_out": false
+  },
+  "environment_name_whitelist": [
+    "APPDATA",
+    "COMSPEC",
+    "LOCALAPPDATA",
+    "PATH",
+    "ProgramData",
+    "SystemDrive",
+    "SystemRoot",
+    "TEMP",
+    "TMP",
+    "USERPROFILE",
+    "WINDIR"
+  ],
+  "filesystem_probe_pass": true,
+  "final_holdout_evaluated": false,
+  "final_values_exposed_to_analysis": false,
+  "host_positive_reads": true,
+  "key_probe": {
+    "child_appcontainer": true,
+    "created": true,
+    "exit_code": 1,
+    "timed_out": false
+  },
+  "mandatory_isolation_pass": true,
+  "native_launch_succeeded": true,
+  "native_profile_created": true,
+  "network_and_scientific_runtime_verified": true,
+  "profile_cleanup_hresult": "0x00000000",
+  "profile_creation_hresult": "0x00000000",
+  "python_runtime_probe": {
+    "child_appcontainer": true,
+    "created": true,
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "runtime_canary": {
+    "aead_roundtrip_pass": true,
+    "custodian_memory_access_denied": true,
+    "dacl_regrant_denied": true,
+    "isolation_runtime_pass": true,
+    "key_read_denied": true,
+    "network_denied": true,
+    "network_status_code": 10013,
+    "runtime_imports_pass": true,
+    "source_read_denied": true,
+    "synthetic_only": true,
+    "versions": {
+      "h5py": "3.16.0",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1"
+    }
+  },
+  "source_full_session_decoded_by_custodian": false,
+  "source_probe": {
+    "child_appcontainer": true,
+    "created": true,
+    "exit_code": 1,
+    "timed_out": false
+  },
+  "synthetic_only": true
+}

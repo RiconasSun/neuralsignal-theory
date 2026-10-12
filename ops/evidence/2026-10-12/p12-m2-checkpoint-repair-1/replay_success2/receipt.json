@@ -1,0 +1,128 @@
+{
+  "checks": [
+    {
+      "command": [
+        "powershell",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper12_transport1\\reproduce.ps1",
+        "-Python",
+        "C:\\Users\\85993\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe"
+      ],
+      "exit_code": 0,
+      "log": "check_00.log",
+      "sha256": "49efc62fd222b467f08212ed27de62b19104ba873b1c2d15ce4a4a62882e524a"
+    },
+    {
+      "command": [
+        "C:\\Users\\85993\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper12_checkpoint1",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "check_01.log",
+      "sha256": "acc1c778efbaae98dddac21863686549fe6f61b71e8903c99e01da0482a8a549"
+    },
+    {
+      "command": [
+        "C:\\Users\\85993\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper12_checkpoint1\\gate.py"
+      ],
+      "exit_code": 0,
+      "log": "check_02.log",
+      "sha256": "4f64211012f170b006af70b146ce29b40861151c401d7bf6313ba9159fbfeb2d"
+    },
+    {
+      "command": [
+        "C:\\Users\\85993\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper12_checkpoint1\\tables.py"
+      ],
+      "exit_code": 0,
+      "log": "check_03.log",
+      "sha256": "c970cb57ac7e0d6c3d2ebd689f23d58c20fd3594db232118b267c5268fcfe407"
+    },
+    {
+      "command": [
+        "C:\\Users\\85993\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper12_checkpoint1\\native_tests.py",
+        "--replay",
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper12_checkpoint1\\replay\\run_0ce463aa45b4474f918c860a79ced7d8\\native.json"
+      ],
+      "exit_code": 0,
+      "log": "check_04.log",
+      "sha256": "6502af255453bf1b8479578f0fa6e500024318ce651e30242c5a5fb828063d15"
+    },
+    {
+      "command": [
+        "C:\\Users\\85993\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper12_checkpoint1\\isolation_replay2.py",
+        "--native",
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper12_checkpoint1\\replay\\run_0ce463aa45b4474f918c860a79ced7d8\\native.json",
+        "--output",
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper12_checkpoint1\\replay\\run_0ce463aa45b4474f918c860a79ced7d8\\isolation.json",
+        "--runtime",
+        "--quote-retry"
+      ],
+      "exit_code": 0,
+      "log": "check_05.log",
+      "sha256": "7a776d53235636ff12af147542c9683a08f86f570bc4af2635d333b449dae871"
+    },
+    {
+      "command": [
+        "C:\\Users\\85993\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper12_checkpoint1\\replay_boundaries.py",
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper12_checkpoint1\\replay\\run_0ce463aa45b4474f918c860a79ced7d8\\boundaries.json"
+      ],
+      "exit_code": 0,
+      "log": "check_06.log",
+      "sha256": "e65b09e0702a8705a302c7743b130c1886cefc5f1e88485bb2b25b21d96b985a"
+    }
+  ],
+  "end_manifest_sha256": "afa41104262a6001c204968bdcd0998a03090cfafc9a3223f23ec7735179ac44",
+  "fresh_synthetic_gate": {
+    "M3_M7_executed": false,
+    "checks": {
+      "all18_injection_oracles": true,
+      "all200_original_diagnostics_retained": true,
+      "candidate_end_hash_verified": true,
+      "exact_registered_noninjected_denominator": true,
+      "native_security": true,
+      "no_neural_access": true,
+      "old_saved_regressions": true,
+      "two_registered_native_contexts": true,
+      "zero_unexpected_operation_failures": true
+    },
+    "final_evaluation_unlocked": false,
+    "gate": "PASS",
+    "injection_test_count": 18,
+    "injection_tests_pass": 18,
+    "native_retry_denial_events": 0,
+    "neural_source_requests": 0,
+    "noninjected_operation_count": 200,
+    "original_M2_reclassified": false,
+    "original_directory_failures": 2,
+    "protected_neural_contents_read": false,
+    "real_extraction_restarted": false,
+    "scope": "Synthetic-only this Windows machine/volume; no real transport integration,science admission,neural validation or power-loss guarantee",
+    "separate_human_authorization_required_for_real_continuation": true,
+    "unexpected_operation_failures": 0,
+    "verdict": "SYNTHETIC_CHECKPOINT_REPAIR_VERIFIED"
+  },
+  "native_synthetic_replayed": true,
+  "neural_source_requests": 0,
+  "original_scientific_M2_gate": "FAIL/INCONCLUSIVE",
+  "output_namespace": "replay\\run_0ce463aa45b4474f918c860a79ced7d8",
+  "passed": true,
+  "protected_neural_contents_read": false,
+  "real_transport_or_scientific_experiments_reproduced": false,
+  "start_manifest_sha256": "afa41104262a6001c204968bdcd0998a03090cfafc9a3223f23ec7735179ac44",
+  "utc": "2026-10-12T20:41:19.640537+00:00"
+}

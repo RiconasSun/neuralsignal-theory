@@ -1,0 +1,5415 @@
+{
+  "base_registration_sha256": "b9c98fa179abea6dd002958eb86ca02665ac6c4e0656a9e8ece876878bb830f9",
+  "child_exit_code": 0,
+  "end_implementation_verified": true,
+  "implementation_registration_sha256": "b9a3311b0c60be0421a3e5f19931e1ddcb8dc97c03b6fab969e8a68ef2cbaae2",
+  "injected_tests": [
+    {
+      "expected_safe_stop": true,
+      "name": "locked_destination",
+      "native_delete_sharing_winerror": 32,
+      "native_events": [
+        {
+          "attempt": 1,
+          "native_success": false,
+          "winerror": 32
+        },
+        {
+          "attempt": 2,
+          "native_success": false,
+          "winerror": 32
+        },
+        {
+          "attempt": 3,
+          "native_success": false,
+          "winerror": 32
+        }
+      ],
+      "old_artifact_preserved": true,
+      "successful_commit_count": 0,
+      "test_pass": true
+    },
+    {
+      "error_code": "READONLY_CHECKPOINT_FORBIDDEN",
+      "expected_safe_stop": true,
+      "name": "readonly_destination",
+      "successful_commit_count": 0,
+      "test_pass": true
+    },
+    {
+      "child_diagnostic": "",
+      "child_exit_code": null,
+      "child_stdout": "",
+      "error_code": "INJECTED_ACL_DELETE_NOT_DENIED",
+      "error_type": "RuntimeError",
+      "events": [],
+      "name": "separate_ACL_denial",
+      "successful_commit_count": 0,
+      "synthetic_diagnostic_message": "INJECTED_ACL_DELETE_NOT_DENIED",
+      "test_pass": false,
+      "winerror": null
+    },
+    {
+      "expected_safe_stop": true,
+      "name": "bounded_restart_after_unlock",
+      "no_budget_reset_after_unlock": true,
+      "original_events": [
+        {
+          "attempt": 1,
+          "native_success": false,
+          "winerror": 32
+        },
+        {
+          "attempt": 2,
+          "native_success": false,
+          "winerror": 32
+        },
+        {
+          "attempt": 3,
+          "native_success": false,
+          "winerror": 32
+        }
+      ],
+      "successful_commit_count": 0,
+      "test_pass": true
+    },
+    {
+      "ACL_unchanged": true,
+      "name": "original_locked_child_directory",
+      "original_failure_mechanism_reproduced": true,
+      "successful_commit_count": 0,
+      "test_pass": true,
+      "winerror": 5
+    },
+    {
+      "expected_safe_stop": true,
+      "name": "concurrent_writer",
+      "separate_native_process": true,
+      "successful_commit_count": 0,
+      "test_pass": true,
+      "winerror": 33
+    },
+    {
+      "name": "concurrent_shared_delete_reader",
+      "native_events": [
+        {
+          "attempt": 1,
+          "native_success": true
+        }
+      ],
+      "new_complete_artifact_visible": true,
+      "old_handle_snapshot_preserved": true,
+      "successful_commit_count": 0,
+      "test_pass": true
+    },
+    {
+      "expected_safe_stop": true,
+      "name": "partial_checkpoint",
+      "partial_not_replaced": true,
+      "successful_commit_count": 0,
+      "test_pass": true
+    },
+    {
+      "expected_safe_stop": true,
+      "name": "corrupt_checkpoint",
+      "successful_commit_count": 0,
+      "test_pass": true
+    },
+    {
+      "expected_safe_stop": true,
+      "name": "missing_checkpoint",
+      "successful_commit_count": 0,
+      "test_pass": true,
+      "winerror": 2
+    },
+    {
+      "expected_safe_stop": true,
+      "name": "source_hash_consistency",
+      "successful_commit_count": 0,
+      "test_pass": true
+    },
+    {
+      "expected_safe_stop": true,
+      "name": "traversal_no_mutation",
+      "no_outside_mutation": true,
+      "successful_commit_count": 0,
+      "test_pass": true
+    },
+    {
+      "expected_safe_stop": true,
+      "name": "fatal_result_without_STOP",
+      "no_STOP_file_required": true,
+      "no_native_retry": true,
+      "successful_commit_count": 0,
+      "test_pass": true,
+      "winerror": 17
+    },
+    {
+      "idempotent": false,
+      "injected_process_exit": 97,
+      "name": "interrupt_before_publish",
+      "resume_events": [
+        {
+          "attempt": 1,
+          "native_success": true
+        }
+      ],
+      "resumed_complete": true,
+      "successful_commit_count": 0,
+      "test_pass": true
+    },
+    {
+      "child_diagnostic": "Traceback (most recent call last):\n  File \"C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper12_checkpoint1\\native_tests.py\", line 314, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper12_checkpoint1\\native_tests.py\", line 280, in main\n    commit(root,'block',b'synthetic-old',dict(dataset='synthetic',version=1),hook=lambda label,path:os._exit(97) if label==boundary else None)\n  File \"C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper12_checkpoint1\\atomic_checkpoint.py\", line 76, in commit\n    else:durable_record(identity_path,identity)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper12_checkpoint1\\atomic_checkpoint.py\", line 19, in durable_record\n    with path.open('x',encoding='utf-8',newline='\\n') as stream:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\85993\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\Lib\\pathlib.py\", line 1044, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\85993\\\\Desktop\\\\codebase\\\\neuralsignal institute\\\\paper12_checkpoint1\\\\.private\\\\run_ac7756db30db460d89f96e9986ad708a\\\\injected\\\\interrupt_after_publish_before_receipt\\\\staging\\\\block_13dd6eff9330466cb56002cc076879583eb81ddea31fd2a47f2928ca2da1fa22\\\\identity.json'\n",
+      "child_exit_code": 1,
+      "child_stdout": "",
+      "error_code": "INTERRUPTION_NOT_EXECUTED",
+      "error_type": "RuntimeError",
+      "events": [],
+      "name": "interrupt_after_publish_before_receipt",
+      "successful_commit_count": 0,
+      "synthetic_diagnostic_message": "INTERRUPTION_NOT_EXECUTED",
+      "test_pass": false,
+      "winerror": null
+    },
+    {
+      "error_code": "OUTSIDE_SYNTHETIC_STUDY",
+      "expected_safe_stop": true,
+      "name": "cross_volume_root_rejection",
+      "scope": "Other-volume root refused before I/O; no actual cross-volume move performed",
+      "successful_commit_count": 0,
+      "test_pass": true
+    },
+    {
+      "error_code": "REPARSE_POINT_FORBIDDEN",
+      "expected_safe_stop": true,
+      "name": "reparse_rejection",
+      "native_junction_tested": true,
+      "successful_commit_count": 0,
+      "test_pass": true
+    },
+    {
+      "child_diagnostic": "",
+      "child_exit_code": null,
+      "child_stdout": "",
+      "error_code": "NATIVE_WINDOWS_ERROR",
+      "error_type": "FileNotFoundError",
+      "events": [],
+      "name": "process_kill_during_commit_interval",
+      "successful_commit_count": 0,
+      "synthetic_diagnostic_message": "[Errno 2] No such file or directory: 'C:\\\\Users\\\\85993\\\\Desktop\\\\codebase\\\\neuralsignal institute\\\\paper12_checkpoint1\\\\.private\\\\run_ac7756db30db460d89f96e9986ad708a\\\\injected\\\\process_kill_during_commit_interval\\\\staging\\\\block_13dd6eff9330466cb56002cc076879583eb81ddea31fd2a47f2928ca2da1fa22\\\\payload.pending'",
+      "test_pass": false,
+      "winerror": null
+    }
+  ],
+  "neural_source_requests": 0,
+  "noninjected_commits": [
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 0,
+      "passed": true,
+      "payload_bytes": 1024,
+      "receipt": {
+        "artifact_sha256": "65a8f1c762c0d0b03b906f0ccf8ddb912dcf5881666db0089917262bfde81048",
+        "attempts": 1,
+        "body_sha256": "4fbe8c29219d88b192b7e4882daf11b4676896c4f74692d1ebd446f81fa646a7",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 1,
+      "passed": true,
+      "payload_bytes": 2048,
+      "receipt": {
+        "artifact_sha256": "755bc2b7ab448f21c78ef184abb4eaf1a6fb8a04915ed8911103e8db6c0719e1",
+        "attempts": 1,
+        "body_sha256": "1a04a7788720d3ccdbbfef6973b775bcb1d1d9bcb0aaaa83e65d9b07c9d08243",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 2,
+      "passed": true,
+      "payload_bytes": 3072,
+      "receipt": {
+        "artifact_sha256": "36d4ca9b3e2638e374eeca7ce35c4fddd27fc8e7782d6c35c25ce20449fbce7a",
+        "attempts": 1,
+        "body_sha256": "93a70183d561deec0ae629d236fa8f6286428b7ee4ea01c70f3f9bd0abc7dceb",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 3,
+      "passed": true,
+      "payload_bytes": 4096,
+      "receipt": {
+        "artifact_sha256": "664386efe4f4543698e035226f02dff7437f6a75ba3dd384e4540b2956590418",
+        "attempts": 1,
+        "body_sha256": "d859ee632af197a4df746859442017e380305078b3067c2885f95a45e9b93885",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 4,
+      "passed": true,
+      "payload_bytes": 5120,
+      "receipt": {
+        "artifact_sha256": "619257721ef889043c08a459ec515d0646e6a1f33b67abb30de46f94c9847200",
+        "attempts": 1,
+        "body_sha256": "90a6fcb2fbf0a7395e148479d290426ccd2b4db19e2ea7881ae30762a42c3939",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 5,
+      "passed": true,
+      "payload_bytes": 6144,
+      "receipt": {
+        "artifact_sha256": "7f87902e5735059471ffc215bd1025cbf98880daf1fd966ff5ec39a6aad77363",
+        "attempts": 1,
+        "body_sha256": "f87eef441f8b663c697e7ad374c0a482b7c847b80b893babad5b0d2e6a3abddd",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 6,
+      "passed": true,
+      "payload_bytes": 7168,
+      "receipt": {
+        "artifact_sha256": "4dd53f9dd663372316fab4daf7176f54f591662f09cf174e0ff6e8629f241255",
+        "attempts": 1,
+        "body_sha256": "b78b3967516bc184dcd21eaeba45e2e1c705fed6cedff4250b868d4913c7ef31",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 7,
+      "passed": true,
+      "payload_bytes": 8192,
+      "receipt": {
+        "artifact_sha256": "72f48d3082db0238f9a1c8a242f2024b390964043b81f75c2205580e9ddf8f57",
+        "attempts": 1,
+        "body_sha256": "7a8f245e02b585a2a06499229f35b4c56c4b63837dd54a7c39ecc6dd3e0cc50f",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 8,
+      "passed": true,
+      "payload_bytes": 1024,
+      "receipt": {
+        "artifact_sha256": "8a00901fc010b71b1b037ebfe145fc00420e523066cc26d1faee5c99d90496e0",
+        "attempts": 1,
+        "body_sha256": "363a95c3e9546ab3b83e86071afc29c869644e897d26b26577333309a62349fb",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 9,
+      "passed": true,
+      "payload_bytes": 2048,
+      "receipt": {
+        "artifact_sha256": "050b8ad4462a48620f4d34885983b60fed657e0df0d86d782171c692de10be21",
+        "attempts": 1,
+        "body_sha256": "6940d35dc133ca15309dca7d39a704cbef3a3c3169dd50fb307382896cd86ff2",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 10,
+      "passed": true,
+      "payload_bytes": 3072,
+      "receipt": {
+        "artifact_sha256": "22629c6ea1b8140f86a35f0a09a1c949498d60605ebf38257a0445ed7923e3a4",
+        "attempts": 1,
+        "body_sha256": "cfc00bdd794a9413528954f3a31b1d6fb8d9509e3aa7af33c71c0e999bf45f19",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 11,
+      "passed": true,
+      "payload_bytes": 4096,
+      "receipt": {
+        "artifact_sha256": "5186aeb880546e9d3560d9e164c1376101ae45da39a37e1ccef84ce7f3f8b309",
+        "attempts": 1,
+        "body_sha256": "7dc1e4389af841aae17187c9b7732d7124228449769943e74204bf8c502e0715",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 12,
+      "passed": true,
+      "payload_bytes": 5120,
+      "receipt": {
+        "artifact_sha256": "b3ab5fe1b1c85006129c173533b557c6635dfe6db9f3d419407ef477ba2a1304",
+        "attempts": 1,
+        "body_sha256": "67d9301def7bcd45f4244b33409c1bf4d16516e2ac39cc8b537e2f4a9b470b08",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 13,
+      "passed": true,
+      "payload_bytes": 6144,
+      "receipt": {
+        "artifact_sha256": "9a0ba2b36eadc7c52a2950acd8215d0a9432993643c2c8285e108fb58985dbb9",
+        "attempts": 1,
+        "body_sha256": "26d29186969892d939ef8de65c4ca62e1c77a18868e8dd93eaf72c59d76ad35e",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 14,
+      "passed": true,
+      "payload_bytes": 7168,
+      "receipt": {
+        "artifact_sha256": "4ab7efbfc3bf810dec539a82d159c8e18fc892d9f7dd1456c9f8bfa5fdd80038",
+        "attempts": 1,
+        "body_sha256": "719ba22224e50946b9b284471b2dd8877c6d355dd9f08bc97e31afc539c8b8d4",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 15,
+      "passed": true,
+      "payload_bytes": 8192,
+      "receipt": {
+        "artifact_sha256": "c2ba4a28eb89f3d2ca123267632f2ec2e0d56221ac0c49183df1364dbea1eea9",
+        "attempts": 1,
+        "body_sha256": "b1ae899dea8be34e9fe21fb03fac0785b0707e20b665654c8c7048015fd81839",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 16,
+      "passed": true,
+      "payload_bytes": 1024,
+      "receipt": {
+        "artifact_sha256": "7f5382624e1ce0401f4048634501036d395b845dfb981e841e8d37f354fb2a58",
+        "attempts": 1,
+        "body_sha256": "d8ccec6bd169503ca48e85a77b748c38de07272b7f665598a6ae736939f0f684",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 17,
+      "passed": true,
+      "payload_bytes": 2048,
+      "receipt": {
+        "artifact_sha256": "397234275c89c87305fc9d7b3ddf639def1f295bfa9a9dffff781953a618eb1a",
+        "attempts": 1,
+        "body_sha256": "692bf6f36ceb8a50869eb9dbf35443f1c458628d32503b6b10a8d1ff2e74d9ad",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 18,
+      "passed": true,
+      "payload_bytes": 3072,
+      "receipt": {
+        "artifact_sha256": "78289497b6a9980fd3611711dd65cf1fd8d2a54c1094c24f7ae9827c117c0395",
+        "attempts": 1,
+        "body_sha256": "03152f4b279af5766909b2c18303a7229ce1dacb157a7ea230349db030f52cf6",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 19,
+      "passed": true,
+      "payload_bytes": 4096,
+      "receipt": {
+        "artifact_sha256": "129b23bd62005337bc717304ab874fc3d115a59faa767b3912ae4d7c57d99b3f",
+        "attempts": 1,
+        "body_sha256": "22a78967ccf73ed4f92aaa90f2262d95e0ee54db03342dcece3ce2ea0529f25c",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 20,
+      "passed": true,
+      "payload_bytes": 5120,
+      "receipt": {
+        "artifact_sha256": "65f4b9343a8ff607af0a92355c475259f4842e6043e8164b6abcd690a7bc25d0",
+        "attempts": 1,
+        "body_sha256": "dd344cd1829cdc50d6d6a0521735b4454dccc81aabd28243a7ddd36ffd56c729",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 21,
+      "passed": true,
+      "payload_bytes": 6144,
+      "receipt": {
+        "artifact_sha256": "8a5cd8e641fbf54909f70707e74d1e3462cbf33e0b19c1223ba3fe0a4d20494a",
+        "attempts": 1,
+        "body_sha256": "05990257eb07806612b4d5e3ca86c8aca44fa422adbbffcb401b3b2473b56a87",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 22,
+      "passed": true,
+      "payload_bytes": 7168,
+      "receipt": {
+        "artifact_sha256": "fd9a90b4648cb18ee03b2f6dc69c5496ed97218727e9761ef22767f6c3bf9480",
+        "attempts": 1,
+        "body_sha256": "3cce8f10626a6d7e06dbeb48edd3afd40f85a49e084a1c0ad5b7346c5b231481",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 23,
+      "passed": true,
+      "payload_bytes": 8192,
+      "receipt": {
+        "artifact_sha256": "81746618a4007600d2921d951f9109d1fff750cdcd038025c9276380278d682b",
+        "attempts": 1,
+        "body_sha256": "851ee86bb3f33c4c4667e36287eb33eedf81b18b415beb88f85477080e77967f",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 24,
+      "passed": true,
+      "payload_bytes": 1024,
+      "receipt": {
+        "artifact_sha256": "851f0cbddd93cad141b5fffdb2d15616cef908ed24055437586dbe6c07e30768",
+        "attempts": 1,
+        "body_sha256": "739ee7f235f079dbfcc7023245936bda53e9fcf04e107125cb783dbabee91c30",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 25,
+      "passed": true,
+      "payload_bytes": 2048,
+      "receipt": {
+        "artifact_sha256": "8f712ea43f5538297b502086095bc44e3c8e182d692c9031b7fad955b5f82eeb",
+        "attempts": 1,
+        "body_sha256": "c7f74896786cbf996a4e5e9fa0c79b94da63da0d69b5d74a4ccd1342fe20c70f",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 26,
+      "passed": true,
+      "payload_bytes": 3072,
+      "receipt": {
+        "artifact_sha256": "6f6642ad9f6d1686e71b23fda34f92f2932fd9c84a38061e45a0e1931068c5a8",
+        "attempts": 1,
+        "body_sha256": "59fbdb1314c3d61f3ad212737f678561e3aefd4193e065fa4002ca260afcd652",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 27,
+      "passed": true,
+      "payload_bytes": 4096,
+      "receipt": {
+        "artifact_sha256": "34fba5d597a564460a2d0c3b9aa860f706bf23190fa2bab36c679729e8a34166",
+        "attempts": 1,
+        "body_sha256": "af9293202a608728ae9028f1931a4d7bdcfc6fc68d5ae55b403dc87a8c45c358",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 28,
+      "passed": true,
+      "payload_bytes": 5120,
+      "receipt": {
+        "artifact_sha256": "fe7725f28a767b9a129cef1ddb28fcb9b92c50244e500658670e74adb218f917",
+        "attempts": 1,
+        "body_sha256": "2cb3c51a179cc7bf6ed34dcbebc3bbea05cdf69d3c97b784e9bfdafc4dbe753b",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 29,
+      "passed": true,
+      "payload_bytes": 6144,
+      "receipt": {
+        "artifact_sha256": "f74307fd3d4c850ac674ac6ca241a12f61a4b8899f74cec79969e5fe9a129a54",
+        "attempts": 1,
+        "body_sha256": "c72bc119bba77ae79768ec60550a2fbee731913ebc6f83c8acce98335a7ceea5",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 30,
+      "passed": true,
+      "payload_bytes": 7168,
+      "receipt": {
+        "artifact_sha256": "434f151b89d1d57d0ccfac397379645562514c6609091c523a97f1bcec095f84",
+        "attempts": 1,
+        "body_sha256": "dfdaf3f7bf6b7a7a367c40fa808c74d3a96e0220e80d07b63d0de9f80ea9ce87",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 31,
+      "passed": true,
+      "payload_bytes": 8192,
+      "receipt": {
+        "artifact_sha256": "fa551a73b689d16478a27dccbcdb5bad3840a87c2cdeebc807629200e97e112c",
+        "attempts": 1,
+        "body_sha256": "94783dd3bf73e2cbb9f98c536483ae57a484fb0c3c556fe09fb445722faa0198",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 32,
+      "passed": true,
+      "payload_bytes": 1024,
+      "receipt": {
+        "artifact_sha256": "043c14f542c2542f27c59dbadac4222ea5600648b53b1500ff86d4f32b2963e9",
+        "attempts": 1,
+        "body_sha256": "8b69ef846c354306413d788f33c7a7b127aca1fe4cbda85fad4199882c2b697a",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 33,
+      "passed": true,
+      "payload_bytes": 2048,
+      "receipt": {
+        "artifact_sha256": "bb363e71901a4860de47e6c90c145841ca4d4373b99a6af293353086f0730584",
+        "attempts": 1,
+        "body_sha256": "a84d57dca753bfa42256361a337616a094d92889c66cfd6ddd9bbbf68633ac0c",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 34,
+      "passed": true,
+      "payload_bytes": 3072,
+      "receipt": {
+        "artifact_sha256": "2a71abb9e2935a621ac35ab5dedbb53989ffc8b47c83bb6629f25fd2c3e2eddd",
+        "attempts": 1,
+        "body_sha256": "f84725c9c0fa808e4f7b9acbd0c20a05f7eafac182af8ed6b083ccda188fc091",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 35,
+      "passed": true,
+      "payload_bytes": 4096,
+      "receipt": {
+        "artifact_sha256": "ad7ab76f153405bde1eba62cf071afa87076e1c9bdd5e6d490bb5e63b76dbc5f",
+        "attempts": 1,
+        "body_sha256": "95c2b8e549dd28334c2308ef488912ea7cc9e1834a1a0dae9d94f3619c15492a",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 36,
+      "passed": true,
+      "payload_bytes": 5120,
+      "receipt": {
+        "artifact_sha256": "285a91f7ebdd4b3aa07c2afcd203257ec9952a7d1fb484b295f234862cafb7b4",
+        "attempts": 1,
+        "body_sha256": "a4e2fa3477f30fb1a4e93c8fccb4325d9b7b8f9e9affd8725d9b59e0a92b6cfc",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 37,
+      "passed": true,
+      "payload_bytes": 6144,
+      "receipt": {
+        "artifact_sha256": "829dc739504fccdb79f9282f84df0a214ef815c0b7960525d8194b81dc44e38c",
+        "attempts": 1,
+        "body_sha256": "a7e65b8c78d2d374b0516e088caf77496e1344ba5f4bdebc498de10f5ad57c3c",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 38,
+      "passed": true,
+      "payload_bytes": 7168,
+      "receipt": {
+        "artifact_sha256": "eb7113574c6f5ca82a6a1f9a138ec5388932483ad5550abcd96303dcaaeb85c8",
+        "attempts": 1,
+        "body_sha256": "f0b656d4eff93eba76e38e4713a73e27f08da498393edc54546e6b51c8ce4995",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 39,
+      "passed": true,
+      "payload_bytes": 8192,
+      "receipt": {
+        "artifact_sha256": "645af59fbea546cc2af6398151e9c10e82e339bdece2dc4b39419671e264cbc6",
+        "attempts": 1,
+        "body_sha256": "990dd0bf8dd2255c79b198f21a7619345978f87de7c1283493af2004c32f4c36",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 40,
+      "passed": true,
+      "payload_bytes": 1024,
+      "receipt": {
+        "artifact_sha256": "df6d41c5a5c112540060c7d4339dd1376e95ad9bb9654f0ae2f2f9584f3c770c",
+        "attempts": 1,
+        "body_sha256": "ed10980c10e0110130171c40f22d3970e4231f56af9505090e778aaff0a73001",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 41,
+      "passed": true,
+      "payload_bytes": 2048,
+      "receipt": {
+        "artifact_sha256": "38a48211959006ab77806ac9bc860ef3e3235e41f185427f6f928a0ddd7d5d68",
+        "attempts": 1,
+        "body_sha256": "e52af5a01e54c8e64bbc50f3652f44dc08bc1a230e2e3a5f9579bc9a5672790a",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 42,
+      "passed": true,
+      "payload_bytes": 3072,
+      "receipt": {
+        "artifact_sha256": "8ac697ef42da4d1ae52d1954bd427256b3a5fac66b90efa548b20afa3a883788",
+        "attempts": 1,
+        "body_sha256": "dc0ba84cd39edcaf82bba9300c1508858b6f85dc77a2cd272624a72f53fc27ae",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 43,
+      "passed": true,
+      "payload_bytes": 4096,
+      "receipt": {
+        "artifact_sha256": "91193c4da6f86da0a906c44b199546042e30b13f070c06c0bf8b1302e78fcb9e",
+        "attempts": 1,
+        "body_sha256": "b06776af7a5b7d7a4997058cd1c5c21f6f210bf388f68b7c3da4868a351721c9",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 44,
+      "passed": true,
+      "payload_bytes": 5120,
+      "receipt": {
+        "artifact_sha256": "c33e202d5b891ad0196bd7cf61e0f767afa13d6266dd44519fb5c38aeaf0a451",
+        "attempts": 1,
+        "body_sha256": "5425f05dc8f28ecec7d85dc4f792f2df4f025ebac320c2759c25c7f9b186685c",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 45,
+      "passed": true,
+      "payload_bytes": 6144,
+      "receipt": {
+        "artifact_sha256": "c00a35e222364bb6c26294089f93a55480c2a895d0a6930dcf2e0191950ef874",
+        "attempts": 1,
+        "body_sha256": "1348c06d741e10adab99f4fce7b38e965044cb5c020c18385e5f31a39aba593e",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 46,
+      "passed": true,
+      "payload_bytes": 7168,
+      "receipt": {
+        "artifact_sha256": "a7194a93e5342090c98e0a2a7f824b95f6175383b7a14c1345b4140ed1d93411",
+        "attempts": 1,
+        "body_sha256": "6c407111c7308bd5828cdfcfc4d3689b93a2776477348a6dcd13a5e36e42998a",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 47,
+      "passed": true,
+      "payload_bytes": 8192,
+      "receipt": {
+        "artifact_sha256": "8844074729884227a83b9ed90b42c902fe3ba169edee9f5f32ebeaac2644a714",
+        "attempts": 1,
+        "body_sha256": "ea3926e7fab1ef78877421b02365f5fb6f8697a34755817e725052edd4c0f188",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 48,
+      "passed": true,
+      "payload_bytes": 1024,
+      "receipt": {
+        "artifact_sha256": "7f09c5095b321ff489e4972834aa88e26e237d0d8d02565985f79c371ed3033e",
+        "attempts": 1,
+        "body_sha256": "eb29e97172661f1fd706808eb26a919ac6786ee528d63b9d951ea9fac298ae1f",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 49,
+      "passed": true,
+      "payload_bytes": 2048,
+      "receipt": {
+        "artifact_sha256": "d29b29691b9b01f69ca1597ff9c4d33cf2ea1b6be139ab1bc29834e54556be1b",
+        "attempts": 1,
+        "body_sha256": "6532ab85c9fa5c1e7a717466fdf19ec97d14b4b485cc0581db08efde58a3fba2",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 50,
+      "passed": true,
+      "payload_bytes": 3072,
+      "receipt": {
+        "artifact_sha256": "bb3ee6e8595cabba757020c188d8801baa23420c1bbdad49b251031b7f0d48f2",
+        "attempts": 1,
+        "body_sha256": "28acc6ccba99ac6dc6ee6742a155e00e804baa0455b6851814c983f25fa2d9fc",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 51,
+      "passed": true,
+      "payload_bytes": 4096,
+      "receipt": {
+        "artifact_sha256": "038bf07c70814def931444510f793a6a8f5519cfdf363c6003fc670cf2385090",
+        "attempts": 1,
+        "body_sha256": "2a8eb0293e456f2837581f367890178071c182ea640777825da607b3fe5c82ff",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 52,
+      "passed": true,
+      "payload_bytes": 5120,
+      "receipt": {
+        "artifact_sha256": "5c9a22e78da8553c571124c9e2b5b0ec286d0d888a90055c5cb25c4c9258b0d2",
+        "attempts": 1,
+        "body_sha256": "0aca9aea5de7394ace5f27d90e2e2dc616873baaf56543935943e9a3ae717f76",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 53,
+      "passed": true,
+      "payload_bytes": 6144,
+      "receipt": {
+        "artifact_sha256": "6972d3ed3fac8b672abbc0336ad931647df5781e40035f0730ced80db5697d65",
+        "attempts": 1,
+        "body_sha256": "cbb7991a046e9d223b0226947282b9613b89b5f10e530c3dc9d59ef71e2c5116",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 54,
+      "passed": true,
+      "payload_bytes": 7168,
+      "receipt": {
+        "artifact_sha256": "3b1543758c5bc7c7571ba85c23ec293e71ad6126ec2cb1f5ecf5ad3579a0b12b",
+        "attempts": 1,
+        "body_sha256": "3803324d1bb5ddd8684aaee808fe49658e32e8c53d68dd86372e275628b60cee",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 55,
+      "passed": true,
+      "payload_bytes": 8192,
+      "receipt": {
+        "artifact_sha256": "13b26251718ef75ea6cab0279c545ccc1d8259a480a19300709e4f0660b45af2",
+        "attempts": 1,
+        "body_sha256": "3f343efd87005447748f35c21a3638e540b53c6faf2d6a22634bc65a9540ce5a",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 56,
+      "passed": true,
+      "payload_bytes": 1024,
+      "receipt": {
+        "artifact_sha256": "df5663873d5cba7332d4ac758d4edcfc67cf3f02c12064f9d7f60a4edd6a6500",
+        "attempts": 1,
+        "body_sha256": "2c99c7526db71527295c6afaff5fa6be214c565b4e099ff9af83f996f4191b5a",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 57,
+      "passed": true,
+      "payload_bytes": 2048,
+      "receipt": {
+        "artifact_sha256": "fc9f54559b1708225ad9c852e64dcdff3876ac4398ba50adb671f67aa8d9a6d3",
+        "attempts": 1,
+        "body_sha256": "d27df3456a0ec1e6d27926ab7391f0b9e4374e5cf820aa583c749bbe802fcbea",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 58,
+      "passed": true,
+      "payload_bytes": 3072,
+      "receipt": {
+        "artifact_sha256": "293a26308348b7634418344f776fc114bfc890f993898fc4de691bc324161ef7",
+        "attempts": 1,
+        "body_sha256": "5130d023db3287e0b7b50ace3dfa54a1664a70f87c46cc5925ce607474f56ad8",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 59,
+      "passed": true,
+      "payload_bytes": 4096,
+      "receipt": {
+        "artifact_sha256": "972233a6fa6b83a3830e9a2cbf640fdc41c166e2a48f0f9007d70c33f4ab0b91",
+        "attempts": 1,
+        "body_sha256": "ee505c5fc5fc39f08bb8366b98519f9f0c994150cea0b1d77d381850d05483e8",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 60,
+      "passed": true,
+      "payload_bytes": 5120,
+      "receipt": {
+        "artifact_sha256": "f28624f956ce01be9f4d757c90b36e37fca5e64ab9d36d1703a75d1f71b4d3a6",
+        "attempts": 1,
+        "body_sha256": "7c4af0b47c266675e7a759ebbf8f1c63c697c62ebf2901bb27d1044a001788c6",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 61,
+      "passed": true,
+      "payload_bytes": 6144,
+      "receipt": {
+        "artifact_sha256": "02797b07906c49339fde201db5fc2fe1d76663ac7b26b60876bf1ad31b5f2987",
+        "attempts": 1,
+        "body_sha256": "b8500a0115cdc458364551e574d2278f7d9fad75bde558d62fa179c0e900e292",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 62,
+      "passed": true,
+      "payload_bytes": 7168,
+      "receipt": {
+        "artifact_sha256": "aa7e2045d6269fc1d5a48e55c535fd39713d6536c55d1a85cdd7d551ff553797",
+        "attempts": 1,
+        "body_sha256": "00b49f2b2e06d47c0495714aeffd1e0eb904f5915f4b98106abcebe7d9b07557",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 63,
+      "passed": true,
+      "payload_bytes": 8192,
+      "receipt": {
+        "artifact_sha256": "789ec9f655f9faf4a90ef29138b3958df6e9a9262c303d2d339e75ccb2988393",
+        "attempts": 1,
+        "body_sha256": "ebeefc1a6c3b3d1d2035c5e5733af0f5760be1212fa7961c76061a16342a6316",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 64,
+      "passed": true,
+      "payload_bytes": 1024,
+      "receipt": {
+        "artifact_sha256": "059426c68e8550c75cac54ef1f9ad5a2b591c224a71eefba5f042509476ec416",
+        "attempts": 1,
+        "body_sha256": "1d9e8eac29979282a59d5bc7de7636c49666eb8a9fd60314e0556ef05ae79c0a",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 65,
+      "passed": true,
+      "payload_bytes": 2048,
+      "receipt": {
+        "artifact_sha256": "e7887c4238cfebf1ab0ae6e782b9eb46e76525d47e4cc6a449154016121f4544",
+        "attempts": 1,
+        "body_sha256": "9fad42dde92e101f718672e64e9ebecbe3ce796039bb0214d1b4b528a9db377d",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 66,
+      "passed": true,
+      "payload_bytes": 3072,
+      "receipt": {
+        "artifact_sha256": "8697a4f4a42e10a16e9990dbbfca16a674abf052f843716fd4b3bf9fa8d24981",
+        "attempts": 1,
+        "body_sha256": "f538240013d5fe88c2a006f27c294202c81b088a32ebba80952a1b62ef85487a",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 67,
+      "passed": true,
+      "payload_bytes": 4096,
+      "receipt": {
+        "artifact_sha256": "275bea7661f66a024823d63340afd139179f276a8bddf97d0c34cd57d6c09c65",
+        "attempts": 1,
+        "body_sha256": "888b4f92cd4eb4e363b57e5e21a01aed17497cab98a3868969e4a787427b8892",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 68,
+      "passed": true,
+      "payload_bytes": 5120,
+      "receipt": {
+        "artifact_sha256": "fa3f4961ff129bee5bab208a16b2710f40722aeb8702b55309df2d49d416180c",
+        "attempts": 1,
+        "body_sha256": "0c33627d21308a83286ba0d06a5a9c692ce44291d1553bd79b8264a625d4dd57",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 69,
+      "passed": true,
+      "payload_bytes": 6144,
+      "receipt": {
+        "artifact_sha256": "f5a28cc39db856675eb518e7b3796cc1e304fb41648e72a685b68e35592287d6",
+        "attempts": 1,
+        "body_sha256": "3be5f6300db1ec303ee390c170f4140dc5144241c65f22ad6fb4f1e1fd2d7f30",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 70,
+      "passed": true,
+      "payload_bytes": 7168,
+      "receipt": {
+        "artifact_sha256": "43b46edd142f810e701fc4989780c68d7a0832bef1dc8f05ec737efa0e258dea",
+        "attempts": 1,
+        "body_sha256": "de3ffe5d640809ea2c5071350d8971cde2c71129124463491d5dc3db15c786d2",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 71,
+      "passed": true,
+      "payload_bytes": 8192,
+      "receipt": {
+        "artifact_sha256": "a39569bf1121e018a8ec9863297a8ca53ed737ae170b899c798f1c167fa297ee",
+        "attempts": 1,
+        "body_sha256": "ab8eb8ff473011958f0442cfd1c5d668212a568bc37cef011dc2000c484b7945",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 72,
+      "passed": true,
+      "payload_bytes": 1024,
+      "receipt": {
+        "artifact_sha256": "f90efc4d6b7efab2c2deb142a164e2561f1589d0f991e819b168ec6710716303",
+        "attempts": 1,
+        "body_sha256": "5a00e7119f253196cc32589bd8d86a093e368863270c4aa134d7131825c65cb2",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 73,
+      "passed": true,
+      "payload_bytes": 2048,
+      "receipt": {
+        "artifact_sha256": "3901d61a2ea92ec3a1a56948a49e83746eec7f7762eaa49db08b6d6cc0eb5e84",
+        "attempts": 1,
+        "body_sha256": "4e0b8d963e5d553fe549dc9a3139fc8acd334aec7cdf9aaf1ab56dc7944cf5d5",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 74,
+      "passed": true,
+      "payload_bytes": 3072,
+      "receipt": {
+        "artifact_sha256": "da1c8fee397545397e11d8cf7c7ea3cedd0d2c68e73115c7fd93076e43db66fd",
+        "attempts": 1,
+        "body_sha256": "88b40dd8b8f02422ffdaea721911d41e9e4a3e36448dfa839e9cb910c4086604",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 75,
+      "passed": true,
+      "payload_bytes": 4096,
+      "receipt": {
+        "artifact_sha256": "66c87185328bcfc630df4b6d0647fa2ced556a42167a9d7d19b8608d6dc35442",
+        "attempts": 1,
+        "body_sha256": "d1ebf309e5403aee0a26005d8ee63c49f591d05fd6c6d2579be7b578560e4056",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 76,
+      "passed": true,
+      "payload_bytes": 5120,
+      "receipt": {
+        "artifact_sha256": "1b5bc6b104e4c02b5da6855f9695afe57797ad899beec4ebd8dce6db6aa2350e",
+        "attempts": 1,
+        "body_sha256": "b3dd278310c3d5c0d698318d173c22eb0fefc75ddf016db95e4eb604efc9dbf5",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 77,
+      "passed": true,
+      "payload_bytes": 6144,
+      "receipt": {
+        "artifact_sha256": "56838a953438939787a75c4c66e8f867d6ba7a5dae749a22b5f1d624e7d077a4",
+        "attempts": 1,
+        "body_sha256": "4658e0c3293a1b73c550cad0dfd8d1dee8b59664f9c289723f53b7602bd4118c",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 78,
+      "passed": true,
+      "payload_bytes": 7168,
+      "receipt": {
+        "artifact_sha256": "ba595d05f009cbd5f2281a8a353d994b3985a62056b99e14c4149815c4b7f01d",
+        "attempts": 1,
+        "body_sha256": "a0f759bfc38ded1968b714047193e9d5a497d0c5427959d4b48722ae6e539853",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 79,
+      "passed": true,
+      "payload_bytes": 8192,
+      "receipt": {
+        "artifact_sha256": "635a4628ca11e08242f31435a35d275c4c78293a3af4a0cfa5aee11eef9c9afe",
+        "attempts": 1,
+        "body_sha256": "4dfb8fdd37ea50056a891cd10e3f8d984ad408c36afbac117e34e2c73ec98628",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 80,
+      "passed": true,
+      "payload_bytes": 1024,
+      "receipt": {
+        "artifact_sha256": "dc2aaf236162a7ddd3a833fe1bd2572c533086bf3669a58f9fcf4f4b129e7a87",
+        "attempts": 1,
+        "body_sha256": "47a39b87c9fd7950921ea947bf7de784779735f44806fde5e94041e81aa16770",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 81,
+      "passed": true,
+      "payload_bytes": 2048,
+      "receipt": {
+        "artifact_sha256": "b61ebc2becbcb23fffd1aa39af28865d90053c784a0c2477b299cd0861d4c6fd",
+        "attempts": 1,
+        "body_sha256": "2b83f49ca81d0c6d07dfa7cf9284ffc6737125b5d769c852679fe9843b12cd61",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 82,
+      "passed": true,
+      "payload_bytes": 3072,
+      "receipt": {
+        "artifact_sha256": "8a4ae592c421eaaa4b3bcec6b14cf2fa3ce24e0affff8d04cbd53f91b234b1bd",
+        "attempts": 1,
+        "body_sha256": "7575a06a37cdca617baef177a9a2ec36589e021d5ddcb9aa8569dfea4e10a8d4",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 83,
+      "passed": true,
+      "payload_bytes": 4096,
+      "receipt": {
+        "artifact_sha256": "378c4305017e7a0af4ed8b8f127d388f441089032e14dcf1021a859532a94990",
+        "attempts": 1,
+        "body_sha256": "4b3da2e7fbffbc2cab851654336f04880f511d16b680f13251d73837d5d1fd12",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 84,
+      "passed": true,
+      "payload_bytes": 5120,
+      "receipt": {
+        "artifact_sha256": "3e085c4d9387f6ed4f1c893aa41be8700671f623ddb85e60a406ea105ee091d3",
+        "attempts": 1,
+        "body_sha256": "002ef5d86d08c03a731ce4153516f1e5b85ad5fe0f0b31b65967dd9204069dd6",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 85,
+      "passed": true,
+      "payload_bytes": 6144,
+      "receipt": {
+        "artifact_sha256": "42cda5e7640fb9c8e3cfc12120a2cd1837d60719487892e6711978970680634e",
+        "attempts": 1,
+        "body_sha256": "9c70521a2929cdd6decc708c86b1d2b87dd0a62abebffd6cb43206cfba00d8f8",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 86,
+      "passed": true,
+      "payload_bytes": 7168,
+      "receipt": {
+        "artifact_sha256": "7f5da64be321b99f27913f4662666175085903293bee82a6d2d940157453795f",
+        "attempts": 1,
+        "body_sha256": "05e2b03a1307e1de67101680f5142545006901bd337a18e0317f37ce868570ca",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 87,
+      "passed": true,
+      "payload_bytes": 8192,
+      "receipt": {
+        "artifact_sha256": "260bacf8e7d400e80e24ef6d14beb2328feba5f320ef14d7c038986a2db315cb",
+        "attempts": 1,
+        "body_sha256": "f4f6d938fb352c562706978fa49c6ee4d606dbdfd84416f5d0382f5bc80c84dc",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 88,
+      "passed": true,
+      "payload_bytes": 1024,
+      "receipt": {
+        "artifact_sha256": "8f04c437525afa4af2568c5de1579cf016ebbc1c5e80e344c9b40f7b34427ffb",
+        "attempts": 1,
+        "body_sha256": "c4f78bd0c736d1b4be56e12e37a2d5b19b73918162bdf9d3fe21cda980274f80",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 89,
+      "passed": true,
+      "payload_bytes": 2048,
+      "receipt": {
+        "artifact_sha256": "447a2f7bccbc94a6af3cbfe75c3ccb406828f18e501287e4e4ca1e802ddcb8b7",
+        "attempts": 1,
+        "body_sha256": "183b653ba0461eae57d0d349ca7a7ae7089d8deb62693122422ed51c6c333987",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 90,
+      "passed": true,
+      "payload_bytes": 3072,
+      "receipt": {
+        "artifact_sha256": "19085d0b6d8b1da16e3ce9e5f7e2d513996c879e431f25d960aa307fe6b020c6",
+        "attempts": 1,
+        "body_sha256": "230af9296572f4c824838d4a831de5708fd78b10b7deaac2cccfcfd1264cc65b",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 91,
+      "passed": true,
+      "payload_bytes": 4096,
+      "receipt": {
+        "artifact_sha256": "8ffba239b1213888184f6fc417664fb36f5611b79335c8c76da68b85a01cd6cf",
+        "attempts": 1,
+        "body_sha256": "9cf5b4fc25efe338ad019e7233de54395354af53f89bf896c35daeac9fa3e9ed",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 92,
+      "passed": true,
+      "payload_bytes": 5120,
+      "receipt": {
+        "artifact_sha256": "e2135bf4067536bd3f5b72c910030b0e85a2236fe5649e8c8895b87eed2395a0",
+        "attempts": 1,
+        "body_sha256": "a61b6cf7f584b019f52a28e8c787a3d45e5121796bc66b6ea57141a67cd8b0c0",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 93,
+      "passed": true,
+      "payload_bytes": 6144,
+      "receipt": {
+        "artifact_sha256": "be9d94bbd6eeb4fc424a0f0375da15d3152817f22dfcd70761e0531a54a8924f",
+        "attempts": 1,
+        "body_sha256": "c268f3f7de7a79378f3916204e66cd0692bd4f964fb07c14c859dc812d969e99",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 94,
+      "passed": true,
+      "payload_bytes": 7168,
+      "receipt": {
+        "artifact_sha256": "18274f4ccf6c16cc841d7c9d6f22aac3d921d49d93539a9191bb14d1ae4fce9b",
+        "attempts": 1,
+        "body_sha256": "e6e39fb3bdb8c4af9dc6706ea56c9ff20a3234bf009470dfffb9fcaeaf8a77da",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 95,
+      "passed": true,
+      "payload_bytes": 8192,
+      "receipt": {
+        "artifact_sha256": "38e1058808052314df01209d9ce02712d55e59beb5b2113a71d09ce564a71566",
+        "attempts": 1,
+        "body_sha256": "5965a104b112031b9cb1338106c0c96c48a368875132d3bc96edb1731da6122b",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 96,
+      "passed": true,
+      "payload_bytes": 1024,
+      "receipt": {
+        "artifact_sha256": "08a113e3f9d52e7cd7e795742eeedd5df4869aaa3f2c9cf2a3df46cf875ca6ca",
+        "attempts": 1,
+        "body_sha256": "cedd899468ea1939b5c890c0bbbecd92831a8541bc149b347e469928347197d3",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 97,
+      "passed": true,
+      "payload_bytes": 2048,
+      "receipt": {
+        "artifact_sha256": "1edf9767ab5ccf34f8edb8bad37e676a8e82802cd3cbf1b1abb2dd0efb15da05",
+        "attempts": 1,
+        "body_sha256": "43a720f2870b6e63a8ea72659f29c3d0d9270ce86063027c336307c0c329c6c4",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 98,
+      "passed": true,
+      "payload_bytes": 3072,
+      "receipt": {
+        "artifact_sha256": "d895b222caf60408cafddcd84fb20e5aa9e7034d9658273c673c22bc25dc58b5",
+        "attempts": 1,
+        "body_sha256": "ac2edfa6793be8463df1d8e7a0aadccd69570c6d6f814e03d5793a4d8e5e1149",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "trusted_host_main",
+      "idempotent_resume": true,
+      "index": 99,
+      "passed": true,
+      "payload_bytes": 4096,
+      "receipt": {
+        "artifact_sha256": "274ada16327d969c44b5429814a402492e018c011073f3b722798971490a0a21",
+        "attempts": 1,
+        "body_sha256": "b25316c9db0ceda5675603e4c776a5f03f5091386becb9edb00c9067e9db317d",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 0,
+      "passed": true,
+      "payload_bytes": 1024,
+      "receipt": {
+        "artifact_sha256": "65a8f1c762c0d0b03b906f0ccf8ddb912dcf5881666db0089917262bfde81048",
+        "attempts": 1,
+        "body_sha256": "4fbe8c29219d88b192b7e4882daf11b4676896c4f74692d1ebd446f81fa646a7",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 1,
+      "passed": true,
+      "payload_bytes": 2048,
+      "receipt": {
+        "artifact_sha256": "755bc2b7ab448f21c78ef184abb4eaf1a6fb8a04915ed8911103e8db6c0719e1",
+        "attempts": 1,
+        "body_sha256": "1a04a7788720d3ccdbbfef6973b775bcb1d1d9bcb0aaaa83e65d9b07c9d08243",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 2,
+      "passed": true,
+      "payload_bytes": 3072,
+      "receipt": {
+        "artifact_sha256": "36d4ca9b3e2638e374eeca7ce35c4fddd27fc8e7782d6c35c25ce20449fbce7a",
+        "attempts": 1,
+        "body_sha256": "93a70183d561deec0ae629d236fa8f6286428b7ee4ea01c70f3f9bd0abc7dceb",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 3,
+      "passed": true,
+      "payload_bytes": 4096,
+      "receipt": {
+        "artifact_sha256": "664386efe4f4543698e035226f02dff7437f6a75ba3dd384e4540b2956590418",
+        "attempts": 1,
+        "body_sha256": "d859ee632af197a4df746859442017e380305078b3067c2885f95a45e9b93885",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 4,
+      "passed": true,
+      "payload_bytes": 5120,
+      "receipt": {
+        "artifact_sha256": "619257721ef889043c08a459ec515d0646e6a1f33b67abb30de46f94c9847200",
+        "attempts": 1,
+        "body_sha256": "90a6fcb2fbf0a7395e148479d290426ccd2b4db19e2ea7881ae30762a42c3939",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 5,
+      "passed": true,
+      "payload_bytes": 6144,
+      "receipt": {
+        "artifact_sha256": "7f87902e5735059471ffc215bd1025cbf98880daf1fd966ff5ec39a6aad77363",
+        "attempts": 1,
+        "body_sha256": "f87eef441f8b663c697e7ad374c0a482b7c847b80b893babad5b0d2e6a3abddd",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 6,
+      "passed": true,
+      "payload_bytes": 7168,
+      "receipt": {
+        "artifact_sha256": "4dd53f9dd663372316fab4daf7176f54f591662f09cf174e0ff6e8629f241255",
+        "attempts": 1,
+        "body_sha256": "b78b3967516bc184dcd21eaeba45e2e1c705fed6cedff4250b868d4913c7ef31",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 7,
+      "passed": true,
+      "payload_bytes": 8192,
+      "receipt": {
+        "artifact_sha256": "72f48d3082db0238f9a1c8a242f2024b390964043b81f75c2205580e9ddf8f57",
+        "attempts": 1,
+        "body_sha256": "7a8f245e02b585a2a06499229f35b4c56c4b63837dd54a7c39ecc6dd3e0cc50f",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 8,
+      "passed": true,
+      "payload_bytes": 1024,
+      "receipt": {
+        "artifact_sha256": "8a00901fc010b71b1b037ebfe145fc00420e523066cc26d1faee5c99d90496e0",
+        "attempts": 1,
+        "body_sha256": "363a95c3e9546ab3b83e86071afc29c869644e897d26b26577333309a62349fb",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 9,
+      "passed": true,
+      "payload_bytes": 2048,
+      "receipt": {
+        "artifact_sha256": "050b8ad4462a48620f4d34885983b60fed657e0df0d86d782171c692de10be21",
+        "attempts": 1,
+        "body_sha256": "6940d35dc133ca15309dca7d39a704cbef3a3c3169dd50fb307382896cd86ff2",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 10,
+      "passed": true,
+      "payload_bytes": 3072,
+      "receipt": {
+        "artifact_sha256": "22629c6ea1b8140f86a35f0a09a1c949498d60605ebf38257a0445ed7923e3a4",
+        "attempts": 1,
+        "body_sha256": "cfc00bdd794a9413528954f3a31b1d6fb8d9509e3aa7af33c71c0e999bf45f19",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 11,
+      "passed": true,
+      "payload_bytes": 4096,
+      "receipt": {
+        "artifact_sha256": "5186aeb880546e9d3560d9e164c1376101ae45da39a37e1ccef84ce7f3f8b309",
+        "attempts": 1,
+        "body_sha256": "7dc1e4389af841aae17187c9b7732d7124228449769943e74204bf8c502e0715",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 12,
+      "passed": true,
+      "payload_bytes": 5120,
+      "receipt": {
+        "artifact_sha256": "b3ab5fe1b1c85006129c173533b557c6635dfe6db9f3d419407ef477ba2a1304",
+        "attempts": 1,
+        "body_sha256": "67d9301def7bcd45f4244b33409c1bf4d16516e2ac39cc8b537e2f4a9b470b08",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 13,
+      "passed": true,
+      "payload_bytes": 6144,
+      "receipt": {
+        "artifact_sha256": "9a0ba2b36eadc7c52a2950acd8215d0a9432993643c2c8285e108fb58985dbb9",
+        "attempts": 1,
+        "body_sha256": "26d29186969892d939ef8de65c4ca62e1c77a18868e8dd93eaf72c59d76ad35e",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 14,
+      "passed": true,
+      "payload_bytes": 7168,
+      "receipt": {
+        "artifact_sha256": "4ab7efbfc3bf810dec539a82d159c8e18fc892d9f7dd1456c9f8bfa5fdd80038",
+        "attempts": 1,
+        "body_sha256": "719ba22224e50946b9b284471b2dd8877c6d355dd9f08bc97e31afc539c8b8d4",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 15,
+      "passed": true,
+      "payload_bytes": 8192,
+      "receipt": {
+        "artifact_sha256": "c2ba4a28eb89f3d2ca123267632f2ec2e0d56221ac0c49183df1364dbea1eea9",
+        "attempts": 1,
+        "body_sha256": "b1ae899dea8be34e9fe21fb03fac0785b0707e20b665654c8c7048015fd81839",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 16,
+      "passed": true,
+      "payload_bytes": 1024,
+      "receipt": {
+        "artifact_sha256": "7f5382624e1ce0401f4048634501036d395b845dfb981e841e8d37f354fb2a58",
+        "attempts": 1,
+        "body_sha256": "d8ccec6bd169503ca48e85a77b748c38de07272b7f665598a6ae736939f0f684",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 17,
+      "passed": true,
+      "payload_bytes": 2048,
+      "receipt": {
+        "artifact_sha256": "397234275c89c87305fc9d7b3ddf639def1f295bfa9a9dffff781953a618eb1a",
+        "attempts": 1,
+        "body_sha256": "692bf6f36ceb8a50869eb9dbf35443f1c458628d32503b6b10a8d1ff2e74d9ad",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 18,
+      "passed": true,
+      "payload_bytes": 3072,
+      "receipt": {
+        "artifact_sha256": "78289497b6a9980fd3611711dd65cf1fd8d2a54c1094c24f7ae9827c117c0395",
+        "attempts": 1,
+        "body_sha256": "03152f4b279af5766909b2c18303a7229ce1dacb157a7ea230349db030f52cf6",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 19,
+      "passed": true,
+      "payload_bytes": 4096,
+      "receipt": {
+        "artifact_sha256": "129b23bd62005337bc717304ab874fc3d115a59faa767b3912ae4d7c57d99b3f",
+        "attempts": 1,
+        "body_sha256": "22a78967ccf73ed4f92aaa90f2262d95e0ee54db03342dcece3ce2ea0529f25c",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 20,
+      "passed": true,
+      "payload_bytes": 5120,
+      "receipt": {
+        "artifact_sha256": "65f4b9343a8ff607af0a92355c475259f4842e6043e8164b6abcd690a7bc25d0",
+        "attempts": 1,
+        "body_sha256": "dd344cd1829cdc50d6d6a0521735b4454dccc81aabd28243a7ddd36ffd56c729",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 21,
+      "passed": true,
+      "payload_bytes": 6144,
+      "receipt": {
+        "artifact_sha256": "8a5cd8e641fbf54909f70707e74d1e3462cbf33e0b19c1223ba3fe0a4d20494a",
+        "attempts": 1,
+        "body_sha256": "05990257eb07806612b4d5e3ca86c8aca44fa422adbbffcb401b3b2473b56a87",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 22,
+      "passed": true,
+      "payload_bytes": 7168,
+      "receipt": {
+        "artifact_sha256": "fd9a90b4648cb18ee03b2f6dc69c5496ed97218727e9761ef22767f6c3bf9480",
+        "attempts": 1,
+        "body_sha256": "3cce8f10626a6d7e06dbeb48edd3afd40f85a49e084a1c0ad5b7346c5b231481",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 23,
+      "passed": true,
+      "payload_bytes": 8192,
+      "receipt": {
+        "artifact_sha256": "81746618a4007600d2921d951f9109d1fff750cdcd038025c9276380278d682b",
+        "attempts": 1,
+        "body_sha256": "851ee86bb3f33c4c4667e36287eb33eedf81b18b415beb88f85477080e77967f",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 24,
+      "passed": true,
+      "payload_bytes": 1024,
+      "receipt": {
+        "artifact_sha256": "851f0cbddd93cad141b5fffdb2d15616cef908ed24055437586dbe6c07e30768",
+        "attempts": 1,
+        "body_sha256": "739ee7f235f079dbfcc7023245936bda53e9fcf04e107125cb783dbabee91c30",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 25,
+      "passed": true,
+      "payload_bytes": 2048,
+      "receipt": {
+        "artifact_sha256": "8f712ea43f5538297b502086095bc44e3c8e182d692c9031b7fad955b5f82eeb",
+        "attempts": 1,
+        "body_sha256": "c7f74896786cbf996a4e5e9fa0c79b94da63da0d69b5d74a4ccd1342fe20c70f",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 26,
+      "passed": true,
+      "payload_bytes": 3072,
+      "receipt": {
+        "artifact_sha256": "6f6642ad9f6d1686e71b23fda34f92f2932fd9c84a38061e45a0e1931068c5a8",
+        "attempts": 1,
+        "body_sha256": "59fbdb1314c3d61f3ad212737f678561e3aefd4193e065fa4002ca260afcd652",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 27,
+      "passed": true,
+      "payload_bytes": 4096,
+      "receipt": {
+        "artifact_sha256": "34fba5d597a564460a2d0c3b9aa860f706bf23190fa2bab36c679729e8a34166",
+        "attempts": 1,
+        "body_sha256": "af9293202a608728ae9028f1931a4d7bdcfc6fc68d5ae55b403dc87a8c45c358",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 28,
+      "passed": true,
+      "payload_bytes": 5120,
+      "receipt": {
+        "artifact_sha256": "fe7725f28a767b9a129cef1ddb28fcb9b92c50244e500658670e74adb218f917",
+        "attempts": 1,
+        "body_sha256": "2cb3c51a179cc7bf6ed34dcbebc3bbea05cdf69d3c97b784e9bfdafc4dbe753b",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 29,
+      "passed": true,
+      "payload_bytes": 6144,
+      "receipt": {
+        "artifact_sha256": "f74307fd3d4c850ac674ac6ca241a12f61a4b8899f74cec79969e5fe9a129a54",
+        "attempts": 1,
+        "body_sha256": "c72bc119bba77ae79768ec60550a2fbee731913ebc6f83c8acce98335a7ceea5",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 30,
+      "passed": true,
+      "payload_bytes": 7168,
+      "receipt": {
+        "artifact_sha256": "434f151b89d1d57d0ccfac397379645562514c6609091c523a97f1bcec095f84",
+        "attempts": 1,
+        "body_sha256": "dfdaf3f7bf6b7a7a367c40fa808c74d3a96e0220e80d07b63d0de9f80ea9ce87",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 31,
+      "passed": true,
+      "payload_bytes": 8192,
+      "receipt": {
+        "artifact_sha256": "fa551a73b689d16478a27dccbcdb5bad3840a87c2cdeebc807629200e97e112c",
+        "attempts": 1,
+        "body_sha256": "94783dd3bf73e2cbb9f98c536483ae57a484fb0c3c556fe09fb445722faa0198",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 32,
+      "passed": true,
+      "payload_bytes": 1024,
+      "receipt": {
+        "artifact_sha256": "043c14f542c2542f27c59dbadac4222ea5600648b53b1500ff86d4f32b2963e9",
+        "attempts": 1,
+        "body_sha256": "8b69ef846c354306413d788f33c7a7b127aca1fe4cbda85fad4199882c2b697a",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 33,
+      "passed": true,
+      "payload_bytes": 2048,
+      "receipt": {
+        "artifact_sha256": "bb363e71901a4860de47e6c90c145841ca4d4373b99a6af293353086f0730584",
+        "attempts": 1,
+        "body_sha256": "a84d57dca753bfa42256361a337616a094d92889c66cfd6ddd9bbbf68633ac0c",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 34,
+      "passed": true,
+      "payload_bytes": 3072,
+      "receipt": {
+        "artifact_sha256": "2a71abb9e2935a621ac35ab5dedbb53989ffc8b47c83bb6629f25fd2c3e2eddd",
+        "attempts": 1,
+        "body_sha256": "f84725c9c0fa808e4f7b9acbd0c20a05f7eafac182af8ed6b083ccda188fc091",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 35,
+      "passed": true,
+      "payload_bytes": 4096,
+      "receipt": {
+        "artifact_sha256": "ad7ab76f153405bde1eba62cf071afa87076e1c9bdd5e6d490bb5e63b76dbc5f",
+        "attempts": 1,
+        "body_sha256": "95c2b8e549dd28334c2308ef488912ea7cc9e1834a1a0dae9d94f3619c15492a",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 36,
+      "passed": true,
+      "payload_bytes": 5120,
+      "receipt": {
+        "artifact_sha256": "285a91f7ebdd4b3aa07c2afcd203257ec9952a7d1fb484b295f234862cafb7b4",
+        "attempts": 1,
+        "body_sha256": "a4e2fa3477f30fb1a4e93c8fccb4325d9b7b8f9e9affd8725d9b59e0a92b6cfc",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 37,
+      "passed": true,
+      "payload_bytes": 6144,
+      "receipt": {
+        "artifact_sha256": "829dc739504fccdb79f9282f84df0a214ef815c0b7960525d8194b81dc44e38c",
+        "attempts": 1,
+        "body_sha256": "a7e65b8c78d2d374b0516e088caf77496e1344ba5f4bdebc498de10f5ad57c3c",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 38,
+      "passed": true,
+      "payload_bytes": 7168,
+      "receipt": {
+        "artifact_sha256": "eb7113574c6f5ca82a6a1f9a138ec5388932483ad5550abcd96303dcaaeb85c8",
+        "attempts": 1,
+        "body_sha256": "f0b656d4eff93eba76e38e4713a73e27f08da498393edc54546e6b51c8ce4995",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 39,
+      "passed": true,
+      "payload_bytes": 8192,
+      "receipt": {
+        "artifact_sha256": "645af59fbea546cc2af6398151e9c10e82e339bdece2dc4b39419671e264cbc6",
+        "attempts": 1,
+        "body_sha256": "990dd0bf8dd2255c79b198f21a7619345978f87de7c1283493af2004c32f4c36",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 40,
+      "passed": true,
+      "payload_bytes": 1024,
+      "receipt": {
+        "artifact_sha256": "df6d41c5a5c112540060c7d4339dd1376e95ad9bb9654f0ae2f2f9584f3c770c",
+        "attempts": 1,
+        "body_sha256": "ed10980c10e0110130171c40f22d3970e4231f56af9505090e778aaff0a73001",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 41,
+      "passed": true,
+      "payload_bytes": 2048,
+      "receipt": {
+        "artifact_sha256": "38a48211959006ab77806ac9bc860ef3e3235e41f185427f6f928a0ddd7d5d68",
+        "attempts": 1,
+        "body_sha256": "e52af5a01e54c8e64bbc50f3652f44dc08bc1a230e2e3a5f9579bc9a5672790a",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 42,
+      "passed": true,
+      "payload_bytes": 3072,
+      "receipt": {
+        "artifact_sha256": "8ac697ef42da4d1ae52d1954bd427256b3a5fac66b90efa548b20afa3a883788",
+        "attempts": 1,
+        "body_sha256": "dc0ba84cd39edcaf82bba9300c1508858b6f85dc77a2cd272624a72f53fc27ae",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 43,
+      "passed": true,
+      "payload_bytes": 4096,
+      "receipt": {
+        "artifact_sha256": "91193c4da6f86da0a906c44b199546042e30b13f070c06c0bf8b1302e78fcb9e",
+        "attempts": 1,
+        "body_sha256": "b06776af7a5b7d7a4997058cd1c5c21f6f210bf388f68b7c3da4868a351721c9",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 44,
+      "passed": true,
+      "payload_bytes": 5120,
+      "receipt": {
+        "artifact_sha256": "c33e202d5b891ad0196bd7cf61e0f767afa13d6266dd44519fb5c38aeaf0a451",
+        "attempts": 1,
+        "body_sha256": "5425f05dc8f28ecec7d85dc4f792f2df4f025ebac320c2759c25c7f9b186685c",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 45,
+      "passed": true,
+      "payload_bytes": 6144,
+      "receipt": {
+        "artifact_sha256": "c00a35e222364bb6c26294089f93a55480c2a895d0a6930dcf2e0191950ef874",
+        "attempts": 1,
+        "body_sha256": "1348c06d741e10adab99f4fce7b38e965044cb5c020c18385e5f31a39aba593e",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 46,
+      "passed": true,
+      "payload_bytes": 7168,
+      "receipt": {
+        "artifact_sha256": "a7194a93e5342090c98e0a2a7f824b95f6175383b7a14c1345b4140ed1d93411",
+        "attempts": 1,
+        "body_sha256": "6c407111c7308bd5828cdfcfc4d3689b93a2776477348a6dcd13a5e36e42998a",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 47,
+      "passed": true,
+      "payload_bytes": 8192,
+      "receipt": {
+        "artifact_sha256": "8844074729884227a83b9ed90b42c902fe3ba169edee9f5f32ebeaac2644a714",
+        "attempts": 1,
+        "body_sha256": "ea3926e7fab1ef78877421b02365f5fb6f8697a34755817e725052edd4c0f188",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 48,
+      "passed": true,
+      "payload_bytes": 1024,
+      "receipt": {
+        "artifact_sha256": "7f09c5095b321ff489e4972834aa88e26e237d0d8d02565985f79c371ed3033e",
+        "attempts": 1,
+        "body_sha256": "eb29e97172661f1fd706808eb26a919ac6786ee528d63b9d951ea9fac298ae1f",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 49,
+      "passed": true,
+      "payload_bytes": 2048,
+      "receipt": {
+        "artifact_sha256": "d29b29691b9b01f69ca1597ff9c4d33cf2ea1b6be139ab1bc29834e54556be1b",
+        "attempts": 1,
+        "body_sha256": "6532ab85c9fa5c1e7a717466fdf19ec97d14b4b485cc0581db08efde58a3fba2",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 50,
+      "passed": true,
+      "payload_bytes": 3072,
+      "receipt": {
+        "artifact_sha256": "bb3ee6e8595cabba757020c188d8801baa23420c1bbdad49b251031b7f0d48f2",
+        "attempts": 1,
+        "body_sha256": "28acc6ccba99ac6dc6ee6742a155e00e804baa0455b6851814c983f25fa2d9fc",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 51,
+      "passed": true,
+      "payload_bytes": 4096,
+      "receipt": {
+        "artifact_sha256": "038bf07c70814def931444510f793a6a8f5519cfdf363c6003fc670cf2385090",
+        "attempts": 1,
+        "body_sha256": "2a8eb0293e456f2837581f367890178071c182ea640777825da607b3fe5c82ff",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 52,
+      "passed": true,
+      "payload_bytes": 5120,
+      "receipt": {
+        "artifact_sha256": "5c9a22e78da8553c571124c9e2b5b0ec286d0d888a90055c5cb25c4c9258b0d2",
+        "attempts": 1,
+        "body_sha256": "0aca9aea5de7394ace5f27d90e2e2dc616873baaf56543935943e9a3ae717f76",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 53,
+      "passed": true,
+      "payload_bytes": 6144,
+      "receipt": {
+        "artifact_sha256": "6972d3ed3fac8b672abbc0336ad931647df5781e40035f0730ced80db5697d65",
+        "attempts": 1,
+        "body_sha256": "cbb7991a046e9d223b0226947282b9613b89b5f10e530c3dc9d59ef71e2c5116",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 54,
+      "passed": true,
+      "payload_bytes": 7168,
+      "receipt": {
+        "artifact_sha256": "3b1543758c5bc7c7571ba85c23ec293e71ad6126ec2cb1f5ecf5ad3579a0b12b",
+        "attempts": 1,
+        "body_sha256": "3803324d1bb5ddd8684aaee808fe49658e32e8c53d68dd86372e275628b60cee",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 55,
+      "passed": true,
+      "payload_bytes": 8192,
+      "receipt": {
+        "artifact_sha256": "13b26251718ef75ea6cab0279c545ccc1d8259a480a19300709e4f0660b45af2",
+        "attempts": 1,
+        "body_sha256": "3f343efd87005447748f35c21a3638e540b53c6faf2d6a22634bc65a9540ce5a",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 56,
+      "passed": true,
+      "payload_bytes": 1024,
+      "receipt": {
+        "artifact_sha256": "df5663873d5cba7332d4ac758d4edcfc67cf3f02c12064f9d7f60a4edd6a6500",
+        "attempts": 1,
+        "body_sha256": "2c99c7526db71527295c6afaff5fa6be214c565b4e099ff9af83f996f4191b5a",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 57,
+      "passed": true,
+      "payload_bytes": 2048,
+      "receipt": {
+        "artifact_sha256": "fc9f54559b1708225ad9c852e64dcdff3876ac4398ba50adb671f67aa8d9a6d3",
+        "attempts": 1,
+        "body_sha256": "d27df3456a0ec1e6d27926ab7391f0b9e4374e5cf820aa583c749bbe802fcbea",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 58,
+      "passed": true,
+      "payload_bytes": 3072,
+      "receipt": {
+        "artifact_sha256": "293a26308348b7634418344f776fc114bfc890f993898fc4de691bc324161ef7",
+        "attempts": 1,
+        "body_sha256": "5130d023db3287e0b7b50ace3dfa54a1664a70f87c46cc5925ce607474f56ad8",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 59,
+      "passed": true,
+      "payload_bytes": 4096,
+      "receipt": {
+        "artifact_sha256": "972233a6fa6b83a3830e9a2cbf640fdc41c166e2a48f0f9007d70c33f4ab0b91",
+        "attempts": 1,
+        "body_sha256": "ee505c5fc5fc39f08bb8366b98519f9f0c994150cea0b1d77d381850d05483e8",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 60,
+      "passed": true,
+      "payload_bytes": 5120,
+      "receipt": {
+        "artifact_sha256": "f28624f956ce01be9f4d757c90b36e37fca5e64ab9d36d1703a75d1f71b4d3a6",
+        "attempts": 1,
+        "body_sha256": "7c4af0b47c266675e7a759ebbf8f1c63c697c62ebf2901bb27d1044a001788c6",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 61,
+      "passed": true,
+      "payload_bytes": 6144,
+      "receipt": {
+        "artifact_sha256": "02797b07906c49339fde201db5fc2fe1d76663ac7b26b60876bf1ad31b5f2987",
+        "attempts": 1,
+        "body_sha256": "b8500a0115cdc458364551e574d2278f7d9fad75bde558d62fa179c0e900e292",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 62,
+      "passed": true,
+      "payload_bytes": 7168,
+      "receipt": {
+        "artifact_sha256": "aa7e2045d6269fc1d5a48e55c535fd39713d6536c55d1a85cdd7d551ff553797",
+        "attempts": 1,
+        "body_sha256": "00b49f2b2e06d47c0495714aeffd1e0eb904f5915f4b98106abcebe7d9b07557",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 63,
+      "passed": true,
+      "payload_bytes": 8192,
+      "receipt": {
+        "artifact_sha256": "789ec9f655f9faf4a90ef29138b3958df6e9a9262c303d2d339e75ccb2988393",
+        "attempts": 1,
+        "body_sha256": "ebeefc1a6c3b3d1d2035c5e5733af0f5760be1212fa7961c76061a16342a6316",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 64,
+      "passed": true,
+      "payload_bytes": 1024,
+      "receipt": {
+        "artifact_sha256": "059426c68e8550c75cac54ef1f9ad5a2b591c224a71eefba5f042509476ec416",
+        "attempts": 1,
+        "body_sha256": "1d9e8eac29979282a59d5bc7de7636c49666eb8a9fd60314e0556ef05ae79c0a",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 65,
+      "passed": true,
+      "payload_bytes": 2048,
+      "receipt": {
+        "artifact_sha256": "e7887c4238cfebf1ab0ae6e782b9eb46e76525d47e4cc6a449154016121f4544",
+        "attempts": 1,
+        "body_sha256": "9fad42dde92e101f718672e64e9ebecbe3ce796039bb0214d1b4b528a9db377d",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 66,
+      "passed": true,
+      "payload_bytes": 3072,
+      "receipt": {
+        "artifact_sha256": "8697a4f4a42e10a16e9990dbbfca16a674abf052f843716fd4b3bf9fa8d24981",
+        "attempts": 1,
+        "body_sha256": "f538240013d5fe88c2a006f27c294202c81b088a32ebba80952a1b62ef85487a",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 67,
+      "passed": true,
+      "payload_bytes": 4096,
+      "receipt": {
+        "artifact_sha256": "275bea7661f66a024823d63340afd139179f276a8bddf97d0c34cd57d6c09c65",
+        "attempts": 1,
+        "body_sha256": "888b4f92cd4eb4e363b57e5e21a01aed17497cab98a3868969e4a787427b8892",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 68,
+      "passed": true,
+      "payload_bytes": 5120,
+      "receipt": {
+        "artifact_sha256": "fa3f4961ff129bee5bab208a16b2710f40722aeb8702b55309df2d49d416180c",
+        "attempts": 1,
+        "body_sha256": "0c33627d21308a83286ba0d06a5a9c692ce44291d1553bd79b8264a625d4dd57",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 69,
+      "passed": true,
+      "payload_bytes": 6144,
+      "receipt": {
+        "artifact_sha256": "f5a28cc39db856675eb518e7b3796cc1e304fb41648e72a685b68e35592287d6",
+        "attempts": 1,
+        "body_sha256": "3be5f6300db1ec303ee390c170f4140dc5144241c65f22ad6fb4f1e1fd2d7f30",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 70,
+      "passed": true,
+      "payload_bytes": 7168,
+      "receipt": {
+        "artifact_sha256": "43b46edd142f810e701fc4989780c68d7a0832bef1dc8f05ec737efa0e258dea",
+        "attempts": 1,
+        "body_sha256": "de3ffe5d640809ea2c5071350d8971cde2c71129124463491d5dc3db15c786d2",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 71,
+      "passed": true,
+      "payload_bytes": 8192,
+      "receipt": {
+        "artifact_sha256": "a39569bf1121e018a8ec9863297a8ca53ed737ae170b899c798f1c167fa297ee",
+        "attempts": 1,
+        "body_sha256": "ab8eb8ff473011958f0442cfd1c5d668212a568bc37cef011dc2000c484b7945",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 72,
+      "passed": true,
+      "payload_bytes": 1024,
+      "receipt": {
+        "artifact_sha256": "f90efc4d6b7efab2c2deb142a164e2561f1589d0f991e819b168ec6710716303",
+        "attempts": 1,
+        "body_sha256": "5a00e7119f253196cc32589bd8d86a093e368863270c4aa134d7131825c65cb2",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 73,
+      "passed": true,
+      "payload_bytes": 2048,
+      "receipt": {
+        "artifact_sha256": "3901d61a2ea92ec3a1a56948a49e83746eec7f7762eaa49db08b6d6cc0eb5e84",
+        "attempts": 1,
+        "body_sha256": "4e0b8d963e5d553fe549dc9a3139fc8acd334aec7cdf9aaf1ab56dc7944cf5d5",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 74,
+      "passed": true,
+      "payload_bytes": 3072,
+      "receipt": {
+        "artifact_sha256": "da1c8fee397545397e11d8cf7c7ea3cedd0d2c68e73115c7fd93076e43db66fd",
+        "attempts": 1,
+        "body_sha256": "88b40dd8b8f02422ffdaea721911d41e9e4a3e36448dfa839e9cb910c4086604",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 75,
+      "passed": true,
+      "payload_bytes": 4096,
+      "receipt": {
+        "artifact_sha256": "66c87185328bcfc630df4b6d0647fa2ced556a42167a9d7d19b8608d6dc35442",
+        "attempts": 1,
+        "body_sha256": "d1ebf309e5403aee0a26005d8ee63c49f591d05fd6c6d2579be7b578560e4056",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 76,
+      "passed": true,
+      "payload_bytes": 5120,
+      "receipt": {
+        "artifact_sha256": "1b5bc6b104e4c02b5da6855f9695afe57797ad899beec4ebd8dce6db6aa2350e",
+        "attempts": 1,
+        "body_sha256": "b3dd278310c3d5c0d698318d173c22eb0fefc75ddf016db95e4eb604efc9dbf5",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 77,
+      "passed": true,
+      "payload_bytes": 6144,
+      "receipt": {
+        "artifact_sha256": "56838a953438939787a75c4c66e8f867d6ba7a5dae749a22b5f1d624e7d077a4",
+        "attempts": 1,
+        "body_sha256": "4658e0c3293a1b73c550cad0dfd8d1dee8b59664f9c289723f53b7602bd4118c",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 78,
+      "passed": true,
+      "payload_bytes": 7168,
+      "receipt": {
+        "artifact_sha256": "ba595d05f009cbd5f2281a8a353d994b3985a62056b99e14c4149815c4b7f01d",
+        "attempts": 1,
+        "body_sha256": "a0f759bfc38ded1968b714047193e9d5a497d0c5427959d4b48722ae6e539853",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 79,
+      "passed": true,
+      "payload_bytes": 8192,
+      "receipt": {
+        "artifact_sha256": "635a4628ca11e08242f31435a35d275c4c78293a3af4a0cfa5aee11eef9c9afe",
+        "attempts": 1,
+        "body_sha256": "4dfb8fdd37ea50056a891cd10e3f8d984ad408c36afbac117e34e2c73ec98628",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 80,
+      "passed": true,
+      "payload_bytes": 1024,
+      "receipt": {
+        "artifact_sha256": "dc2aaf236162a7ddd3a833fe1bd2572c533086bf3669a58f9fcf4f4b129e7a87",
+        "attempts": 1,
+        "body_sha256": "47a39b87c9fd7950921ea947bf7de784779735f44806fde5e94041e81aa16770",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 81,
+      "passed": true,
+      "payload_bytes": 2048,
+      "receipt": {
+        "artifact_sha256": "b61ebc2becbcb23fffd1aa39af28865d90053c784a0c2477b299cd0861d4c6fd",
+        "attempts": 1,
+        "body_sha256": "2b83f49ca81d0c6d07dfa7cf9284ffc6737125b5d769c852679fe9843b12cd61",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 82,
+      "passed": true,
+      "payload_bytes": 3072,
+      "receipt": {
+        "artifact_sha256": "8a4ae592c421eaaa4b3bcec6b14cf2fa3ce24e0affff8d04cbd53f91b234b1bd",
+        "attempts": 1,
+        "body_sha256": "7575a06a37cdca617baef177a9a2ec36589e021d5ddcb9aa8569dfea4e10a8d4",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 83,
+      "passed": true,
+      "payload_bytes": 4096,
+      "receipt": {
+        "artifact_sha256": "378c4305017e7a0af4ed8b8f127d388f441089032e14dcf1021a859532a94990",
+        "attempts": 1,
+        "body_sha256": "4b3da2e7fbffbc2cab851654336f04880f511d16b680f13251d73837d5d1fd12",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 84,
+      "passed": true,
+      "payload_bytes": 5120,
+      "receipt": {
+        "artifact_sha256": "3e085c4d9387f6ed4f1c893aa41be8700671f623ddb85e60a406ea105ee091d3",
+        "attempts": 1,
+        "body_sha256": "002ef5d86d08c03a731ce4153516f1e5b85ad5fe0f0b31b65967dd9204069dd6",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 85,
+      "passed": true,
+      "payload_bytes": 6144,
+      "receipt": {
+        "artifact_sha256": "42cda5e7640fb9c8e3cfc12120a2cd1837d60719487892e6711978970680634e",
+        "attempts": 1,
+        "body_sha256": "9c70521a2929cdd6decc708c86b1d2b87dd0a62abebffd6cb43206cfba00d8f8",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 86,
+      "passed": true,
+      "payload_bytes": 7168,
+      "receipt": {
+        "artifact_sha256": "7f5da64be321b99f27913f4662666175085903293bee82a6d2d940157453795f",
+        "attempts": 1,
+        "body_sha256": "05e2b03a1307e1de67101680f5142545006901bd337a18e0317f37ce868570ca",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 87,
+      "passed": true,
+      "payload_bytes": 8192,
+      "receipt": {
+        "artifact_sha256": "260bacf8e7d400e80e24ef6d14beb2328feba5f320ef14d7c038986a2db315cb",
+        "attempts": 1,
+        "body_sha256": "f4f6d938fb352c562706978fa49c6ee4d606dbdfd84416f5d0382f5bc80c84dc",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 88,
+      "passed": true,
+      "payload_bytes": 1024,
+      "receipt": {
+        "artifact_sha256": "8f04c437525afa4af2568c5de1579cf016ebbc1c5e80e344c9b40f7b34427ffb",
+        "attempts": 1,
+        "body_sha256": "c4f78bd0c736d1b4be56e12e37a2d5b19b73918162bdf9d3fe21cda980274f80",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 89,
+      "passed": true,
+      "payload_bytes": 2048,
+      "receipt": {
+        "artifact_sha256": "447a2f7bccbc94a6af3cbfe75c3ccb406828f18e501287e4e4ca1e802ddcb8b7",
+        "attempts": 1,
+        "body_sha256": "183b653ba0461eae57d0d349ca7a7ae7089d8deb62693122422ed51c6c333987",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 90,
+      "passed": true,
+      "payload_bytes": 3072,
+      "receipt": {
+        "artifact_sha256": "19085d0b6d8b1da16e3ce9e5f7e2d513996c879e431f25d960aa307fe6b020c6",
+        "attempts": 1,
+        "body_sha256": "230af9296572f4c824838d4a831de5708fd78b10b7deaac2cccfcfd1264cc65b",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 91,
+      "passed": true,
+      "payload_bytes": 4096,
+      "receipt": {
+        "artifact_sha256": "8ffba239b1213888184f6fc417664fb36f5611b79335c8c76da68b85a01cd6cf",
+        "attempts": 1,
+        "body_sha256": "9cf5b4fc25efe338ad019e7233de54395354af53f89bf896c35daeac9fa3e9ed",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 92,
+      "passed": true,
+      "payload_bytes": 5120,
+      "receipt": {
+        "artifact_sha256": "e2135bf4067536bd3f5b72c910030b0e85a2236fe5649e8c8895b87eed2395a0",
+        "attempts": 1,
+        "body_sha256": "a61b6cf7f584b019f52a28e8c787a3d45e5121796bc66b6ea57141a67cd8b0c0",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 93,
+      "passed": true,
+      "payload_bytes": 6144,
+      "receipt": {
+        "artifact_sha256": "be9d94bbd6eeb4fc424a0f0375da15d3152817f22dfcd70761e0531a54a8924f",
+        "attempts": 1,
+        "body_sha256": "c268f3f7de7a79378f3916204e66cd0692bd4f964fb07c14c859dc812d969e99",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 94,
+      "passed": true,
+      "payload_bytes": 7168,
+      "receipt": {
+        "artifact_sha256": "18274f4ccf6c16cc841d7c9d6f22aac3d921d49d93539a9191bb14d1ae4fce9b",
+        "attempts": 1,
+        "body_sha256": "e6e39fb3bdb8c4af9dc6706ea56c9ff20a3234bf009470dfffb9fcaeaf8a77da",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 95,
+      "passed": true,
+      "payload_bytes": 8192,
+      "receipt": {
+        "artifact_sha256": "38e1058808052314df01209d9ce02712d55e59beb5b2113a71d09ce564a71566",
+        "attempts": 1,
+        "body_sha256": "5965a104b112031b9cb1338106c0c96c48a368875132d3bc96edb1731da6122b",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 96,
+      "passed": true,
+      "payload_bytes": 1024,
+      "receipt": {
+        "artifact_sha256": "08a113e3f9d52e7cd7e795742eeedd5df4869aaa3f2c9cf2a3df46cf875ca6ca",
+        "attempts": 1,
+        "body_sha256": "cedd899468ea1939b5c890c0bbbecd92831a8541bc149b347e469928347197d3",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 97,
+      "passed": true,
+      "payload_bytes": 2048,
+      "receipt": {
+        "artifact_sha256": "1edf9767ab5ccf34f8edb8bad37e676a8e82802cd3cbf1b1abb2dd0efb15da05",
+        "attempts": 1,
+        "body_sha256": "43a720f2870b6e63a8ea72659f29c3d0d9270ce86063027c336307c0c329c6c4",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 98,
+      "passed": true,
+      "payload_bytes": 3072,
+      "receipt": {
+        "artifact_sha256": "d895b222caf60408cafddcd84fb20e5aa9e7034d9658273c673c22bc25dc58b5",
+        "attempts": 1,
+        "body_sha256": "ac2edfa6793be8463df1d8e7a0aadccd69570c6d6f814e03d5793a4d8e5e1149",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    },
+    {
+      "ACL_verified": true,
+      "context": "fresh_trusted_host_child",
+      "idempotent_resume": true,
+      "index": 99,
+      "passed": true,
+      "payload_bytes": 4096,
+      "receipt": {
+        "artifact_sha256": "274ada16327d969c44b5429814a402492e018c011073f3b722798971490a0a21",
+        "attempts": 1,
+        "body_sha256": "b25316c9db0ceda5675603e4c776a5f03f5091386becb9edb00c9067e9db317d",
+        "committed": true,
+        "events": [
+          {
+            "attempt": 1,
+            "native_success": true
+          }
+        ],
+        "idempotent": false
+      },
+      "source_verified": true
+    }
+  ],
+  "original_directory_rename_trials": [
+    {
+      "index": 0,
+      "rename_pass": true
+    },
+    {
+      "index": 1,
+      "rename_pass": true
+    },
+    {
+      "index": 2,
+      "rename_pass": true
+    },
+    {
+      "index": 3,
+      "rename_pass": true
+    },
+    {
+      "index": 4,
+      "rename_pass": true
+    },
+    {
+      "index": 5,
+      "rename_pass": true
+    },
+    {
+      "index": 6,
+      "rename_pass": true
+    },
+    {
+      "index": 7,
+      "rename_pass": true
+    },
+    {
+      "index": 8,
+      "rename_pass": true
+    },
+    {
+      "index": 9,
+      "rename_pass": true
+    },
+    {
+      "index": 10,
+      "rename_pass": true
+    },
+    {
+      "index": 11,
+      "rename_pass": true
+    },
+    {
+      "index": 12,
+      "rename_pass": true
+    },
+    {
+      "index": 13,
+      "rename_pass": true
+    },
+    {
+      "index": 14,
+      "rename_pass": true
+    },
+    {
+      "index": 15,
+      "rename_pass": true
+    },
+    {
+      "index": 16,
+      "rename_pass": true
+    },
+    {
+      "index": 17,
+      "rename_pass": true
+    },
+    {
+      "index": 18,
+      "rename_pass": true
+    },
+    {
+      "index": 19,
+      "rename_pass": true
+    },
+    {
+      "index": 20,
+      "rename_pass": true
+    },
+    {
+      "index": 21,
+      "rename_pass": true
+    },
+    {
+      "index": 22,
+      "rename_pass": true
+    },
+    {
+      "index": 23,
+      "rename_pass": true
+    },
+    {
+      "index": 24,
+      "rename_pass": true
+    },
+    {
+      "index": 25,
+      "rename_pass": true
+    },
+    {
+      "index": 26,
+      "rename_pass": true
+    },
+    {
+      "index": 27,
+      "rename_pass": true
+    },
+    {
+      "index": 28,
+      "rename_pass": true
+    },
+    {
+      "index": 29,
+      "rename_pass": true
+    },
+    {
+      "index": 30,
+      "rename_pass": true
+    },
+    {
+      "index": 31,
+      "rename_pass": true
+    },
+    {
+      "index": 32,
+      "rename_pass": true
+    },
+    {
+      "index": 33,
+      "rename_pass": true
+    },
+    {
+      "index": 34,
+      "rename_pass": true
+    },
+    {
+      "index": 35,
+      "rename_pass": true
+    },
+    {
+      "index": 36,
+      "rename_pass": true
+    },
+    {
+      "index": 37,
+      "rename_pass": true
+    },
+    {
+      "index": 38,
+      "rename_pass": true
+    },
+    {
+      "index": 39,
+      "rename_pass": true
+    },
+    {
+      "index": 40,
+      "rename_pass": true
+    },
+    {
+      "index": 41,
+      "rename_pass": true
+    },
+    {
+      "index": 42,
+      "rename_pass": true
+    },
+    {
+      "index": 43,
+      "rename_pass": true
+    },
+    {
+      "index": 44,
+      "rename_pass": true
+    },
+    {
+      "index": 45,
+      "rename_pass": true
+    },
+    {
+      "index": 46,
+      "rename_pass": true
+    },
+    {
+      "index": 47,
+      "rename_pass": true
+    },
+    {
+      "index": 48,
+      "rename_pass": true
+    },
+    {
+      "index": 49,
+      "rename_pass": true
+    },
+    {
+      "index": 50,
+      "rename_pass": true
+    },
+    {
+      "index": 51,
+      "rename_pass": true
+    },
+    {
+      "index": 52,
+      "rename_pass": true
+    },
+    {
+      "index": 53,
+      "rename_pass": true
+    },
+    {
+      "index": 54,
+      "rename_pass": true
+    },
+    {
+      "index": 55,
+      "rename_pass": true
+    },
+    {
+      "index": 56,
+      "rename_pass": true
+    },
+    {
+      "index": 57,
+      "rename_pass": true
+    },
+    {
+      "index": 58,
+      "rename_pass": true
+    },
+    {
+      "index": 59,
+      "rename_pass": true
+    },
+    {
+      "index": 60,
+      "rename_pass": true
+    },
+    {
+      "index": 61,
+      "rename_pass": true
+    },
+    {
+      "index": 62,
+      "rename_pass": true
+    },
+    {
+      "index": 63,
+      "rename_pass": true
+    },
+    {
+      "index": 64,
+      "rename_pass": true
+    },
+    {
+      "index": 65,
+      "rename_pass": true
+    },
+    {
+      "index": 66,
+      "rename_pass": true
+    },
+    {
+      "index": 67,
+      "rename_pass": true
+    },
+    {
+      "index": 68,
+      "rename_pass": true
+    },
+    {
+      "index": 69,
+      "rename_pass": true
+    },
+    {
+      "index": 70,
+      "rename_pass": true
+    },
+    {
+      "index": 71,
+      "rename_pass": true
+    },
+    {
+      "index": 72,
+      "rename_pass": true
+    },
+    {
+      "index": 73,
+      "rename_pass": true
+    },
+    {
+      "index": 74,
+      "rename_pass": true
+    },
+    {
+      "index": 75,
+      "rename_pass": true
+    },
+    {
+      "index": 76,
+      "rename_pass": true
+    },
+    {
+      "index": 77,
+      "rename_pass": true
+    },
+    {
+      "index": 78,
+      "rename_pass": true
+    },
+    {
+      "index": 79,
+      "rename_pass": true
+    },
+    {
+      "index": 80,
+      "rename_pass": true
+    },
+    {
+      "index": 81,
+      "rename_pass": true
+    },
+    {
+      "index": 82,
+      "rename_pass": true
+    },
+    {
+      "index": 83,
+      "rename_pass": true
+    },
+    {
+      "index": 84,
+      "rename_pass": true
+    },
+    {
+      "index": 85,
+      "rename_pass": true
+    },
+    {
+      "index": 86,
+      "rename_pass": true
+    },
+    {
+      "index": 87,
+      "rename_pass": true
+    },
+    {
+      "index": 88,
+      "rename_pass": true
+    },
+    {
+      "index": 89,
+      "rename_pass": true
+    },
+    {
+      "index": 90,
+      "rename_pass": true
+    },
+    {
+      "index": 91,
+      "rename_pass": true
+    },
+    {
+      "index": 92,
+      "rename_pass": true
+    },
+    {
+      "index": 93,
+      "rename_pass": true
+    },
+    {
+      "index": 94,
+      "rename_pass": true
+    },
+    {
+      "index": 95,
+      "rename_pass": true
+    },
+    {
+      "index": 96,
+      "rename_pass": true
+    },
+    {
+      "index": 97,
+      "rename_pass": true
+    },
+    {
+      "index": 98,
+      "rename_pass": true
+    },
+    {
+      "index": 99,
+      "rename_pass": true
+    },
+    {
+      "index": 100,
+      "rename_pass": true
+    },
+    {
+      "index": 101,
+      "rename_pass": true
+    },
+    {
+      "index": 102,
+      "rename_pass": true
+    },
+    {
+      "index": 103,
+      "rename_pass": true
+    },
+    {
+      "index": 104,
+      "rename_pass": true
+    },
+    {
+      "index": 105,
+      "rename_pass": true
+    },
+    {
+      "index": 106,
+      "rename_pass": true
+    },
+    {
+      "index": 107,
+      "rename_pass": true
+    },
+    {
+      "index": 108,
+      "rename_pass": true
+    },
+    {
+      "index": 109,
+      "rename_pass": true
+    },
+    {
+      "index": 110,
+      "rename_pass": true
+    },
+    {
+      "index": 111,
+      "rename_pass": true
+    },
+    {
+      "index": 112,
+      "rename_pass": true
+    },
+    {
+      "index": 113,
+      "rename_pass": true
+    },
+    {
+      "index": 114,
+      "rename_pass": true
+    },
+    {
+      "index": 115,
+      "rename_pass": true
+    },
+    {
+      "index": 116,
+      "rename_pass": true
+    },
+    {
+      "index": 117,
+      "rename_pass": true
+    },
+    {
+      "index": 118,
+      "rename_pass": true
+    },
+    {
+      "index": 119,
+      "rename_pass": true
+    },
+    {
+      "index": 120,
+      "rename_pass": true
+    },
+    {
+      "index": 121,
+      "rename_pass": true
+    },
+    {
+      "index": 122,
+      "rename_pass": true
+    },
+    {
+      "index": 123,
+      "rename_pass": true
+    },
+    {
+      "index": 124,
+      "rename_pass": true
+    },
+    {
+      "index": 125,
+      "rename_pass": true
+    },
+    {
+      "index": 126,
+      "rename_pass": true
+    },
+    {
+      "index": 127,
+      "rename_pass": true
+    },
+    {
+      "index": 128,
+      "rename_pass": true
+    },
+    {
+      "index": 129,
+      "rename_pass": true
+    },
+    {
+      "index": 130,
+      "rename_pass": true
+    },
+    {
+      "index": 131,
+      "rename_pass": true
+    },
+    {
+      "index": 132,
+      "rename_pass": true
+    },
+    {
+      "index": 133,
+      "rename_pass": true
+    },
+    {
+      "index": 134,
+      "rename_pass": true
+    },
+    {
+      "index": 135,
+      "rename_pass": true
+    },
+    {
+      "index": 136,
+      "rename_pass": true
+    },
+    {
+      "index": 137,
+      "rename_pass": true
+    },
+    {
+      "index": 138,
+      "rename_pass": true
+    },
+    {
+      "index": 139,
+      "rename_pass": true
+    },
+    {
+      "index": 140,
+      "rename_pass": true
+    },
+    {
+      "index": 141,
+      "rename_pass": true
+    },
+    {
+      "index": 142,
+      "rename_pass": true
+    },
+    {
+      "index": 143,
+      "rename_pass": true
+    },
+    {
+      "index": 144,
+      "rename_pass": true
+    },
+    {
+      "index": 145,
+      "rename_pass": true
+    },
+    {
+      "index": 146,
+      "rename_pass": true
+    },
+    {
+      "index": 147,
+      "rename_pass": true
+    },
+    {
+      "index": 148,
+      "rename_pass": true
+    },
+    {
+      "index": 149,
+      "rename_pass": true
+    },
+    {
+      "index": 150,
+      "rename_pass": true
+    },
+    {
+      "index": 151,
+      "rename_pass": true
+    },
+    {
+      "index": 152,
+      "rename_pass": true
+    },
+    {
+      "index": 153,
+      "rename_pass": true
+    },
+    {
+      "index": 154,
+      "rename_pass": true
+    },
+    {
+      "index": 155,
+      "rename_pass": true
+    },
+    {
+      "index": 156,
+      "rename_pass": true
+    },
+    {
+      "index": 157,
+      "rename_pass": true
+    },
+    {
+      "index": 158,
+      "rename_pass": true
+    },
+    {
+      "index": 159,
+      "rename_pass": true
+    },
+    {
+      "index": 160,
+      "rename_pass": true
+    },
+    {
+      "index": 161,
+      "rename_pass": true
+    },
+    {
+      "index": 162,
+      "rename_pass": true
+    },
+    {
+      "index": 163,
+      "rename_pass": true
+    },
+    {
+      "index": 164,
+      "rename_pass": true
+    },
+    {
+      "index": 165,
+      "rename_pass": true
+    },
+    {
+      "index": 166,
+      "rename_pass": true
+    },
+    {
+      "index": 167,
+      "rename_pass": true
+    },
+    {
+      "index": 168,
+      "rename_pass": true
+    },
+    {
+      "index": 169,
+      "rename_pass": true
+    },
+    {
+      "index": 170,
+      "rename_pass": true
+    },
+    {
+      "index": 171,
+      "rename_pass": true
+    },
+    {
+      "index": 172,
+      "rename_pass": true
+    },
+    {
+      "index": 173,
+      "rename_pass": true
+    },
+    {
+      "index": 174,
+      "rename_pass": true
+    },
+    {
+      "index": 175,
+      "rename_pass": true
+    },
+    {
+      "index": 176,
+      "rename_pass": true
+    },
+    {
+      "index": 177,
+      "rename_pass": true
+    },
+    {
+      "index": 178,
+      "rename_pass": true
+    },
+    {
+      "index": 179,
+      "rename_pass": true
+    },
+    {
+      "index": 180,
+      "rename_pass": true
+    },
+    {
+      "index": 181,
+      "rename_pass": true
+    },
+    {
+      "index": 182,
+      "rename_pass": true
+    },
+    {
+      "index": 183,
+      "rename_pass": true
+    },
+    {
+      "index": 184,
+      "rename_pass": true
+    },
+    {
+      "index": 185,
+      "rename_pass": true
+    },
+    {
+      "index": 186,
+      "rename_pass": true
+    },
+    {
+      "index": 187,
+      "rename_pass": true
+    },
+    {
+      "index": 188,
+      "rename_pass": true
+    },
+    {
+      "index": 189,
+      "rename_pass": true
+    },
+    {
+      "index": 190,
+      "rename_pass": true
+    },
+    {
+      "index": 191,
+      "rename_pass": true
+    },
+    {
+      "index": 192,
+      "rename_pass": true
+    },
+    {
+      "index": 193,
+      "rename_pass": true
+    },
+    {
+      "index": 194,
+      "rename_pass": true
+    },
+    {
+      "index": 195,
+      "rename_pass": true
+    },
+    {
+      "index": 196,
+      "rename_pass": true
+    },
+    {
+      "index": 197,
+      "rename_pass": true
+    },
+    {
+      "index": 198,
+      "rename_pass": true
+    },
+    {
+      "index": 199,
+      "rename_pass": true
+    }
+  ],
+  "os": "Windows-10-10.0.26200-SP0",
+  "protected_neural_contents_read": false,
+  "python": "3.11.15 (main, Jun  2 2026, 22:29:49) [MSC v.1944 64 bit (AMD64)]",
+  "st_dev": 279998997,
+  "synthetic_only": true,
+  "synthetic_run_namespace": "run_ac7756db30db460d89f96e9986ad708a"
+}

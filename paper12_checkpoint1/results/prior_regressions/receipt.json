@@ -1,0 +1,53 @@
+{
+  "checks": [
+    {
+      "command": [
+        "powershell",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper12_custody1\\reproduce2.ps1",
+        "-Python",
+        "C:\\Users\\85993\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe"
+      ],
+      "exit_code": 0,
+      "log": "check_00.log",
+      "sha256": "6cbf4c1db17a66f5e8666451c7c6d12d18671cc5954e7a192568a878de24182f"
+    },
+    {
+      "command": [
+        "C:\\Users\\85993\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper12_transport1",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "check_01.log",
+      "sha256": "22c4d6b2b24b9a5f8a3b53f7bd52138de1ad9ecc2c3a24512adeb7684a0df885"
+    },
+    {
+      "command": [
+        "C:\\Users\\85993\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper12_transport1\\summarize.py"
+      ],
+      "exit_code": 0,
+      "log": "check_02.log",
+      "sha256": "724853c8c96585660666c2bad660aa297054853ec0e50cf8bd4255c3ddd88dcc"
+    }
+  ],
+  "end_manifest_sha256": "af709e1295353985dde5da4af99370a5c243d0ffe367c61fe1e878493665f430",
+  "experiments_reproduced": false,
+  "final_holdout_accessed": false,
+  "saved_M2_gate": "FAIL",
+  "saved_checks_pass": true,
+  "scope": "Saved public evidence/tests; no extraction,live isolation,private QC,models or final evaluation rerun",
+  "source_requests_executed": 0,
+  "start_manifest_sha256": "af709e1295353985dde5da4af99370a5c243d0ffe367c61fe1e878493665f430",
+  "utc": "2026-10-12T20:14:15.154263+00:00"
+}

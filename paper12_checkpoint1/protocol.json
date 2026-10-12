@@ -1,0 +1,19 @@
+{
+  "id":"P12-M2-CHECKPOINT-REPAIR-1",
+  "base":"a64c005537b0f9f12905f791fa082622508ff183",
+  "scope":"Synthetic-only same-volume Windows checkpoint study; no transport integration or source requests",
+  "preservation":"All prior Git tracked byte hashes and complete old operations history; all source/mouse/scientific/holdout locks remain unchanged",
+  "diagnostics":{"original_directory_rename_trials":200,"seed":2026101201,"metadata":"Synthetic handles/ACL/attributes/volume/process context; no protected experimental file reads","cause_policy":"Do not infer an endpoint-security or exact historical handle cause from an intermittent error; demonstrably effective scoped fix can satisfy gate"},
+  "candidate":"One fully verified immutable envelope file instead of multi-file protected-directory rename; native same-volume MoveFileExW, no copy/delete fallback; write+flush+close+verify before publish; custody DACL retained",
+  "local_commit_budget":{"max_calls":3,"backoff_seconds":[0.1,0.5],"retry_codes":[5,32,33],"policy":"Verify protected ACL/attributes/volume each time; never change permissions to repair denial; exhausted attempts stop; injected persistent denial remains expected STOP,not successful commit"},
+  "writers":"Destination-specific native byte-range writer lock; shared-delete readers may observe complete old or complete new envelope; conflicting writers fail closed; immutable identity/hash reuse,explicit expected-previous-digest required for replacements",
+  "noninjected_commit_calls":200,
+  "environments":[{"name":"trusted_host_main","calls":100},{"name":"fresh_trusted_host_child","calls":100}],
+  "environment_limit":"Two native process contexts on this same Windows machine/volume,not two independently tested OS installations",
+  "fixtures":"Fixed deterministic synthetic bytes; same-volume protected staging under this study only; all attempts/outcomes retained; no favorable seed/configuration selection",
+  "mandatory_injections":["locked destination","persistent ACL denial","sharing violation","concurrent reader","concurrent writer","interrupt before publish","interrupt after native publish before receipt","missing envelope","partial envelope","corrupt body/header","source/hash mismatch","readonly destination","reparse rejection","cross-volume rejection"],
+  "security":"Actual zero-capability native analysis role must be denied committed synthetic checkpoint/key reads,DACL regrant,network and custodian memory; no host-admin defense claim; no holdout cryptography changes",
+  "gate":"PASS only all200 noninjected calls complete with zero unexpected terminal failures,all separate injections safely stop/recover as registered,all old tests pass,security passes and code/evidence are freshly bound; otherwise INCONCLUSIVE/CHECKPOINT_REPAIR_UNVERIFIED",
+  "stop":"Always stop after synthetic validation; even PASS does not permit actual checkpoint/session/source retry,M3-M7 or final release",
+  "reproduction":"One-command synthetic native test replay and separate saved-only evidence verification; never invoke old retrieval or private experimental QC"
+}

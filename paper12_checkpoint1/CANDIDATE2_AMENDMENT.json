@@ -1,0 +1,10 @@
+{
+  "stage":"Prospective corrected candidate; first result remains unverified and immutable",
+  "reason":"Six native probes establish MoveFileExW rejects an open shared-delete destination withWinError5,where ReplaceFileW succeeds and preservesACL; fix supported ACL API/missing-error oracles and support extended Windows paths",
+  "minimal_native_change":"MoveFileExW for absent destination;ReplaceFileW flags0 withprotected same-volume backup for explicitly authorized expected-old-digest replacement;noignoreACLflags orcopydeletefallback",
+  "path_change":"Use supported extended-length Win32 path syntax for owned synthetic fixtures; no scope expansion",
+  "test_bug_record":"ACL.AddAce unavailable=>rebuild supported explicitACE types;missing GetNamedSecurityInfo returnsnativecode2=>accept expected missing safe-stop code2,not arbitrary exceptions;capture interrupted child diagnostics",
+  "budget":"Repeat complete frozen200noninjected and200originaldiagnostic trials and all18injections withunchanged seeds/contexts;retaineverypriorfailure;no selected replicas",
+  "preservation":"versions/candidate1 snapshots matchimplementation_registration2;results/native.json andallpreviousgatesimmutable",
+  "gate":"Unchanged;everyrequiredtestmustpass;noactualsource/dataaccess orsciencecontinuation"
+}

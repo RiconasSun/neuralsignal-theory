@@ -1,3 +1,18 @@
+# Current P12 Synthetic Checkpoint Repair
+
+Mission:P12-M2-CHECKPOINT-REPAIR-1;explicitsynthetic-onlyauthorization;basea64c005.
+State:verification/closureinprogress;no realdata continuation authorization.
+Primarycandidate3syntheticgatePASS:200normalcommits,18safetyinjections,
+8sizeboundariesandfreshnativezero-capabilityisolationpassed.121unitregressionsPASS.
+Failedcandidate1/2retainedFAIL;alloldscientificM2gatesremainFAIL/INCONCLUSIVE.
+Singleenvelopepublication;MoveFileExinitial/ReplaceFileexplicitreplacement,
+protectedbackup,3cumulativeattempts,fullhash/ACLchecks,noignoreACLflags.
+Rootmechanismsharedhandlesreproduced;exacthistoricalholdernotidentified.
+Freshfullone-commandreplayandindependentarchivereviewrequiredforclosure.
+Noactualcache/source/spikeaccess,finalunlock,realintegrationorM3-M7.
+Separatehumanpermissionrequiredafterthismissionbeforeanyrealcontinuation.
+Priorhistorybelowpreservedbyte-exact.
+
 # Current P12 Bounded Transport Recovery
 
 Mission:P12-M2-TRANSPORT-RECOVERY-1;prospective same-source recovery fromcf6321b.

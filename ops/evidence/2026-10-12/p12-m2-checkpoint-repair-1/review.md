@@ -1,0 +1,35 @@
+# Independent Review Record
+
+Reviewer Gauss; read-only; no private/export reads,network,native execution or
+file mutations. Repositoryops/review.skill.md/templates absent; not claimedloaded.
+
+PreexecutionP1s resolvedwithnative/pure regressions: lexicaltraversal scopeescape,
+savedfatalresultrestartwithoutSTOP,inconsistentACL/sharingoracles,old-runtime
+mutationrisk,invalid32bytecheckpointpositiveoracle,droppedchilddiagnostics,
+andmidwriteDACL/oraclemismatch. Every fix precedes its prospective versionseal.
+
+Failedcandidate1/2 archivedwith code snapshots andexactdiagnostics. NativeAPI
+probe proves a scopedMoveFileEx/ReplaceFiledifference,not thehistoricalholder.
+Prospectivecompactpaths/fullhash identity andstrongACLinjectionfixes reviewed.
+No testassertionwas weakened merely to matchsmallerbehavior;explicittest-bug
+and stronger midwriteinstrumentation changes are recorded inamendments.
+
+Latestpremanifestreview foundnoP0/P1 in candidate3/evidence/reproducer/docs.
+Confirmed200currentoperations/18injections,allfailedversionsretained,
+6boundarycommits+2expectedstops,separatecontextandpowerlosslimitations.
+Finalreview remains pendingcandidate-bound fullone-command replay/manifest.
+No real-sourcecontinuation orscientificgatepromotionpermission followsreview.
+
+Firstfullreplayguardwiringfailure retained inreplay_failure1. Explicitadapter
+correction preserves originalisolationbytecode,usesregisteredexact-historyguard,
+andhasanaddedpure regression;no checkpointalgorithm/DACLchange.
+Correctedfullreplay_success2 exit0 withall121tests,200/18/security/8boundaries,
+before/afterafa41104manifestidentity unchanged. Finalarchiveapproval/readback
+to be independentlyconfirmed;baseline25verified/1pending atthisstage.
+
+Finalindependentreadback verified72candidatehashes,all7loghashesandcopiedoutputs.
+Confirmed121regressions,fresh200/18/nativeisolation/8boundariesPASS,allpriorfailures
+preserved. Scopedsyntheticengineering/exactorigin-testarchivalapproved;REQ024
+requiresactualcommit/pushreadbackbeforemissionPASS. No scientific/realcontinuation.
+Postreplayread-onlymetadata:NTFS;Defenderantivirus,realtime,service,behavior
+monitoringall enabled. No historicalcauseattribution orsecurityconfigurationchange.

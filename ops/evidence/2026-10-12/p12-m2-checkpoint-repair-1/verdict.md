@@ -1,0 +1,33 @@
+# Synthetic Engineering Verdict
+
+mission_id: P12-M2-CHECKPOINT-REPAIR-1
+scoped_engineering_gate: PASS / SYNTHETIC_CHECKPOINT_REPAIR_VERIFIED
+original_scientific_M2_gate: FAIL / INCONCLUSIVE unchanged
+bug_count: 0
+warn_count: 0
+baseline_requirement_count: 26
+verified_baseline_count: 25 (archive/readback pending)
+required_items_omitted: 0
+required_behaviors_silently_reduced: 0
+unapproved_existing_behaviors_removed: 0
+required_tests_silently_removed: 0
+unresolved_shrink_risk: 0
+temporary_substitutes_remaining: 0
+coverage_reductions_without_approval: 0
+
+Freshfullone-commandNative replayexit0;all7commands completed,start/endmanifest
+afa41104262a6001c204968bdcd0998a03090cfafc9a3223f23ec7735179ac44unchanged.
+Old79+30/current12tests=121PASS;200freshordinaryoperations0unexpectedfailures,
+18/18injections,nativecheckpoint/key/DACL/network/memorydenialand8/8boundaries.
+Primary200/18alsoPASS;firstfailedreplay andfailedcandidate1/2remainpreserved.
+Injectedstopsnevercountassuccessfulcommits. Alloriginalscientificfailuresunchanged.
+
+Historicalhandle/endpointagentidentityunknown;effectivefix establishedonly in
+testedone-machine/volumeprocesscontexts. No powerloss/syscall-crashguarantee,
+real-sourceintegration,physiologicaladmission,neural/NAP/CWPvalidationclaimed.
+No realsource request,protectedneuralcontentread,finalunlockorM3-M7execution.
+
+Separatehumanauthorizationquestionforrealcontinuationpresentedafterverification.
+Until separatelyauthorizedprospectiveprotocol,779839471/17sessionsnotretried.
+FinalmissionPASSawaitsindependentreview/exactarchivecommitandremoteverification;
+no production/mainpromotion orscientificgateamendment accompaniespublication.
