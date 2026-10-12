@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Visual Coding – Neuropixels &#8212; Allen SDK dev documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/aibs_sphinx.css?v=b2c5c072" />
+    <script src="_static/documentation_options.js?v=3ce10a4d"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="GETTING STARTED" href="visual_behavior_optical_physiology.html" />
+    <link rel="prev" title="API Access" href="data_api_client.html" /> 
+  <script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="allensdk" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/visual_coding_neuropixels.html" /><meta name="readthedocs-http-status" content="200" /></head><body>
+<link href="https://www.brain-map.org/assets/stylesheets/portal.css" media="screen" rel="stylesheet" type="text/css" />
+<script src="https://www.brain-map.org/assets/javascripts/portal.js" type="text/javascript"></script>
+<script src="https://www.brain-map.org/assets/javascripts/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var _pSupressBrowserFlashWarning = true;
+    var _pTabId = "pHome";
+    var _pMoreProjectsId = "pMoreProjects";
+    var _pImagePath = "https://www.brain-map.org/assets/images/";
+    var _pSiteWarnings = function() {
+        this.show_warning() = {};
+    }
+</script>
+<script type="text/javascript">
+    function initialize() {
+        /*** do your stuff, then initialize the portal plugin ***/
+        _pPortalOnLoad();
+    }
+</script>
+<style>
+  #header_content > a {
+  display: inline-block;
+  width: 250px;
+  height: 75px;
+  background-image:url("_static/external_assets/images/Brain_Atlas_Logotype_SDK.png") !important;
+  background-size: 235px 37px;
+  background-position: 0px 20px;
+  background-repeat: no-repeat;
+  }
+</style>
+
+<script type="text/javascript" src="https://www.brain-map.org/external_assets/javascripts/portalHeader.js"></script>
+<link rel="stylesheet" type="text/css" href="_static/external_assets/stylesheets/common_layout.css" />
+
+
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="visual-coding-neuropixels">
+<h1>Visual Coding – Neuropixels<a class="headerlink" href="#visual-coding-neuropixels" title="Link to this heading">¶</a></h1>
+<p>The Visual Coding – Neuropixels project uses high-density extracellular electrophysiology (<strong>Ecephys</strong>) probes to record spikes  from a wide variety of regions in the mouse brain. Our experiments are designed to study the activity of the visual cortex and thalamus in the context of passive visual stimulation, but these data can be used to address a wide variety of topics.</p>
+<p>Spike-sorted data and metadata are available via the AllenSDK as <a class="reference external" href="https://www.nwb.org/">Neurodata Without Borders</a> files. However, if you’re using the AllenSDK to interact with the data, no knowledge of the NWB data format is required.</p>
+<section id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading">¶</a></h2>
+<p>To jump right in, check out the <a class="reference external" href="_static/examples/nb/ecephys_quickstart.html">quick start guide</a> <a class="reference external" href="_static/examples/nb/ecephys_quickstart.ipynb">(download .ipynb)</a>, which will show you how to download the data, align spikes to a visual stimulus, and decode natural images from neural activity patterns. For a quick summary of experimental design and data access, see the <a class="reference external" href="https://brainmapportal-live-4cc80a57cd6e400d854-f7fdcae.divio-media.net/filer_public/0f/5d/0f5d22c9-f8f6-428c-9f7a-2983631e72b4/neuropixels_cheat_sheet_nov_2019.pdf">cheat sheet</a>.</p>
+<p>If you would like more example code, the <a class="reference external" href="_static/examples/nb/ecephys_session.html">full example notebook</a> <a class="reference external" href="_static/examples/nb/ecephys_session.ipynb">(download .ipynb)</a> covers all of the ways to access data for each experiment.</p>
+<p>Additional tutorials are available on the following topics:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><a class="reference external" href="_static/examples/nb/ecephys_data_access.html">Data access</a> <a class="reference external" href="_static/examples/nb/ecephys_data_access.ipynb">(download .ipynb)</a></p></li>
+<li><p><a class="reference external" href="_static/examples/nb/ecephys_quality_metrics.html">Unit quality metrics</a> <a class="reference external" href="_static/examples/nb/ecephys_quality_metrics.ipynb">(download .ipynb)</a></p></li>
+<li><p><a class="reference external" href="_static/examples/nb/ecephys_lfp_analysis.html">LFP data analysis</a> <a class="reference external" href="_static/examples/nb/ecephys_lfp_analysis.ipynb">(download .ipynb)</a></p></li>
+<li><p><a class="reference external" href="_static/examples/nb/ecephys_receptive_fields.html">Receptive field mapping</a> <a class="reference external" href="_static/examples/nb/ecephys_receptive_fields.ipynb">(download .ipynb)</a></p></li>
+<li><p><a class="reference external" href="_static/examples/nb/ecephys_optotagging.html">Optotagging</a> <a class="reference external" href="_static/examples/nb/ecephys_optotagging.ipynb">(download .ipynb)</a></p></li>
+</ol>
+</div></blockquote>
+<p>For detailed information about the experimental design, data acquisition, and informatics methods, please refer to our <a class="reference external" href="https://brainmapportal-live-4cc80a57cd6e400d854-f7fdcae.divio-media.net/filer_public/80/75/8075a100-ca64-429a-b39a-569121b612b2/neuropixels_visual_coding_-_white_paper_v10.pdf">technical whitepaper</a>. AllenSDK
+API documentation <a class="reference external" href="allensdk.brain_observatory.ecephys.html">is available here</a>.</p>
+<p><strong>A note on terminology:</strong> Throughout the SDK, we refer to neurons as “units,” because we cannot guarantee that all the spikes assigned to one unit actually originate from a single cell. Unlike in two-photon imaging, where you can visualize each neuron throughout the entire experiment, with electrophysiology we can only “see” a neuron when it fires a spike. If a neuron moves relative to the probe, or if it’s far away from the probe, some of its spikes may get mixed together with those from other neurons. Because of this inherent ambiguity, we provide a variety of quality metrics to allow you to find the right units for your analysis. Even highly contaminated units contain potentially valuable information about brain states, so we didn’t want to leave them out of the dataset. But certain types of analysis require more stringent quality thresholds, to ensure that all of the included units are well isolated from their neighbors.</p>
+</section>
+<section id="data-processing">
+<h2>Data Processing<a class="headerlink" href="#data-processing" title="Link to this heading">¶</a></h2>
+<a class="reference internal image-reference" href="_static/neuropixels_data_processing.png"><img alt="_static/neuropixels_data_processing.png" class="align-center" src="_static/neuropixels_data_processing.png" width="700" />
+</a>
+<p>Neuropixels probes contain 374 or 383 channels that continuously detect voltage fluctuations in the surrounding neural tissue. Each channel is split into two separate data streams, or “bands,” on the probes. The “spike band” is digitized at 30 kHz, and contains information about action potentials fired by neurons directly adjacent to the probe. The “LFP band” is digitized at 2.5 kHz, and records the low-frequency (&lt;1000 Hz) fluctuations that result from synchronized neural activity over a wider area.</p>
+<p>To go from the raw spike-band data to NWB files, we perform the following processing steps:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Median-subtraction to remove common-mode noise from the continuous traces</p></li>
+<li><p>High-pass filtering (&gt;150 Hz) and whitening across blocks of 32 channels</p></li>
+<li><p>Spike sorting with <a class="reference external" href="https://github.com/mouseland/kilosort2">Kilosort2</a>, to detect spikes and assign them to individual units</p></li>
+<li><p>Computing the mean waveform for each unit</p></li>
+<li><p>Removing units with artifactual waveforms</p></li>
+<li><p>Computing quality metrics for every unit</p></li>
+<li><p>Computing stimulus-specific tuning metrics</p></li>
+</ol>
+</div></blockquote>
+<p>For the LFP band, we:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Downsample the signals in space and time (every 4th channel and every 2nd sample)</p></li>
+<li><p>High-pass filter at 0.1 Hz to remove the DC offset from each channel</p></li>
+<li><p>Re-reference to channels outside of the brain to remove common-mode noise</p></li>
+</ol>
+</div></blockquote>
+<p>The packaged NWB files contain:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Spike times, spike amplitudes, mean waveforms, and quality metrics for every unit</p></li>
+<li><p>Information about the visual stimulus</p></li>
+<li><p>Time series of the mouse’s running speed, pupil diameter, and pupil position</p></li>
+<li><p>LFP traces for channels in the brain</p></li>
+<li><p>Experiment metadata</p></li>
+</ol>
+</div></blockquote>
+<p>All code for data processing and packaging is available in the <a class="reference external" href="https://github.com/alleninstitute/ecephys_spike_sorting">ecephys_spike_sorting</a> and the ecephys section of the AllenSDK.</p>
+</section>
+<section id="visual-stimulus-sets">
+<h2>Visual Stimulus Sets<a class="headerlink" href="#visual-stimulus-sets" title="Link to this heading">¶</a></h2>
+<a class="reference internal image-reference" href="_static/neuropixels_stimulus_sets.png"><img alt="_static/neuropixels_stimulus_sets.png" class="align-center" src="_static/neuropixels_stimulus_sets.png" width="700" />
+</a>
+<p>A central aim of the Visual Coding – Neuropixels project is to measure the impact of visual stimuli on neurons throughout the mouse visual system. To that end, all mice viewed one of two possible stimulus sets, known as “Brain Observatory 1.1” or “Functional Connectivity”. Both stimulus sets began with a Gabor stimulus flashed at 81 different locations on the screen, used to map receptive fields of visually responsive units. Next, the mice were shown brief flashes of light or dark, to measure the temporal dynamics of the visual response.</p>
+<p>The remainder of the visual stimulus set either consisted of the same stimuli shown in the two-photon experiments (“Brain Observatory 1.1”), or a subset of those stimuli shown with a higher number of repeats. We also added a dot motion stimulus, to allow us to measure the speed tuning of units across the mouse visual system.</p>
+</section>
+<section id="allensdk-2-0-and-data-compatability">
+<h2>AllenSDK 2.0 and Data Compatability<a class="headerlink" href="#allensdk-2-0-and-data-compatability" title="Link to this heading">¶</a></h2>
+<p>AllenSDK version 2.0 marks a major update to released Visual Coding Neuropixels datasets. Due to newer versions of pynwb/hdmf having issues reading previously released Visual Coding Neuropixels NWB files and due to the significant reorganization of updated NWB file contents, this release contains breaking changes that necessitate a major version revision. NWB files released prior to 6/11/2020 are not guaranteed to work with the 2.0.0 version of AllenSDK. If you cannot or choose not to re-download the updated NWB files, you can continue using a prior version of AllenSDK (&lt; 2.0.0) to access them. However, no further features or bugfixes for AllenSDK (&lt; 2.0.0) are planned. Data released for other projects (Cell Types, Mouse Connectivity, etc.) are <em>NOT</em> affected and will <em>NOT</em> need to be re-downloaded.</p>
+<p>When using the Visual Coding <strong>EcephysProjectCache</strong> from this updated AllenSDK version, if a <strong>ManifestError</strong> is encountered, this indicates that previously downloaded cached data files need to be removed and re-downloaded. The location these files as well as manifest are user defined and are set when instantiating an <strong>EcephysProjectCache</strong>.</p>
+</section>
+<section id="quality-metrics">
+<h2>Quality Metrics<a class="headerlink" href="#quality-metrics" title="Link to this heading">¶</a></h2>
+<a class="reference internal image-reference" href="_static/neuropixels_quality_metrics.png"><img alt="_static/neuropixels_quality_metrics.png" class="align-center" src="_static/neuropixels_quality_metrics.png" width="700" />
+</a>
+<p>Every NWB file includes a table of quality metrics, which can be used to assess the completeness, contamination, and stability of units in the recording. By default, we won’t show you units below a pre-determined quality threshold; we hide any units that are not present for the whole session (presence_ratio &lt; 0.95), that include many contaminating spikes (isi_violations &gt; 0.5), or are likely missing a large fraction of spikes (amplitude_cutoff &gt; 0.1). However, even contaminated or incomplete units contain information about brain states, and may be of interest to analyze. Therefore, the complete units table can be accessed via special flags in the AllenSDK.</p>
+<p>In general, we do not make a distinction between ‘single-unit’ and ‘multi-unit’ activity. There is no obvious place to draw a boundary in the overall distributions of quality metrics, and setting a strict cutoff (e.g. isi_violations = 0) will remove a lot of potentially valuable data. We prefer to leave it up to the end user to decide what level of contamination is tolerable. But that means you need to be aware that different units will have different levels of cleanliness.</p>
+<p>It should also be noted that all of these metrics assume that the spike waveform is stable throughout the experiment. Given that the probe drifts, on average, about 40 microns over the course of the ~3 hour recordings, this assumption is almost never valid. The resulting changes in waveform shape can cause a unit’s quality to fluctuate. If you’re unsure about a unit’s quality, it can be helpful to plot its spike amplitudes over time. This can make it obvious if it’s drifting below threshold, or if it contains spikes from multiple neurons.</p>
+<p>Documentation on the various quality metrics can be found in the <a class="reference external" href="https://github.com/AllenInstitute/ecephys_spike_sorting/tree/master/ecephys_spike_sorting/modules/quality_metrics">ecephys_spike_sorting</a> repository.</p>
+<p>For a detailed discussion of the appropriate way to apply each of these metrics, please check out <a class="reference external" href="_static/examples/nb/ecephys_quality_metrics.html">this tutorial</a> <a class="reference external" href="_static/examples/nb/ecephys_quality_metrics.ipynb">(download .ipynb)</a></p>
+</section>
+<section id="precomputed-stimulus-metrics">
+<h2>Precomputed Stimulus Metrics<a class="headerlink" href="#precomputed-stimulus-metrics" title="Link to this heading">¶</a></h2>
+<p>Tables of precomputed metrics are available for download to support population analysis and filtering.  The table below describes all of the available metrics.  The <code class="xref py py-meth docutils literal notranslate"><span class="pre">get_unit_analysis_metrics()</span></code> method
+will load this table as a <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html">pandas DataFrame</a>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Stimulus</p></th>
+<th class="head"><p>Metric</p></th>
+<th class="head"><p>Field Name</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td rowspan="12"><p>drifting gratings</p></td>
+<td><p>preferred orientation</p></td>
+<td><p>pref_ori_dg</p></td>
+</tr>
+<tr class="row-odd"><td><p>preferred temporal frequency</p></td>
+<td><p>pref_tf_dg</p></td>
+</tr>
+<tr class="row-even"><td><p>global ori. selectivity</p></td>
+<td><p>g_osi_dg</p></td>
+</tr>
+<tr class="row-odd"><td><p>global dir. selectivity</p></td>
+<td><p>g_dsi_dg</p></td>
+</tr>
+<tr class="row-even"><td><p>running modulation</p></td>
+<td><p>run_mod_dg</p></td>
+</tr>
+<tr class="row-odd"><td><p>running modulation p-value</p></td>
+<td><p>p_run_mod_dg</p></td>
+</tr>
+<tr class="row-even"><td><p>firing rate</p></td>
+<td><p>firing_rate_dg</p></td>
+</tr>
+<tr class="row-odd"><td><p>fano factor</p></td>
+<td><p>fano_dg</p></td>
+</tr>
+<tr class="row-even"><td><p>modulation index</p></td>
+<td><p>mod_idx_dg</p></td>
+</tr>
+<tr class="row-odd"><td><p>f1/f0</p></td>
+<td><p>f1_f0_dg</p></td>
+</tr>
+<tr class="row-even"><td><p>lifetime sparseness</p></td>
+<td><p>lifetime_sparseness_dg</p></td>
+</tr>
+<tr class="row-odd"><td><p>c50 (contrast tuning stimulus)</p></td>
+<td><p>c50_dg</p></td>
+</tr>
+<tr class="row-even"><td rowspan="9"><p>static gratings</p></td>
+<td><p>preferred orientation</p></td>
+<td><p>pref_ori_sg</p></td>
+</tr>
+<tr class="row-odd"><td><p>preferred spatial frequency</p></td>
+<td><p>pref_sf_sg</p></td>
+</tr>
+<tr class="row-even"><td><p>preferred phase</p></td>
+<td><p>pref_phase_sg</p></td>
+</tr>
+<tr class="row-odd"><td><p>global ori. selectivity</p></td>
+<td><p>g_osi_sg</p></td>
+</tr>
+<tr class="row-even"><td><p>running modulation</p></td>
+<td><p>run_mod_sg</p></td>
+</tr>
+<tr class="row-odd"><td><p>running modulation p-value</p></td>
+<td><p>p_run_mod_sg</p></td>
+</tr>
+<tr class="row-even"><td><p>firing rate</p></td>
+<td><p>firing_rate_sg</p></td>
+</tr>
+<tr class="row-odd"><td><p>fano factor</p></td>
+<td><p>fano_sg</p></td>
+</tr>
+<tr class="row-even"><td><p>lifetime sparseness</p></td>
+<td><p>lifetime_sparseness_sg</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="7"><p>natural scenes</p></td>
+<td><p>preferred image index</p></td>
+<td><p>pref_image_ns</p></td>
+</tr>
+<tr class="row-even"><td><p>image selectivity</p></td>
+<td><p>image_selectivity_ns</p></td>
+</tr>
+<tr class="row-odd"><td><p>running modulation</p></td>
+<td><p>run_mod_ns</p></td>
+</tr>
+<tr class="row-even"><td><p>running modulation p-value</p></td>
+<td><p>p_run_mod_ns</p></td>
+</tr>
+<tr class="row-odd"><td><p>firing rate</p></td>
+<td><p>firing_rate_ns</p></td>
+</tr>
+<tr class="row-even"><td><p>fano factor</p></td>
+<td><p>fano_factor_ns</p></td>
+</tr>
+<tr class="row-odd"><td><p>lifetime sparseness</p></td>
+<td><p>lifetime_sparseness_ns</p></td>
+</tr>
+<tr class="row-even"><td rowspan="7"><p>dot motion</p></td>
+<td><p>preferred speed</p></td>
+<td><p>pref_speed_dm</p></td>
+</tr>
+<tr class="row-odd"><td><p>preferred direction</p></td>
+<td><p>pref_dir_dm</p></td>
+</tr>
+<tr class="row-even"><td><p>running modulation</p></td>
+<td><p>run_mod_dm</p></td>
+</tr>
+<tr class="row-odd"><td><p>running modulation p-value</p></td>
+<td><p>p_run_mod_dm</p></td>
+</tr>
+<tr class="row-even"><td><p>firing rate</p></td>
+<td><p>firing_rate_dm</p></td>
+</tr>
+<tr class="row-odd"><td><p>fano factor</p></td>
+<td><p>fano_factor_dm</p></td>
+</tr>
+<tr class="row-even"><td><p>lifetime sparseness</p></td>
+<td><p>lifetime_sparseness_dm</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="6"><p>full-field flashes</p></td>
+<td><p>on/off ratio</p></td>
+<td><p>on_off_ratio_fl</p></td>
+</tr>
+<tr class="row-even"><td><p>running modulation</p></td>
+<td><p>run_mod_fl</p></td>
+</tr>
+<tr class="row-odd"><td><p>running modulation p-value</p></td>
+<td><p>p_run_mod_fl</p></td>
+</tr>
+<tr class="row-even"><td><p>firing rate</p></td>
+<td><p>firing_rate_fl</p></td>
+</tr>
+<tr class="row-odd"><td><p>fano factor</p></td>
+<td><p>fano_factor_fl</p></td>
+</tr>
+<tr class="row-even"><td><p>lifetime sparseness</p></td>
+<td><p>lifetime_sparseness_fl</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="9"><p>gabors</p></td>
+<td><p>RF area</p></td>
+<td><p>area_rf</p></td>
+</tr>
+<tr class="row-even"><td><p>RF elevation</p></td>
+<td><p>elevation_rf</p></td>
+</tr>
+<tr class="row-odd"><td><p>RF azimuth</p></td>
+<td><p>azimuth_rf</p></td>
+</tr>
+<tr class="row-even"><td><p>RF p-value</p></td>
+<td><p>p_value_rf</p></td>
+</tr>
+<tr class="row-odd"><td><p>running modulation</p></td>
+<td><p>run_mod_rf</p></td>
+</tr>
+<tr class="row-even"><td><p>running modulation p-value</p></td>
+<td><p>p_run_mod_rf</p></td>
+</tr>
+<tr class="row-odd"><td><p>firing rate</p></td>
+<td><p>firing_rate_rf</p></td>
+</tr>
+<tr class="row-even"><td><p>fano factor</p></td>
+<td><p>fano_factor_rf</p></td>
+</tr>
+<tr class="row-odd"><td><p>lifetime sparseness</p></td>
+<td><p>lifetime_sparseness_rf</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Install Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="data_resources.html">Data Resources</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="brain_observatory.html">Brain Observatory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cell_types.html">Cell Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="connectivity.html">Mouse Connectivity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference_space.html">Reference Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_api_client.html">API Access</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Visual Coding – Neuropixels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visual_behavior_optical_physiology.html">GETTING STARTED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visual_behavior_optical_physiology.html#tutorials">TUTORIALS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visual_behavior_optical_physiology.html#documentation">DOCUMENTATION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visual_behavior_optical_physiology.html#visual-behavior-optical-physiology-datasets">VISUAL BEHAVIOR OPTICAL PHYSIOLOGY DATASETS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visual_behavior_optical_physiology.html#behavioral-training">BEHAVIORAL TRAINING</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visual_behavior_optical_physiology.html#photon-imaging-during-behavior">2-PHOTON IMAGING DURING BEHAVIOR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visual_behavior_optical_physiology.html#session-structure">SESSION STRUCTURE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visual_behavior_optical_physiology.html#data-processing">DATA PROCESSING</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visual_behavior_optical_physiology.html#quality-control">QUALITY CONTROL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visual_behavior_optical_physiology.html#summary-of-available-data">SUMMARY OF AVAILABLE DATA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visual_behavior_optical_physiology.html#data-file-changelog">DATA FILE CHANGELOG</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="glif_models.html">Generalized LIF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="biophysical_models.html">Biophysical</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">Authors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="allensdk.html">Source Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="allensdk.api.html">allensdk.api package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="allensdk.brain_observatory.html">allensdk.brain_observatory package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="allensdk.config.html">allensdk.config package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="allensdk.core.html">allensdk.core package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="allensdk.ephys.html">allensdk.ephys package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="allensdk.internal.html">allensdk.internal package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="allensdk.model.html">allensdk.model package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="allensdk.morphology.html">allensdk.morphology package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="allensdk.mouse_connectivity.html">allensdk.mouse_connectivity package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="allensdk.test_utilities.html">allensdk.test_utilities package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="allensdk.deprecated.html">allensdk.deprecated module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/AllenInstitute/AllenSDK">Github Profile</a></li>
+</ul>
+
+<h3> Questions </h3>
+<p class="questions">
+  For help with problems or questions using the AllenSDK, please create an issue on <a href="https://github.com/alleninstitute/allensdk/issues/">Github's issue tracker</a> or submit your question to <a href="https://stackoverflow.com/">StackOverflow</a> with the 'allen-sdk' tag.
+</p>
+<p class="questions">
+    For any other questions, search the <a href="https://community.brain-map.org/">Community Forum</a> or start a new topic.
+</p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+
+    <div class="footer" role="contentinfo">
+    </div>
+<script type="text/javascript" src="https://www.brain-map.org/external_assets/javascripts/portalFooter.js"></script>
+
+
+  </body>
+</html>

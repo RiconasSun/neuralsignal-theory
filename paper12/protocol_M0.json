@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "mission": "P12-HIPPOCAMPAL-SUBFIELD-DYNAMICS",
+  "phase": "M0",
+  "study_species": "mouse",
+  "primary_contrast": ["CA1", "DG"],
+  "secondary_subfield": "CA3",
+  "minimum_development_mice": 8,
+  "minimum_independent_final_mice": 8,
+  "minimum_candidate_units_per_subfield_session": 5,
+  "firing_adequacy": "NOT_ASSESSED; metadata counts are potentials only",
+  "sources": {
+    "allen": ["https://allensdk.readthedocs.io/en/latest/visual_coding_neuropixels.html", "https://api.brain-map.org/api/v2/data/query.json", "https://raw.githubusercontent.com/AllenInstitute/AllenSDK/master/allensdk/brain_observatory/ecephys/ecephys_project_api/ecephys_project_warehouse_api.py"],
+    "conditional_ibl": ["https://docs.internationalbrainlab.org/notebooks_external/2025_data_release_brainwidemap.html", "https://ibl-brain-wide-map-public.s3.amazonaws.com/"]
+  },
+  "release_policy": "Resolve official metadata release identifiers once; save verbatim source receipts, URLs without secrets, retrieval UTC and SHA256. Mutable API snapshot is not an immutable physiological release. No later snapshot substitution.",
+  "permitted": ["Official documentation and source code", "Identity-only session/mouse/probe tables", "Unit ID, probe/channel foreign keys and atlas structure labels only", "Recording/stimulus start-end intervals, gap/synchronization declarations and trial counts if available as standalone metadata", "Behavioral variable names and availability, not behavioral/neural outcomes", "Public file version, checksum, size and license declarations"],
+  "forbidden": ["Spike times or counts", "Waveforms", "Firing rates or response metrics", "Neural model performance", "Full NWB or mixed physiological archives", "P1-P11 data or holdout access", "Selection based on outcome-derived quality metrics"],
+  "api_projection": "Server-side explicit metadata field projection is mandatory. Fail closed if neural columns are returned. Do not use SDK default unit filtering or download session NWBs.",
+  "coverage_rule": "Count every returned unfiltered unit with exact CA1, CA3, DG or official DG descendant atlas label. Publish raw labels separately. Units share a session but timestamps/support must independently establish aligned simultaneous observation. Atlas annotations alone do not prove independent histology.",
+  "assignment_rule": "Only after all metadata admission conditions pass, deterministic SHA256 ordering of eligible mouse identities; first 8 reserved final, remaining development (>=8). No assignment or trial partition fabricated on an unpassed gate. M1 must freeze actual trial partitions before physiology.",
+  "pass_conditions": ["Complete mouse/session/probe/unit-anatomy denominator", ">=16 distinct mice with same-session CA1/DG candidate count>=5 each", "Authoritative recording support, stimulus intervals, missingness and alignment", "Unit/anatomy provenance and uncertainty disclosed", "Trial/repeat and behavioral availability inventoried", "Release/source/checksum provenance auditable", "No forbidden access"],
+  "failure_policy": "Any unverified mandatory condition makes M0 INCONCLUSIVE, proven inadequate cohort DATA_INSUFFICIENT. Perform one unified metadata-only IBL alternative assessment; do not reduce thresholds. Stop before M1 unless every M0 scientific admission condition passes.",
+  "tests": ["Projection allowlist and forbidden-field denial", "Complete joins and orphan accounting", "Mouse-level not session-level denominator", "Threshold boundaries", "Exact label classification", "Snapshot hashes and frozen protocol", "Fail-closed gate with missing support"]
+}

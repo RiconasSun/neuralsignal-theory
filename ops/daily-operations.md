@@ -1,3 +1,24 @@
+# Current P12 Metadata Feasibility Audit
+
+Mission:P12-HIPPOCAMPAL-SUBFIELD-DYNAMICS, separately authorized mouse M0.
+State:WAIT_FOR_HUMAN_INPUT; scientific M0 INCONCLUSIVE, not PASS.
+Allen full58mice/sessions,332probes,135275unfiltered unit identities;
+51anatomical CA1/DG paired potentials,0admitted mice. All58 native NWB
+timestamp/interval metadata and raw object inventories audited; complete
+native neural recording support/gaps remain UNKNOWN, not proven absent.
+Single registered IBL alternative:139identities,459sessions,699probes,
+621733distinct units;84potential paired mice/108sessions,0admitted.
+No spikes/firing/waveform/quality outcomes, models, final validation or M1-M7.
+HDF structural ranges transported opaque bytes; no zero-transport claim.
+Original unpassed gates retained; software/provenance guard repairs separately
+documented. Five scientific evidence warnings remain; tests do not clear them.
+Existing public sync objects are catalogued but not decoded: no claim that
+native support reconstruction is impossible. No further candidate search active.
+Further recovery would require a separate explicit prospective support/anatomy
+audit decision, not routine milestone approval or relaxed thresholds.
+Evidence:../paper12/ and evidence/2026-10-11/p12-hippocampal-subfield-dynamics/.
+P1-P11 and original operations history remain unchanged.
+
 # Completed Manuscript Closeout
 
 Mission:P11-MANUSCRIPT-CLOSEOUT-1; explicitly authorized exploratory manuscript

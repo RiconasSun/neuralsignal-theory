@@ -1,0 +1,12 @@
+{
+  "conditional": "Execute once only after Allen M0 admission is not PASS",
+  "release": "Official 2025 BWM release description; fixed 2023_12_bwm_release identity fixture and 2024_Q2_IBL_et_al_BWM anatomy aggregate; disclose any version or denominator mismatch instead of switching releases",
+  "source_resolution": "Resolve official GitHub repository main commit once and use immutable raw URLs for fixture and loader; hash receipts. Never substitute a later fixture based on coverage.",
+  "cohort_rules": "Same >=8 development and >=8 independent final mice, >=5 potential CA1 and DG units in same session; full fixture denominator retained",
+  "permitted_columns": ["eid", "pid", "cluster_id", "atlas_id", "uuids"],
+  "forbidden": ["spikes", "rates", "metrics", "waveforms", "neural outcome quality values", "model performance"],
+  "parquet": "Read schema/footer and only identity/anatomy columns over bounded ranges. No full table decode. Any opaque adjacent transported bytes disclosed. Do not call load_good_units, load_trials or bwm_units.",
+  "public_bucket": "ibl-brain-wide-map-public, official release aggregate paths",
+  "budgets": {"maximum_metadata_transport_bytes": 25000000, "maximum_range_bytes": 1048576},
+  "gate": "PASS only with sufficient independent paired mice and verified native support/anatomy/trial metadata. Missing conditions INCONCLUSIVE; proven <16 potential paired mice DATA_INSUFFICIENT. One assessment only; no threshold rescue."
+}

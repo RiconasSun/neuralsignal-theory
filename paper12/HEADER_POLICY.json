@@ -1,0 +1,15 @@
+{
+  "phase": "M0 bounded recording-header investigation",
+  "unchanged_thresholds": true,
+  "before_access": "This policy is hash-recorded before file descriptor or NWB header requests.",
+  "descriptor_projection": ["id", "attachable_id", "download_link"],
+  "descriptor_filter": "EcephysSession / EcephysNwb only",
+  "transport": "HTTPS streaming Range requests, strict HTTP206, Content-Range bounds; reject HTTP200 without consuming its body",
+  "range_budget_bytes": 131072,
+  "per_file_budget_bytes": 2097152,
+  "allowed_hdf5_values": ["/session_start_time", "/timestamps_reference_time", "/intervals/*/start_time", "/intervals/*/stop_time", "/intervals/*/stimulus_name", "/intervals/invalid_times/tags"],
+  "allowed_structure": "Root and interval group names, shapes and dtypes only; do not open units, processing, acquisition values",
+  "forbidden_values": ["spike_times", "spike_amplitudes", "waveforms", "rates", "quality metrics", "neural acquisition samples"],
+  "important_boundary": "HDF5 structural ranges can contain opaque adjacent bytes. Never claim zero physiological bytes transported; only permitted metadata decoded. Store range hashes/offsets, not opaque payloads.",
+  "admission": "Even complete stimulus timestamps do not prove raw recording end or absence of unreported gaps. Missing native recording-support evidence remains UNKNOWN. Apply uniform procedure to all session descriptors."
+}
