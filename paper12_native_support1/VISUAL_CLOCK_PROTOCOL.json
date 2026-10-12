@@ -1,0 +1,10 @@
+{
+  "prospective_scope": "Additional event-to-neural time-base verification inside the same Allen audit, before visual-sync bit decoding. Original clock policy and M0 failures unchanged.",
+  "only_permitted_additional_bits": {"frame_labels": ["frames", "stim_vsync", "vsync_stim"], "photodiode_labels": ["photodiode", "stim_photodiode"]},
+  "forbidden": "No behavioral bits, analog photodiode values, running, pupil, spikes or scores",
+  "method": "Pinned Allen stimulus_sync functions and documented EcephysSyncDataset.extract_frame_times_from_photodiode; cycle60,trim_discontiguous_frame_times=true,source-defined zero-frame correction. No parameter search or fallback configuration based on agreement.",
+  "scoring": "Every saved start_time in both registered repeated stimulus tables, compared to nearest reconstructed physical stimulus frame timestamp; known global stimulus invalid intervals reported separately, no unregistered exclusions.",
+  "registered_limits_seconds": {"p95": 0.001, "maximum": 0.005},
+  "meaning": "Timing-agreement diagnostic, not confirmation of exact physical timestamps, observation continuity, neuron firing adequacy or absolute calendar date",
+  "negative_result_policy": "Preserve all failures/unmatched windows. No new cohort and no M1. Curated-only recommendation requires adequate explicitly supported mice; no retroactive original M0PASS."
+}

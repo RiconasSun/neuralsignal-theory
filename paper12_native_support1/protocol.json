@@ -1,0 +1,32 @@
+{
+  "mission": "P12-M0-NATIVE-SUPPORT-AUDIT-1",
+  "checkpoint": "91c92abcda3549196cce1d6253ef0fa76c8d0886",
+  "species": "mouse",
+  "primary_dataset": "Allen Visual Coding Neuropixels; original M0 frozen58session/332probe inventory",
+  "primary_protocol": "functional_connectivity; chosen prospectively from metadata coverage, not neural scores",
+  "primary_pair": ["CA1", "DG"],
+  "secondary": "CA3",
+  "unchanged_original_minimum": {"development_mice": 8, "separate_final_mice": 8, "potential_units_per_subfield_session": 5},
+  "no_final_partition_assignment": "Only assess potential. Do not launch M1 or access neural outcomes. Later authorized protocol must independently freeze identities and trial partitions.",
+  "source_policy": "Reuse old hashed inventory; resolve official AllenSDK and ecephys processing source commits once; preserve exact source/docs/license receipts. Same frozen NWB ETags and raw S3 object identifiers. New metadata projection hashes supplement, never replace old M0.",
+  "permitted_access": [
+    "Official processing, synchronization, histology, CCF and stimulus documentation/source code",
+    "Raw object sizes, version/ETag and native file format headers; no spike_band.dat or lfp_band.dat samples",
+    "Non-neural raw sync.h5 /meta and /data hardware sample-counter/digital-barcode-bit evidence, ONLY after authoritative schema validation; no analog data or behavioral bit interpretation",
+    "Probe event_timestamps.npy and channel_states.npy digital synchronization edges ONLY after official barcode/edge semantics verification; no sorted spikes arrays",
+    "NWB root/probe/device/electrode group structural attributes and timing/anatomy metadata; no unit/processing neural array values",
+    "NWB stimulus presentation start_time/stop_time/stimulus_block/stimulus_index/frame/orientation/temporal_frequency/contrast fields and interval tags/index; no behavioral responses",
+    "Invalid interval start_time/stop_time/tags/tags_index to identify probe-specific known exclusions",
+    "Server-projected anatomical coordinates, channel position, unit-channel-probe IDs and histology asset provenance only"
+  ],
+  "forbidden": ["Spike times or count values", "Spike amplitudes/waveforms", "Raw analog neural signals", "Firing rates/physiological quality metrics/model scores", "Behavioral outcomes or analog running/pupil values", "Final validation", "Full session mixed NWB downloads", "P1-P11 or original paper12 changes"],
+  "transport": {"range_bytes": 131072, "maximum_NWB_metadata_bytes_per_session": 4194304, "maximum_sync_file_bytes": 25000000, "maximum_probe_digital_file_bytes": 5000000, "maximum_document_bytes": 25000000, "policy": "Capped streaming; reject bulk NWB response; enforce ETag and Content-Range; reject soft/external HDF links. Save allowed digital timing evidence and decoded metadata, not opaque NWB payloads."},
+  "native_support_verification": "Require authoritative channel stride/dtype, native clock origin, sampling/recording length, event-to-session transformation and gap/continuity evidence. Bare file length or absence of invalid flags is not full continuity proof. Report inferred serialized duration separately from certified observation.",
+  "clock_procedure": "Use pinned official barcode definitions; validate parser and affine clock mapping against controlled digital fixtures and independent algebra; use all identifiable sync codes, no favorable subset. Report mismatches, splitting, residuals and extrapolation. Freeze exact decoder parameters/acceptance before digital timing decoding once source definitions are known.",
+  "trial_procedure": "Identify repetitions by stimulus condition/block/frame progression; group complete movie frame cycles as trials, never frames. Prefer drifting_gratings_75_repeats and complete natural_movie_one_more_repeats if available. Audit interval validity, matched-subfield support and known exclusions. No trial-count scientific threshold invented; report actual independent repeated presentations for future registration.",
+  "anatomy_procedure": "All unit-to-channel-to-probe-to-CCF mappings, atlas coordinates and independent histology provenance assessed separately. Quantify missing coordinates and proximity to within-probe label transitions at20/40um as metadata-only sensitivity, not anatomical certainty. Never equate peak-channel registration with independent histology.",
+  "warning_policy": "Critical: undefined time bases, unknown observation origin/envelope or insufficient paired mice. Sensitivity: atlas-boundary/registration uncertainty if honestly scoped to annotated subfields. Optional: behavior covariates may be omitted in a prospectively stimulus-controlled analysis. Full original admission still requires its unchanged support standard.",
+  "verdicts": ["ORIGINAL_CRITERIA_DEMONSTRATED_RECOMMEND_SEPARATE_M1", "CURATED_RELEASE_SUPPORT_ONLY_PROPOSE_SEPARATE_EXPLORATORY_PROTOCOL", "INCONCLUSIVE"],
+  "stopping": "One complete Allen audit. Never reclassify original M0. IBL existing inventory only if a specific documented blocker is realistically addressed there; otherwise no IBL acquisition. Stop before M1 regardless of verdict.",
+  "tests": ["Forbidden paths/columns and links", "Digital-only schema", "Barcode and affine-map analytical fixtures", "Counter wrap and gaps", "Movie frames versus trials", "Known-invalid interval attribution", "Full mouse/session/probe denominator", "Immutable prior evidence", "Saved-metadata parity and actual native PowerShell"]
+}

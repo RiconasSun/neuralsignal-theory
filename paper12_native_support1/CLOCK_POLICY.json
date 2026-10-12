@@ -1,0 +1,16 @@
+{
+  "before_access": "Freeze before digital sync /data or per-probe edge values are decoded.",
+  "official_decoder": "AllenSDK pinned a56bd8ea7613a812334602b64746cdd30c325a96 barcode.extract_barcodes_from_times; exact source receipt hash registered",
+  "barcode_parameters": {"inter_barcode_interval": 10, "bar_duration": 0.03, "barcode_duration_ceiling": 2, "nbits": 32},
+  "digital_schema": "sync.h5 /meta literal dictionary, /data Nx2 uint32 sample counter + bitfield; only labelled barcode/barcodes/barcode_ephys bit interpreted. Probe channel_states values1/-1 edges,0split; event_timestamps native sample indices. Fail closed on undefined format.",
+  "counter_wrap": "Unwrap exact negative uint32 differences by2^32 per wrap; report wraps, monotonicity, ambiguous gaps and sync recording stop declaration separately.",
+  "probe_nominal_sampling_rate_hz": 30000,
+  "gap_detection": "Use official zero-state split markers and barcode interval tolerance0.0001 relative to median, report all discontinuities. Do not infer no other dropouts from no detected marker.",
+  "clock_fit": "Independent least-squares affine fit across every uniquely identifiable shared barcode in each official split interval; require >=3matched codes per segment. Report unmatched/duplicate values, every-segment residuals and extrapolation. Compare official endpoint transform as separate oracle where valid; no favorable code pruning.",
+  "diagnostic_accuracy_seconds": {"p95_absolute_residual_maximum": 0.001, "absolute_residual_maximum": 0.005},
+  "accuracy_scope": "New prospective timing diagnostic standard, not a retrospective original M0 amendment;1ms=1% of100ms bin. Passing clock residuals does not certify observation continuity or anatomical localization.",
+  "raw_duration": "Compute serialized sample count from file bytes only under authoritative int16/384channel format declaration; explicitly conditional on native start_index and gaps. Do not treat estimated duration as certified support.",
+  "trial_windows": "Read repeated-grating presentation intervals and complete movie cycles as metadata. Primary potential is >=5CA1/DG units and actual genuine repetition support under functional_connectivity. No outcome-informed trial exclusion or hyperparameter selection.",
+  "trial_known_gap_policy": "Count repeated presentations that do not intersect relevant probe/global invalid intervals; unknown tag semantics are UNKNOWN, not silently omitted. Animal potential tally is not unit physiological QC or M1 admission.",
+  "final_conditions": "Any undefined essential clock/support =>INCONCLUSIVE, or explicit curated-only proposal if release timing and documented exclusion windows plus paired repeats are demonstrated. Full original admission needs native observation/continuity witness and cannot be changed."
+}

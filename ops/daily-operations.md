@@ -1,3 +1,25 @@
+# Completed P12 Native Support Recovery Audit
+
+Mission:P12-M0-NATIVE-SUPPORT-AUDIT-1;newprospective one-Allen metadata audit.
+State:WAIT_FOR_HUMAN_INPUT for a distinct scientific scope decision.
+Recommendation:CURATED_RELEASE_SUPPORT_ONLY_PROPOSE_SEPARATE_EXPLORATORY_PROTOCOL.
+OriginalM0 remains INCONCLUSIVE,notPASS;M1-M7notrun;no spikes/analogs/behavior
+outcomes/final scores or IBL acquisition.11277priortrackedfiles unchanged.
+Full58sessions/332probes/123224channels;313whole-probe clock diagnostics pass,
+19underidentified retained;371/474endpoint comparisons,0errors;88known exclusions.
+26FCmice have600genuinegratings each,581-600clock-bracketed paired potentials;
+not physiological eligibility or lockedfinal cohort.34tests and nativePowerShell
+fullcachedtiming0;9tables/gate+117timing parities;474segments recomputed.
+Two visualmax-error failures,two movie nonpositive-duration failures,54calendar
+date mismatches and exportedzero-rate probe retained. No nativecontinuity or
+independent histology certified;5scientific warnings persist. Anatomy labels
+physiology-assisted;20/40umproxies not true registration-error confidence bounds.
+Evidence:../paper12_native_support1/ and
+evidence/2026-10-11/p12-m0-native-support-audit-1/.
+Next:separate approval/prospective registration for curated nominal-bin/provider-
+annotation exploratory scope, or originalnative-study STOP pending witnesses.
+Do not automatically initiate M1,changeoldverdicts,unblindholds or searchcohorts.
+
 # Current P12 Metadata Feasibility Audit
 
 Mission:P12-HIPPOCAMPAL-SUBFIELD-DYNAMICS, separately authorized mouse M0.

@@ -1,0 +1,8 @@
+{
+  "type": "Prospective source-defined digital schema correction before full audit",
+  "original_smoke_preserved": ["results/digital/766640955.json", "results/digital_code1/766640955.json"],
+  "source_evidence": "Pinned NpxExtractor3a.cpp emits channelState=+/- (c+1),c0..15. SDK channel_states.py selects only+/-1 for barcode and0for split. Other codes are digital line identifiers, not unexpected neural data.",
+  "corrected_schema": "Allow integer signed edge IDs in[-16,16]; decode ONLY+/-1 barcode timing and0split; count other identifiers without interpreting their function/outcomes. Reject values outside documented range.",
+  "unchanged": ["Original M0 verdicts", "Clock residual thresholds1ms/5ms", "Barcode parameters", "No favorable seed/code selection", "No neural/behavioral outcomes", "100ms target bin", "8+8mice and5units"],
+  "evidence_standard": "No admission standard changed. Fix mistaken schema rejection using authoritative source; corrected results in digital_code2, all58sessions/332probes."
+}
