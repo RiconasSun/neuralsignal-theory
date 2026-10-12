@@ -33,3 +33,6 @@ preserved. Scopedsyntheticengineering/exactorigin-testarchivalapproved;REQ024
 requiresactualcommit/pushreadbackbeforemissionPASS. No scientific/realcontinuation.
 Postreplayread-onlymetadata:NTFS;Defenderantivirus,realtime,service,behavior
 monitoringall enabled. No historicalcauseattribution orsecurityconfigurationchange.
+
+REQ024verifiedbyactualarchivea9cca35GitHubreadback/cleantree. Baseline26/26,
+bug_count0,warn_count0;finalscopedmissionPASS. No scientific/realcontinuation.

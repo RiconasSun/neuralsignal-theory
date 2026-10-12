@@ -27,9 +27,9 @@ Frozen baseline26; no contraction. Files/results are inpaper12_checkpoint1.
 |021|VERIFIED|Old79+30/current12testsPASS,boundscope savedoldreplay|
 |022|VERIFIED|replay_success2 exit0,start/endafa41104;all121tests/200/18/security/8verified|
 |023|VERIFIED|Root/QC/security/claimaudits,tables,machinegate|
-|024|IMPLEMENTED_UNVERIFIED|Finalreview/exactarchivecommit/remoteverificationpending|
+|024|VERIFIED|Independentapproval,archivea9cca35pushed/readbackorigin-test,cleantree|
 |025|VERIFIED|Noactualdataexecution;explicitseparatecontinuationquestionpresentedtohuman|
 |026|VERIFIED|No realsource/neuralreads/holdoutunlock/M3-M7;privatepathsignored|
 
-25 verified,1 pending archive/readback; no engineering missionPASS until all26 are verified.
+26 verified,0 pending. FinalmissionPASSissyntheticengineeringonly;allscientificfailuresunchanged.
 Earlier failed candidates remainfailed;currentprimarygate isnot scientificPASS.
