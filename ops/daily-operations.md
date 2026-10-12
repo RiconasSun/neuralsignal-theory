@@ -1,3 +1,22 @@
+# Current P12 Bounded Transport Recovery
+
+Mission:P12-M2-TRANSPORT-RECOVERY-1;prospective same-source recovery fromcf6321b.
+State:WAIT_FOR_HUMAN_INPUT after mandatory critical checkpoint stop.
+Recovery M2:FAIL/INCONCLUSIVE;original custody/curated failures unchanged.
+Eight verified sessions reused;4development/4final knowneligible;17unexecuted.
+Session779839471:18verifiedHTTPresponses,73947536acceptedbytes,0networktimeouts;
+protected atomic cache-directory rename failedWinError5.17committedblocks,
+1pendingunaccepted;no actual commit/source retry afterstop.20synthetic rename
+trials retained:19PASS/1WinError5. Underlyingfilesystem/handle cause unresolved.
+Fresh zero-capability native isolationPASS;24prospective code regressionsPASS.
+Final analysis exposure=false;finalevaluation=false. RealM3-M5 notexecuted.
+Newfailure offset redactedpublicly,exactdiagnostic preservedprivate;initial
+poststop marker-audit overstatement retained and corrected byverifiedaudit2.
+Full26 disposition/QC/gate/claim/reproduction evidence inpaper12_transport1.
+Nextrequires separate authorization forsynthetic-only localcheckpoint remediation;
+no gate reinterpretation,sourceattemptbudget reset,cohortreshuffle orholdoutrelease.
+Prior history below preserved verbatim.
+
 # Current P12 Isolated Custody Recovery
 
 Mission:P12-M2-ISOLATED-CUSTODY-1;explicit new custody authorization.

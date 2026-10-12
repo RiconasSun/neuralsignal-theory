@@ -1,0 +1,21 @@
+{
+  "id": "P12-M2-TRANSPORT-RECOVERY-1",
+  "checkpoint": "cf6321b7e3afadb212cc730c99f8cd972079b6d8",
+  "source": "Exactly the26 frozen Allen NWB file IDs/ETags/lengths; no alternative version or search",
+  "ranges": "Aligned4MiB half-open source byte blocks,clamped to frozen file length;maximum128MiB logical read;no unbounded read",
+  "requests_per_block_maximum": 3,
+  "retry_accounting": "Three NEW requests per chunk total in this recovery,not original request plus3;attempt journal written before request;restart cannot reset budget",
+  "timeout_seconds": {"connect": 20, "read": 120},
+  "backoff_seconds": [2, 4],
+  "retryable": ["connection timeout", "read timeout", "connection interruption", "HTTP408", "HTTP429", "HTTP500", "HTTP502", "HTTP503", "HTTP504"],
+  "fatal": ["ETag/version mismatch", "Content-Range mismatch", "wrong exact body length", "other HTTPstatus", "cache corruption", "attempt budget exhaustion", "identity/index/QC integrity violation", "isolation/leakage failure"],
+  "integrity": "Accept only206,exactContent-Range,exactETag and exactbyte length;completed private block SHA256 checked on cache reuse;ETag is not whole-file SHA256",
+  "memory": "16cached4MiB blocks=64MiB transport cache plus existing tensor/one target-unit vector;not a fixed total-RAM claim",
+  "checkpoint": "Only completely verified opaque source blocks persist under custody-private protected storage;incomplete .part files not accepted;atomic rename and protected metadata/hash marker",
+  "atomicity": "No public success until full session extraction/QC/encryption completes;recovery uses new private/public namespaces;aborted old directories untouched",
+  "roles": "Registered trusted host custodian;scientific code only actual zero-capability native AppContainer;source/full-target vectors private;final calibration QC private;Dkeys never exported",
+  "reuse": "Eight old successes reused only after public receipt and private artifact verification;no recalculation,reselection or overwrite",
+  "scientific": "Unchanged26mice,13/13 allocation,all trial/unit/source locks,>=5units/region and>=8mice/group,QC thresholds,ridge per-unit exposure,shared all-family task offset,seeds,57grids,statistics and holdouts",
+  "stopping": "Transport/isolation fatal failure=>STOP/TRANSPORT_UNRECOVERABLE or ACCESS_ISOLATION_FAILED;complete cohort but insufficient eligible mice=>DATA_INSUFFICIENT;no final unlock on transportPASS",
+  "permitted_advance": "M3-M5 only after separatelyregistered newM2PASS;mandatory nulls before any request for separate finalrelease"
+}

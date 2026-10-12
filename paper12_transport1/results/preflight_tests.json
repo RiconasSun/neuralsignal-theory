@@ -1,0 +1,73 @@
+{
+  "command": [
+    "C:\\Users\\85993\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "paper12_transport1",
+    "-p",
+    "test_*.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "log_sha256": "5eb3fbf1fd09893ed8a1d6f4787aad1f79b0a32cd9e16669c878edfa279ea6fb",
+  "passed": true,
+  "prior_reproduce2": {
+    "checks": [
+      {
+        "command": [
+          "C:\\Users\\85993\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+          "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper12_custody1\\register.py",
+          "--verify"
+        ],
+        "exit_code": 0,
+        "log": "replay/revision2/check_00.log",
+        "sha256": "999955efc0c2c5aa826ca626c9403727ef1f3d10e07cd3a873d71e98aa9636e9"
+      },
+      {
+        "command": [
+          "C:\\Users\\85993\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper12_custody1",
+          "-p",
+          "test_*.py",
+          "-v"
+        ],
+        "exit_code": 0,
+        "log": "replay/revision2/check_01.log",
+        "sha256": "96366e56e4372f0b4b11b1484f1594c730f7345bcdacc8bf31de3861f1f1359f"
+      },
+      {
+        "command": [
+          "C:\\Users\\85993\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+          "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper12_custody1\\aggregate4.py"
+        ],
+        "exit_code": 0,
+        "log": "replay/revision2/check_02.log",
+        "sha256": "e8f97265dc5076887029bb99399422bb3f09faeee584943dcf59f798d58a2f82"
+      }
+    ],
+    "data_extraction_rerun": false,
+    "end_inputs_revalidated": true,
+    "end_manifest_sha256": "c01b289b8a35ffca56a1f673d37f5942ff613306abf7771448670a71a774f1e9",
+    "experiments_reproduced": false,
+    "final_holdout_accessed": false,
+    "live_security_rerun": false,
+    "saved_M2_gate": "FAIL",
+    "saved_checks_pass": true,
+    "scope": "Saved public evidence/tests only",
+    "start_manifest_sha256": "c01b289b8a35ffca56a1f673d37f5942ff613306abf7771448670a71a774f1e9",
+    "utc": "2026-10-12T18:32:57.164042+00:00"
+  },
+  "prior_reproduce2_receipt_sha256": "9b2d552b898f616f735ab68ddc924338101212fa6bbc536cdf487e9c5f4b3831",
+  "source_requests_executed": 0,
+  "test_code_sha256": {
+    "test_completion.py": "cbec2dd27ff5c9620f0e454df29e2c89a54ee19d269a4678dd8efcbefbd232a9",
+    "test_transport.py": "34a21d921b6d653b61620d8399cfce867d5c9cce6bc5ad61563b78c4addaabee"
+  },
+  "utc": "2026-10-12T19:32:32.044455+00:00"
+}
