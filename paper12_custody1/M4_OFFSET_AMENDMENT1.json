@@ -1,0 +1,18 @@
+{
+  "id": "P12-CUSTODY-M4-SHARED-OFFSET-1",
+  "authorization_question_id": "call_urSfw57I9nI5cbOMeNfT3gFO",
+  "authorization": "Direct human option1 authorization received before real development analysis or M4 fitting",
+  "prospective": true,
+  "original_ambiguity_preserved": "Original protocol specifies shared training-fitted stimulus/time/order offset for Discrete and Hybrid but leaves Continuous offset undefined; original evidence and definitions remain unchanged",
+  "families": ["Discrete", "Continuous", "Hybrid"],
+  "offset_identity": "Exactly one common stimulus/time/order log-rate offset per mouse/session/subfield used by all three families and every candidate/seed",
+  "fitting_partition": "Corresponding development training only; final mice calibration only under frozen M6 transfer policy",
+  "fitting_policy_reference": "M3_METHOD_DECISION1.json; fixed ridge0.1,seeds11/23/37,all-seed arithmetic mean log-rate; no validation-based selection or adjustment",
+  "continuous_architecture": "Original causal observed-history tanh recurrence,d1/2/4; learns additional Poisson log-rate term on common offset; grid unchanged",
+  "complexity": "Report shared offset coefficient count29*U once per model,model-specific coefficient count separately,and their sum. Offset is a single averaged linear coefficient vector; also disclose all3 numerical fits/cost,not3 separately retained predictor parameter sets",
+  "unchanged": ["57 configurations", "numerical gates", "one-SE selection", "mouse-level statistics", "holdout locks", "no final-evaluation-driven changes"],
+  "interpretation": "Common offset improves comparability but does not prove model-specific terms completely exclude task effects",
+  "real_M4_fits_executed": false,
+  "final_values_exposed_to_analysis": false,
+  "final_holdout_evaluated": false
+}

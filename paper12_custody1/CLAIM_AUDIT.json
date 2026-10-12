@@ -1,0 +1,52 @@
+{
+  "CWP_validated": false,
+  "NAP_validated": false,
+  "biological_mechanism_proven": false,
+  "claims": [
+    {
+      "claim": "Original study gates/splits/locks remain unchanged",
+      "evidence": "registration.json;register.py --verify",
+      "id": "C01",
+      "scope": "Immutable prior files and operations history"
+    },
+    {
+      "claim": "Specified native no-capability role passed live isolation probes",
+      "evidence": "results/isolation/native_profile_runtime2.json;results/M3/synthetic_native1/role_proof.json",
+      "id": "C02",
+      "scope": "Actual synthetic native processes,not the failed tool sandbox;no malicious-host/admin or independent-human isolation claim"
+    },
+    {
+      "claim": "Four development and four final mice passed completed physiological QC",
+      "evidence": "results/M2/aggregate4/mouse_denominator.csv;results/M2/index2/sessions/",
+      "id": "C03",
+      "scope": "8of26 completed;no full-cohort admission;finalQC calibration only;unit details remain private"
+    },
+    {
+      "claim": "Locked source779839471 aborted on ReadTimeoutError",
+      "evidence": "results/M2/index2/failures/779839471.json;results/closeout.json",
+      "id": "C04",
+      "scope": "No partial public partition;network read failure,not proven source corruption"
+    },
+    {
+      "claim": "No real predictive comparison,nulls or final evaluation executed",
+      "evidence": "MILESTONE_STATUS.md;results/closeout.json",
+      "id": "C05",
+      "scope": "Synthetic numerical tests are implementation evidence,not experimental findings"
+    },
+    {
+      "claim": "Human-authorized method decisions registered prospectively",
+      "evidence": "METHOD_AMBIGUITY_AUDIT.md;method_registration1.json;offset_registration1.json",
+      "id": "C06",
+      "scope": "No retroactive gate repair;all57configs/holdouts remain frozen;shared offset does not eliminate all task effects"
+    },
+    {
+      "claim": "PowerShell reproduction is saved-evidence-only",
+      "evidence": "reproduce.ps1;reproduce_saved.py;results/reproduction_binding.json",
+      "id": "C07",
+      "scope": "Does not repeat source extraction,liveOSprobes or unexecuted experiments"
+    }
+  ],
+  "manuscript_complete": false,
+  "preferred_regime": "NOT_ASSESSED",
+  "scientific_validation_pass": false
+}

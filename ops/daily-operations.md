@@ -1,3 +1,29 @@
+# Current P12 Isolated Custody Recovery
+
+Mission:P12-M2-ISOLATED-CUSTODY-1;explicit new custody authorization.
+Mode:CLOSURE_MODE for reviewed stopped evidence;next execution WAIT_FOR_HUMAN_INPUT.
+Prospective amendment preserves alloldM1/M2/gates/animal/trial/unit/source locks.
+Original tool sandbox failed actualfile/key/DACL probes;not used as analysis.
+New native no-capability AppContainer passed Python/runtime,network,file/key,
+DACLregrant and custodian-memory probes. Operator/controller remains trusted;
+no independent-human or malicious-administrator isolation claimed.
+Actual8completed sessions:4development/4final eligible mice;1sourcefailure;
+17notexecuted. NewM2FAIL/INCONCLUSIVE,notDATA_INSUFFICIENT or fullcohortPASS.
+Source target-unit full-session vectors decoded bycustodian;analysis final
+exposure=false;finalevaluation=false. Source779839471 ReadTimeoutError stopped
+the strict index3 execution without publishing partial partitions.
+Initial byte-length abort and everyprobe failure preserved;one prospective
+identity-encoding transport retry passed smoke without relaxing byte checks.
+All26 raw-index/source identity audits passed;two independent index/cache
+findings repaired prospectively without changing oldcode/evidence.84unique tests and
+native14fixture/isolation runtime passed;no realM3/M4fit/nulls/finalrelease.
+Human-authorized per-exposure ridge and all-family common taskoffset registered
+before real analysis. These decisions do not override the failed M2 gate.
+Data/keysprivate and ignored,not Git evidence. No newdata search or source retry.
+Evidence:../paper12_custody1/ and evidence/2026-10-12/p12-m2-isolated-custody-1/.
+Next:separate bounded prospective same-source transport-recovery authorization,
+preserving this failed gate;never launch M3/M4 directly while M2 remains failed.
+
 # P12 Curated-Release Exploratory V1 - Stopped Evidence
 
 Mission:P12-CURATED-EXPLORATORY-V1; separately authorized curated scope.

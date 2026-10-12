@@ -1,0 +1,10 @@
+{
+  "mission": {"id": "P12-M2-ISOLATED-CUSTODY-1", "objective": "Implement only a pure authenticated encryption helper and its synthetic tests for the current custody mission. Do not execute neural extraction or claim OS isolation."},
+  "target": {"workdir": "C:/Users/85993/Desktop/codebase/neuralsignal institute/paper12_custody1", "files": ["cipher_core.py", "test_cipher_core.py"]},
+  "instructions": {
+    "requirements": ["Use cryptography AESGCM AES256 random32byte key and12byte nonce", "Encrypt fixed-size uncompressed bytes with authenticated context encoded canonical JSON", "Output ciphertext envelope only, never plaintext hashes or keys", "Validate framing, key/nonce lengths, context; wrong key/tamper/context fail closed", "Pure functions only; no file/network/subprocess/rawdata access", "Tests use synthetic fixed-size integer payloads,verify equal ciphertext length under final canary changes,wrongkey,tamper and AAD rejection", "Use existing Hermes Python for tests if available", "Edit only cipher_core.py and test_cipher_core.py; do not change registration/protocol/other code"],
+    "constraints": ["No actual or printed keys; no stdout plaintext/final canaries", "No Git/ops edits or oldevidence modifications", "No scientific findings/security gate PASS from unit tests"]
+  },
+  "codex": {"sandbox": "workspace-write", "approval": "on-request"},
+  "openrouter": {"enabled": false}
+}

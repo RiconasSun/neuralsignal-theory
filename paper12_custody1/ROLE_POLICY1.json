@@ -1,0 +1,13 @@
+{
+  "id": "P12-M2-ISOLATED-CUSTODY-1-NATIVE-ROLE-POLICY-1",
+  "prospective": true,
+  "reason": "Existing tool sandbox failed file/key/DACL negative tests, including exact-SID retry. Fresh native no-capability AppContainer passed actual file/key/DACL/network/custodian-memory and scientific-runtime probes. Do not reclassify failed probes.",
+  "analysis_role": "Only newly created native Windows AppContainer with zero network capabilities, clean whitelisted environment, no inherited handles, copied read-only Python/runtime and permitted A/B inputs; never the supplied broad-filesystem tool sandbox or privileged host interpreter.",
+  "trusted_orchestration": "Interactive host/tool controller remains trusted and can administer custody files/profiles. Protection is against the restricted scientific analysis process, not malicious administrator/operator/controller. Operator procedural blinding is still a limitation; no independent human custodian asserted.",
+  "private_storage": "Host/SYSTEM-only DACL, owner implicit WRITE_DAC suppressed, restricted/native app access denied. Test negative reads, ACL regrant, direct network and process-memory access under the actual analysis principal before source decoding. Files in shared tool sandbox are not declared protected just by directory/DACL intent.",
+  "NWB_identity_columns": ["/units/id", "/units/peak_channel_id"],
+  "NWB_source_columns": ["/units/spike_times_index", "/units/spike_times"],
+  "mapping": "Verify target unit-to-channel identity against frozen labels. Metadata-only new identity column is source-integrity verification,not a changed anatomical cohort. Reject mismatches,never silently relabel.",
+  "gate": "All runtime-role and synthetic whole-session extraction/canary/crypto/atomicity tests must PASS before real data. Any failed gate stops with accurate evidence. Complete target-unit full-session vectors may be decoded; other-region spike values need not be decoded.",
+  "release": "No final automatic release here. M6 requires independently enforced authorization,otherwise STOP for human release. Real fit jobs must use the verified native role,not ordinary tool execution."
+}

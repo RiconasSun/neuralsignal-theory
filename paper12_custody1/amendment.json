@@ -1,0 +1,36 @@
+{
+  "id": "P12-M2-ISOLATED-CUSTODY-1",
+  "checkpoint": "a00ed81e8112d5c076a04f6768b4e9b1fed0c3dd",
+  "scope_change": "Trusted custodian may decode full-session target-unit timestamps; protected source values must never reach development analysis. Original M2FAIL immutable; any new gate lives here only.",
+  "frozen_science": "All paper12_curated_v1 protocol/registration/animal/trial/unit/source locks preserved verbatim. Only access policy superseded prospectively for this distinct track.",
+  "roles": {
+    "trusted_custodian": "Host process outside AppContainer; verify token explicitly. May read NWB ragged unit IDs/offsets/full timestamps, hold AES keys, apply frozen masks and isolate calibration QC. No full-session neural export or final-informed admission/model selection.",
+    "development_analysis": "Windows AppContainer execution identity, no network capabilities, no access to raw sources, custody private DACL or decryption keys. Cannot use elevated process execution; only trusted orchestration may invoke custodian. All scientific development fits execute in restricted role.",
+    "calibration_QC": "Trusted private execution, reads final-mouse calibration only, writes unit-level QC inside protected compartment C. Public audit may disclose per-animal eligibility counts, never calibration unit rates/features/parameters to development model selection.",
+    "threat_model": "Enforcement against analysis process/file/network credentials, not malicious host administrator, platform operator or trusted orchestrator. Same Windows user may have different restricted/unrestricted tokens; do not claim separate human custodians or security against the desktop owner.",
+    "backends": "Prefer existing verified Windows AppContainer/non-AppContainer tool contexts if real DACL/network/role probes pass. Docker was bounded environment preflight only; a running Docker engine alone cannot substitute for tested role isolation. No simulated backend PASS."
+  },
+  "compartments": {
+    "A": "Frozen development train counts and train-onlyQC, may export to restricted analysis after custody isolation PASS; no whole-session vectors or indices.",
+    "B": "Frozen development validation counts encrypted/private until M2 physiology PASS and registered M3 development evaluation launch. No validation in unit QC or preprocessing decisions.",
+    "C": "Frozen final-mouse calibration counts and detailed calibration-only QC stay private/encrypted; no unit-level results to development selection. Calibration parameter fitting only after M6 policy freeze.",
+    "D": "Frozen final-mouse evaluation counts authenticated-encrypted, private plaintext never published. No decryption key or final counts/statistics to analysis before approved M6 release."
+  },
+  "encryption": "AES256-GCM random256bit key per protected compartment, random96bit nonce per artifact; authenticated associated-data includes study/animal/compartment/source+lock hashes. Fixed-size integer count tensors with public metadata-defined shape, no compression. Do not publish plaintext hashes or whole-session offsets; ciphertext hashes allowed. Private key files under protected host/SYSTEM-only DACL, AppContainer denied. Never log/stage real keys.",
+  "release": "B only after M2PASS into registered development role; C fitting only after frozen M6 policy; D requires all registered scientific/numerical/null gates PASS and independently enforceable authorization. This amendment does not grant automated final release to a process that can self-assert gates. If independent release unavailable STOP for human authorization; exactly one evaluated final release, append-only ledger.",
+  "source_integrity": "Original URL/size/ETag unchanged; range responses checked for206,exact bounds,length,ETag. Decode only permitted /units/id,/units/spike_times_index,/units/spike_times. Source byte hashes and neural index intermediates confined to private custody; public source metadata and ciphertext receipts only. No analog/waveform/behavioral decoding.",
+  "partitioning": "Use all original locks and metadata_admitted masks. Never reassign or replenish trials. Full-session decoding is source recovery only, not whole-session unit-quality filtering. Per-trial half-open spike membership from frozen21edges; exact20bins, CA1/DG same exposure, quarantined probe excluded unchanged.",
+  "QC": "Original rate0.1..100Hz,active_trial_fraction>=0.1,within-trialISI_under1ms<=0.01,minimum5units/region and8actual mice/group. Only A or isolated C. Same SHA unit cap32; retain all rejected identities/trials/mice. No threshold change.",
+  "pre_real_verification": [
+    "Synthetic whole-session final canaries; boundary/reset/unit/animal/trial mask checks",
+    "A export invariant when final values change; no final counts/stats/offsets/plaintext hashes in logs/errors/public cache",
+    "GCM tamper/AAD/key separation; fixed encrypted length; no partial publication on failure",
+    "Host positive access to synthetic protected file/key, real AppContainer negative read/DACL modification/decryption access",
+    "Analysis token AppContainer true, no network capability, direct IP and source endpoint deny; trusted token AppContainer false",
+    "All old lock/source hashes match; role probes are real negative tests, not mocks",
+    "Every mandatory isolation condition must PASS before any real neural decode"
+  ],
+  "states": ["source_full_session_decoded_by_custodian", "final_values_exposed_to_analysis", "final_holdout_evaluated"],
+  "failure": "Any absent/unverified role,read/key/network denial failure,source drift,partial neural artifact or leakage =>ACCESS_ISOLATION_FAILED/STOP before more real extraction. Actual mice<8either group =>DATA_INSUFFICIENT. Unknown eligibility stays NOT_ASSESSED. Original failures never reclassified.",
+  "autonomy": "If new access and M2physiology PASS, continue original M3-M5 and M6nulls. No final release without independently enforceable condition. No new scientific thresholds/grids/splits,cohort search or oldgate rescue."
+}

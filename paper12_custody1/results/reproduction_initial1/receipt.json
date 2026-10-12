@@ -1,0 +1,48 @@
+{
+  "checks": [
+    {
+      "command": [
+        "C:\\Users\\85993\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper12_custody1\\register.py",
+        "--verify"
+      ],
+      "exit_code": 0,
+      "log": "replay\\check_00.log",
+      "sha256": "999955efc0c2c5aa826ca626c9403727ef1f3d10e07cd3a873d71e98aa9636e9"
+    },
+    {
+      "command": [
+        "C:\\Users\\85993\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper12_custody1",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "replay\\check_01.log",
+      "sha256": "4428f9006936cc1ae991b9cca25202158b7e58e71e5376c0d67c90efabe7e2ba"
+    },
+    {
+      "command": [
+        "C:\\Users\\85993\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper12_custody1\\aggregate4.py"
+      ],
+      "exit_code": 0,
+      "log": "replay\\check_02.log",
+      "sha256": "e8f97265dc5076887029bb99399422bb3f09faeee584943dcf59f798d58a2f82"
+    }
+  ],
+  "data_extraction_rerun": false,
+  "experiments_reproduced": false,
+  "final_holdout_accessed": false,
+  "live_security_rerun": false,
+  "saved_M2_gate": "FAIL",
+  "saved_checks_pass": true,
+  "saved_manifest_verified": true,
+  "scope": "Saved evidence hashes, fixture/regression tests and public QC aggregation only",
+  "utc": "2026-10-12T17:39:13.355796+00:00"
+}

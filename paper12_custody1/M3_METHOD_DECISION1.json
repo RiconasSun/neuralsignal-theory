@@ -1,0 +1,28 @@
+{
+  "id": "P12-CUSTODY-METHOD-DECISION-1",
+  "prospective": true,
+  "authorization": "Direct human reply to two scientific-method clarification questions, received before any real A/B analysis export or model fitting",
+  "authorization_question_ids": [
+    "call_f7ca264f01a142f689867442de9dbce5",
+    "call_fd4741c074e84862a43710875b5604c4"
+  ],
+  "ridge_normalization": "per_unit_exposure",
+  "training_objective": "-joint_training_log_likelihood/(number_of_training_trials*20) + ridge*sum_squared_penalized_coefficients/2",
+  "baseline_intercept_penalized": false,
+  "predictive_metric_unchanged": "Full unpenalized causal predictive log likelihood / actual unit-bins",
+  "offset_policy": {
+    "ridge": 0.1,
+    "seeds": [11, 23, 37],
+    "aggregation": "Arithmetic mean of all three fitted log-rate predictions",
+    "validation_selection": false,
+    "features": "Intercept, 7 frozen condition indicators,19 within-trial bin indicators, provider trial row/599 and its square; no neural history",
+    "scaling": "Training-only means and standard deviations; intercept unchanged; zero-scale columns use scale1",
+    "fit_budget_and_convergence": "Same frozen coefficient bounds,500iteration/20000call budget and projected-gradient threshold; all three seeds required",
+    "use": "One common training-fitted offset shared by discrete and hybrid candidates, not selected against validation"
+  },
+  "original_grids_splits_thresholds_unchanged": true,
+  "original_evidence_reclassified": false,
+  "real_development_values_exposed_to_analysis": false,
+  "final_values_exposed_to_analysis": false,
+  "final_holdout_evaluated": false
+}
