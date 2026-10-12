@@ -1,3 +1,22 @@
+# P12 Curated-Release Exploratory V1 - Stopped Evidence
+
+Mission:P12-CURATED-EXPLORATORY-V1; separately authorized curated scope.
+State:WAIT_FOR_HUMAN_INPUT for an explicit neural-data custody decision.
+M1registrationPASS at2026-10-12T05:55:01.948179+00:00;26candidate mice,
+13development/13final SHA allocation;15600genuine grating trial IDs and
+20664target unit identities locked.15561metadata-admitted trials;39excluded;
+82zero-rate-probe identities quarantined. Actual unit/mouse eligibility UNKNOWN.
+M2FAIL/INCONCLUSIVE:26same-object NWB unit schemas contain ragged spike vectors,
+not a verified calibration-only temporal reader.717152opaque transport bytes,
+1906checked ranges;zero decoded neural/final values. No full-session filter.
+M3-M7NOT_EXECUTED;no fits,nulls,pvalues,final evaluation or scientific manuscript.
+OriginalM0/native-support/P1-P11 unchanged;no newdataset search/continuity repair.
+Saved-evidence closeout,QC,claim/A1-A10inventory and offlinePowerShell replay:
+../paper12_curated_v1/ and evidence/2026-10-11/p12-curated-exploratory-v1/.
+Next:separate prospective authorization for isolated custodial extraction of
+mixed vectors exporting ONLY frozen train/calibration data,or a trusted matching
+trial-indexed derivative. Preserve this failure;no gate rescue or holdout reshuffle.
+
 # Completed P12 Native Support Recovery Audit
 
 Mission:P12-M0-NATIVE-SUPPORT-AUDIT-1;newprospective one-Allen metadata audit.

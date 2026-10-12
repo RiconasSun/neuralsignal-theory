@@ -1,0 +1,92 @@
+{
+  "id": "P12-CURATED-EXPLORATORY-V1",
+  "revision": 1,
+  "checkpoint": "104a6afea72a6eb66620200d6fc261bca774400e",
+  "scope": "Predictive representations of curated-release counts in provider-annotated mouse CA1 and DG; not lossless recording dynamics or anatomical/mechanistic validation.",
+  "metric": "Causal joint predictive log likelihood divided by actual scored nominal curated-release unit-bins; nats/nominal curated-release unit-bin",
+  "estimand": "Equal-mouse mean of (family LL minus strongest development-selected eligible baseline LL) in CA1 minus the corresponding gain in DG. Three two-sided family-specific zero contrasts, Holm correction within group.",
+  "hypotheses": ["Discrete baseline-adjusted CA1/DG difference is nonzero", "Continuous baseline-adjusted CA1/DG difference is nonzero", "Hybrid baseline-adjusted CA1/DG difference is nonzero"],
+  "allocation": {"inventory": 26, "development": 13, "final": 13, "minimum_actual_eligible_each": 8, "algorithm": "Sort mice by SHA256 of P12-CURATED-EXPLORATORY-V1|animal|mouse_id. First 13 development, remaining 13 final. No reallocation."},
+  "trials": {
+    "stimulus": "functional_connectivity drifting_gratings_75_repeats_presentations",
+    "conditions": 8,
+    "all_presentations_per_mouse": 600,
+    "trial_identity": "session_id:grating:provider_row_index; source start/stop/condition also locked",
+    "partition": "Within each condition order by SHA256 of mission|trial|session_id|row_index. First45 train for development/calibration for final; remaining30 validation for development/locked_evaluation for final. Partition all600 before exclusions; never replenish exclusions.",
+    "window": "First exactly2 seconds, half-open [start,start+2);20 bins of0.1 seconds in master elapsed clock. Reject entire trial if actual duration<2 or any chosen unit probe lacks anchor-bracketed support/has overlapping known invalid interval. No tolerance extends exposure beyond stop.",
+    "coverage": "After matched masks require at least24 train/calibration and16 validation/evaluation trials for each of8 conditions. Admission cannot depend on final spike counts. Final trial duration/support QC uses metadata only.",
+    "reset": "All count history and hidden state reset to zero/prior at every trial; first bin scored unconditionally. Current/future counts forbidden as covariates.",
+    "movies": "Not a secondary neural analysis in this study. Previous failed movie audits remain disclosed. No frames treated as trials."
+  },
+  "unit_qc": {
+    "minimum_each_subfield": 5,
+    "anatomy": "CA1 or DG/DG-mo/DG-po/DG-sg identity join; finite CCF coordinates required. No CA3 pooled into primary.",
+    "sampling_rate": "Quarantine probe846401834 and every nonfinite/nonpositive exported rate; no inferred substitution.",
+    "training_only": "Development train or final calibration only; no whole-session firing_rate/presence_ratio/ISI/amplitude/waveform quality metrics.",
+    "rate_Hz": [0.1, 100.0],
+    "active_trial_fraction_minimum": 0.1,
+    "ISI_under_1ms_fraction_maximum": 0.01,
+    "ISI_policy": "Only adjacent spikes inside the same permitted trial; zero within-trial pairs gives0 violations but is explicitly reported. Nonfinite, negative, duplicate or unordered permitted spike timestamps fail unit QC.",
+    "primary_cap_each_region": 32,
+    "cap_rule": "Retain all eligible identities in audit; choose up to32 by SHA256(mission|unit|unit_id), not outcome rank. Apply identical fixed selection algorithm in both regions.",
+    "count_qc": "Finite nonnegative integer counts, no clipping/imputation, known masks identical between CA1 and DG, exact20bins, sum counts equals permitted half-open spikes, no inferred physiological eligibility from stored identity counts."
+  },
+  "access": {
+    "before_M1": "Saved metadata only",
+    "M2": "Development training and final calibration neural values only. Source shape/dtype/link/chunk metadata and unit IDs/index structure permitted. Opaque transport may include mixed content; zero transport is not claimed.",
+    "holdout": "No final evaluation spike timestamps/counts/quality/behavioral outcomes decoded before M6. Whole-session get_spike_times or read-all-then-filter is not authorized. Time-index discovery by probing arbitrary final timestamps is not authorized.",
+    "required_reader_proof": "A metadata-identifiable temporal slice or separate calibration-only derivative must establish permitted trial membership before any neural-value read. If unavailable, stop at leakage/access gate with eligibility NOT_ASSESSED, not biological insufficiency.",
+    "M3_M5": "Only development train/validation. Final calibration retained behind independent access role until frozen M6 fit policy; M2 unit QC only.",
+    "M6": "One frozen held-out-animal evaluation after all prior gates/nulls pass; no new selections or repeat validation."
+  },
+  "models": {
+    "baselines": ["stationary", "history", "population", "event", "drift", "combined"],
+    "ridge": [0.001, 0.01, 0.1, 1.0],
+    "lags": 5,
+    "HMM_states": [2, 3, 4],
+    "recurrent_dimensions": [1, 2, 4],
+    "hybrid_states": [2, 3, 4],
+    "seeds": [11, 23, 37],
+    "configuration_count": 57,
+    "baseline_features": "Intercept;5 lagged log1p own counts;5 lagged log1p population counts (exclude current bin);7 condition indicators and19 within-trial bin indicators; known trial index/599 and its square. History=own only, population=all lagged units only, event=condition/bin only, drift=order/order squared only, combined=own+population+condition/bin+order/order squared. Train-only scaling, intercept unpenalized.",
+    "observation": "Full Poisson count PMF including log-factorial in every model. HMM exact forward; hybrid exact forward with observed causal history, not integrated unobserved PLDS/SLDS; recurrence deterministic causal observed-history tanh.",
+    "continuous": "Recurrent state dimension1/2/4, tanh driven by prior log1p population counts and known condition/bin/order context; Poisson output, zero initial state.",
+    "hybrid": "K-state observed own-history Poisson AR,5lags, exact forward, free normalized state transition and initial probabilities; shared stimulus/time/order offset fitted on training only and frozen for candidate comparison.",
+    "discrete": "K-state history-free Poisson emission, same training-fitted stimulus/time/order offset as hybrid. No full-sequence smoothing for predictive evaluation.",
+    "budget": "All bounded configurations and all3seeds; L-BFGS-B max500iterations/max20000objective calls per fit, coefficient bounds[-8,8], ftol1e-5/gtol1e-5; no extra restarts/favorable seed pruning. Preserve optimizer messages, gradient norms, time, boundary hits and all failures.",
+    "convergence": "Require finite objective/score, optimizer success, maximum projected gradient<=0.001. Every seed and every admitted development mouse/region must pass for a configuration to be eligible. Any family without eligible configuration stops M4 INCONCLUSIVE.",
+    "numerics": "Before fitting: exact small-state enumeration vs forward abs error<=1e-10; Poisson analytic<=1e-12; relative finite-difference gradient error<=1e-5; future-count perturbation leaves earlier causal score unchanged<=1e-12; batch partition/order invariance<=1e-10. Synthetic fixtures test code only, never scientific observations."
+  },
+  "selection": {
+    "seed_score": "Mean unpenalized validation LL across all3seeds, no selected favorable seed; every seed retained. Final policy refits all3seeds on calibration and averages their scores under the same definition, not mislabeled as mixture likelihood.",
+    "family": "One configuration per family shared across CA1/DG: rank pooled equal-mouse mean region-average LL; threshold best mean minus sample SE of its mouse scores. Within threshold choose least mean parameter count, then smallest dimension/state then largest ridge. Seed failures make configuration ineligible, never silently exclude a mouse.",
+    "baseline": "Strongest eligible baseline configuration by equal-mouse mean development LL separately per region; deterministic ties lower parameter count then largest ridge. Freeze before final calibration model fitting; do not choose per final mouse.",
+    "complexity": "Report exact parameter counts, regularization, training bins per parameter, elapsed cost, bound hits, eligible and failed configuration denominators. Distinguish one-SE selection from raw maxima."
+  },
+  "statistics": {
+    "unit": "Mouse only; no neuron/trial/session pseudoreplication. One session per inventoried mouse; probes contribute within mouse.",
+    "bootstrap": "10000 whole-mouse paired resamples, seed20261101; percentile95%CI, family differences and individual-mouse effects retained.",
+    "sign_flip": "Exact all2^N mouse-wise sign assignments for N<=20;two-sided inclusive absolute-mean comparison; Holm3primary family pvalues per development/final group.",
+    "exploratory": "Development statistics exploratory after model selection; final effects single-release held-out-animal validation, not independent lab replication."
+  },
+  "sensitivities": [
+    "Matched unit count per mouse=min(CA1,DG,32), identities hash-ranked from training/calibration eligible set",
+    "Calibration-rate matching: sort eligible units by train/calibration rate; deterministic nearest-rate greedy pairs within absolute log-rate distance<=log(2); minimum5pairs otherwise sensitivity unavailable and M5 incomplete",
+    "Provider-channel vertical boundary proxy exclusions<=20um and<=40um; units with undefined proxy excluded in sensitivity; minimum5perregion and8paired mice needed; not histology CI",
+    "Probe dependence: report all probe composition, single-probe-region strata and leave-one-probe-out paired contrast when>=5units/region remain; do not infer independent probe subjects",
+    "Dropout/continuity sensitivity: preregistered deterministic artificial10%whole-trial drop at hash ranks, not proof of native continuity; score each sensitivity separately",
+    "Leave-one-mouse-out estimates; session equals mouse in this inventory, no independent session denominator"
+  ],
+  "nulls": {
+    "replicas": 199,
+    "seeds": "20261201+i for i0..198; all retained; p=(1+extreme)/(200); Holm across3families within each null suite",
+    "count_rate_preserving": "Per unit/trial random bin permutation, exact trial spike count preserved; refit selected model/baseline configurations on transformed training; evaluate transformed validation, no grid reselection",
+    "temporal_shift": "Independent nonzero circular bin shifts1..19 per unit/trial; same rules, exact counts retained",
+    "stimulus_timing": "Permute trial condition labels within partition only while retaining counts/order; never exchange final/development or train/validation trials",
+    "order_drift": "Permute known trial-order covariates within condition/partition only; keep stimulus/bin context; compare drift and combined baselines",
+    "policy": "All required suites complete with eligible mice and valid numerics before final unlock; failures/incomplete suites stop. Final procedures frozen from development, calibration-only refits; no final-driven rescue."
+  },
+  "stopping": "Critical leakage/access/numerical failure =>INCONCLUSIVE/STOP; actual measured eligible mice<8in either group =>DATA_INSUFFICIENT/STOP. Unknown eligibility is NOT_ASSESSED, not DATA_INSUFFICIENT. No reshuffle/threshold relaxation. Prepare accurate saved-evidence closeout; M7 only if M1-M6 pass.",
+  "limitations": ["Nominal curated exposure; packet continuity unverified", "Provider histology- and physiology-assisted labels", "Upstream retrospective whole-session spike sorting", "Unresolved calendar dates", "Physical frame matching does not establish unique event identity", "Within-release held-out animals, not independent laboratory or human replication"],
+  "M7": "Method paper, full tables/raw maxima/selected scores, mouse effects, allnulls/failures, supplement,A1-A10,hash-traceablefigures,PDFvisualQA,PowerShell data/fit and saved-results reproduction explicitly distinguished, claim audit; no NAP/CWP proof."
+}

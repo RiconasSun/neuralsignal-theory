@@ -1,0 +1,12 @@
+{
+  "run": "First combined unittest discover run, after full26schema acquisition",
+  "exit_code": 1,
+  "tests_run": 20,
+  "errors": 2,
+  "failed_tests": ["test_external_link_rejected", "test_real_hdf_fixture_schema_only"],
+  "classification": "LOCAL_ENV_BROKEN: sandbox temporary-directory HDF5 creation denied",
+  "observed_error": "PermissionError errno13 creating f.h5/fixture.h5 in sandbox AC/Temp; cleanup also WinError5",
+  "repair": "Same real HDF5 parser fixtures in io.BytesIO; no disk/temp cleanup, no removed tests or weaker assertions",
+  "scientific_gate_affected": false,
+  "model_fits_or_real_spikes_used": false
+}
