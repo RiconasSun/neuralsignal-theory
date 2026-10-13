@@ -6,7 +6,7 @@ Original failures remain immutable; no M4/M5/null/final evaluation execution.
 
 bug_count=0 for resolved scoped implementation defects.
 warn_count=1: unresolved frozen M3 numerical admission, not administratively cleared.
-baseline_requirement_count=22;20 verified,REQ-018 blocked,REQ-020 Git readback pending.
+baseline_requirement_count=22;21 verified,REQ-018 blocked;no full mission/scientificPASS.
 required_items_omitted=0;required_behaviors_silently_reduced=0;
 unapproved_existing_behaviors_removed=0;required_tests_silently_removed=0;
 unresolved_shrink_risk=0;temporary_substitutes_remaining=0;
@@ -31,8 +31,9 @@ M2analysis flags remain admission snapshots;claim audit reports latest access.
 Review decision: STOPPED_EVIDENCE_PUBLICATION_ALLOWED on origin/test only.
 MERGE_ALLOWED=false;no scientific/biological validation PASS or final release.
 Remote main absent;test-only preflightHEAD=origin/test=376ca01,counts0/0.
-Final candidate tree is the sealed260public files plus this failure-evidence
-metadata and saved replay logs. Git archive/readback will be recorded separately.
+Final scientific tree is the unchanged sealed260public files plus failure-evidence
+metadata and saved replay logs. Primary0e33681 and QAerratuma2528ac pushed/readback
+origin/test=a2528ac7e7b992a566c088806999ba2c67976b99;metadata closure is separate.
 
 Next required human action:separately authorize prospective M3 numerical diagnosis
 or method remediation,preserving this failure and all frozen scientific constraints.
