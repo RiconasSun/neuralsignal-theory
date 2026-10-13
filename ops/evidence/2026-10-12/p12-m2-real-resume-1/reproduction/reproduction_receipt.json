@@ -1,0 +1,64 @@
+{
+  "checks": [
+    {
+      "command": [
+        "powershell",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper12_custody1\\reproduce2.ps1"
+      ],
+      "exit_code": 0,
+      "log": "replay/check_0.log",
+      "sha256": "4389421553ed14758de2b69b892cf32c544fc15237fadad96196c42b1ffcca29"
+    },
+    {
+      "command": [
+        "C:\\Users\\85993\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper12_resume1\\run_tests.py"
+      ],
+      "exit_code": 0,
+      "log": "replay/check_1.log",
+      "sha256": "57ffb707cd6ee7d2a3f7ab7381e97577ea4e4e890024acfcd3815e170ef4dbfe"
+    },
+    {
+      "command": [
+        "C:\\Users\\85993\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper12_resume1\\saved_table_replay.py"
+      ],
+      "exit_code": 0,
+      "log": "replay/check_2.log",
+      "sha256": "ad0fd29dad9d1426f3b8e8e36a7568b8a89e7ef121fa8aa8212b6685873934f1"
+    },
+    {
+      "command": [
+        "C:\\Users\\85993\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper12_resume1\\public_tables.py"
+      ],
+      "exit_code": 0,
+      "log": "replay/check_3.log",
+      "sha256": "92bfb5a5d886c2a729135025f3ff0445b0ea1ede47d42e1b3c82de98887c8bd1"
+    },
+    {
+      "command": [
+        "C:\\Users\\85993\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper12_resume1\\failed_m3_report.py"
+      ],
+      "exit_code": 0,
+      "log": "replay/check_4.log",
+      "sha256": "a841659d68aa760b0cc195bde1369c2e927d660d3c2cd3d95ff2ee68e7ae7b59"
+    }
+  ],
+  "end_manifest_sha256": "04f246c6244a5bce9104760e8900549f6e100848c393da4bbc161f7a8c36be1f",
+  "final_evaluation_accessed": false,
+  "live_isolation_repeated": false,
+  "passed": true,
+  "private_contents_read": false,
+  "real_extraction_repeated": false,
+  "scope": "Saved public hashes/tables and synthetic regression tests only",
+  "source_requests": 0,
+  "start_manifest_sha256": "04f246c6244a5bce9104760e8900549f6e100848c393da4bbc161f7a8c36be1f",
+  "unexecuted_models_reproduced": false,
+  "utc": "2026-10-13T04:50:55.736940+00:00"
+}

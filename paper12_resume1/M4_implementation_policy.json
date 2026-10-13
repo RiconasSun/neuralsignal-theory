@@ -1,0 +1,12 @@
+{
+  "mission":"P12-M2-REAL-RESUME-1",
+  "scope":"Conditional implementation of already frozen M4; no new scientific protocol or gate relaxation",
+  "mathematics":"Copy unchanged predictive_models.py, predictive_models_code1.py and r2_models.py from archived P11-v2. Exact batch-state inference parity against unchanged sequential kernel. No old P11 file edits.",
+  "objective":"Frozen P12 per-unit exposure denominator N*T; baseline intercept unpenalized; dynamics retains archived penalized-coefficient definition. Full unpenalized predictive LL/unit-bin for scoring.",
+  "offset":"Fixed ridge .1, all seeds11/23/37, mean log-rate,29*U common parameters, train-only scaling and fitting, all three families same offset",
+  "models":"All frozen12 configs per Discrete/Continuous/Hybrid, all three seeds, no pruning; exact observed-history representation, not PLDS/SLDS inference",
+  "numerical_fixtures":"Fixed Poisson controlled fixtures seeds20261013/20261014; gradient seed23 step1e-6 all coefficients; exhaustive2/3/4states withT3; causal prefix perturbation atbin12; batch/order parity all dimensions and state sizes; frozen tolerances only",
+  "fit_policy":"Bounds[-8,8], maxiter500,maxfun20000,ftol/gtol1e-5,optimizer success and projected gradient<=.001; retain every failed fit. No retries or favorable seeds.",
+  "execution_gates":"Only after complete new M2 PASS and M3 PASS; numerical tests required before first real dynamics fit; any failed mandatory gate stops",
+  "holdout":"No C/D analysis input, no final score or release"
+}

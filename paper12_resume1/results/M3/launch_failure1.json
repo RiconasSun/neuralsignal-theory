@@ -1,0 +1,12 @@
+{
+  "attempt":"M3 launcher1 before native profile creation",
+  "command":"python paper12_resume1/launch_m3.py",
+  "exit_code":1,
+  "error_type":"RuntimeError",
+  "error_code":"OUTSIDE_SYNTHETIC_STUDY",
+  "cause":"Immutable public locks read by old launcher were incorrectly routed through the new private-study path boundary",
+  "scientific_fits_started":false,
+  "native_analysis_created":false,
+  "final_values_exposed_to_analysis":false,
+  "fix":"Code3 exact whitelist of already frozen animals/units/trials metadata only; all private/outside/unregistered paths remain rejected. No ACL or scientific protocol change. Original code2 registration retained."
+}

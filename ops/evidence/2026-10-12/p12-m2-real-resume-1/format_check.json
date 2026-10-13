@@ -1,0 +1,8 @@
+{
+  "default_git_diff_check":"Reports native Windows CR at end of saved JSON/log lines as trailing whitespace under repository *-text policy",
+  "classification":"Native preserved line endings, not code/spatial/scientific validation defects",
+  "preservation":"No evidence-byte rewrite, scientific threshold change, test deletion or global git configuration mutation",
+  "equivalent_check":"git -c core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol diff --cached --check",
+  "exit_code":0,
+  "other_default_whitespace_checks_retained":true
+}

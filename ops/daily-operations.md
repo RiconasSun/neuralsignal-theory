@@ -1,3 +1,25 @@
+# Current P12 Real M2 Continuation - Scientific Stop
+
+Mission:P12-M2-REAL-RESUME-1;prospective real continuation from376ca01.
+State:WAIT_FOR_HUMAN_INPUT after frozen M3 smoke numericalFAIL/INCONCLUSIVE.
+NewM2PASS:26/26complete;8unchangedreuse+18new;13development/13finaleligible.
+Train/cal-only eligibleunits:developmentCA1=5413,DG=1819;finalCA1=4771,DG=1475.
+Newsourceaudit18/18;1244newHTTPrequests,0transientfailures;18oldblocksreused.
+OriginalfailedM0/M2/gates/sourceallocations/P1-P11recordsremainunchanged.
+FirstsavedM2auditretainedinitial1;code2source-denominatorreauditPASSwithout
+source requests. InitialM3routing/default-clonefailuresretained,bothprefit.
+ActualnativeM3roleproofPASS,developmentA/Bonly,firstmouse126fitscompleted.
+6stationaryconverged;120nonstationaryPG>.001 despiteoptimizersuccess.
+FailedPGmin=.001749584006721426,max=.061066324748139805;childexit2,cleanup0.
+M3FAIL/INCONCLUSIVE;13mousefullbaselineplan,M4/M5/nullsNOTEXECUTED.
+CustodianfulltargetvectorsdecodedandDsealed;analysisfinalexposure=false;
+finalevaluation=false. M2analysisflagsarepre-M3snapshots,notcurrentglobalclaims.
+No threshold relaxation,seedpruning,source retry,dataset search or scientificrescue.
+Nextrequires separateprospectiveM3numericaldiagnosis/remediationauthorization,
+notfinalholdoutrelease. Saved-only reproduction cannot proveunexecutedexperiments.
+Evidence:paper12_resume1;ops/evidence/2026-10-12/p12-m2-real-resume-1.
+Priorhistorybelowpreservedbyte-exact.
+
 # Current P12 Synthetic Checkpoint Repair
 
 Mission:P12-M2-CHECKPOINT-REPAIR-1;explicitsynthetic-onlyauthorization;basea64c005.
