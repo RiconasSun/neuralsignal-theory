@@ -1,0 +1,26 @@
+{
+  "mission": "P12-M3-NUMERICAL-RECOVERY-1",
+  "base": "98666f3dbf5899c0975bc3f25a7a8a07055ca381",
+  "access": "Diagnostic worker receives first development mouse A only; no B, C, D or source requests. Later smoke may receive authorized development AB only after diagnosis and amendment.",
+  "diagnosis": {
+    "fits": 120,
+    "original_optimizer": {"ftol": 0.00001, "gtol": 0.00001, "maxiter": 500, "maxfun": 20000},
+    "finite_difference_steps": [0.00001, 0.000001],
+    "relative_gradient_tolerance": 0.00001,
+    "real_coordinates": "All intercept coordinates plus 16 uniformly seeded coordinates using seed 20261012, initial and terminal parameters for each fit",
+    "conditioning_units": [0, 1, 2, 3],
+    "trace": "Every objective call and accepted iteration; aggregate numerical diagnostics only, no parameter or neural arrays exported",
+    "original_trace_warning": "Original trajectories were not recorded; new trajectories are prospective replays, never original measurements."
+  },
+  "conditional_amendment": {"ftol": 1e-10, "gtol": 0.00001, "maxiter": 2000, "maxfun": 80000},
+  "scientific_projected_gradient_threshold": 0.001,
+  "bounds": [-8, 8],
+  "ridges": [0.001, 0.01, 0.1, 1.0],
+  "seeds": [11, 23, 37],
+  "normalization": "per_unit_exposure",
+  "smoke_expected": 126,
+  "full_M3_expected": 1638,
+  "acceptance": "Every mandatory fit converges with finite scores; no denominator change or seed pruning. Independent oracles and isolation pass first.",
+  "M4_policy": "M3 amendment does not silently amend the separately frozen M4 optimizer or shared-offset policy.",
+  "stop": "Any mandatory gate failure stops continuation; M6 final evaluation remains locked."
+}
