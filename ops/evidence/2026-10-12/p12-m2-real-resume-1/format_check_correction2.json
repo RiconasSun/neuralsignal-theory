@@ -1,0 +1,12 @@
+{
+  "supersedes":"format_check.json exit_code=0 overstatement retained in initial commit",
+  "actual_initial_cr_at_eol_check_exit_code":1,
+  "remaining_initial_diagnostic":"Native captured stdout check_1.log ends with a blank line at EOF",
+  "reason_for_preservation":"Raw replay logs are byte/hash evidence, not source-format targets. Trimming or newline normalization would invalidate their recorded hashes.",
+  "source_and_nonlog_artifact_check":"git -c core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol diff HEAD^ HEAD --check -- . ':(exclude)**/*.log'",
+  "source_and_nonlog_artifact_exit_code":0,
+  "raw_log_verification":"Original replay receipt SHA256 vs archived copied log SHA256;unchanged saved manifest and5/5commands exit0",
+  "scientific_thresholds_or_tests_changed":false,
+  "raw_log_bytes_changed":false,
+  "initial_failure_or_erroneous_statement_deleted":false
+}
