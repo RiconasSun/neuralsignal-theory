@@ -1,0 +1,11 @@
+--- original/task_offset.py
++++ amended/task_offset.py
+@@ -15,7 +15,7 @@
+     for seed in (11,23,37):
+         start=time.perf_counter();theta=np.random.default_rng(seed).normal(0,.05,y.shape[-1]*29)
+         result=minimize(objective,theta,args=(y,train,.1,'per_unit_exposure'),jac=True,method='L-BFGS-B',
+-            bounds=[(-8.,8.)]*len(theta),options=dict(maxiter=500,maxfun=20000,ftol=1e-5,gtol=1e-5))
++            bounds=[(-8.,8.)]*len(theta),options=dict(maxiter=2000,maxfun=80000,ftol=1e-10,gtol=1e-5))
+         loss,gradient=objective(result.x,y,train,.1,'per_unit_exposure');pg=projected_gradient(result.x,gradient)
+         passed=bool(result.success and pg<=.001 and np.isfinite(loss))
+         diagnostics.append(dict(seed=seed,ridge=.1,converged=passed,projected_gradient=pg,
