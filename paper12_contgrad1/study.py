@@ -1,0 +1,21 @@
+import hashlib
+import json
+from datetime import datetime, timezone
+from pathlib import Path
+HERE=Path(__file__).resolve().parent
+ROOT=HERE.parent
+OLD=ROOT/'paper12_custody1'
+PREVIOUS=ROOT/'paper12_resume1'
+OFFSET=ROOT/'paper12_m4offset1'
+DYNAMICS=ROOT/'paper12_m4dynamics1'
+BASE='0e7ac4d816d2f006f7e394cfaa37a1d362679e5f'
+def sha(p):
+    h=hashlib.sha256()
+    with Path(p).open('rb') as f:
+        for b in iter(lambda:f.read(1048576),b''):h.update(b)
+    return h.hexdigest()
+def load(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
+def save(p,v,exclusive=True):
+    if exclusive is not True:raise ValueError('APPEND_ONLY_OUTPUT_REQUIRED')
+    p=Path(p);p.parent.mkdir(parents=True,exist_ok=True)
+    with p.open('x',encoding='utf-8') as f:json.dump(v,f,indent=2,sort_keys=True,allow_nan=False);f.write('\n')

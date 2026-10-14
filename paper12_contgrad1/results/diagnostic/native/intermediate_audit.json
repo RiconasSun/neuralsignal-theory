@@ -1,0 +1,94 @@
+{
+  "stage": "intermediate",
+  "theta_sha256": "b92a1b3347b4578a2611eaa72cdd0bcd9c97128e701acd6c9bc918c230b79bd2",
+  "objective": 19.8953755147604,
+  "independent_AD_objective": 19.8953755147604,
+  "independent_forward_objective": 19.8953755147604,
+  "objective_abs_error": 0.0,
+  "AD_gradient_scaled_error_max": 2.02546313055052e-12,
+  "AD_gradient_abs_error_max": 2.02546313055052e-12,
+  "PG": 0.34946971765395507,
+  "AD_PG": 0.3494697176538317,
+  "bound_hits": 0,
+  "float64_mantissa_bits": 52,
+  "longdouble_mantissa_bits": 52,
+  "normalization_exposure": 7200,
+  "ridge_gradient_max_error": 0.0,
+  "parameter_blocks": {
+    "recurrent": [
+      0,
+      16
+    ],
+    "past_count": [
+      16,
+      144
+    ],
+    "context": [
+      144,
+      256
+    ],
+    "readout": [
+      256,
+      384
+    ]
+  },
+  "scan": {
+    "0.01": {
+      "central": 0.7880292180612933,
+      "fourth": 0.7982298964733208,
+      "richardson": 0.8156891406995447,
+      "coordinate_count": 384,
+      "finite_count": 384,
+      "stable_count": 152
+    },
+    "0.001": {
+      "central": 0.9111815955935363,
+      "fourth": 0.9061307825332622,
+      "richardson": 0.9156295239746671,
+      "coordinate_count": 384,
+      "finite_count": 384,
+      "stable_count": 170
+    },
+    "0.0001": {
+      "central": 0.5431230487298783,
+      "fourth": 0.45675765905740306,
+      "richardson": 0.0686275599747301,
+      "coordinate_count": 384,
+      "finite_count": 384,
+      "stable_count": 245
+    },
+    "1e-05": {
+      "central": 0.008198471296562704,
+      "fourth": 0.00011594790524907528,
+      "richardson": 7.207688418137126e-06,
+      "coordinate_count": 384,
+      "finite_count": 384,
+      "stable_count": 350
+    },
+    "1e-06": {
+      "central": 8.227096253313193e-05,
+      "fourth": 1.3502430479261918e-08,
+      "richardson": 1.526531500511963e-08,
+      "coordinate_count": 384,
+      "finite_count": 384,
+      "stable_count": 381
+    },
+    "1e-07": {
+      "central": 8.05461521397044e-07,
+      "fourth": 7.158650963852431e-08,
+      "richardson": 1.659730592129538e-07,
+      "coordinate_count": 384,
+      "finite_count": 384,
+      "stable_count": 384
+    },
+    "1e-08": {
+      "central": 6.212812151676003e-07,
+      "fourth": 8.285228464298064e-07,
+      "richardson": 1.5607436813468156e-06,
+      "coordinate_count": 384,
+      "finite_count": 384,
+      "stable_count": 384
+    }
+  },
+  "FD_forward_evaluations": 16128
+}

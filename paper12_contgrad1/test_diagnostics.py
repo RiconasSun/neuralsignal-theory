@@ -1,0 +1,77 @@
+import sys
+from pathlib import Path
+import unittest
+import numpy as np
+import independent_ad as ad
+from diagnostics import formulas,scaled_error,decide,SCALES
+if not Path(__file__).with_name('model_math.py').exists():
+    sys.path.insert(0,str(Path(__file__).resolve().parent/'frozen_sources'))
+from model_math import make,objective,projected_gradient
+
+class IndependentOracle(unittest.TestCase):
+    def test_dual_polynomial(self):
+        x=ad.Dual(np.array([.4,-.7]),np.eye(2));f=(x*x*x+2*x).sum()
+        np.testing.assert_allclose(f.d,3*x.v*x.v+2,atol=1e-14,rtol=0)
+    def test_dual_tanh_exp(self):
+        x=ad.Dual(np.array([.2,-.1]),np.eye(2));f=x.tanh().exp().sum()
+        expected=np.exp(np.tanh(x.v))*(1-np.tanh(x.v)**2)
+        np.testing.assert_allclose(f.d,expected,atol=1e-14,rtol=0)
+    def test_one_bin_closed_form(self):
+        y=np.array([[[1.,0.]],[[0.,2.]]]);x=np.array([[[.2,-.3]],[[.1,.4]]]);off=np.full(y.shape,-.2);theta=np.arange(1,8)*.03
+        # d1: A1, B2, D2, C2. A and B have zero data derivative at t0.
+        value,g,parts=ad.value_gradient(theta,y,x,off,1,.001)
+        h=np.tanh(x[:,0]@theta[3:5]);eta=off[:,0]+h[:,None]*theta[5:][None,:];res=y[:,0]-np.exp(eta)
+        likelihood=np.r_[0.,0.,0.,(((res@theta[5:])*(1-h*h))[:,None]*x[:,0]).sum(axis=0),(res*h[:,None]).sum(axis=0)]
+        expected=-likelihood/2+.001*theta
+        np.testing.assert_allclose(g,expected,atol=1e-13,rtol=0)
+        np.testing.assert_allclose(parts['ridge_gradient'],.001*theta,atol=1e-15,rtol=0)
+        expected_loss=-np.sum(y[:,0]*eta-np.exp(eta)-ad.constants(y)[:,0])/2+.0005*(theta@theta)
+        self.assertAlmostEqual(value,expected_loss,places=13)
+    def test_multibin_scalar_symbolic_recurrence(self):
+        y=np.array([[[1.],[0.],[1.],[2.],[0.],[1.]]]);x=np.full((1,6,1),.02);offset=np.zeros_like(y);theta=np.array([2.,.1,.03,.4])
+        _,g,_=ad.value_gradient(theta,y,x,offset,1,0.)
+        h=0.;dh=0.;symbolic=0.
+        for t in range(6):
+            previous=h;past=0. if t==0 else np.log1p(y[0,t-1,0]);h=np.tanh(theta[0]*h+theta[1]*past+theta[2]*x[0,t,0]);dh=(1-h*h)*(previous+theta[0]*dh)
+            symbolic+=-(y[0,t,0]-np.exp(theta[3]*h))*theta[3]*dh/6
+        self.assertAlmostEqual(g[0],symbolic,places=13)
+    def test_synthetic_dimensions_against_production(self):
+        rng=np.random.default_rng(20261013);y=rng.poisson(.7,(2,6,2));x=rng.normal(0,.3,(2,6,3));offset=np.full(y.shape,-.3)
+        for d in (1,2,4):
+            with self.subTest(d=d):
+                model=make('Continuous',y,x,offset,d);theta=model.initial(11);v,g=objective(theta,model,.001);iv,ig,_=ad.value_gradient(theta,model.y,model.x,model.offset,d,.001)
+                self.assertLess(abs(v-iv),1e-10);self.assertLess(float(scaled_error(g,ig).max()),1e-5)
+                probes=np.stack([theta,theta+.0001]);values=ad.vector_losses(probes,model.y,model.x,model.offset,d,.001)
+                self.assertLess(abs(values[0]-iv),1e-10)
+                self.assertLess(abs(values[1]-objective(probes[1],model,.001)[0]),1e-10)
+    def test_high_gain_stress(self):
+        y=np.zeros((2,20,1));x=np.full((2,20,1),1e-6);offset=np.zeros_like(y);theta=np.array([4.,.03,.01,.4])
+        model=make('Continuous',y,x,offset,1);v,g=objective(theta,model,.001);iv,ig,_=ad.value_gradient(theta,model.y,model.x,model.offset,1,.001)
+        self.assertLess(abs(v-iv),1e-10);self.assertLess(float(scaled_error(g,ig).max()),1e-5)
+    def test_ridge_decomposition(self):
+        y=np.ones((2,3,1));x=np.full((2,3,1),.1);off=np.zeros_like(y);theta=np.array([.2,.3,.4,.5])
+        v0,g0,_=ad.value_gradient(theta,y,x,off,1,0.);v1,g1,_=ad.value_gradient(theta,y,x,off,1,.001)
+        np.testing.assert_allclose(g1-g0,.001*theta,atol=1e-13,rtol=0);self.assertAlmostEqual(v1-v0,.0005*(theta@theta),places=13)
+    def test_fourth_and_richardson_remove_quadratic_truncation(self):
+        h=.01;x=1.;v=[(x+m*h)**4 for m in (-2,-1,-.5,.5,1,2)];central,fourth,rich=formulas(*v,h)
+        self.assertGreater(abs(central-4),1e-5);self.assertLess(abs(fourth-4),1e-10);self.assertLess(abs(rich-4),1e-10)
+    def test_bounds_keep_inward_gradient(self):
+        self.assertEqual(projected_gradient(np.array([-8.,8.,-8.,8.]),np.array([1.,-1.,-2.,3.])),3.)
+    def test_fixed_offset_is_not_fitted_bias(self):
+        dims=ad.layout(32,28,4);self.assertEqual([r[0] for r in dims],['recurrent','past_count','context','readout']);self.assertEqual(dims[-1][2],384)
+    def test_gradient_explanation_never_clears_optimizer(self):
+        stages=[dict(objective_abs_error=0.,AD_gradient_scaled_error_max=1e-12,scan={str(s):dict(central=1e-7,fourth=1e-7,richardson=1e-7,coordinate_count=384,finite_count=384,stable_count=384) for s in SCALES}) for _ in range(3)]
+        stages[-1]['scan'][str(1e-5)]['central']=2e-4
+        result=decide(stages,dict(scaled_gradient_error=2e-4,passed=False),dict(optimizer_success=False,projected_gradient=.693),True)
+        self.assertEqual(result['verdict'],'FINITE_DIFFERENCE_INSTABILITY');self.assertTrue(result['optimizer_nonconvergent_with_validated_gradient']);self.assertFalse(result['original_gradient_gate_passed']);self.assertFalse(result['original_PG_gate_passed'])
+    def test_unstable_extrapolation_cannot_certify_FD_instability(self):
+        stages=[dict(objective_abs_error=0.,AD_gradient_scaled_error_max=1e-12,scan={str(s):dict(central=1e-7,fourth=2e-4,richardson=2e-4,coordinate_count=384,finite_count=384,stable_count=0) for s in SCALES}) for _ in range(3)]
+        stages[-1]['scan'][str(1e-5)]['central']=2e-4
+        result=decide(stages,dict(scaled_gradient_error=2e-4,passed=False),dict(optimizer_success=False,projected_gradient=.693),True)
+        self.assertEqual(result['verdict'],'INCONCLUSIVE');self.assertFalse(result['finite_difference_instability'])
+    def test_unvalidated_gradient_cannot_establish_C(self):
+        stages=[dict(objective_abs_error=1.,AD_gradient_scaled_error_max=.1,scan={str(s):dict(central=1e-7,fourth=1e-7,richardson=1e-7,coordinate_count=384,finite_count=384,stable_count=384) for s in SCALES}) for _ in range(3)]
+        result=decide(stages,dict(scaled_gradient_error=2e-4,passed=False),dict(optimizer_success=False,projected_gradient=.693),True)
+        self.assertTrue(result['original_fit_nonconvergent']);self.assertIsNone(result['optimizer_nonconvergent_with_validated_gradient']);self.assertEqual(result['optimizer_correct_gradient_assessment'],'INCONCLUSIVE')
+
+if __name__=='__main__':unittest.main(verbosity=2)

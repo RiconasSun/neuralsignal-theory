@@ -1,0 +1,89 @@
+test_archived_launcher_third_argument_supported_append_only (test_saved_audit.SavedAudit.test_archived_launcher_third_argument_supported_append_only) ... ERROR
+test_changed_probe_rejected (test_saved_audit.SavedAudit.test_changed_probe_rejected) ... ok
+test_changed_step_rejected (test_saved_audit.SavedAudit.test_changed_step_rejected) ... ok
+test_overwrite_receipt_forbidden (test_saved_audit.SavedAudit.test_overwrite_receipt_forbidden) ... ERROR
+test_ridge_omission_rejected (test_saved_audit.SavedAudit.test_ridge_omission_rejected) ... ok
+test_saved_arithmetic (test_saved_audit.SavedAudit.test_saved_arithmetic) ... ok
+
+======================================================================
+ERROR: test_archived_launcher_third_argument_supported_append_only (test_saved_audit.SavedAudit.test_archived_launcher_third_argument_supported_append_only)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_contgrad1\test_saved_audit.py", line 28, in test_archived_launcher_third_argument_supported_append_only
+    p=Path(d)/'receipt.json';study.save(p,{'completed':True},True)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_contgrad1\study.py", line 21, in save
+    with p.open('x',encoding='utf-8') as f:json.dump(v,f,indent=2,sort_keys=True,allow_nan=False);f.write('\n')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{03e65da5-8c86-4c40-ad97-205a11171664}\\AC\\Temp\\tmp052gwv3m\\receipt.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{03e65da5-8c86-4c40-ad97-205a11171664}\\AC\\Temp\\tmp052gwv3m'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_contgrad1\test_saved_audit.py", line 27, in test_archived_launcher_third_argument_supported_append_only
+    with tempfile.TemporaryDirectory() as d:
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 943, in __exit__
+    self.cleanup()
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{03e65da5-8c86-4c40-ad97-205a11171664}\\AC\\Temp\\tmp052gwv3m'
+
+======================================================================
+ERROR: test_overwrite_receipt_forbidden (test_saved_audit.SavedAudit.test_overwrite_receipt_forbidden)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{03e65da5-8c86-4c40-ad97-205a11171664}\\AC\\Temp\\tmpij4ogq0f'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_contgrad1\test_saved_audit.py", line 32, in test_overwrite_receipt_forbidden
+    with tempfile.TemporaryDirectory() as d:
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 943, in __exit__
+    self.cleanup()
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{03e65da5-8c86-4c40-ad97-205a11171664}\\AC\\Temp\\tmpij4ogq0f'
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.034s
+
+FAILED (errors=2)

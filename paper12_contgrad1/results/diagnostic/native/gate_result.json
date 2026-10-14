@@ -1,0 +1,297 @@
+{
+  "gate": "PASS",
+  "diagnostic_completed": true,
+  "verdict": "FINITE_DIFFERENCE_INSTABILITY",
+  "coordinate_rows": 8064,
+  "real_fits": 1,
+  "gradient_threshold": 1e-05,
+  "PG_threshold": 0.001,
+  "original_scientific_failure_unchanged": true,
+  "validation_access": false,
+  "final_access": false,
+  "CSV_sha256": "7136f2fd6954ac1e0bc7209e410ef88892edb18c65632d684233e6546ce3a2c6",
+  "stages": [
+    {
+      "stage": "initial",
+      "theta_sha256": "39f45887804c192bd2d9277d620f3f72aa06323c1b306007ac0e9926a9e3c524",
+      "objective": 20.970703975990922,
+      "independent_AD_objective": 20.970703975990926,
+      "independent_forward_objective": 20.970703975990926,
+      "objective_abs_error": 3.552713678800501e-15,
+      "AD_gradient_scaled_error_max": 3.2959746043559335e-17,
+      "AD_gradient_abs_error_max": 3.2959746043559335e-17,
+      "PG": 0.05885804464681279,
+      "AD_PG": 0.058858044646812796,
+      "bound_hits": 0,
+      "float64_mantissa_bits": 52,
+      "longdouble_mantissa_bits": 52,
+      "normalization_exposure": 7200,
+      "ridge_gradient_max_error": 0.0,
+      "parameter_blocks": {
+        "recurrent": [
+          0,
+          16
+        ],
+        "past_count": [
+          16,
+          144
+        ],
+        "context": [
+          144,
+          256
+        ],
+        "readout": [
+          256,
+          384
+        ]
+      },
+      "scan": {
+        "0.01": {
+          "central": 8.38416570439482e-06,
+          "fourth": 2.8559214645951236e-08,
+          "richardson": 1.7905236789766965e-09,
+          "coordinate_count": 384,
+          "finite_count": 384,
+          "stable_count": 384
+        },
+        "0.001": {
+          "central": 8.385362229579307e-08,
+          "fourth": 8.991562702731493e-12,
+          "richardson": 1.9007753270655625e-11,
+          "coordinate_count": 384,
+          "finite_count": 384,
+          "stable_count": 384
+        },
+        "0.0001": {
+          "central": 8.746652568891733e-10,
+          "fourth": 9.179441722798748e-11,
+          "richardson": 1.8781066090343967e-10,
+          "coordinate_count": 384,
+          "finite_count": 384,
+          "stable_count": 384
+        },
+        "1e-05": {
+          "central": 8.063299706748128e-10,
+          "fourth": 1.0727834965848504e-09,
+          "richardson": 1.6914401364449307e-09,
+          "coordinate_count": 384,
+          "finite_count": 384,
+          "stable_count": 384
+        },
+        "1e-06": {
+          "central": 7.278178601547716e-09,
+          "fourth": 9.87590160475213e-09,
+          "richardson": 1.5893535277634614e-08,
+          "coordinate_count": 384,
+          "finite_count": 384,
+          "stable_count": 384
+        },
+        "1e-07": {
+          "central": 7.236089330335538e-08,
+          "fourth": 9.308505642940251e-08,
+          "richardson": 1.6681890431946165e-07,
+          "coordinate_count": 384,
+          "finite_count": 384,
+          "stable_count": 384
+        },
+        "1e-08": {
+          "central": 6.986423062892502e-07,
+          "fourth": 9.321151718637288e-07,
+          "richardson": 1.989847368492415e-06,
+          "coordinate_count": 384,
+          "finite_count": 384,
+          "stable_count": 384
+        }
+      },
+      "FD_forward_evaluations": 16128
+    },
+    {
+      "stage": "intermediate",
+      "theta_sha256": "b92a1b3347b4578a2611eaa72cdd0bcd9c97128e701acd6c9bc918c230b79bd2",
+      "objective": 19.8953755147604,
+      "independent_AD_objective": 19.8953755147604,
+      "independent_forward_objective": 19.8953755147604,
+      "objective_abs_error": 0.0,
+      "AD_gradient_scaled_error_max": 2.02546313055052e-12,
+      "AD_gradient_abs_error_max": 2.02546313055052e-12,
+      "PG": 0.34946971765395507,
+      "AD_PG": 0.3494697176538317,
+      "bound_hits": 0,
+      "float64_mantissa_bits": 52,
+      "longdouble_mantissa_bits": 52,
+      "normalization_exposure": 7200,
+      "ridge_gradient_max_error": 0.0,
+      "parameter_blocks": {
+        "recurrent": [
+          0,
+          16
+        ],
+        "past_count": [
+          16,
+          144
+        ],
+        "context": [
+          144,
+          256
+        ],
+        "readout": [
+          256,
+          384
+        ]
+      },
+      "scan": {
+        "0.01": {
+          "central": 0.7880292180612933,
+          "fourth": 0.7982298964733208,
+          "richardson": 0.8156891406995447,
+          "coordinate_count": 384,
+          "finite_count": 384,
+          "stable_count": 152
+        },
+        "0.001": {
+          "central": 0.9111815955935363,
+          "fourth": 0.9061307825332622,
+          "richardson": 0.9156295239746671,
+          "coordinate_count": 384,
+          "finite_count": 384,
+          "stable_count": 170
+        },
+        "0.0001": {
+          "central": 0.5431230487298783,
+          "fourth": 0.45675765905740306,
+          "richardson": 0.0686275599747301,
+          "coordinate_count": 384,
+          "finite_count": 384,
+          "stable_count": 245
+        },
+        "1e-05": {
+          "central": 0.008198471296562704,
+          "fourth": 0.00011594790524907528,
+          "richardson": 7.207688418137126e-06,
+          "coordinate_count": 384,
+          "finite_count": 384,
+          "stable_count": 350
+        },
+        "1e-06": {
+          "central": 8.227096253313193e-05,
+          "fourth": 1.3502430479261918e-08,
+          "richardson": 1.526531500511963e-08,
+          "coordinate_count": 384,
+          "finite_count": 384,
+          "stable_count": 381
+        },
+        "1e-07": {
+          "central": 8.05461521397044e-07,
+          "fourth": 7.158650963852431e-08,
+          "richardson": 1.659730592129538e-07,
+          "coordinate_count": 384,
+          "finite_count": 384,
+          "stable_count": 384
+        },
+        "1e-08": {
+          "central": 6.212812151676003e-07,
+          "fourth": 8.285228464298064e-07,
+          "richardson": 1.5607436813468156e-06,
+          "coordinate_count": 384,
+          "finite_count": 384,
+          "stable_count": 384
+        }
+      },
+      "FD_forward_evaluations": 16128
+    },
+    {
+      "stage": "endpoint",
+      "theta_sha256": "2d61b04db53dfdcc1dd49c1131fa810b84a0b8725d8db87105cc3d8095e3876f",
+      "objective": 19.87905908627809,
+      "independent_AD_objective": 19.879059086278087,
+      "independent_forward_objective": 19.879059086278087,
+      "objective_abs_error": 3.552713678800501e-15,
+      "AD_gradient_scaled_error_max": 7.259443046692127e-12,
+      "AD_gradient_abs_error_max": 7.259443046692127e-12,
+      "PG": 0.692604771056502,
+      "AD_PG": 0.6926047710553235,
+      "bound_hits": 0,
+      "float64_mantissa_bits": 52,
+      "longdouble_mantissa_bits": 52,
+      "normalization_exposure": 7200,
+      "ridge_gradient_max_error": 0.0,
+      "parameter_blocks": {
+        "recurrent": [
+          0,
+          16
+        ],
+        "past_count": [
+          16,
+          144
+        ],
+        "context": [
+          144,
+          256
+        ],
+        "readout": [
+          256,
+          384
+        ]
+      },
+      "scan": {
+        "0.01": {
+          "central": 0.7207300797730752,
+          "fourth": 0.6748174266819758,
+          "richardson": 1.100834168815296,
+          "coordinate_count": 384,
+          "finite_count": 384,
+          "stable_count": 138
+        },
+        "0.001": {
+          "central": 1.2862073932429514,
+          "fourth": 1.4247411260642557,
+          "richardson": 1.3435232720390327,
+          "coordinate_count": 384,
+          "finite_count": 384,
+          "stable_count": 150
+        },
+        "0.0001": {
+          "central": 1.5183336652757133,
+          "fourth": 0.9009703988586082,
+          "richardson": 0.8677193237670564,
+          "coordinate_count": 384,
+          "finite_count": 384,
+          "stable_count": 187
+        },
+        "1e-05": {
+          "central": 0.0429420693711961,
+          "fourth": 0.0009866183088358127,
+          "richardson": 0.0001825155392812805,
+          "coordinate_count": 384,
+          "finite_count": 384,
+          "stable_count": 284
+        },
+        "1e-06": {
+          "central": 0.0004218031298990066,
+          "fourth": 3.7205380179483605e-07,
+          "richardson": 2.0039088111101222e-08,
+          "coordinate_count": 384,
+          "finite_count": 384,
+          "stable_count": 368
+        },
+        "1e-07": {
+          "central": 4.190518740204707e-06,
+          "fourth": 9.562140919957413e-08,
+          "richardson": 1.5569382228028308e-07,
+          "coordinate_count": 384,
+          "finite_count": 384,
+          "stable_count": 384
+        },
+        "1e-08": {
+          "central": 6.716169555631289e-07,
+          "fourth": 9.67676428796513e-07,
+          "richardson": 2.222053105196964e-06,
+          "coordinate_count": 384,
+          "finite_count": 384,
+          "stable_count": 384
+        }
+      },
+      "FD_forward_evaluations": 16128
+    }
+  ]
+}

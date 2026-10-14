@@ -1,0 +1,1103 @@
+{
+  "base": "0e7ac4d816d2f006f7e394cfaa37a1d362679e5f",
+  "changed_path_count": 157,
+  "exact_staging_only": true,
+  "expected_changed_paths": [
+    "ops/daily-operations.md",
+    "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/acceptance_candidate.json",
+    "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/acceptance_candidate.md",
+    "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/baseline_registered.md",
+    "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/branch_preflight.md",
+    "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/candidate_verdict.md",
+    "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/changed_files.json",
+    "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/claim_audit.md",
+    "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/closure_contract.md",
+    "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/receipt_recovery.md",
+    "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/reproduction_final_receipt.json",
+    "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/reproduction_saved.log",
+    "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/reproduction_synthetic.log",
+    "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/review_admission1.md",
+    "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/review_admission2.md",
+    "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/review_admission3.md",
+    "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/review_final.md",
+    "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/review_recovery1.md",
+    "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/review_recovery2.md",
+    "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/verdict_reviewed.md",
+    "paper12_contgrad1/.gitignore",
+    "paper12_contgrad1/NUMERICAL_AUDIT.md",
+    "paper12_contgrad1/README.md",
+    "paper12_contgrad1/audit_statistics.py",
+    "paper12_contgrad1/block_summary.json",
+    "paper12_contgrad1/build_figures.py",
+    "paper12_contgrad1/certify_saved_worker.py",
+    "paper12_contgrad1/custodian_preflight1.json",
+    "paper12_contgrad1/decision_definition_v2.json",
+    "paper12_contgrad1/diagnostics.py",
+    "paper12_contgrad1/diagnostics_v1.py.txt",
+    "paper12_contgrad1/execution_registration.json",
+    "paper12_contgrad1/execution_sources.json",
+    "paper12_contgrad1/execution_sources_v2.json",
+    "paper12_contgrad1/execution_sources_v3.json",
+    "paper12_contgrad1/figures/endpoint_coordinates.png",
+    "paper12_contgrad1/figures/input_hashes.json",
+    "paper12_contgrad1/figures/step_scan.png",
+    "paper12_contgrad1/final_manifest.json",
+    "paper12_contgrad1/frozen_sources/baseline_features.py",
+    "paper12_contgrad1/frozen_sources/frozen_offset.py",
+    "paper12_contgrad1/frozen_sources/manifest.json",
+    "paper12_contgrad1/frozen_sources/model_math.py",
+    "paper12_contgrad1/frozen_sources/native_analysis_check.py",
+    "paper12_contgrad1/frozen_sources/predictive_models.py",
+    "paper12_contgrad1/frozen_sources/predictive_models_code1.py",
+    "paper12_contgrad1/frozen_sources/r2_models.py",
+    "paper12_contgrad1/implementation_registration.json",
+    "paper12_contgrad1/independent_ad.py",
+    "paper12_contgrad1/launch.py",
+    "paper12_contgrad1/launch_v1.py.txt",
+    "paper12_contgrad1/native_attempt1.log",
+    "paper12_contgrad1/native_saved_certificate1.log",
+    "paper12_contgrad1/original_daily_operations.md",
+    "paper12_contgrad1/prepare.py",
+    "paper12_contgrad1/prepare_closeout.py",
+    "paper12_contgrad1/prepare_git_closure.py",
+    "paper12_contgrad1/preservation_audit.json",
+    "paper12_contgrad1/prior_manifest.json",
+    "paper12_contgrad1/protocol.json",
+    "paper12_contgrad1/recover_receipt.py",
+    "paper12_contgrad1/recovery_execution_registration.json",
+    "paper12_contgrad1/recovery_registration.json",
+    "paper12_contgrad1/recovery_registration2.json",
+    "paper12_contgrad1/registration.json",
+    "paper12_contgrad1/reproduce.ps1",
+    "paper12_contgrad1/reproduce_saved.py",
+    "paper12_contgrad1/reproduce_saved_v3.py.txt",
+    "paper12_contgrad1/results/diagnostic/native/decision.json",
+    "paper12_contgrad1/results/diagnostic/native/endpoint_audit.json",
+    "paper12_contgrad1/results/diagnostic/native/endpoint_progress.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_100.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_1000.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_1050.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_1100.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_1150.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_1200.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_1250.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_1300.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_1350.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_1400.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_1450.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_150.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_1500.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_1550.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_1600.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_1650.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_1700.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_1750.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_1800.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_1850.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_1900.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_1950.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_200.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_2000.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_250.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_300.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_350.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_400.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_450.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_50.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_500.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_550.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_600.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_650.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_700.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_750.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_800.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_850.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_900.json",
+    "paper12_contgrad1/results/diagnostic/native/fit_progress_950.json",
+    "paper12_contgrad1/results/diagnostic/native/gate_result.json",
+    "paper12_contgrad1/results/diagnostic/native/gradient_scan.csv",
+    "paper12_contgrad1/results/diagnostic/native/initial_audit.json",
+    "paper12_contgrad1/results/diagnostic/native/initial_progress.json",
+    "paper12_contgrad1/results/diagnostic/native/intermediate_audit.json",
+    "paper12_contgrad1/results/diagnostic/native/intermediate_progress.json",
+    "paper12_contgrad1/results/diagnostic/native/reproduction.json",
+    "paper12_contgrad1/results/diagnostic/native/role_proof.json",
+    "paper12_contgrad1/results/diagnostic/native/scan_endpoint_0.0001.json",
+    "paper12_contgrad1/results/diagnostic/native/scan_endpoint_0.001.json",
+    "paper12_contgrad1/results/diagnostic/native/scan_endpoint_0.01.json",
+    "paper12_contgrad1/results/diagnostic/native/scan_endpoint_1e-05.json",
+    "paper12_contgrad1/results/diagnostic/native/scan_endpoint_1e-06.json",
+    "paper12_contgrad1/results/diagnostic/native/scan_endpoint_1e-07.json",
+    "paper12_contgrad1/results/diagnostic/native/scan_endpoint_1e-08.json",
+    "paper12_contgrad1/results/diagnostic/native/scan_initial_0.0001.json",
+    "paper12_contgrad1/results/diagnostic/native/scan_initial_0.001.json",
+    "paper12_contgrad1/results/diagnostic/native/scan_initial_0.01.json",
+    "paper12_contgrad1/results/diagnostic/native/scan_initial_1e-05.json",
+    "paper12_contgrad1/results/diagnostic/native/scan_initial_1e-06.json",
+    "paper12_contgrad1/results/diagnostic/native/scan_initial_1e-07.json",
+    "paper12_contgrad1/results/diagnostic/native/scan_initial_1e-08.json",
+    "paper12_contgrad1/results/diagnostic/native/scan_intermediate_0.0001.json",
+    "paper12_contgrad1/results/diagnostic/native/scan_intermediate_0.001.json",
+    "paper12_contgrad1/results/diagnostic/native/scan_intermediate_0.01.json",
+    "paper12_contgrad1/results/diagnostic/native/scan_intermediate_1e-05.json",
+    "paper12_contgrad1/results/diagnostic/native/scan_intermediate_1e-06.json",
+    "paper12_contgrad1/results/diagnostic/native/scan_intermediate_1e-07.json",
+    "paper12_contgrad1/results/diagnostic/native/scan_intermediate_1e-08.json",
+    "paper12_contgrad1/results/diagnostic/native/synthetic_tests.json",
+    "paper12_contgrad1/results/receipt_recovery/native/gate_result.json",
+    "paper12_contgrad1/results/receipt_recovery/native/role_proof.json",
+    "paper12_contgrad1/results/receipt_recovery_launch_receipt.json",
+    "paper12_contgrad1/saved_recovery_regressions.log",
+    "paper12_contgrad1/saved_recovery_regressions2.log",
+    "paper12_contgrad1/scope_audit.json",
+    "paper12_contgrad1/seal.py",
+    "paper12_contgrad1/stage_a_gate.json",
+    "paper12_contgrad1/study.py",
+    "paper12_contgrad1/study_v3.py.txt",
+    "paper12_contgrad1/synthetic_regression1.log",
+    "paper12_contgrad1/synthetic_regression2.log",
+    "paper12_contgrad1/test_diagnostics.py",
+    "paper12_contgrad1/test_diagnostics_v1.py.txt",
+    "paper12_contgrad1/test_saved_audit.py",
+    "paper12_contgrad1/worker.py"
+  ],
+  "files_except_self": [
+    {
+      "bytes": 23395,
+      "git_blob_sha1": "cda09589010f59eda2ce3bd5eedd6bb1aa431df4",
+      "path": "ops/daily-operations.md",
+      "sha256": "29211a6c43b6a60b4aef9642fe7299b897e41c18499325c882e1717734d97386"
+    },
+    {
+      "bytes": 11714,
+      "git_blob_sha1": "99342bf94e0c08c94d36d99db8eb4a9b1f0d2198",
+      "path": "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/acceptance_candidate.json",
+      "sha256": "8abf93d22f2951b17be4ab7d307dc82a6ef97acb85c0943dfba30b30a85608a1"
+    },
+    {
+      "bytes": 5782,
+      "git_blob_sha1": "3bd874557db5f9db755e91dc836e44eef8e84a6e",
+      "path": "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/acceptance_candidate.md",
+      "sha256": "cc30a64a63b1a47ac09e84564c3cc272cd1ecd747b797ddf6e69f26e94a9ee9d"
+    },
+    {
+      "bytes": 6671,
+      "git_blob_sha1": "3612acce84825af0082a725134fddea917f6b47b",
+      "path": "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/baseline_registered.md",
+      "sha256": "994ca8b4f0118ebae25d03176e8f875db3d4aadc53c8facb084ce6285c310cdc"
+    },
+    {
+      "bytes": 999,
+      "git_blob_sha1": "0a87c4253cbf29d4727181ef1f8aaa8a7d897975",
+      "path": "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/branch_preflight.md",
+      "sha256": "68a1871397a4be7535bb4d864cb27118d2466ac4932e6891f2df0564251b1a56"
+    },
+    {
+      "bytes": 1642,
+      "git_blob_sha1": "45dcf22e8912d863a2f32ceb776894a52977d671",
+      "path": "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/candidate_verdict.md",
+      "sha256": "00e2c51a1537a4aa5945b1d525f686d451d40c3945d650dc1b3c229274bb943d"
+    },
+    {
+      "bytes": 1826,
+      "git_blob_sha1": "44b90a27b3cea3fe702b8a4d53764fd8ccdaf261",
+      "path": "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/claim_audit.md",
+      "sha256": "40dfdd8c523af33b64b12b64615289f9d0883e85b84b1e1f759f3ab77c052afd"
+    },
+    {
+      "bytes": 1992,
+      "git_blob_sha1": "b7b9a79f0936b06f7ce7ab753af2ca0325873189",
+      "path": "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/closure_contract.md",
+      "sha256": "4beaff011a27d7d864ac36cfe9eeb7ec627a77956526a06a64196347b87b13d4"
+    },
+    {
+      "bytes": 1996,
+      "git_blob_sha1": "fe761939e35c86468bd14d84881b8a7116ddae1f",
+      "path": "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/receipt_recovery.md",
+      "sha256": "08aaa73d1b1b2b113a6610862a0210e8ec21b3c3f1793b4e0b7ddb888fc9f3bb"
+    },
+    {
+      "bytes": 676,
+      "git_blob_sha1": "b2b43e59a995e90290dba6ecc66270347862262e",
+      "path": "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/reproduction_final_receipt.json",
+      "sha256": "c39b15c5db3b171359080d5c23f3e40a7c6054860e7239fe618ebd77d757e51a"
+    },
+    {
+      "bytes": 729,
+      "git_blob_sha1": "bfd9e9f6cb093a3e9af05a6276180799b20e6036",
+      "path": "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/reproduction_saved.log",
+      "sha256": "a8cb8dd176e5b5bbee27d747c60c0a346d021c837e3d9088d96943a8c9d5445b"
+    },
+    {
+      "bytes": 1639,
+      "git_blob_sha1": "7ad07b643edcd826813f9977de50ca42e5826cc9",
+      "path": "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/reproduction_synthetic.log",
+      "sha256": "761c06279a4a2237d923ea6f0ca38eebd0db7763b9975ca43a1170abf3ccaa3e"
+    },
+    {
+      "bytes": 1022,
+      "git_blob_sha1": "d1fce7356726938d52b7290142c4f96cb8044e53",
+      "path": "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/review_admission1.md",
+      "sha256": "9830db8a9fcbd8abc6df7c490f1545bb7de45e2773c45773918835968b385179"
+    },
+    {
+      "bytes": 972,
+      "git_blob_sha1": "0d80c94e7a2defc87b6dde54a2fe4ac8618c7c94",
+      "path": "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/review_admission2.md",
+      "sha256": "da8602cd6f4ce4ef141419945afbd0d01bc964fc9b4f98f07adbda4f6be8207a"
+    },
+    {
+      "bytes": 690,
+      "git_blob_sha1": "b1227925a87930e10f090dfaa5288f996eb4e8ea",
+      "path": "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/review_admission3.md",
+      "sha256": "fd9b3d878a6d99aa3580203b5618ebe9c1e4f765880ffa37855f56188d75c860"
+    },
+    {
+      "bytes": 2510,
+      "git_blob_sha1": "de1dc4a0d2f511940301c340c7d485c1deefa01c",
+      "path": "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/review_final.md",
+      "sha256": "ade30f9e52a347b9aba8ecc37ad6b2fef45f2d2f6a02d34c995ef8cbe55c17da"
+    },
+    {
+      "bytes": 700,
+      "git_blob_sha1": "0811f566033eef722f38ec17eb6dbdf49390204e",
+      "path": "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/review_recovery1.md",
+      "sha256": "b96f3ad0f9aed165e46a0299b293a064e5ba4e07b0349a6c146a4f3e94e4379d"
+    },
+    {
+      "bytes": 768,
+      "git_blob_sha1": "137b20c07b25fdb6a96e7bdfa503dfd23a7ef7f7",
+      "path": "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/review_recovery2.md",
+      "sha256": "6f938dcab1c138c9b98dd6c03cfad21610c1110a44ee2c2e84e82bb0238dac8e"
+    },
+    {
+      "bytes": 2373,
+      "git_blob_sha1": "76381936dac0d429e4bac0af00eb26eff4a340ae",
+      "path": "ops/evidence/2026-10-13/p12-m4-continuous-gradient-diag-1/verdict_reviewed.md",
+      "sha256": "d35775c4825ddd6ebe1ad5170de42484ca811030c7ee10c466c132e04e9b8a5a"
+    },
+    {
+      "bytes": 40,
+      "git_blob_sha1": "1b3b12127bb54c75618e2039bcd7fa090afd974f",
+      "path": "paper12_contgrad1/.gitignore",
+      "sha256": "a5019d0ed63e991e45089336cc36bdca8924fdaf91ab8c194c87b48f2e268d67"
+    },
+    {
+      "bytes": 11163,
+      "git_blob_sha1": "1d3064e88f933d7b201d7b92ef0fc11bc9c4487c",
+      "path": "paper12_contgrad1/NUMERICAL_AUDIT.md",
+      "sha256": "3cbd8ff7fb534e903ccbaecc150a229bf7e61d520e266906750f2f5f74433d19"
+    },
+    {
+      "bytes": 1785,
+      "git_blob_sha1": "e21f907bc5a9e4f4a83b54bfeaf4d777f4cbeda7",
+      "path": "paper12_contgrad1/README.md",
+      "sha256": "7d62ac5141952d878d17dcba2ffac144e5830cadf821952915f1135ae52d019f"
+    },
+    {
+      "bytes": 3649,
+      "git_blob_sha1": "887e42e10a1bbc326582576341bafc36dc8e65d2",
+      "path": "paper12_contgrad1/audit_statistics.py",
+      "sha256": "64f3f5a42699486e4d58f4839a291e2365b16318275e6df0315d94e35a425963"
+    },
+    {
+      "bytes": 3548,
+      "git_blob_sha1": "184fd07410e85848c436b604a74149106806152d",
+      "path": "paper12_contgrad1/block_summary.json",
+      "sha256": "e5d0f473740a8fdd3e1d35dd5dcc812cbe379d431eeb0daa8e74ba95fb77037a"
+    },
+    {
+      "bytes": 3298,
+      "git_blob_sha1": "7f5a96ce52d996c231af9407e67acbefb076c9f8",
+      "path": "paper12_contgrad1/build_figures.py",
+      "sha256": "3802cacc3d84f772a96ab8260938361a20c3db81ea6b4503f7bafd6e0d1b75a2"
+    },
+    {
+      "bytes": 2845,
+      "git_blob_sha1": "2285c0543c023786df16e94a91824ee01f7760fe",
+      "path": "paper12_contgrad1/certify_saved_worker.py",
+      "sha256": "9e2abb89e5f3040be5e07b48f9e079cb34d7fa681d664f9a6e786f7a8d30b757"
+    },
+    {
+      "bytes": 395,
+      "git_blob_sha1": "0c924fe1948235e5ec27a79064011384396920fe",
+      "path": "paper12_contgrad1/custodian_preflight1.json",
+      "sha256": "bdbe82fe14a96c0bc27656e5fd06917a60c4363cbe719eda55dbbc7c4c7b05b1"
+    },
+    {
+      "bytes": 744,
+      "git_blob_sha1": "52af9143ec8163aea0558c402a72151e81fb7fb3",
+      "path": "paper12_contgrad1/decision_definition_v2.json",
+      "sha256": "95954928162dfaf0a20547717bb161cb2bcd8a84b224bfee61ce77f872556177"
+    },
+    {
+      "bytes": 6651,
+      "git_blob_sha1": "f9b6aa88d7c2ef7711b382463af30c33e527b7c2",
+      "path": "paper12_contgrad1/diagnostics.py",
+      "sha256": "327fb4e50a8839970c2c7649d59f1ab1f2215fc06ddf7c056d78489dbd79db25"
+    },
+    {
+      "bytes": 5611,
+      "git_blob_sha1": "0711cf64c9b3ad8884a986bb4814889938ad5d5b",
+      "path": "paper12_contgrad1/diagnostics_v1.py.txt",
+      "sha256": "04721d9bb8490c75923a9e24115de4bf142ad82078ad0347a2155296d10aa95c"
+    },
+    {
+      "bytes": 710061,
+      "git_blob_sha1": "c76aebc33184d24bb6f5a77ee220ce89b1eace6e",
+      "path": "paper12_contgrad1/execution_registration.json",
+      "sha256": "4e9dd49749c4e68bdd60d04ba007486fd9b3fa0b523dc6d9bdcf9c38bd1a51a5"
+    },
+    {
+      "bytes": 1389,
+      "git_blob_sha1": "90da8444e4cd8fe16abc01d67db5232e352fb38a",
+      "path": "paper12_contgrad1/execution_sources.json",
+      "sha256": "a2a25c0288435d4d387fdadf3fa5989ebf5357616497d470ca0488e6ded02ef3"
+    },
+    {
+      "bytes": 1864,
+      "git_blob_sha1": "834aa097d4ecb6c89b7f8c998248a29122cdd159",
+      "path": "paper12_contgrad1/execution_sources_v2.json",
+      "sha256": "23cd83ea1bd232e27c16fcbecafd30e5fe35a164a74f62d51ede39223e5b4662"
+    },
+    {
+      "bytes": 2308,
+      "git_blob_sha1": "1694e5128b800443c8268360c8ee36e264184567",
+      "path": "paper12_contgrad1/execution_sources_v3.json",
+      "sha256": "b3ea8134f233a76bb84c4aad70f1a02ab9d80aef1a92435a9f4ac3f5fb182fcf"
+    },
+    {
+      "bytes": 100802,
+      "git_blob_sha1": "6eaf605c6533adf09403a798e2a7d8f520aec20f",
+      "path": "paper12_contgrad1/figures/endpoint_coordinates.png",
+      "sha256": "f24f7423a7932637aefb98d8947df15fb1ad94a7e835f3f7936fdd974c9a69e9"
+    },
+    {
+      "bytes": 441,
+      "git_blob_sha1": "acda8937645bd9c2cf8405635ee9cd8ce28d0c43",
+      "path": "paper12_contgrad1/figures/input_hashes.json",
+      "sha256": "815f667f8234fa1fc563390c04696ebb24ddbb56bbc02a59001800b8eebba09f"
+    },
+    {
+      "bytes": 164296,
+      "git_blob_sha1": "9b0dafb7206adb27826d736e1e24153abb6e69f0",
+      "path": "paper12_contgrad1/figures/step_scan.png",
+      "sha256": "c7f89940e199aba4241c239463c220ca23a3ce269611aa72674d1541f9d4f02e"
+    },
+    {
+      "bytes": 19791,
+      "git_blob_sha1": "0996e2ce427c9e04d10208646f6611789e3cc874",
+      "path": "paper12_contgrad1/final_manifest.json",
+      "sha256": "f413f2a3f336db78dbfecf8c0ec0b517b757c85c616cdb188b2a310f953ef1a4"
+    },
+    {
+      "bytes": 3699,
+      "git_blob_sha1": "52996a60a3ea9b5eaeee2ecf63c1916202b44382",
+      "path": "paper12_contgrad1/frozen_sources/baseline_features.py",
+      "sha256": "b905457bec4c93881b17614a511ff88ebbcdae18ca64e16f8eba35cb56b19161"
+    },
+    {
+      "bytes": 2112,
+      "git_blob_sha1": "4f51c19884986b7ec6d258b2bcbe6cf8f09f18ff",
+      "path": "paper12_contgrad1/frozen_sources/frozen_offset.py",
+      "sha256": "bb789533c96977b22a94dbc5d27a0c8caf046c7ca61c5fc57952fdf69aa6febd"
+    },
+    {
+      "bytes": 808,
+      "git_blob_sha1": "7d402fc8a6f4426ab6f61541628a60c05573977c",
+      "path": "paper12_contgrad1/frozen_sources/manifest.json",
+      "sha256": "30038cec6cfade9ba71473028ae55b02d9b91ac2144033b6e2b5fe4a196e6db3"
+    },
+    {
+      "bytes": 2564,
+      "git_blob_sha1": "ac96957814c8162df832870cd2207cf65130e860",
+      "path": "paper12_contgrad1/frozen_sources/model_math.py",
+      "sha256": "8f21b7918635d9b5d40cfe3d4a66ba15a2f5db3308bbe1ac2b0e15d632a28dd1"
+    },
+    {
+      "bytes": 3171,
+      "git_blob_sha1": "582d40e9ed6c1cfdf831253b7124ea4f6b41128d",
+      "path": "paper12_contgrad1/frozen_sources/native_analysis_check.py",
+      "sha256": "c2c3fb22f11ac950ee314d1453ada68bb243c745d02d3d4a6111c25791ffa1ff"
+    },
+    {
+      "bytes": 15206,
+      "git_blob_sha1": "b1ff40ca5d2eb3cb7c8d5289a74b9cb0487fba75",
+      "path": "paper12_contgrad1/frozen_sources/predictive_models.py",
+      "sha256": "0dbaeb67b54e6a198e2f08464cbb52bb68f8d04488b9582559dd67ac03c82aca"
+    },
+    {
+      "bytes": 1202,
+      "git_blob_sha1": "312b4d7bd23d3d18ff0b7c049259381bbf97f27a",
+      "path": "paper12_contgrad1/frozen_sources/predictive_models_code1.py",
+      "sha256": "63df719f159c0ef38dc955cf51ae684d641441aaa9c2578dbd565923e432d459"
+    },
+    {
+      "bytes": 2772,
+      "git_blob_sha1": "9d61852503a0a5a9cec1b0ded6f5981fe1841f51",
+      "path": "paper12_contgrad1/frozen_sources/r2_models.py",
+      "sha256": "960b069da3c6ba2fa58049df7804d166b26d1325f50ee7152444f4b3c0c33b64"
+    },
+    {
+      "bytes": 1015,
+      "git_blob_sha1": "8998582b688b55544d659005bded672c75a3cc64",
+      "path": "paper12_contgrad1/implementation_registration.json",
+      "sha256": "a2e3a1f743ed82a2c8121cb6f08e68bd8c457253ce4eb11b86be1721486dbeba"
+    },
+    {
+      "bytes": 4208,
+      "git_blob_sha1": "47250079f44a507215174b77947c4a371c840244",
+      "path": "paper12_contgrad1/independent_ad.py",
+      "sha256": "f08f8a733579e2b8183632a4da763b7432d4256f250b7fe1f7487e4af95391b8"
+    },
+    {
+      "bytes": 6035,
+      "git_blob_sha1": "7f6b3079b2b3fb762c445c5e154bece5c3a51785",
+      "path": "paper12_contgrad1/launch.py",
+      "sha256": "b69cf8f6f2607deb2f51444fb54b87188724e9a13a6899e158269ef64b757498"
+    },
+    {
+      "bytes": 6029,
+      "git_blob_sha1": "df53b763b3d25f99135fb59b3eb5d287fe7ba6ac",
+      "path": "paper12_contgrad1/launch_v1.py.txt",
+      "sha256": "861a295f45588755bb177314d06b5308b0dbb989001e363b70f71e16265a6b8a"
+    },
+    {
+      "bytes": 898,
+      "git_blob_sha1": "cc9527e3a95984d7e3d1076a043acf5606d8d878",
+      "path": "paper12_contgrad1/native_attempt1.log",
+      "sha256": "446adc9e21ee8b278585f85b8043a54af8412908d2522915163cd4b515a31826"
+    },
+    {
+      "bytes": 517,
+      "git_blob_sha1": "931586fa78c60acc7b23e1e33caed2ddc43e7d10",
+      "path": "paper12_contgrad1/native_saved_certificate1.log",
+      "sha256": "943b4876fbf375fe41b8873841eb94c9c9604f777feb79ce04fb0726d44b94cb"
+    },
+    {
+      "bytes": 22378,
+      "git_blob_sha1": "08faec3eb61d0cd8a5d09f821d628e036c46c628",
+      "path": "paper12_contgrad1/original_daily_operations.md",
+      "sha256": "5a9a187a06ba54faf84909625957dd49991183105697f2edb20e2aa161e0d3ce"
+    },
+    {
+      "bytes": 107,
+      "git_blob_sha1": "aab7db576469f603d87656c92bd481cd39fc0678",
+      "path": "paper12_contgrad1/prepare.py",
+      "sha256": "214c7dab7aaee410b19bf7c101ce16d562eb5a0112743d222cd0aec40e39a31a"
+    },
+    {
+      "bytes": 10065,
+      "git_blob_sha1": "70f7441127dbe084da7ed61d06721ede1b2f0164",
+      "path": "paper12_contgrad1/prepare_closeout.py",
+      "sha256": "b0130c9463f0fea90f4ff9c8472b137f0a79ca7554ffe478d2307f985f8cc854"
+    },
+    {
+      "bytes": 1784,
+      "git_blob_sha1": "eafd56b8b74ad6a7047afa4d0f7a001140e9fd20",
+      "path": "paper12_contgrad1/prepare_git_closure.py",
+      "sha256": "21c758aaecd5f4eb0423bf48c0540bfa8177097c618cc2d8298c4456eaa1f88d"
+    },
+    {
+      "bytes": 422,
+      "git_blob_sha1": "6e7865678fa7704f1d03144f31e9fca8df7453be",
+      "path": "paper12_contgrad1/preservation_audit.json",
+      "sha256": "49120f0fb281497cf74522a115aab195c7d4966795271e3d9421814335d84a40"
+    },
+    {
+      "bytes": 2745233,
+      "git_blob_sha1": "b3a2d294d3920ada8339afeaafc9af66eb9ca29d",
+      "path": "paper12_contgrad1/prior_manifest.json",
+      "sha256": "6cfa09f5c92a93938e90e3a7e064483a2fb652382a869f6980d3e3a8b3a3ad6d"
+    },
+    {
+      "bytes": 1243,
+      "git_blob_sha1": "4b39664a43e0ceaf3fbdb90fe81b3777b3f1149e",
+      "path": "paper12_contgrad1/protocol.json",
+      "sha256": "5d119766ddb722ed49efd84542f725b4754a591851f561be01c2ec6955a1d902"
+    },
+    {
+      "bytes": 3665,
+      "git_blob_sha1": "cece2ef1790425261fd69ef7b4cad536ef830436",
+      "path": "paper12_contgrad1/recover_receipt.py",
+      "sha256": "2051e9bfe85816bef6b144c0c8933c9efe0d26f63c363c7fcc75bc92c7039dee"
+    },
+    {
+      "bytes": 1317,
+      "git_blob_sha1": "127f97836a982a9ec2912e9dfd03ee6e0c15d008",
+      "path": "paper12_contgrad1/recovery_execution_registration.json",
+      "sha256": "3e5c3183c4a1258e7548a693e32cbbaaca282498f6a7a30038311ce6ef11e30e"
+    },
+    {
+      "bytes": 1300,
+      "git_blob_sha1": "03fc003dbfd25788ec4fbcef4163355bed754920",
+      "path": "paper12_contgrad1/recovery_registration.json",
+      "sha256": "bf574922111ac55a0de473ee700d3b6864fc8087ac6aa526854d3a9b29c0b361"
+    },
+    {
+      "bytes": 2370,
+      "git_blob_sha1": "526a0f5346651912773e74db90a4eaaeb7481caf",
+      "path": "paper12_contgrad1/recovery_registration2.json",
+      "sha256": "5562257229dee63f6c563c4ccc35e178fb2afbc5f41eec1d1b6f9f79455aada4"
+    },
+    {
+      "bytes": 452,
+      "git_blob_sha1": "ed5190034930c03c12b649f6563566ef998bbc8c",
+      "path": "paper12_contgrad1/registration.json",
+      "sha256": "69379680b4167deb4b190610449e0b98ec33ee7e5f6c921d5c33ff5c9120d16a"
+    },
+    {
+      "bytes": 311,
+      "git_blob_sha1": "842abdf09577a39b528c0f578e2a6e799d8302b9",
+      "path": "paper12_contgrad1/reproduce.ps1",
+      "sha256": "3bb8cda389421e4917ce42e958568f5e0ebd5c1cbdcf564aa449f5d41c860dda"
+    },
+    {
+      "bytes": 5884,
+      "git_blob_sha1": "804a89736e9ab57dab24001539858253ed2fbaa2",
+      "path": "paper12_contgrad1/reproduce_saved.py",
+      "sha256": "ef511ce13863f348ee77d1c7e8bbaccb15679600e262c336ea63efd6ce286bd2"
+    },
+    {
+      "bytes": 4714,
+      "git_blob_sha1": "169107efdf107dde42c6d8416227bb545528a428",
+      "path": "paper12_contgrad1/reproduce_saved_v3.py.txt",
+      "sha256": "8bc1a55843f80e94ef89a5e15bada9058b89ac88efa2741d32763e6a111bad3b"
+    },
+    {
+      "bytes": 684,
+      "git_blob_sha1": "a6e683f112c6d7941439b5a60fc0ad0c599a8fc2",
+      "path": "paper12_contgrad1/results/diagnostic/native/decision.json",
+      "sha256": "a0302aa45260fa41e28b1ee3593f752f5d31083ab8a9e387eade9987ca4a43b2"
+    },
+    {
+      "bytes": 2540,
+      "git_blob_sha1": "c136b68982ed6e333272a2e1df73e7d9964d14b2",
+      "path": "paper12_contgrad1/results/diagnostic/native/endpoint_audit.json",
+      "sha256": "ce5cc803718311ccecaac7844aa6a7c4dc06320b0a1abedef87b52361a29a890"
+    },
+    {
+      "bytes": 111,
+      "git_blob_sha1": "1cb2691db80d4143128f6edc0d90ee9af1632351",
+      "path": "paper12_contgrad1/results/diagnostic/native/endpoint_progress.json",
+      "sha256": "e9178ccc3b454a7e8821dd88bae2a955c4bcdbb0cd6399fab0069da3f61c3a41"
+    },
+    {
+      "bytes": 157,
+      "git_blob_sha1": "bbfe9c99a6f784e2bfa7de6a8f029faf19fdff8c",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_100.json",
+      "sha256": "a0b87873b56a661359910f22342fb14cb3ec42aa7f4ee6f28f28710604452b83"
+    },
+    {
+      "bytes": 157,
+      "git_blob_sha1": "9e8735a758a9adbdbce37d7bb7d364a28ff35986",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_1000.json",
+      "sha256": "2f34f2be573f390a26e0c1e93c1c565edf872774cffec2b44f473cd798875835"
+    },
+    {
+      "bytes": 158,
+      "git_blob_sha1": "6b9180e446451af8dd66a5f33128f59a9fd92053",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_1050.json",
+      "sha256": "bc77ebb56b54af972b796d86e957f9b3b44d31d57b11f7950b8e2e1884b0afe1"
+    },
+    {
+      "bytes": 156,
+      "git_blob_sha1": "f79b4235b781f88e4001cc61f9abf7633d29e6f1",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_1100.json",
+      "sha256": "bbbdcbde83f463e4b192e4b36fee2e77072be4101c9df186a95645f327923337"
+    },
+    {
+      "bytes": 157,
+      "git_blob_sha1": "975a240de7299f2e78f9390a3e93e170fed2cc03",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_1150.json",
+      "sha256": "f2ded32f11e3a2fd6e324e09355df58ea687817920a134b60f180ee5421b245b"
+    },
+    {
+      "bytes": 157,
+      "git_blob_sha1": "20c24a5b5d4537787a8cb3a4ae81fcfabddc7e6a",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_1200.json",
+      "sha256": "0f43aefaa113bcac585f0884eb7a65cf28003427fb1875f37aabdac94045bf62"
+    },
+    {
+      "bytes": 158,
+      "git_blob_sha1": "6fd9358a8976d01a2b41c696511c90b20899a87d",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_1250.json",
+      "sha256": "4f56d07ea256ada8069de1fdfb1ea6fe49cd946044b637fdf82b45b5cb158bf3"
+    },
+    {
+      "bytes": 157,
+      "git_blob_sha1": "227f246771110a60f94af28462e7ce7b63af172c",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_1300.json",
+      "sha256": "44b1ade8da756891e2fc337b7ab5ff6f4e52b70e673db17f3e13b79885615a36"
+    },
+    {
+      "bytes": 157,
+      "git_blob_sha1": "56dfc66e165c271a07a85e9b0cfe2b5256fb3aec",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_1350.json",
+      "sha256": "cbc53993ff4af66c0d84f6a6646feb0a948787a78e3db1339fa7919a5f337bac"
+    },
+    {
+      "bytes": 158,
+      "git_blob_sha1": "1bb77b4be78484c02278aadb09ebd640204cd86a",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_1400.json",
+      "sha256": "d539cfb3fc69b920965ab545bd1c4ab1d24875c267fcc1414a12d5af600ad964"
+    },
+    {
+      "bytes": 158,
+      "git_blob_sha1": "4406cc687081b7dfe9af3d7f8369a2b973851e29",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_1450.json",
+      "sha256": "f93779a7ff878df6dfa00b5fb246190946ce1977b2dd7210f64ad127247cfdec"
+    },
+    {
+      "bytes": 156,
+      "git_blob_sha1": "674222da9e8fe98f585c23e42e5806262e9ffefe",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_150.json",
+      "sha256": "b060b8caee6ac5830907aed60aa7c763b8211cc0dd2a6c1db8b2febf23c57525"
+    },
+    {
+      "bytes": 157,
+      "git_blob_sha1": "5749e59b8f5b4645ea4b673b6fb60600e83371c2",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_1500.json",
+      "sha256": "b5038e20d1dbd385da611757f966c9997d3a5122b834a2c1500fdd9192d40fb0"
+    },
+    {
+      "bytes": 158,
+      "git_blob_sha1": "cbbc371b0e0f8431ead80532ef222c0590db0f78",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_1550.json",
+      "sha256": "96e68e61018f48d1696bdefacedaaa582d62a3d530e3e78778a0a248a257b244"
+    },
+    {
+      "bytes": 157,
+      "git_blob_sha1": "82ec0e749ca115974be6859bf333a7fd4f6cc7ee",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_1600.json",
+      "sha256": "3c5d9ec36c12531a12e8646277e4753ce443b83f9502930d6bee63da502ce0fe"
+    },
+    {
+      "bytes": 157,
+      "git_blob_sha1": "f1ed8d3e2bb8a90d4369b4351bfd7b39deab8b93",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_1650.json",
+      "sha256": "e15b2e803869fec81fa8ba963feeaca235c7a3301843387a59394503032dacf1"
+    },
+    {
+      "bytes": 155,
+      "git_blob_sha1": "41d5074a6945ecaa31c09f035cc617fc61046548",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_1700.json",
+      "sha256": "c512034fdf8689046627bc86abea36fe95fe9d0d311a335443cd4a818bc214d7"
+    },
+    {
+      "bytes": 158,
+      "git_blob_sha1": "c62321286c5c28e3d1084082716462e23d0bd663",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_1750.json",
+      "sha256": "9c808a4073771ff3b84a207c05a916178f9d2c0e511b5d6567930394a740bef9"
+    },
+    {
+      "bytes": 156,
+      "git_blob_sha1": "e331884c7b883dcb52a69a57d5aef3c4e18cf97b",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_1800.json",
+      "sha256": "a42bdb3315e52cbb9c1db01bd92e1435b59b1b7ceb91d4a0da7b128a0e53af9f"
+    },
+    {
+      "bytes": 158,
+      "git_blob_sha1": "69c50006ab05a1f0e8fe2fb4406595add4b08bfb",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_1850.json",
+      "sha256": "6bce3574fe33a1c2cb8070dca97f104d9b4594f6d22278c60aa458c0cd4c47ee"
+    },
+    {
+      "bytes": 158,
+      "git_blob_sha1": "22b10673051d6f55c88ab0b16a2f4dfdc6d23fa3",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_1900.json",
+      "sha256": "9798f103c845a4d6d9b623c620797c84f68a51024f543511edbe70eaee0a3602"
+    },
+    {
+      "bytes": 157,
+      "git_blob_sha1": "60b9d51a85b5331d558beba274782466435f0ee2",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_1950.json",
+      "sha256": "9742e863b8fb0a6a580bf8a850d496f999f006e1102f11f1bfc9998f00c8185b"
+    },
+    {
+      "bytes": 157,
+      "git_blob_sha1": "e2c6bdbe2ea0a4cdc2cd74d4c3091eadfe64236b",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_200.json",
+      "sha256": "89500b2763d8812dad002392603bee763c49f987db305a1d6f1aee8d9618f4df"
+    },
+    {
+      "bytes": 155,
+      "git_blob_sha1": "092a9e56531c7db8be922d8f7d78027ce71685e8",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_2000.json",
+      "sha256": "767bed7f5199443ee48fdfaf1800f120bc9c3a998143e6c24ab30f090fdfecdd"
+    },
+    {
+      "bytes": 156,
+      "git_blob_sha1": "8f4515d85cab599b340c9585a94ab9d57c13e023",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_250.json",
+      "sha256": "f16803da0b48d967718eb312f46b4673b1597372bd9fae7e4855a0e81730aa94"
+    },
+    {
+      "bytes": 155,
+      "git_blob_sha1": "085c04ab024589900cfda3bcedcab80d4a7074cd",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_300.json",
+      "sha256": "39a4b4f4303c96996a7562eff419338b9e7c520e757caaec897558fab28ad730"
+    },
+    {
+      "bytes": 157,
+      "git_blob_sha1": "8c7edfe003bf3fb5d73a14e7307bcfb21c010197",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_350.json",
+      "sha256": "e2b4970d18d3fb196b507056ef8b1f31dfb21e2701d6c487c7c6cde49eefe613"
+    },
+    {
+      "bytes": 157,
+      "git_blob_sha1": "e1f4c569e6eb4987825a1d7f251875cfad7dbeae",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_400.json",
+      "sha256": "0ea9c7f9fa1de56a15aa0ff5e1a9dfcb8c46d6cbd3e21088f91a58a42cba81b0"
+    },
+    {
+      "bytes": 157,
+      "git_blob_sha1": "289424b24a1d3bd2057876ab833e5a6907108402",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_450.json",
+      "sha256": "4617e7ac64c35ea77697fc96961aa8f0512abbd4a4cccb1c04f02086bef823d5"
+    },
+    {
+      "bytes": 155,
+      "git_blob_sha1": "542a839ff5f6d76c6ce032959dacab3189936ff2",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_50.json",
+      "sha256": "85f89b85b41c448e5c749b17b2da87436c74033d7b7c7d6591dca045840b4a6e"
+    },
+    {
+      "bytes": 157,
+      "git_blob_sha1": "73887b9be75a96ae7d9a0eb7e71345e67c2ee4b7",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_500.json",
+      "sha256": "8543fca43df5d3d66c56dd3367dbf00aaf3f2dac2c97953522f8153b3928e7ef"
+    },
+    {
+      "bytes": 156,
+      "git_blob_sha1": "e6494e7f391bc6cb9bf19bb54d433f180709dfb2",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_550.json",
+      "sha256": "4c18860cee232f81a3831bfedad08dea6c79f13f2e3c981ed4a678937546a153"
+    },
+    {
+      "bytes": 155,
+      "git_blob_sha1": "2e05a797f4fa7a69465abe49117a7ba97a6c58ca",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_600.json",
+      "sha256": "6542cfa942cdf2f10aa6811722136442d99a243d54294ca5244080db42e2318f"
+    },
+    {
+      "bytes": 157,
+      "git_blob_sha1": "2b6d1e197f59c4ca9c6bda305d4e8af21a9bc419",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_650.json",
+      "sha256": "0a06ec95465ba92ddcff4d52feec8d9a71aef21f9d171a56d9b4353c03e25ca6"
+    },
+    {
+      "bytes": 156,
+      "git_blob_sha1": "73ca0093b449ae6607f8c72f612eea49d8dcb64a",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_700.json",
+      "sha256": "7fc0f1e33a994e445155396cabb28ccd4ae1840ae40ea58e3a8b6b89ade2b7b8"
+    },
+    {
+      "bytes": 156,
+      "git_blob_sha1": "3b29fafcaa830deea8d34cf42883132c2f3d5ac0",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_750.json",
+      "sha256": "ead31e0da3f22d5dcc87dcf644becaad9f1b660220f9dca30767b4c5a8ac8e9d"
+    },
+    {
+      "bytes": 157,
+      "git_blob_sha1": "bd6cdc2623f21bcfa1119a0d8daf0977a385d323",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_800.json",
+      "sha256": "a3837cac556dfa9efee46c77ca8fee8eda6469ed6242c59445cfded6950af363"
+    },
+    {
+      "bytes": 155,
+      "git_blob_sha1": "ac5bab152440913ab90740f044f24215f6cee843",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_850.json",
+      "sha256": "d6d7401715580749ed2f3c58dd7bde1f7ad1c6b555d6202554cc80bf9922f391"
+    },
+    {
+      "bytes": 156,
+      "git_blob_sha1": "754c28887a2ab38ad3c45f6e5dd5fccc34ebe278",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_900.json",
+      "sha256": "1783b89367b0da439d15e3c81163c7880881a3281d8c1b92fb8a4e9186c5fafc"
+    },
+    {
+      "bytes": 157,
+      "git_blob_sha1": "59350eab0802917f7e20ceb48522e01ae549a26a",
+      "path": "paper12_contgrad1/results/diagnostic/native/fit_progress_950.json",
+      "sha256": "bf5c2edbfee0ad139cffed0730f8dfa0b65103df5984da07c53ede16628017ea"
+    },
+    {
+      "bytes": 9202,
+      "git_blob_sha1": "adf9555255309da0d3f0836585cc2fb43c91ea34",
+      "path": "paper12_contgrad1/results/diagnostic/native/gate_result.json",
+      "sha256": "7886927295f2f8e67c6b981976f10e9832d3d368276fe0c5675b9dbef69e35c8"
+    },
+    {
+      "bytes": 5020395,
+      "git_blob_sha1": "dc6f36c17ee5ed1b2d4296fe226b7b210032c441",
+      "path": "paper12_contgrad1/results/diagnostic/native/gradient_scan.csv",
+      "sha256": "7136f2fd6954ac1e0bc7209e410ef88892edb18c65632d684233e6546ce3a2c6"
+    },
+    {
+      "bytes": 2581,
+      "git_blob_sha1": "9adae6fcef469e34982b2702e0a7bb9a26bf01b1",
+      "path": "paper12_contgrad1/results/diagnostic/native/initial_audit.json",
+      "sha256": "1b9527c69b620ba337e5f0af7822dcba0f22180f0bf7d872bb608ecbb3d303e0"
+    },
+    {
+      "bytes": 110,
+      "git_blob_sha1": "49008f90660ca99236362e4637dc1111f3e1f80c",
+      "path": "paper12_contgrad1/results/diagnostic/native/initial_progress.json",
+      "sha256": "27fe9ef9f07afd2d5de310304b2fb30f1ceabfa2f60b26c3251a294c7ccf4aee"
+    },
+    {
+      "bytes": 2525,
+      "git_blob_sha1": "ce95a3890dcb4aa3fa7bd3fbc85915324c70f230",
+      "path": "paper12_contgrad1/results/diagnostic/native/intermediate_audit.json",
+      "sha256": "03a571fafd24ef3d07d6935c6c47cc8449d88b10ba2ed31d25979ffe2fb1bb6b"
+    },
+    {
+      "bytes": 115,
+      "git_blob_sha1": "e9bc4bef5b64563d80dcea742eba915513852b72",
+      "path": "paper12_contgrad1/results/diagnostic/native/intermediate_progress.json",
+      "sha256": "1c9e8bb2198fc002f498a191ab9b6a8ea09f220df5e7c8c61a3c7a80dc3e4f11"
+    },
+    {
+      "bytes": 2527,
+      "git_blob_sha1": "b968f3a80e9960c5ddfe1a725735add973b80870",
+      "path": "paper12_contgrad1/results/diagnostic/native/reproduction.json",
+      "sha256": "40c659c82d163184f75a1e74c8be614da6f3786651ee6bb6b2465869d1b4d8fa"
+    },
+    {
+      "bytes": 268,
+      "git_blob_sha1": "3912a9b26f1fd7e74cda159defa9fd34d77f2749",
+      "path": "paper12_contgrad1/results/diagnostic/native/role_proof.json",
+      "sha256": "bf01f80fc355c351db213503816baf3d067fa14922abb61053394365b4a87324"
+    },
+    {
+      "bytes": 142,
+      "git_blob_sha1": "e087ca7acff3ea7adc804440d2182619396ee72d",
+      "path": "paper12_contgrad1/results/diagnostic/native/scan_endpoint_0.0001.json",
+      "sha256": "0c63180547a50b1b0bf839b727f0ffb42deb73a08fb5af87df591027c71701ad"
+    },
+    {
+      "bytes": 140,
+      "git_blob_sha1": "750e52b870620af86b84a0218e522d943351c0bc",
+      "path": "paper12_contgrad1/results/diagnostic/native/scan_endpoint_0.001.json",
+      "sha256": "b7961a81fb1ac73f0edb06aa8e4cb3d54150c30f882f410acf69a7bc69de2f57"
+    },
+    {
+      "bytes": 139,
+      "git_blob_sha1": "d9806e5cee6b8d1aae68534cc80d8b6f5904158c",
+      "path": "paper12_contgrad1/results/diagnostic/native/scan_endpoint_0.01.json",
+      "sha256": "6279d6f9d375aed1cdec6df0d54f164064f8f6d2ec83a1a3ce5633c05b13cae9"
+    },
+    {
+      "bytes": 141,
+      "git_blob_sha1": "0eeb1d555a206d7a6ebd84439f90e3029108dfc7",
+      "path": "paper12_contgrad1/results/diagnostic/native/scan_endpoint_1e-05.json",
+      "sha256": "632472420922c9137b4f3becca796be5a418080be170fe27c44f6b963d4dfeb4"
+    },
+    {
+      "bytes": 141,
+      "git_blob_sha1": "57fd7049ba635604241c3f1e6545b064e49d07b6",
+      "path": "paper12_contgrad1/results/diagnostic/native/scan_endpoint_1e-06.json",
+      "sha256": "1c1f09c262f1232633ed816eabb38409fb60c86f1778d0a75c10cb032f8e1705"
+    },
+    {
+      "bytes": 141,
+      "git_blob_sha1": "ada5ec4ce68a9ac884a590951e1218acf60016dd",
+      "path": "paper12_contgrad1/results/diagnostic/native/scan_endpoint_1e-07.json",
+      "sha256": "c25e2cf0f8799eec8ddd70915ab482326cd7bcf141fdee449a8af519155c64d4"
+    },
+    {
+      "bytes": 141,
+      "git_blob_sha1": "9e0e96a22275e70b55cb637295a992789dec0389",
+      "path": "paper12_contgrad1/results/diagnostic/native/scan_endpoint_1e-08.json",
+      "sha256": "23e3ce4e327adecc31e5bbf5bcf4f2df4a61fdca4cf2f4cded54d677aa84e8d6"
+    },
+    {
+      "bytes": 141,
+      "git_blob_sha1": "bd9bbbfa39a176c8fbd8e359dd00efe8c1c9f0fd",
+      "path": "paper12_contgrad1/results/diagnostic/native/scan_initial_0.0001.json",
+      "sha256": "9853f2c7666fccd24b320fdb6d337df8e5bd1dbf4adbcc5eb19e7ad0a2f6e649"
+    },
+    {
+      "bytes": 139,
+      "git_blob_sha1": "c5526284b27418acff7ec1f9c129c5011acc9956",
+      "path": "paper12_contgrad1/results/diagnostic/native/scan_initial_0.001.json",
+      "sha256": "d9f734bab9c08636959b5214424e0944a2ea1f13f7ee5dcc530e8cb5bb7765ee"
+    },
+    {
+      "bytes": 138,
+      "git_blob_sha1": "d99ab284eb63c11a954489f2aa089ae48e576f34",
+      "path": "paper12_contgrad1/results/diagnostic/native/scan_initial_0.01.json",
+      "sha256": "f9001fb39a1970b5a31ec413fd5b9a64bef3dd7cb3a9615e03e484c9607193c7"
+    },
+    {
+      "bytes": 140,
+      "git_blob_sha1": "25737c03d891f48fe67bcbf0d576c81373c0fe33",
+      "path": "paper12_contgrad1/results/diagnostic/native/scan_initial_1e-05.json",
+      "sha256": "a5fe189a8601d87b3d5c9c1513e39b9cf57b7b637a43e39bdedb658872f60453"
+    },
+    {
+      "bytes": 140,
+      "git_blob_sha1": "08cb4e3b34cf40db5aa6a29eb094e68c67dbd839",
+      "path": "paper12_contgrad1/results/diagnostic/native/scan_initial_1e-06.json",
+      "sha256": "f9cea2e31283aad1a629445d4b725a9994590707b350872853ddd45497511d42"
+    },
+    {
+      "bytes": 140,
+      "git_blob_sha1": "43abecfc37cec5a2df1d461af9df1fea06bca4fa",
+      "path": "paper12_contgrad1/results/diagnostic/native/scan_initial_1e-07.json",
+      "sha256": "fc47420fbe351c6489945cce3751e1e2860141c822e49d12e65a5391623976b5"
+    },
+    {
+      "bytes": 140,
+      "git_blob_sha1": "cd547ca9f741e3a42fa7a6ad2c9a76aaffbcf46c",
+      "path": "paper12_contgrad1/results/diagnostic/native/scan_initial_1e-08.json",
+      "sha256": "ed76871dd7b2295028b1e5fd8b18ae41563bacab91144f39aa796ae9d1737a36"
+    },
+    {
+      "bytes": 146,
+      "git_blob_sha1": "af97142ca3851f443ae96274d06382749ddd8092",
+      "path": "paper12_contgrad1/results/diagnostic/native/scan_intermediate_0.0001.json",
+      "sha256": "e445d4b78ab977681131f103ec8695f749cdff3e59d07f54a1ddf4b242431d2b"
+    },
+    {
+      "bytes": 144,
+      "git_blob_sha1": "4f4ee231970e1eb9a489355c76d8c05b8d27a4fd",
+      "path": "paper12_contgrad1/results/diagnostic/native/scan_intermediate_0.001.json",
+      "sha256": "7151978dbbaa46e6780ddf6967cd5e1786be1eb7b5b07ee6b348ea5766ec0cb9"
+    },
+    {
+      "bytes": 143,
+      "git_blob_sha1": "f91952971a3028a999b90e662bd3820db68d1d61",
+      "path": "paper12_contgrad1/results/diagnostic/native/scan_intermediate_0.01.json",
+      "sha256": "56d1da4205ae1e497f83227a427b3d113387a43401b7abf5502be73b8b393106"
+    },
+    {
+      "bytes": 145,
+      "git_blob_sha1": "b0e8449161dd11049d24afbcf840a3947b7eb3e7",
+      "path": "paper12_contgrad1/results/diagnostic/native/scan_intermediate_1e-05.json",
+      "sha256": "48d1843672439cf847cca4b8a4da4f674a1479eadc4fbed422db4c6ee7f1ab54"
+    },
+    {
+      "bytes": 145,
+      "git_blob_sha1": "5ccd89cc0b54ceadf8ea8d0c1296d8d61c5bb0f1",
+      "path": "paper12_contgrad1/results/diagnostic/native/scan_intermediate_1e-06.json",
+      "sha256": "990ec932ec46bcab1c9d46de778b34f83e85682fa9ee80ae537c667635528fda"
+    },
+    {
+      "bytes": 145,
+      "git_blob_sha1": "e81943f85ec9b5f1cbcaa6a2a7c766cb0100108f",
+      "path": "paper12_contgrad1/results/diagnostic/native/scan_intermediate_1e-07.json",
+      "sha256": "964159db667b128105a8007e20e7d516739e1271a991af121d7a832ff6d24130"
+    },
+    {
+      "bytes": 145,
+      "git_blob_sha1": "2a23b72c3c18f9576d4ca8b25118974133e3b2d1",
+      "path": "paper12_contgrad1/results/diagnostic/native/scan_intermediate_1e-08.json",
+      "sha256": "efe739d3512006ef6c1c7933d46e75b57d88c9e8e858e0f752b68e105491c9ff"
+    },
+    {
+      "bytes": 89,
+      "git_blob_sha1": "faef40f479e07a030383ea2d826eaccd6564fcd8",
+      "path": "paper12_contgrad1/results/diagnostic/native/synthetic_tests.json",
+      "sha256": "91c93a47e0a16278b9ae14198cd7228d42a91b243c4a8891a9ad939bcca6588b"
+    },
+    {
+      "bytes": 709,
+      "git_blob_sha1": "e4b173917cca867bc8e9aedb5930807cd23dba51",
+      "path": "paper12_contgrad1/results/receipt_recovery/native/gate_result.json",
+      "sha256": "eb8c9b9ebeb768c5dd7fdd21700f9c81ec45eefd4d45d0460f560e747afd7b7f"
+    },
+    {
+      "bytes": 268,
+      "git_blob_sha1": "3912a9b26f1fd7e74cda159defa9fd34d77f2749",
+      "path": "paper12_contgrad1/results/receipt_recovery/native/role_proof.json",
+      "sha256": "bf01f80fc355c351db213503816baf3d067fa14922abb61053394365b4a87324"
+    },
+    {
+      "bytes": 511,
+      "git_blob_sha1": "606a076cabc9555d5980c3d76dd157b85d81818e",
+      "path": "paper12_contgrad1/results/receipt_recovery_launch_receipt.json",
+      "sha256": "eed20e8f34bf112157b2484fb1d3b2e810faeadfd84612e0c33dfbedbfc5947f"
+    },
+    {
+      "bytes": 6857,
+      "git_blob_sha1": "b030fdcb525d46900f09018960370af80396c313",
+      "path": "paper12_contgrad1/saved_recovery_regressions.log",
+      "sha256": "7b5330198964361388a5a83644aa3544dae66b4fcf7c6139607868fb6224ef8a"
+    },
+    {
+      "bytes": 729,
+      "git_blob_sha1": "24325e3f60fb18704d521fa9bc9f20fde0dafc58",
+      "path": "paper12_contgrad1/saved_recovery_regressions2.log",
+      "sha256": "94b3e920179d3d26e6835e45cb0cf7f2963c391287a9093d8cfe755552f44e71"
+    },
+    {
+      "bytes": 552,
+      "git_blob_sha1": "a53ee3b52fc75e1fa53f8a4eb4d85edccf5be6a4",
+      "path": "paper12_contgrad1/scope_audit.json",
+      "sha256": "966c98023b4e2b01004173903aa798f3792164336bcd1fbb7d44e8ba6e914551"
+    },
+    {
+      "bytes": 2894,
+      "git_blob_sha1": "05f3214f354e958be5c052c8f40f499ee533c779",
+      "path": "paper12_contgrad1/seal.py",
+      "sha256": "244181926421e928b62f9752f23aae407d0a566fbf430ae5b69bcdc94c7170b2"
+    },
+    {
+      "bytes": 756,
+      "git_blob_sha1": "30b657d447e9c921147ff14774c2cccf22981a6f",
+      "path": "paper12_contgrad1/stage_a_gate.json",
+      "sha256": "450f9b8b360ad24afa1b6d399228f3733db06a15af50cf068ca6080f5fb8ba24"
+    },
+    {
+      "bytes": 825,
+      "git_blob_sha1": "88e798039c53b3b6c5daa405a3ab0063f562fd4a",
+      "path": "paper12_contgrad1/study.py",
+      "sha256": "636948c8ff2b73cab2117b4c28b646eb2a5dd51ffec97dd1e4a27d09ed2cea34"
+    },
+    {
+      "bytes": 733,
+      "git_blob_sha1": "555b1cde57f9de6033c3e26171f7871d5027f137",
+      "path": "paper12_contgrad1/study_v3.py.txt",
+      "sha256": "f3656e3b9ff30f7edf4f9213c3f9ce7bfbe439243558b6e140d5625f0754e4bb"
+    },
+    {
+      "bytes": 1343,
+      "git_blob_sha1": "3a562d4ef3f5cb6d8b85b88d71c68d4870af67d9",
+      "path": "paper12_contgrad1/synthetic_regression1.log",
+      "sha256": "e7a32c4ba6d486e7c236784f08eb2eb5645f6257dba1928aec7c7da6fe743b46"
+    },
+    {
+      "bytes": 1639,
+      "git_blob_sha1": "7ad07b643edcd826813f9977de50ca42e5826cc9",
+      "path": "paper12_contgrad1/synthetic_regression2.log",
+      "sha256": "761c06279a4a2237d923ea6f0ca38eebd0db7763b9975ca43a1170abf3ccaa3e"
+    },
+    {
+      "bytes": 6498,
+      "git_blob_sha1": "aff0e76665dc43d3e19486371367d868454e2694",
+      "path": "paper12_contgrad1/test_diagnostics.py",
+      "sha256": "7f471e9b5eeeadbf54e989518434c0f64d3b9e1ba5159966850c0edf961f4dbd"
+    },
+    {
+      "bytes": 5164,
+      "git_blob_sha1": "8627987973c7e27f9b83fa054363788a77606992",
+      "path": "paper12_contgrad1/test_diagnostics_v1.py.txt",
+      "sha256": "3c0ee36aa226629d30b472cabfc4239f07fc7c16f5d96704b8ebbebd5dc233fe"
+    },
+    {
+      "bytes": 2168,
+      "git_blob_sha1": "e655b07ec9380debad0bf22c077be483fb25f231",
+      "path": "paper12_contgrad1/test_saved_audit.py",
+      "sha256": "9569ff84415441e07a898242e071c5df4c978fae04c9a1f5d25bd1acd2d54ef0"
+    },
+    {
+      "bytes": 6918,
+      "git_blob_sha1": "c2c5035375609e4b0a0a378836cd990b83c684f6",
+      "path": "paper12_contgrad1/worker.py",
+      "sha256": "e54216daf2e0d214e8a87626096fa288d423a5081adc7457a83e607e1cc556ba"
+    }
+  ],
+  "self_digest_bound_by_final_git_readback": true
+}

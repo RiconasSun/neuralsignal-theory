@@ -1,0 +1,9 @@
+# Claim audit
+
+Supported: exact single-target scalar and history reproduction; identical frozen inputs/model/objective/options; independently validated analytical derivatives at three audited vectors and synthetic oracles; complete predefined FD/order scan; fixed-step finite-difference instability; independently measured failing endpoint PG; original FAIL preservation; fresh saved-only native certification distinct from numerical execution.
+
+Unsupported and prohibited: global mathematical correctness theorem; all optimizer-call gradients independently validated; original endpoint theta was historically preserved; recovered original native exit/cleanup values; original gradient/PG gate now passes; universally optimal FD step; extra precision on Windows; scientifically recovered M4; regime selection; generalization, cohort, null or final claims.
+
+Engineering bugs resolved: pre-numerical decision stability predicate and optimizer attribution (review_admission1); serialization arity and append-only regression (native_attempt1.log); saved-test temp scope (saved_recovery_regressions.log); frozen saved-payload binding (review_recovery1). Every unsuccessful attempt remains archived. No mathematical or optimizer change was made. Final engineering bug_count=0/warn_count=0 is contingent on clean final review and remote closure. Historical scientific FAILs are not recounted as resolved product bugs.
+
+Scientific limitations: one configuration, three vectors, finite precision, no original saved theta, unpublished original native exit/cleanup, no corrected-gradient refit, no empirical conditioning intervention. Each limitation is explicit in the numerical audit. A separate native certificate has fresh exit/cleanup and zero additional numerical experiments; it cannot infer missing historical metadata.

@@ -1,0 +1,262 @@
+{
+  "base": "0e7ac4d816d2f006f7e394cfaa37a1d362679e5f",
+  "definitions_identical_to_original": true,
+  "final_review_and_git_closure_updates_are_append_only": true,
+  "items": [
+    {
+      "evidence": "stage_a_gate.json; Stage A closeout review and exact remote readback",
+      "id": "REQ-001",
+      "original_requirement": "Start from independently reviewed predecessor closeout commit",
+      "original_verification": "Commit, review and archive readback",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "registration.json; baseline_registered.md; protocol.json; execution_registration.json",
+      "id": "REQ-002",
+      "original_requirement": "Register populated frozen baseline before diagnostic code/data access",
+      "original_verification": "Timestamp, exact source/runtime hashes",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "prior_manifest.json; preservation_audit.json; original_daily_operations.md",
+      "id": "REQ-003",
+      "original_requirement": "Preserve historical M4 failures and prior files",
+      "original_verification": "Pre/post hashes and scoped diff",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "execution_registration.json A hashes; primary and certificate native/role_proof.json",
+      "id": "REQ-004",
+      "original_requirement": "Enforce training A/synthetic-only custody",
+      "original_verification": "Native role proof and bound input manifest",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "native/reproduction.json target and all_exact",
+      "id": "REQ-005",
+      "original_requirement": "Reproduce CA1 Continuous d4/ridge .001/seed11",
+      "original_verification": "Exact identity and solver receipt",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "protocol.json options; unchanged model source bindings; reproduction endpoint",
+      "id": "REQ-006",
+      "original_requirement": "Preserve all frozen solver options including maxiter2000",
+      "original_verification": "Source/options equality",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "execution_registration.json; reproduction data/context/offset hashes and layout",
+      "id": "REQ-007",
+      "original_requirement": "Verify data/model/context/offset identities",
+      "original_verification": "Hashes and parameter layout",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "independent_ad.py; native/*_audit.json; test_diagnostics.py ridge/normalization",
+      "id": "REQ-008",
+      "original_requirement": "Preserve objective, normalization, ridge and bounds",
+      "original_verification": "Independent objective and penalty checks",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "execution_registration.json original and cached oracle SHA; replay exact checks",
+      "id": "REQ-009",
+      "original_requirement": "Preserve original gradient-check implementation",
+      "original_verification": "Original/cached-oracle source bindings",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "native/reproduction.json original checker + PG + histories exact",
+      "id": "REQ-010",
+      "original_requirement": "Reproduce original failure and approximately .693 PG",
+      "original_verification": "Endpoint/PG/error comparison",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "protocol.json; gradient_scan.csv all seven scales",
+      "id": "REQ-011",
+      "original_requirement": "Predefine and retain full central-difference scale scan",
+      "original_verification": "All scales, no favorable-step selection",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "gradient_scan.csv fourth_order and raw probes; native/*_audit.json",
+      "id": "REQ-012",
+      "original_requirement": "Run higher-order finite differences",
+      "original_verification": "Coordinate tables and stability flags",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "gradient_scan.csv richardson, roundoff and stability; audit_statistics.py",
+      "id": "REQ-013",
+      "original_requirement": "Run Richardson extrapolation where stable",
+      "original_verification": "Explicit instability/cancellation handling",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "independent_ad.py; native/*_audit.json; synthetic regression tests",
+      "id": "REQ-014",
+      "original_requirement": "Use independent AD or symbolic derivatives where feasible",
+      "original_verification": "Independent recurrence implementation and oracle",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "test_diagnostics.py dimensions1/2/4 and one-bin oracle; native/synthetic_tests.json",
+      "id": "REQ-015",
+      "original_requirement": "Verify synthetic small-dimension recurrent oracle",
+      "original_verification": "Deterministic synthetic tests",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "gradient_scan.csv absolute/scaled errors, all8064 rows",
+      "id": "REQ-016",
+      "original_requirement": "Record coordinate absolute and relative errors",
+      "original_verification": "Complete coordinate evidence",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "native/initial_audit.json and initial CSV rows/vector hash",
+      "id": "REQ-017",
+      "original_requirement": "Examine initialization",
+      "original_verification": "Bound vector/hash and derivatives",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "native/intermediate_audit.json; reproduction intermediate_index1000",
+      "id": "REQ-018",
+      "original_requirement": "Examine predefined intermediate iterate",
+      "original_verification": "Bound vector/hash and derivatives",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "native/endpoint_audit.json; exact history reproduction and recovered vector hash",
+      "id": "REQ-019",
+      "original_requirement": "Examine preserved failing endpoint",
+      "original_verification": "Bound vector/hash and derivatives",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "block_summary.json; CSV block mapping and four audited blocks",
+      "id": "REQ-020",
+      "original_requirement": "Audit recurrent, history-input, context and readout weights",
+      "original_verification": "Parameter-block mapping and summaries",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "NUMERICAL_AUDIT.md; frozen_sources/frozen_offset.py; independent_ad.py fixed offset",
+      "id": "REQ-021",
+      "original_requirement": "Examine intercept/offset contribution without introducing fitted parameters",
+      "original_verification": "Frozen offset/context-intercept audit",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "CSV likelihood_AD + ridge_AD; block_summary.json; zero ridge discrepancy",
+      "id": "REQ-022",
+      "original_requirement": "Examine ridge terms separately",
+      "original_verification": "Independent ridge gradient and objective",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "native/*_audit.json PG/AD_PG; CSV probe bounds; synthetic projection tests",
+      "id": "REQ-023",
+      "original_requirement": "Treat bounds explicitly",
+      "original_verification": "Unconstrained derivative vs projected gradient",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "native/*_audit.json exposure7200/mantissa52; independent objective equality",
+      "id": "REQ-024",
+      "original_requirement": "Treat objective normalization and numerical precision explicitly",
+      "original_verification": "Float64/reference calculations and recorded exposure",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "CSV theta digests repeated across scales; independent objective equality",
+      "id": "REQ-025",
+      "original_requirement": "Every derivative comparison uses identical objective/vector",
+      "original_verification": "Input hashes and loss equality",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "native/decision.json analytical_gradient_validated; AD error maxima",
+      "id": "REQ-026",
+      "original_requirement": "Determine analytical-gradient correctness separately",
+      "original_verification": "Independent derivative agreement/disagreement",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "native/decision.json and full step/order scan, no original-gate substitution",
+      "id": "REQ-027",
+      "original_requirement": "Determine finite-difference reliability separately",
+      "original_verification": "Scale/order/precision evidence",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "native/reproduction.json; independent endpoint AD_PG; original PG gate false",
+      "id": "REQ-028",
+      "original_requirement": "Determine optimizer convergence separately",
+      "original_verification": "Frozen solver/PG outcome; no gradient-based clearance",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "native/decision.json FINITE_DIFFERENCE_INSTABILITY; saved reconstruction",
+      "id": "REQ-029",
+      "original_requirement": "Return one of the five authorized diagnoses",
+      "original_verification": "Explicit D4 decision table; no invented result",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "NUMERICAL_AUDIT.md separate bounded future proposal only",
+      "id": "REQ-030",
+      "original_requirement": "Propose separate minimal repair or bounded optimizer study if indicated",
+      "original_verification": "Proposal only; no execution",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "NUMERICAL_AUDIT.md; CSV; block_summary.json; figures/",
+      "id": "REQ-031",
+      "original_requirement": "Deliver numerical audit and root-cause verdict",
+      "original_verification": "Source-bound report",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "13 independent synthetic +6 saved integrity regressions; preserved failed attempts",
+      "id": "REQ-032",
+      "original_requirement": "Deliver meaningful regression tests",
+      "original_verification": "Non-mirroring synthetic defect/instability tests",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "reproduce.ps1; actual replay receipt (created after sealing)",
+      "id": "REQ-033",
+      "original_requirement": "Deliver one-command PowerShell reproduction",
+      "original_verification": "Actual execution and scope distinction",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "review_final.md final independent review (required before closure)",
+      "id": "REQ-034",
+      "original_requirement": "Obtain independent review",
+      "original_verification": "Final-state review with P0/P1 resolution",
+      "status": "PENDING_FINAL_REVIEW"
+    },
+    {
+      "evidence": "external final Git closure receipt: exact path/blob hashes, origin/test SHA and clean tree",
+      "id": "REQ-035",
+      "original_requirement": "Exact mission commit and verified origin/test readback",
+      "original_verification": "Scoped staging, commit and remote SHA",
+      "status": "PENDING_REMOTE_CLOSURE"
+    },
+    {
+      "evidence": "scope_audit.json; no downstream execution; STOP after verified diagnosis",
+      "id": "REQ-036",
+      "original_requirement": "Stop after diagnosis; preserve all prohibited downstream boundaries",
+      "original_verification": "Negative scope audit",
+      "status": "VERIFIED"
+    }
+  ],
+  "mission": "P12-M4-CONTINUOUS-GRADIENT-DIAG-1",
+  "original_requirement_count": 36,
+  "verified_before_final_review_and_git": 34
+}
