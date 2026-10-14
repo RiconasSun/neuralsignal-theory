@@ -1,0 +1,3 @@
+# Saved package attempt1 retained
+
+complete_results aggregation succeeded:3 candidates,12997 calls,OPTIMIZATION_INCONCLUSIVE. package_results then raised RuntimeError NO_BASELINE_SHRINK after writing initial report/README. Strict spaced-pipe regex matched40 of42 frozen baseline rows:REQ011/017 lack a padding space after the delimiter. Original42 definitions were never absent or modified. Replace parser with delimiter-split stripping outer whitespace, require exact sequential42 IDs. Original source and partial documents retained here; regression covers missing padding. No new optimization/AD/Hessian calls or source/policy amendment. Final report corrects final saved-test count to11 after additional integrity regressions; all earlier31total coverage retained.

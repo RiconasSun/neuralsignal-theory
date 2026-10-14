@@ -1,0 +1,11 @@
+# Independently reviewed bounded-study verdict
+
+Mission P12-M4-CONDITIONING-OPTIMIZER-1. BASE36a4099d0d7473fd21e592f3f2f321a493c46e44. Mode CLOSURE_MODE. **Scientific result OPTIMIZATION_INCONCLUSIVE**. None of exactly3 fixed candidate endpoints reaches original PG<=0.001. At leastone validated endpoint is required for OPTIMIZER_FEASIBILITY; that predicate is false. No M4PASS or uniform optimizer policy justified.
+
+A PG0.1996683665448682; B0.056130991976716546; C0.02420564584739622. All finite/bounds/independent AD/objective/transform checks pass; all original fixedFDchecker failures separately retained. Total12997/24500methodcalls,originaliterationcaps5000/5000/1500 reached,300Bwarmsteps included. No replacements,restarts,budget expansions or retrospective failure clearance. Four native phases complete with fresh zero-capability/exit0/cleanup0 proof.
+
+Engineering bug_count0,warn_count0; unresolved shrink risk0; omittedrequirements0; unapproved removals0; test reductions0; temporary substitutes0. Pretrial evidence-integrity defects and saved report whitespace parser defect resolved with regression coverage and preserved unsuccessful evidence; no mathematical or optimizer-policy repair after trials.31 tests and one-command saved reproduction pass; no new real fit or neural access. All361 final-public hashes independently reviewed; all18393 historical working files preserved except explicit newstatus prefix with exactold suffix.
+
+42-item contract,41 verified after actual reproduction and final independent review P0=0/P1=0. FinalREQ039 requires exact scoped Gitcommit/normalorigin-testpush/remoteSHAs/blob hashes/clean gate. closure_contract.md defines external append-only final receipt so commitself-hash is not fabricated. Final archival closure may verify42/42 while the scientific feasibility gate remains inconclusive. Latest mission instruction explicitly says if none succeeds STOP withOPTIMIZATION_INCONCLUSIVE; this outcome is never relabeled scientific PASS.
+
+No winning policy proposed. Remaining scientific recovery prerequisite is absent; do not run firstmouse216fits/cohort/M5/M6/M7/nulls/final. STOP after archival closure. Further numerical study requires separate authorization; no additional candidate or budget is authorized here.

@@ -1,0 +1,124 @@
+{
+  "AD_gradient_scaled_error_max": 1e-05,
+  "AD_objective_abs_error_max": 1e-10,
+  "PG_max": 0.001,
+  "S_formula_unchanged": true,
+  "S_sha256": "43b6d95bdbedbd685f1606b3b46a59f5f516e60a498d6a27b5e87282e1e3ce46",
+  "all_historical_failures_immutable": true,
+  "base": "36a4099d0d7473fd21e592f3f2f321a493c46e44",
+  "candidates": [
+    {
+      "coordinate_scale": "audit_fixed_S",
+      "hessian_approximation": "limited_memory_bfgs",
+      "id": "A",
+      "initial_state": "saved_failing_endpoint",
+      "kind": "lbfgsb",
+      "objective_gradient_call_cap": 10000,
+      "options": {
+        "ftol": 1e-14,
+        "gtol": 1e-10,
+        "maxcor": 20,
+        "maxfun": 10000,
+        "maxiter": 5000,
+        "maxls": 40
+      }
+    },
+    {
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "coordinate_scale": "audit_fixed_S",
+      "epsilon": 1e-08,
+      "hessian_approximation": "limited_memory_bfgs",
+      "id": "B",
+      "initial_state": "saved_failing_endpoint",
+      "kind": "adam_lbfgsb",
+      "objective_gradient_call_cap": 10000,
+      "options": {
+        "ftol": 1e-14,
+        "gtol": 1e-10,
+        "maxcor": 20,
+        "maxfun": 9400,
+        "maxiter": 5000,
+        "maxls": 40
+      },
+      "warm_final_state_only": true,
+      "warm_objective_gradient_calls": 600,
+      "warm_projection": "original_box_via_scaled_coordinates",
+      "warm_schedule": [
+        [
+          100,
+          0.01
+        ],
+        [
+          200,
+          0.003
+        ],
+        [
+          300,
+          0.001
+        ]
+      ],
+      "warm_steps": 300
+    },
+    {
+      "bounds_keep_feasible": true,
+      "coordinate_scale": "audit_fixed_S",
+      "hessian_approximation": {
+        "class": "BFGS",
+        "exception_strategy": "skip_update",
+        "init_scale": "auto",
+        "min_curvature": 1e-08
+      },
+      "id": "C",
+      "initial_state": "saved_failing_endpoint",
+      "kind": "trust_constr",
+      "objective_gradient_call_cap": 4500,
+      "options": {
+        "barrier_tol": 1e-10,
+        "factorization_method": "AugmentedSystem",
+        "gtol": 1e-09,
+        "initial_barrier_parameter": 0.1,
+        "initial_barrier_tolerance": 0.1,
+        "initial_constr_penalty": 1.0,
+        "initial_tr_radius": 1.0,
+        "maxiter": 1500,
+        "sparse_jacobian": true,
+        "verbose": 0,
+        "xtol": 1e-12
+      }
+    }
+  ],
+  "coordinate_roundtrip_abs_max": 1e-12,
+  "endpoint_independent_AD_checks_per_candidate": 1,
+  "endpoint_production_objective_checks_per_candidate": 3,
+  "execute_all_three_even_if_earlier_pass": true,
+  "execution_order": [
+    "A",
+    "B",
+    "C"
+  ],
+  "feasibility_rule": "original physical PG and independent AD PG <=.001 AND finite,bounds,objective,gradient,transform checks",
+  "historical_checker_forward_losses_per_candidate": 29,
+  "historical_checker_is_not_replaced_for_M4": true,
+  "initial_theta_sha256": "2d61b04db53dfdcc1dd49c1131fa810b84a0b8725d8db87105cc3d8095e3876f",
+  "mission": "P12-M4-CONDITIONING-OPTIMIZER-1",
+  "native_wall_seconds_per_phase": 43200,
+  "no_final_access": true,
+  "no_restarts_or_replacements": true,
+  "no_validation_scores": true,
+  "phase": "trials",
+  "physical_bounds": [
+    -8,
+    8
+  ],
+  "target": {
+    "dimension": 4,
+    "family": "Continuous",
+    "mouse_id": "744912849",
+    "region": "CA1",
+    "ridge": 0.001,
+    "seed": 11,
+    "session_id": "766640955"
+  },
+  "total_objective_gradient_call_cap": 24500
+}

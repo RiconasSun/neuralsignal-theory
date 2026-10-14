@@ -1,0 +1,302 @@
+{
+  "baseline_requirement_count": 42,
+  "definitions_identical": true,
+  "items": [
+    {
+      "evidence": "baseline_registration.json; initial clean HEAD and remote readback",
+      "id": "REQ-001",
+      "oracle": "HEAD/fetch/remote/readback",
+      "requirement": "Exact user BASE and clean initial tree",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "goldenstandards.md; baseline_registration.json timestamp/hash",
+      "id": "REQ-002",
+      "oracle": "Registration timestamp/hash before code experiments",
+      "requirement": "Prospective populated atomic baseline",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "prior_git_manifest.json; preservation_audit.json; original_daily_operations.md",
+      "id": "REQ-003",
+      "oracle": "Full prior hash audit; old daily bytes preserved",
+      "requirement": "Preserve all old artifacts and failures",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "native role_proof/input_binding + all four launch receipts",
+      "id": "REQ-004",
+      "oracle": "Native zero-capability role proof and A input bindings",
+      "requirement": "Synthetic and Development Training A only",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "audit_protocol target; saved_vectors.json; all endpoint384 coordinate vectors",
+      "id": "REQ-005",
+      "oracle": "Target384 identity and exact objective data/source hashes",
+      "requirement": "One frozen CA1 Continuous d4/ridge.001/seed11 configuration",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "execution_registration code/offset hashes; endpoint bounds/objective checks",
+      "id": "REQ-006",
+      "oracle": "Original source/artifact hashes and physical-domain checks",
+      "requirement": "Frozen bounds[-8,8],offset,architecture,likelihood,ridge",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "input_binding M3/offset_refits0; immutable mathematical sources",
+      "id": "REQ-007",
+      "oracle": "Execution/source audit counts0",
+      "requirement": "No M2/M3/offset rerun",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "native A-only manifest; input_binding validation/finalfalse",
+      "id": "REQ-008",
+      "oracle": "Native only-A manifest, negative scope audit",
+      "requirement": "No validation-score or final-data tuning/access",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "audit launch receipt timestamp before trial_registration and A/B/C registrations",
+      "id": "REQ-009",
+      "oracle": "Audit completion receipt precedes trial registration",
+      "requirement": "Stage1 before new real optimization",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "saved_trajectories.csv; saved_trajectory_audit.json all2230/2000",
+      "id": "REQ-010",
+      "oracle": "All2230 call/2000 accepted history, explicit saved-gradient limits",
+      "requirement": "Analyze saved objective/gradient trajectories",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "conditioning_audit stages/block norm and PG tables",
+      "id": "REQ-011",
+      "oracle": "3 saved vectors/full384 coordinate block norms",
+      "requirement": "Estimate blockwise gradient scales",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "curvature_1e-07/1e-08.json diagonals; endpoint blocks",
+      "id": "REQ-012",
+      "oracle": "Preregistered Hessian/diagonal/block perturbation evidence",
+      "requirement": "Estimate local block curvature",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "conditioning_audit endpoint_PG_dominant_block past_count coordinate61",
+      "id": "REQ-013",
+      "oracle": "Original physical/projected gradient coordinate attribution",
+      "requirement": "Identify endpoint PG-dominating block",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "test_conditioning exact indefinite/ill-conditioned quadratic + recurrent Hessian tests",
+      "id": "REQ-014",
+      "oracle": "Exact quadratic oracle and recurrent numerical diagnostics",
+      "requirement": "Examine Hessian conditioning on synthetic fixtures",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "native conditioning_audit spectra/asymmetry/disagreement with1536 probes",
+      "id": "REQ-015",
+      "oracle": "Endpoint symmetric Hessian two scales/eigenvalues/stability limits",
+      "requirement": "Examine Hessian conditioning on Training A",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "test_tanh_saturation_stress; deterministic fixture seed20261014",
+      "id": "REQ-016",
+      "oracle": "Deterministic recurrence statistics",
+      "requirement": "Examine tanh saturation on synthetic fixtures",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "conditioning_audit stages initial/intermediate/endpoint tanh statistics",
+      "id": "REQ-017",
+      "oracle": "3 saved vector recurrence stats, no fit",
+      "requirement": "Examine tanh saturation on Training A",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "Coordinates forward/inverse/gradient; synthetic chainrule; endpoint transformobjective",
+      "id": "REQ-018",
+      "oracle": "theta=S*z exact inverse/chain-rule synthetic and real equality",
+      "requirement": "Prove transformation preserves objective",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "Coordinates bounds/canonical endpoints; all native endpoint strictbounds",
+      "id": "REQ-019",
+      "oracle": "Transformed[-8/S,8/S],physical-domain roundtrip",
+      "requirement": "Prove transformation preserves original bounds",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "candidate_protocol.json; trial_registration/source/support before A execution",
+      "id": "REQ-020",
+      "oracle": "Algorithm/initial vectors/options/schedules/budgets hashes",
+      "requirement": "Precisely freeze candidates before real trials",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "A/B/C once-only execution_registration guard; total cap24500; v1 equivalence",
+      "id": "REQ-021",
+      "oracle": "ExactlyA/B/C registered once, immutable attempts ledger",
+      "requirement": "At most3 candidates,no replacement/budget increase",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "A native endpoint/history/protocol; test_exact_registered_A",
+      "id": "REQ-022",
+      "oracle": "Synthetic transformed oracle then exact registered run",
+      "requirement": "Candidate A preconditioned L-BFGS-B",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "B native warm300 schedule/history/protocol; test_exact_registered_B",
+      "id": "REQ-023",
+      "oracle": "Synthetic schedule/bounds oracle then exact registered run",
+      "requirement": "Candidate B fixed first-order warmstart then L-BFGS-B",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "C native trust bounds/BFGS/history/protocol; test_exact_registered_C",
+      "id": "REQ-024",
+      "oracle": "Synthetic correct derivative/bounds test then exact registered run",
+      "requirement": "Candidate C bound-constrained trust region",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "17structural+3exact policy tests; trial_support_registration; independent admission",
+      "id": "REQ-025",
+      "oracle": "All required method/oracle regressions PASS before real candidates",
+      "requirement": "Only synthetically supported methods run",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "all native termination_history/progress/receipts; failed admission/source snapshots",
+      "id": "REQ-026",
+      "oracle": "All call/accepted histories, exception/status/warnings, no hidden restarts",
+      "requirement": "Preserve termination and failed attempts",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "candidate_outcomes.csv; endpoint original PG/full384 gradients; call/iteration ledgers",
+      "id": "REQ-027",
+      "oracle": "Original physical objective and384-coordinate projected norm",
+      "requirement": "Report objective/full PG/iterations/calls each",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "each endpoint analytical_gradient/AD_gradient/error/objective samephysicaltheta",
+      "id": "REQ-028",
+      "oracle": "Same physical vector/objective,abs/scaled error <=1e-5,loss <=1e-10",
+      "requirement": "Independently AD-verify each endpoint",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "each endpoint finite/bounds/transformgradient/objective/roundtrip fields",
+      "id": "REQ-029",
+      "oracle": "Exact endpoints/scalars/roundtrips,finite/domain assertions",
+      "requirement": "Finite score/bound/transform checks each",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "worker feasibility predicate; saved PG/AD reconstruction; test_no_optimizer_success_shortcut",
+      "id": "REQ-030",
+      "oracle": "Physical PG<=.001 AND independent numerical gates",
+      "requirement": "Optimizer success alone cannot pass",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "each endpoint historical_fixed_checker; original oracle SHA unchanged",
+      "id": "REQ-031",
+      "oracle": "Original14-coordinate checker at each endpoint,no retrospective clearance",
+      "requirement": "Historical FD checker remains separately reported",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "candidate_protocol historical_checker_is_not_replaced; original oldFAIL hash audit",
+      "id": "REQ-032",
+      "oracle": "AD here feasibility verification only; historical gate immutable",
+      "requirement": "No unregistered replacement M4 checker",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "study_outcome.json aggregation and saved independent decision reconstruction",
+      "id": "REQ-033",
+      "oracle": "At least1 validated PG<=.001 =>OPTIMIZER_FEASIBILITY,elseOPTIMIZATION_INCONCLUSIVE",
+      "requirement": "Single-config feasibility gate or inconclusive",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "candidate_outcomes.csv contains exactly A/B/C; no early winner stop",
+      "id": "REQ-034",
+      "oracle": "BoundedA/B/C reports and final aggregation",
+      "requirement": "All3 outcomes delivered regardless earlier success",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "termination_history full calls/callback/warm; figures/candidate_trajectories.png",
+      "id": "REQ-035",
+      "oracle": "All saved call/accepted/warm histories and plots",
+      "requirement": "Objective/PG trajectories delivered",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "reproduce.ps1 actual final receipt +17/3/8 tests + saved arithmetic/hash reconstruction",
+      "id": "REQ-036",
+      "oracle": "Synthetic tests+saved source/arithmetic/domain/decision replay",
+      "requirement": "Meaningful reproducibility tests/onecommand",
+      "status": "PENDING_REPRODUCTION"
+    },
+    {
+      "evidence": "NUMERICAL_AUDIT scientific limits/conditional future proposal",
+      "id": "REQ-037",
+      "oracle": "No theorem/globalM4/holdout/winner extrapolation",
+      "requirement": "Scientific limitations and honest conditioning inference",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "Final independent review required",
+      "id": "REQ-038",
+      "oracle": "P0/P1 only, unsuccessful review preserved/resolved within scope",
+      "requirement": "Independent complete final review",
+      "status": "PENDING_FINAL_REVIEW"
+    },
+    {
+      "evidence": "Exact scoped Git/remote/blob/clean closure required",
+      "id": "REQ-039",
+      "oracle": "Exact staging/normal push/remote SHA/blobs/clean gate",
+      "requirement": "Verified scoped origin/test Git commit",
+      "status": "PENDING_REMOTE_CLOSURE"
+    },
+    {
+      "evidence": "study_outcome/input_bindings/source scopeaudit; no M2/M3/fullM4/M5/M6/M7",
+      "id": "REQ-040",
+      "oracle": "Explicit negative scope counts",
+      "requirement": "No full216fit smoke/13mouse/M5/M6/M7/nulls",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "NUMERICAL_AUDIT proposal only if feasible; no automatic promotion/execution",
+      "id": "REQ-041",
+      "oracle": "Separately registered first-mouse smoke proposal,no promotion",
+      "requirement": "If feasible,only propose future uniform policy",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "study_outcome stop_after_bounded_study; no further candidate/mission",
+      "id": "REQ-042",
+      "oracle": "No nextmission or extra candidates",
+      "requirement": "STOP after bounded study",
+      "status": "VERIFIED"
+    }
+  ],
+  "scientific_outcome": "OPTIMIZATION_INCONCLUSIVE",
+  "verified_before_reproduction_review_and_git": 39
+}
