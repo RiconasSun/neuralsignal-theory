@@ -1,0 +1,29 @@
+REAL_TEST_COUNT 7 SKIPPED 0
+test_all_five_lags_independent_all_coordinates_and_exhaustive (test_hybrid_history.HybridHistory.test_all_five_lags_independent_all_coordinates_and_exhaustive) ... ok
+test_all_coefficient_penalty_and_exposure (test_oracle.Oracles.test_all_coefficient_penalty_and_exposure) ... ok
+test_all_coordinates_every_registered_synthetic_case (test_oracle.Oracles.test_all_coordinates_every_registered_synthetic_case) ... ok
+test_continuous_recurrence_and_causality (test_oracle.Oracles.test_continuous_recurrence_and_causality) ... ok
+test_exhaustive_state_forward (test_oracle.Oracles.test_exhaustive_state_forward) ... ok
+test_projected_gradient_bounds (test_oracle.Oracles.test_projected_gradient_bounds) ... ok
+m4_numerical_tests (unittest.loader._FailedTest.m4_numerical_tests) ... ERROR
+
+======================================================================
+ERROR: m4_numerical_tests (unittest.loader._FailedTest.m4_numerical_tests)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: m4_numerical_tests
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\unittest\loader.py", line 419, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\unittest\loader.py", line 362, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_resume1\m4_numerical_tests.py", line 30
+    for family,sizes in (('Discrete',(2,3,4)),('Continuous',(1,2,4)),('Hybrid',(2,3,4)):
+                                                                                       ^
+SyntaxError: invalid syntax
+
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.614s
+
+FAILED (errors=1)

@@ -1,0 +1,69 @@
+import ast
+import importlib.util
+import shutil
+import sys
+import study as r
+from controls import verify,completed
+from prepare import security
+
+def native_run(phase,data,code,hashes,a):
+    spec=importlib.util.spec_from_file_location('registered_native_adapter',r.OFFSET/'launch_phase.py')
+    old=importlib.util.module_from_spec(spec);spec.loader.exec_module(old)
+    tree=ast.parse((r.OFFSET/'launch_phase.py').read_text())
+    fn=next(n for n in tree.body if isinstance(n,ast.FunctionDef) and n.name=='native_run')
+    class Scope(ast.NodeTransformer):
+        def visit_Constant(self,n):
+            if n.value=='Training-only offset ':return ast.copy_location(ast.Constant('Training-only dynamical diagnosis '),n)
+            return n
+    fn=Scope().visit(fn);ns=dict(vars(old));ns['r']=r
+    exec(compile(ast.fix_missing_locations(ast.Module(body=[fn],type_ignores=[])),__file__,'exec'),ns)
+    return ns['native_run'](phase,data,code,hashes,a)
+
+def main():
+    phase=sys.argv[1]
+    if phase not in ('diagnosis','smoke'):raise RuntimeError('UNREGISTERED_PHASE')
+    verify();a=security();reg=r.load(r.HERE/'implementation_registration3.json')
+    for name,digest in reg['sha256'].items():
+        if r.sha(r.HERE/name)!=digest:raise RuntimeError('REGISTERED_CODE_CHANGED')
+    reference=r.load(r.HERE/'original_training_diagnostics.json')
+    prior=r.load(r.HERE/'registration.json')['prior_sha256']['paper12_m4offset1/results/M4/native/comparison_rows.json']
+    if reference['source_sha256']!=prior or reference['validation_fields_exported'] is not False:raise RuntimeError('FROZEN_REFERENCE_SOURCE_REQUIRED')
+    from roster import validate
+    validate(reference['rows'])
+    issuer=r.load(r.HERE/'.private/training_issuer.json');data=r.HERE/'exports/training_A'
+    if r.sha(data/'manifest.json')!=issuer['manifest_sha256']:raise RuntimeError('INPUT_MANIFEST_CHANGED')
+    for s in r.load(data/'manifest.json')['sessions']:
+        if r.sha(data/s['file'])!=s['sha256']:raise RuntimeError('FROZEN_A_INPUT_CHANGED')
+    for name,digest in issuer['runtime_sha256'].items():
+        if r.sha(r.HERE/'exports/runtime'/name)!=digest:raise RuntimeError('RUNTIME_CHANGED')
+    offset=r.load(r.OFFSET/'results/full/native/gate_result.json')
+    oldreceipt=r.load(r.OFFSET/'results/full_launch_receipt.json')
+    oldproof=r.load(r.OFFSET/'results/full/native/role_proof.json')
+    if offset['gate']!='PASS' or offset['completed_fit_count']!=78 or offset['converged_fit_count']!=78 or oldreceipt['exit_code']!=0 or oldreceipt['timed_out'] or not oldreceipt['role_proof_pass'] or oldreceipt['profile_cleanup_hresult']!='0x00000000' or not oldproof['pass'] or oldproof['capability_count']!=0:
+        raise RuntimeError('COMPLETE_FROZEN_OFFSET_PROOF_REQUIRED')
+    state=r.OFFSET/oldreceipt['output_directory']/'offset_states.npz';records=r.OFFSET/'results/full/native/offset_records.json'
+    if r.sha(state)!=offset['state_sha256'] or r.sha(records)!=offset['records_sha256']:raise RuntimeError('FROZEN_OFFSET_HASH')
+    code=r.HERE/'exports'/('code_'+phase);code.mkdir(exist_ok=False)
+    sources={n:r.OFFSET/'exports/M4_code'/n for n in ('model_math.py','predictive_models.py','predictive_models_code1.py','r2_models.py','baseline_features.py','frozen_offset.py','impossibility.py','native_analysis_check.py')}
+    archived=r.load(r.OFFSET/'M4_registration.json')['code_sha256']
+    for n,p in sources.items():
+        if r.sha(p)!=archived[n]:raise RuntimeError('ARCHIVED_MODEL_CODE_CHANGED:'+n)
+    policy=dict(phase=phase,options=r.load(r.HERE/'protocol.json')['original_replay']['options'])
+    bindings=None
+    if phase=='smoke':
+        bindings=completed('diagnosis');amendment=r.load(r.HERE/'optimizer_amendment.json')
+        if amendment['diagnosis_bindings']!=bindings:raise RuntimeError('DIAGNOSIS_BINDINGS_CHANGED')
+        policy['options']=amendment['options']
+        if policy['options']!=dict(ftol=1e-10,gtol=1e-5,maxiter=2000,maxfun=80000):raise RuntimeError('SINGLE_FROZEN_OPTIMIZER_REQUIRED')
+    sources.update({n:r.HERE/n for n in ('worker.py','oracle.py','roster.py','test_oracle.py','test_hybrid_history.py','original_training_diagnostics.json')})
+    for n,p in sources.items():shutil.copy2(p,code/n)
+    shutil.copy2(state,code/'offset_states.npz');shutil.copy2(records,code/'offset_records.json')
+    r.save(code/'offset_bundle.json',dict(state_sha256=offset['state_sha256'],records_sha256=offset['records_sha256']))
+    r.save(code/'worker_policy.json',policy);a.protect(code)
+    hashes={p.name:r.sha(p) for p in code.iterdir() if p.is_file()}
+    r.save(r.HERE/f'{phase}_execution_registration.json',dict(utc=r.datetime.now(r.timezone.utc).isoformat(),before_real_fits=True,
+        code_sha256=hashes,A_manifest_sha256=issuer['manifest_sha256'],runtime_sha256=issuer['runtime_sha256'],
+        preceding_bindings=bindings,controller_sha256=r.sha(__file__),validation_access=False,final_access=False))
+    native_run(phase,data,code,hashes,a)
+
+if __name__=='__main__':main()

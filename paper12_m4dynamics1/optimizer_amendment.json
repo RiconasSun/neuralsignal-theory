@@ -1,0 +1,31 @@
+{
+  "before_new_fits": true,
+  "diagnosis_bindings": {
+    "gate": "ef08d4f55cccd2333060c1f3800da907e239e03a1262460dc2fc32dd3dad3de0",
+    "oracles": "2520413b4e68f49cedaae680aa7ccba31f0a1e9a0ad3cea157b10ea13e2a6dd5",
+    "proof": "bf01f80fc355c351db213503816baf3d067fa14922abb61053394365b4a87324",
+    "receipt": "caefdc7eb245591f3508647f16f4569f49af268cc190acb6d1e816384f682c1c",
+    "summary": "9365aa670c9d76e24678bd8f280411be20e5974450ee3d7ed6ffc7f8842f926a"
+  },
+  "implementation": "Original objective and architecture unchanged; worker passes explicitly registered solver options",
+  "no_offset_refits": true,
+  "no_validation_guidance": true,
+  "options": {
+    "ftol": 1e-10,
+    "gtol": 1e-05,
+    "maxfun": 80000,
+    "maxiter": 2000
+  },
+  "scope": "Dynamical-model optimizer only",
+  "unchanged": [
+    "PG<=.001",
+    "bounds",
+    "ridge",
+    "all seeds",
+    "model mathematics",
+    "shared offset weights",
+    "data/splits",
+    "one-SE rules"
+  ],
+  "utc": "2026-10-13T20:32:03.697422+00:00"
+}

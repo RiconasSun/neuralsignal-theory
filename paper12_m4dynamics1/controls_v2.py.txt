@@ -1,0 +1,24 @@
+import study as r
+
+def verify():
+    original=r.load(r.HERE/'registration.json');repair=r.load(r.HERE/'harness_repair_registration.json')
+    old=r.HERE/'oracle_v1.py.txt';new=r.HERE/'oracle.py'
+    needle=b"('Hybrid',(2,3,4)):\n";replacement=b"('Hybrid',(2,3,4))):\n"
+    if old.read_bytes().count(needle)!=1 or old.read_bytes().replace(needle,replacement,1)!=new.read_bytes():raise RuntimeError('EXACT_PARENTHESES_REPAIR_REQUIRED')
+    for name,digest in original['prior_sha256'].items():
+        if r.sha(r.ROOT/name)!=digest:raise RuntimeError('HISTORICAL_BYTES_CHANGED:'+name)
+    for name,digest in original['implementation_sha256'].items():
+        expected=repair['sha256']['oracle.py'] if name=='paper12_m4dynamics1/oracle.py' else digest
+        if r.sha(r.ROOT/name)!=expected:raise RuntimeError('DIAGNOSTIC_CODE_CHANGED:'+name)
+    for name,digest in repair['sha256'].items():
+        if r.sha(r.HERE/name)!=digest:raise RuntimeError('REPAIR_BINDING_CHANGED')
+    return original
+
+def completed(phase,require_pass=True):
+    root=r.HERE/f'results/{phase}/native';gate=r.load(root/'gate_result.json');receipt=r.load(r.HERE/f'results/{phase}_launch_receipt.json')
+    proof=r.load(root/'role_proof.json');oracles=r.load(root/'oracle_tests.json')
+    expected_exit=0 if gate['gate']=='PASS' else 2
+    if receipt['exit_code']!=expected_exit or receipt['timed_out'] or receipt['profile_cleanup_hresult']!='0x00000000' or not receipt['role_proof_pass'] or not proof['pass'] or proof['capability_count']!=0 or oracles['count']!=6 or not oracles['passed']:
+        raise RuntimeError('COMPLETE_NATIVE_PROOF_REQUIRED')
+    if require_pass and gate['gate']!='PASS':raise RuntimeError('PRECEDING_GATE_FAILED')
+    return {n:r.sha(p) for n,p in dict(gate=root/'gate_result.json',receipt=r.HERE/f'results/{phase}_launch_receipt.json',proof=root/'role_proof.json',oracles=root/'oracle_tests.json',summary=root/'summary.json').items()}

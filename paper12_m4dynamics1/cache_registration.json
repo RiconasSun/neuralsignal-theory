@@ -1,0 +1,12 @@
+{
+  "before_testing": true,
+  "criteria": "Exactly equal integer-factorial/PMF values for counts 0..10000; exact fixture likelihoods and identical independent oracle bytecode; all original checks retained",
+  "rationale": "Independent oracle factorial evaluation dominates replay cost; constant integer factorial cache only, no optimizer or model change",
+  "scope": "Only a future prospectively registered phase; active original-budget replay source unchanged",
+  "sha256": {
+    "check_cache.py": "ec6407b15e063688ff4934d0e58609a6c5a40308be7b40632e2627e23d9d8f49",
+    "oracle.py": "ae75b79f1995f3bab06d1972b0d09c7584863d1868beffbf3fafcd062eb1d012",
+    "oracle_cached.py": "79ac2775334673a703e1346c6cd55c94320cd458b6363f7fe530b7af66c3f95f"
+  },
+  "utc": "2026-10-13T19:48:41.533429+00:00"
+}

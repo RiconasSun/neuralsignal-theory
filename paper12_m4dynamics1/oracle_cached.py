@@ -1,0 +1,22 @@
+"""Same independent oracle bytecode; cache integer factorial terms, not data."""
+import math
+import types
+import numpy as np
+import oracle_original as original
+
+_factorials={}
+
+def pmf(y,eta):
+    maximum=int(np.max(y))
+    if maximum>1000000:return original.pmf(y,eta)
+    if maximum not in _factorials:
+        _factorials[maximum]=np.array([math.lgamma(float(v)+1) for v in range(maximum+1)])
+    factorial=_factorials[maximum][y.astype(np.int64)]
+    return y*eta-np.exp(eta)-factorial
+
+namespace=dict(vars(original));namespace['pmf']=pmf
+for name in ('state_parts','scalar_ll','scalar_objective','check_gradient'):
+    fn=getattr(original,name)
+    namespace[name]=types.FunctionType(fn.__code__,namespace,fn.__name__,fn.__defaults__,fn.__closure__)
+globals().update({name:namespace[name] for name in ('state_parts','scalar_ll','scalar_objective','check_gradient')})
+synthetic_cases=original.synthetic_cases

@@ -1,0 +1,27 @@
+import os
+import subprocess
+import sys
+import study as r
+
+def main():
+    out=r.HERE/'results/synthetic';out.mkdir(parents=True,exist_ok=True)
+    sources=[r.HERE/'oracle.py',r.HERE/'test_oracle.py',r.HERE/'test_hybrid_history.py',r.PREVIOUS/'model_math.py',r.ROOT/'paper12_m4harness1/patched/m4_numerical_tests.py']
+    r.save(out/'registration.json',dict(utc=r.datetime.now(r.timezone.utc).isoformat(),before_testing=True,sha256={p.relative_to(r.ROOT).as_posix():r.sha(p) for p in sources}))
+    runner="import sys,unittest;sys.path[:0]=sys.argv[1:];a=unittest.TestLoader().discover(sys.argv[1],pattern='test_*.py');b=unittest.TestLoader().discover(sys.argv[3],pattern='m4_numerical_tests.py');r=unittest.TextTestRunner(verbosity=2).run(unittest.TestSuite([a,b]));print('REAL_TEST_COUNT',r.testsRun,'SKIPPED',len(r.skipped));sys.exit(not(r.wasSuccessful() and r.testsRun==11 and len(r.skipped)==0))"
+    env=dict(os.environ,OPENBLAS_NUM_THREADS='1',OMP_NUM_THREADS='1')
+    result=subprocess.run([sys.executable,'-c',runner,str(r.HERE),str(r.PREVIOUS),str(r.ROOT/'paper12_m4harness1/patched')],capture_output=True,text=True,env=env)
+    (out/'tests.log').write_text(result.stdout+result.stderr,encoding='utf-8')
+    sys.path[:0]=[str(r.HERE),str(r.PREVIOUS)]
+    from oracle import synthetic_cases,check_gradient,scalar_ll
+    rows=[]
+    for f,k,ridge,seed,model,t in synthetic_cases():
+        check=check_gradient(t,model,ridge,f,k,range(len(t)))
+        error=abs(model.score(t)-scalar_ll(t,f,model.y,model.x if f=='Continuous' else __import__('numpy').empty(model.y.shape[:2]+(0,)),model.offset,k,f!='Continuous'))
+        rows.append(dict(family=f,size=k,ridge=ridge,seed=seed,forward_error=error,**check))
+    r.save(out/'errors.json',dict(rows=rows,all_coordinate_cases=108,coverage_extra_cases=36,all_passed=all(z['passed'] and z['forward_error']<=1e-10 for z in rows)))
+    passed=result.returncode==0 and all(z['passed'] for z in rows)
+    r.save(out/'gate_result.json',dict(gate='PASS' if passed else 'FAIL',exit_code=result.returncode,tests_run=11 if result.returncode==0 else None,log_sha256=r.sha(out/'tests.log'),errors_sha256=r.sha(out/'errors.json'),synthetic_only=True))
+    print(result.stdout+result.stderr)
+    if not passed:raise SystemExit(2)
+
+if __name__=='__main__':main()

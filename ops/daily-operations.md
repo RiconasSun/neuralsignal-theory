@@ -1,3 +1,7 @@
+# Current mission: P12-M4-DYNAMICS-NUMERICAL-RECOVERY-1-CLOSEOUT
+
+Stopped-evidence closeout candidate prepared from e635724f. Predecessor scientific FAIL/NUMERICAL_INCONCLUSIVE unchanged. Smoke 61 attempted/completed,59 converged,2 nonconverged,155 unexecuted,0 evidenced interrupted fits; native completed exit2/no timeout/rolePASS/cleanup0. Endpoint scalar diagnostics saved; theta vector not published. Saved-only closeout, no fits or gradient experiments. Stage A terminal PASS requires reviewed exact origin/test commit, remote/hash/clean-tree proof; Stage B only after that gate, using the exact closeout SHA. Evidence: ops/evidence/2026-10-13/p12-m4-dynamics-numerical-recovery-1-closeout and paper12_m4dynamics1/CLOSEOUT.md. Previous status bytes follow unchanged.
+---
 # Current mission: P12-M4-OFFSET-NUMERICAL-RECOVERY-1
 
 StatusWAIT_FOR_HUMAN_INPUT. Separate offset-only numerical recoveryPASS78/78; original failures unchanged. M3 1638 fits reused,0 rerun. M4 numeric/control checksPASS8/8.

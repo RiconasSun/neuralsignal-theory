@@ -1,0 +1,25 @@
+{
+  "mission": "P12-M4-DYNAMICS-NUMERICAL-RECOVERY-1",
+  "base": "e635724f2aae45b7fdf30edb5902beaab425b8e2",
+  "scope": "Prospective family-specific development-training-A numerical diagnosis, conditional fixed optimizer amendment and scientific continuation only after gates",
+  "original_replay": {"fits":216,"regions":["CA1","DG"],"seeds":[11,23,37],"families":{"Discrete":[2,3,4],"Continuous":[1,2,4],"Hybrid":[2,3,4]},"ridges":[0.001,0.01,0.1,1.0],"options":{"ftol":0.00001,"gtol":0.00001,"maxiter":500,"maxfun":20000}},
+  "numerical_checks": {
+    "synthetic": "Every coordinate at all three seed initializations for every family/size/ridge on a fixed 2-trial, 4-bin, 2-unit fixture; independent scalar forward/recurrence and exhaustive state enumeration",
+    "real": "All 216 training-only original-budget replays. Finite differences at initial and terminal vectors on 12 fixed SHA-seeded coordinates plus first/last coordinate; all seeds/configurations/regions mandatory",
+    "finite_difference_step":0.00001,
+    "gradient_scaled_error_limit":0.00001,
+    "forward_absolute_error_limit":0.0000000001,
+    "penalty":"All dynamical coefficients penalized; negative full log-likelihood divided by trial-times-bin exposure, not unit-bin count; unchanged frozen definitions",
+    "projection":"Bounds [-8,8]; zero outward descent at active lower/upper bounds, retain inward descent",
+    "conditioning":"Training-only context/history ranges and singular values, initial and terminal gradients, objective and accepted-iteration histories, bound hits; no validation scores",
+    "synthetic_seed":20261013,
+    "representative_coordinate_seed":20261013
+  },
+  "conditional_amendment":{"ftol":0.0000000001,"gtol":0.00001,"maxiter":2000,"maxfun":80000,"requires":"All independent checks PASS and original replay supports premature relative-objective stopping. Must be independently registered before new fits"},
+  "convergence":{"projected_gradient_max":0.001,"optimizer_success_required":true,"finite_required":true,"bounds":[-8,8]},
+  "first_mouse_gate":"All 216 attempts retained. Require at least one unchanged all-seed/both-region eligible configuration per family before full cohort; failures never pruned or treated as converged",
+  "custody":"Existing isolated zero-capability native analysis AppContainer. Training A only for diagnosis and amendment smoke; existing frozen offsets reused without fitting. B permitted only after registered training-only numerical gate PASS for unchanged scientific competition. Final mice/evaluation always inaccessible",
+  "stop_conditions":["Mathematical implementation defect: STOP, separate authorization required","Any mandatory independent numerical check fails: STOP","Amended first-mouse numerical gate fails: STOP NUMERICAL_INCONCLUSIVE, no further automatic optimizer changes","Any isolation/leakage or subsequent scientific gate fails: STOP"],
+  "preservation":["No M2 extraction","No M3 fitting","No offset fitting","No P1-P11 changes","No historical gate changes","No final access","No validation-guided optimizer tuning","All seeds retained","57 configurations and one-SE selection unchanged"],
+  "reproduction":"Saved-results replay and synthetic numerical checks; not claimed to reproduce unexecuted fits, null tests or final evaluation"
+}
