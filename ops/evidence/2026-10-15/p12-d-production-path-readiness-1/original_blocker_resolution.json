@@ -1,0 +1,44 @@
+{
+  "all_three_REAL_operational_blockers_cleared": false,
+  "historical_bug_count": 3,
+  "historical_failures_reclassified": false,
+  "historical_record": "ops/evidence/2026-10-14/p12-predictive-v2-final-d-oneshot/HANDOFF.json",
+  "historical_record_unchanged": true,
+  "historical_warn_count": 3,
+  "rows": [
+    {
+      "REAL_execution": "NOT_AUTHORIZED_OR_EXECUTED",
+      "blocker": "P1-01_MISSING_FROZEN_REAL_D_CUSTODIAN_PRODUCER",
+      "engineering_resolution": "Implemented, source-frozen and exercised actual production producer on full SYN fixture",
+      "evidence": [
+        "source_freeze_r5.json",
+        "synthetic_2_integrity/delivery_manifest.json",
+        "saved_reproduction_final.log"
+      ],
+      "implementation": "paper12_production1/custodian_producer.py"
+    },
+    {
+      "REAL_execution": "NOT_AUTHORIZED_OR_EXECUTED",
+      "blocker": "P1-02_MISSING_FROZEN_REAL_D_SCIENTIFIC_EVALUATOR",
+      "engineering_resolution": "Implemented actual frozen-math evaluator; full13mouse restricted native SYN route and all controls/statistics/report reproduced",
+      "evidence": [
+        "source_freeze_r5.json",
+        "synthetic_summary.json",
+        "saved_reproduction_final.log"
+      ],
+      "implementation": "paper12_production1/scientific_evaluator.py"
+    },
+    {
+      "blocker": "P1-03_DESIGNATED_REAL_D_AUTHORITY_SIGNATURE_UNVERIFIED",
+      "engineering_resolution": "Owner explicitly designated; public-only onboarding/verifier and fail-closed entrypoints implemented and SYN-tested",
+      "evidence": [
+        "owner_human_reply.txt",
+        "owner_designation.json",
+        "authority_blocker.md",
+        "paper12_production1/AUTHORITY_ONBOARDING.md"
+      ],
+      "operational_resolution": "AUTHORITY_PENDING",
+      "remaining": "Owner public key/fingerprint and independent ceremony/protected receipt not supplied; no REAL signature may be issued in mission"
+    }
+  ]
+}

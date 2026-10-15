@@ -1,3 +1,19 @@
+## Current mission: P12-D-PRODUCTION-PATH-READINESS-1
+
+State: WAIT_FOR_HUMAN_INPUT / AUTHORITY_PENDING after completed engineering-only handoff.
+BASE 76b19508a5a0728e500ff2e5f9c959309fbf967e; production source freeze r5 c586b016071c0e4c15e81e46323fd510ff096ad3a2b7046c1c48acebe5b59d07.
+ENGINEERING_IMPLEMENTATION_VERIFIED=TRUE; SYNTHETIC_PATH_VERIFIED=TRUE; PRODUCTION_PATH_READY=FALSE.
+Full actual Windows SYN route:13mice/208cases/104x999 controls/10000bootstrap;20focused+29native+8producer+5report tests; saved-only reproduction PASS.
+Native target/controller exit0 and cleanup0x00000000; all original scientific/model/threshold/partition definitions unchanged.
+All4 synthetic contrasts NOT VALIDATED / MIXED; fixture outputs do not constitute biological/final scientific validation.
+Owner explicitly designated; public-key/independent fingerprint ceremony and protected provisioning remain outstanding. No private key requested.
+REAL_D_AUTHORITY_PROVISIONED=FALSE; REAL_D_SIGNATURE_ISSUED=FALSE; D_RELEASE_CONSUMED=FALSE; D_EVALUATION_EXECUTED=FALSE; SCIENTIFIC_VALIDATION_PASS=FALSE.
+Complete1862-file real C seal unchanged; no raw real C/D count reads or new fits. Prior STOP/3P1/M4 evidence remains immutable below.
+Independent engineering/security and scientific reviews accept synthetic engineering archive only / HOLD_REAL_D. Current bug_count0/warn_count1 authority pending; historical counts unchanged.
+Evidence: evidence/2026-10-15/p12-d-production-path-readiness-1/HANDOFF.md. Actual origin/test commit/readback/clean are certified only by external closure receipts.
+Saved-only PowerShell: & ./ops/evidence/2026-10-15/p12-d-production-path-readiness-1/reproduce-all-saved.ps1.
+STOP after archival handoff. Next: owner-controlled PUBLIC-key verification bundle, then separately reviewed provisioning and separate explicit REAL signature/final-validation authorization. No D operation now.
+
 ## Current mission: P12-PREDICTIVE-V2-FINAL-D-ONESHOT
 
 State: WAIT_FOR_HUMAN_INPUT after critical prereleaseSTOP; archival Git proof is external.

@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_production1\run_synthetic.py", line 169, in <module>
+    if __name__=='__main__':main(__import__('sys').argv[1])
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_production1\run_synthetic.py", line 79, in main
+    for name in NAMES+EXTRA:fixture(data,name,artifacts,manifest,principal,controller.package,pub,key)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_production1\run_synthetic.py", line 29, in fixture
+    (ledger/'writer.lock').write_bytes(b'PREINITIALIZED_NATIVE_LOCK');ident=uuid.uuid4().hex()
+                                                                            ^^^^^^^^^^^^^^^^^^
+TypeError: 'str' object is not callable
