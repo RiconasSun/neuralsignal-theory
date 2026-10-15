@@ -1,0 +1,7 @@
+# Frozen C-only continuation
+
+Mission P12-FINAL-PRERELEASE-CONTROLS-1; explicit human authorization for exactly one E4 attempt. Original67 requirements remain unchanged; REQ-054–057 are the four previously blocked C execution/sealing items. Current verified repository base2597bb8d71dd4c4454412181fe522727e7ed4c0d; original mission basecbf3ef5b69c2fe8ba6720d32eb5a031194dcd74f. All92 source identities match snapshotdc48694e8c42843bc8923660d38dc5cc816eff9b2ebefe9bd2f6b36c33ef13d7. No implementation changes, new scientific policy, retry, D authorization/release/evaluation. Execute existing arm_C/main real_C path once after the documented gate checks; stop any required gate failure. Only all-gate PASS permits complete C sealing. Preserve every prior evidence file and review. Post-execution independent reviews, saved-only reproduction, exact staging, normal origin/test push/readback and clean gate required.
+
+## Observed required-gate failure and scope
+
+Native C numerical fitting passed; required host state sealing failed with ModuleNotFoundError selection. STOP/no repair/no retry was enforced. Archive-only closure is required; REQ-027 and REQ-057 remain human-blocked, not omitted. Current engineering/full-C gates do not PASS. The original frozen67-item baseline and all92source identities remain unchanged. New reproduction tooling verifies saved failure evidence only; the preparatory private-state verification mode was never executed and is excluded from the final stopped-run reproducer.

@@ -1,3 +1,21 @@
+## Current mission: P12-FINAL-PRERELEASE-CONTROLS-1 C-only continuation
+
+State: WAIT_FOR_HUMAN_INPUT. Explicitly approved frozen C-only run executed once.
+Continuation base:2597bb8d71dd4c4454412181fe522727e7ed4c0d.
+Snapshot dc48694e8c42843bc8923660d38dc5cc816eff9b2ebefe9bd2f6b36c33ef13d7 unchanged.
+Native numerical gate PASS:13mice/26subfields/290cases/21716GLM+78Nseedfits.
+Maximum originalPG0.0002573605165640388; ADscalederror5.510782802309322e-15.
+Native exit0/cleanup0, all mandatoryviews13mice, no retries.
+Required complete-state seal FAILED: ModuleNotFoundError selection on frozen host path.
+STOP applied: no source repair, import workaround, refit or sealing retry.
+ENGINEERING_CONTROL_PASS=FALSE; REAL_C_NUMERICAL_FITS_PASS=TRUE.
+REAL_C_CALIBRATION_PASS=FALSE; COMPLETE_C_SEAL_PASS=FALSE.
+D_AUTHORIZED=FALSE; D_RELEASE_CONSUMED=FALSE; D_EVALUATION_EXECUTED=FALSE.
+Partial1858files preserved; complete C manifest and sealing receipt absent.
+Future host-packaging/saved-state-only repair needs separate prospective authorization.
+Evidence: evidence/2026-10-14/p12-final-prerelease-controls-1-c-only/HANDOFF.md.
+Do not repair/retry or advance to D in this mission. All previous evidence unchanged below.
+
 ## Current mission: P12-FINAL-PRERELEASE-CONTROLS-1
 
 State: WAIT_FOR_HUMAN_INPUT. Engineering controls E0-E3 PASS; real C unexecuted.
