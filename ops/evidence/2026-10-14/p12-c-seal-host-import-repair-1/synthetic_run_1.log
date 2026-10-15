@@ -1,0 +1,29 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_cseal1\test_saved.py", line 160, in <module>
+    if __name__=='__main__':run_suite()
+                            ^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_cseal1\test_saved.py", line 44, in run_suite
+    execute('retrospective_saved_reconstruction',command(dst=retro))
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_cseal1\test_saved.py", line 40, in execute
+    if not ok: raise AssertionError(name+':'+result.stderr[-1800:])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: retrospective_saved_reconstruction:Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_cseal1\host.py", line 200, in <module>
+    try: main()
+         ^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_cseal1\host.py", line 197, in main
+    new(args.receipt,result); print(json.dumps({'passed':True,'cases':result['cases'],'saved_only':True}))
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_cseal1\host.py", line 25, in new
+    with Path(path).open('xb') as f:
+         ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_cseal1\host.py", line 88, in __call__
+    self.denied.append(str(path)); raise PermissionError('SAVED_ONLY_INPUT_OR_LEDGER_DENIED')
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: SAVED_ONLY_INPUT_OR_LEDGER_DENIED
+

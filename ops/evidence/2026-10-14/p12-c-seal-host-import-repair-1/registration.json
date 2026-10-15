@@ -1,0 +1,53 @@
+{
+  "D_EVALUATION_EXECUTED": false,
+  "D_RELEASE_CONSUMED": false,
+  "base": "6cb50aaaffc1a89b4a6dddadb73e991d37c02448",
+  "before_new_tests": true,
+  "before_product_edits": true,
+  "before_real_saved_state_access": true,
+  "expected_real": {
+    "GLM_fits": 21716,
+    "N_mean_certificates": 26,
+    "N_seed_fits": 78,
+    "cases": 290,
+    "mice": 13,
+    "subfields": 26,
+    "unit_endpoint_certificates": 40104
+  },
+  "failure": "Any missing/corrupt real saved state STOP; namespace remains; no retry/refit. Synthetic failures preserved before fixes.",
+  "mission": "P12-C-SEAL-HOST-IMPORT-REPAIR-1",
+  "original_hashes": {
+    "ops/daily-operations.md": "afe8bebaf23282b629ac8295b3f6a6fb9ab7eac490ade50fdd0aa9898db3fa5a",
+    "ops/evidence/2026-10-14/p12-final-prerelease-controls-1-c-only/partial_seal_inventory.json": "40d3ba26be51685d12c0139d8cf319f19cfcb6267ac9f2c1b3cdac975e77c2b9",
+    "paper12_controls1/implementation_snapshot_v2.json": "dc48694e8c42843bc8923660d38dc5cc816eff9b2ebefe9bd2f6b36c33ef13d7",
+    "paper12_controls1/release_control.py": "d5b5853e10b82e1f7f4d3b64a0c9c7996c0e4be6e44fb60605523bd0e0fc0b6d",
+    "paper12_controls1/results/real_C_execution_exception.json": "a4386603d79111905cf059ff3361aca646bea6cac1397a47e90aee4819f633cf",
+    "paper12_controls1/state_manifest.py": "300690401de5f1f93eb8de7e934be0f075e20cb4ab80a794ab2684eb94cda361",
+    "paper12_predictive_v2/selection.py": "9a36e1c29ca9acc2e6b4e8534489c8730f68d3db313ab8b2fc2b40a1930d9d4e"
+  },
+  "original_snapshot": "dc48694e8c42843bc8923660d38dc5cc816eff9b2ebefe9bd2f6b36c33ef13d7",
+  "roles": {
+    "analysis": "no neural sources or release capability",
+    "custodian": "current trusted Windows host user; not malicious-admin resistant",
+    "host": "version-bound saved-state verifier only"
+  },
+  "security_limitations": "Trusted custodian can administer host; no claim of malicious administrator resistance. New host audit denies inputs, keys, D, ledger and optimization; original independent AppContainer evidence remains historical.",
+  "state_machine": [
+    "REGISTERED",
+    "HOST_SOURCE_FROZEN",
+    "SYNTHETIC_PASS",
+    "INDEPENDENT_GATE_APPROVED",
+    "REAL_NAMESPACE_RESERVED",
+    "COPIED_HASH_VERIFIED",
+    "MANIFEST_VALIDATED",
+    "SEALED"
+  ],
+  "utc": "2026-10-15T04:36:34.949704+00:00",
+  "write_allowlist": [
+    "paper12_cseal1/**",
+    "ops/evidence/2026-10-14/p12-c-seal-host-import-repair-1/**",
+    "paper12_controls1/release_control.py dependency import block only",
+    "paper12_controls1/selection_dependency.py",
+    "ops/daily-operations.md append-prefix only"
+  ]
+}

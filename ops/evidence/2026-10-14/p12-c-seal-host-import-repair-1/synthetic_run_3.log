@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_cseal1\test_saved.py", line 165, in <module>
+    if __name__=='__main__':run_suite()
+                            ^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_cseal1\test_saved.py", line 120, in run_suite
+    public_raw=public_inventory.read_bytes();public_inventory.write_bytes(public_raw+b' ')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1050, in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper12_cseal1\\jobs\\synthetic_1792039355444838500\\isolated_repo\\ops\\evidence\\2026-10-14\\p12-final-prerelease-controls-1-c-only\\partial_seal_inventory.json'

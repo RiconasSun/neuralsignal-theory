@@ -1,3 +1,17 @@
+## Current mission: P12-C-SEAL-HOST-IMPORT-REPAIR-1
+
+C-only saved-state recovery and final independent reviews complete; exact Git closure is bound by the external receipt.
+BASE6cb50aaaffc1a89b4a6dddadb73e991d37c02448. Dependency-only package import repair,41/41saved-synthetic tests PASS.
+Both independent gate reviews approved before the single saved-real recovery attempt.
+Original1858partial files byte-identical; separate1862-file complete protected seal verified.
+13mice/26subfields/290cases/21716originalGLM+78Nseedfits/26Nmeans/40104endpointcertificates.
+ENGINEERING_CONTROL_PASS=TRUE; REAL_C_NUMERICAL_FITS_PASS=TRUE; COMPLETE_C_SEAL_PASS=TRUE; REAL_C_CALIBRATION_PASS=TRUE.
+NewrealCfits=0; rawC/Darrayreads=0; ledgeropens=0. D_RELEASE_CONSUMED=FALSE; D_EVALUATION_EXECUTED=FALSE.
+OriginalPG/AD/QC/coverage/source/model hashes unchanged; all historical failures remain immutable below.
+Evidence: evidence/2026-10-14/p12-c-seal-host-import-repair-1/HANDOFF.md.
+Saved-only PowerShell: & .\paper12_cseal1\reproduce.ps1. External Git receipt supplies exact remote/readback/clean gate.
+STOP after reviewed archival origin/test handoff. No D authority or evaluation; no new model fitting or rescue.
+
 ## Current mission: P12-FINAL-PRERELEASE-CONTROLS-1 C-only continuation
 
 State: WAIT_FOR_HUMAN_INPUT. Explicitly approved frozen C-only run executed once.

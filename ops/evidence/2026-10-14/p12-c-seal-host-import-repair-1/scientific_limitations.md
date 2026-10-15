@@ -1,0 +1,7 @@
+# Limits of the recovered seal
+
+This mission evaluates storage/import integrity and preserved numerical evidence only. It contains no new fitting, gradient experiment, predictive score or held-out-animal assessment. REAL_C_NUMERICAL_FITS_PASS refers to the original once-executed C run; REAL_C_CALIBRATION_PASS now additionally requires the recovered full-state seal. The original seal failure remains a failure in its original snapshot.
+
+No existing M4/optimization/Stage1 scientific failure is reclassified. Development findings remain exploratory, and neither an engineering PASS nor C model completeness validates any primary biological contrast. Original mouse allocations, final partitions, source custody, minimum-mouse rules, PG/AD limits and final evaluation restrictions remain frozen. The model/scaler artifacts are protected local saved states; their public hashes are integrity evidence, not public neural data.
+
+The host is a trusted custodian process. Its source/audit/ACL tests do not establish resistance to a malicious machine administrator or arbitrary malicious native extension. Synthetic forbidden-access canaries are freshly tested; original26actualD CreateFile denials are separately preserved historical evidence. No real D access was made to refresh those denials. The controller, approval signatures and ledger semantics are byte-identical outside the host dependency block, and the saved-only process cannot open the ledger or grant/consume an entitlement.

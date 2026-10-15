@@ -1,0 +1,488 @@
+{
+  "baseline_requirement_count": 59,
+  "verified_baseline_count": 55,
+  "required_items_omitted": 0,
+  "unresolved_shrink_risk": 0,
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "requirement": "Exact BASE and clean prechange tree recorded",
+      "status": "VERIFIED",
+      "verification": "registration.json; branch_preflight.json",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-002",
+      "requirement": "Remote test preflight and absent main disclosed",
+      "status": "VERIFIED",
+      "verification": "branch_preflight.json",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-003",
+      "requirement": "Prospective registration before implementation",
+      "status": "VERIFIED",
+      "verification": "registration.json; requirement_baseline.json",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-004",
+      "requirement": "Original traceback preserved",
+      "status": "VERIFIED",
+      "verification": "original_exception.json; diagnosis.md",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-005",
+      "requirement": "Original host source bytes preserved",
+      "status": "VERIFIED",
+      "verification": "original_release_control.py.bin; original_state_manifest.py.bin",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-006",
+      "requirement": "Original selection source version and hash pinned",
+      "status": "VERIFIED",
+      "verification": "host_snapshot.json; selection_dependency.py",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-007",
+      "requirement": "Original 92-source snapshot preserved",
+      "status": "VERIFIED",
+      "verification": "original_implementation_snapshot_v2.json",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-008",
+      "requirement": "Historical evidence and failures immutable",
+      "status": "VERIFIED",
+      "verification": "original_git_tree.txt; original_partial_preservation.json",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-009",
+      "requirement": "Original 1858-file partial seal immutable",
+      "status": "VERIFIED",
+      "verification": "original_partial_preservation.json",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-010",
+      "requirement": "Root cause explains cached synthetic dependency",
+      "status": "VERIFIED",
+      "verification": "diagnosis.md",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-011",
+      "requirement": "Only demonstrated host dependency repaired",
+      "status": "VERIFIED",
+      "verification": "host_snapshot.json; controller byte parity test",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-012",
+      "requirement": "Explicit package-qualified import",
+      "status": "VERIFIED",
+      "verification": "release_control dependency-only diff",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-013",
+      "requirement": "Hash and compile identical source bytes",
+      "status": "VERIFIED",
+      "verification": "selection_dependency.py; loader tests",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-014",
+      "requirement": "Fixed dependency source path and no fallback",
+      "status": "VERIFIED",
+      "verification": "selection_dependency.py; pinned hash denial",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-015",
+      "requirement": "No sys.path or sys.modules workarounds",
+      "status": "VERIFIED",
+      "verification": "reviewed host/helper source",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-016",
+      "requirement": "Native top-level import behavior preserved",
+      "status": "VERIFIED",
+      "verification": "controller byte parity test",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-017",
+      "requirement": "Selection logic and scientific definitions unchanged",
+      "status": "VERIFIED",
+      "verification": "original92 source verification",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-018",
+      "requirement": "Models, seeds, ridge, PG and AD policies unchanged",
+      "status": "VERIFIED",
+      "verification": "saved_state_audit.json; original92 hashes",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-019",
+      "requirement": "Release controller and ledger semantics unchanged",
+      "status": "VERIFIED",
+      "verification": "controller byte parity; denied ledger canary",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-020",
+      "requirement": "New host source hashes frozen before testing",
+      "status": "VERIFIED",
+      "verification": "host_snapshot.json revision4",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-021",
+      "requirement": "Fresh-process prospective-roster saved-synthetic test",
+      "status": "VERIFIED",
+      "verification": "prospective_roster_saved_path",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "synthetic_attempt_1792039476174649300.json and archived command logs"
+    },
+    {
+      "id": "REQ-022",
+      "requirement": "Fresh-process retrospective saved reconstruction test",
+      "status": "VERIFIED",
+      "verification": "retrospective_saved_reconstruction",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "synthetic_attempt_1792039476174649300.json and archived command logs"
+    },
+    {
+      "id": "REQ-023",
+      "requirement": "Missing selection module rejected",
+      "status": "VERIFIED",
+      "verification": "missing_selection; loader_missing_selection",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "synthetic_attempt_1792039476174649300.json and archived command logs"
+    },
+    {
+      "id": "REQ-024",
+      "requirement": "Corrupt selection module rejected",
+      "status": "VERIFIED",
+      "verification": "corrupt_selection; loader_corrupt_selection",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "synthetic_attempt_1792039476174649300.json and archived command logs"
+    },
+    {
+      "id": "REQ-025",
+      "requirement": "Incorrect dependency hash rejected",
+      "status": "VERIFIED",
+      "verification": "pinned_dependency_hash_denied",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "synthetic_attempt_1792039476174649300.json and archived command logs"
+    },
+    {
+      "id": "REQ-026",
+      "requirement": "Missing helper and corrupt helper rejected",
+      "status": "VERIFIED",
+      "verification": "missing_helper; corrupt_helper",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "synthetic_attempt_1792039476174649300.json and archived command logs"
+    },
+    {
+      "id": "REQ-027",
+      "requirement": "Incorrect host source hash rejected",
+      "status": "VERIFIED",
+      "verification": "corrupt_host_source",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "synthetic_attempt_1792039476174649300.json and archived command logs"
+    },
+    {
+      "id": "REQ-028",
+      "requirement": "Incomplete manifest rejected",
+      "status": "VERIFIED",
+      "verification": "incomplete_manifest; missing_saved_state_no_reconstruction",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "synthetic_attempt_1792039476174649300.json and archived command logs"
+    },
+    {
+      "id": "REQ-029",
+      "requirement": "Model/scaler/certificate/roster tampering rejected",
+      "status": "VERIFIED",
+      "verification": "corrupt_model_bundle/roster/QC/journal/certificate; wrong_model_shape; trial_mask_tamper",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "synthetic_attempt_1792039476174649300.json and archived command logs"
+    },
+    {
+      "id": "REQ-030",
+      "requirement": "Repeated seal destination rejected",
+      "status": "VERIFIED",
+      "verification": "repeat_destination_denied",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "synthetic_attempt_1792039476174649300.json and archived command logs"
+    },
+    {
+      "id": "REQ-031",
+      "requirement": "Concurrent seal destination requests serialized by exclusive creation",
+      "status": "VERIFIED",
+      "verification": "concurrent_single_winner",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "synthetic_attempt_1792039476174649300.json and archived command logs"
+    },
+    {
+      "id": "REQ-032",
+      "requirement": "Injected crash leaves consumed namespace and denies retry",
+      "status": "VERIFIED",
+      "verification": "actual_process_interruption; interrupted_destination_retry_denied",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "synthetic_attempt_1792039476174649300.json and archived command logs"
+    },
+    {
+      "id": "REQ-033",
+      "requirement": "Import errors fail closed before seal completion",
+      "status": "VERIFIED",
+      "verification": "authenticated_import_failure_no_fallback",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "synthetic_attempt_1792039476174649300.json and archived command logs"
+    },
+    {
+      "id": "REQ-034",
+      "requirement": "Raw C array reads denied",
+      "status": "VERIFIED",
+      "verification": "raw_C_input_denied",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "synthetic_attempt_1792039476174649300.json and archived command logs"
+    },
+    {
+      "id": "REQ-035",
+      "requirement": "D/key/source reads denied",
+      "status": "VERIFIED",
+      "verification": "raw_D_input_denied; D_key_denied; encrypted_D_denied; neural_source_denied",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "synthetic_attempt_1792039476174649300.json and archived command logs"
+    },
+    {
+      "id": "REQ-036",
+      "requirement": "No optimization imports or calls",
+      "status": "VERIFIED",
+      "verification": "calibration_import_denied; optimizer_import_denied",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "synthetic_attempt_1792039476174649300.json and archived command logs"
+    },
+    {
+      "id": "REQ-037",
+      "requirement": "Ledger opens/writes forbidden and source semantics unchanged",
+      "status": "VERIFIED",
+      "verification": "ledger_access_denied; controller byte parity; real audited opens",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "synthetic_attempt_1792039476174649300.json and archived command logs"
+    },
+    {
+      "id": "REQ-038",
+      "requirement": "Independent security source/test review before real saved access",
+      "status": "VERIFIED",
+      "verification": "engineering_gate_review_r4.md; engineering_gate.json",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-039",
+      "requirement": "Independent scientific source/test review before real saved access",
+      "status": "VERIFIED",
+      "verification": "scientific_engineering_gate_review_r4.md; engineering_gate.json",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-040",
+      "requirement": "Single separately recorded real saved-only recovery attempt",
+      "status": "VERIFIED",
+      "verification": "real_recovery_attempt.json; real_saved_recovery_receipt.json",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-041",
+      "requirement": "Verify13mice26subfields290cases",
+      "status": "VERIFIED",
+      "verification": "saved_state_audit.json",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-042",
+      "requirement": "Verify21716GLM78Nseed26Nmean40104endpointcerts",
+      "status": "VERIFIED",
+      "verification": "saved_state_audit.json",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-043",
+      "requirement": "Full QC/scaler/unit/trial/sensitivity states verified",
+      "status": "VERIFIED",
+      "verification": "complete_C_state_manifest.json; saved_state_audit.json",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-044",
+      "requirement": "All original PG/AD/coverage/provenance checks pass",
+      "status": "VERIFIED",
+      "verification": "real_saved_recovery_receipt.json; saved_state_audit.json",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-045",
+      "requirement": "Original worker/runtime/protocol/output hashes accounted",
+      "status": "VERIFIED",
+      "verification": "complete_seal_inventory.json; original provenance; source checks",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-046",
+      "requirement": "Separate append-only complete manifest and receipt",
+      "status": "VERIFIED",
+      "verification": "complete_C_state_manifest.json; complete_C_sealing_receipt.json",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-047",
+      "requirement": "Protected host destination and ACL proof",
+      "status": "VERIFIED",
+      "verification": "real_saved_recovery_receipt.json ACL; synthetic source tests",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-048",
+      "requirement": "No real C fitting repeated",
+      "status": "VERIFIED",
+      "verification": "real_saved_recovery_receipt.json new_fits=0",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-049",
+      "requirement": "No raw C or D counts opened",
+      "status": "VERIFIED",
+      "verification": "real_saved_recovery_receipt.json audited paths/zero forbidden reads",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-050",
+      "requirement": "No missing fitted states reconstructed",
+      "status": "VERIFIED",
+      "verification": "missing_saved_state_no_reconstruction; original1858 hashes",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-051",
+      "requirement": "Saved-only PowerShell reproduction",
+      "status": "VERIFIED",
+      "verification": "reproduction_summary.json; saved_reproduction_receipt.json; saved_reproduction_1.log",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-052",
+      "requirement": "Independent final security review",
+      "status": "VERIFIED",
+      "verification": "engineering_final_review.md",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-053",
+      "requirement": "Independent final scientific review",
+      "status": "VERIFIED",
+      "verification": "scientific_final_review.md",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-054",
+      "requirement": "Exact mission-only Git staging",
+      "status": "OPEN",
+      "verification": "exact-file staging and external Git receipt (pending)",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-055",
+      "requirement": "Commit and normal push origin/test",
+      "status": "OPEN",
+      "verification": "external Git receipt exact normal origin/test commit (pending)",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-056",
+      "requirement": "Remote readback exact commit and manifest",
+      "status": "OPEN",
+      "verification": "external remote readback receipt (pending)",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-057",
+      "requirement": "Clean working tree verified",
+      "status": "OPEN",
+      "verification": "external clean gate receipt (pending)",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-058",
+      "requirement": "Separate six required status flags",
+      "status": "VERIFIED",
+      "verification": "HANDOFF.json six explicit flags",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    },
+    {
+      "id": "REQ-059",
+      "requirement": "Stop after C seal; no D authority",
+      "status": "VERIFIED",
+      "verification": "HANDOFF.md STOP and no D authority",
+      "implementation": "new host/helper; immutable original sources/evidence; saved-only validator",
+      "test_evidence": "mission evidence"
+    }
+  ],
+  "git_proof": "External receipt resolves Git rows after exact push/readback/clean; no pretend retrospective commit hash",
+  "external_git_requirements": [
+    "REQ-054",
+    "REQ-055",
+    "REQ-056",
+    "REQ-057"
+  ],
+  "external_git_receipt": "p12-c-seal-host-import-repair-1-git-closeout.json in authorized external receipt directory"
+}

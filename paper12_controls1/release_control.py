@@ -127,7 +127,11 @@ def check_numerical_rows(cert,case,label):
 
 def validate_provenance(manifest,root):
     import zipfile
-    from selection import views
+    if __package__:
+        from .selection_dependency import load_views
+        views=load_views()
+    else:
+        from selection import views
     root=Path(root)
     required={'input_manifest','metadata','calibration_states','role_proof','gate_result','extra_role_denials','protected_open_checks_without_reading','launch_receipt','roster','QC','identity'}
     if not {('provenance_'+n+'.json') for n in required}<=set(manifest['artifact_sha256']) or not {'attempt_journals.zip','attempt_journals_index.json'}<=set(manifest['artifact_sha256']):raise PermissionError('C_COMPLETE_PROVENANCE_REQUIRED')

@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_cseal1\test_saved.py", line 160, in <module>
+    if __name__=='__main__':run_suite()
+                            ^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_cseal1\test_saved.py", line 134, in run_suite
+    execute('pinned_dependency_hash_denied',isolated_cmd(),False,'SELECTION_VERSION_HASH_MISMATCH',isolated)
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_cseal1\test_saved.py", line 40, in execute
+    if not ok: raise AssertionError(name+':'+result.stderr[-1800:])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: pinned_dependency_hash_denied:Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_cseal1\jobs\synthetic_1792039217570235700\isolated_repo\paper12_cseal1\host.py", line 207, in <module>
+    try: main()
+         ^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_cseal1\jobs\synthetic_1792039217570235700\isolated_repo\paper12_cseal1\host.py", line 190, in main
+    if not receipt.is_relative_to(HERE/'jobs' if args.synthetic else EVIDENCE): raise PermissionError('RECEIPT_PATH')
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: RECEIPT_PATH
+

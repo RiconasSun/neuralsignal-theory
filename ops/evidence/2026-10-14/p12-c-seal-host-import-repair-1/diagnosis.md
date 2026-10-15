@@ -1,0 +1,9 @@
+# Preserved packaging diagnosis
+
+Original traceback: real_C.py -> state_manifest.create -> validate_state_manifest -> release_control.validate_provenance -> from selection import views -> ModuleNotFoundError: No module named selection. Original machine-readable exception, exact host source bytes and original92-source snapshot are archived here; the BASE Git tree preserves all previous committed evidence.
+
+The original state_manifest.create prospective-roster branch simply copies private_prefit_roster.json and then invokes validation. The synthetic reconstruction branch temporarily adds the worker code path, imports calibration, and reconstructs a synthetic roster. calibration imports selection; that cached top-level module remains after the temporary path is removed. The real prospective branch does not create that cache. Native worker code contains selection.py directly and retains its original top-level behavior. The fresh host package path exposes the missing bare dependency.
+
+Only the package-host dependency block changes. Its explicit relative helper import checks the fixed original selection.py SHA256 and executes the exact authenticated byte buffer without consulting a pyc or a module cache. A verification failure never falls back. No new sys.path/PYTHONPATH/sys.modules insertion is used. The scientific selection code and every other controller byte remain identical.
+
+The recovery assembler never invokes old state_manifest.create, real_C, calibration, extraction, neural input loaders, derivatives or optimizers. It copies all original saved partial artifacts byte-for-byte, assembles a schema-v2 manifest from saved report/scalers/models/certificates, and invokes the original complete validator. No fitted or preprocessing state is recreated. The new recovery attestation binds amended host sources separately from the preserved original worker/scientific identity.
