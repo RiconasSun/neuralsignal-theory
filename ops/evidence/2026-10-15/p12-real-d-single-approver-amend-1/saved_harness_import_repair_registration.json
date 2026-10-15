@@ -1,0 +1,24 @@
+{
+  "classification": "TEST_HARNESS_PACKAGING_BUG",
+  "root_cause": "Python file-path execution sets sys.path[0] to evidence directory; package oracle import requires repository execution context",
+  "fix": "Use standard runpy.run_path launched by python -c from the already enforced repository CWD; do not mutate sys.path/sys.modules",
+  "preserved_failure": {
+    "saved_reproduction_final.log": {
+      "preserved_as": "saved_reproduction_attempt1_failed.log",
+      "sha256": "d1c57f1a887dff466bb0da1f0ff578d0a38bb1464f131f617c107375593cf0e4"
+    },
+    "saved_reproduction_receipt.json": {
+      "preserved_as": "saved_reproduction_attempt1_failed_receipt.json",
+      "sha256": "d8af8d0ff53a9a6b858535d4bec33719017c389f2cf15278c29e016e75f95944"
+    }
+  },
+  "changed_files": [
+    "reproduce-all-saved.ps1"
+  ],
+  "regression_oracle": "The complete one-command saved wrapper must pass including independent affine admission/signature/artifact/ledger/source-output audit",
+  "production_source_freeze_sha256": "d3c21d9dd7b2dc48350310bec580b5c0cbecb1eb294d3d71d2b6631aa76bf922",
+  "production_source_or_scientific_semantics_changed": false,
+  "fresh_SYN_reexecution_required": false,
+  "no_assertion_or_test_removed": true,
+  "additional_neural_experiments": false
+}

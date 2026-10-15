@@ -1,0 +1,45 @@
+# P12 single-owner public-key repair handoff
+
+Mission `P12-REAL-D-SINGLE-APPROVER-AMEND-1`; exact BASE `6e952aeb0bc19abead5b208327b56298f25dc290`. Independent final engineering/security and scientific reviews accept this engineering archive only, with no unresolved P0/P1. The software/SYN security amendment passes. Genuine owner setup remains AUTHORITY_PENDING; after actual Git closure the terminal status is WAIT_FOR_HUMAN_INPUT, bug_count=0 / warn_count=1. No overall mission PASS, MERGE_ALLOWED, production readiness or scientific validation is claimed.
+
+Production revision3 SHA256 `d3c21d9dd7b2dc48350310bec580b5c0cbecb1eb294d3d71d2b6631aa76bf922` binds25 executable files. Canonical encoding, curve, nonidentity and prime-subgroup admission precede proof/enrollment.39 focused tests and234 public-encoding cases pass with0 independent-affine mismatches, including forged-identity proof and self-consistent candidate denial. Finite vectors plus source review are not exhaustive cryptographic verification. Use only owner_public_toolkit_r3.zip; the unsafe r2 toolkit remains labeled historical evidence.
+
+Fresh actual Windows SYN2 completed13mice/208cases/104x999=103896 controls,10000bootstrap, exact8192 sign assignments/Holm4/two Holm16 families, all sensitivities/LOMO/probe/rate outputs,25974 count-preservation and156 cache-parity checks. Both zero-capability native roles exit0/cleanup0x00000000.35 bootstrap code files and6010 runtime files are verified; evaluator elapsed3899.015 seconds and native role times8661.89/8674.578 seconds remain below original43200-second limits.29 original native Controller oracles and8 producer negative cases pass. No new fits or changed scientific policy.
+
+The complete saved-only PowerShell command passes, including independent signatures/artifacts/ledger/source-output audit over1387 signed artifacts. First saved-wrapper import failure is retained with actual nonzero receipt; QA-only runpy launcher repair changes neither import paths/module caches nor the oracle/production source. Complete corrected reproduction has actual exit0. README's stale reuse-manifest pointer was corrected without changing executable/toolkit bytes.
+
+|SYN fixture contrast|CA1 minus DG|CI95|Raw p|Holm p|Outcome|
+|---|---:|---|---:|---:|---|
+|own|-1.7161096178672445e-05|[-6.035184579261046e-05, 2.6130293361914722e-05]|0.473388671875|0.74609375|NOT VALIDATED / MIXED|
+|population|3.6758022425514417e-05|[-9.75617762318547e-06, 8.605602067501399e-05]|0.1865234375|0.74609375|NOT VALIDATED / MIXED|
+|stimulus_time|8.4443755587018454e-05|[-9.93155064257772e-05, 0.0002190505591344666]|0.3662109375|0.74609375|NOT VALIDATED / MIXED|
+|combined|0.0001109410165967166|[-7.571778116776693e-05, 0.00026413287677398543]|0.2431640625|0.74609375|NOT VALIDATED / MIXED|
+
+All four fixture outcomes and their corrected-null failures remain reported. These are engineering fixtures, not biological absence/equivalence or final-animal validation. Original M4 failures and all scientific/model/PG/AD/allocation/holdout definitions remain immutable.
+
+SYN1 remains consumed/delivered and assessment-started before controlled target exit97; controller exit0, both cleanup0, zero complete mice/null cases. Nine named controller consumption receipts do not prove total consumption across all unit-test ledgers. No entitlement was restored. The original failed-archive inventory has an invalid empty-file self hash; it is unchanged and is not an original73/73PASS. Both reviewers verified the additive outside-tree manifest of72payloads+actual invalid-inventory bytes (73files); the unsuccessful review and prior scientific review remain preserved. Monitoring gaps are recorded without inventing their cause or claiming uninterrupted host timing.
+
+The complete saved real C seal remains bound to1862 verified files/full-state SHA af167d0c41bdc2c7a763f9bb1a198d3692be109eb7d79af37deac3c500691c99; the original1858partial evidence is unchanged. The check reads saved model/state bytes only. The subsequent frozen SYN route has no real-state write or real count/source/key/ledger path. No raw real C/D count read, real D access or fitting occurred.
+
+SECURITY_AMENDMENT_PASS=TRUE (software/SYN scope); C_SEAL_INTACT=TRUE. OWNER_AUTHORITY_READY=FALSE; PRODUCTION_PATH_READY=FALSE; REAL_D_SIGNATURE_ISSUED=FALSE; D_RELEASE_CONSUMED=FALSE; D_EVALUATION_EXECUTED=FALSE; SCIENTIFIC_VALIDATION_PASS=FALSE.
+
+The exact public request dossier is NOT_SIGNABLE. Its genuine owner receipt, live REAL target/controller identities and canonical approval body are null. Preparation ID0b6c4d7b21334c36be70c6260f566479 creates no entitlement; roster SHA b55fc30eae06ced1c0c9296b4f8b764705fbb51e6fc199bcc5a1afdeee699e55 is not a signable final approval fingerprint. Do not sign this pending dossier.
+
+The62-item matrix retains three genuine-owner dependencies (REQ012/016/022). Before commit57are verified and two actual Git gates are open. Subsequent external normal-push/readback/clean receipts must resolve054/055, giving59/62; the three owner dependencies remain blocked. No synthetic substitution or omitted baseline item is used.
+
+Complete saved-only PowerShell reproduction:
+
+```powershell
+& ./ops/evidence/2026-10-15/p12-real-d-single-approver-amend-1/reproduce-all-saved.ps1
+```
+
+Fresh SYN reproduction is separately documented in package README; it requires the exact ignored runtime/saved-SYN snapshots. A Git clone alone does not contain them. No real evaluation command is supplied or authorized here.
+
+The only next human action, after actual Git closure, is one public onboarding ceremony on your physically separate offline signing device using the current r3 toolkit and paper12_singleowner1/OWNER_SETUP.md. Return only owner_challenge.json, owner_proof.json, owner_setup.json, owner_confirmation.json and provisioning_receipt.json. Software calculates/checks the fingerprint; no second human or manual SHA256. Private keys, seeds, passphrases and credentials remain outside Codex/workers/Git. The onboarding signature cannot authorize REAL release. Physical separation is the trusted owner's responsibility; software proves possession and the statement, not remote physical isolation. The trusted local Host is not a third-party custodian; malicious-admin protection is not established.
+
+After genuine setup, continuation can verify protected public import/pinning and prepare fresh held live identities. Stop again at the later irreversible boundary for separate explicit owner approval and an offline REAL signature. No real release, assessment, optimizer rescue or manuscript scientific finalization occurs now.
+
+Actual commit SHA/remote blob readback/clean evidence is external to avoid self-referential commits: C:/Users/85993/.codex/visualizations/2026/10/13/01a13780-a5dc-7e01-8acc-80dd913c1489/p12-singleowner-amend-1-closure. Committed documents are precommit evidence and do not invent future Git success.
+
+
+Current saved-evidence QA revision is5. The complete saved PowerShell command additionally runs four prospectively registered failure-archive regressions (actual outside-tree73-file manifest; missing-entry, corrupted-hash and self-reference/traversal rejection), all PASS. Earlier successful QA4 log/receipt and exact snapshot remain archived, as does the first failed invocation. Both independent narrow QA addenda accept this evidence with no P0/P1; canonical final-review bytes are unchanged. Production25-file freeze, crypto oracle, scientific results and all scientific policies remain unchanged, so no neural experiment or full SYN rerun occurred. The original invalid inventory self-entry is never claimed as old73/73PASS.

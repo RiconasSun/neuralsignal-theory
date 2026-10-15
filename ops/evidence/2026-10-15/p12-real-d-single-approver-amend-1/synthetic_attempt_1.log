@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_singleowner1\run_synthetic.py", line 182, in <module>
+    if __name__=='__main__':main(__import__('sys').argv[1])
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_singleowner1\run_synthetic.py", line 119, in main
+    completion,gate=activate_registered(deployments['success'].path,deployments['success'].file_sha256,target,controller,verify_target,protect,grant)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_singleowner1\activation.py", line 33, in activate_registered
+    if target.wait()!=0:raise RuntimeError('PRODUCTION_ASSESSMENT_INTERRUPTED_NO_RETRY')
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: PRODUCTION_ASSESSMENT_INTERRUPTED_NO_RETRY

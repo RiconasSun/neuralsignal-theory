@@ -1,0 +1,19 @@
+{
+  "scope": "Saved public failure-archive integrity regression only; no production/numerical/oracle/source changes",
+  "before_test_implementation_and_execution": true,
+  "existing_baseline_requirements": [
+    "REQ-038",
+    "REQ-051",
+    "REQ-053"
+  ],
+  "cases": [
+    "Actual outside-tree73-file manifest accepted with old invalid selfentry disclosed",
+    "Missing payload entry denied",
+    "Corrupted payload hash denied",
+    "Manifest self-reference/traversal entry denied"
+  ],
+  "source_tree_original_bytes_immutable": true,
+  "no_arrays_keys_fits_or_releases": true,
+  "saved_wrapper_append_regression_required": true,
+  "independent_narrow_QA_addendum_required": true
+}

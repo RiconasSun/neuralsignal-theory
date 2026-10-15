@@ -1,0 +1,9 @@
+# Additive historical-inventory integrity repair
+
+The first independent final security review held archive acceptance on an evidence P1, preserved in `engineering_final_review_attempt1_held.md`. The first scientific final review is preserved byte-for-byte in `scientific_final_review_r1_before_inventory_repair.md` (SHA256 `ee84aa1fcad96fd91edf8425f9c518d0377187ed18e3f1addfe3deb037e1ecc2`); subsequent acceptance must bind this addendum and the repaired evidence.
+
+`failed_synthetic_attempt_1/inventory.json` remains unchanged, SHA256 `e6043ed4293962d93b3a9a92fc56b2f39496944a55471d32814ebe2b44c75b50`. Its 72 other entries match their archived payloads. Its own entry incorrectly records the empty-file SHA256; it is an invalid self-reference, not 73/73 original-inventory PASS. The empty self hash is consistent with creation-time inclusion, not proof of the precise creation history or altered payloads.
+
+The separate `failed_attempt1_byte_manifest_v2.json` lives outside that historical tree, so it cannot include itself. It binds the exact 72 payloads and actual bytes of the preserved invalid inventory as 73 files. SHA256: `257bb4e4581978dceeecc5c9daf95684b1b483f5c921ac663cead090b77737ff`. `failed_attempt1_inventory_reconciliation.json` records the exact mismatch, original byte identity and scope of the additive repair. No historical file or failure classification is overwritten.
+
+Final engineering and scientific reviews must independently recheck this manifest and explicitly retain the invalid old self entry. No production source, cryptographic oracle, scientific policy, numerical result or completed SYN execution changed, and no experiment or fitting was rerun. The complete current result and saved-reproduction evidence remain valid for the unchanged executable surface. Actual normal Git push/readback/clean and genuine owner setup remain separately gated as in the original review candidate.

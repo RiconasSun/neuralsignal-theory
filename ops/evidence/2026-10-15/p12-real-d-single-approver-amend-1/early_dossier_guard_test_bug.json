@@ -1,0 +1,11 @@
+{
+  "classification": "TEST_BUG_LAUNCHER_INTERPRETER",
+  "failed_oracle": "EARLY_REQUEST_PREPARATION_NOT_DENIED",
+  "observed": "Child raw python selected a different interpreter lacking cryptography, before dossier code could run",
+  "diagnostic_reproduction": "ModuleNotFoundError: No module named cryptography",
+  "correction": "Use the already functional sys.executable instead of PATH python in the test subprocess",
+  "production_source_changed": false,
+  "required_test_oracle_changed": false,
+  "output_directory_created": false,
+  "REAL_access": false
+}

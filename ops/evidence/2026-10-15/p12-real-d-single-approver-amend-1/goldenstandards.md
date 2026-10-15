@@ -1,0 +1,9 @@
+# P12 single-owner amendment baseline
+
+ENGINEER_MODE. ExactBASE6e952aeb0bc19abead5b208327b56298f25dc290,56atomicrequirements frozen before code. Human explicitly approves governancechange; no unresolved intent ambiguity. New protocol replaces second human only; original history and scientific/ledger mathematics immutable.
+
+Plan: reuse exact production algorithms in a separately frozen versioned package so historical package remains byte-identical; amend authority/public confirmation/version bindings; focused regression and independent preexecution engineering/scientific review; fresh actualWindows full13SYN route with unchanged104x999/10000 budgets; saved-only PowerShell reproduction; final independent reviews, exact artifact dossier with honest pending live/key identities; exactGitarchive and externalreadback. No raw realC/D counts, REALkeys/entitlement/ledger/approvalsignature, fitting or finalmanuscript.
+
+L0-L2 plusactual Windows principal evidence required; mocks cannot substitute actual roles. Securityoracle exactschema/hash/keypossession/ownerlocalconfirmation/protectedpin/domain separation; no secondhuman/manualhash. Scientificoracle originalfixed math, criteria, allfour outcomes/sensitivities/nulls retained. Ownerassertion+PoP cannot remotely prove physical isolation; absentgenuineowner setup AUTHORITY_PENDING, notREADY. No assistantprivatekey/signingAPI. Candidateonboarding proof is not releaseapproval.
+
+Requirement baseline unchanged afterfreeze unless explicithuman amendment; all56items individually mapped, no substitutions. Preservefailed attempts/reviews. bug0warn0 requiredforoverallPASS; pendingowner setup yields WAIT_FOR_HUMAN_INPUT onlyafterall autonomousengineering/Gitwork. No force/main/PR, exactfilesonly. Existingdaily originalbytes suffix preserved. Stopbeforerealapprovalboundary.

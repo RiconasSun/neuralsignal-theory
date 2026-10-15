@@ -1,0 +1,51 @@
+{
+  "mission": "P12-REAL-D-SINGLE-APPROVER-AMEND-1",
+  "audit_scope": "Source and requirement preservation; completed execution and Git are separately verified at closure",
+  "original_requirement_count": 56,
+  "current_requirement_count": 62,
+  "original_requirement_ids_and_text_preserved": true,
+  "additional_requirements_authority": "human_fix_authorization.txt and PUBLIC_KEY_VALIDITY_AMENDMENT.md",
+  "historical_package_modified": false,
+  "historical_failures_reclassified": false,
+  "scientific_test_class_AST_unchanged": true,
+  "scientific_definitions_thresholds_budgets_unchanged": true,
+  "source_evidence": [
+    "reuse_manifest_r3.json",
+    "engineering_preexecution_review_r3.md",
+    "scientific_preexecution_review_r3.md",
+    "registration.json",
+    "baseline_history.json"
+  ],
+  "narrowing_or_replacement_decisions": [
+    {
+      "surface": "Second-human fingerprint ceremony in new protocol only",
+      "classification": "APPROVED_REMOVAL",
+      "authority": "human_authorization.bin and SECURITY_AMENDMENT.md",
+      "replacement": "Automatic decoded-key fingerprint, admissible public point, owner possession proof, one local owner confirmation and protected receipt pin",
+      "preservation": "Original protocol, AUTHORITY_PENDING evidence and historical package are unchanged"
+    },
+    {
+      "surface": "Unused arbitrary-byte/manual fingerprint comparator and its copied regression in new package",
+      "classification": "INTENTIONAL_REQUIRED_CHANGE",
+      "authority": "human_fix_authorization.txt and test_change_gate_r3.md",
+      "replacement": "Strict automatic fingerprint and key admission using a valid RFC public fixture, plus six point/admission regressions",
+      "preservation": "Old helper/test bytes remain in original package and interrupted-attempt archive; scientific tests are unchanged"
+    },
+    {
+      "surface": "Weak r2 public toolkit",
+      "classification": "INTENTIONAL_REQUIRED_CHANGE",
+      "authority": "human_fix_authorization.txt",
+      "replacement": "Separately named repaired r3 public toolkit with exact source/policy manifest",
+      "preservation": "Original r2 archive and receipt remain byte-identical with explicit supersession notice"
+    }
+  ],
+  "required_items_omitted": 0,
+  "required_behaviors_silently_reduced": 0,
+  "unapproved_existing_behaviors_removed": 0,
+  "required_tests_silently_removed": 0,
+  "unresolved_shrink_risk": 0,
+  "temporary_substitutes_remaining": 0,
+  "coverage_reductions_without_approval": 0,
+  "owner_setup_dependency": "Uncompleted genuine owner setup is retained as BLOCKED_HUMAN_INPUT; synthetic fixtures do not replace it",
+  "full_mission_PASS_claim": false
+}

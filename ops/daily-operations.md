@@ -1,3 +1,17 @@
+## Current mission: P12-REAL-D-SINGLE-APPROVER-AMEND-1
+
+Reviewed engineering archive; actual Git closure is certified by external receipts. After those gates: WAIT_FOR_HUMAN_INPUT / AUTHORITY_PENDING.
+Exact BASE6e952aeb0bc19abead5b208327b56298f25dc290; production freeze r3 d3c21d9dd7b2dc48350310bec580b5c0cbecb1eb294d3d71d2b6631aa76bf922 unchanged.
+Single-owner prospective amendment; canonical Ed25519/curve/nonidentity/prime-subgroup checks,39focusedtests/234affinecases/0mismatches.
+Fresh actual Windows SYN2 complete13mice/208cases/104x999controls/10000bootstrap;29native+8producer+5reportQA; both roles exit0/cleanup0. Saved-only full reproduction exit0,1387signed artifact audit plus4archival-integrity regressions; currentQA5/independent narrow addenda accept unchanged production/science.
+SYN1 failure remains consumed/delivered/assessment-started then stopped; unsafekit/reviews and every scientific failure preserved. Invalid historical inventoryselfentry remainsinvalid; additive external73-filemanifest independently verified. Failed saved-wrapper import and launch-only repair preserved.
+All4SYN contrasts NOT VALIDATED/MIXED; no biological/final-animal evidence. RealCseal1862files/1858partial unchanged; no fits/rawrealcounts/realDsource/key/ledger access.
+SECURITY_AMENDMENT_PASS=TRUE (software/SYN only); C_SEAL_INTACT=TRUE. OWNER_AUTHORITY_READY=FALSE; PRODUCTION_PATH_READY=FALSE; REAL_D_SIGNATURE_ISSUED=FALSE; D_RELEASE_CONSUMED=FALSE; D_EVALUATION_EXECUTED=FALSE; SCIENTIFIC_VALIDATION_PASS=FALSE.
+Public exactrequestdossier NOT_SIGNABLE: genuineownerreceipt/liveREALidentities/canonicalbody null. Preparation ID creates no entitlement and must not be signed as approval.
+Both final independent reviews accept engineering archive only/HOLD_REAL_D, no unresolvedP0/P1; bug_count0/warn_count1ownersetup.62requirements:57verified+3humanblocked+2Gitpending precommit; actual externalGitclosure yields59/62, never fullmissionPASS.
+Evidence: evidence/2026-10-15/p12-real-d-single-approver-amend-1/HANDOFF.md. One-command saved reproduction: & ./ops/evidence/2026-10-15/p12-real-d-single-approver-amend-1/reproduce-all-saved.ps1.
+Next: owner completes currentr3 public ceremony on physically separateoffline signingdevice and returns fivepublicJSONrecords; softwareautoFP, nosecondhuman/manualSHA/private material. Then protectedpublicimport/liveidentitypreparation incontinuation; separateexplicitfinalapproval/offlineREALsignature requiredlater. STOP before REALrelease/evaluation/manuscriptfinalization.
+
 ## Current mission: P12-D-PRODUCTION-PATH-READINESS-1
 
 State: WAIT_FOR_HUMAN_INPUT / AUTHORITY_PENDING after completed engineering-only handoff.

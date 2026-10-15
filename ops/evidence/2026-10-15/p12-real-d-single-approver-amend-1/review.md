@@ -1,0 +1,17 @@
+# Final review record
+
+Mission `P12-REAL-D-SINGLE-APPROVER-AMEND-1`, exact BASE6e952aeb0bc19abead5b208327b56298f25dc290. Production freeze revision3 remains unchanged; QA revision4 repaired saved-wrapper launch context; current QA revision5 adds only saved public archive-integrity regression checks. Final reviewers are separate from implementation and read source/public metadata/saved evidence only, without protected REAL reads, experiments, signing, releases or Git operations.
+
+- Engineering/security: engineering_final_review.md, SHA25609f219ee2abac2c7a01ca0167aa68492d6aecac699e97ab46c39d2ffc26658cb; APPROVE_ENGINEERING_ARCHIVE_ONLY / HOLD_REAL_D; unresolved P0=0/P1=0.
+- Scientific code/output: scientific_final_review.md, SHA25638e2ef24781f6e581f076b49679ccc798325d14226dbd86242566c843cdde544; ACCEPT_COMPLETED_SYNTHETIC_ENGINEERING_EVIDENCE_AND_ARCHIVE_ONLY / HOLD_REAL_D; scientific P0=0/P1=0.
+
+The first final security review held on an invalid historical inventory self-entry and remains in engineering_final_review_attempt1_held.md. The earlier scientific review is byte-preserved in scientific_final_review_r1_before_inventory_repair.md. Both final reviews independently verify the additive nonrecursive73-file binding and disclose the invalid old self-entry; no original73/73PASS is claimed. CLOSURE_REVIEW_ADDENDUM.md and failed_attempt1_inventory_reconciliation.json retain the defect and resolution.
+
+Review supports exact frozen source,39/234 point/admission evidence, complete13/208/104x999 actual SYN execution,29native+8producer checks, native identities/exits/cleanup, complete saved reproduction, preserved failures and honest NOT_SIGNABLE/public-owner-pending handoff. It does not grant genuine owner provisioning, REAL release/evaluation, scientific validation, overall mission PASS or MERGE_ALLOWED.
+
+Three owner requirements012/016/022 remain human-blocked; actual Git054/055 must be proven afterward in external normal-push/readback/clean receipts. Proposed accounting is57/62 precommit and59/62 only after those actual receipts. bug_count0/warn_count1 retains the owner dependency. No source change follows these approvals; final handoff/verdict/matrix/daily documents restate the reviewed candidate/addendum and actual review decisions. Git closure verifies their exact committed bytes externally. Stop after archive and request only the genuine owner setup action.
+
+
+Current saved-evidence QA revision is5. The complete saved PowerShell command additionally runs four prospectively registered failure-archive regressions (actual outside-tree73-file manifest; missing-entry, corrupted-hash and self-reference/traversal rejection), all PASS. Earlier successful QA4 log/receipt and exact snapshot remain archived, as does the first failed invocation. Both independent narrow QA addenda accept this evidence with no P0/P1; canonical final-review bytes are unchanged. Production25-file freeze, crypto oracle, scientific results and all scientific policies remain unchanged, so no neural experiment or full SYN rerun occurred. The original invalid inventory self-entry is never claimed as old73/73PASS.
+
+Independent narrow addenda: engineering_archival_regression_addendum.md SHA25622d58ea91c6dc31009261137ca5844ae3ac29ade01542c64d399685244b72a71, scientific_archival_regression_addendum.md SHA2569b162d7b0d91e90d7750706df3442c5c60b3c7768680414f29df14e778f33408. Actual Git and genuine owner dependencies remain unchanged.

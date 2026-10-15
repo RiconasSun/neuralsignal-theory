@@ -1,0 +1,35 @@
+{
+  "actual_first_cached_check_exit_code": 1,
+  "classification": "STAGING_DOCUMENT_FORMATTING_GATE",
+  "exact_filename_attribute_exceptions": [
+    "engineering_design_review.md",
+    "engineering_final_review.md",
+    "engineering_preexecution_review_r1.md"
+  ],
+  "hash_bound_reviews_preserved": {
+    "engineering_design_review.md": "55936b1459bfe50bf26c085881b31a0affc235a524d0a63b9b5594065c5fdec9",
+    "engineering_final_review.md": "09f219ee2abac2c7a01ca0167aa68492d6aecac699e97ab46c39d2ffc26658cb",
+    "engineering_preexecution_review_r1.md": "bce6c9281e0a8cc8ee4c685ecd04dc0dbbde75a31e6a5bd7b27ea97ee2d80a0c"
+  },
+  "numeric_security_or_scientific_acceptance_changed": false,
+  "old_inventory_and_manifest_archived": true,
+  "own_document_EOF_fixes": {
+    "HANDOFF.md": {
+      "after_sha256": "f4b0a27ca094b9efaec7fc5a6aec0e09db8cd57dd3e9427831e258c726fa5e72",
+      "before_sha256": "0a6df65ea7b15752b93ed13972299bf9cb1f9ab898ecc9788741592765bad410",
+      "change": "Remove only redundant EOF blank line; text unchanged"
+    },
+    "claim_audit.md": {
+      "after_sha256": "63795c4ed818832631fffddebd4ba9ed9d2c7a842c26b53305e15d1ce8714164",
+      "before_sha256": "54edfa54fd0b92acf523ecb28670b66d4460a64d3bf79b5cc611625beeb4f7f9",
+      "change": "Remove only redundant EOF blank line; text unchanged"
+    },
+    "verdict.md": {
+      "after_sha256": "55edebb7471293fa365d5266f07a6450ac93d169a68c49d7df56f32ec74b827a",
+      "before_sha256": "c429e9af6fb4c0dece1c7873172bbfa84f85db8a135240c12680b55e0130a8cb",
+      "change": "Remove only redundant EOF blank line; text unchanged"
+    }
+  },
+  "production_or_QA_source_changed": false,
+  "reason": "Existing two trailing spaces encode Markdown hard line breaks in immutable independently hashed review bytes; allow that formatting only for these three files. Keep EOF and tab checks."
+}
