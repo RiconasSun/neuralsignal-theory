@@ -1,3 +1,17 @@
+## Current mission: P12-PREDICTIVE-V2-FINAL-D-ONESHOT
+
+State: WAIT_FOR_HUMAN_INPUT after critical prereleaseSTOP; archival Git proof is external.
+BASEe3617caec814df37ad387443f596ceb886dff6c8. Conditional human D permission retained; no genuine REAL_D authorization verified.
+Independent security/scientific reviews HOLD: missing pinned custodian producer, frozen final evaluator and designated REAL_D authority/signature.
+PRE_RELEASE_GATE=FAIL; REAL_D_AUTHORIZATION_VERIFIED=FALSE; D_RELEASE_CONSUMED=FALSE; D_EVALUATION_EXECUTED=FALSE.
+COMPLETE_FINAL_STATISTICS=FALSE; NULL_SUITE_STATUS=NOT_EXECUTED; SCIENTIFIC_VALIDATION_VERDICT=INCONCLUSIVE DUE TO FAILED REQUIRED GATE; MANUSCRIPT_COMPLETE=FALSE.
+No protectedC/D/model/key reads, Cfits, REALsignatures, entitlement creation or controller calls. No production adapter/authority self-designation afterSTOP.
+Public frozen source/priorCseal receipt hashes,13identities and exact C4677/D3120metadata IDs verified. Full protected/current operational gates deferred.
+10public audit regressions/saved-onlyPowerShell reproductionPASS is not realD/scientificPASS. Full55requirements retained; downstream tasks blocked, not omitted.
+Bug_count3/warn_count3 remain; archivalonly, no MERGE_ALLOWED. Original paper and every historical failure unchanged below.
+Evidence: evidence/2026-10-14/p12-predictive-v2-final-d-oneshot/CLOSEOUT.md; & .\paper12_oneshot1\reproduce.ps1.
+Next needs separately authorized no-real-D preparation and human-designated approvalauthority/public anchor. STOP; no D release/evaluation or optimizerrescue.
+
 ## Current mission: P12-C-SEAL-HOST-IMPORT-REPAIR-1
 
 C-only saved-state recovery and final independent reviews complete; exact Git closure is bound by the external receipt.

@@ -1,0 +1,66 @@
+{
+  "D_access": "No D arrays/keys/capability/controller consumption before all S1 gates; never run synthetic issuer as REAL authority",
+  "base": "e3617caec814df37ad387443f596ceb886dff6c8",
+  "before_entitlement_consumption": true,
+  "before_new_protected_access": true,
+  "branch_preflight": {
+    "classification": "TEST_ONLY_REMOTE_NO_MAIN",
+    "origin_main_present": false,
+    "origin_test": "e3617caec814df37ad387443f596ceb886dff6c8"
+  },
+  "frozen_inference": {
+    "AD": 1e-05,
+    "Holm": 4,
+    "PG": 0.001,
+    "bootstrap": 10000,
+    "hypotheses": [
+      "own",
+      "population",
+      "stimulus_time",
+      "combined"
+    ],
+    "minimum_paired_mice": 8,
+    "null_replicates": 999,
+    "null_suites": 4
+  },
+  "gates": "Every S1 prerequisite must genuinely PASS; critical failure STOP before release; no automatic repair or substitute path after gate failure",
+  "human_text_authorizes_conditional_single_D": true,
+  "human_text_is_REAL_D_signature": false,
+  "human_text_sha256": "23d4b0ca1a88f0025f93cda9252b4728dc4d25eef15acccf2c808c2a0c03dbfa",
+  "mission": "P12-PREDICTIVE-V2-FINAL-D-ONESHOT",
+  "roles": {
+    "controller": "existing frozen release_control only; no edits authorized by this audit",
+    "designated_REAL_D_approval_authority": "NOT YET VERIFIED; never infer from synthetic or C-only issuer",
+    "final_target": "must be code/runtime/actual-principal bound before release",
+    "prerelease_auditor": "trusted current Host, public metadata and approved saved C state only"
+  },
+  "scope": "Full user contract retained; S2-S5 conditional on mandatory S1 pass",
+  "source_mutation_policy": "Only new audit/evidence files; no existing scientific/controller/worker/runtime/math change; historical daily prefix closure allowed",
+  "source_sha256": {
+    "ops/evidence/2026-10-14/p12-c-seal-host-import-repair-1/HANDOFF.json": "ef8f303d66eda978c162afbbfa0b09ea86062735dc4cee1a75261b605ddd7996",
+    "ops/evidence/2026-10-14/p12-c-seal-host-import-repair-1/complete_C_sealing_receipt.json": "4cb1551b9adf49b2c2cf7f29dc847ec409b29b304fb8037decbb44735b502714",
+    "ops/evidence/2026-10-14/p12-c-seal-host-import-repair-1/complete_C_state_manifest.json": "d0644e21e2682416a01206988647626f72464a266d18d772f87c7fd0e2053317",
+    "ops/evidence/2026-10-14/p12-c-seal-host-import-repair-1/complete_seal_inventory.json": "04f45f8b4cd2388171f4fd9ac9e5464002e082720f08cec50da6b67615ef4028",
+    "ops/evidence/2026-10-14/p12-c-seal-host-import-repair-1/final_manifest.json": "2a019477db2674603a6201a0f8dfcaa0e3a164e0653eba8c96dc7af5f377516c",
+    "ops/evidence/2026-10-14/p12-c-seal-host-import-repair-1/host_snapshot.json": "ab752a313280b51d4b5f658751fa4070d08e7636740b5d10c4fb4faa1777abbc",
+    "paper12_controls1/SECURITY_ARCHITECTURE.md": "0276fc928d77e1c87d4411850bcb4d347448a589ed5d4a03d596cf347f294a01",
+    "paper12_controls1/broker.py": "b6c1286c1c459bd9e705448ec7ce3f3adda780f8355783d4bd10552e3ac64368",
+    "paper12_controls1/controller_worker.py": "5caa2beab70eb3e9a4f80c02eb665b39eefa83335cdb3922849ab04b2c42ecb0",
+    "paper12_controls1/final_D_partition_manifest.json": "c9dc55bb994cb139f411a8a1df9bcd901306f30c0e42d56b8a5a5d6dd25a4582",
+    "paper12_controls1/implementation_snapshot_v2.json": "dc48694e8c42843bc8923660d38dc5cc816eff9b2ebefe9bd2f6b36c33ef13d7",
+    "paper12_controls1/real_D_broker.py": "adcead89f4527a5e2659988f28592c2327dd7f3ae2e8c380a0c7d11daf106088",
+    "paper12_controls1/release_control.py": "3e8eecc5b717fb992b296b9c4dfdc58718d5a263bf370a7db87ee9c4f250daa7",
+    "paper12_controls1/run_security.py": "e9fd728db6ab6407c56392278a30ff100de63761be9c8670a2c441dd875f7007",
+    "paper12_controls1/target_worker.py": "8c29c79b5807f449642416de6e4450ac7725c2547ee574070640cfc72f0a4195",
+    "paper12_cseal1/host.py": "4c56c1f150aac0f209aeb52a03eeadcd61e99f22a283fff8301c2fd4b53ac5c7",
+    "paper12_cseal1/reproduce.ps1": "3a1158ce854b0af88d2110259e022f98c0d290bf47c114a1c591804242aea62c",
+    "paper12_curated_v1/locks/animals.json": "f378cf1b36f7fee9ee6158e903f8196c43e2b1a781cd49ec87758dee9eb08468",
+    "paper12_curated_v1/locks/trials.json": "65fcbd7f4c7b89e43cf67dd4ec86a8873daf60ee252c1d7b2d2320d076451cf6",
+    "paper12_curated_v1/locks/units.json": "12583b3803d71155719f96a41b996111bb933789fbd771ea25bb20787b2a544a",
+    "paper12_predictive_v2/FINAL_VALIDATION_PLAN.md": "eaa97bcf10e6dd6a4b7045826eacf14ab91baf4437ebd8df35289bf99f345906",
+    "paper12_predictive_v2/MANUSCRIPT.md": "bb7dcedccd31b5f28c0afd2b2f526213b30464bc620e08680d6ab63ac6c39c7e",
+    "paper12_predictive_v2/PROTOCOL.md": "0895090e9abaa30b48f8e410f980a180b5c02fdfe1ea56660ce1df931c865c55",
+    "paper12_predictive_v2/protocol_registration.json": "cb8a1d8b8ad2dc87dc6e18ed51bfa2ccf960872cfa2014279ffe31879ffd818d"
+  },
+  "utc": "2026-10-15T05:57:02.615329+00:00"
+}

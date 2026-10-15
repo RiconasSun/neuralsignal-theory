@@ -1,0 +1,49 @@
+{
+  "candidate_exit": "WAIT_FOR_HUMAN_INPUT",
+  "classification": "USER_MANDATED_CRITICAL_GATE_STOP_REQUIRES_NEW_SCOPE_AND_AUTHORITY_DESIGNATION",
+  "blocked_requirements": [
+    "REQ-011",
+    "REQ-015",
+    "REQ-019",
+    "REQ-022 through REQ-049 downstream conditional science/manuscript"
+  ],
+  "observed_blockers": [
+    "P1-01_MISSING_FROZEN_REAL_D_CUSTODIAN_PRODUCER",
+    "P1-02_MISSING_FROZEN_REAL_D_SCIENTIFIC_EVALUATOR",
+    "P1-03_DESIGNATED_REAL_D_AUTHORITY_SIGNATURE_UNVERIFIED"
+  ],
+  "evidence": [
+    "registration.json",
+    "prerelease_audit.json",
+    "original_git_tree.txt",
+    "frozen target_worker.py/real_D_broker.py/run_security.py",
+    "independent prerelease reviews"
+  ],
+  "autonomous_alternatives": [
+    {
+      "alternative": "Reuse existing canary target",
+      "result": "No scientific evaluation code; cannot meet frozen four contrasts/null suite contract"
+    },
+    {
+      "alternative": "Reuse development fit/null workers",
+      "result": "A/B-fitting and primary_states path violates sealed C/no-refit/finalD boundaries"
+    },
+    {
+      "alternative": "Reuse synthetic/C-only approval",
+      "result": "Wrong REAL_D realm/scope/authority; signature does not authorize D"
+    },
+    {
+      "alternative": "Generate assistant-selected REAL key/implement adapter afterfailure",
+      "result": "Would invent authority and cross explicit frozen-prerequisite STOP rule"
+    },
+    {
+      "alternative": "Public source/hash/cohort/saved-receipt audit, regression reproduction and independent closeout",
+      "result": "Completed or completing without protected data or entitlement actions"
+    }
+  ],
+  "why_no_autonomous_unlock": "Critical gate STOP is explicit. Missing production path is technically buildable in a separately registered engineering scope, but cannot be silently substituted in this stopped scientific mission. Authority designation is a human trust decision, not inferable from keys or public flags.",
+  "minimal_human_action": "Authorize separate no-real-D-consumption production preparation and designate REAL_D approval authority plus verifiable public anchor/signature service boundary; do not provide private signing material to analysis role.",
+  "next_after_unblock": "Prospective synthetic-only implementation/security/statistics integration and independent review; freeze complete exact artifacts before any genuine signed/principal-bound final release.",
+  "D_entitlement_consumed": false,
+  "remaining_safe_work": "Independent stopped-closeout review and exact archival Git delivery only; no new release/calibration/scientific work"
+}

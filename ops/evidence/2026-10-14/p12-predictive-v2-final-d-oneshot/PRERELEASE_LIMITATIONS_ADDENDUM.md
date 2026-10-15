@@ -1,0 +1,11 @@
+# Manuscript status addendum — final validation not executed
+
+This separately versioned addendum records the stopped P12-PREDICTIVE-V2-FINAL-D-ONESHOT prerelease audit. The frozen exploratory manuscript and FINAL_VALIDATION_PLAN remain unchanged. It is not an updated final-results manuscript or completed paper/PDF package.
+
+Suggested accurate author-facing statement: "A complete C-only calibration-state seal was recovered and integrity-verified in a preceding engineering mission. The subsequent prospective final-assessment audit stopped before D release because a production custodian producer, frozen final evaluator and designated artifact-bound REAL_D approval chain had not been established. No held-out D prediction, biological contrast or null result was computed. Development findings remain exploratory; the four final hypotheses remain inconclusive due to a failed required gate."
+
+No final Abstract/Results conclusion may state validation, replication, negative effect, non-significance or equivalence. All final CA1/DG gains, regional effects, intervals, raw/Holm p-values, sensitivities/leave-one-out and corrected null comparisons are uncomputed, rather than zero. The scientific manuscript/supplement PDFs and final-result figures/tables are not generated because the valid-assessment condition failed. Existing exploratory PDFs remain historical drafts.
+
+Original M4 optimizer failures/numerical diagnoses and prerelease failures remain visible. Preserve curated nominal unit-bin exposure, recording/anatomy proxy limitations, cohort dependence, observational prediction, whole-session upstream processing and trusted-custodian limitations. Historical custodian separation must not become a claim that D was never decoded globally. This run made no protected C/D/model/key read; historical role proofs are not fresh real-D operational certification.
+
+Authors must review the prerelease architecture gaps, authority designation and prospective production engineering before any future scientific assessment; neither independent agent review nor this addendum is author publication approval. No independent-laboratory, causal, lossless native recording, human or NAP/CWP validation claim is supported.
