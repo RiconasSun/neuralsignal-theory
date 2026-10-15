@@ -1,0 +1,38 @@
+{
+  "BASE": "cbf3ef5b69c2fe8ba6720d32eb5a031194dcd74f",
+  "C_EXECUTION_STARTED": false,
+  "C_ONLY_AUTHORIZATION_ISSUED": false,
+  "C_state_seal_exists": false,
+  "D_EVALUATION_EXECUTED": false,
+  "D_RELEASE_CONSUMED": false,
+  "E3_evidence": {
+    "results/saved_v2_9546086888504515998.json": "70735a06504cf6ccf89f7d1c1395c82a23160cbdaef4b9f91e63e402e2a3cb8f",
+    "results/security_9546086888504515998.json": "7ff0ecdf9a1cf4a189bf48567b1e408f84e363b36f7462ff2291c11380440e90"
+  },
+  "ENGINEERING_CONTROL_PASS": true,
+  "REAL_C_CALIBRATION_PASS": false,
+  "baseline_requirement_count": 67,
+  "blocked_evidence": "results/real_C_approval_block.json",
+  "blocker": "Automatic approval rejected E4 before process creation; real C remains unexecuted, not a scientific failure.",
+  "bug_count": 0,
+  "final_status": "WAIT_FOR_HUMAN_INPUT",
+  "historical_scientific_failures_reclassified": false,
+  "human_blocked_requirements": [
+    "REQ-054",
+    "REQ-055",
+    "REQ-056",
+    "REQ-057"
+  ],
+  "independent_pre_C_reviews": {
+    "engineering_review.md": "40035736090b2f40f66d8730adda36943e0ab81b8961a453ca8a40426960d11e",
+    "scientific_review.md": "3a24eb9c4b0a99f1c9228fb46c88fa4c9cff1b3e75746942ac5a160fb310323a"
+  },
+  "mission": "P12-FINAL-PRERELEASE-CONTROLS-1",
+  "next_step_after_human_approval": "Issue C-only permit and execute real_C once; stop any required failure; seal only if all registered gates pass; no D progression.",
+  "no_workaround_or_retry": true,
+  "real_D_approval_issuer_or_entitlement_created": false,
+  "required_human_action": "Explicit approval of one frozen C-only calibration using reviewed snapshot dc48694e8c42843bc8923660d38dc5cc816eff9b2ebefe9bd2f6b36c33ef13d7. No real D permission.",
+  "snapshot_sha256": "dc48694e8c42843bc8923660d38dc5cc816eff9b2ebefe9bd2f6b36c33ef13d7",
+  "verified_baseline_count_after_git_gate": 63,
+  "warn_count": 1
+}

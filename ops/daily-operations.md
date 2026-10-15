@@ -1,3 +1,19 @@
+## Current mission: P12-FINAL-PRERELEASE-CONTROLS-1
+
+State: WAIT_FOR_HUMAN_INPUT. Engineering controls E0-E3 PASS; real C unexecuted.
+BASE: cbf3ef5b69c2fe8ba6720d32eb5a031194dcd74f.
+Snapshot: dc48694e8c42843bc8923660d38dc5cc816eff9b2ebefe9bd2f6b36c33ef13d7.
+Independent scientific and engineering reviews approved conditional C only.
+29 science/calibration and29 controller native oracles PASS; role/exit/cleanup PASS.
+Automatic approval rejected E4 before CreateProcess; no C-only permit/job/seal exists.
+No workaround or retry. Human must approve exactly one frozen C-only execution.
+ENGINEERING_CONTROL_PASS=TRUE; REAL_C_CALIBRATION_PASS=FALSE.
+D_RELEASE_CONSUMED=FALSE; D_EVALUATION_EXECUTED=FALSE.
+All67 requirements retained;4 real-C items human-blocked; Git gate verified by subsequent remote readback.
+Evidence: evidence/2026-10-14/p12-final-prerelease-controls-1/; ../paper12_controls1/HANDOFF.md.
+All original Stage1 FAIL/M4 INCONCLUSIVE and prior evidence preserved unchanged below.
+Do not unlock or evaluate real D; do not resume model competition.
+
 # Current mission: P12-PREDICTIVE-V2-FINAL-VALIDATION-1
 
 BASE fa32add453326aca87eebe9dc5d237b6e4419f79. WAIT_FOR_HUMAN_INPUT after critical Stage 1 prerelease failure. Independent custody/scientific reviews HOLD: no independently enforceable exactly-once D controller/ledger, and no C-only/full-sensitivity-state calibration runner. STOP honored; no repair after the failed critical gate, C exports/fits 0, D release/assessment 0. All four final contrasts INCONCLUSIVE DUE TO FAILED REQUIRED GATE; effects/p-values/intervals/nulls not computed. Historical M4 failures, development paper, source/models and all scientific thresholds unchanged. Public-only audit/reproduction and archive-only origin/test Git closure; external receipt binds exact commit/readback/clean state. Next requires separately authorized pre-release enforcement engineering without consuming D. Evidence paper12_finalv2/CLOSEOUT.md and ops/evidence/2026-10-14/p12-predictive-v2-final-validation-1. All historical bytes follow unchanged.

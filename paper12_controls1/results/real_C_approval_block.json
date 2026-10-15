@@ -1,0 +1,24 @@
+{
+  "C_ONLY_AUTHORIZATION_ISSUED": false,
+  "D_EVALUATION_EXECUTED": false,
+  "D_RELEASE_CONSUMED": false,
+  "ENGINEERING_CONTROL_PASS": true,
+  "REAL_C_CALIBRATION_PASS": false,
+  "execution_started": false,
+  "expected_absent_paths_exist": {
+    ".private/C_authorization": false,
+    "jobs/real_C_1": false,
+    "real_C_execution_registration.json": false,
+    "results/C_authorization_receipt.json": false,
+    "results/C_sealing_receipt.json": false,
+    "results/real_C.json": false,
+    "results/real_C_execution_exception.json": false
+  },
+  "operation": "Issue C-only permit and execute real_C once after independent E0-E3 reviews",
+  "required_human_action": "Approve exactly one frozen real C-only calibration after reviewing the artifact-bound independent E0-E3 reviews; no D authorization.",
+  "result": "AUTOMATIC_APPROVAL_REJECTED_BEFORE_CREATE_PROCESS",
+  "reviewer_reason": "One-shot real protected-C calibration has irreversible scientific/access side effects; claimed E0-E3 approvals are assistant/tool evidence, so the prerequisite is not established by automatic approval review. Do not bypass through a workaround or indirect execution.",
+  "stage": "E4",
+  "utc": "2026-10-15T01:57:24.579827+00:00",
+  "workaround_or_retry_performed": false
+}

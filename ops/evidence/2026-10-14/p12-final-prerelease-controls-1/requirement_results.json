@@ -1,0 +1,550 @@
+{
+  "baseline_requirement_count": 67,
+  "blocked_human_count": 4,
+  "final_git_gate_binding": "REQ-066 is verified only by the actual subsequent remote-readback receipt; this table is a candidate closeout declaration, not a pre-push claim",
+  "mission": "P12-FINAL-PRERELEASE-CONTROLS-1",
+  "required_behaviors_silently_reduced": 0,
+  "required_items_omitted": 0,
+  "requirements": [
+    {
+      "evidence": "branch_preflight.json; exact HEAD/origin-test readback and clean initial tree",
+      "id": "REQ-001",
+      "requirement": "Verify exact BASE and origin/test; preserve dirty work",
+      "stage": "E0",
+      "status": "VERIFIED",
+      "verification_method": "branch_preflight.json; exact HEAD/origin-test readback and clean initial tree"
+    },
+    {
+      "evidence": "preservation_manifest.json; all prior tracked-byte SHA256 identities",
+      "id": "REQ-002",
+      "requirement": "Preserve historical final Stage1 FAIL and every scientific failure",
+      "stage": "E0",
+      "status": "VERIFIED",
+      "verification_method": "preservation_manifest.json; all prior tracked-byte SHA256 identities"
+    },
+    {
+      "evidence": "prospective_registration.json source hashes; original hypotheses and final plan",
+      "id": "REQ-003",
+      "requirement": "Preserve development evidence, frozen hypotheses and acceptance rules",
+      "stage": "E0",
+      "status": "VERIFIED",
+      "verification_method": "prospective_registration.json source hashes; original hypotheses and final plan"
+    },
+    {
+      "evidence": "frozen animals/trials/units identities; metadata-only cohort checks",
+      "id": "REQ-004",
+      "requirement": "Preserve source identities,26mouse allocation and13final identities",
+      "stage": "E0",
+      "status": "VERIFIED",
+      "verification_method": "frozen animals/trials/units identities; metadata-only cohort checks"
+    },
+    {
+      "evidence": "prospective_registration.json timestamp and 60 frozen upstream hashes",
+      "id": "REQ-005",
+      "requirement": "Register original source/protocol hashes before implementation",
+      "stage": "E0",
+      "status": "VERIFIED",
+      "verification_method": "prospective_registration.json timestamp and 60 frozen upstream hashes"
+    },
+    {
+      "evidence": "SECURITY_ARCHITECTURE.md roles; native actual SID/token/creation identity proofs",
+      "id": "REQ-006",
+      "requirement": "Define custodian,approval issuer,release controller,C worker and final principal",
+      "stage": "E0",
+      "status": "VERIFIED",
+      "verification_method": "SECURITY_ARCHITECTURE.md roles; native actual SID/token/creation identity proofs"
+    },
+    {
+      "evidence": "SECURITY_ARCHITECTURE.md and SEALING_V2.md trust limitations",
+      "id": "REQ-007",
+      "requirement": "Define threat model and administrator/operator limitations",
+      "stage": "E0",
+      "status": "VERIFIED",
+      "verification_method": "SECURITY_ARCHITECTURE.md and SEALING_V2.md trust limitations"
+    },
+    {
+      "evidence": "release_control.Controller state machine; native transition regressions",
+      "id": "REQ-008",
+      "requirement": "Freeze controller state machine and realm separation",
+      "stage": "E0",
+      "status": "VERIFIED",
+      "verification_method": "release_control.Controller state machine; native transition regressions"
+    },
+    {
+      "evidence": "exclusive Windows lock, durable fences, intent/consumed hash chain and broker",
+      "id": "REQ-009",
+      "requirement": "Freeze exactly-once ledger durability and failure semantics",
+      "stage": "E0",
+      "status": "VERIFIED",
+      "verification_method": "exclusive Windows lock, durable fences, intent/consumed hash chain and broker"
+    },
+    {
+      "evidence": "E0 registered test groups; unchanged 67-item baseline",
+      "id": "REQ-010",
+      "requirement": "Register atomic tests and required evidence before implementation",
+      "stage": "E0",
+      "status": "VERIFIED",
+      "verification_method": "E0 registered test groups; unchanged 67-item baseline"
+    },
+    {
+      "evidence": "calibration_worker exact C-only NPZ schema plus actual native denial proof",
+      "id": "REQ-011",
+      "requirement": "Isolated C worker reads C partitions only",
+      "stage": "E1",
+      "status": "VERIFIED",
+      "verification_method": "calibration_worker exact C-only NPZ schema plus actual native denial proof"
+    },
+    {
+      "evidence": "worker source excludes D loader; no-read D access-control checks",
+      "id": "REQ-012",
+      "requirement": "No D array loader or shared development evaluation utility",
+      "stage": "E1",
+      "status": "VERIFIED",
+      "verification_method": "worker source excludes D loader; no-read D access-control checks"
+    },
+    {
+      "evidence": "real_C.derive_C exact frozen timestamp-QC provenance and count/QC parity",
+      "id": "REQ-013",
+      "requirement": "Bind frozen physiological C QC with exact ISI/source provenance",
+      "stage": "E1",
+      "status": "VERIFIED",
+      "verification_method": "real_C.derive_C exact frozen timestamp-QC provenance and count/QC parity"
+    },
+    {
+      "evidence": "validate_arrays exact locked C trials, condition coverage and 20 x100ms bins",
+      "id": "REQ-014",
+      "requirement": "Apply unchanged C trial masks and100ms counts",
+      "stage": "E1",
+      "status": "VERIFIED",
+      "verification_method": "validate_arrays exact locked C trials, condition coverage and 20 x100ms bins"
+    },
+    {
+      "evidence": "real_C salted selection; independent roster/unit-order verification",
+      "id": "REQ-015",
+      "requirement": "Apply salted unit identities and exact matching contract",
+      "stage": "E1",
+      "status": "VERIFIED",
+      "verification_method": "real_C salted selection; independent roster/unit-order verification"
+    },
+    {
+      "evidence": "private prospective roster before any optimizer; coverage-failure regression",
+      "id": "REQ-016",
+      "requirement": "Audit13mice mandatory sensitivity coverage before any fitting",
+      "stage": "E1",
+      "status": "VERIFIED",
+      "verification_method": "private prospective roster before any optimizer; coverage-failure regression"
+    },
+    {
+      "evidence": "frozen raw/scale/transform/accepted_fit source hashes and oracle tests",
+      "id": "REQ-017",
+      "requirement": "Fit C-only scalers and five frozen nested GLMs",
+      "stage": "E1",
+      "status": "VERIFIED",
+      "verification_method": "frozen raw/scale/transform/accepted_fit source hashes and oracle tests"
+    },
+    {
+      "evidence": "fit_n flattened fullROI N; stored all 78 seed attempts on complete cohort",
+      "id": "REQ-018",
+      "requirement": "N is one flattened fullROI fit per frozen seed11/23/37",
+      "stage": "E1",
+      "status": "VERIFIED",
+      "verification_method": "fit_n flattened fullROI N; stored all 78 seed attempts on complete cohort"
+    },
+    {
+      "evidence": "fit_n exact original RNG/options/bounds/ridge/objective; synthetic failed-attempt regression",
+      "id": "REQ-019",
+      "requirement": "Preserve N ridge .1 and exact initialization/options/budgets",
+      "stage": "E1",
+      "status": "VERIFIED",
+      "verification_method": "fit_n exact original RNG/options/bounds/ridge/objective; synthetic failed-attempt regression"
+    },
+    {
+      "evidence": "all3seed mean exact array check and independent endpoint certificate",
+      "id": "REQ-020",
+      "requirement": "Use coefficient mean of all3N seeds with independent certificate",
+      "stage": "E1",
+      "status": "VERIFIED",
+      "verification_method": "all3seed mean exact array check and independent endpoint certificate"
+    },
+    {
+      "evidence": "original outward-gradient PG at analytical and AD endpoints; near-bound regression",
+      "id": "REQ-021",
+      "requirement": "Original outward-gradient PG<=.001 for every required endpoint",
+      "stage": "E1",
+      "status": "VERIFIED",
+      "verification_method": "original outward-gradient PG at analytical and AD endpoints; near-bound regression"
+    },
+    {
+      "evidence": "independent AD errors and objective checks; fixed-step synthetic FD oracles",
+      "id": "REQ-022",
+      "requirement": "Independent AD and original numerical tolerance<=1e-5",
+      "stage": "E1",
+      "status": "VERIFIED",
+      "verification_method": "independent AD errors and objective checks; fixed-step synthetic FD oracles"
+    },
+    {
+      "evidence": "started/exception/checkpoint journals and no-retry scientific failure stop",
+      "id": "REQ-023",
+      "requirement": "Retain each failed attempt and stop required numerical failure",
+      "stage": "E1",
+      "status": "VERIFIED",
+      "verification_method": "started/exception/checkpoint journals and no-retry scientific failure stop"
+    },
+    {
+      "evidence": "complete_states.npz every six-model case; full byte/shape/bounds/finite checks",
+      "id": "REQ-024",
+      "requirement": "Freeze all six model coefficients for every eligible view",
+      "stage": "E1",
+      "status": "VERIFIED",
+      "verification_method": "complete_states.npz every six-model case; full byte/shape/bounds/finite checks"
+    },
+    {
+      "evidence": "private input/QC/metadata/roster seal; every view scaler and ordered IDs/masks",
+      "id": "REQ-025",
+      "requirement": "Freeze every view scaler,ordered units,trial masks and metadata",
+      "stage": "E1",
+      "status": "VERIFIED",
+      "verification_method": "private input/QC/metadata/roster seal; every view scaler and ordered IDs/masks"
+    },
+    {
+      "evidence": "reused rows exact coefficient/scaler trace to original primary; changed-pool refits",
+      "id": "REQ-026",
+      "requirement": "Certify unchanged O/N/NH reuse and changed-pool NP/F/OHP fits",
+      "stage": "E1",
+      "status": "VERIFIED",
+      "verification_method": "reused rows exact coefficient/scaler trace to original primary; changed-pool refits"
+    },
+    {
+      "evidence": "version2 complete-state manifest; source/runtime/native launch/all-attempt bindings",
+      "id": "REQ-027",
+      "requirement": "Complete artifact-bound calibration manifest before D request",
+      "stage": "E1",
+      "status": "VERIFIED",
+      "verification_method": "version2 complete-state manifest; source/runtime/native launch/all-attempt bindings"
+    },
+    {
+      "evidence": "signed immutable artifact roster; snapshot and actual launch code/runtime hashes",
+      "id": "REQ-028",
+      "requirement": "Bind protocol/source/runtime/controller/analysis code hashes",
+      "stage": "E2",
+      "status": "VERIFIED",
+      "verification_method": "signed immutable artifact roster; snapshot and actual launch code/runtime hashes"
+    },
+    {
+      "evidence": "original 13 final identities and locked D metadata only; no D neural values",
+      "id": "REQ-029",
+      "requirement": "Bind exact13final identities and D partition manifest",
+      "stage": "E2",
+      "status": "VERIFIED",
+      "verification_method": "original 13 final identities and locked D metadata only; no D neural values"
+    },
+    {
+      "evidence": "strict complete-state validator; empty/missing/reordered certificate regressions",
+      "id": "REQ-030",
+      "requirement": "Bind verified complete C states and all relevant reviews",
+      "stage": "E2",
+      "status": "VERIFIED",
+      "verification_method": "strict complete-state validator; empty/missing/reordered certificate regressions"
+    },
+    {
+      "evidence": "held native process identity; exact one-shot hypotheses/specification binding",
+      "id": "REQ-031",
+      "requirement": "Bind approved actual principal and exact one-shot specification",
+      "stage": "E2",
+      "status": "VERIFIED",
+      "verification_method": "held native process identity; exact one-shot hypotheses/specification binding"
+    },
+    {
+      "evidence": "Ed25519 unique authorization and separate real/synthetic trust domains",
+      "id": "REQ-032",
+      "requirement": "Bind unique signed authorization ID and realm/key trust root",
+      "stage": "E2",
+      "status": "VERIFIED",
+      "verification_method": "Ed25519 unique authorization and separate real/synthetic trust domains"
+    },
+    {
+      "evidence": "native exclusive ledger lock; flushed append/fence/intent/consumed before capability",
+      "id": "REQ-033",
+      "requirement": "Exclusive durable append-only consumption BEFORE capability grant",
+      "stage": "E2",
+      "status": "VERIFIED",
+      "verification_method": "native exclusive ledger lock; flushed append/fence/intent/consumed before capability"
+    },
+    {
+      "evidence": "process-kill interruption tests; permanent used/interrupted fences",
+      "id": "REQ-034",
+      "requirement": "No entitlement restoration after consumption/crash",
+      "stage": "E2",
+      "status": "VERIFIED",
+      "verification_method": "process-kill interruption tests; permanent used/interrupted fences"
+    },
+    {
+      "evidence": "actual concurrent/duplicate native controller tests and duplicate broker denial",
+      "id": "REQ-035",
+      "requirement": "Deny duplicate and concurrent release",
+      "stage": "E2",
+      "status": "VERIFIED",
+      "verification_method": "actual concurrent/duplicate native controller tests and duplicate broker denial"
+    },
+    {
+      "evidence": "replay/signature/hash/code-artifact denial tests",
+      "id": "REQ-036",
+      "requirement": "Deny replay and changed code/calibration artifacts",
+      "stage": "E2",
+      "status": "VERIFIED",
+      "verification_method": "replay/signature/hash/code-artifact denial tests"
+    },
+    {
+      "evidence": "missing/malformed/tampered/partial log/genesis/tombstone denial tests",
+      "id": "REQ-037",
+      "requirement": "Deny tampered/missing/truncated ledger or tombstones",
+      "stage": "E2",
+      "status": "VERIFIED",
+      "verification_method": "missing/malformed/tampered/partial log/genesis/tombstone denial tests"
+    },
+    {
+      "evidence": "OS token/SID held creation identity; host principal and substitution denied",
+      "id": "REQ-038",
+      "requirement": "Deny unauthorized principal and PID/token substitution",
+      "stage": "E2",
+      "status": "VERIFIED",
+      "verification_method": "OS token/SID held creation identity; host principal and substitution denied"
+    },
+    {
+      "evidence": "missing independent review, incomplete N/model/provenance and exact unit-row tests",
+      "id": "REQ-039",
+      "requirement": "Deny incomplete C states and missing independent approval",
+      "stage": "E2",
+      "status": "VERIFIED",
+      "verification_method": "missing independent review, incomplete N/model/provenance and exact unit-row tests"
+    },
+    {
+      "evidence": "external fence survives restored/truncated ledger; signed trusted root, no flags",
+      "id": "REQ-040",
+      "requirement": "Deny partial rollback; no flags/names/self-declared permission",
+      "stage": "E2",
+      "status": "VERIFIED",
+      "verification_method": "external fence survives restored/truncated ledger; signed trusted root, no flags"
+    },
+    {
+      "evidence": "actual zero-capability token enforcement and explicit hostile-admin exclusion",
+      "id": "REQ-041",
+      "requirement": "Disclose enforcement limits; STOP if actual boundary unenforceable",
+      "stage": "E2",
+      "status": "VERIFIED",
+      "verification_method": "actual zero-capability token enforcement and explicit hostile-admin exclusion"
+    },
+    {
+      "evidence": "synthetic D canary denied to C/controller; post-consumption target-only capability",
+      "id": "REQ-042",
+      "requirement": "Synthetic C/D partition canaries and realm separation",
+      "stage": "E3",
+      "status": "VERIFIED",
+      "verification_method": "synthetic D canary denied to C/controller; post-consumption target-only capability"
+    },
+    {
+      "evidence": "native source/key/open/network/host-memory and DACL tests",
+      "id": "REQ-043",
+      "requirement": "Actual source/key/ACL/network denial under Windows principal",
+      "stage": "E3",
+      "status": "VERIFIED",
+      "verification_method": "native source/key/open/network/host-memory and DACL tests"
+    },
+    {
+      "evidence": "issuer key denied to controller and final principal; ledger denied before/after grant",
+      "id": "REQ-044",
+      "requirement": "Worker denied issuer key/ledger; controller denied issuer key",
+      "stage": "E3",
+      "status": "VERIFIED",
+      "verification_method": "issuer key denied to controller and final principal; ledger denied before/after grant"
+    },
+    {
+      "evidence": "native child exits73 at all registered interruption points; no valid failure grant",
+      "id": "REQ-045",
+      "requirement": "Ledger crash/interruption tests at every state transition",
+      "stage": "E3",
+      "status": "VERIFIED",
+      "verification_method": "native child exits73 at all registered interruption points; no valid failure grant"
+    },
+    {
+      "evidence": "fresh native single-consumer test plus separate duplicate capability denial",
+      "id": "REQ-046",
+      "requirement": "Concurrent and duplicate-release denial integration tests",
+      "stage": "E3",
+      "status": "VERIFIED",
+      "verification_method": "fresh native single-consumer test plus separate duplicate capability denial"
+    },
+    {
+      "evidence": "full-state roundtrip, provenance, certificates and independent roster validation",
+      "id": "REQ-047",
+      "requirement": "Full calibration state completeness and roundtrip tests",
+      "stage": "E3",
+      "status": "VERIFIED",
+      "verification_method": "full-state roundtrip, provenance, certificates and independent roster validation"
+    },
+    {
+      "evidence": "29 fresh mathematical/selection/calibration oracles, including six synthetic fits",
+      "id": "REQ-048",
+      "requirement": "Original PG/AD/fixed FD and objective/nesting/scaler parity tests",
+      "stage": "E3",
+      "status": "VERIFIED",
+      "verification_method": "29 fresh mathematical/selection/calibration oracles, including six synthetic fits"
+    },
+    {
+      "evidence": "hash/schema/traversal/reparse/hardlink/real-synthetic-mode denial tests",
+      "id": "REQ-049",
+      "requirement": "Tamper/hash/schema/reparse/substitution rejection tests",
+      "stage": "E3",
+      "status": "VERIFIED",
+      "verification_method": "hash/schema/traversal/reparse/hardlink/real-synthetic-mode denial tests"
+    },
+    {
+      "evidence": "native PowerShell Synthetic full cohort plus repaired SavedSynthetic reproduction",
+      "id": "REQ-050",
+      "requirement": "Native PowerShell synthetic end-to-end reproduction",
+      "stage": "E3",
+      "status": "VERIFIED",
+      "verification_method": "native PowerShell Synthetic full cohort plus repaired SavedSynthetic reproduction"
+    },
+    {
+      "evidence": "artifact-bound scientific_review.md and engineering_review.md before C permit",
+      "id": "REQ-051",
+      "requirement": "Independent engineering and scientific review before real C",
+      "stage": "E3",
+      "status": "VERIFIED",
+      "verification_method": "artifact-bound scientific_review.md and engineering_review.md before C permit"
+    },
+    {
+      "evidence": "all failed engineering attempts/receipts retained; injected valid-release count0",
+      "id": "REQ-052",
+      "requirement": "Injected failures preserved and never counted valid release",
+      "stage": "E3",
+      "status": "VERIFIED",
+      "verification_method": "all failed engineering attempts/receipts retained; injected valid-release count0"
+    },
+    {
+      "evidence": "arm_C signed C-only permit requires exact reviewed snapshot and E3 receipts",
+      "id": "REQ-053",
+      "requirement": "Real C permitted only after ALL E0-E3 gates PASS",
+      "stage": "E4",
+      "status": "VERIFIED",
+      "verification_method": "arm_C signed C-only permit requires exact reviewed snapshot and E3 receipts"
+    },
+    {
+      "evidence": "paper12_controls1/results/real_C_approval_block.json",
+      "id": "REQ-054",
+      "requirement": "Execute all13finalmice C-only under trusted custody",
+      "stage": "E4",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification_method": "real_C receipt/gate; all13 C-only coverage gate before any optimization"
+    },
+    {
+      "evidence": "paper12_controls1/results/real_C_approval_block.json",
+      "id": "REQ-055",
+      "requirement": "Preserve per-mouse/subfield evidence and all3N seeds",
+      "stage": "E4",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification_method": "per-case certificates, all3 N seed journals, complete private states or exact failure stop"
+    },
+    {
+      "evidence": "paper12_controls1/results/real_C_approval_block.json",
+      "id": "REQ-056",
+      "requirement": "Require unchanged physiology/numerics/minimum mice/views",
+      "stage": "E4",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification_method": "original C physiology/numerics/mandatory paired coverage; no relaxation"
+    },
+    {
+      "evidence": "paper12_controls1/results/real_C_approval_block.json",
+      "id": "REQ-057",
+      "requirement": "Seal full C state with exact model/policy/artifact hashes",
+      "stage": "E4",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification_method": "protected complete state seal and C_sealing_receipt if all required gates pass"
+    },
+    {
+      "evidence": "failure exit stops real C without scientific retry or D entitlement",
+      "id": "REQ-058",
+      "requirement": "STOP real C failure without D entitlement consumption",
+      "stage": "E4",
+      "status": "VERIFIED",
+      "verification_method": "failure exit stops real C without scientific retry or D entitlement"
+    },
+    {
+      "evidence": "prospective registration, architecture, 92-file snapshot and complete control sources",
+      "id": "REQ-059",
+      "requirement": "Deliver architecture,implementation,ledger and prospective registration",
+      "stage": "E5",
+      "status": "VERIFIED",
+      "verification_method": "prospective registration, architecture, 92-file snapshot and complete control sources"
+    },
+    {
+      "evidence": "lossless numerical archives, role proofs, signed synthetic ledgers and tests",
+      "id": "REQ-060",
+      "requirement": "Deliver synthetic and actual-principal evidence",
+      "stage": "E5",
+      "status": "VERIFIED",
+      "verification_method": "lossless numerical archives, role proofs, signed synthetic ledgers and tests"
+    },
+    {
+      "evidence": "independent pre-C/final reviews; Saved/Synthetic/SavedSynthetic PowerShell modes",
+      "id": "REQ-061",
+      "requirement": "Deliver independent review and one-command reproduction",
+      "stage": "E5",
+      "status": "VERIFIED",
+      "verification_method": "independent pre-C/final reviews; Saved/Synthetic/SavedSynthetic PowerShell modes"
+    },
+    {
+      "evidence": "HANDOFF.json explicit ENGINEERING_CONTROL_PASS",
+      "id": "REQ-062",
+      "requirement": "Report ENGINEERING_CONTROL_PASS separately",
+      "stage": "E5",
+      "status": "VERIFIED",
+      "verification_method": "HANDOFF.json explicit ENGINEERING_CONTROL_PASS"
+    },
+    {
+      "evidence": "HANDOFF.json explicit REAL_C_CALIBRATION_PASS, separate scientific condition",
+      "id": "REQ-063",
+      "requirement": "Report REAL_C_CALIBRATION_PASS separately",
+      "stage": "E5",
+      "status": "VERIFIED",
+      "verification_method": "HANDOFF.json explicit REAL_C_CALIBRATION_PASS, separate scientific condition"
+    },
+    {
+      "evidence": "all launch/result/handoff D_RELEASE_CONSUMED FALSE; no real issuance or broker call",
+      "id": "REQ-064",
+      "requirement": "D_RELEASE_CONSUMED must remain FALSE",
+      "stage": "E5",
+      "status": "VERIFIED",
+      "verification_method": "all launch/result/handoff D_RELEASE_CONSUMED FALSE; no real issuance or broker call"
+    },
+    {
+      "evidence": "no D scorer/evaluation execution; handoff and saved reproduction FALSE",
+      "id": "REQ-065",
+      "requirement": "D_EVALUATION_EXECUTED must remain FALSE",
+      "stage": "E5",
+      "status": "VERIFIED",
+      "verification_method": "no D scorer/evaluation execution; handoff and saved reproduction FALSE"
+    },
+    {
+      "evidence": "Final independent closeout reviews, candidate manifest, normal push and external Git readback receipt after commit; verification deferred until actual push",
+      "id": "REQ-066",
+      "requirement": "Reviewed scoped Git commit,origin/test readback and clean gate",
+      "stage": "E5",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "verification_method": "exact mission staging; reviewed commit, normal origin/test push and external readback receipt"
+    },
+    {
+      "evidence": "final reviewed handoff; no automatic D progression; separate human authorization required",
+      "id": "REQ-067",
+      "requirement": "STOP after handoff; no automatic D progression",
+      "stage": "E5",
+      "status": "VERIFIED",
+      "verification_method": "final reviewed handoff; no automatic D progression; separate human authorization required"
+    }
+  ],
+  "unresolved_shrink_risk": 0,
+  "verified_baseline_count": 62,
+  "pending_git_gate_count": 1,
+  "verified_baseline_count_after_actual_git_readback": 63
+}
