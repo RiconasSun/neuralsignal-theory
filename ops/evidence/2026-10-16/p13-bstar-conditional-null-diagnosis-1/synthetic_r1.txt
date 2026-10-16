@@ -1,0 +1,111 @@
+test_exact_row_identity_one_ulp_and_nonfinite_denial (paper13_bstar_diag1.test_diagnostics.DiagnosticTests.test_exact_row_identity_one_ulp_and_nonfinite_denial) ... ok
+test_exclusive_attempt_duplicate_and_concurrent (paper13_bstar_diag1.test_diagnostics.DiagnosticTests.test_exclusive_attempt_duplicate_and_concurrent) ... ERROR
+test_existing_trace_refused (paper13_bstar_diag1.test_diagnostics.DiagnosticTests.test_existing_trace_refused) ... ok
+test_float64_exp_boundary (paper13_bstar_diag1.test_diagnostics.DiagnosticTests.test_float64_exp_boundary) ... ok
+test_inverse_scaling_independent_formula (paper13_bstar_diag1.test_diagnostics.DiagnosticTests.test_inverse_scaling_independent_formula) ... ok
+test_manual_lag_sums_reset_and_future_canary (paper13_bstar_diag1.test_diagnostics.DiagnosticTests.test_manual_lag_sums_reset_and_future_canary) ... ok
+test_missing_review_denied_before_rng (paper13_bstar_diag1.test_diagnostics.DiagnosticTests.test_missing_review_denied_before_rng) ... ERROR
+test_observer_does_not_change_draws_or_rng (paper13_bstar_diag1.test_diagnostics.DiagnosticTests.test_observer_does_not_change_draws_or_rng) ... ok
+test_other_or_final_mouse_denied_before_saved_io (paper13_bstar_diag1.test_diagnostics.DiagnosticTests.test_other_or_final_mouse_denied_before_saved_io) ... ok
+test_synthetic_feedback_crossing_keeps_finite_cause (paper13_bstar_diag1.test_diagnostics.DiagnosticTests.test_synthetic_feedback_crossing_keeps_finite_cause) ... ok
+test_zero_sd_stays_zero_no_division_substitution (paper13_bstar_diag1.test_diagnostics.DiagnosticTests.test_zero_sd_stays_zero_no_division_substitution) ... ok
+
+======================================================================
+ERROR: test_exclusive_attempt_duplicate_and_concurrent (paper13_bstar_diag1.test_diagnostics.DiagnosticTests.test_exclusive_attempt_duplicate_and_concurrent)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper13_bstar_diag1\test_diagnostics.py", line 116, in test_exclusive_attempt_duplicate_and_concurrent
+    with ThreadPoolExecutor(max_workers=2) as pool: result = list(pool.map(attempt, range(2)))
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\concurrent\futures\_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\concurrent\futures\_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\concurrent\futures\_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper13_bstar_diag1\test_diagnostics.py", line 114, in attempt
+    r.consume(path, {'synthetic': True}); return 'consumed'
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper13_bstar_diag1\replay.py", line 61, in consume
+    with path.open('xb') as stream:
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{b193b234-5bc9-4e37-8b5e-2afb54fe1e7f}\\AC\\Temp\\tmpg1rhwkik\\ATTEMPT.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{b193b234-5bc9-4e37-8b5e-2afb54fe1e7f}\\AC\\Temp\\tmpg1rhwkik'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper13_bstar_diag1\test_diagnostics.py", line 110, in test_exclusive_attempt_duplicate_and_concurrent
+    with tempfile.TemporaryDirectory() as tmp:
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 943, in __exit__
+    self.cleanup()
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{b193b234-5bc9-4e37-8b5e-2afb54fe1e7f}\\AC\\Temp\\tmpg1rhwkik'
+
+======================================================================
+ERROR: test_missing_review_denied_before_rng (paper13_bstar_diag1.test_diagnostics.DiagnosticTests.test_missing_review_denied_before_rng)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{b193b234-5bc9-4e37-8b5e-2afb54fe1e7f}\\AC\\Temp\\tmput3_97_g'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper13_bstar_diag1\test_diagnostics.py", line 127, in test_missing_review_denied_before_rng
+    with tempfile.TemporaryDirectory() as tmp, patch.object(r, 'P', Path(tmp)):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 943, in __exit__
+    self.cleanup()
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{b193b234-5bc9-4e37-8b5e-2afb54fe1e7f}\\AC\\Temp\\tmput3_97_g'
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.137s
+
+FAILED (errors=2)

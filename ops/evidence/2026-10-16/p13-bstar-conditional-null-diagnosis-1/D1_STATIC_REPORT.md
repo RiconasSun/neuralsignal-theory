@@ -1,0 +1,7 @@
+# D1 static determination
+
+Frozen B2 computes three strictly past own-unit count sums, resets each epoch, uses A-only mean/population-SD and unscaled intercept, then evaluates the Poisson log-link. Generator loops bins0..29, calculates eta from already assigned bins, exponentiates and only then samples/assigns current counts; all warm-up bins are simulated. No nuisance/current-count/cross-unit term enters B2. Raw-coordinate slopes theta/sd and effective intercept theta0-sum(theta*mean/sd) reproduce the saved-input log-rates; zero SD remains zero. No demonstrated implementation/protocol discrepancy.
+
+Saved D1_STATIC.json contains original standardized coefficients, A scalers, inverse slopes, observed-E feature/rate ranges and independent scalar-loop formula checks for each of the four prefix mice. Coefficient bounds do not impose a hard upper bound on generated history counts or exponential means. log(float64max) is a numerical boundary, not a stability certificate.
+
+Static source/parameter evidence cannot determine the actual failed bin, unit or generated history prefix, which the original failure did not serialize. A feedback sign alone cannot prove the realized mechanism. D1 therefore cannot establish the full root cause. The prospectively registered single exact failed-prefix replay is needed; no simulation or RNG draw has been performed in D1. Original numerical STOP and6/9coverage INCONCLUSIVE restrictions remain unchanged.

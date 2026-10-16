@@ -1,3 +1,12 @@
+# Current mission: P13-BSTAR-CONDITIONAL-NULL-DIAGNOSIS-1
+
+Diagnosis DOCUMENTED_GENERATOR_INSTABILITY; engineering diagnosis only, original M6 FAILED_UNAVAILABLE and broad scientific claims INCONCLUSIVE. ExactBASEc7ae3d4753f94ba50134d1f15a4a62dcb101d842. Original B2source/scalers/math unchanged. One reviewed exact failed-prefix diagnostic matched all9scores for3mice and stopped156130replicate0/unit191/epoch94/bin15: previouscount9702754 leads eta3478515.735>logfloatmax709.783. No new fit, finalCfit, finalDoutcome/scoring/evaluation or scientific null replacement. No retry authorized.
+
+39item diagnostic contract;12bounded synthetic tests/saved prefix audit; independent r2review0openP0/P1. Failed tests/reviews and exact old artifacts preserved. Proposed descriptive-final option remains NONACTIVE and needs separate prospective owner authorization; that future mission may authorize gated C-to-D progression up front. Original6of9eventcoverage vs8 and every scientific failure remain unchanged. Stop after reviewed diagnostic archive. Current engineeringbug_count0/warn_count0; originalscientificfailureisnotcleared. Actual39of39/Gitcommit/origin-test/fullremotehash/clean only certified by externalclosure_receipt.json, never prospectively by this header.
+
+Report: evidence/2026-10-16/p13-bstar-conditional-null-diagnosis-1/ROOT_CAUSE_REPORT.md. Memo: ../paper13_bstar_diag1/DECISION_MEMO.md. Saved-only: & .\paper13_bstar_diag1\reproduce.ps1. Prior statuses below remain verbatim historical evidence.
+
+---
 # Current P13 status: required numerical STOP
 
 Mission P13-KI-PL-SCIENCE-FIRST-EXECUTION. M6 conditional_Bstar replicate0/mouse156130 failed exp overflow; no retry. Three999Econtrol suites complete, conditional3mouse completions;29973successful/29974attempted/39960planned mouse-replicates. No final C model fits or D neural outcome export/evaluation. Owner B amendment resolved the earlier purpose ambiguity but waived only6vs8coverage, never later numerical failures. All affected broad claims remain INCONCLUSIVE. Full mission/paper/final validation not PASS. Current task WAIT_FOR_HUMAN_INPUT after independent archival closeout; no automatic new protocol. bug_count1(requirednumericalfailure),warn_count2(coverage,missingfinalevidence).

@@ -1,0 +1,7 @@
+# Decision memo
+
+**DOCUMENTED_GENERATOR_INSTABILITY.** One identical diagnostic replay matched3originalmouse score rows exactly and stopped at the original156130replicate0exp failure. Unit191/epoch94/bin15 received lag1count9,702,754; original coefficients produced eta3,478,515.735>log(float64max)709.783. Independent decomposition establishes the realized own-history feedback path. No demonstrated implementation defect, wrong exposure/scaling/update order, analytical-gradient failure or integer overflow.
+
+Original conditional B* null is FAILED / UNAVAILABLE. Original M6 remains failed; diagnostic success cannot supply its missing null or clear the original6/9recent-event coverage failure. No repaired control, second replay, new fit, final C/D or changed threshold is authorized/executed.
+
+Minimum viable next scientific action: owner reviews PROSPECTIVE_DESCRIPTIVE_FINAL_OPTION.md and decides whether the narrower descriptive held-out question remains worthwhile. If so, authorize a separate pre-D null-failure-informed descriptive-final registration with all original models, B*/Sguards, animals, statistics, sensitivities and numerical/source gates; permanently withhold affected broad/confirmatory/validated-temporal claims and disclose both unavailable null and6/9coverage. Independent actual pre-C and pre-D reviews remain required before any future access. If not, retain the current scientific stop and archive existing exploratory evidence. This mission performs neither choice and stops after diagnosis/review/Git handoff.

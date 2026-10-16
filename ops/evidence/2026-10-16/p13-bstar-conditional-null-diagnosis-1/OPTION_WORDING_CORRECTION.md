@@ -1,0 +1,3 @@
+# Prospective option authorization wording correction
+
+Preserve unsuccessful FINAL_REVIEW_r1 and exact old option/freeze/passing saved reproduction in FINAL_REVIEW_r1_OPTION_WORDING.zip. The sole P1 concerned a redundant extra post-C human step in a NONACTIVE future option. Replace only that sentence: one separate future owner authorization may cover conditional C-to-D progression up front, subject to every retained scientific/independent-review gate. This diagnosis still grants no C/D permission. No existing scientific authorization, model, count/scaler, threshold, hypothesis, original failures, replay evidence or numerical diagnostic source changes. No new real replay or experiment. Refresh saved-only identities and obtain focused r2 review.

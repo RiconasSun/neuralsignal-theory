@@ -1,0 +1,487 @@
+{
+  "mission": "P13-BSTAR-CONDITIONAL-NULL-DIAGNOSIS-1",
+  "count": 39,
+  "verified_pre_git_count": 36,
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "phase": "D1",
+      "requirement": "Exact BASE and remote preflight",
+      "status": "VERIFIED",
+      "evidence": [
+        "ROOT_CAUSE_REPORT.md",
+        "D1_STATIC_REPORT.md",
+        "paper13_bstar_diag1/results/D1_STATIC.json",
+        "paper13_bstar_diag1/INPUT_FREEZE.json"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-002",
+      "phase": "D1",
+      "requirement": "Preserve all historical source freezes, failures, partial arrays and verdicts",
+      "status": "VERIFIED",
+      "evidence": [
+        "ROOT_CAUSE_REPORT.md",
+        "D1_STATIC_REPORT.md",
+        "paper13_bstar_diag1/results/D1_STATIC.json",
+        "paper13_bstar_diag1/INPUT_FREEZE.json"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-003",
+      "phase": "D1",
+      "requirement": "Static inspection restricted to frozen code, B2 coefficients/scalers, saved development E inputs, RNG and failure evidence",
+      "status": "VERIFIED",
+      "evidence": [
+        "ROOT_CAUSE_REPORT.md",
+        "D1_STATIC_REPORT.md",
+        "paper13_bstar_diag1/results/D1_STATIC.json",
+        "paper13_bstar_diag1/INPUT_FREEZE.json"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-004",
+      "phase": "D1",
+      "requirement": "Audit exact causal own-history groups and epoch reset",
+      "status": "VERIFIED",
+      "evidence": [
+        "ROOT_CAUSE_REPORT.md",
+        "D1_STATIC_REPORT.md",
+        "paper13_bstar_diag1/results/D1_STATIC.json",
+        "paper13_bstar_diag1/INPUT_FREEZE.json"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-005",
+      "phase": "D1",
+      "requirement": "Audit scaling, zero-SD handling and inverse/raw-coordinate coefficients",
+      "status": "VERIFIED",
+      "evidence": [
+        "ROOT_CAUSE_REPORT.md",
+        "D1_STATIC_REPORT.md",
+        "paper13_bstar_diag1/results/D1_STATIC.json",
+        "paper13_bstar_diag1/INPUT_FREEZE.json"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-006",
+      "phase": "D1",
+      "requirement": "Audit recurrent update order, warm-up and log-rate operation",
+      "status": "VERIFIED",
+      "evidence": [
+        "ROOT_CAUSE_REPORT.md",
+        "D1_STATIC_REPORT.md",
+        "paper13_bstar_diag1/results/D1_STATIC.json",
+        "paper13_bstar_diag1/INPUT_FREEZE.json"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-007",
+      "phase": "D1",
+      "requirement": "Audit feedback magnitudes and float64 exponential boundary",
+      "status": "VERIFIED",
+      "evidence": [
+        "ROOT_CAUSE_REPORT.md",
+        "D1_STATIC_REPORT.md",
+        "paper13_bstar_diag1/results/D1_STATIC.json",
+        "paper13_bstar_diag1/INPUT_FREEZE.json"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-008",
+      "phase": "D1",
+      "requirement": "Compare implementation to registered mathematical B2 generator",
+      "status": "VERIFIED",
+      "evidence": [
+        "ROOT_CAUSE_REPORT.md",
+        "D1_STATIC_REPORT.md",
+        "paper13_bstar_diag1/results/D1_STATIC.json",
+        "paper13_bstar_diag1/INPUT_FREEZE.json"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-009",
+      "phase": "D1",
+      "requirement": "Do not infer mechanism solely from traceback",
+      "status": "VERIFIED",
+      "evidence": [
+        "ROOT_CAUSE_REPORT.md",
+        "D1_STATIC_REPORT.md",
+        "paper13_bstar_diag1/results/D1_STATIC.json",
+        "paper13_bstar_diag1/INPUT_FREEZE.json"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-010",
+      "phase": "D2",
+      "requirement": "Replay only if static evidence cannot establish actual failed-path mechanism",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper13_bstar_diag1/results/replay/RESULT.json",
+        "paper13_bstar_diag1/results/replay/ATTEMPT.json",
+        "paper13_bstar_diag1/results/SAVED_AUDIT.json",
+        "PREREPLAY_REVIEW_r1.md"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-011",
+      "phase": "D2",
+      "requirement": "One exclusive durable diagnostic attempt; no retry after any identity/error stop",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper13_bstar_diag1/results/replay/RESULT.json",
+        "paper13_bstar_diag1/results/replay/ATTEMPT.json",
+        "paper13_bstar_diag1/results/SAVED_AUDIT.json",
+        "PREREPLAY_REVIEW_r1.md"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-012",
+      "phase": "D2",
+      "requirement": "Same original source, inputs, NumPy RNG seed130104 and suite ordering",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper13_bstar_diag1/results/replay/RESULT.json",
+        "paper13_bstar_diag1/results/replay/ATTEMPT.json",
+        "paper13_bstar_diag1/results/SAVED_AUDIT.json",
+        "PREREPLAY_REVIEW_r1.md"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-013",
+      "phase": "D2",
+      "requirement": "Verify exact completed nine-score rows for first3mice before mouse156130",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper13_bstar_diag1/results/replay/RESULT.json",
+        "paper13_bstar_diag1/results/replay/ATTEMPT.json",
+        "paper13_bstar_diag1/results/SAVED_AUDIT.json",
+        "PREREPLAY_REVIEW_r1.md"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-014",
+      "phase": "D2",
+      "requirement": "Stop at original fourth-mouse replicate0 failure; no later mice/replicates",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper13_bstar_diag1/results/replay/RESULT.json",
+        "paper13_bstar_diag1/results/replay/ATTEMPT.json",
+        "paper13_bstar_diag1/results/SAVED_AUDIT.json",
+        "PREREPLAY_REVIEW_r1.md"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-015",
+      "phase": "D2",
+      "requirement": "Record finite per-bin eta/count ranges and responsible unit/history contributions",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper13_bstar_diag1/results/replay/RESULT.json",
+        "paper13_bstar_diag1/results/replay/ATTEMPT.json",
+        "paper13_bstar_diag1/results/SAVED_AUDIT.json",
+        "PREREPLAY_REVIEW_r1.md"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-016",
+      "phase": "D2",
+      "requirement": "No alternate seed/draw, clipping, model or parameter change",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper13_bstar_diag1/results/replay/RESULT.json",
+        "paper13_bstar_diag1/results/replay/ATTEMPT.json",
+        "paper13_bstar_diag1/results/SAVED_AUDIT.json",
+        "PREREPLAY_REVIEW_r1.md"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-017",
+      "phase": "D2",
+      "requirement": "Diagnostic prefix is never a replacement null or original M6 statistic",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper13_bstar_diag1/results/replay/RESULT.json",
+        "paper13_bstar_diag1/results/replay/ATTEMPT.json",
+        "paper13_bstar_diag1/results/SAVED_AUDIT.json",
+        "PREREPLAY_REVIEW_r1.md"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-018",
+      "phase": "D2",
+      "requirement": "Exact identity disagreement stops without scientific continuation",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper13_bstar_diag1/results/replay/RESULT.json",
+        "paper13_bstar_diag1/results/replay/ATTEMPT.json",
+        "paper13_bstar_diag1/results/SAVED_AUDIT.json",
+        "PREREPLAY_REVIEW_r1.md"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-019",
+      "phase": "D3",
+      "requirement": "Return exactly one permitted grounded diagnosis",
+      "status": "VERIFIED",
+      "evidence": [
+        "ROOT_CAUSE_REPORT.md",
+        "paper13_bstar_diag1/DECISION_MEMO.md",
+        "paper13_bstar_diag1/PROSPECTIVE_DESCRIPTIVE_FINAL_OPTION.md"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-020",
+      "phase": "D3",
+      "requirement": "If defect propose minimal mathematically equivalent prospective repair only",
+      "status": "VERIFIED",
+      "evidence": [
+        "ROOT_CAUSE_REPORT.md",
+        "paper13_bstar_diag1/DECISION_MEMO.md",
+        "paper13_bstar_diag1/PROSPECTIVE_DESCRIPTIVE_FINAL_OPTION.md"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-021",
+      "phase": "D3",
+      "requirement": "If instability original conditional Bstar null stays FAILED_UNAVAILABLE",
+      "status": "VERIFIED",
+      "evidence": [
+        "ROOT_CAUSE_REPORT.md",
+        "paper13_bstar_diag1/DECISION_MEMO.md",
+        "paper13_bstar_diag1/PROSPECTIVE_DESCRIPTIVE_FINAL_OPTION.md"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-022",
+      "phase": "D3",
+      "requirement": "If instability prepare separate prospective descriptive-final protocol option",
+      "status": "VERIFIED",
+      "evidence": [
+        "ROOT_CAUSE_REPORT.md",
+        "paper13_bstar_diag1/DECISION_MEMO.md",
+        "paper13_bstar_diag1/PROSPECTIVE_DESCRIPTIVE_FINAL_OPTION.md"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-023",
+      "phase": "D3",
+      "requirement": "Future option preserves models,Bstar/Sguards,allocation,tests; withholds affected broad claims",
+      "status": "VERIFIED",
+      "evidence": [
+        "ROOT_CAUSE_REPORT.md",
+        "paper13_bstar_diag1/DECISION_MEMO.md",
+        "paper13_bstar_diag1/PROSPECTIVE_DESCRIPTIVE_FINAL_OPTION.md"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-024",
+      "phase": "D3",
+      "requirement": "Preserve6of9recent-event failure and INCONCLUSIVE restriction",
+      "status": "VERIFIED",
+      "evidence": [
+        "ROOT_CAUSE_REPORT.md",
+        "paper13_bstar_diag1/DECISION_MEMO.md",
+        "paper13_bstar_diag1/PROSPECTIVE_DESCRIPTIVE_FINAL_OPTION.md"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-025",
+      "phase": "D3",
+      "requirement": "Uncertain mechanism preserves original numerical STOP and names unresolved question",
+      "status": "VERIFIED",
+      "evidence": [
+        "ROOT_CAUSE_REPORT.md",
+        "paper13_bstar_diag1/DECISION_MEMO.md",
+        "paper13_bstar_diag1/PROSPECTIVE_DESCRIPTIVE_FINAL_OPTION.md"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-026",
+      "phase": "BOUNDARY",
+      "requirement": "No final C fitting or new real model fits",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper13_bstar_diag1/INPUT_FREEZE.json",
+        "paper13_bstar_diag1/results/SAVED_AUDIT.json",
+        "ROOT_CAUSE_REPORT.md"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-027",
+      "phase": "BOUNDARY",
+      "requirement": "No final D outcome access/scoring/evaluation",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper13_bstar_diag1/INPUT_FREEZE.json",
+        "paper13_bstar_diag1/results/SAVED_AUDIT.json",
+        "ROOT_CAUSE_REPORT.md"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-028",
+      "phase": "BOUNDARY",
+      "requirement": "No full control restart or repaired scientific control execution",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper13_bstar_diag1/INPUT_FREEZE.json",
+        "paper13_bstar_diag1/results/SAVED_AUDIT.json",
+        "ROOT_CAUSE_REPORT.md"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-029",
+      "phase": "BOUNDARY",
+      "requirement": "No scientific threshold/hypothesis change or optimizer rescue",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper13_bstar_diag1/INPUT_FREEZE.json",
+        "paper13_bstar_diag1/results/SAVED_AUDIT.json",
+        "ROOT_CAUSE_REPORT.md"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-030",
+      "phase": "BOUNDARY",
+      "requirement": "No dataset search or new cryptographic custody",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper13_bstar_diag1/INPUT_FREEZE.json",
+        "paper13_bstar_diag1/results/SAVED_AUDIT.json",
+        "ROOT_CAUSE_REPORT.md"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-031",
+      "phase": "BOUNDARY",
+      "requirement": "No retroactive M6 or previous-failure PASS",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper13_bstar_diag1/INPUT_FREEZE.json",
+        "paper13_bstar_diag1/results/SAVED_AUDIT.json",
+        "ROOT_CAUSE_REPORT.md"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-032",
+      "phase": "DELIVERY",
+      "requirement": "Root-cause report and exact affected mathematical operation",
+      "status": "VERIFIED",
+      "evidence": [
+        "ROOT_CAUSE_REPORT.md",
+        "synthetic_r3.txt",
+        "paper13_bstar_diag1/DECISION_MEMO.md"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-033",
+      "phase": "DELIVERY",
+      "requirement": "Original vs proposed implementation comparison if applicable",
+      "status": "VERIFIED",
+      "evidence": [
+        "ROOT_CAUSE_REPORT.md",
+        "synthetic_r3.txt",
+        "paper13_bstar_diag1/DECISION_MEMO.md"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-034",
+      "phase": "DELIVERY",
+      "requirement": "Bounded synthetic numerical tests and replay-observer equivalence tests",
+      "status": "VERIFIED",
+      "evidence": [
+        "ROOT_CAUSE_REPORT.md",
+        "synthetic_r3.txt",
+        "paper13_bstar_diag1/DECISION_MEMO.md"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-035",
+      "phase": "DELIVERY",
+      "requirement": "Independent internal review; preserve failed reviews and resolve engineering defects only",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "evidence": [
+        "Pending independent final review / actual external Git closure receipt"
+      ],
+      "verification_method": "No prospective archive PASS"
+    },
+    {
+      "id": "REQ-036",
+      "phase": "DELIVERY",
+      "requirement": "Short decision memo with minimum viable next scientific action",
+      "status": "VERIFIED",
+      "evidence": [
+        "ROOT_CAUSE_REPORT.md",
+        "synthetic_r3.txt",
+        "paper13_bstar_diag1/DECISION_MEMO.md"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-037",
+      "phase": "DELIVERY",
+      "requirement": "One-command saved-only reproduction distinct from one-time replay",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper13_bstar_diag1/reproduce.ps1",
+        "SAVED_REPRODUCTION.txt"
+      ],
+      "verification_method": "Frozen static equations + exactly one matched stopped prefix, bounded synthetic tests and saved-only reconstruction; conditional branches audited without untriggered scientific repair"
+    },
+    {
+      "id": "REQ-038",
+      "phase": "DELIVERY",
+      "requirement": "Exact mission Git commit, normal origin/test push, remote SHA/filehash readback and clean",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "evidence": [
+        "Pending independent final review / actual external Git closure receipt"
+      ],
+      "verification_method": "No prospective archive PASS"
+    },
+    {
+      "id": "REQ-039",
+      "phase": "DELIVERY",
+      "requirement": "Stop after diagnosis; engineering PASS separate from scientific M6 failure",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "evidence": [
+        "Pending independent final review / actual external Git closure receipt"
+      ],
+      "verification_method": "No prospective archive PASS"
+    }
+  ],
+  "original_scientific_M6": "FAIL_UNAVAILABLE"
+}

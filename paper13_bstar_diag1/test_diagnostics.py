@@ -1,0 +1,158 @@
+import copy
+import json
+import sys
+import uuid
+from contextlib import contextmanager
+import unittest
+from concurrent.futures import ThreadPoolExecutor
+from pathlib import Path
+from unittest.mock import patch
+import numpy as np
+from . import common as c
+from . import replay as r
+from paper13_ki_execution1 import models as m
+from paper13_ki_execution1.predictive import baseline_eta
+
+
+@contextmanager
+def synthetic_directory():
+    # Keep synthetic interruption receipts inside the authorized ignored workspace.
+    path = c.P / 'work' / ('test_' + uuid.uuid4().hex)
+    path.mkdir(parents=True)
+    yield path
+
+
+def fixture():
+    rng = np.random.default_rng(101)
+    y = rng.poisson(.2, (2, 30, 8))
+    q = np.zeros((2, 30, 11))
+    raw, source = m.raw_features(y, q, 'B2')
+    scale = m.fit_scale(raw)
+    theta = np.zeros((8, 4)); theta[:, 0] = -2
+    theta[:, 1:] = .01
+    bundle = {'Bstar': 'B2', 'baseline_thetas': {'B2': theta.ravel().tolist()},
+        'baseline_scalers': {'B2': {**{k: v.tolist() for k, v in scale.items()}, 'source_units': source.tolist()}}}
+    return y, q, bundle
+
+
+class DiagnosticTests(unittest.TestCase):
+    def test_manual_lag_sums_reset_and_future_canary(self):
+        y, q, bundle = fixture()
+        y[:] = np.arange(30)[None, :, None]
+        raw, _, _, _, _ = c.manual_B2(y, bundle)
+        actual, source = m.raw_features(y, q, 'B2')
+        np.testing.assert_array_equal(raw, actual)
+        np.testing.assert_array_equal(raw[:, 0, :, 1:], 0)
+        np.testing.assert_array_equal(raw[0, 5, 0, 1:], [4, 5, 1])
+        changed = y.copy(); changed[:, 17:] += 10000
+        np.testing.assert_array_equal(baseline_eta(y, q, bundle, 'B2')[:, :18], baseline_eta(changed, q, bundle, 'B2')[:, :18])
+
+    def test_inverse_scaling_independent_formula(self):
+        y, q, bundle = fixture()
+        raw, _, independent, beta, intercept = c.manual_B2(y, bundle)
+        expected = baseline_eta(y, q, bundle, 'B2')
+        np.testing.assert_allclose(independent, expected, rtol=2e-14, atol=2e-14)
+        np.testing.assert_allclose(intercept + (raw[..., 1:]*beta[:, 1:]).sum(axis=-1), expected, rtol=2e-14, atol=2e-14)
+
+    def test_zero_sd_stays_zero_no_division_substitution(self):
+        y, q, bundle = fixture()
+        bundle['baseline_scalers']['B2']['sd'][0][1] = 0
+        bundle['baseline_thetas']['B2'][1] = 8
+        raw, terms, eta, beta, intercept = c.manual_B2(y, bundle)
+        self.assertEqual(beta[0, 1], 0)
+        np.testing.assert_array_equal(terms[:, :, 0, 1], 0)
+        np.testing.assert_allclose(eta, baseline_eta(y, q, bundle, 'B2'), atol=1e-14)
+
+    def test_observer_does_not_change_draws_or_rng(self):
+        _, q, bundle = fixture()
+        for seed in [11, 23, 37]:
+            a = np.random.default_rng(seed); b = np.random.default_rng(seed)
+            plain = r.core.conditional_counts(q, bundle, a)
+            watched, observer = r.observed_call(lambda: r.core.conditional_counts(q, bundle, b))
+            np.testing.assert_array_equal(plain, watched)
+            self.assertEqual(a.bit_generator.state, b.bit_generator.state)
+            self.assertEqual([x['bin_zero_based'] for x in observer.records], list(range(30)))
+            self.assertIsNone(sys.gettrace())
+
+    def test_float64_exp_boundary(self):
+        limit = np.log(np.finfo(np.float64).max)
+        self.assertTrue(np.isfinite(np.exp(limit)))
+        with np.errstate(over='raise'):
+            with self.assertRaises(FloatingPointError):
+                np.exp(np.nextafter(limit, np.inf))
+
+    def test_synthetic_feedback_crossing_keeps_finite_cause(self):
+        _, q, bundle = fixture()
+        bundle['baseline_scalers']['B2']['mean'] = np.zeros((8, 4)).tolist()
+        bundle['baseline_scalers']['B2']['sd'] = np.ones((8, 4)).tolist()
+        theta = np.zeros((8, 4)); theta[:, 1] = .1
+        bundle['baseline_thetas']['B2'] = theta.ravel().tolist()
+        class Scripted:
+            def __init__(self): self.calls = 0
+            def poisson(self, means):
+                self.calls += 1
+                return np.full(means.shape, 10000, dtype=np.int64)
+        rng = Scripted(); observer = r.Observer()
+        try:
+            sys.settrace(observer.trace)
+            with self.assertRaises(FloatingPointError): r.core.conditional_counts(q, bundle, rng)
+        finally:
+            sys.settrace(None)
+        self.assertEqual(rng.calls, 1)
+        self.assertEqual(observer.records[-1]['bin_zero_based'], 1)
+        self.assertEqual(observer.records[-1]['eta_max'], 1000.)
+        self.assertTrue(np.isfinite(observer.etas[-1]).all())
+        self.assertEqual(observer.exception['type'], 'FloatingPointError')
+
+    def test_existing_trace_refused(self):
+        with patch.object(sys, 'gettrace', return_value=object()):
+            with self.assertRaises(RuntimeError): r.observed_call(lambda: self.fail('must not execute'))
+
+    def test_exact_row_identity_one_ulp_and_nonfinite_denial(self):
+        expected = np.arange(9, dtype=np.float64)
+        r.require_row_match(expected, expected.copy())
+        changed = expected.copy(); changed[3] = np.nextafter(changed[3], np.inf)
+        for bad in [changed, np.full(9, np.nan), expected[:8]]:
+            with self.assertRaises(RuntimeError): r.require_row_match(bad, expected)
+
+    def test_exclusive_attempt_duplicate_and_concurrent(self):
+        with synthetic_directory() as tmp:
+            path = Path(tmp) / 'ATTEMPT.json'
+            def attempt(_):
+                try:
+                    r.consume(path, {'synthetic': True}); return 'consumed'
+                except FileExistsError: return 'denied'
+            with ThreadPoolExecutor(max_workers=2) as pool: result = list(pool.map(attempt, range(2)))
+            self.assertEqual(sorted(result), ['consumed', 'denied'])
+            self.assertTrue(json.loads(path.read_text())['synthetic'])
+            self.assertEqual(attempt(3), 'denied')
+
+    def test_other_or_final_mouse_denied_before_saved_io(self):
+        with patch.object(c, 'read', side_effect=AssertionError('must deny before reading')):
+            for mouse in ['216300', '128514', 'D']:
+                with self.assertRaises(PermissionError): c.load_mouse(mouse)
+
+    def test_missing_review_denied_before_rng(self):
+        with synthetic_directory() as tmp, patch.object(r, 'P', Path(tmp)):
+            with self.assertRaises(FileNotFoundError): r.approval()
+
+    def test_prefix_mismatch_stops_before_second_mouse_and_consumes_attempt(self):
+        with synthetic_directory() as tmp:
+            root = Path(tmp); old = root / 'old'
+            (root / 'results').mkdir(); (old / 'results/m6_controls_E').mkdir(parents=True)
+            (root / 'results/D1_STATIC.json').write_text('{"replay_needed":true}')
+            for name in ['INPUT_FREEZE.json', 'REPLAY_FREEZE.json']: (root / name).write_text('{}')
+            np.save(old / 'results/m6_controls_E/conditional_Bstar.npy', np.zeros((999, 10, 9)))
+            _, q, bundle = fixture()
+            fake = (np.zeros((2, 30, 8), dtype=int), q, bundle, [91, 92], np.arange(8))
+            scores = {'scores': {name: 1. for name in r.core.LABELS}, 'nominal_unit_bins': 400}
+            with patch.object(r, 'P', root), patch.object(r, 'OLD', old), patch.object(r, 'identities'), patch.object(r, 'approval'), patch.object(r, 'load_mouse', return_value=fake) as loader, patch.object(r.core, 'replicate', return_value=scores) as replicate:
+                with self.assertRaisesRegex(RuntimeError, 'differs byte-for-byte'): r.run()
+                self.assertEqual(loader.call_count, 1); self.assertEqual(replicate.call_count, 1)
+                stopped = json.loads((root / 'results/replay/IDENTITY_STOP.json').read_text())
+                self.assertEqual(stopped['diagnosis'], 'ROOT_CAUSE_UNDETERMINED')
+                with self.assertRaises(FileExistsError): r.run()
+                self.assertEqual(replicate.call_count, 1)
+
+
+if __name__ == '__main__': unittest.main()
