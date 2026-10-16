@@ -1,0 +1,104 @@
+{
+  "mission": "P13-KI-PFC-METADATA-FEASIBILITY-1",
+  "registered_utc": "2026-10-16T04:55:46.989108+00:00",
+  "base": "54f4bb572c33b11937b1939b4e643fda5269f58c",
+  "datasets": [
+    {
+      "id": "001260",
+      "version": "0.250911.0744",
+      "priority": "primary"
+    },
+    {
+      "id": "000473",
+      "version": "0.230417.1502",
+      "priority": "secondary_separate"
+    }
+  ],
+  "screening_tiers": [
+    5,
+    8,
+    10,
+    20
+  ],
+  "tier_meaning": {
+    "5": "Minimal local population; at most2 HMM states and1 continuous component proposed",
+    "8": "Proposed modest primary design:2 states,1-2 continuous components",
+    "10": "More channels, but require more data and training regularization",
+    "20": "Higher coverage sensitivity only; not an inherited admission threshold"
+  },
+  "tiers_are_admission": false,
+  "regions": [
+    "PL",
+    "ILA",
+    "ACAd",
+    "ACAv",
+    "MOs",
+    "ORBm",
+    "ORBvl",
+    "ORBl",
+    "AId",
+    "AIv",
+    "FRP"
+  ],
+  "anatomy": "Exact provider acronym/laminar descendant, retain original labels and provenance; no inferred certainty or pooling",
+  "primary_region_recommendation_priority": [
+    "PL",
+    "ILA",
+    "ACAd",
+    "ACAv",
+    "ORBm",
+    "ORBvl",
+    "ORBl",
+    "AId",
+    "AIv",
+    "FRP",
+    "MOs"
+  ],
+  "primary_epoch": "Documented pre-tone[-3,0) seconds with common event/spike clock and observation support, nonoverlapping within recording",
+  "candidate_design_minimum_units": 8,
+  "candidate_design_minimum_epochs": 120,
+  "minimum_mice_per_group": 8,
+  "target_mice_per_group": 12,
+  "threshold_justification": "8 units and120 three-second epochs are proposed, not admitted: 2-state HMM/1-2-dimensional history readout, bounded fitting and chronological60/30/30 fitting/selection/scoring epochs.120 epochs is360 seconds, not a universal power guarantee. Refuse to call feasible without documented support/exclusions. No IBL400-trial rule.",
+  "partition_recommendation": "Mouse-disjoint development/final; all sessions from one animal stay together; identity-hash allocation before neural access. One prechosen simultaneous probe/session per mouse; chronological first50% fit/calibration, next25% dev selection or reserved transfer checking, last25% evaluation, with epoch reset and guard gaps. Exact roster/allocations require separately authorized P13-v2.",
+  "unknown_policy": "Missing essential quality/anatomy/epoch/clock/support/exclusion evidence -> INCONCLUSIVE_METADATA, never assume pass; proven independent-animal upper bound<16 -> DATA_INSUFFICIENT.",
+  "decision_values": [
+    "FEASIBLE_SINGLE_PFC_REGION",
+    "FEASIBLE_ONLY_UNDER_SEPARATE_POOLED_M PFC_DESIGN",
+    "DATA_INSUFFICIENT",
+    "INCONCLUSIVE_METADATA"
+  ],
+  "pooled_design": "May describe medial PL+ILA+ACAd+ACAv separately if needed; never combine datasets, task settings or regions for a single-region verdict",
+  "allowed_values": [
+    "subject/session/probe/unit identifiers",
+    "provider quality labels",
+    "atlas/location labels",
+    "electrode group mappings",
+    "stimulus event timestamps",
+    "trial/epoch start-stop and labels",
+    "observation/artifact/saturation/sleep/movement-exclusion intervals",
+    "documented clock/recording/preprocessing metadata"
+  ],
+  "forbidden": [
+    "spike_times values",
+    "spike counts",
+    "waveforms",
+    "neural/LFP/EMG/behavior raw signal samples",
+    "neural outcome metrics",
+    "fits",
+    "final evaluation",
+    "P1-P12/P13-original mutation"
+  ],
+  "bounds": {
+    "datasets": 2,
+    "nwb_assets": 200,
+    "api_pages": 20,
+    "source_files": 30,
+    "http_requests": 6000,
+    "transport_bytes": 671088640,
+    "header_bytes_per_asset": 12582912,
+    "range_bytes": 1048576,
+    "attempts_per_request": 2
+  },
+  "stop": "End after two-candidate metadata verdict, saved reproduction, independent internal review and verified origin/test archive. No M1-M7 or alternative dataset search."
+}

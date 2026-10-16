@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper13_ki_feasibility1\headers.py", line 123, in <module>
+    main(parser.parse_args())
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper13_ki_feasibility1\headers.py", line 110, in main
+    records=assets();t=Transport();target=META/('headers' if args.values else 'schemas')
+            ^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper13_ki_feasibility1\headers.py", line 101, in assets
+    page=json.loads(path.read_text());found.extend(page['results'])
+                                                   ~~~~^^^^^^^^^^^
+KeyError: 'results'

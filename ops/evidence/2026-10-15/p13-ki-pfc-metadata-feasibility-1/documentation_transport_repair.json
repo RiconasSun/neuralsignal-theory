@@ -1,0 +1,17 @@
+{
+  "utc": "2026-10-16T05:04:47.256729+00:00",
+  "previous_failed_evidence": [
+    "interval_archive_attempt1.log",
+    "interval_archive_attempt2.log"
+  ],
+  "root_causes": [
+    "standard ZIP bounded tail read API",
+    "HTTP header names case-insensitive; Zenodo sends lowercase keys and no ETag"
+  ],
+  "fix": "Case-insensitive response headers; NWB ETag enforcement unchanged. Only exact published Zenodo documentation record/path/declaredchecksum may lack ETag; received range SHA256s retained, full-object checksum explicitly UNVERIFIED. No neural or scientific rule amendment.",
+  "source_sha256": {
+    "transport.py": "f8dbc15e8c8f1a92a42dc829bf790bbe9144e8677bc59c1a008f52f4be2f39ac",
+    "interval_archive.py": "9d744e6807809b9cbb43e99596a57c5ae7ef928c115a5194d423a8d02612d1b2",
+    "test_headers.py": "deb764b07e8d2991814e4e5ac04e185245a9688929cccdbfa629959add52965b"
+  }
+}

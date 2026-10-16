@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper13_ki_feasibility1\interval_archive.py", line 50, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper13_ki_feasibility1\interval_archive.py", line 30, in main
+    with zipfile.ZipFile(reader) as z:
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\zipfile.py", line 1329, in __init__
+    self._RealGetContents()
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\zipfile.py", line 1392, in _RealGetContents
+    endrec = _EndRecData(fp)
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\zipfile.py", line 320, in _EndRecData
+    data = fpin.read()
+           ^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper13_ki_feasibility1\interval_archive.py", line 23, in read
+    return super().read(n)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper13_ki_feasibility1\transport.py", line 97, in read
+    if headers.get('Content-Range')!=f'bytes {start}-{end}/{self.size}':raise RuntimeError('Wrong Content-Range')
+                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Wrong Content-Range

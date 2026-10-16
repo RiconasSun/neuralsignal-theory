@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-16T05:03:30.441084+00:00",
+  "source": "README explicit preprocessing record14205018",
+  "purpose": "Inspect archive directory and only documented pre-tone active interval metadata. No neural intermediate metrics or signal downloads. Same two candidate records, not a new dataset.",
+  "allowed_member_pattern": "/timeselections_quietactive/*__TSELprestim3__STATEactive[__all].h5",
+  "allowed_dataset": "tints Nx2 intervals plus provenance attrs",
+  "source_sha256": "5b345b416a15ee2f79ffb865ba369faa9712e11dc51572b5ad8e4d0d2ae3ab7c",
+  "archive_full_bytes_forbidden": 1928203597,
+  "budgets": "Existing global640MiB and perobject12MiB; no full archive download; at most30000directory entries and2MB per selected interval member",
+  "feasibility": "Provider selected intervals must match exact original recid and genuine pre-tone timestamps; sleep/lick mask provenance remains separately audited."
+}

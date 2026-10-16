@@ -1,3 +1,14 @@
+# Current mission: P13-KI-PFC-METADATA-FEASIBILITY-1
+
+Bounded two-release metadata audit complete; actual archival Git closure pending external receipt. Overall AND both candidate-level scientific verdicts INCONCLUSIVE_METADATA. Primary001260 has74probes/41canonical animals/50sessions/20374units; its Passive stratum has10mice(DATA_INSUFFICIENT only at that scope), not a release-wide impossibility. Secondary000473 has25probes/25animals/25sessions/9408units;PL20raw anatomical animals at8units but quality/exclusion admission unresolved,15with proposed120matched active pre-tone epochs. No passive/aversive, dataset, region or probe pooling; a future multi-context design is unassessed, never declared viable or disproved.
+
+Full99files/66animals/75session dates/29782unit identities; two subject-suffix alias pairs reconciled; no cross-release animal overlap. Four preregistered5/8/10/20unit tiers,308task/region/tier rows. Original IBL P13 failure/P1-P12 bytes unchanged. Active corrected audit in paper13_ki_feasibility1/results/review1/; all original results/final/ and first3P1review preserved. Source/epoch/quality counts unchanged after scope-label repair.
+
+23regressions incl real HTTP lower-case transport and old-bug mutation;188saved hashes/5byte-identical replay outputs; independent openpyxl counts and independent internal r2review0openP0/P1. Complete100item bounded-audit baseline:96verified+4Git pending before externalclosure. Current engineeringbugs0/warnings0; scientific eligibility NOT PASS. No spike/count/waveform/LFP/EMG array values, fits, allocated holdout, M1-M7, final evaluation or paper/PDF completion. Shared native timing/masks/quality limitations remain explicit, not treated as eligible.
+
+Evidence: evidence/2026-10-15/p13-ki-pfc-metadata-feasibility-1/. Report: ../paper13_ki_feasibility1/REPORT.md. Saved-only: & .\paper13_ki_feasibility1\reproduce.ps1. Actual commit/push/remote/clean only from externalclosure receipt. STOP after archive. New scientific execution requires separately reviewed/authorized P13-v2 with exact quality/exclusion and task-context rules; no further data search or automatic model fitting.
+
+---
 # Current mission: P13-PFC-LOCAL-PREDICTIVE-DYNAMICS
 
 M0 scientific STOP / DATA INSUFFICIENT. Prospective single-probe>=20 provider-good units and>=400 usable curated trials; minimum8+8 independent mice unchanged. Full frozen IBL denominator139mice/459sessions/699probes/621733clusters/75708good/295920trials. ACAd/ORBvl/PL unit-threshold mice6/6/8; with trial gate upper bounds4/4/7. None can reach16 even before trial/support/covariate/training-QC gates. No region selected, allocation, spike/count access, feature extraction, model fits, final outcome assessment or manuscript/PDF completion. M1-M7 blocked, never reinterpreted as baseline-only success.

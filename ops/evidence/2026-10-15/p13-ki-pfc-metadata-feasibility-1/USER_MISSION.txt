@@ -1,0 +1,150 @@
+# CCPN — P13 KI/PFC BOUNDED FEASIBILITY RECOVERY
+
+MISSION: `P13-KI-PFC-METADATA-FEASIBILITY-1`
+
+BASE:
+`54f4bb572c33b11937b1939b4e643fda5269f58c`
+
+PRIORITY: HIGH — FIND A SCIENTIFICALLY VIABLE PFC COHORT WITHOUT RESTARTING THE ORIGINAL FAILED STUDY.
+
+## AUTHORIZATION
+
+Authorize one separately registered metadata-only feasibility study using the Karolinska Institute (KI) PFC recording datasets.
+
+The previous P13 IBL M0 FAIL / DATA_INSUFFICIENT remains immutable.
+
+This authorization does not permit spike-array access, neural model fitting, final holdout evaluation or manuscript completion claims.
+
+## F0 — SOURCE REGISTRATION
+
+Primary candidate:
+DANDI 001260, release 0.250911.0744.
+
+Secondary separately evaluated candidate:
+DANDI 000473, release 0.230417.1502.
+
+Official reference:
+https://www.nature.com/articles/s41593-025-02190-z
+
+Source code:
+https://github.com/hejDMC/pfcmap
+
+Pin exact revisions, licenses, metadata manifests and available anatomical/event documentation.
+
+Do not assume that 99 recordings represent 99 independent animals.
+
+Reconcile subject/session/probe identities, repeated recordings and any cross-release overlap.
+
+Do not pool passive auditory and aversive-conditioning task observations into a single analysis.
+
+## F1 — SCIENTIFIC TARGET
+
+Preserve the broad P13 question:
+
+Does local PFC population dynamics improve causal held-out spike prediction beyond strong firing-rate, spike-history and known experimental-context baselines?
+
+For the primary KI candidate, focus on defined pre-tone activity epochs where metadata supports valid common observation windows.
+
+Do not claim that passive pre-tone activity directly tests choice-related cognitive mechanisms.
+
+P14 may separately address task/context dependence.
+
+## F2 — ANATOMICAL AND UNIT COVERAGE
+
+Audit all relevant PFC atlas regions, including PL, ILA, ACAd and ACAv.
+
+Preserve every mouse/session/probe denominator.
+
+Report:
+- Unique animals
+- Sessions per animal
+- Simultaneous units per subregion/probe
+- Provider quality labels
+- Anatomical localization provenance
+- Region-specific potential animal counts
+- Minimum population-size feasibility
+
+Do not automatically reuse the old arbitrary 20-good-unit threshold.
+
+Before counting outcomes, preregister metadata screening tiers of 5, 8, 10 and 20 simultaneous units and explain their implications for model complexity.
+
+These tiers are feasibility sensitivities, not automatic scientific admission.
+
+Prioritize a single anatomically labeled subregion if it supports an adequate independent-animal cohort.
+
+A broader, anatomically prespecified medial-PFC population may be proposed separately if individual subregions are insufficient. Do not silently pool subregions or label a pooled model as single-region dynamics.
+
+## F3 — TASK AND TEMPORAL FEASIBILITY
+
+Audit:
+- Genuine pre-tone epoch identities
+- Available epochs per session/mouse
+- Spike/event common-clock documentation
+- Missingness and saturation intervals
+- Sleep-like and movement/licking exclusions
+- Trial/epoch overlap and dependence
+- Recording quality and known preprocessing
+- Causally available task covariates
+
+The old IBL >=400 trial condition must not be carried over mechanically.
+
+Assess train/validation/calibration/final feasibility using the actual KI epoch structure.
+
+Before accessing neural outcomes, recommend a justified primary minimum and a frozen partition policy.
+
+The target is at least 8 independent development mice and 8 independent final mice, with a preference for larger cohorts.
+
+If the minimum cannot be met, report DATA_INSUFFICIENT rather than counting sessions or units as independent mice.
+
+## F4 — METHODS FEASIBILITY
+
+Determine whether the eligible data could support:
+
+1. Strong Poisson firing-rate/history/context baselines.
+2. Exact-forward low-state discrete Poisson HMM.
+3. Low-dimensional fixed-timescale continuous-history Poisson prediction.
+4. Registered temporal and nuisance null tests.
+5. One held-out-animal evaluation.
+
+Choose tractable model complexity proportional to available data.
+
+No deep recurrent optimizer rescue, unnecessary hidden-continuous integration or new cryptographic data-custody architecture.
+
+Existing CCPN implementations may be reused only after mathematical and data-contract compatibility checks.
+
+Do not execute any model fits in this metadata-only mission.
+
+## F5 — SCIENTIFIC DECISION
+
+Produce one of:
+
+- FEASIBLE_SINGLE_PFC_REGION
+- FEASIBLE_ONLY_UNDER_SEPARATE_POOLED_M PFC_DESIGN
+- DATA_INSUFFICIENT
+- INCONCLUSIVE_METADATA
+
+For any feasible candidate, supply:
+- Exact prospective P13-v2 scientific design
+- Anatomical scope
+- Independent-mouse denominators
+- Recommended justified admission thresholds
+- Causal predictors and strong baselines
+- Numerical and falsification gates
+- Final evaluation safeguards
+- Scientific interpretation limitations
+
+Do not retrospectively promote the previous M0 to PASS.
+
+## EXECUTION
+
+Use metadata and documented public headers only. Avoid bulk neural downloads.
+
+Perform this one bounded feasibility study, execute software/QC/reproducibility tests, obtain independent internal review and push verified evidence to origin/test.
+
+Do not start M1–M7 or inspect spikes without the new scientific protocol being authorized.
+
+If metadata are insufficient, identify the exact missing evidence rather than initiating an indefinite dataset search.
+
+Maintain Science-First execution and preserve P1–P12 unchanged.
+
+BEGIN NOW.

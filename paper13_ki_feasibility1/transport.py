@@ -1,0 +1,110 @@
+"""Bounded logged metadata/header transport; never accepts bulk fallback."""
+import datetime
+import hashlib
+import io
+import json
+from pathlib import Path
+from urllib.parse import urlparse
+import requests
+
+P=Path(__file__).resolve().parent
+POLICY=json.loads((P/'REGISTRATION.json').read_text())
+META=P/'metadata'
+
+
+def sha(data):return hashlib.sha256(data).hexdigest()
+
+
+class Transport:
+    def __init__(self,folder=META):
+        self.folder=Path(folder);self.folder.mkdir(parents=True,exist_ok=True)
+        self.journal=self.folder/'access.jsonl'
+        prior=[json.loads(line) for line in self.journal.read_text().splitlines()] if self.journal.exists() else []
+        self.calls=len(prior);self.used=sum(row.get('bytes',0) for row in prior)
+        self.session=requests.Session()
+
+    def request(self,url,*,headers=None,maximum=6000000):
+        host=urlparse(url).hostname
+        if host not in {'api.dandiarchive.org','api.github.com','raw.githubusercontent.com','www.nature.com','media.springernature.com','zenodo.org'}:
+            raise ValueError('Outside registered provider')
+        if any(x in url.lower() for x in ['spike_times','spikes.times','.npy']):
+            raise ValueError('Neural path forbidden')
+        for attempt in range(POLICY['bounds']['attempts_per_request']):
+            self.calls+=1
+            if self.calls>POLICY['bounds']['http_requests']:raise RuntimeError('HTTP budget exhausted')
+            rec={'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'url':url,'request_headers':headers,'attempt':attempt+1}
+            count=0
+            try:
+                with self.session.get(url,headers=headers,timeout=(20,45),stream=True) as res:
+                    rec.update(status=res.status_code,response_headers={k:v for k,v in res.headers.items() if k.lower() not in ['set-cookie','authorization']})
+                    if headers and 'Range' in headers and res.status_code!=206:raise RuntimeError('Range not honored; bulk body unread')
+                    res.raise_for_status();data=[]
+                    for chunk in res.iter_content(65536):
+                        count+=len(chunk);self.used+=len(chunk)
+                        if count>maximum or self.used>POLICY['bounds']['transport_bytes']:raise RuntimeError('Byte budget exhausted')
+                        data.append(chunk)
+                    payload=b''.join(data);rec.update(bytes=count,sha256=sha(payload))
+                    return payload,requests.structures.CaseInsensitiveDict(res.headers),rec
+            except Exception as exc:
+                last=exc;rec['error']=repr(exc)
+            finally:
+                rec.setdefault('bytes',count)
+                with self.journal.open('a',encoding='utf8',newline='\n') as out:out.write(json.dumps(rec)+'\n')
+        raise RuntimeError('Metadata request failed: '+url) from last
+
+    def save(self,name,url):
+        path=self.folder/name
+        if path.exists():raise FileExistsError('Immutable saved response already exists: '+str(path))
+        data,_,receipt=self.request(url)
+        path.write_bytes(data)
+        path.with_name(path.name+'.receipt.json').write_text(json.dumps(receipt,indent=2)+'\n',encoding='utf8',newline='\n')
+        return data
+
+
+class RangeReader(io.RawIOBase):
+    def __init__(self,transport,url,size,asset_id):
+        self.transport,self.url,self.size,self.asset_id=transport,url,size,asset_id
+        self.pos=0;self.used=0;self.etag=None;self.cache={};self.ranges=[]
+
+    def readable(self):return True
+    def seekable(self):return True
+    def tell(self):return self.pos
+    def seek(self,offset,whence=0):
+        new=offset if whence==0 else self.pos+offset if whence==1 else self.size+offset
+        if new<0 or new>self.size:raise ValueError('Invalid seek')
+        self.pos=new;return new
+
+    def check_version(self,headers):
+        etag=headers.get('ETag')
+        if not etag or (self.etag is not None and etag!=self.etag):raise RuntimeError('Changed/unversioned NWB object')
+        self.etag=etag
+
+    def read(self,n=-1):
+        if n<0:raise ValueError('Unbounded NWB read forbidden')
+        n=min(n,self.size-self.pos)
+        if n==0:return b''
+        if n>POLICY['bounds']['range_bytes']:raise ValueError('Range too large')
+        endpos=self.pos+n;parts=[]
+        # Metadata-only decoding may buffer adjacent uninterpreted transport bytes.
+        # Fixed64KiB blocks bound network calls without reading neural datasets.
+        while self.pos<endpos:
+            start=(self.pos//65536)*65536;end=min(start+65536,self.size)-1
+            key=(start,end-start+1)
+            if key in self.cache:
+                data=self.cache[key]
+                take=min(endpos,self.size,end+1)-self.pos
+                parts.append(data[self.pos-start:self.pos-start+take]);self.pos+=take
+                continue
+            if self.used+key[1]>POLICY['bounds']['header_bytes_per_asset']:raise RuntimeError('Per-asset header budget exhausted')
+            h={'Range':f'bytes={start}-{end}'}
+            if self.etag:h['If-Match']=self.etag
+            data,headers,_=self.transport.request(self.url+f'?p13ki_start={start}&length={key[1]}',headers=h,maximum=key[1])
+            if headers.get('Content-Range')!=f'bytes {start}-{end}/{self.size}':raise RuntimeError('Wrong Content-Range')
+            if len(data)!=key[1]:raise RuntimeError('Wrong range length')
+            self.check_version(headers)
+            self.cache[key]=data;self.used+=key[1]
+            self.ranges.append({'offset':start,'bytes':key[1],'sha256':sha(data)})
+        return b''.join(parts)
+
+    def readinto(self,buf):
+        value=self.read(len(buf));buf[:len(value)]=value;return len(value)
