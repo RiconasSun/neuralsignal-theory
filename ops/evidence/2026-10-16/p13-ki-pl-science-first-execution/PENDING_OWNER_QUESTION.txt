@@ -1,0 +1,6 @@
+独立审查发现一个必须由你决定的访问边界：NWB 每个单位的时间戳是全记录数组，没有时段索引；只导出 A/C 仍需在读取器内部临时解码包含 D 的原始时间戳。是否明确允许这种底层读取？最终 D 计数、得分和评估仍须等待全部前置门通过。当前未读取真实神经数据。
+
+1. 允许受信读取器临时解码全记录，仅导出 A/C；禁止将 D 用于 QC、缩放、选型或评分。无法分区的非有限时间戳作源完整性错误停止。
+2. 禁止前置门通过前解码任何 D 时间戳；等待另行提供可按时间范围读取的 A/C 数据源。
+
+Question already submitted through request_user_input_async. Unanswered; no preselected choice is authorization.

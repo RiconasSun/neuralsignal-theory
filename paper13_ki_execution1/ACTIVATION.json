@@ -1,0 +1,71 @@
+{
+  "mission": "P13-KI-PL-SCIENCE-FIRST-EXECUTION",
+  "utc": "2026-10-16T15:02:25.730737+00:00",
+  "base": "60aaf834becb176d38a3b8a598c90d88054bb1cc",
+  "protocol_sha256": "3129ee6017232db49a68136cc0cf04942d4abbf31081ef54782a23ddd3f01660",
+  "protocol_snapshot_sha256": "fe59586899a4c8bede258d27db94d72af0ea6ed54cfa99030c9f4e50e4f0af59",
+  "authorization_sha256": "02fe082f11deef181a523ce28139bf4fafd902eef1cb2cf36910a3720221beba",
+  "allocation": {
+    "status": "PROPOSED_ONLY_NOT_ACTIVATED",
+    "algorithm": "SHA256(P13v2-PL-A-v1|41| + mouse_id), ascending hex",
+    "development": [
+      "152419",
+      "216300",
+      "147465",
+      "268951",
+      "152417",
+      "156130",
+      "156131",
+      "273858",
+      "216301",
+      "258416"
+    ],
+    "final": [
+      "128514",
+      "128516",
+      "258414",
+      "225758",
+      "225759",
+      "225757",
+      "152414",
+      "273855",
+      "268947"
+    ],
+    "minimum_each": 8,
+    "replacements": false
+  },
+  "status": "ACTIVATED_BY_OWNER",
+  "candidate_mice": 19,
+  "full_denominator": 25,
+  "fixed_science": "All reviewed equations/QC/grids/bounds/thresholds/partitions/guards/nulls/stopping unchanged; no scientific redesign permitted.",
+  "execution_order": [
+    "M1hashes/identities/epochs",
+    "synthetic source-window/QC and numerical implementation gates",
+    "M2A/C-onlyQC",
+    "M3developmentbaselines",
+    "M4developmentD/C/S",
+    "M5Bselection/Ereport",
+    "M6Ccalibration/review/oneDassessment",
+    "M7paperifvalid"
+  ],
+  "source_policy": "Trusted local source extraction, deterministic window export, no B/E/DQC or neural outcome summaries before their gate; no independent-principal/admin protection claimed.",
+  "pre_final_allowed_exports": [
+    "developmentA",
+    "finalC"
+  ],
+  "pre_final_denied_exports": [
+    "finalD"
+  ],
+  "development_B_E": "Only after required train-QC/numerical fits; never QC/scaling/initialization.",
+  "budgets": {
+    "unique_NWB_assets": 19,
+    "transport_bytes_max": 21474836480,
+    "requests_max": 40000,
+    "range_bytes": 1048576,
+    "attempts_per_request": 2,
+    "model_development_fit_cap_per_mouse": 93,
+    "model_final_fit_cap_per_mouse": 22,
+    "neural_reruns_for_policy_tuning": 0
+  },
+  "stopping": "Any scientific data insufficiency, leakage or required real numerical failure stops forward progression. Ordinary demonstrable software defects require preserved evidence, independent synthetic regression and reviewed source re-freeze; no optimizer rescue."
+}

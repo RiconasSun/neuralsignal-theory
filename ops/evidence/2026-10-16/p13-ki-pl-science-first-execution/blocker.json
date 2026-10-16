@@ -1,0 +1,45 @@
+{
+  "mission": "P13-KI-PL-SCIENCE-FIRST-EXECUTION",
+  "utc": "2026-10-16T15:27:09.890907+00:00",
+  "candidate_exit": "WAIT_FOR_HUMAN_INPUT",
+  "classification": "MATERIAL_AUTHORIZATION_AMBIGUITY",
+  "blocked_requirement": "REQ-012 / REQ-014; M2 source access and real A/C-only physiological QC",
+  "observed_blocker": "Frozen NWB spike_times arrays are ragged per unit for the entire recording; spike_times_index provides unit storage offsets, not temporal offsets. Extracting A/C with this source adapter transiently decodes excluded timestamps including final D. Existing train/calibration-only permission and no-D-access wording do not uniquely authorize this low-level reading.",
+  "evidence": [
+    "paper13_ki_execution1/SOURCE_BOUNDARY.md",
+    "preaccess_review_r1.md",
+    "checkpoint_review_r2.md",
+    "checkpoint_review_r3.md",
+    "paper13_ki_execution1/source.py",
+    "paper13_ki_execution1/test_preaccess.py"
+  ],
+  "autonomous_alternatives": [
+    {
+      "action": "Inspect frozen schema, source headers and partition metadata",
+      "result": "No per-time index permitting a direct A/C-only neural-value range was found. Unit indices alone cannot identify temporal offsets without reading timestamp values."
+    },
+    {
+      "action": "Build a trusted clipping adapter and synthetic excluded-window canaries",
+      "result": "Export invariance and fail-closed approval guards verified; these establish implementation behavior, not owner permission for the transient raw read."
+    },
+    {
+      "action": "Independent review and correction of NaN/Inf and cache identity defects",
+      "result": "42 current synthetic tests pass; no open code P0/P1. Independent reviewer still requires the owner access decision."
+    },
+    {
+      "action": "Safe independent mathematical and saved-state engineering",
+      "result": "Baseline/HMM/continuous cores, independent AD/FD, synthetic fitting and reproduction completed. Real eligibility, model selection, calibration, inference and paper findings depend on M2; no fake results or speculative real runner executed."
+    }
+  ],
+  "why_no_safe_default": "Choosing permissive decoding changes the data-access boundary; silently replacing it with export-only permission invents authorization. Choosing a new dataset or weakening the no-D rule changes the contract. The agent and reviewer cannot supply owner permission.",
+  "exact_human_action": "Answer the pending source-access question: permit trusted transient full-record selected-unit timestamp decoding solely to export A/C with nonfinite/unassignable timestamps treated as SOURCE_INTEGRITY_STOP, or prohibit all pre-gate D timestamp decoding and require a compliant same-source partition/time-indexed A/C export.",
+  "pending_question_answered": false,
+  "preselected_option_is_not_approval": true,
+  "next_after_permit": "Preserve the explicit owner reply/hash and bounds, freeze the access amendment, obtain fresh matching independent preaccess acceptance, then and only then begin real M2. Do not infer final D scoring release from this raw-source permission.",
+  "next_after_prohibit": "Keep real neural access disabled. Obtain a same-source partition/time-indexed export satisfying the strict boundary before M2. No further dataset search or unapproved scientific redesign.",
+  "real_neural_value_reads": 0,
+  "real_qc_runs": 0,
+  "real_model_fits": 0,
+  "D_evaluation_executed": false,
+  "engineering_control": "SourceReader and real QC require owner decision and separately accepted matching preaccess review before creating Session/cache/network. ACCESS_DECISION.json and PREACCESS_APPROVAL.json are absent."
+}

@@ -1,3 +1,14 @@
+# Current mission: P13-KI-PL-SCIENCE-FIRST-EXECUTION
+
+WAIT_FOR_HUMAN_INPUT checkpoint. ExactBASE60aaf834becb176d38a3b8a598c90d88054bb1cc; owner activated reviewed P13-v2 protocol3129ee6017232db49a68136cc0cf04942d4abbf31081ef54782a23ddd3f01660. M1 metadata PASS: original25 denominator, fixed19 candidates/10dev9final, first120epochs/partitions. Actual physiological eligible dev/final counts UNMEASURED. No real neural values/QC/fits/dev scores/Ccalibration/D evaluation. Real M2-M7 NOT RUN; no manuscript/PDF or scientific PASS.
+
+Human blocker: NWB has full-record per-unit timestamps without temporal offsets. Trusted A/C extraction would transiently decode excluded timestamps including D; initial permission does not uniquely authorize this. Pending explicit owner choice; no approval inferred from an unanswered/preselected option. SourceReader/realQC require both owner evidence and fresh matching preaccess review before Session/cache/network. No ACCESS_DECISION or PREACCESS_APPROVAL exists.
+
+42 synthetic tests pass; 23 current and85 original hashes verified; independent archived22 hashes match. NaN/Inf fail-closed repair and full request-bound cache reuse repaired; original failed r1/r2 reviews/packages retained. Independent r3 engineering checkpoint accepted,0open codeP0/P1. Current bug_count0/warn_count1 (required owner authorization/evidence gate). All86 scientific requirements preserved, real gates remain open; synthetic work is not a substitute.
+
+Evidence: evidence/2026-10-16/p13-ki-pl-science-first-execution/HANDOFF.md and CHECKPOINT_REPORT.md. Saved/synthetic reproduction: & .\paper13_ki_execution1\reproduce.ps1. Actual exact-file checkpoint commit/origin-test/readback/clean only from external closure_receipt.json after execution. STOP at authorization boundary. Resume M2 only after explicit owner raw-source decision and separately frozen/reviewed preaccess permission; no automatic raw access or final D opening.
+
+---
 # Current mission: P13-KI-PL-QUALITY-EPOCH-RESOLUTION-1
 
 Bounded source/metadata investigation and proposed P13-v2 contract independently accepted. Scientific readiness PROTOCOL_READY_PENDING_NEURAL_QC for A: recording-supported aversive-task PL pre-tone activity with explicit state/movement/clock/sorting limits. Historical20raw/20basic120/15active120bounds preserved; source-backed known LFP/manual masks give19A/15Bpotential mice,0actual neural-QCadmissions. Bcannot meet8+8at120. No awake/state-equivalence/choice/causal/single-neuron-purity claim.
