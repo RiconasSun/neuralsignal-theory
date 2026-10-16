@@ -14,10 +14,10 @@ def check(hashes):
         if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest()!=h:raise ValueError('Frozen file mismatch: '+name)
 
 def main():
-    own=json.loads((P/'ENGINEERING_FREEZE_r3.json').read_text());check(own['hashes'])
+    own=json.loads((P/'PREACCESS_FREEZE_r5.json').read_text());check(own['hashes'])
     old=json.loads((ROOT/'paper13_ki_pl_contract1/FREEZE_r2.json').read_text());check(old['hashes'])
     if importlib.metadata.version('autograd')!='1.8.0':raise ValueError('Pinned independent ADlibrary required')
-    names=['paper13_ki_execution1.test_preaccess','paper13_ki_execution1.test_models','paper13_ki_execution1.test_fit_engine']
+    names=['paper13_ki_execution1.test_preaccess','paper13_ki_execution1.test_models','paper13_ki_execution1.test_fit_engine','paper13_ki_execution1.test_qc_journal']
     with patch.object(socket.socket,'connect',side_effect=AssertionError('Saved-only checkpoint reproduction forbids network')):
         suite=unittest.defaultTestLoader.loadTestsFromNames(names)
         result=unittest.TextTestRunner(verbosity=2).run(suite)

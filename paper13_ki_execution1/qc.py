@@ -2,6 +2,7 @@
 import json
 import math
 import datetime
+import os
 from pathlib import Path
 import h5py
 import numpy as np
@@ -24,6 +25,47 @@ def counts_for(epoch_spikes):
     edges=np.arange(31,dtype=float)/10
     return np.stack([np.histogram(ts,bins=edges)[0] for ts in epoch_spikes]).astype(np.int64)
 
+def durable_record(path,event,**fields):
+    row={'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'event':event,**fields}
+    raw=(json.dumps(row,allow_nan=False)+'\n').encode('utf8')
+    with path.open('ab') as f:
+        f.write(raw);f.flush();os.fsync(f.fileno())
+
+def begin_mouse(root,record,source_freeze):
+    journal=root/(record['mouse_id']+'.attempts.jsonl')
+    # Existing incomplete/failed attempts never become an implicit QC retry.
+    with journal.open('xb') as f:
+        row={'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'event':'MOUSE_START',
+             'mouse_id':record['mouse_id'],'partition':record['QC_partition'],'source_freeze':source_freeze}
+        f.write((json.dumps(row)+'\n').encode('utf8'));f.flush();os.fsync(f.fileno())
+    return journal
+
+def examine_unit(file,unit,record,partition,journal):
+    identity={'mouse_id':record['mouse_id'],'partition':partition,**unit}
+    durable_record(journal,'UNIT_START',**identity)
+    try:
+        ids=node(file,'/units/id')
+        if int(ids[unit['row']])!=unit['unit_id']:raise ValueError('Unit identity changed')
+        times=unit_window_export(file,unit['row'],record,partition)
+        result=screen(times)
+        durable_record(journal,'UNIT_COMPLETE',**identity,QC=result)
+        return times,result
+    except Exception as exc:
+        durable_record(journal,'UNIT_ERROR',**identity,error_type=type(exc).__name__)
+        raise
+
+def completed_result(path,source_freeze):
+    saved=json.loads(path.read_text())
+    if saved['source_freeze']!=source_freeze:raise ValueError('Cannot reuse state under changed extraction implementation')
+    journal=path.with_name(path.stem+'.attempts.jsonl')
+    rows=[json.loads(x) for x in journal.read_text().splitlines()]
+    state=ROOT/saved['training_state_file']
+    if not rows or rows[-1].get('event')!='MOUSE_COMPLETE':raise ValueError('Incomplete QC completion journal; no retry')
+    if rows[-1]['result_sha256']!=sha(path.read_bytes()):raise ValueError('QC result receipt mismatch')
+    digest=sha(state.read_bytes())
+    if digest!=saved['training_state_sha256'] or digest!=rows[-1]['training_state_sha256']:raise ValueError('QC state receipt mismatch')
+    return saved
+
 def main():
     approval=require_access_approval();freeze_path=P/approval['freeze_file'];freeze_hash=sha(freeze_path.read_bytes())
     root=P/'results/qc';root.mkdir(parents=True,exist_ok=True)
@@ -32,20 +74,22 @@ def main():
     for r in ALLOCATION:
         path=root/(r['mouse_id']+'.json')
         if path.exists():
-            saved=json.loads(path.read_text())
-            if saved['source_freeze']!=freeze_hash:raise ValueError('Cannot reuse state under changed extraction implementation')
+            saved=completed_result(path,freeze_hash)
             all_results.append(saved);continue
         part=r['QC_partition'];selected=[];attempts=[];values=[]
-        reader=SourceReader(r)
-        with h5py.File(reader,'r') as h:
-            ids=node(h,'/units/id')
-            for unit in r['PL_units_numeric_order']:
-                if int(ids[unit['row']])!=unit['unit_id']:raise ValueError('Unit identity changed')
-                ts=unit_window_export(h,unit['row'],r,part)
-                q=screen(ts);attempts.append({**unit,**q,'partition':part})
-                if q['pass']:
-                    selected.append(unit);values.append(ts)
-                    if len(selected)==8:break
+        journal=begin_mouse(root,r,freeze_hash)
+        try:
+            reader=SourceReader(r)
+            with h5py.File(reader,'r') as h:
+                for unit in r['PL_units_numeric_order']:
+                    ts,q=examine_unit(h,unit,r,part,journal)
+                    attempts.append({**unit,**q,'partition':part})
+                    if q['pass']:
+                        selected.append(unit);values.append(ts)
+                        if len(selected)==8:break
+        except Exception as exc:
+            durable_record(journal,'MOUSE_ERROR',mouse_id=r['mouse_id'],error_type=type(exc).__name__)
+            raise
         counts=np.stack([counts_for(x) for x in values],axis=-1) if values else np.zeros((60,30,0),dtype=np.int64)
         state=sealed/(r['mouse_id']+'.npz')
         # Only A/C-derived data, no full-record arrays or B/E/Dfeatures are saved.
@@ -58,6 +102,7 @@ def main():
                 'source_range_bytes':reader.used,'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'B_E_D_exported':False,
                 'source_boundary':'Trusted adapter transiently decodes selected unit rawrecord timestamp arrays; only60A/Cwindow values enter QC or saved state. No raw fullrecord statistics or Dneural outcomes exported.'}
         with path.open('x',encoding='utf8',newline='\n') as f:f.write(json.dumps(result,indent=2,allow_nan=False)+'\n')
+        durable_record(journal,'MOUSE_COMPLETE',mouse_id=r['mouse_id'],result_sha256=sha(path.read_bytes()),training_state_sha256=result['training_state_sha256'])
         all_results.append(result)
         print(json.dumps({'mouse':r['mouse_id'],'role':r['role'],'eligible':result['eligible'],'QC_units_attempted':len(attempts),'A_C_only':True}),flush=True)
     dev=[x['mouse_id'] for x in all_results if x['role']=='development' and x['eligible']]

@@ -1,0 +1,11 @@
+2026-10-16T16:06:21.847262+00:00
+
+# Prospective frozen prediction/control operator implementation
+
+Before exploratory E or final D counts/scores, implement a pure-array evaluator for the alreadyregistered baseline/D/C/S models. No fitting, scaler estimation, model substitution or scientific threshold change. This is required for faithful registered nulls and restricted-information sensitivities; ordinary full8unit predictions must reproduce frozen training/scoring implementations.
+
+Normal baseline scores use original8-target A/Ccoefficients/scalers and strictpast histories; Bstaraliases the globallyselectedbaseline. D/Sjointcausal HMMscore updates after scoring currentcounts; fivewarmup, identicalactualunit-bin denominator. Cuses fixedoriginalQ/A-or-C count/hscalers; no evaluation fitting.
+
+For a retained-unit mask, build original8-source standardizedhistoryfeatures then set every omitted source's standardized contribution to0 and retain targetrows. Nuisance/intercepts unchanged. Recompute B4offset underthismask, identical forD/S/C. HMMfilter/emissions use onlyretainedobservations anddelta rows. Csets omitted standardizedz coordinates0beforeQ, keepsoriginalQrows/no renormalization and hscalers/readoutrows. No reestimation. For history-association control, originaloutcomes are scored first; donorcounts updateDfilter, driveCstate andbaselineprior-neuralfeatures, externalqoriginal. Temporalcontrol usesfullypermutedoutcomes/history/filter together; taskordercontrol permuteswhole11-column nuisance trajectories together, originalneuraldatafixed. ConditionalBstar-null generation usesexactunclipped frozenPoissonpredictors sequentially; no hidden count cap, rate clipping or fallback if a required finite-model condition fails.
+
+Synthetic oracles: fullunitbaseline/HMM/C score parity, exactstaticjointmixture, HMMfuturecausality, donorfilterseparation, omittedunitcanaryinvariance afterstandardizedsourcezeroing, identicaloffsetfamilies, zeroSDbehavior, frozenstate/nonmutation, explicit25/24scored-bin denominator andzero-additionalweightB4equivalence. Independent review required before real E/finalD evaluation. Any finalsource/oracle/operator change invalidates affected verification beforeDrelease.

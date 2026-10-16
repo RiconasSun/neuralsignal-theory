@@ -1,5 +1,16 @@
 # Current mission: P13-KI-PL-SCIENCE-FIRST-EXECUTION
 
+WAIT_FOR_HUMAN_INPUT — owner decision about final execution purpose. Original scientificBASE60aaf834becb176d38a3b8a598c90d88054bb1cc; reviewedcheckpointparenta574d70eaabe286aa77a3ba3a35a56bcf432d5c2. M1–M4PASS, M5PASSexploratoryonly:10eligibledevelopment+9eligiblefinal,152selectedunits,211QCattempts=152PASS+59FAIL;390baseline+540dynamicfits=930/930PASS. Bstar=B2;sharedB4ridge1,Dp.9/ridge.1,Ctau(.1,.3)/ridge1/projectionseed23,Sp.5/ridge.1. Eall10mice scoredwithfrozenmodels;Bstar/staticguardsnotmet;no broad/temporal/finalvalidatedclaim.
+
+Independent metadata review confirms mandatory recent-event final sensitivity only6/9micewith>=10epochs vsrequired>=8. RelatedbroadclaimINCONCLUSIVE. Owner must choose A:stop/archive beforefinalC/D; B:explicitlycontinueunchangedonce-onlydescriptivefinalassessment whilepreservingfailedgate/withholdingassociatedclaims. No unansweredoptionassumed. FinalCmodel fits0, Dcount/outcomeexport0,Dassessment0,real999controls0. No scientificthreshold/data/modelchange or P12custody machinery.
+
+108synthetic tests,2278current+85originalhashes,930savedfits and10savedEscores/statistics reproduced withoutnetwork/newrealfit/finalD.39originalA/C/B/Ewindow-statebundlespreserved in hash-boundarchive, nofullrecordranges/Dstates. Allhistoricalfailures/reviews preserved. Currentbug_count0/warn_count1:owner-purposeambiguity/requiredcoverage;fullmissionnotPASS. 86originalbaselineitemsretained,65currentverification/21blockedatthispre-Gitcheckpoint. Gititemsarecertifiedonlybyactualexternalclosurereceipt,notthisheader.
+
+Currentreport: evidence/2026-10-16/p13-ki-pl-science-first-execution/CURRENT_CHECKPOINT_REPORT.md; independentdecision: M6_METADATA_PRERELEASE_REVIEW_r1.md; blockerr2 andpreservation_matrix_r2retainallrequirements. Saved-onlyonecommand: & .\paper13_ki_execution1\reproduce_saved_progress.ps1. Pendingarchive/reviewonly;noMERGE_ALLOWED,fullscientificPASS,completepaper/PDF orautomaticfinalprogression. Normalorigin/testarchive/readback/clean gateonlyafterreview;noPR/main/forcepush. Keepwaitingforownerdecisionafterarchive.
+
+---
+# Current mission: P13-KI-PL-SCIENCE-FIRST-EXECUTION
+
 WAIT_FOR_HUMAN_INPUT checkpoint. ExactBASE60aaf834becb176d38a3b8a598c90d88054bb1cc; owner activated reviewed P13-v2 protocol3129ee6017232db49a68136cc0cf04942d4abbf31081ef54782a23ddd3f01660. M1 metadata PASS: original25 denominator, fixed19 candidates/10dev9final, first120epochs/partitions. Actual physiological eligible dev/final counts UNMEASURED. No real neural values/QC/fits/dev scores/Ccalibration/D evaluation. Real M2-M7 NOT RUN; no manuscript/PDF or scientific PASS.
 
 Human blocker: NWB has full-record per-unit timestamps without temporal offsets. Trusted A/C extraction would transiently decode excluded timestamps including D; initial permission does not uniquely authorize this. Pending explicit owner choice; no approval inferred from an unanswered/preselected option. SourceReader/realQC require both owner evidence and fresh matching preaccess review before Session/cache/network. No ACCESS_DECISION or PREACCESS_APPROVAL exists.

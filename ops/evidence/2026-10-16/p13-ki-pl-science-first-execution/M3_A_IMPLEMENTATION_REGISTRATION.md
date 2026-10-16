@@ -1,0 +1,9 @@
+2026-10-16T15:37:57.037550+00:00
+
+# Prospective M3 A-only runner implementation
+
+Registered while the reviewed M2 A/C scan is running; no scientific outcome or B/E/D score has been read. Full86 baseline unchanged. Implement only the frozen baseline A-fitting execution path; no new scientific models or selection policy. Real entry requires complete M2 PASS, exact saved A-state/QC identities, matching independent M3 implementation acceptance and frozen code. Final C-state values must not be loaded by this developmental runner.
+
+For each eligible development mouse, use exactly its8 selected units and60A×30bins, train-only scalers including warm-up. B0 one nonsearch ridge placeholder0.1 (intercepts unpenalized, so the objective has no ridge contribution) ×3seeds. B1-B4 each ridge[0.1,1,10]×seeds[11,23,37], in fixed baseline/ridge/seed order:39required fits per mouse, at most390. Frozen initial intercept/nonintercepts, original bounds/objectives/solver/call/PG/FD/AD rules from reviewed fit_engine and models. No restart after required failure, no budget expansion, no B/E/D array access, no model selection. Preserve scalers/source-unit labels/initials/trajectories/coordinate diagnostics and exact full scientific request hashes. Select seed only by Aobjective within a fixed configuration, ties1e-12 choose11/23/37. Future global baseline ridge/B*selection remains gated and unexecuted.
+
+Predefined synthetic runner tests: reject M2nonpass; reject missing independent approval; reject altered/missing saved Astate or QC identity; refuse final C state requests; verify exact39schedule and parameter counts; full-request/scaler/epoch/seed bindings; numerical engine original suite unchanged. Independent review before any real Afit. M2data insufficiency/source failure stops forward real progression even if this purely synthetic implementation is complete.

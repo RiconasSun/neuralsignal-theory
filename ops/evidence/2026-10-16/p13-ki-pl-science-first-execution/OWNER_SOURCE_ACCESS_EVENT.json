@@ -1,0 +1,8 @@
+{
+  "utc_recorded": "2026-10-16T15:30:12.966799+00:00",
+  "provenance": "Direct human response in this Codex conversation to pending request_user_input_async call_c00e898b65354c94ba5acce63dc29469 question0",
+  "question": "独立审查发现一个必须由你决定的访问边界：NWB 每个单位的时间戳是全记录数组，没有时段索引；只导出 A/C 仍需在读取器内部临时解码包含 D 的原始时间戳。是否明确允许这种底层读取？最终 D 计数、得分和评估仍须等待全部前置门通过。当前未读取真实神经数据。",
+  "answer": "允许受信读取器临时解码全记录，仅导出 A/C；禁止将 D 用于 QC、缩放、选型或评分。无法分区的非有限时间戳作源完整性错误停止。",
+  "previous_checkpoint_commit": "a574d70eaabe286aa77a3ba3a35a56bcf432d5c2",
+  "scientific_BASE": "60aaf834becb176d38a3b8a598c90d88054bb1cc"
+}

@@ -1,0 +1,7 @@
+# Prospective r5 retention repair registration
+
+Before real neural access, independent preaccess_review_r4.md found one P1: in-memory QC attempts can be lost if a later unit raises a source-integrity error. Owner raw-source permission is accepted in scope, but no access approval exists. All original r4 files/freeze and unsuccessful review are preserved; preaccess_r4_package.zip contains the exact package before repair. Scientific BASE and full86 requirement definitions unchanged.
+
+Minimal repair: durable fsynced per-mouse and per-unit START/COMPLETE/ERROR JSONL before/after processing. Preserve earlier physiological failures and source identity errors; never serialize raw timestamps or excluded outcomes. Exclusive per-mouse START refuses interrupted/failed attempt reuse, while completed exact frozen results retain previous authorized caching behavior. An error is re-raised and prevents remaining mice/model execution. No counts, thresholds, ordering, allocation, source rules or model math changes.
+
+Predefined regressions: synthetic first-unit QC failure followed by second-unit source-integrity error; verify all START/COMPLETE/ERROR events and first QC result remain, no third-unit processing; simulated interrupted/repeated start refuses without altering original journal; full passing unit receipt and original numerical/QC suite. Refreeze exact source and all test/owner artifacts and obtain independent preaccess review before real source reads.
