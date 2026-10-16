@@ -1,0 +1,148 @@
+(node:44472) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-16T00:45:42.867665Z  WARN codex_features: unknown feature key in config: prefer_mxc
+2026-10-16T00:45:42.882818Z  WARN codex_features: unknown feature key in config: prefer_mxc
+2026-10-16T00:45:42.885562Z ERROR codex_models_manager::cache: failed to load models cache: missing field `base_instructions` at line 139 column 5
+2026-10-16T00:45:43.486469Z  WARN codex_models_manager::model_info: Unknown model gpt-6.1-sol is used. This will use fallback model metadata.
+2026-10-16T00:45:43.487792Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-10-16T00:45:43.491454Z  WARN codex_core_plugins::manifest: ignoring hooks: expected a string, string array, object, or object array; found object
+2026-10-16T00:45:43.493868Z  WARN codex_core_plugins::manifest: ignoring hooks: expected a string, string array, object, or object array; found object
+2026-10-16T00:45:43.494579Z  WARN codex_core_plugins::manifest: ignoring hooks: expected a string, string array, object, or object array; found object
+2026-10-16T00:45:43.495577Z  WARN codex_core_plugins::manifest: ignoring hooks: expected a string, string array, object, or object array; found object
+2026-10-16T00:45:43.501451Z  WARN codex_core_plugins::manifest: ignoring hooks: expected a string, string array, object, or object array; found object
+2026-10-16T00:45:43.503492Z  WARN codex_core_plugins::manifest: ignoring hooks: expected a string, string array, object, or object array; found object
+2026-10-16T00:45:43.632718Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-10-16T00:45:43.632774Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-10-16T00:45:43.637904Z  WARN codex_core_plugins::manifest: ignoring hooks: expected a string, string array, object, or object array; found object
+2026-10-16T00:45:43.638432Z  WARN codex_core_plugins::manifest: ignoring hooks: expected a string, string array, object, or object array; found object
+2026-10-16T00:45:43.656279Z  WARN codex_core::shell_snapshot: Failed to create shell snapshot for powershell: Shell snapshot not supported yet for PowerShell
+2026-10-16T00:45:43.967449Z  WARN codex_models_manager::model_info: Unknown model gpt-6.1-sol is used. This will use fallback model metadata.
+OpenAI Codex v0.144.4
+--------
+workdir: C:\Users\85993\AppData\Local\Temp\codex-mission-a8Ze3X
+model: gpt-6.1-sol
+provider: openai
+approval: on-request
+sandbox: workspace-write [workdir, /tmp, $TMPDIR]
+reasoning effort: high
+reasoning summaries: none
+session id: 01a1422c-04c0-7152-9825-fb47f9eb3f0c
+--------
+user
+You are Codex CLI running as a coding agent.
+Execute the following JSON Mission Spec against the target repository.
+Treat the Mission Spec JSON as the development task contract.
+Keep edits scoped, follow existing project style, and run relevant validation when practical.
+## Mission Spec JSON
+```json
+{
+  "version": "1.0",
+  "mission": {
+    "id": "P12-SCIENCE-FIRST-FINAL-CLOSEOUT-1-ADAPTER",
+    "objective": "Implement prospectively registered trusted local host scientific adapter without changing frozen science."
+  },
+  "target": {
+    "workdir": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper12_sciencefinal1",
+    "files": [
+      "trusted_host.py",
+      "test_trusted_host.py",
+      "__init__.py",
+      "reproduce.ps1",
+      "RUNBOOK.md"
+    ]
+  },
+  "instructions": {
+    "context": "Implement only new package files in this isolated workdir. Parent repository when deployed is Path(__file__).resolve().parents[1]. reference/ contains immutable PUBLIC reference source, not importable deployment code. Do not change reference files. Never execute any real C or D operation; implementation and unit tests with temp synthetic inputs only. Full engineering is authorized; parent orchestrator handles gates and execution.",
+    "requirements": [
+      "Create __init__.py, trusted_host.py, test_trusted_host.py and reproduce.ps1. Use existing paper12_singleowner1 scientific_evaluator.evaluate unchanged and custodian_producer.validate_catalog unchanged via normal package imports. Use common validators and frozen_math exact. No cryptographic authority/ledger/controller, no new security subsystem. Mode SYNTHETIC or REAL explicit; evaluator manifest remains REAL C so its raw flags must be wrapped with actual source lineage (synthetic D flag must stay false for real evaluation).",
+      "CLI stages: preflight --output newdir validates registration source_sha256, base HEAD, all original scientific hashes, full 1862-file C inventory paper12_cseal1/.private/sealed_C_recovery_1 versus complete_seal_inventory.json sha256; calls validate_state_manifest; uses real_metadata.materialize(output/metadata) public frozen metadata then validate_catalog body realm REAL_D. Checks original complete_C seal counts/provenance; validates D original final_D_partition_manifest against generated partition IDs (inspect JSON dynamically, no guessing). Output public PASS receipt with source/file/manifest hashes,13 identities,290 cases,13 coverage, no raw C/D reads and no refits. No protected D cipher/key read until real stage. Full C validator reads fitted states only, authorized.",
+      "CLI synthetic --preflight <dir> --output newdir: reuse real C sealed bundle paths (no changes) but evaluator binding needs all C artifacts plus public metadata: create own binding directory with copies C files and copied metadata. Avoid copying C_state_manifest twice. Generate synthetic source catalog envelopes with exact production real metadata shape/trials/unit ordering, original full source units, constant sentinel for unselected units, deterministic default_rng(20261015). Keep source catalog context unchanged and body REAL_D for validator even in SYN mode; explicit synthetic-only source roots must point into run output/private/synthetic_sources, never original roots; original ciphertext hashes differ thus validate original catalog BEFORE synthetic override and pass actual D decoding helper typed catalog via strict already-validated metadata. All source tuple inputs immutable and path-safe; exact original source parser AEAD envelope/AAD/shape/unit-order/selection logic as reference producer, no security-context bypass through monkeypatching. Keep synthetic envelopes/private paths ignored. Run same new producer adapter and exact evaluator over all290 cases/all104x999 suites, original wall limit43200, no stubbing, subsampling or mocked evaluator.",
+      "CLI real --preflight <dir> --synthetic <completed synthetic run> --output newdir: checks preflight/source hashes still exact, full synthetic receipts completeness,mice13,cases290,null_evaluations103896, finite stats and no new fits. Atomic real reservation single fixed file paper12_sciencefinal1/private/REAL_D_RESERVED.json with x+fsync before any real key/cipher open; no delete/reset/resume API. Refuse if exists even incomplete. Binding uses original fullC states/copied original public metadata and original source roots; call validate_catalog. Decrypt only frozen D.gcm using original32-byte D.key; original P12GCM1\\0 envelope/AAD/frombuffer<u4 and size checks; select frozen 32unit CA1/DG and exact D240 trials; write delivery exact fields+hashes+expected body fields matching evaluator. No new fits or reading raw C. Never log keys/count arrays in public outputs. Original protected source not copied or modified. New output path private delivery and separate public result. Keep all outputs append-only. Preserve exceptions as technical failure receipts; never auto retry.",
+      "CLI never accepts arbitrary paths or mode aliases that can mistake REAL source as synthetic. Synthetic actual sources must be descendants synthetic directory plus canary check; real sources must equal metadata source_roots.json exact. Verify shape,finite score,mask,unit order,hashes. No C modifications, sys.path/sys.modules patches, monkeypatching security/scientific validators. Public preflight copies only receipts/metadata; work binding and delivery stay private (ignored git). After complete evaluation, write explicit run_receipt with mode,source lineage,scientific_evaluation_executed(modeREAL),gate(scientific execution not positive hypothesis),all counts,source and output hashes. Do not claim overall scientific validation true just from execution.",
+      "Add meaningful unit tests with no real inputs: authenticated decrypt/source hash/shape/context/select exact, wrongkey/alteredcipher/context/path/duplicate/runreservation denial; synthetic-real source separation; exact scientific verdict boundary tests or re-use existing ScientificTests. Unit tests must work from repository root with python -B -m unittest paper12_sciencefinal1.test_trusted_host. Preflight is NOT automatically invoked at import. PowerShell saved-only default verifies all saved public result hashes & reaggregates frozen stats; never executes real stage by default. Explicit real CLI remains parent-only after gates. Include a public RUNBOOK.md and clearly no online signer/publickey requirement. Do not implement manuscript until actual outcomes available."
+    ],
+    "constraints": [
+      "No actual protected neural experiments, no external network, no Git commands, no editing references or outside staging workspace",
+      "Do not claim tests performed unless executed; no imported private key signer; never create REAL data or entitlement in code-writing stage"
+    ]
+  },
+  "acceptance": {
+    "criteria": [
+      "Source preserves scientific evaluator byte identity and exact original requirements",
+      "No dropped/null suite reductions; all unit code tested where stage supports it"
+    ]
+  },
+  "codex": {
+    "sandbox": "workspace-write",
+    "skipGitRepoCheck": true,
+    "ephemeral": true
+  },
+  "openrouter": {
+    "enabled": false
+  },
+  "policy": {
+    "write": {
+      "allow": [
+        "trusted_host.py",
+        "test_trusted_host.py",
+        "__init__.py",
+        "reproduce.ps1",
+        "RUNBOOK.md"
+      ],
+      "allowDelete": false,
+      "maxFilesChanged": 5,
+      "maxBytesChanged": 150000
+    }
+  },
+  "metadata": {
+    "cli_compatibility": "Current codex exec accepts sandbox, not trailing --ask-for-approval; omit unsupported option and retain default configured approvals. All failed attempts preserved."
+  }
+}
+```
+## Mission
+- Version: 1.0
+- ID: P12-SCIENCE-FIRST-FINAL-CLOSEOUT-1-ADAPTER
+- Objective: Implement prospectively registered trusted local host scientific adapter without changing frozen science.
+
+## Context
+Implement only new package files in this isolated workdir. Parent repository when deployed is Path(__file__).resolve().parents[1]. reference/ contains immutable PUBLIC reference source, not importable deployment code. Do not change reference files. Never execute any real C or D operation; implementation and unit tests with temp synthetic inputs only. Full engineering is authorized; parent orchestrator handles gates and execution.
+
+
+## Requirements
+- Create __init__.py, trusted_host.py, test_trusted_host.py and reproduce.ps1. Use existing paper12_singleowner1 scientific_evaluator.evaluate unchanged and custodian_producer.validate_catalog unchanged via normal package imports. Use common validators and frozen_math exact. No cryptographic authority/ledger/controller, no new security subsystem. Mode SYNTHETIC or REAL explicit; evaluator manifest remains REAL C so its raw flags must be wrapped with actual source lineage (synthetic D flag must stay false for real evaluation).
+- CLI stages: preflight --output newdir validates registration source_sha256, base HEAD, all original scientific hashes, full 1862-file C inventory paper12_cseal1/.private/sealed_C_recovery_1 versus complete_seal_inventory.json sha256; calls validate_state_manifest; uses real_metadata.materialize(output/metadata) public frozen metadata then validate_catalog body realm REAL_D. Checks original complete_C seal counts/provenance; validates D original final_D_partition_manifest against generated partition IDs (inspect JSON dynamically, no guessing). Output public PASS receipt with source/file/manifest hashes,13 identities,290 cases,13 coverage, no raw C/D reads and no refits. No protected D cipher/key read until real stage. Full C validator reads fitted states only, authorized.
+- CLI synthetic --preflight <dir> --output newdir: reuse real C sealed bundle paths (no changes) but evaluator binding needs all C artifacts plus public metadata: create own binding directory with copies C files and copied metadata. Avoid copying C_state_manifest twice. Generate synthetic source catalog envelopes with exact production real metadata shape/trials/unit ordering, original full source units, constant sentinel for unselected units, deterministic default_rng(20261015). Keep source catalog context unchanged and body REAL_D for validator even in SYN mode; explicit synthetic-only source roots must point into run output/private/synthetic_sources, never original roots; original ciphertext hashes differ thus validate original catalog BEFORE synthetic override and pass actual D decoding helper typed catalog via strict already-validated metadata. All source tuple inputs immutable and path-safe; exact original source parser AEAD envelope/AAD/shape/unit-order/selection logic as reference producer, no security-context bypass through monkeypatching. Keep synthetic envelopes/private paths ignored. Run same new producer adapter and exact evaluator over all290 cases/all104x999 suites, original wall limit43200, no stubbing, subsampling or mocked evaluator.
+- CLI real --preflight <dir> --synthetic <completed synthetic run> --output newdir: checks preflight/source hashes still exact, full synthetic receipts completeness,mice13,cases290,null_evaluations103896, finite stats and no new fits. Atomic real reservation single fixed file paper12_sciencefinal1/private/REAL_D_RESERVED.json with x+fsync before any real key/cipher open; no delete/reset/resume API. Refuse if exists even incomplete. Binding uses original fullC states/copied original public metadata and original source roots; call validate_catalog. Decrypt only frozen D.gcm using original32-byte D.key; original P12GCM1\0 envelope/AAD/frombuffer<u4 and size checks; select frozen 32unit CA1/DG and exact D240 trials; write delivery exact fields+hashes+expected body fields matching evaluator. No new fits or reading raw C. Never log keys/count arrays in public outputs. Original protected source not copied or modified. New output path private delivery and separate public result. Keep all outputs append-only. Preserve exceptions as technical failure receipts; never auto retry.
+- CLI never accepts arbitrary paths or mode aliases that can mistake REAL source as synthetic. Synthetic actual sources must be descendants synthetic directory plus canary check; real sources must equal metadata source_roots.json exact. Verify shape,finite score,mask,unit order,hashes. No C modifications, sys.path/sys.modules patches, monkeypatching security/scientific validators. Public preflight copies only receipts/metadata; work binding and delivery stay private (ignored git). After complete evaluation, write explicit run_receipt with mode,source lineage,scientific_evaluation_executed(modeREAL),gate(scientific execution not positive hypothesis),all counts,source and output hashes. Do not claim overall scientific validation true just from execution.
+- Add meaningful unit tests with no real inputs: authenticated decrypt/source hash/shape/context/select exact, wrongkey/alteredcipher/context/path/duplicate/runreservation denial; synthetic-real source separation; exact scientific verdict boundary tests or re-use existing ScientificTests. Unit tests must work from repository root with python -B -m unittest paper12_sciencefinal1.test_trusted_host. Preflight is NOT automatically invoked at import. PowerShell saved-only default verifies all saved public result hashes & reaggregates frozen stats; never executes real stage by default. Explicit real CLI remains parent-only after gates. Include a public RUNBOOK.md and clearly no online signer/publickey requirement. Do not implement manuscript until actual outcomes available.
+
+
+## Target Files
+- trusted_host.py
+- test_trusted_host.py
+- __init__.py
+- reproduce.ps1
+- RUNBOOK.md
+
+
+## Constraints
+- No actual protected neural experiments, no external network, no Git commands, no editing references or outside staging workspace
+- Do not claim tests performed unless executed; no imported private key signer; never create REAL data or entitlement in code-writing stage
+
+
+## Acceptance Criteria
+- Source preserves scientific evaluator byte identity and exact original requirements
+- No dropped/null suite reductions; all unit code tested where stage supports it
+
+
+## Metadata
+{"cli_compatibility":"Current codex exec accepts sandbox, not trailing --ask-for-approval; omit unsupported option and retain default configured approvals. All failed attempts preserved."}
+
+## Final Response
+Summarize changed files, validation performed, and any follow-up needed.
+warning: Configured service tier `priority` is not advertised as supported for model `gpt-6.1-sol` and will be omitted from requests.
+2026-10-16T00:45:44.028868Z  WARN codex_models_manager::model_info: Unknown model gpt-6.1-sol is used. This will use fallback model metadata.
+warning: Model metadata for `gpt-6.1-sol` not found. Defaulting to fallback metadata; this can degrade performance and cause issues.
+2026-10-16T00:45:44.928318Z  WARN codex_core::session_startup_prewarm: startup websocket prewarm setup failed: {"type":"error","status":400,"error":{"type":"invalid_request_error","message":"The 'gpt-6.1-sol' model is not supported when using Codex with a ChatGPT account."}}
+ERROR: {"type":"error","status":400,"error":{"type":"invalid_request_error","message":"The 'gpt-6.1-sol' model is not supported when using Codex with a ChatGPT account."}}
+ERROR: {"type":"error","status":400,"error":{"type":"invalid_request_error","message":"The 'gpt-6.1-sol' model is not supported when using Codex with a ChatGPT account."}}

@@ -1,0 +1,333 @@
+{
+  "mission": "P12-SCIENCE-FIRST-FINAL-CLOSEOUT-1",
+  "baseline_revision": 2,
+  "baseline_requirement_count": 46,
+  "precommit_verified": 43,
+  "Git_final_report_stop_pending": 3,
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "requirement": "Verify exact base HEAD/origin-test and clean prechange tree; preserve missing origin/main explicitly",
+      "status": "VERIFIED",
+      "verification": "registration.json; phase0_gate.json",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-002",
+      "requirement": "Preserve every prior scientific/numerical/security failure without reclassification",
+      "status": "VERIFIED",
+      "verification": "historical_preservation_check.json; complete_C_denominator_check.json",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-003",
+      "requirement": "Register trusted-local-owner policy before D access; no offline key or cryptographic entitlement required",
+      "status": "VERIFIED",
+      "verification": "human_authorization.txt; PRAGMATIC_VALIDATION_PROTOCOL.md",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-004",
+      "requirement": "Disclose trusted host/administrator/operator access and lack of independent technical custody",
+      "status": "VERIFIED",
+      "verification": "registration.json; MANUSCRIPT Methods2.5",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-005",
+      "requirement": "Freeze all four original hypotheses, contrasts, effect directions and acceptance criteria",
+      "status": "VERIFIED",
+      "verification": "paper12_predictive_v2/FINAL_VALIDATION_PLAN.md; scientific_verdict.json",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-006",
+      "requirement": "Verify all 48 original scientific source/configuration hashes",
+      "status": "VERIFIED",
+      "verification": "registration.json; phase0_gate.json",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-007",
+      "requirement": "Verify exact 13 final identities within unchanged 26/13/13 allocation",
+      "status": "VERIFIED",
+      "verification": "preflight_receipt.json; frozen_public_metadata/animals.json",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-008",
+      "requirement": "Verify original complete 1862-file C seal and preserve 1858-file failed partial seal",
+      "status": "VERIFIED",
+      "verification": "C_and_environment_preflight.json; historical_preservation_check.json",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-009",
+      "requirement": "Validate full C models/scalers/QC/units/masks/sensitivity states with original numerical/provenance validator",
+      "status": "VERIFIED",
+      "verification": "preflight_receipt.json; complete_C_denominator_check.json",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-010",
+      "requirement": "Reuse all 290 C cases,21716 GLM fits,78 N seeds,26 means,40104 endpoint certificates without new fitting",
+      "status": "VERIFIED",
+      "verification": "complete_C_denominator_check.json; phase2_execution_receipt.json",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-011",
+      "requirement": "Confirm historical D access/outcome exposure records before analysis; distinguish custodial processing from model-selection exposure",
+      "status": "VERIFIED",
+      "verification": "preflight_receipt.json access_audit",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-012",
+      "requirement": "Freeze D metadata, source ciphertext identities, unit ordering and trial masks before protected D reads",
+      "status": "VERIFIED",
+      "verification": "frozen_public_metadata; source_size_preflight.json",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-013",
+      "requirement": "Freeze production evaluator and frozen mathematical functions; no result-driven scientific code changes",
+      "status": "VERIFIED",
+      "verification": "adapter_source_freeze.json; phase2_execution_receipt.json",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-014",
+      "requirement": "Freeze execution identity, UTC, environment/dependency versions, source and input manifest hashes",
+      "status": "VERIFIED",
+      "verification": "registration.json; C_and_environment_preflight.json; real_run_reservation_public_receipt.json",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-015",
+      "requirement": "Run synthetic mathematical scoring, causality, normalization and statistics oracles",
+      "status": "VERIFIED",
+      "verification": "focused_tests_r2.log; public_only_oracles.log",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-016",
+      "requirement": "Test exact trusted-host adapter with synthetic D in complete real 290-case C schema and frozen trial masks",
+      "status": "VERIFIED",
+      "verification": "synthetic_gate_summary.json; results/synthetic/run_receipt.json",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-017",
+      "requirement": "Execute full synthetic 104x999 controls,all13 mice,all290 states,10000 bootstrap and full sensitivity/probe path",
+      "status": "VERIFIED",
+      "verification": "synthetic_gate_summary.json; synthetic_saved_reproduction.log",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-018",
+      "requirement": "Verify deterministic inputs,finite outputs,original null assumptions and no new fits in synthetic path",
+      "status": "VERIFIED",
+      "verification": "synthetic_saved_reproduction.log; phase1_gate.json",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-019",
+      "requirement": "Pre-register append-only run reservation before source reads; duplicates/interrupted runs fail closed",
+      "status": "VERIFIED",
+      "verification": "test_trusted_host.py; real_run_reservation_public_receipt.json",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-020",
+      "requirement": "Freeze exact no-score-driven-retry policy: preserve interruption; no second D evaluation in this mission",
+      "status": "VERIFIED",
+      "verification": "registration.json; PRAGMATIC_VALIDATION_PROTOCOL.md; real_run_reservation_public_receipt.json",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-021",
+      "requirement": "Complete scientific/integrity preflight and review before opening D keys/ciphertext/counts",
+      "status": "VERIFIED",
+      "verification": "phase0_gate.json; phase1_gate.json; pre_D_review.json",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-022",
+      "requirement": "Execute a single complete original D assessment only after all preceding gates PASS",
+      "status": "VERIFIED",
+      "verification": "phase2_execution_receipt.json; results/final/run_receipt.json",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-023",
+      "requirement": "Authenticate all original D envelopes and contexts; select only frozen C units and D trials",
+      "status": "VERIFIED",
+      "verification": "frozen_public_metadata/source_catalog.json; source_size_preflight.json; results/final/run_receipt.json",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-024",
+      "requirement": "Report all13 final mice and all4 primary contrasts including negatives",
+      "status": "VERIFIED",
+      "verification": "scientific_verdict.json; paper/animal_primary_and_LOMO.csv",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-025",
+      "requirement": "Use equal-mouse CA1-minus-DG and actual nominal unit-bin denominators",
+      "status": "VERIFIED",
+      "verification": "results/final/results/scientific_scores.json; scientific_verdict.json",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-026",
+      "requirement": "Use exact paired sign flips,Holm4,10000 whole-mouse bootstrap seed120214 and frozen95percent intervals",
+      "status": "VERIFIED",
+      "verification": "final_saved_scalar_reproduction.log; scientific_verdict.json",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-027",
+      "requirement": "Report matched16,rate,boundary20,boundary40 with original minimum8 paired mice",
+      "status": "VERIFIED",
+      "verification": "results/final/results/final_statistics.json; paper/all_mouse_view_differences.csv",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-028",
+      "requirement": "Report all primary leave-one-mouse-out results",
+      "status": "VERIFIED",
+      "verification": "paper/animal_primary_and_LOMO.csv",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-029",
+      "requirement": "Report probe dependence and C-only rate matching residuals",
+      "status": "VERIFIED",
+      "verification": "paper/all_mouse_probe_assessment.csv; paper/all_C_rate_matching.csv",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-030",
+      "requirement": "Complete all four T/S/B/O null suites each999 replicates,104 ROI suites",
+      "status": "VERIFIED",
+      "verification": "results/final/results/null_*.json; phase2_execution_receipt.json",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-031",
+      "requirement": "Keep both original16-test null Holm families and corrected relevant-control requirements",
+      "status": "VERIFIED",
+      "verification": "scientific_verdict.json; paper/MANUSCRIPT.md",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-032",
+      "requirement": "Apply all original positive-claim conditions separately to each contrast",
+      "status": "VERIFIED",
+      "verification": "scientific_verdict.json; paper/A1_A10_claim_audit.json",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-033",
+      "requirement": "Distinguish valid nonsignificance/mixed results from failed-gate inconclusiveness; no equivalence claim",
+      "status": "VERIFIED",
+      "verification": "paper/MANUSCRIPT.md; scientific_verdict.json",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-034",
+      "requirement": "No model/hypothesis/exclusion/seed/ridge/threshold/analysis retuning after D",
+      "status": "VERIFIED",
+      "verification": "registration.json; phase2_execution_receipt.json; manuscript_interpretation_registration.json",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-035",
+      "requirement": "No C refitting,new dataset/cohort search or original M4 optimizer rescue",
+      "status": "VERIFIED",
+      "verification": "phase2_execution_receipt.json; historical_preservation_check.json",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-036",
+      "requirement": "Complete manuscript with actual final results only if final execution valid",
+      "status": "VERIFIED",
+      "verification": "paper/MANUSCRIPT.md; final_pdf_QA_receipt.json",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-037",
+      "requirement": "Include development-versus-final evidence,all animal-level statistics and complete controls",
+      "status": "VERIFIED",
+      "verification": "paper/animal_primary_and_LOMO.csv; all_290_case_scores.csv; all_animal_controls.csv",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-038",
+      "requirement": "Produce publication figures and detailed supplementary material",
+      "status": "VERIFIED",
+      "verification": "paper/figures; paper/SUPPLEMENT.md; final_pdf_QA_receipt.json",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-039",
+      "requirement": "Complete A1-A10 and claim-to-evidence audit with historical failures and reduced custody guarantees",
+      "status": "VERIFIED",
+      "verification": "paper/A1_A10_claim_audit.json; claim_audit.md",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-040",
+      "requirement": "Produce manuscript PDF and Supplement PDF and inspect rendered output",
+      "status": "VERIFIED",
+      "verification": "final_pdf_QA_receipt.json; screenshots/gallery.md",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-041",
+      "requirement": "Provide saved-only one-command PowerShell reproduction separately from protected one-shot execution",
+      "status": "VERIFIED",
+      "verification": "one_command_saved_artifact_reproduction_v2.log; artifact_reproduction_byte_comparison_v2.json",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-042",
+      "requirement": "Preserve full execution histories,technical failures,hash inventories and deterministic saved results",
+      "status": "VERIFIED",
+      "verification": "failed attempts retained; registration and complete run/results inventories",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-043",
+      "requirement": "Complete separate REVIEW_MODE scientific/integrity review with no unresolved required P0/P1 defects; this governance amendment requires no second-person verifier",
+      "status": "VERIFIED",
+      "verification": "review.md; final_pdf_QA_receipt.json; one_command_saved_artifact_reproduction_v2.log",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-044",
+      "requirement": "Exact-file stage mission work only; normal origin/test commit,push,remote readback,clean gate",
+      "status": "OPEN",
+      "verification": "EXTERNAL_ACTUAL_GIT_CLOSURE_PENDING",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-045",
+      "requirement": "Report executed status,mice,four effects/p/CI,nulls,scientific verdict,paper/PDF/reproduction and bugs/warnings",
+      "status": "OPEN",
+      "verification": "HANDOFF.json plus EXTERNAL_FINAL_REPORT_PENDING",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    },
+    {
+      "id": "REQ-046",
+      "requirement": "STOP after mission; critical scientific/numerical failure stops before further protected execution",
+      "status": "OPEN",
+      "verification": "EXTERNAL_POST_PUSH_STOP_PENDING",
+      "implementation": "paper12_sciencefinal1; current mission evidence"
+    }
+  ],
+  "no_requirement_omitted": true,
+  "scientific_definitions_unchanged": true
+}

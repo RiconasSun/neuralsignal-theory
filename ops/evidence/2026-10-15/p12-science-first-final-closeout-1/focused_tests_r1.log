@@ -1,0 +1,191 @@
+test_authenticated_context (paper12_sciencefinal1.test_trusted_host.TransportTests.test_authenticated_context) ... ok
+test_authenticated_wrong_shape (paper12_sciencefinal1.test_trusted_host.TransportTests.test_authenticated_wrong_shape) ... ok
+test_ciphertext_hash_tamper (paper12_sciencefinal1.test_trusted_host.TransportTests.test_ciphertext_hash_tamper) ... ok
+test_exact_selected_order_and_context (paper12_sciencefinal1.test_trusted_host.TransportTests.test_exact_selected_order_and_context) ... ok
+test_incorrect_key_length (paper12_sciencefinal1.test_trusted_host.TransportTests.test_incorrect_key_length) ... ok
+test_missing_selected_unit (paper12_sciencefinal1.test_trusted_host.TransportTests.test_missing_selected_unit) ... ok
+test_mode_required (paper12_sciencefinal1.test_trusted_host.TransportTests.test_mode_required) ... ERROR
+test_reservation_never_resets_after_interruption (paper12_sciencefinal1.test_trusted_host.TransportTests.test_reservation_never_resets_after_interruption) ... ERROR
+test_synthetic_cannot_use_original_root (paper12_sciencefinal1.test_trusted_host.TransportTests.test_synthetic_cannot_use_original_root) ... ERROR
+test_synthetic_path_traversal_denied (paper12_sciencefinal1.test_trusted_host.TransportTests.test_synthetic_path_traversal_denied) ... ERROR
+test_trial_shape_mismatch (paper12_sciencefinal1.test_trusted_host.TransportTests.test_trial_shape_mismatch) ... ok
+test_wrong_key (paper12_sciencefinal1.test_trusted_host.TransportTests.test_wrong_key) ... ok
+test_all_four_positive_criteria (paper12_singleowner1.test_engineering.ScientificTests.test_all_four_positive_criteria) ... ok
+test_each_required_claim_gate_and_negative_retention (paper12_singleowner1.test_engineering.ScientificTests.test_each_required_claim_gate_and_negative_retention) ... ok
+test_exact_signs_Holm_and_bootstrap (paper12_singleowner1.test_engineering.ScientificTests.test_exact_signs_Holm_and_bootstrap) ... ok
+test_history_causality_trial_reset_and_other_excludes_self (paper12_singleowner1.test_engineering.ScientificTests.test_history_causality_trial_reset_and_other_excludes_self) ... ok
+test_original_PG_and_independent_AD_without_fitting (paper12_singleowner1.test_engineering.ScientificTests.test_original_PG_and_independent_AD_without_fitting) ... ok
+test_original_sources_and_frozen_nesting (paper12_singleowner1.test_engineering.ScientificTests.test_original_sources_and_frozen_nesting) ... ok
+test_same_suite_control_not_cross_suite_or_order_rescue (paper12_singleowner1.test_engineering.ScientificTests.test_same_suite_control_not_cross_suite_or_order_rescue) ... ok
+test_saved_roster_rate_limits_and_no_D_selection (paper12_singleowner1.test_engineering.ScientificTests.test_saved_roster_rate_limits_and_no_D_selection) ... ok
+test_score_normalization_and_full_poisson_constant (paper12_singleowner1.test_engineering.ScientificTests.test_score_normalization_and_full_poisson_constant) ... ok
+test_score_null_kernel_and_cache_parity (paper12_singleowner1.test_engineering.ScientificTests.test_score_null_kernel_and_cache_parity) ... ok
+
+======================================================================
+ERROR: test_mode_required (paper12_sciencefinal1.test_trusted_host.TransportTests.test_mode_required)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{29953d4f-1a56-4d3e-8113-2f712d14ad2e}\\AC\\Temp\\tmpg4ad0n7f'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_sciencefinal1\test_trusted_host.py", line 85, in test_mode_required
+    with tempfile.TemporaryDirectory() as t:
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 943, in __exit__
+    self.cleanup()
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{29953d4f-1a56-4d3e-8113-2f712d14ad2e}\\AC\\Temp\\tmpg4ad0n7f'
+
+======================================================================
+ERROR: test_reservation_never_resets_after_interruption (paper12_sciencefinal1.test_trusted_host.TransportTests.test_reservation_never_resets_after_interruption)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_sciencefinal1\test_trusted_host.py", line 68, in test_reservation_never_resets_after_interruption
+    p = Path(t) / 'reservation.json'; reserve(p, {'started': True})
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_sciencefinal1\trusted_host.py", line 126, in reserve
+    new(path, record)  # exclusive create + flush/fsync, never reset or delete
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_singleowner1\common.py", line 23, in new
+    with Path(p).open('xb') as f:f.write(canonical(v)+b'\n');f.flush();os.fsync(f.fileno())
+         ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{29953d4f-1a56-4d3e-8113-2f712d14ad2e}\\AC\\Temp\\tmp56qnv9jd\\reservation.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{29953d4f-1a56-4d3e-8113-2f712d14ad2e}\\AC\\Temp\\tmp56qnv9jd'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_sciencefinal1\test_trusted_host.py", line 67, in test_reservation_never_resets_after_interruption
+    with tempfile.TemporaryDirectory() as t:
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 943, in __exit__
+    self.cleanup()
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{29953d4f-1a56-4d3e-8113-2f712d14ad2e}\\AC\\Temp\\tmp56qnv9jd'
+
+======================================================================
+ERROR: test_synthetic_cannot_use_original_root (paper12_sciencefinal1.test_trusted_host.TransportTests.test_synthetic_cannot_use_original_root)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{29953d4f-1a56-4d3e-8113-2f712d14ad2e}\\AC\\Temp\\tmpcoshnm5b'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_sciencefinal1\test_trusted_host.py", line 74, in test_synthetic_cannot_use_original_root
+    with tempfile.TemporaryDirectory() as t:
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 943, in __exit__
+    self.cleanup()
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{29953d4f-1a56-4d3e-8113-2f712d14ad2e}\\AC\\Temp\\tmpcoshnm5b'
+
+======================================================================
+ERROR: test_synthetic_path_traversal_denied (paper12_sciencefinal1.test_trusted_host.TransportTests.test_synthetic_path_traversal_denied)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{29953d4f-1a56-4d3e-8113-2f712d14ad2e}\\AC\\Temp\\tmpap60liev\\private\\synthetic_sources'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_sciencefinal1\test_trusted_host.py", line 80, in test_synthetic_path_traversal_denied
+    run = Path(t); root = run / 'private/synthetic_sources'; root.mkdir(parents=True)
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1120, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{29953d4f-1a56-4d3e-8113-2f712d14ad2e}\\AC\\Temp\\tmpap60liev\\private'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{29953d4f-1a56-4d3e-8113-2f712d14ad2e}\\AC\\Temp\\tmpap60liev'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_sciencefinal1\test_trusted_host.py", line 79, in test_synthetic_path_traversal_denied
+    with tempfile.TemporaryDirectory() as t:
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 943, in __exit__
+    self.cleanup()
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{29953d4f-1a56-4d3e-8113-2f712d14ad2e}\\AC\\Temp\\tmpap60liev'
+
+----------------------------------------------------------------------
+Ran 22 tests in 1.526s
+
+FAILED (errors=4)

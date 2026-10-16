@@ -1,0 +1,18 @@
+{
+  "finding": "Valid generated PDF/SVG export syntax flagged as text; generated Supplement also has one extra EOF blank line",
+  "affected": [
+    "ops/evidence/2026-10-15/p12-science-first-final-closeout-1/pdf_before_heading_fix/P12_Manuscript.pdf",
+    "paper12_sciencefinal1/paper/P12_Manuscript.pdf",
+    "paper12_sciencefinal1/paper/SUPPLEMENT.md",
+    "paper12_sciencefinal1/paper/figures/figure1_final_mouse_effects.svg",
+    "paper12_sciencefinal1/paper/figures/figure2_development_final.svg",
+    "paper12_sciencefinal1/paper/figures/figure3_sensitivities.svg",
+    "paper12_sciencefinal1/paper/figures/figure4_conditional_nulls.svg"
+  ],
+  "export_repair": "Mark only exportedPDF/SVG artifact types binary in mission/package attributes; preserve every export byte",
+  "Markdown_repair": "Normalize generated Markdown EOF to exactly one newline; preserve pre-fix bytes and refresh saved artifact proof",
+  "source_docs_JSON_whitespace_checks_retained": true,
+  "scientific_or_test_source_changed": false,
+  "prior_inventory_and_path_manifest": "*.stage1.bin",
+  "raw_git_diagnostic_encoding": "Contains nativePDF byte excerpts, archived unchanged as binarylog; ASCII filename parser uses latin1"
+}

@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_sciencefinal1\render_pdf.py", line 89, in <module>
+    print(json.dumps([render(d/'MANUSCRIPT.md',d/'P12_Manuscript.pdf',True),render(d/'SUPPLEMENT.md',d/'P12_Supplement.pdf')]))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_sciencefinal1\render_pdf.py", line 79, in render
+    doc.build(story,onFirstPage=footer,onLaterPages=footer,canvasmaker=lambda *a,**k: Canvas(*a,invariant=1,**k))
+  File "C:\Users\85993\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\site-packages\reportlab\platypus\doctemplate.py", line 1322, in build
+    BaseDocTemplate.build(self,flowables, canvasmaker=canvasmaker)
+  File "C:\Users\85993\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\site-packages\reportlab\platypus\doctemplate.py", line 1062, in build
+    self._startBuild(filename,canvasmaker)
+  File "C:\Users\85993\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\site-packages\reportlab\platypus\doctemplate.py", line 1032, in _startBuild
+    self.canv = self._makeCanvas(filename=filename,canvasmaker=canvasmaker)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\site-packages\reportlab\platypus\doctemplate.py", line 992, in _makeCanvas
+    canv = canvasmaker(filename or self.filename,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper12_sciencefinal1\render_pdf.py", line 79, in <lambda>
+    doc.build(story,onFirstPage=footer,onLaterPages=footer,canvasmaker=lambda *a,**k: Canvas(*a,invariant=1,**k))
+                                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: reportlab.pdfgen.canvas.Canvas() got multiple values for keyword argument 'invariant'

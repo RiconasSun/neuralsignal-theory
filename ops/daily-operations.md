@@ -1,3 +1,17 @@
+# Current mission: P12-SCIENCE-FIRST-FINAL-CLOSEOUT-1
+
+Valid single frozen actual D assessment complete; task archival Git closure pending external receipt.
+ExactBASE8d1d77615f50d79e158787544b4993daefe16ca3. Owner prospectively amended governance to trustedlocalHost; oldsecurity/scientific failures unchanged. No offlinekey/cryptographicentitlement/multiprincipal requirement in current protocol; no independentcustodian/adminproof claim.
+13final mice/26subfields/290cases/104x999controls/10000bootstrap/8192signassignments; newCfits0;complete1862Cseal/original1858partial unchanged.
+All4 primary contrasts NOT VALIDATED / MIXED: Holm own0.389404296875,population0.0634765625,stimulus_time0.064453125,combined0.14111328125. Relevantcontrols cannot rescue failedprimarytests. No equivalence/causal/independentlab/anatomicalproof/human/NAP/CWP claim. OriginalM4 remainsfailed/inconclusive.
+SCIENTIFIC_EVALUATION_EXECUTED=TRUE;FINAL_MICE_EVALUATED=13;MANUSCRIPT_COMPLETE=TRUE(complete scientificdraft,author submissiondeclarationspending).
+MainPDF10pages/supplement24pages;34pagevisualQA;allA1-A10/fullanimal/probe/rate/290case/416control tables.22publicoracles+1162saved outputhashes+exactstats+24identicalartifacts reproduce without neural/Cstate/Dkey reads or fitting.
+Separate root-agent review approves taskclosure/archive; no independentexternalpeerreview claimed. Currentbugs0/warnings0.46requirements:43verifiedprecommit+3actualGit/finalhandoff/stop pending externalclosure. Actual commit/push/remote/clean status ONLY from subsequent external receipt.
+Evidence: evidence/2026-10-15/p12-science-first-final-closeout-1/HANDOFF.md. Finalpaper: ../paper12_sciencefinal1/paper/.
+Saved-onlyonecommand: & ./paper12_sciencefinal1/reproduce_all.ps1.
+STOP after actual archivalGitclosure. D alreadyused once: no secondassessment,retuning,cohortchange,Crefit or recurrentrescue. Authors must review declarationsbefore external submission. Entire historical bytes follow unchanged.
+
+---
 ## Current mission: P12-REAL-D-SINGLE-APPROVER-AMEND-1
 
 Reviewed engineering archive; actual Git closure is certified by external receipts. After those gates: WAIT_FOR_HUMAN_INPUT / AUTHORITY_PENDING.
