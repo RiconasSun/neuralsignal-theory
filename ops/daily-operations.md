@@ -1,3 +1,14 @@
+# Current mission: P13-KI-PL-QUALITY-EPOCH-RESOLUTION-1
+
+Bounded source/metadata investigation and proposed P13-v2 contract independently accepted. Scientific readiness PROTOCOL_READY_PENDING_NEURAL_QC for A: recording-supported aversive-task PL pre-tone activity with explicit state/movement/clock/sorting limits. Historical20raw/20basic120/15active120bounds preserved; source-backed known LFP/manual masks give19A/15Bpotential mice,0actual neural-QCadmissions. Bcannot meet8+8at120. No awake/state-equivalence/choice/causal/single-neuron-purity claim.
+
+25animal identities and6155historical epochs fully audited.12paired NaN-empty spike-saturation sentinels resolved from pinned provider code; one manual[900,2730]interval retrieved selectively. Original IBL M0FAIL/priorKI INCONCLUSIVE/P1-P12unchanged. Quality-column exact formulas/units remain unverified; future operational train-onlyQC is explicit, not historical ratio certification. Proposed deterministic10dev/9finalallocation is NOT ACTIVATED.
+
+First5P1review and43-file candidate preserved; currentr2review0openP0/P1,46tests/85current+82archivedinputhashes/4byte-identicalmetadataoutputs. Five corrections cover lag, sign-null assumptions, full sensitivities, strongest-baseline and static-mixture guards. Currentengineeringbugs0/warnings0. No spikes/rawneuralarrays/fits/neuralnulls/finalassessment/M1-M7; no author message. No additional dataset search or cryptographic custody.
+
+Evidence: evidence/2026-10-15/p13-ki-pl-quality-epoch-resolution-1/HANDOFF.md. Report/proposed protocol: ../paper13_ki_pl_contract1/. Saved-only: & .\paper13_ki_pl_contract1\reproduce.ps1. Actual exact-file commit/push/remote-hash/clean/97itemclosure is certified only by the external closure_receipt.json, not prospectively by this header. STOP after archive; future activation requires separate owner authorization of the reviewed contract and all physiological/numerical gates. Do not automatically begin M1-M7.
+
+---
 # Current mission: P13-KI-PFC-METADATA-FEASIBILITY-1
 
 Bounded two-release metadata audit complete; actual archival Git closure pending external receipt. Overall AND both candidate-level scientific verdicts INCONCLUSIVE_METADATA. Primary001260 has74probes/41canonical animals/50sessions/20374units; its Passive stratum has10mice(DATA_INSUFFICIENT only at that scope), not a release-wide impossibility. Secondary000473 has25probes/25animals/25sessions/9408units;PL20raw anatomical animals at8units but quality/exclusion admission unresolved,15with proposed120matched active pre-tone epochs. No passive/aversive, dataset, region or probe pooling; a future multi-context design is unassessed, never declared viable or disproved.

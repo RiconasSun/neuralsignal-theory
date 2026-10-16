@@ -1,0 +1,132 @@
+# CCPN — P13 KI/PL FINAL PROVENANCE RESOLUTION
+
+MISSION: `P13-KI-PL-QUALITY-EPOCH-RESOLUTION-1`
+
+BASE:
+`0eba2fe4a47b0d6392159bfe24a3343a0f7ff1c6`
+
+PRIORITY: HIGH — RESOLVE THE REMAINING SCIENTIFIC DATA CONTRACT AND PREPARE P13-v2.
+
+## AUTHORIZATION
+
+Authorize one bounded, prospectively registered metadata/source-provenance investigation focused on DANDI 000473, Prelimbic Cortex (PL).
+
+Preserve the original IBL M0 FAIL and the previous KI metadata INCONCLUSIVE findings.
+
+No spike-value access, model fitting, final evaluation, new dataset search or retrospective gate promotion.
+
+## PHASE 1 — VERIFY UNIT QUALITY SEMANTICS
+
+Investigate the existing NWB quality columns and provider preprocessing documentation.
+
+Determine:
+
+1. Exact meaning, units and provenance of the two quality fields.
+2. Whether the published unit-selection rules can be reconstructed from public source definitions.
+3. Which quality judgments are metadata-supported.
+4. Which criteria must instead be implemented as future train-only physiological QC.
+5. Whether upstream retrospective sorting introduces selection limitations.
+
+Do not interpret undocumented numeric columns as certified quality ratios.
+
+If historical provider quality definitions cannot be verified, propose a prospectively specified training-only QC protocol rather than continuing indefinite provenance searches.
+
+Do not certify actual eligible units without neural measurements.
+
+## PHASE 2 — VERIFY PRE-TONE EPOCH PROVENANCE
+
+For every animal/session in 000473:
+
+- Preserve all original recording and animal identities.
+- Audit pure-tone timestamps and documented pre-tone [-3,0) windows.
+- Verify published interval-selection provenance where possible.
+- Distinguish basic recording-supported windows from provider-active windows.
+- Audit saturation, overlapping epochs, known invalid intervals and manual exclusions.
+- Identify quietdet_src=ignore or other ambiguous state declarations.
+- Preserve clock and recording-support limitations.
+
+Never equate basic pre-tone windows with confirmed awake or active behavior.
+
+If unpublished historical creator hashes cannot be resolved, state the limitation and determine whether a narrower source-supported protocol remains possible.
+
+Do not introduce a lossless hardware-packet certification requirement unless the target scientific estimand needs it.
+
+## PHASE 3 — COMPARE TWO SCIENTIFIC ESTIMANDS
+
+A. Primary candidate:
+Local PL spike-history predictive dynamics across recording-supported pre-tone epochs, with explicit state and movement limitations.
+
+B. Restricted candidate:
+Local PL predictive dynamics during provider-supported active pre-tone epochs only.
+
+Report complete independent-mouse upper bounds for both, using the unchanged 120-epoch candidate threshold.
+
+Current known bounds must be preserved:
+- PL raw anatomy potential: 20 mice.
+- Basic 120-epoch potential: 20 mice.
+- Provider-active matched 120-epoch potential: 15 mice.
+
+The active-only candidate cannot satisfy 8 development + 8 final mice under the current 120-epoch rule.
+
+Do not lower thresholds, claim state equivalence or switch estimands solely to achieve statistical significance.
+
+Recommend a primary estimand on scientific grounds, explicitly labeling metadata-informed choices.
+
+## PHASE 4 — PREPARE P13-v2 SCIENTIFIC CONTRACT
+
+If there is a defensible primary candidate, produce a complete proposed P13-v2 protocol, NOT an automatically activated study.
+
+Specify:
+
+- Anatomical scope: provider-labeled PL.
+- Behavioral scope: aversive-task pre-tone activity, not passive listening or decision-related mechanism.
+- Minimum independent mice: 8 development + 8 final.
+- Proposed 8 simultaneous eligible units per animal, pending train-only physiological QC.
+- Proposed 120 nonoverlapping valid 3-second epochs per animal, subject to source-backed evidence.
+- Animal-disjoint splits frozen before spike access.
+- Training-only unit QC and scaling.
+- Causal spike-count features and trial/epoch resets.
+- Strong firing-rate, own-history, population-history, context and drift Poisson baselines.
+- Tractable two-state Poisson HMM.
+- Low-dimensional fixed-timescale continuous-history predictor.
+- Matched model-complexity comparisons.
+- Mouse-level effects, uncertainty, multiplicity and conditional null tests.
+- One final held-out animal assessment.
+- Original scientific acceptance and stopping boundaries.
+
+No inherited P12 cryptographic ledger, offline keys or custom custody architecture.
+
+Do not silently reuse incompatible P11/P12 modeling code.
+
+## PHASE 5 — DECISION
+
+Return exactly one scientific-readiness outcome:
+
+- PROTOCOL_READY_PENDING_NEURAL_QC
+- INCONCLUSIVE_METADATA
+- DATA_INSUFFICIENT
+
+PROTOCOL_READY_PENDING_NEURAL_QC means the documented data contract is adequate to prospectively begin physiological QC; it does NOT mean 16 animals have already passed biological eligibility.
+
+If essential provenance is still missing, report which particular missing evidence prevents a defensible study, and provide the shortest available author/source request.
+
+Do not initiate further open-ended audits.
+
+## DELIVERABLES
+
+Produce:
+
+1. Quality-field provenance report.
+2. Epoch and exclusion provenance report.
+3. Exact 25-animal 000473 disposition table.
+4. Basic versus active cohort comparison.
+5. Proposed frozen P13-v2 protocol if supported.
+6. Known limitations and claim audit.
+7. QC tests and saved-only PowerShell reproduction.
+8. Independent internal review and Git verification.
+
+Do not access spikes or begin M1–M7 in this mission.
+
+Stop after the evidence-backed decision.
+
+BEGIN NOW.

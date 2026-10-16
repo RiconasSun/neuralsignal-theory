@@ -1,0 +1,171 @@
+{
+  "status": "PROPOSED_ONLY_NOT_ACTIVATED",
+  "dataset": "000473",
+  "version": "0.230417.1502",
+  "anatomy": "provider PL",
+  "estimand": "A recording-supported aversive-task pre-tone",
+  "units": 8,
+  "epochs": 120,
+  "epoch_seconds": 3,
+  "bin_seconds": 0.1,
+  "warmup_bins": 5,
+  "scored_bins_per_epoch": 25,
+  "development_epoch_blocks": {
+    "A": 60,
+    "B": 30,
+    "E": 30
+  },
+  "final_epoch_blocks": {
+    "C": 60,
+    "D": 60
+  },
+  "training_exposure_seconds": 180,
+  "QC": {
+    "status": "PROPOSED_ONLY_NOT_ACTIVATED",
+    "historical_columns_used_for_admission": false,
+    "partition": "training epochs only, after mouse and epoch assignments frozen",
+    "finite_strictly_increasing_times": true,
+    "refractory_threshold_seconds": 0.0015,
+    "refractory_fraction_max": 0.01,
+    "definition": "sum adjacent within-epoch ISIs<1.5ms / number of adjacent within-epoch ISIs; no ISI across gaps; this is NOT the published contamination/ISI-violation ratio",
+    "minimum_training_spikes": 50,
+    "minimum_adjacent_ISIs": 30,
+    "minimum_occupied_training_epochs": 12,
+    "rate_hz_min": 0.1,
+    "rate_hz_max": 100.0,
+    "rate_denominator": "all valid training epoch exposure, including zero-spike epochs",
+    "waveform_requirement": "No new waveform reading or waveform-good certification; target is prospectively screened curated-release units, not certified isolated single neurons",
+    "selection": "first8 passing PL units sorted by numeric NWB unit_id, single probe; no replacement after B/D scores",
+    "limitation": "Activity/refractory screen is an operational QC, not purity or sorting certification; training-only screen cannot undo full-record retrospective provider sorting.",
+    "mouse_gate": "8eligible simultaneous units AND120valid epochs; at least8development+8final mice; stop without replacements if allocation loses this minimum"
+  },
+  "ridge_grid": [
+    0.1,
+    1,
+    10
+  ],
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "baseline_parameter_counts": {
+    "B0": 8,
+    "B1": 96,
+    "B2": 32,
+    "B3": 176,
+    "B4": 288
+  },
+  "D": {
+    "states": 2,
+    "p": [
+      0.5,
+      0.9,
+      0.98
+    ],
+    "initial": [
+      0.5,
+      0.5
+    ],
+    "added_free_parameters": 16
+  },
+  "C": {
+    "dimension": 2,
+    "tau_pairs_seconds": [
+      [
+        0.1,
+        0.3
+      ],
+      [
+        0.3,
+        1
+      ],
+      [
+        0.1,
+        1
+      ]
+    ],
+    "added_free_parameters": 16,
+    "projection": "seeded fixed orthonormal QR, not fitted"
+  },
+  "solver": {
+    "name": "L-BFGS-B",
+    "maxiter": 2000,
+    "maxfun": 100000,
+    "maxls": 40,
+    "maxcor": 10,
+    "ftol": 1e-12,
+    "gtol": 1e-05,
+    "bounds": [
+      -8,
+      8
+    ]
+  },
+  "numerical": {
+    "PG_max": 0.001,
+    "independent_gradient_relative_max": 1e-05,
+    "fixed_FD_relative_step": 0.0001,
+    "FD_scan": [
+      0.01,
+      0.001,
+      0.0001,
+      1e-05,
+      1e-06
+    ]
+  },
+  "primary_contrasts": [
+    "D-B4",
+    "C-B4",
+    "D-C"
+  ],
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 130041,
+  "primary_correction": "Holm3",
+  "alpha": 0.05,
+  "control_replicates_each": 999,
+  "control_seeds": [
+    130101,
+    130102,
+    130103,
+    130104
+  ],
+  "development_fit_cap_per_mouse": 93,
+  "final_fit_cap_per_mouse": 22,
+  "neural_reads_authorized": false,
+  "M1_M7_activated": false,
+  "one_final_assessment": true,
+  "proposal_version": 2,
+  "continuous_index": "c_t=counts in bin t; z_t=standardize(c_t); h_1=0; h_t=R*h_(t-1)+(I-R)*Q.T*z_(t-1) for t>=2; score c_tthen observe c_t",
+  "sign_flip_null": "Independent fair signs conditional on absolute mouse differences; centered sign symmetry, NOT unrestricted zero mean",
+  "inference_gate": "Without defensible symmetry/independence/sampling assumptions, conditional descriptive p only; withhold confirmatory claim",
+  "strongest_baseline": "B* development Bmean maximum across selected B0-B4, ties1e-12lower parameter count then Bnumber; final Cfrom scratch",
+  "static_comparator": "S existing p=.5grid; development one-SElargest ridge; Aobjective start; final C3starts",
+  "claim_guard_family": [
+    "D-B*",
+    "C-B*",
+    "D-S"
+  ],
+  "claim_guard_correction": "Holm3; guards only withhold primary interpretation",
+  "conditional_model_null": "Frozen B* sequential Poisson,999replicates, D/C-B*exceedance Holm2",
+  "sensitivity_unit_operator": "Omitted source standardized neural terms=0in B2-B4and Cinput; HMM score/filter only retained units; original scalers/intercepts/nuisance; denominator retained unit-bins",
+  "sensitivity_anatomy": {
+    "mandatory": "retain PL5/PL6a from original8,>=4units",
+    "exact_PL": "structurally empty descriptive N/A fixed before neural outcomes",
+    "census": {
+      "PL5": 1064,
+      "PL6a": 754,
+      "PL2/3": 68,
+      "PL6b": 14,
+      "PL": 0
+    }
+  },
+  "sensitivity_recent_event": "Whole original epoch censor: onset in[start-5,stop) or supplied interval overlap; no replacement/bin/covariate ablation",
+  "sensitivity_minimum": {
+    "final_mice": 8,
+    "D_epochs_per_mouse": 10,
+    "retained_units": 4,
+    "missing_required_panel": "INCONCLUSIVE",
+    "opposite_sign": "MIXED"
+  },
+  "sensitivity_alignment": "Shift original windows+-100ms; no response bins ending after original tone; masks/support/partitionoverlap rechecked, no replacement"
+}
