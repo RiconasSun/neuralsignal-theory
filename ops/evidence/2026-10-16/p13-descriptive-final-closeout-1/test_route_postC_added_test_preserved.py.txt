@@ -1,0 +1,65 @@
+import ast
+import inspect
+import unittest
+import uuid
+import json
+from unittest.mock import patch
+import numpy as np
+from . import controls, common, final_C, final_D, source_adapter
+from paper13_ki_execution1 import final_C as old_C, final_D as old_D, control_core as old_controls
+
+
+class RouteTests(unittest.TestCase):
+    def test_exact_original_calibration_and_export_function_bodies(self):
+        for left,right in [(final_C.load_C,old_C.load_C),(final_C.design,old_C.design),(final_C.fit_mouse,old_C.fit_mouse),
+                           (final_D.window_sets,old_D.window_sets),(final_D.export,old_D.export),(final_D.consume,old_D.consume),(final_D.run_controls,old_D.run_controls)]:
+            self.assertEqual(ast.dump(ast.parse(inspect.getsource(left))),ast.dump(ast.parse(inspect.getsource(right))))
+
+    def test_three_stress_summaries_identical_to_original_four_suite_math(self):
+        mice=[str(i) for i in range(9)]
+        observed={m:{k:float(i)/100 for i,k in enumerate(controls.LABELS)} for m in mice}
+        rng=np.random.default_rng(917)
+        arrays={s:rng.normal(0,.01,(999,9,9)) for s in controls.SUITES}
+        original_arrays={**arrays,'conditional_Bstar':np.zeros((999,9,9))}
+        expected,oldmeans=old_controls.summarize(original_arrays,observed,mice)
+        actual,means=controls.summarize(arrays,observed,mice)
+        self.assertEqual(actual['stress_references'],expected['stress_references'])
+        for name in controls.SUITES:np.testing.assert_array_equal(means[name],oldmeans[name])
+        self.assertEqual(actual['conditional_Bstar_status'],'FAILED_UNAVAILABLE')
+        for guard in actual['beyond_baseline_null_guards'].values():
+            self.assertIsNone(guard['conditional_Bstar_p']);self.assertIsNone(guard['conditional_Bstar_Holm2_p'])
+            self.assertFalse(guard['numerical_reference_conditions_met'])
+
+    def test_conditional_draw_denied_and_other_suites_delegate_unchanged(self):
+        with patch.object(old_controls,'replicate',return_value='original') as original:
+            with self.assertRaises(PermissionError):controls.replicate('conditional_Bstar',None)
+            self.assertEqual(original.call_count,0)
+            for name in controls.SUITES:self.assertEqual(controls.replicate(name,'x'),'original')
+            self.assertEqual(original.call_count,3)
+
+    def test_incomplete_or_extra_control_suite_denied(self):
+        with self.assertRaises(ValueError):controls.summarize({}, {}, [str(i) for i in range(9)])
+
+    def test_direct_decoder_denied_before_session_without_D_approval(self):
+        with patch.object(final_D,'approved',side_effect=PermissionError('noD')),patch.object(source_adapter.OriginalReader,'__init__',side_effect=AssertionError('sessionbeforeD')):
+            with self.assertRaises(PermissionError):source_adapter.SourceReader({})
+
+    def test_claim_exceptions_do_not_bypass_identity_failure(self):
+        with patch.object(common,'identities',side_effect=common.ScientificStop('tampered')):
+            with self.assertRaises(common.ScientificStop):common.retained_E_gate()
+
+    def test_new_transport_journal_preserves_inherited_methods_and_cumulative_budget(self):
+        root=common.P/'work'/('source_log_'+uuid.uuid4().hex);(root/'results/final_D').mkdir(parents=True)
+        (root/'results/final_D/ONCE_EXECUTION.json').write_text(json.dumps({'authorization_id':final_D.AUTHORIZATION_ID,'source_freeze':'reviewed'}))
+        (root/'results/source_access.jsonl').write_text('{"bytes":15}\n{"bytes":15}\n')
+        def original_init(reader,record):reader.total_calls=10;reader.total_bytes=100;reader.journal=root/'OLD_IMMUTABLE_LOG'
+        with patch.object(source_adapter,'P',root),patch.object(final_D,'approved',return_value='reviewed'),patch.object(source_adapter.OriginalReader,'__init__',original_init):
+            reader=source_adapter.SourceReader({})
+            self.assertEqual(reader.journal,root/'results/source_access.jsonl')
+            self.assertEqual(reader.total_calls,12);self.assertEqual(reader.total_bytes,130)
+            self.assertFalse((root/'OLD_IMMUTABLE_LOG').exists())
+        self.assertIs(source_adapter.SourceReader.block,source_adapter.OriginalReader.block)
+        self.assertIs(source_adapter.SourceReader.read,source_adapter.OriginalReader.read)
+
+
+if __name__=='__main__':unittest.main()

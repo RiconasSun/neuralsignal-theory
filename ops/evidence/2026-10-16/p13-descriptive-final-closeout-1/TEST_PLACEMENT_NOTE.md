@@ -1,0 +1,3 @@
+# Post-C test placement correction
+
+After all198Cfits/nativeexit0and savedCseal had completed, an additional source-journal synthetic case was briefly added to the already frozen test_route.py. No scientific code, fit, model, count, policy or Coutput changed. Preserve the interim test source in test_route_postC_added_test_preserved.py.txt. Move the extra case unchanged to new test_source_journal.py; restore test_route.py byte-exact to its PRE_C_IMPLEMENTATION_FREEZE_r2 SHA256, including original blank-line count. This preserves every original Csource/test identity. Fresh tests on final placement required beforeD. No Crefit orDaccess occurred.

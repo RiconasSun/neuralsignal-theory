@@ -1,0 +1,21 @@
+test_full_synthetic_text_tables_figures_all_failures_retained_no_source_or_fit (paper13_descriptive_final1.test_reporting.ReportingTests.test_full_synthetic_text_tables_figures_all_failures_retained_no_source_or_fit) ... ERROR
+
+======================================================================
+ERROR: test_full_synthetic_text_tables_figures_all_failures_retained_no_source_or_fit (paper13_descriptive_final1.test_reporting.ReportingTests.test_full_synthetic_text_tables_figures_all_failures_retained_no_source_or_fit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper13_descriptive_final1\test_reporting.py", line 19, in test_full_synthetic_text_tables_figures_all_failures_retained_no_source_or_fit
+    stats,_=summarize({m:v['scores'] for m,v in per.items()},mice)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper13_ki_execution1\animal_stats.py", line 57, in summarize
+    x=contrast_matrix(scores,mouse_order);interval,indices,bootstrap=whole_mouse_bootstrap(x)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper13_ki_execution1\animal_stats.py", line 41, in contrast_matrix
+    if set(s)!={'B4','D','C','Bstar','S'}:raise ValueError('All primary and guard scores required')
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: All primary and guard scores required
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+FAILED (errors=1)

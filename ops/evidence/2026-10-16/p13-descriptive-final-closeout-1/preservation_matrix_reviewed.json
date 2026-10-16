@@ -1,0 +1,722 @@
+{
+  "baseline_requirement_count": 58,
+  "verified_baseline_count": 55,
+  "unverified_items": [
+    "REQ-056",
+    "REQ-057",
+    "REQ-058"
+  ],
+  "all_original_requirements_retained": true,
+  "requirements": [
+    {
+      "requirement_id": "REQ-001",
+      "requirement": "Exact BASE/clean branch preflight",
+      "implementation_location": "goldenstandards.md;external precommit_gate",
+      "verification_method": "Exact BASE and branch preflight; current HEAD/origin-test checked again at closure",
+      "status": "VERIFIED",
+      "evidence": [
+        "goldenstandards.md",
+        "external precommit_gate"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-002",
+      "requirement": "Preserve original M6failure/partialarrays/receipts",
+      "implementation_location": "paper13_descriptive_final1/INPUT_FREEZE.json;paper13_ki_execution1/results/M6_E_CONTROLS_GATE.json",
+      "verification_method": "Original failure/partial artifacts hash-bound, historical paths not edited",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper13_descriptive_final1/INPUT_FREEZE.json",
+        "paper13_ki_execution1/results/M6_E_CONTROLS_GATE.json"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-003",
+      "requirement": "Preserve documented Bstar generator instability",
+      "implementation_location": "paper13_bstar_diag1/results/SAVED_AUDIT.json;INPUT_FREEZE.json",
+      "verification_method": "Original documented instability and prefix evidence retained",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper13_bstar_diag1/results/SAVED_AUDIT.json",
+        "INPUT_FREEZE.json"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-004",
+      "requirement": "Preserve6of9recentcoveragefailure and8mouse threshold",
+      "implementation_location": "PRE_D_STOPPING_RULE_AMENDMENT.json;results/FINAL_D_RESULTS.json",
+      "verification_method": "Six qualified recent-event mice and eight-mouse threshold unchanged",
+      "status": "VERIFIED",
+      "evidence": [
+        "PRE_D_STOPPING_RULE_AMENDMENT.json",
+        "results/FINAL_D_RESULTS.json"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-005",
+      "requirement": "All affected broadconfirmatory/temporalclaims permanentlyINCONCLUSIVE",
+      "implementation_location": "results/FINAL_D_RESULTS.json;manuscript/CLAIM_AUDIT.json",
+      "verification_method": "All affected broad claims remain permanently INCONCLUSIVE",
+      "status": "VERIFIED",
+      "evidence": [
+        "results/FINAL_D_RESULTS.json",
+        "manuscript/CLAIM_AUDIT.json"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-006",
+      "requirement": "Conditional Bstar null FAILED_UNAVAILABLE; neverrerun/replace",
+      "implementation_location": "controls.py;results/FINAL_D_RESULTS.json",
+      "verification_method": "Conditional generator denied; no new draw; unavailable p fields",
+      "status": "VERIFIED",
+      "evidence": [
+        "controls.py",
+        "results/FINAL_D_RESULTS.json"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-007",
+      "requirement": "Original math/models/grids/seeds/initializations/statistics/null/sensitivities unchanged",
+      "implementation_location": "IMPLEMENTATION_DELTA.md;PRE_C_REVIEW_r2.md;PRE_D_REVIEW_r1.md",
+      "verification_method": "Original mathematical function bodies and numerical policies preserved",
+      "status": "VERIFIED",
+      "evidence": [
+        "IMPLEMENTATION_DELTA.md",
+        "PRE_C_REVIEW_r2.md",
+        "PRE_D_REVIEW_r1.md"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-008",
+      "requirement": "Verify complete frozen source/config/protocol/mouseallocation",
+      "implementation_location": "INPUT_FREEZE.json;D_ANALYSIS_FREEZE.json;POST_D_SOURCE_PRESERVATION.json",
+      "verification_method": "120input/638pre-D hashes checked, original allocation",
+      "status": "VERIFIED",
+      "evidence": [
+        "INPUT_FREEZE.json",
+        "D_ANALYSIS_FREEZE.json",
+        "POST_D_SOURCE_PRESERVATION.json"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-009",
+      "requirement": "Independent actualC/D implementation and numerical review beforeC",
+      "implementation_location": "PRE_C_REVIEW_r1.md;PRE_C_REVIEW_r2.md;FINAL_C_APPROVAL.json",
+      "verification_method": "Failed review preserved; accepted actual implementation before C",
+      "status": "VERIFIED",
+      "evidence": [
+        "PRE_C_REVIEW_r1.md",
+        "PRE_C_REVIEW_r2.md",
+        "FINAL_C_APPROVAL.json"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-010",
+      "requirement": "Remove only four-null completion prerequisite in NEWroute; historicalgates immutable",
+      "implementation_location": "PRE_D_STOPPING_RULE_AMENDMENT.json;common.py",
+      "verification_method": "Only new descriptive route changes failed-null execution prerequisite",
+      "status": "VERIFIED",
+      "evidence": [
+        "PRE_D_STOPPING_RULE_AMENDMENT.json",
+        "common.py"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-011",
+      "requirement": "Amendment disclosed as preD/E-informed descriptive; no confirmatorypreregistration claim",
+      "implementation_location": "OWNER_MISSION.txt;paper_template.md;manuscript/Manuscript.md",
+      "verification_method": "E-informed/pre-D descriptive amendment disclosed throughout",
+      "status": "VERIFIED",
+      "evidence": [
+        "OWNER_MISSION.txt",
+        "paper_template.md",
+        "manuscript/Manuscript.md"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-012",
+      "requirement": "Allothermandatory scientific/numerical/sourcefailures STOP",
+      "implementation_location": "test_failure_retention.py;test_final_C.py;test_final_D_integration.py",
+      "verification_method": "All other mandatory failures stop; injected paths retain evidence",
+      "status": "VERIFIED",
+      "evidence": [
+        "test_failure_retention.py",
+        "test_final_C.py",
+        "test_final_D_integration.py"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-013",
+      "requirement": "Original9finalmice only/frozenC60partitions",
+      "implementation_location": "results/FINAL_C_GATE.json;results/FINAL_C_FULL_STATE_MANIFEST.json",
+      "verification_method": "Original nine identities/C60partitions",
+      "status": "VERIFIED",
+      "evidence": [
+        "results/FINAL_C_GATE.json",
+        "results/FINAL_C_FULL_STATE_MANIFEST.json"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-014",
+      "requirement": "Originalselected8PLunits/C-onlyQC/identities/masks",
+      "implementation_location": "results/final_C/preprocessing;results/FINAL_C_FULL_STATE_MANIFEST.json",
+      "verification_method": "C-only QC, original8units, trial masks/scalers sealed",
+      "status": "VERIFIED",
+      "evidence": [
+        "results/final_C/preprocessing",
+        "results/FINAL_C_FULL_STATE_MANIFEST.json"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-015",
+      "requirement": "B0-B4+BstarB2+frozenD/C/S hyperparameters",
+      "implementation_location": "common.py;results/final_C/models;PRE_D_REVIEW_r1.md",
+      "verification_method": "B0\u00e2\u20ac\u201cB4, BstarB2, exact D/C/S selected models",
+      "status": "VERIFIED",
+      "evidence": [
+        "common.py",
+        "results/final_C/models",
+        "PRE_D_REVIEW_r1.md"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-016",
+      "requirement": "Original22fits/mouse=198budget,3seeds11/23/37 exceptselectedCprojection",
+      "implementation_location": "results/FINAL_C_SAVED_AUDIT.json;C_NATIVE_EXECUTION.txt",
+      "verification_method": "198unique starts/completions, original22schedule/seeds",
+      "status": "VERIFIED",
+      "evidence": [
+        "results/FINAL_C_SAVED_AUDIT.json",
+        "C_NATIVE_EXECUTION.txt"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-017",
+      "requirement": "Fromscratch Ccoefficients/scalers/sharedB4offset; nodevtransfer",
+      "implementation_location": "final_C.py;results/FINAL_C_FULL_STATE_MANIFEST.json",
+      "verification_method": "From-scratch C/scalers/sharedB4offset; no development coefficient transfer",
+      "status": "VERIFIED",
+      "evidence": [
+        "final_C.py",
+        "results/FINAL_C_FULL_STATE_MANIFEST.json"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-018",
+      "requirement": "PG<=.001 andoriginalAD/fixedFD<=1e-5 init/mid/endpoint",
+      "implementation_location": "results/final_C/fits;PRE_D_REVIEW_r1.md",
+      "verification_method": "594AD/fixedFD certificates; all198PG/numerical gates",
+      "status": "VERIFIED",
+      "evidence": [
+        "results/final_C/fits",
+        "PRE_D_REVIEW_r1.md"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-019",
+      "requirement": "Allfitattempts/trajectories/certificates retained",
+      "implementation_location": "results/final_C/actions.jsonl;results/final_C/fits",
+      "verification_method": "All198fit receipts and trajectories retained",
+      "status": "VERIFIED",
+      "evidence": [
+        "results/final_C/actions.jsonl",
+        "results/final_C/fits"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-020",
+      "requirement": "Complete Cstate and source/model/preprocessing/sensitivity seal onlyafterallPASS",
+      "implementation_location": "results/FINAL_C_FULL_STATE_MANIFEST.json;results/FINAL_C_SEAL_RECEIPT.json",
+      "verification_method": "Complete490artifact seal verified before D",
+      "status": "VERIFIED",
+      "evidence": [
+        "results/FINAL_C_FULL_STATE_MANIFEST.json",
+        "results/FINAL_C_SEAL_RECEIPT.json"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-021",
+      "requirement": "NoDneuralinQC/scaling/fitting/selection",
+      "implementation_location": "final_C.py;PRE_D_REVIEW_r1.md;manuscript/Manuscript.md",
+      "verification_method": "Only saved C fits/scalers/QC; whole-record transient decoder permission disclosed",
+      "status": "VERIFIED",
+      "evidence": [
+        "final_C.py",
+        "PRE_D_REVIEW_r1.md",
+        "manuscript/Manuscript.md"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-022",
+      "requirement": "FailureSTOP/nosecondfit/rescue",
+      "implementation_location": "results/final_C/actions.jsonl;test_final_C.py",
+      "verification_method": "Single C execution; no retry/rescue",
+      "status": "VERIFIED",
+      "evidence": [
+        "results/final_C/actions.jsonl",
+        "test_final_C.py"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-023",
+      "requirement": "Exact originalD60epochs/trialmasks/unitidentities",
+      "implementation_location": "final_D.py;FROZEN_ALIGNMENT_BOUNDARY_CANARIES.json",
+      "verification_method": "Original60Depochs/8units and source/parent masks",
+      "status": "VERIFIED",
+      "evidence": [
+        "final_D.py",
+        "FROZEN_ALIGNMENT_BOUNDARY_CANARIES.json"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-024",
+      "requirement": "Complete198numericvalidCgate/seal/sourcehashverification",
+      "implementation_location": "results/FINAL_C_SEAL_RECEIPT.json;ACTUAL_C_PREFLIGHT_AUDIT.txt",
+      "verification_method": "Actual198Cgate and full state checks before D",
+      "status": "VERIFIED",
+      "evidence": [
+        "results/FINAL_C_SEAL_RECEIPT.json",
+        "ACTUAL_C_PREFLIGHT_AUDIT.txt"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-025",
+      "requirement": "IndependentactualD/scorer/null/sensitivityreview",
+      "implementation_location": "PRE_D_REVIEW_r1.md;FINAL_D_APPROVAL.json",
+      "verification_method": "Independent actual scorer/control/sensitivity review accepted pre-D",
+      "status": "VERIFIED",
+      "evidence": [
+        "PRE_D_REVIEW_r1.md",
+        "FINAL_D_APPROVAL.json"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-026",
+      "requirement": "Synthetictestallintendedoutputs/denominators/statistics",
+      "implementation_location": "PRE_D_SAVED_REPRODUCTION.txt;FROZEN_ALIGNMENT_BOUNDARY_CANARIES.json",
+      "verification_method": "88original route tests plus2160alignment boundary canaries before D",
+      "status": "VERIFIED",
+      "evidence": [
+        "PRE_D_SAVED_REPRODUCTION.txt",
+        "FROZEN_ALIGNMENT_BOUNDARY_CANARIES.json"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-027",
+      "requirement": "Freeze allanalysis/reportingcode beforeD",
+      "implementation_location": "D_ANALYSIS_FREEZE.json;POST_D_SOURCE_PRESERVATION.json",
+      "verification_method": "All638pre-D files unchanged; separate saved-audit correction disclosed",
+      "status": "VERIFIED",
+      "evidence": [
+        "D_ANALYSIS_FREEZE.json",
+        "POST_D_SOURCE_PRESERVATION.json"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-028",
+      "requirement": "Confirm no priorDoutcomeuseinselection",
+      "implementation_location": "PRE_D_REVIEW_r1.md;D_ANALYSIS_FREEZE.json;PRE_D_STOPPING_RULE_AMENDMENT.json",
+      "verification_method": "No D outcomes before selection/freeze/review; decode distinction disclosed",
+      "status": "VERIFIED",
+      "evidence": [
+        "PRE_D_REVIEW_r1.md",
+        "D_ANALYSIS_FREEZE.json",
+        "PRE_D_STOPPING_RULE_AMENDMENT.json"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-029",
+      "requirement": "ExactlyoneDassessment, durableoncebeforeDIO; noretry/retune/reselect",
+      "implementation_location": "results/final_D/ONCE_EXECUTION.json;results/final_D/actions.jsonl",
+      "verification_method": "Single durable consumption before D, one complete assessment",
+      "status": "VERIFIED",
+      "evidence": [
+        "results/final_D/ONCE_EXECUTION.json",
+        "results/final_D/actions.jsonl"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-030",
+      "requirement": "All3primaries D-B4/C-B4/D-C",
+      "implementation_location": "manuscript/contrasts.csv;results/FINAL_D_RESULTS.json",
+      "verification_method": "All three primaries retained",
+      "status": "VERIFIED",
+      "evidence": [
+        "manuscript/contrasts.csv",
+        "results/FINAL_D_RESULTS.json"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-031",
+      "requirement": "All3guards D-Bstar/C-Bstar/D-S",
+      "implementation_location": "manuscript/contrasts.csv;results/FINAL_D_RESULTS.json",
+      "verification_method": "All three guards retained",
+      "status": "VERIFIED",
+      "evidence": [
+        "manuscript/contrasts.csv",
+        "results/FINAL_D_RESULTS.json"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-032",
+      "requirement": "Equalmouse/fullmouselevelpredictions",
+      "implementation_location": "manuscript/animal_model_scores.csv;results/FINAL_D_RESULTS.json",
+      "verification_method": "Equal-mouse9final/10development full scores",
+      "status": "VERIFIED",
+      "evidence": [
+        "manuscript/animal_model_scores.csv",
+        "results/FINAL_D_RESULTS.json"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-033",
+      "requirement": "Originalexactsignflips/assumptions/Holm3+3",
+      "implementation_location": "manuscript/contrasts.csv;paper13_ki_execution1/animal_stats.py",
+      "verification_method": "Original exact sign flips and separate Holm3families",
+      "status": "VERIFIED",
+      "evidence": [
+        "manuscript/contrasts.csv",
+        "paper13_ki_execution1/animal_stats.py"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-034",
+      "requirement": "Original10000mousebootstrap/CI/LOMO/directionrules",
+      "implementation_location": "results/final_D/mouse_bootstrap.npz;results/FINAL_D_RESULTS.json",
+      "verification_method": "Original10000whole-mouse bootstrap, CI/direction/LOMO",
+      "status": "VERIFIED",
+      "evidence": [
+        "results/final_D/mouse_bootstrap.npz",
+        "results/FINAL_D_RESULTS.json"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-035",
+      "requirement": "Originaltemporal/history/taskorder999controls",
+      "implementation_location": "results/final_D/controls;results/final_D/actions.jsonl",
+      "verification_method": "Three999x9x9finite arrays,26973mouse completions",
+      "status": "VERIFIED",
+      "evidence": [
+        "results/final_D/controls",
+        "results/final_D/actions.jsonl"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-036",
+      "requirement": "Allmandatorysensitivitypanels/failedandsubthresholdretained",
+      "implementation_location": "manuscript/all_sensitivity_cells.csv;manuscript/sensitivity_summary.csv",
+      "verification_method": "All mandatory/optional/subthreshold panels; recent6/9FAIL",
+      "status": "VERIFIED",
+      "evidence": [
+        "manuscript/all_sensitivity_cells.csv",
+        "manuscript/sensitivity_summary.csv"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-037",
+      "requirement": "No finalresultdrivenmouseexclusions/modelchanges/secondD",
+      "implementation_location": "D_ANALYSIS_FREEZE.json;results/final_D/actions.jsonl",
+      "verification_method": "No outcome-driven model/exclusion/reassessment",
+      "status": "VERIFIED",
+      "evidence": [
+        "D_ANALYSIS_FREEZE.json",
+        "results/final_D/actions.jsonl"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-038",
+      "requirement": "Separate descriptivegain/statisticalevidence/Bstar/S/controls/withheldconfirmation",
+      "implementation_location": "manuscript/Manuscript.md;SCIENTIFIC_CLOSEOUT_REPORT.md",
+      "verification_method": "Descriptive gains/statistical components/guards/null failure separated",
+      "status": "VERIFIED",
+      "evidence": [
+        "manuscript/Manuscript.md",
+        "SCIENTIFIC_CLOSEOUT_REPORT.md"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-039",
+      "requirement": "NoVALIDATEDaffectedbroadclaims/causalprimitives/NAP/CWP/independentlab",
+      "implementation_location": "manuscript/CLAIM_AUDIT.json;manuscript/Manuscript.md",
+      "verification_method": "No affected VALIDATED/causal/ontology/NAP/CWP/independent-lab claim",
+      "status": "VERIFIED",
+      "evidence": [
+        "manuscript/CLAIM_AUDIT.json",
+        "manuscript/Manuscript.md"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-040",
+      "requirement": "Nonsignificanceisnotequivalence",
+      "implementation_location": "manuscript/Manuscript.md",
+      "verification_method": "Nonsignificance explicitly not equivalence",
+      "status": "VERIFIED",
+      "evidence": [
+        "manuscript/Manuscript.md"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-041",
+      "requirement": "Ifvalidfinalcomplete fullmainmanuscript/workingtitle",
+      "implementation_location": "manuscript/Manuscript.md;manuscript/Manuscript.pdf",
+      "verification_method": "Complete descriptive draft after valid D, exact working title",
+      "status": "VERIFIED",
+      "evidence": [
+        "manuscript/Manuscript.md",
+        "manuscript/Manuscript.pdf"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-042",
+      "requirement": "Fullsupplementarymethods",
+      "implementation_location": "manuscript/Supplement.md;manuscript/Supplement.pdf",
+      "verification_method": "Supplementary methods/A1\u00e2\u20ac\u201cA10 and exact current reproduction command",
+      "status": "VERIFIED",
+      "evidence": [
+        "manuscript/Supplement.md",
+        "manuscript/Supplement.pdf"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-043",
+      "requirement": "EvsD/allanimalscores/primaryguardstatistics",
+      "implementation_location": "manuscript/contrasts.csv;manuscript/animal_model_scores.csv",
+      "verification_method": "E/D all19animal and6contrast full-precision tables",
+      "status": "VERIFIED",
+      "evidence": [
+        "manuscript/contrasts.csv",
+        "manuscript/animal_model_scores.csv"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-044",
+      "requirement": "Allnulls/unavailablereference/generatorfailure/negativeandmixed",
+      "implementation_location": "manuscript/retained_null_references.csv;manuscript/Manuscript.md",
+      "verification_method": "Every retained reference plus failed conditional/generator history",
+      "status": "VERIFIED",
+      "evidence": [
+        "manuscript/retained_null_references.csv",
+        "manuscript/Manuscript.md"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-045",
+      "requirement": "Fullsensitivityandcoveragefailures/numericalanatomylimits",
+      "implementation_location": "manuscript/all_sensitivity_cells.csv;manuscript/Supplement.md",
+      "verification_method": "Negative/mixed/failing coverage and numerical/anatomy limitations",
+      "status": "VERIFIED",
+      "evidence": [
+        "manuscript/all_sensitivity_cells.csv",
+        "manuscript/Supplement.md"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-046",
+      "requirement": "A1-A10claimtoevidenceaudit",
+      "implementation_location": "manuscript/CLAIM_AUDIT.json;manuscript/Supplement.md",
+      "verification_method": "A1\u00e2\u20ac\u201cA10 claim/evidence restrictions",
+      "status": "VERIFIED",
+      "evidence": [
+        "manuscript/CLAIM_AUDIT.json",
+        "manuscript/Supplement.md"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-047",
+      "requirement": "Scientificfigures/tables",
+      "implementation_location": "manuscript/figures;manuscript/*.csv",
+      "verification_method": "Two scientific figures asPNG/SVG and six completeCSVtables",
+      "status": "VERIFIED",
+      "evidence": [
+        "manuscript/figures",
+        "manuscript/*.csv"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-048",
+      "requirement": "Savedvsfullreproductioninstructions",
+      "implementation_location": "REPRODUCTION.md;reproduce_closeout.ps1;FINAL_SAVED_REPRODUCTION.txt",
+      "verification_method": "96saved/synthetic checks; consumed scientific path not rerun; portability/aggregate limits",
+      "status": "VERIFIED",
+      "evidence": [
+        "REPRODUCTION.md",
+        "reproduce_closeout.ps1",
+        "FINAL_SAVED_REPRODUCTION.txt"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-049",
+      "requirement": "MainandsupplementPDF/renderverification",
+      "implementation_location": "PDF_FINAL_QA.md;PDF_FINAL_RENDER_INVENTORY_r2.json",
+      "verification_method": "Actual8+7PDFpages visually checked; initial/orphan attempts retained",
+      "status": "VERIFIED",
+      "evidence": [
+        "PDF_FINAL_QA.md",
+        "PDF_FINAL_RENDER_INVENTORY_r2.json"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-050",
+      "requirement": "DescriptivepostamendmentvisibleAbstract/Methods/Discussion/Limitations",
+      "implementation_location": "manuscript/Manuscript.md",
+      "verification_method": "Descriptive/amended scope visible in Abstract/Methods/Discussion/Limitations",
+      "status": "VERIFIED",
+      "evidence": [
+        "manuscript/Manuscript.md"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-051",
+      "requirement": "Ifrequiredgatefails truthfulscientificstopreport/no completedpaperclaim",
+      "implementation_location": "test_failure_retention.py;results/FINAL_D_RESULTS.json",
+      "verification_method": "Contingent stop branch covered; no new required gate failed in actual valid assessment",
+      "status": "VERIFIED",
+      "evidence": [
+        "test_failure_retention.py",
+        "results/FINAL_D_RESULTS.json"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-052",
+      "requirement": "No generator/optimizerrescue/clipping/alternativedraws",
+      "implementation_location": "controls.py;results/final_D/actions.jsonl;INPUT_FREEZE.json",
+      "verification_method": "No generator/optimizer rescue/clipping/draw replacement",
+      "status": "VERIFIED",
+      "evidence": [
+        "controls.py",
+        "results/final_D/actions.jsonl",
+        "INPUT_FREEZE.json"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-053",
+      "requirement": "No developmentrefit/dataset/model/threshold/animalchange",
+      "implementation_location": "INPUT_FREEZE.json;D_ANALYSIS_FREEZE.json;POST_D_SOURCE_PRESERVATION.json",
+      "verification_method": "No development refit/model/grid/animal/threshold change",
+      "status": "VERIFIED",
+      "evidence": [
+        "INPUT_FREEZE.json",
+        "D_ANALYSIS_FREEZE.json",
+        "POST_D_SOURCE_PRESERVATION.json"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-054",
+      "requirement": "No unnecessarysecurity/cryptographiccustody",
+      "implementation_location": "source_adapter.py;IMPLEMENTATION_DELTA.md",
+      "verification_method": "Original trusted-local reader preserved; no added crypto/security framework",
+      "status": "VERIFIED",
+      "evidence": [
+        "source_adapter.py",
+        "IMPLEMENTATION_DELTA.md"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-055",
+      "requirement": "Independentfinalreview/preservefailedreviews/minimalnonsemanticfixesonly",
+      "implementation_location": "FINAL_REVIEW_r1.md;PRE_C_REVIEW_r1.md;SAVED_REDUCTION_REVIEW_r1.md",
+      "verification_method": "Independent final review; unsuccessful reviews preserved",
+      "status": "VERIFIED",
+      "evidence": [
+        "FINAL_REVIEW_r1.md",
+        "PRE_C_REVIEW_r1.md",
+        "SAVED_REDUCTION_REVIEW_r1.md"
+      ],
+      "gap": null
+    },
+    {
+      "requirement_id": "REQ-056",
+      "requirement": "Exactmissioncommit/normalorigin-testpush/remoteSHAallhashes/clean",
+      "implementation_location": "external closure_receipt.json;precommit_manifest.json;remote_readback.json",
+      "verification_method": "Exact mission-only staging, normal test push, full remote hashes and clean gate",
+      "status": "OPEN",
+      "evidence": [
+        "external closure_receipt.json",
+        "precommit_manifest.json",
+        "remote_readback.json"
+      ],
+      "gap": "Executed archive/readback/final delivery gate"
+    },
+    {
+      "requirement_id": "REQ-057",
+      "requirement": "Stopaftercloseout/noautomaticnextscience",
+      "implementation_location": "DELIVERY_FLAGS.json;external closure_receipt.json",
+      "verification_method": "Stop after delivery; next scientific action false",
+      "status": "OPEN",
+      "evidence": [
+        "DELIVERY_FLAGS.json",
+        "external closure_receipt.json"
+      ],
+      "gap": "Executed archive/readback/final delivery gate"
+    },
+    {
+      "requirement_id": "REQ-058",
+      "requirement": "Allspecifiedfinalflags/results/limits/testcounts/Gittruth",
+      "implementation_location": "DELIVERY_FLAGS.json;SCIENTIFIC_CLOSEOUT_REPORT.md;external closure_receipt.json",
+      "verification_method": "All requested final flags/results/limits with actual Git binding",
+      "status": "OPEN",
+      "evidence": [
+        "DELIVERY_FLAGS.json",
+        "SCIENTIFIC_CLOSEOUT_REPORT.md",
+        "external closure_receipt.json"
+      ],
+      "gap": "Executed archive/readback/final delivery gate"
+    }
+  ],
+  "final_58_of_58_requires_executed_external_closure_receipt": true,
+  "snapshot_phase": "AFTER_ACCEPTED_FINAL_REVIEW_BEFORE_EXECUTED_GIT_AND_DELIVERY"
+}

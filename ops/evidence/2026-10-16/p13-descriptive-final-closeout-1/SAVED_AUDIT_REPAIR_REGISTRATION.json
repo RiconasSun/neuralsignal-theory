@@ -1,0 +1,31 @@
+{
+  "mission": "P13-DESCRIPTIVE-FINAL-CLOSEOUT-1",
+  "phase": "POST_D_SAVED_EVIDENCE_AUDIT_ONLY; NOT A SCIENTIFIC_POLICY_AMENDMENT",
+  "registered_before_repair_implementation": true,
+  "observed_failure": "Frozen saved audit incorrectly demanded bitwise equality between original unit-first total and saved unit-then-bin total;88 synthetic tests passed before this failure",
+  "preserved_failed_log": "FINAL_SAVED_REPRODUCTION_r1_FAILED.txt",
+  "frozen_original_audit_sha256": "ce9284703109b51df616fee6c4650f292685241ec070a367835338116e0b8800",
+  "original_predictive_sha256": "2023915e8461cc3c077f253585c5c26b65639b640a12e3785ebc42a641bead67",
+  "implementation": "New saved-audit module, new verifier and new PowerShell reproduction only; original638pre-D frozen files remain byte-exact",
+  "review_source": "Independent reviewer message deriving fixed gamma_n bound; SAVED_REDUCTION_REVIEW_r1.md",
+  "fixed_forward_error_check": {
+    "unit_roundoff": "u=2^-53",
+    "gamma": "gamma(k)=k*u/(1-k*u)",
+    "dimensions": {"N":12000,"M":1500,"U":8},
+    "B": "Exact Fraction/dyadic sum of1500 saved scored-bin float64 log scores",
+    "bound": "abs(B)/12000 * ((gamma(12001)+gamma(8))/(1-gamma(8)) + gamma(1501))",
+    "comparison": "Exact Fraction absolute residual between serialized original mean and saved grouped float64 mean <= exact Fraction bound",
+    "premise": "Unseen computed per-unit log terms have the same nonpositive sign; this premise is NOT proved from saved joint bins",
+    "interpretation": "Conditional aggregate compatibility, NOT lossless per-unit reconstruction or independent likelihood verification",
+    "D_and_S": "Remain bitwise exact; same reduction order",
+    "Bstar": "Must remain exact B2 score and sequence alias"
+  },
+  "additional_exact_integrity": ["Every per-mouse original score equals primary_mouse result and durable D completion journal", "Saved state and bin-score hashes remain exact", "All original statistics recomputed exactly from unchanged serialized per-mouse scores", "All original one-shot and3x999control completeness checks remain"],
+  "regressions": ["Independent synthetic unit versus grouped reductions at fixed scales", "Exact Fraction forward-bound and division accounting", "Material score drift, nonfinite, wrong dimensions and positive joint-score rejection", "Same-order D/S must remain exact rather than receive rounding allowance"],
+  "scientific_thresholds_changed": false,
+  "score_values_changed": false,
+  "new_real_C_fits": 0,
+  "new_D_likelihoods": 0,
+  "new_real_control_draws": 0,
+  "second_D_assessment_authorized": false
+}

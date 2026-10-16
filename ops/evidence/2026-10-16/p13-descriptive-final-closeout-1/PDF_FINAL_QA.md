@@ -1,0 +1,11 @@
+# Final PDF gate after supplementary reporting note
+
+Final main manuscript SHA256: `baa25a171627d844757df1838135e134edde6d880f7838f01d13516ed036f666` (8pages, unchanged). Final supplement SHA256: `b833f86b8ebe9b937f05dcf9836ed9c9787f85073cb42e200f35c060b499cbd3` (7pages).
+
+The final supplement appends the exact saved-only reproduction command and transparent post-D saved-audit correction/limitation, as disclosed in POST_D_EDITORIAL_NOTE.md. The initial generated supplement and initial QA are preserved in INITIAL_SUPPLEMENT_AND_QA.zip. A first editorial PDF placed its last line on an otherwise empty eighth page; EDITORIAL_SUPPLEMENT_LAYOUT_r1.pdf and its inventory/contact sheet retain this layout attempt. A shorter equivalent final paragraph removes that orphan without changing any result, criterion or limitation.
+
+Final supplement pages1–7 were rerendered to1400pixel PNGs in a separate `work/final_pdf_qa/supplement_r2` directory. Visually checked the full new contact sheet and full-size last page7; original pages1–6 retain their already reviewed layout/tables. The main eight-page contact sheet and full-size results/figure pages remain unchanged. No material clipping, overlap, lost column, missing figure or glyph problem remains. All15final pages have nonempty extracted text and no replacement/black-square characters.
+
+PDF_FINAL_RENDER_INVENTORY_r2.json records every final rendered page and exact PDF identity; its initial `visual_review_pending` state is resolved by this final visual-QA record. PDF_MAIN_CONTACT.png and PDF_FINAL_SUPPLEMENT_CONTACT_r2.png are the committed final contact sheets. Earlier inventories/receipts are preserved history and do not certify the final supplement hash. Numeric display remains rounded while the complete scientific CSV/JSON values are unchanged.
+
+The Poppler optional display-font lookup messages remain an inspected environment diagnostic: the renderer exits0 and actual Helvetica/ASCII-normalized content renders correctly. Final PDFs still require author/submission review; this is document QA, not external peer review or original scientific validation. No new fit, source export, D likelihood, control draw or second assessment occurred.

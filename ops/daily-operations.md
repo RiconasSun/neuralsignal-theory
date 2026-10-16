@@ -1,3 +1,12 @@
+# Current mission: P13-DESCRIPTIVE-FINAL-CLOSEOUT-1
+
+Completed one owner-authorized descriptive final assessment after the E-informed pre-D amendment:198/198Cfits,594certificates,490sealed artifacts;9finalmice;three999Dcontrol suites/26973mouse replicates;all6primary/guard comparisons and all sensitivities retained. D-B4mean.01831938025/Holm.01171875;C-B4mean-.00163712851/Holm.390625;D-Cmean.01995650875/Holm.01171875. Bstar guards and retained stress guards do not establish broad temporal confirmation. Original conditionalBstar FAILED_UNAVAILABLE, M6FAIL and recent6/9vs8coverage failure remain unchanged; all affected broad claims permanently INCONCLUSIVE. No rerun/rescue/secondD.
+
+Full descriptive MethodPaper/supplement/A1-A10/figures/tables and8+7PDFpages are saved in paper13_descriptive_final1/manuscript. Source/scoring/model/statistic code frozen before D remains byte-exact. A separately registered saved-audit summation-oracle correction preserves failed receipts and explicitly reports conditional aggregate compatibility, not lossless per-unit reconstruction. Original88tests+8new regressions=96. Owner author/ethics/submission review still required; draft completion is not scientific validation or external peer review.
+
+Evidence/review: ops/evidence/2026-10-16/p13-descriptive-final-closeout-1. One-command saved-only: & .\paper13_descriptive_final1\reproduce_closeout.ps1. ExactBASE2ccf107395f1dee42bc0c27604f639a1ae8432b8;58atomic requirements retained. Actual final engineeringPASS/58of58/commit/origin-test/fullremotehash/clean only certified by executed external closure_receipt.json, never prospectively by this header. No origin/main exists. No next science authorized; stop after reviewed archive. All prior statuses below preserved verbatim.
+
+---
 # Current mission: P13-BSTAR-CONDITIONAL-NULL-DIAGNOSIS-1
 
 Diagnosis DOCUMENTED_GENERATOR_INSTABILITY; engineering diagnosis only, original M6 FAILED_UNAVAILABLE and broad scientific claims INCONCLUSIVE. ExactBASEc7ae3d4753f94ba50134d1f15a4a62dcb101d842. Original B2source/scalers/math unchanged. One reviewed exact failed-prefix diagnostic matched all9scores for3mice and stopped156130replicate0/unit191/epoch94/bin15: previouscount9702754 leads eta3478515.735>logfloatmax709.783. No new fit, finalCfit, finalDoutcome/scoring/evaluation or scientific null replacement. No retry authorized.
