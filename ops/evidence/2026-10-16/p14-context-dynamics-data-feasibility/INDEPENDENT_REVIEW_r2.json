@@ -1,0 +1,39 @@
+{
+  "mission": "P14-CONTEXT-DYNAMICS-DATA-FEASIBILITY",
+  "decision": "REJECTED",
+  "open_P0": 0,
+  "open_P1": 1,
+  "candidate_freeze_sha256": "b48828547f99790c403a00d555d2bfed3d500c62b572f062412e98b4a2596752",
+  "review_scope": "Focused independent internal review of seven-file r1 repair, frozen identity/source/scientific limits, and isolated absent-work reproduction probe; saved/scalar metadata only",
+  "actual_saved_reproduction_run": false,
+  "actual_targeted_regression_run": true,
+  "actual_fresh_path_defect_reproduced": true,
+  "parent_saved_reproduction_receipt": "REPRODUCTION_r3.txt:26tests/35exactoutputs/103payload/43metadata/25originalinputs; network denied",
+  "prior_independent_full_reproduction": "r1 independently ran25tests/35exactoutputs before this repair; not relabeled as an r2 full run",
+  "closed_findings": [
+    "r1 false arithmetic-erratum attribution; original300perhalf/600total registration remains exact"
+  ],
+  "findings": [
+    {
+      "priority": "P1",
+      "path": "paper14_m0/reproduce.py",
+      "line": 28,
+      "related_paths": ["paper14_m0/test_metadata.py:158", "paper14_m0/test_metadata.py:167", "paper14_m0/test_metadata.py:175", "paper14_m0/.gitignore"],
+      "issue": "Saved runner and tests require ignored work directory before TemporaryDirectory but do not initialize it; fresh checkout fails FileNotFoundError",
+      "required_repair": "Initialize ignored scratch safely, make standalone tests self-contained, add absent-directory regression, re-freeze and rerun saved reproduction"
+    }
+  ],
+  "scientific_feasibility_verdict": "INCONCLUSIVE_METADATA",
+  "DR_independent_metadata_mouse_upper_bound": 18,
+  "physiologically_admitted_mice": null,
+  "neural_activation_accepted": false,
+  "M1_activated": false,
+  "limitations": [
+    "Exactly7payloadfiles changed,96 original hashes unchanged; r1 archive verified",
+    "DR18/IBL8/other denominators, registrations, metadata and eligibility masks unchanged",
+    "Current parent full reproduction assumes acquisition scratch exists; fresh-path defect independently confirmed",
+    "Dataset license, continuous movement/pupil alignment and provider full-session curation limits remain unresolved",
+    "No neural/network/fitting/scoring/new-dataset activity occurred",
+    "Actual Git/remote/clean/handoff/stop must not be certified prospectively; preserve failed r2 review"
+  ]
+}

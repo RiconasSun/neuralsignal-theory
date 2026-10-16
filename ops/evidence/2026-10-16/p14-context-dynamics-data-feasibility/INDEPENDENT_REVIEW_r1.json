@@ -1,0 +1,42 @@
+{
+  "mission": "P14-CONTEXT-DYNAMICS-DATA-FEASIBILITY",
+  "decision": "REJECTED",
+  "open_P0": 0,
+  "open_P1": 1,
+  "candidate_freeze_sha256": "fa4afef8e5d2102f045747298c088fecdd733b62d6ca2e6b7e4781dea7c78fb4",
+  "review_scope": "Independent internal frozen M0 scientific/source/metadata/code review only; no network, neural/count arrays, old neural bundles, fitting, predictive scores, new candidates or M1 activation",
+  "actual_saved_reproduction_run": true,
+  "saved_reproduction": {
+    "exit_code": 0,
+    "tests": 25,
+    "byte_identical_result_files": 35,
+    "payload_hashes": 103,
+    "metadata_files": 43,
+    "original_input_hashes": 25,
+    "network": "DENIED"
+  },
+  "findings": [
+    {
+      "priority": "P1",
+      "path": "paper14_m0/P14_M0_REPORT.md",
+      "line": 15,
+      "issue": "False arithmetic erratum attribution: both original and current registration correctly specify 600 bins for120 total trials/context and300 for60 trials/context/half",
+      "required_repair": "Correct report attribution only; preserve original registrations, thresholds, windows and eligibility criteria"
+    }
+  ],
+  "scientific_feasibility_verdict": "INCONCLUSIVE_METADATA",
+  "DR_independent_metadata_mouse_upper_bound": 18,
+  "physiologically_admitted_mice": null,
+  "neural_activation_accepted": false,
+  "M1_activated": false,
+  "limitations": [
+    "DR18 is metadata upper bound, not physiological admission or a feasible neural recommendation",
+    "Exact scratch-data license and candidate-specific continuous movement/pupil alignment remain unresolved",
+    "IBL10 string encodings correspond to9 numeric signed-contrast values because signed zero is duplicated; no eligibility rule uses this diagnostic",
+    "Provider-good/is_qc_pass is source/release-level potentially full-session curation, not newly calculated C-only physiology",
+    "Marginal support does not establish joint overlap, sign/exchangeability assumptions, causal identification or independent laboratory replication",
+    "Three exact hash-bound upstream README whitespace exceptions do not waive strict checks elsewhere",
+    "REQ049 review and REQ051/052 actual Git/remote/clean/delivery/stop gates cannot be certified prospectively",
+    "Internal review is not external peer review; preserve the failed r1 review before repair"
+  ]
+}

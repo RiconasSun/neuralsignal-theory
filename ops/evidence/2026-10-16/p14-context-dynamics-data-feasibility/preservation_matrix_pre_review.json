@@ -1,0 +1,376 @@
+{
+  "baseline_count": 52,
+  "no_omissions_or_shrink": true,
+  "pending": [
+    49,
+    51,
+    52
+  ],
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Exact authorized BASE and clean branch preflight",
+      "status": "VERIFIED",
+      "verification": "REGISTRATION_RECEIPT.json; goldenstandards.md; BRANCH_PREFLIGHT_FINAL.json"
+    },
+    {
+      "id": "REQ-002",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Preserve P1\u2013P13 scientific/code/failure history",
+      "status": "VERIFIED",
+      "verification": "INPUT_FREEZE.json; mission-only changed-file gate"
+    },
+    {
+      "id": "REQ-003",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Disclose P13D exposed; never fresh independent confirmation",
+      "status": "VERIFIED",
+      "verification": "P14_M0_REPORT.md; SOURCE_REGISTRY.json"
+    },
+    {
+      "id": "REQ-004",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "No spike/count/raw neural arrays, fits or scores in M0",
+      "status": "VERIFIED",
+      "verification": "COLUMN_REGISTRATION.json; metadata/access.jsonl; REPRODUCTION_r1.txt"
+    },
+    {
+      "id": "REQ-005",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Evaluate contexts A blocks/B past history-phase/C measuredstate in priority order",
+      "status": "VERIFIED",
+      "verification": "CONTEXT_IDENTIFIABILITY.md"
+    },
+    {
+      "id": "REQ-006",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "At least2 independently identifiable contexts; prefer within mouse same population",
+      "status": "VERIFIED",
+      "verification": "DR_SOURCE_REGISTRATION.json; DR_selected_context_coverage.csv"
+    },
+    {
+      "id": "REQ-007",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Distinguish experimenter-known, retrospective behavior and neural-inferred labels",
+      "status": "VERIFIED",
+      "verification": "CONTEXT_IDENTIFIABILITY.md"
+    },
+    {
+      "id": "REQ-008",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "No future behavioral/neural predictor leakage",
+      "status": "VERIFIED",
+      "verification": "CONTEXT_IDENTIFIABILITY.md; PROPOSED_M1_FREEZE.md"
+    },
+    {
+      "id": "REQ-009",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Reuse IBL and KI001260 existing metadata audits first",
+      "status": "VERIFIED",
+      "verification": "INPUT_FREEZE.json; CACHED_METADATA_AUDIT_r1.txt"
+    },
+    {
+      "id": "REQ-010",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Do not interchange tasks/sessions/labs as contexts",
+      "status": "VERIFIED",
+      "verification": "KI_AUDIT.json; KI_cross_task_animal_overlap.csv"
+    },
+    {
+      "id": "REQ-011",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "000473 historical background only",
+      "status": "VERIFIED",
+      "verification": "SOURCE_REGISTRY.json"
+    },
+    {
+      "id": "REQ-012",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "At most2 additional justified datasets only if required",
+      "status": "VERIFIED",
+      "verification": "ADDITIONAL_CANDIDATE_REGISTRATION.json; SOURCE_REGISTRY.json"
+    },
+    {
+      "id": "REQ-013",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Pin source releases/citations/licenses/recording identities",
+      "status": "VERIFIED",
+      "verification": "SOURCE_REGISTRY.json; metadata/*.receipt.json; explicit unresolved license verdict"
+    },
+    {
+      "id": "REQ-014",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Metadata-first bounded retrieval and simple access log",
+      "status": "VERIFIED",
+      "verification": "range_metadata.py; metadata/access.jsonl; DESCRIPTIVE_SUMMARY.json"
+    },
+    {
+      "id": "REQ-015",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Register source-specific unit/observation/quality/exclusion rules BEFORE counts",
+      "status": "VERIFIED",
+      "verification": "REGISTRATION_RECEIPT*.json; original policies preserved"
+    },
+    {
+      "id": "REQ-016",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Justify new thresholds; do not mechanically inherit old8/120or20/400",
+      "status": "VERIFIED",
+      "verification": "REGISTRATION.json; arithmetic wording erratum in P14_M0_REPORT.md"
+    },
+    {
+      "id": "REQ-017",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Count independent mouse/session/probe identities without pseudoreplication",
+      "status": "VERIFIED",
+      "verification": "IndependentSavedChecks; DR_AUDIT.json; KI_AUDIT.json; IBL_AUDIT.json"
+    },
+    {
+      "id": "REQ-018",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Report PFC labels and anatomical provenance/composition",
+      "status": "VERIFIED",
+      "verification": "DR_selected_composition.csv; P14_M0_REPORT.md"
+    },
+    {
+      "id": "REQ-019",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Complete mouse x region x context coverage table",
+      "status": "VERIFIED",
+      "verification": "ALL_Context_Mouse_Region.csv; early-stop unknowns disclosed"
+    },
+    {
+      "id": "REQ-020",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Report simultaneous unit-count distributions",
+      "status": "VERIFIED",
+      "verification": "DR_AUDIT.json; IBL_AUDIT.json; full populations tables"
+    },
+    {
+      "id": "REQ-021",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Report trials/epochs each context/mouse before and after filtering",
+      "status": "VERIFIED",
+      "verification": "DR_selected_context_coverage.csv; IBL context table"
+    },
+    {
+      "id": "REQ-022",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Report context transitions and temporal ordering",
+      "status": "VERIFIED",
+      "verification": "DR_blocks.csv; IBL_blocks.csv; chronological quartiles"
+    },
+    {
+      "id": "REQ-023",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Report event/movement/arousal covariate availability and missingness",
+      "status": "VERIFIED",
+      "verification": "DR_selected_trial_missingness.csv; DR_session_metadata_missingness.csv; CONTEXT_IDENTIFIABILITY.md"
+    },
+    {
+      "id": "REQ-024",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Check recording support/timestamp consistency; retain unknowns",
+      "status": "VERIFIED",
+      "verification": "DR_SUPPORT_POLICY.json; supported() regressions; raw IBL physiology unknown"
+    },
+    {
+      "id": "REQ-025",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Record all exclusion reasons and before/after coverage",
+      "status": "VERIFIED",
+      "verification": "EXCLUSIONS_NONEXCLUSIVE.csv; ELIGIBILITY_AND_EXCLUSIONS.md"
+    },
+    {
+      "id": "REQ-026",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Prospective target >=8development+8final independent mice in BOTHcontexts",
+      "status": "VERIFIED",
+      "verification": "18 metadata candidates; future >=8+8 floor; no actual allocation"
+    },
+    {
+      "id": "REQ-027",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Physiological eligibility unconfirmed until future training-only QC",
+      "status": "VERIFIED",
+      "verification": "P14_M0_REPORT.md; PROPOSED_M1_FREEZE.md"
+    },
+    {
+      "id": "REQ-028",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "No data-driven threshold or region-pooling rescue",
+      "status": "VERIFIED",
+      "verification": "Original registration receipts, no threshold changes"
+    },
+    {
+      "id": "REQ-029",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Assess context vs chronological time/session drift",
+      "status": "VERIFIED",
+      "verification": "CONTEXT_IDENTIFIABILITY.md"
+    },
+    {
+      "id": "REQ-030",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Assess stimulus identity/intensity overlap",
+      "status": "VERIFIED",
+      "verification": "DR_common_support.csv; IBL_common_support.csv"
+    },
+    {
+      "id": "REQ-031",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Assess choice/motor and reward/punishment history confounding",
+      "status": "VERIFIED",
+      "verification": "DR_nuisance_overlap.csv; IBL_nuisance_overlap.csv; timing caveats"
+    },
+    {
+      "id": "REQ-032",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Assess trial order/recording quality/state/batch confounding",
+      "status": "VERIFIED",
+      "verification": "CONTEXT_IDENTIFIABILITY.md; drift flags and composition"
+    },
+    {
+      "id": "REQ-033",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Report measured/controllable/partial/unavailable nuisance limits; no causality",
+      "status": "VERIFIED",
+      "verification": "CONTEXT_IDENTIFIABILITY.md"
+    },
+    {
+      "id": "REQ-034",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Feasibility of B0\u2013B4strongcontext/history baselines and tractable D/C",
+      "status": "VERIFIED",
+      "verification": "PROPOSED_M1_FREEZE.md; no models fitted"
+    },
+    {
+      "id": "REQ-035",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Explicit context-invariant/dependent complexity accounting proposal",
+      "status": "VERIFIED",
+      "verification": "PROPOSED_M1_FREEZE.md explicit20/40 incremental coefficients"
+    },
+    {
+      "id": "REQ-036",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Proposed within-mouse difference of baseline-adjusted gains; no observed effect",
+      "status": "VERIFIED",
+      "verification": "PROPOSED_M1_FREEZE.md Delta_D/Delta_C; no scores"
+    },
+    {
+      "id": "REQ-037",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Propose calibration/scoring separation, independent final animals and causal state prediction",
+      "status": "VERIFIED",
+      "verification": "PROPOSED_M1_FREEZE.md"
+    },
+    {
+      "id": "REQ-038",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Scientifically/numerically validated future nulls; no unstable Bstar inheritance",
+      "status": "VERIFIED",
+      "verification": "PROPOSED_M1_FREEZE.md null validation requirements; no Bstar inheritance"
+    },
+    {
+      "id": "REQ-039",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Return exactly1 allowed M0scientific verdict",
+      "status": "VERIFIED",
+      "verification": "M0_DECISION.json exactly INCONCLUSIVE_METADATA"
+    },
+    {
+      "id": "REQ-040",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Recommend exactly1dataset/target/context if supported, based on metadata not scores",
+      "status": "VERIFIED",
+      "verification": "Conditional one DR/composite/aud-vis design, not feasible activation recommendation"
+    },
+    {
+      "id": "REQ-041",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Precise inactive M1hypothesis/animal/context/cohort/exclusion freeze specification",
+      "status": "VERIFIED",
+      "verification": "PROPOSED_M1_FREEZE.md"
+    },
+    {
+      "id": "REQ-042",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Inactive M1allocation and physiological QC proposal",
+      "status": "VERIFIED",
+      "verification": "PROPOSED_M1_FREEZE.md"
+    },
+    {
+      "id": "REQ-043",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Inactive M1model/statistical assumptions/falsification/one-shot final design",
+      "status": "VERIFIED",
+      "verification": "PROPOSED_M1_FREEZE.md"
+    },
+    {
+      "id": "REQ-044",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Report expected limitations and unresolved scientific risks",
+      "status": "VERIFIED",
+      "verification": "P14_M0_REPORT.md; CONTEXT_IDENTIFIABILITY.md"
+    },
+    {
+      "id": "REQ-045",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Required P14_M0_REPORT.md and source registry",
+      "status": "VERIFIED",
+      "verification": "P14_M0_REPORT.md; SOURCE_REGISTRY.json"
+    },
+    {
+      "id": "REQ-046",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Required eligibility/coverage/confounding/design/M1spec artifacts",
+      "status": "VERIFIED",
+      "verification": "ELIGIBILITY_AND_EXCLUSIONS.md; CONTEXT_IDENTIFIABILITY.md; PROPOSED_M1_FREEZE.md"
+    },
+    {
+      "id": "REQ-047",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Meaningful regression tests for metadata calculations/access boundaries",
+      "status": "VERIFIED",
+      "verification": "test_metadata.py; TESTS_r2.txt; TEST_FAILURE_r1 preserved"
+    },
+    {
+      "id": "REQ-048",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Saved-only reproducibility instructions and verified run",
+      "status": "VERIFIED",
+      "verification": "reproduce.ps1; REPRODUCTION_r1.txt"
+    },
+    {
+      "id": "REQ-049",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Independent internal scientific/source review; preserve unsuccessful reviews",
+      "status": "OPEN",
+      "verification": "Independent internal review pending candidate submission"
+    },
+    {
+      "id": "REQ-050",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "No crypto/offline signing/unbounded search/optimizer work",
+      "status": "VERIFIED",
+      "verification": "Scope logs, no crypto/source-neural/optimizer activity"
+    },
+    {
+      "id": "REQ-051",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Exact mission-only origin-test commit/push/fullremotehash/clean gate",
+      "status": "OPEN",
+      "verification": "Actual external closure receipt required after reviewed commit/push/readback"
+    },
+    {
+      "id": "REQ-052",
+      "implementation": "paper14_m0/ and mission evidence",
+      "requirement": "Final engineering/verdict/primary/exactmouseupperbound/context/risks/Prompt2/bugwarn/Git flags; STOP afterM0, do not activateM1\u2013M7",
+      "status": "OPEN",
+      "verification": "P14_M0_REPORT.md; final delivery and external closure receipt required"
+    }
+  ],
+  "verified_pre_review": 49
+}

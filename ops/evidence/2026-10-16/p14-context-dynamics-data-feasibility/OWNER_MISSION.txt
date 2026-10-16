@@ -1,0 +1,279 @@
+# CCPN / NEURALSIGNAL — PAPER 14 MASTER PROMPT 1/5
+
+MISSION: `P14-CONTEXT-DYNAMICS-DATA-FEASIBILITY`
+
+BASE: `origin/test @ fae4fa316bbb499a86949d496e6ba4f36380e29f`
+
+EXECUTION MODE: SCIENCE-FIRST / AUTONOMOUS / BOUNDED
+
+## SCIENTIFIC OBJECTIVE
+
+Begin Paper 14 of Computational Cognitive Primitive Neurodynamics (CCPN).
+
+Working title:
+
+"Context-Dependent Predictive Dynamics in Mouse Prefrontal Cortex"
+
+Primary research question:
+
+Does the predictive structure of local prefrontal neural population activity vary systematically across experimentally defined task or behavioral contexts, beyond what can be explained by firing rates, spike history, task events and measured nuisance variables?
+
+P14 investigates **Context × Neural Dynamics**.
+
+It does not assume that:
+- Discrete state models must win.
+- P13's descriptive results establish a biological mechanism.
+- Context-dependent prediction implies causal cognitive computation.
+- CWP/NAP primitives are already validated.
+
+Positive, negative and inconclusive outcomes are equally admissible.
+
+## HARD SCIENTIFIC BOUNDARIES
+
+Preserve P1–P13 and all historical failures.
+
+P13's held-out D results have already been examined. They must never be relabeled as a newly unseen independent P14 confirmation set.
+
+The original IBL/PFC coverage failures and KI/PFC feasibility findings remain historical facts.
+
+New P14 eligibility rules may differ when justified by the new scientific estimand, but cannot retrospectively change those findings.
+
+Do not reuse P13 fitted results as independent validation.
+
+No spike-array access, neural fitting or final outcome evaluation is authorized in this M0 mission.
+
+## M0.1 — DEFINE CANDIDATE CONTEXT STRUCTURES
+
+Evaluate the feasibility of these context types, in priority order:
+
+A. Within-animal task-context or prior-probability blocks.
+
+B. Within-animal stimulus-history or task-phase conditions.
+
+C. Recorded behavioral-state conditions, only when reliable state measurements and temporal alignment are available.
+
+Prefer comparisons where the same mouse contributes neural recordings under both contexts.
+
+The primary target must involve at least two clearly defined, independently identifiable contexts.
+
+Do not substitute a between-animal group difference for a within-animal context effect without an explicit alternative design and confounding assessment.
+
+Distinguish:
+- Context labels known before prediction.
+- Context inferred retrospectively from behavior.
+- Context inferred from neural activity itself.
+
+Do not use future behavioral or neural outcomes as supposedly causal predictors.
+
+## M0.2 — BOUNDED PUBLIC DATASET DISCOVERY
+
+First review previously documented candidates:
+
+1. International Brain Laboratory Brain Wide Map.
+2. KI PFC recordings, including DANDI 001260.
+
+Use the existing repository metadata audits rather than repeating previously completed downloads.
+
+Explicitly examine whether their different contexts actually overlap in the same eligible mice and PFC recording populations.
+
+Do not treat different experiments, sessions or laboratories as interchangeable contexts.
+
+DANDI 000473 may serve as historical background, but already-exposed P13 final observations cannot supply fresh independent confirmation.
+
+If the reviewed candidates are inadequate, investigate at most TWO additional well-supported public electrophysiology datasets with documented PFC coverage and genuine context variation.
+
+Prioritize datasets with:
+- Public Neuropixels/spike timestamps
+- Anatomically traceable PFC labels
+- Actual independent mouse identities
+- Timestamped context/event records
+- Sufficient simultaneous local population observations
+- Clear recording provenance and feasible data access
+
+Pin release versions, source citations, licenses and recording identifiers.
+
+Perform metadata-first screening. Avoid unnecessary bulk downloads.
+
+## M0.3 — VERIFY ANIMAL AND CONTEXT COVERAGE
+
+For every serious candidate, calculate:
+
+- Unique independent mice
+- Sessions and probes
+- PFC region labels and anatomical provenance
+- Mouse × region × context coverage
+- Simultaneous unit-count distributions
+- Trials or valid epochs per context and mouse
+- Context transitions and temporal ordering
+- Available event and movement/arousal covariates
+- Recording support and timestamp consistency
+- Missingness and relevant exclusion sources
+
+Avoid pseudoreplication.
+
+Multiple units, sessions, trials and probes do not count as additional independent animals.
+
+Target a prospective design capable of at least:
+
+8 Development mice + 8 independent Final mice.
+
+Prefer larger cohorts where feasible.
+
+Each included mouse should provide adequate observations in BOTH primary contexts for a paired context comparison.
+
+Before evaluating eligibility counts, register and justify source-specific minimum units, context observations, quality metadata and exclusion criteria.
+
+Do not mechanically inherit P13's 8-unit/120-epoch thresholds or the old IBL 20-unit/400-trial rules.
+
+These were design-specific, not universal biological constants.
+
+Report coverage both before and after metadata-level eligibility filters.
+
+Physiological eligibility remains unconfirmed until future training-only neural QC.
+
+## M0.4 — CONTEXT IDENTIFIABILITY
+
+For each candidate, determine whether context variation is scientifically distinguishable from:
+
+- Passage of time and session drift
+- Stimulus identity/intensity
+- Choice and motor execution
+- Reward or punishment history
+- Trial-order effects
+- Recording-quality changes
+- Behavioral state or arousal
+- Animal/session/batch differences
+
+Inspect whether both contexts have adequate overlap in the relevant nuisance covariates.
+
+A context label perfectly confounded with recording session, genotype or chronological order cannot automatically support a context-dependent neural-dynamics interpretation.
+
+Report what is measured, controllable, partially confounded or unavailable.
+
+Do not claim causality from observational differences.
+
+## M0.5 — FUTURE MODEL FEASIBILITY
+
+Evaluate whether each candidate could support a rigorous comparison among:
+
+B0: Stationary firing-rate model.
+
+B1: Context-aware task/time/nuisance baseline.
+
+B2: Causal own-spike-history baseline.
+
+B3: Causal population-history baseline.
+
+B4: Strong combined context/history baseline.
+
+D: Tractable discrete-state predictive representation.
+
+C: Tractable continuous-history predictive representation.
+
+Context-dependent versus context-invariant variants must be comparable under prospectively fixed complexity accounting.
+
+The key future estimand should examine whether the incremental predictive gain from a dynamical representation differs across contexts, after strong context-aware baselines.
+
+For example:
+
+Δ_context =
+[LL(Dynamics) − LL(Baseline)]_ContextA
+−
+[LL(Dynamics) − LL(Baseline)]_ContextB
+
+This is a proposed estimand, not an observed effect.
+
+Determine whether the available dataset supports:
+- Within-mouse paired comparisons
+- Training/calibration separated from scoring
+- Independent held-out animals
+- Causal state prediction
+- Appropriate null controls and nuisance comparisons
+
+Do not fit any model in M0.
+
+No direct inheritance of numerically unstable P13 B* autoregressive simulation as a mandatory control.
+
+Future nulls must have numerically validated, scientifically defensible definitions before they become final-evaluation prerequisites.
+
+## M0.6 — SCIENTIFIC FEASIBILITY DECISION
+
+Return exactly one:
+
+1. `FEASIBLE_CONTEXT_PFC_COHORT`
+2. `FEASIBLE_WITH_EXPLICIT_DESIGN_LIMITATIONS`
+3. `INCONCLUSIVE_METADATA`
+4. `DATA_INSUFFICIENT`
+
+For feasible candidates, recommend ONE primary dataset, ONE anatomically defined target and ONE primary context contrast.
+
+The recommendation must be based on scientific relevance, sample availability, measurement quality and identifiability — never neural predictive scores.
+
+Provide a precise proposed P14 M1 freeze plan including:
+- Scientific hypothesis
+- Independent animal denominator
+- Context definitions
+- Candidate cohort and exclusions
+- Development/final allocation policy
+- Minimum physiological QC requirements
+- Model and baseline scope
+- Statistical inference assumptions
+- Falsification requirements
+- One-time final assessment design
+- Expected scientific limitations
+
+Do not activate the P14 neural experiment in this mission.
+
+## EXECUTION CONSTRAINTS
+
+SCIENCE FIRST.
+
+- No cryptographic data-custody infrastructure.
+- No offline signing ceremony.
+- No repeat of P13 source audits without a specific unresolved P14 question.
+- No arbitrary expansion to dozens of datasets.
+- No unbounded optimizer or model work.
+- No invented eligible mouse counts.
+- No result-driven eligibility thresholds.
+- No scientific inference from metadata alone.
+
+Ordinary coding, retrieval, testing, documentation and bounded engineering repairs are preauthorized.
+
+Maintain clear provenance and a simple access log.
+
+Independent internal review is required for scientific feasibility and source correctness, but does not imply external peer review.
+
+Stop if no scientifically defensible context comparison exists within the bounded search.
+
+## REQUIRED DELIVERABLES
+
+1. `P14_M0_REPORT.md`
+2. Dataset and source registry
+3. Context × Mouse × Region coverage table
+4. Metadata-level eligibility and exclusion report
+5. Context-confounding/identifiability assessment
+6. One recommended P14 scientific design, if feasible
+7. Proposed M1 protocol-freeze specification
+8. Tests and saved-only reproducibility instructions
+9. Independent internal review
+10. Verified Git commit on origin/test
+
+Final report must include:
+
+- M0 engineering status
+- Scientific feasibility verdict
+- Primary candidate dataset
+- Exact independent-mouse upper bound
+- Actual context coverage
+- Key unresolved scientific risks
+- Whether Prompt 2/5 can begin
+- BUG_COUNT / WARN_COUNT
+- Git SHA and verified remote state
+
+Do not label a metadata PASS as completed neuroscience or validated dynamics.
+
+STOP AFTER M0.
+
+Do not automatically start M1–M7.
+
+BEGIN PAPER 14 M0 NOW.

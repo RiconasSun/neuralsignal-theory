@@ -1,0 +1,65 @@
+{
+  "mission": "P14-CONTEXT-DYNAMICS-DATA-FEASIBILITY",
+  "scope": "Saved identities/anatomy/QC annotations/behavioral event metadata only. No source neural values or fitted results.",
+  "original_hash_registry": "INPUT_FREEZE.json",
+  "new_source_receipts": "metadata/*.receipt.json; metadata/access.jsonl; METADATA_FREEZE.json",
+  "candidates": [
+    {
+      "id": "IBL_BWM",
+      "release": "2024_Q2_IBL_et_al_BWM; fixture2023_12_bwm_release",
+      "code_commit": "118fc36cb3602934466ad2c6087c2b3b441f9f1f",
+      "methods": "https://www.nature.com/articles/s41586-025-09226-1",
+      "data_documentation": "https://docs.internationalbrainlab.org/notebooks_external/2025_data_release_brainwidemap.html",
+      "provider_source": "https://github.com/int-brain-lab/paper-brain-wide-map/tree/118fc36cb3602934466ad2c6087c2b3b441f9f1f",
+      "license": "Public open release documented; exact aggregate license text NOT independently captured in this M0. No new neural use approved.",
+      "recording_ids": "../paper13/metadata/fixture.csv; results/IBL_populations.csv",
+      "role": "Cached anatomy/trials audit reused; missing stimulus/behavior columns decoded from same original ETag/size after registration",
+      "access": "Anonymous public metadata ranges; new/old295920trial row identities verified",
+      "anatomy": "Provider cluster atlas_id joined to frozen Allen atlas; exact leaf/laminar labels, no MOs/orbital pooling"
+    },
+    {
+      "id": "KI001260",
+      "release": "001260/0.250911.0744",
+      "DOI_methods": "10.1038/s41593-025-02190-z",
+      "data_documentation": "https://dandiarchive.org/dandiset/001260/0.250911.0744",
+      "provider_source": "https://github.com/hejDMC/pfcmap/tree/9ae52eddc47fbb590ef4e1b1949507334707a0f1",
+      "code_commit": "9ae52eddc47fbb590ef4e1b1949507334707a0f1",
+      "license": "DANDI release CC BY4.0; pfcmap code BSD2-Clause (separate scopes)",
+      "recording_ids": "../paper13_ki_feasibility1/results/review1/all_recording_identities.csv",
+      "role": "Existing independently reviewed canonical animal aliases, source task, probe/unit metadata; no new NWB/header read",
+      "anatomy": "Existing provider anatomical labels/workbook and reviewed source mapping; same-session paired contexts remain unresolved"
+    },
+    {
+      "id": "AIND_DYNAMIC_ROUTING",
+      "release": "dr-datacube0.1.1 / public scratch metadata cachev0.0.289",
+      "code_commit": "366809a4b2b3f39a7f36e054a4650dd79faadbe2",
+      "provider_source": "https://github.com/AllenNeuralDynamics/dr-datacube/tree/366809a4b2b3f39a7f36e054a4650dd79faadbe2",
+      "project": "https://www.allenneuraldynamics.org/projects/dynamic-routing",
+      "documentation_example_source": "https://github.com/AllenNeuralDynamics/conect-dev-capsule/tree/f31033a0a7c603621c5268d1c8138d449e3f9f69",
+      "license": "UNRESOLVED_FOR_EXACT_PUBLIC_SCRATCH_SNAPSHOT",
+      "license_investigation": "dr LICENSE404 retained twice in access log; targeted official project/data pages did not establish applicability. Capsule MIT code license and other AIND bucket policies are not licenses for this dataset.",
+      "data_prefix": "https://aind-scratch-data.s3.us-west-2.amazonaws.com/dynamic-routing/cache/nwb_components/v0.0.289/consolidated/",
+      "identities": "metadata/dr_assets__datacube_sessions.csv; results/DR_catalog.csv; results/DR_selected_populations.csv",
+      "anatomy": "Provider structure plus finite CCF AP/DV/ML, pinned unit metadata; no independent histological rereconstruction",
+      "snapshot_limit": "Mutable scratch, not a fully checksummed immutable public neural release; source commit, object ETags/sizes, selected-column output hashes and retrieval receipts are pinned. ETag is an identity token, not a whole-object SHA256.",
+      "role": "Additional candidate1; full catalog distinct from five-mouse documentation subset",
+      "neural_access": false
+    },
+    {
+      "id": "STEINMETZ_2019",
+      "release": "Figshare9598406 version2",
+      "DOI_data": "10.6084/m9.figshare.9598406.v2",
+      "methods": "https://www.nature.com/articles/s41586-019-1787-x",
+      "data_documentation": "https://api.figshare.com/v2/articles/9598406",
+      "provider_source": "https://github.com/nsteinme/steinmetz-et-al-2019/tree/9a0bea8f33e4f43b4881c5e5756aad21cdbb9920",
+      "code_commit": "9a0bea8f33e4f43b4881c5e5756aad21cdbb9920",
+      "license": "Figshare data CC BY4.0",
+      "source_reported_ceiling": "10 independent mice,39sessions,92probe insertions; source reported, NOT a locally measured PFC-eligible count",
+      "recording_ids": "NOT_ASSESSED_EARLY_GLOBAL_FLOOR; no local per-animal inventory claimed",
+      "role": "Additional candidate2; stopped metadata retrieval at global mouse ceiling<16",
+      "archive_downloaded": false
+    }
+  ],
+  "historical_only": "DANDI000473 and P13 exposed final observations cannot provide new unseen P14 confirmation. All P1-P13 failures unchanged.",
+  "search_budget_exhausted": "Exactly2 additional candidates; no third source searched. Script counts/bytes in results/DESCRIPTIVE_SUMMARY.json; browser discovery transport is not observable."
+}

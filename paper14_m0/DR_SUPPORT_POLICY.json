@@ -1,0 +1,12 @@
+{
+  "stage":"BEFORE_DR_ELIGIBILITY_COUNTS; schema and metadata column decoding only inspected",
+  "same_population":"All retained primary windows across both contexts and both halves must be contained in each counted unit's provider obs_intervals. Use one single probe, never context-specific unit sets.",
+  "observation_interval_validation":"Finite ordered start<stop pairs; sorted nonoverlapping intervals; empty/missing/malformed intervals are unknown and do not pass. Each [stim_start,stim_start+0.5] must lie in one supplied observation interval. Do not infer support from spike endpoints.",
+  "anatomy_gate":"Provider target structure plus finite ccf_ap/ccf_dv/ccf_ml for qualified units. Raw structural counts and exclusions for missing coordinates remain separate.",
+  "quality_gate":"Provider is_qc_pass=True; is_not_drift is reported, not a newly tuned cutoff. This is not training-only physiological admission.",
+  "source_compatibility":"Catalog/session/trial/unit subject and session identities must match exactly for a qualified population. Missing cached sessions or mismatches are explicit unknown/exclusions, not invented observations or automatically imported other releases.",
+  "selection":"Most qualified same-probe units, then greatest minimum context-half trial count, then lexical session_id/probe. No scores, fitting or actual allocation.",
+  "registered_minimum_units":10,
+  "registered_trials_per_context_half":60,
+  "thresholds_changed_from_prior_registration":false
+}

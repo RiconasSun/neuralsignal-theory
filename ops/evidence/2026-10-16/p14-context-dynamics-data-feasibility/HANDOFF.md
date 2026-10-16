@@ -1,0 +1,7 @@
+# P14 M0 reviewed handoff
+
+Independent r3 internal scientific/source review ACCEPTED0openP0/P1. Rejectedr1/r2and all intermediateattempts preserved. Current scientific verdict INCONCLUSIVE_METADATA; no neuralactivation, no M1-M7. Leading conditionalDRsame-probe mPFCauditory/visualreward-context design has18metadata candidates, not18physiologically admittedanimals. License and continuousstatecovariates unresolved. All priorP1-P13failures and exposedP13Dstatus unchanged.
+
+Saved-only nativePowerShell: & .\paper14_m0\reproduce.ps1. Freshwork startsabsent, originalacquisitioncache preservedexternal, networkdenied,27tests/35byte-exactoutputs/25historicalinputs. Finalcandidate identity CANDIDATE_IDENTITY_r3.json; sourcepayload CLOSEOUT_FREEZE.json. Engineeringcurrentbug_count0/warn_count0; no unresolvedshrinkrisk. Fiftyof52precommitrequirements verified; actualGitreadback/finalhandoff close remainingtwo.
+
+Actualcommit/normalorigin-testpush/remotechanged-fileSHA256readback/clean/statusreceipt is created only after execution at C:/Users/85993/.codex/visualizations/2026/10/13/01a13780-a5dc-7e01-8acc-80dd913c1489/p14-context-dynamics-data-feasibility-closure/closure_receipt.json. It is external to avoid a self-referential commit hash. Never substitute this prospective pathname for an executed receipt. Fullreport paper14_m0/P14_M0_REPORT.md; source registry, coverage, exclusions, identifiability and inactiveM1spec supplied. STOP after M0. No further dataset, neural experiment, finalaccess or publication authorized.

@@ -1,0 +1,20 @@
+{
+  "candidate":"AIND_DYNAMIC_ROUTING",
+  "registered_before_catalog_or_table_eligibility_counts":true,
+  "provider_commit":"366809a4b2b3f39a7f36e054a4650dd79faadbe2",
+  "datacube_version":"v0.0.289",
+  "catalog":"dr_assets__datacube_sessions.csv from the exact pinned Git commit",
+  "primary_stratum":"session_type=brainwide AND is_behavior_pass=true; naive/templeton remain separately reported, never pooled to meet the primary denominator",
+  "same_mouse_policy":"One same-session same-probe primary population per canonical subject_id; do not count repeated sessions/probes as animals",
+  "future_window":"[stim_start_time,stim_start_time+0.5) with causal event/lick/running covariates; not premovement prediction",
+  "instruction_trials":"Exclude first5trials of every source block using original scheduled block position, regardless of later lick/reward. Do not select on actual current-trial reward/choice or label an outcome-inferred engagement state causal.",
+  "opto_policy":"Exclude explicit planned opto/perturbation trials or blocks according to their recorded design flags; no behavioral-outcome-driven removal",
+  "remaining_minima":"Single-probe10provider-good medial composite units;2qualifying runs/context,>=15valid trials/run;>=60trials/context in each chronological whole-block half. No thresholds changed after IBLfailure.",
+  "metadata_tables":["session.parquet","trials.parquet","units.parquet in consolidated metadata directory ONLY"],
+  "forbidden":"NWB, per-session full units tables, spikes, histograms, waveforms, amplitudes, neural count arrays, SDK automatic fallback",
+  "access_mode":"Explicit anonymous HTTPS metadata HEAD/ranges; never invoke dr_datacube SDK because its fallback may read neural NWB",
+  "exact_prefix":"https://aind-scratch-data.s3.us-west-2.amazonaws.com/dynamic-routing/cache/nwb_components/v0.0.289/consolidated/",
+  "schema_before_columns":"Save parquet footer schemas/row-group metadata before whitelisting identity/anatomy/quality/context/event columns; no spike-valued column decoded",
+  "license_status":"Must verify source data license separately; code license is not automatically a data license. Missing dr LICENSE endpoint404 is preserved, not inferred permission.",
+  "all_prior_retrieval_bounds_apply":true
+}

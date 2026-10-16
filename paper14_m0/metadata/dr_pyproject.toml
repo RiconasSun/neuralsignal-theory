@@ -1,0 +1,21 @@
+[project]
+name = "dr_datacube"
+version = "0.1.1"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "lazynwb @ git+https://github.com/bjhardcastle/lazynwb.git@dev6",
+    "npc-session>=0.1.41",
+    "polars>=1.43.2",
+    "pydantic-settings",
+    "universal-pathlib",
+]
+
+[project.optional-dependencies]
+co = ["aind-session>=0.3.26"]
+nb = ["marimo"]
+
+[build-system]
+requires = ["uv_build>=0.10.7,<0.11.0"]
+build-backend = "uv_build"

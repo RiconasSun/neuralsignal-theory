@@ -1,0 +1,11 @@
+{
+  "stage":"BEFORE_COLUMN_DECODING_OR_ADDITIONAL_CANDIDATE_ELIGIBILITY_COUNTS",
+  "DR_session":["session_id","subject_id","session_start_time","timestamps_reference_time","lab","institution"],
+  "DR_trials":["session_id","subject_id","trial_index","trial_index_in_block","block_index","rewarded_modality","start_time","stop_time","stim_start_time","stim_stop_time","stim_name","is_opto","is_instruction","is_response","response_time","reward_time","is_rewarded","is_contingent_reward","is_noncontingent_reward"],
+  "DR_units":["id","session_id","subject_id","electrode_group_name","cluster_id","structure","is_qc_pass","is_not_drift","obs_intervals","ccf_ap","ccf_dv","ccf_ml"],
+  "IBL_trials":["eid","stimOn_times","contrastLeft","contrastRight","choice","feedbackType","rewardVolume","stimOff_times","goCueTrigger_times"],
+  "explicitly_forbidden_columns":["spike_times","spike_amplitudes","waveform_mean","waveform_std","num_spikes","firing_rate","all_spike_histograms","decoder_label","decoder_probability"],
+  "observation_intervals":"Provider-recorded observation support metadata only, not spike times or inferred hardware-packet completeness. Do not calculate support from spike endpoints.",
+  "behavior_outcomes":"For confound/missingness descriptions only; never labeled causal predictors available before their actual timestamp. Instruction exclusion uses first5scheduled block positions independently of outcomes.",
+  "raw_NWB_or_spike_data_read":false
+}

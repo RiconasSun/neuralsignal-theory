@@ -1,0 +1,3 @@
+# Pre-count clarification
+
+Before any new P14 eligibility counts, make explicit that the chronological half cut uses all original nonneutral runs, while observation counts use only runs retaining at least15valid trials. Fragmentary excluded runs remain reported and cannot bridge runs. This resolves implementation detail consistently with the registered block-minimum rationale; it is not informed by any new P14 count or neural score. The earlier registration is preserved as REGISTRATION_r1_BEFORE_COUNTS.json; the updated file and separate r2receipt bind the actual prospective rule. The52owner requirements remain unchanged.
