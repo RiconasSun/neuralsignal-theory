@@ -1,5 +1,6 @@
 import copy
 import unittest
+from fractions import Fraction
 from unittest.mock import patch
 import numpy as np
 from . import control_core as c
@@ -7,6 +8,50 @@ from . import test_predictive as fixtures
 
 
 class ControlTests(unittest.TestCase):
+    def test_exact_equal_multiset_cannot_fabricate_conditional_or_stress_pass(self):
+        v=np.array([.1,.2,.3,-.1,-.2,-.3,.1,.2,0.,0.]);mice=[str(i) for i in range(10)];scores={}
+        for j,mouse in enumerate(mice):
+            base=-2*abs(v[j])-.001;scores[mouse]={name:base for name in c.LABELS}
+            scores[mouse]['D']=scores[mouse]['C']=base+v[j]
+        observed=np.array([[scores[m][name] for name in c.LABELS] for m in mice]);surrogate=observed[[6,9,8,2,4,1,7,3,0,5]]
+        arrays={suite:np.broadcast_to(surrogate,(999,10,9)).copy() for suite in c.SUITES}
+        report,_=c.summarize(arrays,scores,mice)
+        self.assertEqual(sum(map(Fraction.from_float,c.effects(observed)[:,3])),sum(map(Fraction.from_float,c.effects(surrogate)[:,3])))
+        for family in ['D','C']:
+            guard=report['beyond_baseline_null_guards'][family]
+            self.assertEqual(guard['conditional_inclusive_exceedances'],999);self.assertEqual(guard['conditional_Bstar_p'],1.)
+            self.assertEqual(guard['conditional_Bstar_Holm2_p'],1.)
+            self.assertFalse(guard['above_temporal_q95']);self.assertFalse(guard['above_history_q95']);self.assertFalse(guard['numerical_reference_conditions_met'])
+
+    def test_exact_linear95_interpolation_tie_and_adjacent_unequal_values(self):
+        mice=[str(i) for i in range(10)];scores={m:{name:-1000. for name in c.LABELS} for m in mice}
+        for j,m in enumerate(mice):scores[m]['D']=scores[m]['C']=-1000.+(949 if j==0 else 948)/1024
+        array=np.full((999,10,9),-1000.)
+        for name in ['D','C']:array[:,:,c.LABELS.index(name)]+=np.arange(999)[:,None]/1024
+        arrays={suite:array.copy() for suite in c.SUITES}
+        for direction in [0,-1,1]:
+            changed=copy.deepcopy(scores)
+            if direction:
+                for name in ['D','C']:changed['0'][name]=np.nextafter(changed['0'][name],np.inf if direction>0 else -np.inf)
+            report,_=c.summarize(arrays,changed,mice)
+            obs=sum(Fraction.from_float(changed[m]['D']-changed[m]['Bstar']) for m in mice)
+            reference=[sum(Fraction.from_float(float(v)) for v in c.effects(row)[:,3]) for row in array]
+            order=sorted(reference);oracle=order[948]*Fraction(9,10)+order[949]*Fraction(1,10)
+            guard=report['beyond_baseline_null_guards']['D']
+            self.assertEqual(guard['above_temporal_q95'],obs>oracle);self.assertEqual(guard['above_history_q95'],obs>oracle)
+            count=sum(v>=obs for v in reference)
+            self.assertEqual(guard['conditional_Bstar_p'],(1+count)/1000)
+            if direction==0:self.assertEqual(obs,oracle);self.assertEqual(count,50)
+
+    def test_exact_total_fraction_oracle_cancellation_and_permutations(self):
+        rng=np.random.default_rng(4103)
+        cases=[[.1,.2,.3,-.1,-.2,-.3,0.,0.], [0.]*10,[1e300,-1e300,1e-300,-1e-300,.1,-.1,0.,0.]]
+        cases += [rng.choice([.1,-.1,.2,-.2,.001,-.001,0.],size=10).tolist() for _ in range(30)]
+        for values in cases:
+            expected=sum(Fraction.from_float(float(v)) for v in values)
+            self.assertEqual(c.exact_total(values),expected);self.assertEqual(c.exact_total(list(reversed(values))),expected)
+            self.assertEqual(c.exact_total(rng.permutation(values)),expected)
+
     def test_temporal_preserves_each_stratum_unit_epoch_counts(self):
         y=np.arange(8*30*8).reshape(8,30,8)
         out=c.temporal(y,np.random.default_rng(130101))

@@ -1,0 +1,9 @@
+# Saved-only numerical-stop closeout registration
+
+2026-10-16. Mission P13-KI-PL-SCIENCE-FIRST-EXECUTION. Actual reviewed E-control attempt failed at 17:09:38 UTC. No further scientific execution is authorized under the remaining numerical-stop rule. Owner coverage-informed amendment remains preserved and applies only to strict recent-event coverage.
+
+Allowed now: read existing logs/derived artifacts; verify counts, hashes, NaN partial slots, frozen sources and absent final C/D outputs; run existing synthetic regression suites; document and independently review the stop; exact mission Git archive/readback/clean. No conditional simulation rerun, new RNG draw, real fit, raw source/neural access, C model calibration, D assessment, clipping, model repair or parameter inspection experiment.
+
+Audit oracle: three complete999x10x9 arrays; conditional array999x10x9 with exactly first3mouse rows finite at replicate0 and all other slots NaN; one execution start/error,2998replicate starts,2997replicate completions,29973mouse completions and29974attempts; exit1 at conditional_Bstar/0/156130 exp overflow. Original scientific hashes and current reviewed control hashes unchanged. No aggregate four-suite p-values can be reported. Inactive C/D engineering drafts remain unexecuted historical work, never production-approved. Existing overflow and interrupted-run synthetic tests are sufficient regressions; no real failure reproduction is authorized.
+
+The final scientific status must remain STOP_NUMERICAL/INCONCLUSIVE, with all three coverage-associated broad claims independently locked INCONCLUSIVE. A further study requires a separately registered owner-approved protocol; no automatic new mission. Terminal task state WAIT_FOR_HUMAN_INPUT after reviewed archival closeout, not full mission PASS.

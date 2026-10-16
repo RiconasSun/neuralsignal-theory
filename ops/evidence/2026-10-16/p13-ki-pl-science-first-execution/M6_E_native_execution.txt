@@ -1,0 +1,43 @@
+{"M6_E_suite": "temporal", "completed_replicates": 100, "no_new_fits": true}
+{"M6_E_suite": "temporal", "completed_replicates": 200, "no_new_fits": true}
+{"M6_E_suite": "temporal", "completed_replicates": 300, "no_new_fits": true}
+{"M6_E_suite": "temporal", "completed_replicates": 400, "no_new_fits": true}
+{"M6_E_suite": "temporal", "completed_replicates": 500, "no_new_fits": true}
+{"M6_E_suite": "temporal", "completed_replicates": 600, "no_new_fits": true}
+{"M6_E_suite": "temporal", "completed_replicates": 700, "no_new_fits": true}
+{"M6_E_suite": "temporal", "completed_replicates": 800, "no_new_fits": true}
+{"M6_E_suite": "temporal", "completed_replicates": 900, "no_new_fits": true}
+{"M6_E_suite": "history", "completed_replicates": 100, "no_new_fits": true}
+{"M6_E_suite": "history", "completed_replicates": 200, "no_new_fits": true}
+{"M6_E_suite": "history", "completed_replicates": 300, "no_new_fits": true}
+{"M6_E_suite": "history", "completed_replicates": 400, "no_new_fits": true}
+{"M6_E_suite": "history", "completed_replicates": 500, "no_new_fits": true}
+{"M6_E_suite": "history", "completed_replicates": 600, "no_new_fits": true}
+{"M6_E_suite": "history", "completed_replicates": 700, "no_new_fits": true}
+{"M6_E_suite": "history", "completed_replicates": 800, "no_new_fits": true}
+{"M6_E_suite": "history", "completed_replicates": 900, "no_new_fits": true}
+{"M6_E_suite": "task_order", "completed_replicates": 100, "no_new_fits": true}
+{"M6_E_suite": "task_order", "completed_replicates": 200, "no_new_fits": true}
+{"M6_E_suite": "task_order", "completed_replicates": 300, "no_new_fits": true}
+{"M6_E_suite": "task_order", "completed_replicates": 400, "no_new_fits": true}
+{"M6_E_suite": "task_order", "completed_replicates": 500, "no_new_fits": true}
+{"M6_E_suite": "task_order", "completed_replicates": 600, "no_new_fits": true}
+{"M6_E_suite": "task_order", "completed_replicates": 700, "no_new_fits": true}
+{"M6_E_suite": "task_order", "completed_replicates": 800, "no_new_fits": true}
+{"M6_E_suite": "task_order", "completed_replicates": 900, "no_new_fits": true}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper13_ki_execution1\controls_E.py", line 91, in <module>
+    if __name__=='__main__':run()
+                            ^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper13_ki_execution1\controls_E.py", line 64, in run
+    result=core.replicate(suite,y,q,bundle,ordinals,rng)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper13_ki_execution1\control_core.py", line 59, in replicate
+    if suite=='conditional_Bstar':return evaluate(conditional_counts(q,bundle,rng),q,bundle)
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper13_ki_execution1\control_core.py", line 45, in conditional_counts
+    with np.errstate(over='raise',invalid='raise'):means=np.exp(eta)
+                                                         ^^^^^^^^^^^
+FloatingPointError: overflow encountered in exp

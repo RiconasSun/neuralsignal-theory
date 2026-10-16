@@ -1,0 +1,3 @@
+# Archive count correction before saved-only re-verification
+
+Independent archive r1 review found actual66VERIFIED/20BLOCKED_HUMAN_INPUT rows but obsolete aggregate65/21. Preserve failed review, matrix, source, freeze and prior passing stop reproduction in STOP_ARCHIVE_r1_COUNT_DEFECT.zip. Correct only aggregate counts from actual rows. Add saved-verifier invariant requiring exact original86orderedID/phase/text triples, uniqueIDs, total and per-status aggregate equality; negative checks must reject corrupted65 and21fields. No requirement semantic change, scientific artifact, control source/model change, new draw/fit/C/D. Rebind saved-only closeout freeze and rerun127tests plus audit; obtain independent r2 archive review before staging.

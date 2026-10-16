@@ -1,0 +1,7 @@
+# Prospective aligned-array contract repair
+
+UTC: 2026-10-16T16:52:05.308795+00:00. Before any final Cfit/Doutcome. Independent Cengineering r1 identifiesP1: assembly acceptswrong30th+shiftresponsebin/extraepochrows despite29-binplan. Preservefailedcode/tests/freeze/review in FINAL_C_engineering_r1_failed_package.zip;nooriginalscientificchange.
+
+Validate bothalignedinputs BEFORE scoring anypanel: exactretainedparentorder, original8unitIDs/order, Nrows andT=30minus/T=29plus, matching11qcolumns; require consistentfrozenmetadata originalparents/start/stop/shift/originaltone/exportstop/fullbinidentity;rejectmissing/malformed/inconsistentbounds and wrongarrays, nevertruncate. Emptyretainedplan requires correctlyshapedzero-rowarrays/emptyparents/originalunitIDs, nothiddennonemptydata. Clock arithmetic uses existing1e-10representationalboundary convention only, not a changedscientificmask/score threshold. Addforbiddenresponsebincanary,minuswrongT,extra/missingrow,qshape,unitorder,planbounds andemptycases, assertingno evaluatorcalloninvalidpayload.
+
+Thisnewassembly is not imported by the separatelyreviewed Econtrolworker now executing; neither sensitivity_scores nor its tests existed in M6_E_IMPLEMENTATION_FREEZE_r2, and no Econtrolsource/mathematicaloperation changes. PreserveoldCengineering103hashes usingexactarchivedsourcebytes andunmodifiedremainingfiles in newreproducer. IndependentreviewagainbeforeactualC/D. Allowneramendment/knowncoverage/claimlocks unchanged.

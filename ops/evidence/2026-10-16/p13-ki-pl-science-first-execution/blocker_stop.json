@@ -1,0 +1,25 @@
+{
+  "candidate_exit": "WAIT_FOR_HUMAN_INPUT",
+  "blocked_requirements": [
+    "REQ-061",
+    "REQ-064",
+    "REQ-068",
+    "conditional M7"
+  ],
+  "observed_blocker": "Mandatory real E conditional null overflow; current authorization explicitly requires numerical STOP and forbids retry/rescue",
+  "evidence": [
+    "M6_E_CONTROLS_GATE.json",
+    "M6_E_native_execution.txt",
+    "M6_STOP_SAVED_AUDIT.json"
+  ],
+  "autonomous_alternatives": [
+    "Saved-only integrity/count/source audits",
+    "Existing synthetic fail-closed and interruption regressions",
+    "Independent stop and archival review",
+    "Exact scoped Git archival closure"
+  ],
+  "why_insufficient": "These preserve and verify evidence but cannot satisfy failed real null gate; clipping/new draws/model changes would breach frozen scientific contract",
+  "human_action": "Only if further scientific work is desired: authorize a separate prospectively registered bounded conditional-null stability diagnosis. Do not rerun this mission or authorize D merely to bypass this failure.",
+  "next_step": "Stop after archive; any newly authorized protocol must be separately frozen/reviewed before numerical experiments",
+  "no_remaining_contract_valid_scientific_execution": true
+}

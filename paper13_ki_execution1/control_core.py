@@ -1,5 +1,6 @@
 """Four registered fixed-coefficient controls, pure arrays and explicit RNG."""
 import numpy as np
+from fractions import Fraction
 from .predictive import evaluate,baseline_eta
 from .animal_stats import holm
 
@@ -66,30 +67,49 @@ def effects(scores):
     return np.stack([D-b4,C-b4,D-C,D-Bstar,C-Bstar,D-S],axis=-1)
 
 
+def exact_total(values):
+    ratios=[float(v).as_integer_ratio() for v in values]
+    denominator=max(den for _,den in ratios)
+    return Fraction(sum(num*(denominator//den) for num,den in ratios),denominator)
+
+
+def linear_q95(values):
+    ordered=sorted(values);rank=Fraction((len(ordered)-1)*95,100)
+    lower=rank.numerator//rank.denominator;weight=rank-lower
+    return (1-weight)*ordered[lower]+weight*ordered[min(lower+1,len(ordered)-1)]
+
+
 def summarize(arrays,observed_scores,mouse_order):
     if set(arrays)!=set(SUITES) or len(mouse_order)<8 or len(mouse_order)!=len(set(mouse_order)):
         raise ValueError('All four999replicate paired-mouse controls required')
-    observed=effects(np.array([[observed_scores[m][k] for k in LABELS] for m in mouse_order])).mean(axis=0)
-    means={}
+    n=len(mouse_order);obs_effects=effects(np.array([[observed_scores[m][k] for k in LABELS] for m in mouse_order]))
+    observed_totals=[exact_total(obs_effects[:,j]) for j in range(6)]
+    observed=np.array([float(value/n) for value in observed_totals])
+    means={};totals={}
     for suite,array in arrays.items():
         a=np.asarray(array)
         if a.shape!=(999,len(mouse_order),len(LABELS)):raise ValueError('Exactly999replicates/all original mice required')
-        means[suite]=effects(a).mean(axis=1)
-    null=means['conditional_Bstar'][:,3:5]
-    p=(1+(null>=observed[None,3:5]).sum(axis=0))/1000
-    adjusted=holm(p);references={}
+        difference=effects(a)
+        totals[suite]=[[exact_total(difference[r,:,j]) for j in range(6)] for r in range(999)]
+        means[suite]=np.array([[float(value/n) for value in row] for row in totals[suite]])
+    exceed=[sum(row[j]>=observed_totals[j] for row in totals['conditional_Bstar']) for j in [3,4]]
+    p=np.array([(1+count)/1000 for count in exceed])
+    adjusted=holm(p);references={};quantiles={}
     for suite in SUITES[:3]:
-        quantile=np.quantile(means[suite],.95,axis=0,method='linear')
+        quantiles[suite]=[linear_q95([row[j] for row in totals[suite]]) for j in range(6)]
+        quantile=np.array([float(value/n) for value in quantiles[suite]])
         references[suite]={'mean_effects':means[suite].mean(axis=0).tolist(),'q95_effects':quantile.tolist(),
             'observed_minus_reference_mean':(observed-means[suite].mean(axis=0)).tolist(),
             'reference_type':'Assumption-dependent stress comparison, not randomization-valid biological significance'}
     guards={}
     for j,name in enumerate(['D','C']):
-        above=[observed[3+j]>references[suite]['q95_effects'][3+j] for suite in ['temporal','history']]
+        above=[observed_totals[3+j]>quantiles[suite][3+j] for suite in ['temporal','history']]
         guards[name]={'conditional_Bstar_p':float(p[j]),'conditional_Bstar_Holm2_p':float(adjusted[j]),
+            'conditional_inclusive_exceedances':exceed[j],
             'above_temporal_q95':bool(above[0]),'above_history_q95':bool(above[1]),
             'numerical_reference_conditions_met':bool(adjusted[j]<=.05 and all(above)),
             'interpretation':'Necessary guard only; primary/Bstar statistics, sensitivities and defensible assumptions also required'}
     return {'replicates_per_suite':999,'seeds':SEEDS,'mouse_order':mouse_order,'observed_equal_mouse_effects':observed.tolist(),
         'stress_references':references,'beyond_baseline_null_guards':guards,
+        'decision_arithmetic':'Exact dyadic totals of supplied per-mouse binary64 effects; inclusive conditional tails; strict reference comparisons against exact nominal95/100 linear interpolation. Display floats do not decide gates.',
         'task_order_stress_can_rescue_failed_claim':False,'D_minus_C_parametric_superiority_test_required':False},means

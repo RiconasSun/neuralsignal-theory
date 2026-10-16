@@ -1,0 +1,5 @@
+# Current P13 status: required numerical STOP
+
+Mission P13-KI-PL-SCIENCE-FIRST-EXECUTION. M6 conditional_Bstar replicate0/mouse156130 failed exp overflow; no retry. Three999Econtrol suites complete, conditional3mouse completions;29973successful/29974attempted/39960planned mouse-replicates. No final C model fits or D neural outcome export/evaluation. Owner B amendment resolved the earlier purpose ambiguity but waived only6vs8coverage, never later numerical failures. All affected broad claims remain INCONCLUSIVE. Full mission/paper/final validation not PASS. Current task WAIT_FOR_HUMAN_INPUT after independent archival closeout; no automatic new protocol. bug_count1(requirednumericalfailure),warn_count2(coverage,missingfinalevidence).
+
+Current authoritative report: ops/evidence/2026-10-16/p13-ki-pl-science-first-execution/NUMERICAL_STOP_REPORT.md. Saved-only: & .\paper13_ki_execution1\reproduce_numerical_stop.ps1. Git/clean only from executed external closure receipt. Historical statuses below are preserved and superseded by this dated numerical stop.
