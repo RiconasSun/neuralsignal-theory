@@ -1,0 +1,161 @@
+test_15_mice_fails (test_metadata_audit.AdmissionTests.test_15_mice_fails) ... ok
+test_19_units_fails (test_metadata_audit.AdmissionTests.test_19_units_fails) ... ok
+test_399_trials_fails (test_metadata_audit.AdmissionTests.test_399_trials_fails) ... ok
+test_bad_units_not_admitted (test_metadata_audit.AdmissionTests.test_bad_units_not_admitted) ... ok
+test_conflicting_session_mouse (test_metadata_audit.AdmissionTests.test_conflicting_session_mouse) ... ok
+test_deny_spike_and_unregistered_provider (test_metadata_audit.AdmissionTests.test_deny_spike_and_unregistered_provider) ... ok
+test_duplicate_cluster (test_metadata_audit.AdmissionTests.test_duplicate_cluster) ... ok
+test_duplicate_probe (test_metadata_audit.AdmissionTests.test_duplicate_probe) ... ok
+test_duplicate_uuid (test_metadata_audit.AdmissionTests.test_duplicate_uuid) ... ok
+test_exact_boundary_and_no_false_full_admission (test_metadata_audit.AdmissionTests.test_exact_boundary_and_no_false_full_admission) ... ok
+test_global_request_budget_uses_existing_journal (test_metadata_audit.AdmissionTests.test_global_request_budget_uses_existing_journal) ... ERROR
+test_http_200_range_response_never_read (test_metadata_audit.AdmissionTests.test_http_200_range_response_never_read) ... ERROR
+test_laminar_only (test_metadata_audit.AdmissionTests.test_laminar_only) ... ok
+test_missing_trials_not_pass (test_metadata_audit.AdmissionTests.test_missing_trials_not_pass) ... ok
+test_nonfinite_and_noncausal_trial_events (test_metadata_audit.AdmissionTests.test_nonfinite_and_noncausal_trial_events) ... ok
+test_probes_not_pooled (test_metadata_audit.AdmissionTests.test_probes_not_pooled) ... ok
+test_range_rejects_full_object_response (test_metadata_audit.AdmissionTests.test_range_rejects_full_object_response) ... ok
+test_regions_not_pooled (test_metadata_audit.AdmissionTests.test_regions_not_pooled) ... ok
+test_same_mouse_repeated_sessions_not_independent (test_metadata_audit.AdmissionTests.test_same_mouse_repeated_sessions_not_independent) ... ok
+test_saved_hash_tampering_fails_before_replay (test_metadata_audit.AdmissionTests.test_saved_hash_tampering_fails_before_replay) ... ERROR
+test_wrong_identity_join (test_metadata_audit.AdmissionTests.test_wrong_identity_join) ... ok
+
+======================================================================
+ERROR: test_global_request_budget_uses_existing_journal (test_metadata_audit.AdmissionTests.test_global_request_budget_uses_existing_journal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper13\test_metadata_audit.py", line 145, in test_global_request_budget_uses_existing_journal
+    (Path(folder)/'access.jsonl').write_text('{"bytes":7}\n'*1800)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1078, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{6cee6cd3-5248-4f61-82dd-3d6e7bfb41ad}\\AC\\Temp\\tmp4v_lz3yz\\access.jsonl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{6cee6cd3-5248-4f61-82dd-3d6e7bfb41ad}\\AC\\Temp\\tmp4v_lz3yz'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper13\test_metadata_audit.py", line 144, in test_global_request_budget_uses_existing_journal
+    with tempfile.TemporaryDirectory() as folder, patch.object(acquire_metadata,'META',Path(folder)):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 943, in __exit__
+    self.cleanup()
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{6cee6cd3-5248-4f61-82dd-3d6e7bfb41ad}\\AC\\Temp\\tmp4v_lz3yz'
+
+======================================================================
+ERROR: test_http_200_range_response_never_read (test_metadata_audit.AdmissionTests.test_http_200_range_response_never_read)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper13\test_metadata_audit.py", line 138, in test_http_200_range_response_never_read
+    t.request('https://ibl-brain-wide-map-public.s3.amazonaws.com/aggregates/metadata.pqt',headers={'Range':'bytes=0-2'})
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper13\acquire_metadata.py", line 68, in request
+    with (META/'access.jsonl').open('a',encoding='utf8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{6cee6cd3-5248-4f61-82dd-3d6e7bfb41ad}\\AC\\Temp\\tmp38z212im\\access.jsonl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{6cee6cd3-5248-4f61-82dd-3d6e7bfb41ad}\\AC\\Temp\\tmp38z212im'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper13\test_metadata_audit.py", line 135, in test_http_200_range_response_never_read
+    with tempfile.TemporaryDirectory() as folder, patch.object(acquire_metadata,'META',Path(folder)):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 943, in __exit__
+    self.cleanup()
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{6cee6cd3-5248-4f61-82dd-3d6e7bfb41ad}\\AC\\Temp\\tmp38z212im'
+
+======================================================================
+ERROR: test_saved_hash_tampering_fails_before_replay (test_metadata_audit.AdmissionTests.test_saved_hash_tampering_fails_before_replay)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper13\test_metadata_audit.py", line 153, in test_saved_hash_tampering_fails_before_replay
+    (Path(folder)/'saved_inventory.json').write_text(json.dumps({'files':[
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1078, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{6cee6cd3-5248-4f61-82dd-3d6e7bfb41ad}\\AC\\Temp\\tmp1wxb9xyl\\saved_inventory.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{6cee6cd3-5248-4f61-82dd-3d6e7bfb41ad}\\AC\\Temp\\tmp1wxb9xyl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper13\test_metadata_audit.py", line 152, in test_saved_hash_tampering_fails_before_replay
+    with tempfile.TemporaryDirectory() as folder, patch.object(verify_saved,'P',Path(folder)):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 943, in __exit__
+    self.cleanup()
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{6cee6cd3-5248-4f61-82dd-3d6e7bfb41ad}\\AC\\Temp\\tmp1wxb9xyl'
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.148s
+
+FAILED (errors=3)

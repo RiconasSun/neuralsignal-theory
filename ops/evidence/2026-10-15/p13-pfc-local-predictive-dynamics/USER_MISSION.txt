@@ -1,0 +1,270 @@
+# CCPN / NEURALSIGNAL — PAPER 13 MASTER MISSION
+
+MISSION: P13-PFC-LOCAL-PREDICTIVE-DYNAMICS
+
+PRIORITY: HIGH
+
+EXECUTION MODE: SCIENCE-FIRST AUTONOMOUS RESEARCH
+
+## OVERALL OBJECTIVE
+
+Complete Paper 13 of the Computational Cognitive Primitive Neurodynamics (CCPN) research program.
+
+Working title:
+
+"Discrete and Continuous Predictive Dynamics in Mouse Prefrontal Cortex"
+
+Primary question:
+
+Do local prefrontal neural population dynamics provide reproducible predictive information beyond strong firing-rate, causal spike-history, task, time and behavioral-history baselines?
+
+The result may be positive, negative or inconclusive.
+
+Do not assume that discrete neural primitives exist.
+
+## NON-NEGOTIABLE PRINCIPLES
+
+1. Scientific rigor must be high; engineering complexity should be minimal.
+2. Do not reproduce the P12 offline signing, Ed25519 entitlement, multi-principal custody or cryptographic ledger architecture.
+3. Use a trusted local research environment, frozen source hashes, immutable results, explicit evaluation splits and auditable access records.
+4. Preserve P1–P12 unchanged.
+5. No final-result-driven model selection, threshold changes or sample replacement.
+6. Engineering PASS is not scientific validation.
+7. Autonomous progression is permitted after each registered scientific gate PASS.
+8. Do not repeatedly request authorization for ordinary coding, testing, documentation or bounded bug repair.
+9. Stop for genuine scientific protocol changes or critical violations.
+10. Do not turn P13 into another generic firing-rate benchmark.
+
+## M0 — DATASET AND PFC FEASIBILITY
+
+Primary dataset:
+
+International Brain Laboratory Brain Wide Map.
+
+Official data:
+https://docs.internationalbrainlab.org/notebooks_external/2025_data_release_brainwidemap.html
+
+Literature:
+https://www.nature.com/articles/s41586-025-09235-0
+https://www.nature.com/articles/s41586-025-09226-1
+https://www.nature.com/articles/s41593-025-02190-z
+
+Perform a bounded, metadata-first feasibility audit.
+
+- Pin the exact IBL release/tag and source provenance.
+- Enumerate all relevant mouse/session/probe/cluster identities.
+- Use provider atlas labels without inventing anatomical certainty.
+- Examine ACAd as the first candidate PFC-associated region, ORBvl second and PL third.
+- Choose one primary region by a frozen anatomical-priority and metadata-coverage rule, never by neural predictive scores.
+- Do not pool different PFC regions merely to increase sample size.
+- Verify actual good-quality simultaneous unit coverage, task trials, source timing and available covariates.
+- Distinguish anatomical candidates from physiologically eligible units.
+- Establish whether independent development and final mice are adequately represented.
+
+Target at least 12 development and 12 final mice where feasible. Before spike-outcome access, establish a justified minimum sample rule; fewer than 8 independent mice per group cannot support the proposed primary confirmation route.
+
+Do not assume the global IBL subject count equals eligible PFC subjects.
+
+Use curated-release observation support with documented masks and limitations. Do not demand an impossible absolute lossless hardware-packet certificate unless the scientific estimand actually requires it.
+
+If IBL fails feasibility, stop with a complete denominator and assess whether a separate PFC dataset merits a new protocol. No unlimited dataset search.
+
+## M1 — FROZEN SCIENTIFIC PROTOCOL
+
+Register before model-score access:
+
+- Exact anatomical primary region.
+- Subject/session/unit eligibility.
+- Primary and secondary hypotheses.
+- Mouse-disjoint development and final evaluation.
+- Within-session train/validation or calibration/evaluation trial assignments.
+- Causal bin definitions and trial resets.
+- Model families and fixed hyperparameter grids.
+- Predictive scoring metric.
+- Mouse-level statistical tests and multiplicity correction.
+- Null procedures.
+- Numerical acceptance rules.
+- Stopping and falsification gates.
+
+Disclose metadata-informed decisions.
+
+Prevent access to final evaluation outcomes until development model selection is frozen.
+
+Use simple access logging and hash-locked artifacts, not custom cryptographic approval infrastructure.
+
+## M2 — SPIKE-COUNT FEATURES AND QC
+
+Build nominal 100-ms neural population spike-count features when supported by the recordings.
+
+Preserve:
+- Mouse identity
+- Session identity
+- Probe/unit identity
+- Anatomical label
+- Trial and bin identity
+- Valid observation masks
+- Stimulus and behavioral-event timestamps
+
+All fitted transforms and neural unit QC must use the authorized training/calibration partition.
+
+No current/future spike count may predict itself.
+
+No current-trial choice, response time, reward or feedback may enter features before that event actually occurs.
+
+Prior-trial history and other causally available information may be used under the frozen protocol.
+
+Document quality, spike sorting, atlas assignment and timestamp limitations.
+
+## M3 — STRONG BASELINES
+
+Implement and validate:
+
+B0: Stationary Poisson firing-rate model.
+
+B1: Stimulus, trial time, known task context and trial-order GLM.
+
+B2: Causal own-unit spike-history Poisson GLM.
+
+B3: Causal population-history Poisson GLM.
+
+B4: Combined task/time/history/available nuisance Poisson GLM.
+
+Use appropriate regularization and training-only scaling.
+
+Include causally available movement/history covariates when they can be measured consistently.
+
+Report actual parameter counts, firing-rate sensitivity and held-out predictive log likelihood.
+
+Strong combined baselines are mandatory, not optional.
+
+## M4 — LOCAL DYNAMICAL REPRESENTATIONS
+
+Compare two tractable primary model families:
+
+D — Discrete state:
+Small-state Poisson HMM using exact log-space forward prediction, not future-state smoothing.
+
+C — Continuous state:
+Low-dimensional, fixed-timescale leaky-history state driven only by past observed spikes, with a Poisson predictive readout.
+
+Both must score current counts before assimilating them and account for the registered task/time nuisance structure.
+
+Prioritize analytically tractable likelihoods and bounded parameter optimization.
+
+Use:
+- Independent small-scale numerical oracles
+- Causal future-perturbation tests
+- Exact score-denominator verification
+- Fixed seed/configuration rules
+- Model-complexity and parameter-budget reporting
+- Training-only numerical diagnosis
+
+Pre-register how numerically invalid configurations are handled.
+
+Never remove failed fits simply to favor a model family.
+
+A valid baseline-only result cannot be described as a completed discrete-versus-continuous comparison.
+
+Do not make high-dimensional recurrent networks or difficult latent continuous integration mandatory.
+
+## M5 — SCIENTIFIC COMPARISON
+
+Primary measurement:
+
+Held-out incremental predictive log likelihood relative to the strongest registered task/history baseline.
+
+Units:
+nats per actual scored nominal unit-bin.
+
+Evaluate:
+- Discrete versus strong baseline
+- Continuous versus strong baseline
+- Discrete versus continuous, where both are valid
+
+Freeze model selection using development data only.
+
+Use equal-mouse aggregation, paired subject-level inference, confidence intervals and preregistered multiplicity correction.
+
+Report heterogeneity across mice, laboratories and recording sessions.
+
+Never treat spikes, trials, units or sessions as independent mice.
+
+Test whether predictive improvements are stable rather than driven by one animal, one lab or increased model complexity.
+
+Do not equate a model advantage with evidence of physical discrete neural atoms.
+
+## M6 — FALSIFICATION AND ONE FINAL VALIDATION
+
+Use appropriate registered controls:
+
+- Trial spike-count/rate-preserving temporal disruptions
+- Causal history-shuffle controls
+- Stimulus/time and trial-order controls
+- Session drift and movement-related nuisance comparisons
+- Unit-count and firing-rate sensitivity
+- Anatomical and recording-quality sensitivity
+
+Preserve conditional-null assumptions and report unfavorable results.
+
+Complete model selection and freeze the full final evaluation specification before opening final mouse outcomes.
+
+Permit calibration-only fitting of session-local parameters under the registered transfer policy.
+
+Perform one final mouse-level evaluation.
+
+No retuning, new hypotheses or repeated evaluation after seeing final scores.
+
+A nonsignificant result is not an engineering failure and does not prove equivalence.
+
+## M7 — COMPLETE PAPER
+
+Create:
+
+- Full scientific manuscript
+- Supplementary methods and results
+- Anatomical/cohort tables
+- Model comparison tables
+- Animal-level effect sizes and uncertainty
+- All null distributions and failure evidence
+- Numerical validation report
+- Publication-quality figures
+- A1–A10 evidence/claim audit
+- Reproduction instructions
+- Manuscript PDF and Supplement PDF
+
+Separate public saved-only reproduction from any protected full-data rerun.
+
+Report original dataset citations and distinguish previous literature from the actual P13 contribution.
+
+No invented biological mechanism, NAP/CWP validation, human replication or external-laboratory confirmation.
+
+If dynamical models fail a required numerical gate, preserve the failed study. A narrower exploratory manuscript may be generated from valid evidence, but it must not pretend the original scientific comparison passed.
+
+## AUTONOMOUS EXECUTION POLICY
+
+Start M0 immediately.
+
+After each gate PASS, advance automatically to the next registered stage.
+
+Use bounded software fixes when scientific definitions remain unchanged, preserving original failure evidence.
+
+Do not run new data searches, redesign models or create additional security systems merely to avoid a negative scientific result.
+
+Stop on actual data insufficiency, leakage, numerical invalidity or essential protocol failure.
+
+If the complete final study is validly executed, finish the manuscript regardless of whether the hypotheses are supported.
+
+Submit a final report containing:
+- Exact cohort denominator and eligible mouse counts
+- Development/final split
+- Baseline and dynamical predictive scores
+- Statistical and null results
+- Scientific verdict
+- Manuscript/PDF status
+- Reproduction results
+- Bug/warning counts
+- Verified Git commit
+
+Do not claim journal submission or publication.
+
+BEGIN M0 NOW.

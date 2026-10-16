@@ -1,3 +1,12 @@
+# Current mission: P13-PFC-LOCAL-PREDICTIVE-DYNAMICS
+
+M0 scientific STOP / DATA INSUFFICIENT. Prospective single-probe>=20 provider-good units and>=400 usable curated trials; minimum8+8 independent mice unchanged. Full frozen IBL denominator139mice/459sessions/699probes/621733clusters/75708good/295920trials. ACAd/ORBvl/PL unit-threshold mice6/6/8; with trial gate upper bounds4/4/7. None can reach16 even before trial/support/covariate/training-QC gates. No region selected, allocation, spike/count access, feature extraction, model fits, final outcome assessment or manuscript/PDF completion. M1-M7 blocked, never reinterpreted as baseline-only success.
+
+Current execution proceeds only to saved-only reproduction, separate internal review and exact Git archive closure; actual commit/readback/clean certified by external receipt. Then WAIT_FOR_HUMAN_INPUT for any separately registered new scientific protocol. No automatic dataset switch or cutoff relaxation. Existing P1-P12 bytes/failures unchanged. Alternate KI/PFC dataset merits at most a separately approved metadata feasibility study; none started.
+
+Evidence: evidence/2026-10-15/p13-pfc-local-predictive-dynamics/. Report: ../paper13/M0_REPORT.md. Saved-only reproduction: & .\paper13\reproduce.ps1. No publication/submission or full scientific PASS claim.
+
+---
 # Current mission: P12-SCIENCE-FIRST-FINAL-CLOSEOUT-1
 
 Valid single frozen actual D assessment complete; task archival Git closure pending external receipt.

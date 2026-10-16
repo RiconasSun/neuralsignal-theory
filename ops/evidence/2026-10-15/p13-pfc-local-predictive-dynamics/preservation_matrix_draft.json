@@ -1,0 +1,614 @@
+{
+  "original_frozen_baseline_sha256": "0cfd32700cb08b6e757e2d323216076704d354ea217f474b46a4e9623843aca6",
+  "count": 86,
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "stage": "GLOBAL",
+      "requirement": "1. Scientific rigor must be high; engineering complexity should be minimal.",
+      "status": "VERIFIED",
+      "evidence": "paper13/M0_REPORT.md; paper13/results/M0/M0_audit.json; saved reproduction and final scoped Git closure"
+    },
+    {
+      "id": "REQ-002",
+      "stage": "GLOBAL",
+      "requirement": "2. Do not reproduce the P12 offline signing, Ed25519 entitlement, multi-principal custody or cryptographic ledger architecture.",
+      "status": "VERIFIED",
+      "evidence": "paper13/M0_REPORT.md; paper13/results/M0/M0_audit.json; saved reproduction and final scoped Git closure"
+    },
+    {
+      "id": "REQ-003",
+      "stage": "GLOBAL",
+      "requirement": "3. Use a trusted local research environment, frozen source hashes, immutable results, explicit evaluation splits and auditable access records.",
+      "status": "VERIFIED",
+      "evidence": "paper13/M0_REPORT.md; paper13/results/M0/M0_audit.json; saved reproduction and final scoped Git closure"
+    },
+    {
+      "id": "REQ-004",
+      "stage": "GLOBAL",
+      "requirement": "4. Preserve P1\u2013P12 unchanged.",
+      "status": "VERIFIED",
+      "evidence": "paper13/M0_REPORT.md; paper13/results/M0/M0_audit.json; saved reproduction and final scoped Git closure"
+    },
+    {
+      "id": "REQ-005",
+      "stage": "GLOBAL",
+      "requirement": "5. No final-result-driven model selection, threshold changes or sample replacement.",
+      "status": "VERIFIED",
+      "evidence": "paper13/M0_REPORT.md; paper13/results/M0/M0_audit.json; saved reproduction and final scoped Git closure"
+    },
+    {
+      "id": "REQ-006",
+      "stage": "GLOBAL",
+      "requirement": "6. Engineering PASS is not scientific validation.",
+      "status": "VERIFIED",
+      "evidence": "paper13/M0_REPORT.md; paper13/results/M0/M0_audit.json; saved reproduction and final scoped Git closure"
+    },
+    {
+      "id": "REQ-007",
+      "stage": "GLOBAL",
+      "requirement": "7. Autonomous progression is permitted after each registered scientific gate PASS.",
+      "status": "VERIFIED",
+      "evidence": "paper13/M0_REPORT.md; paper13/results/M0/M0_audit.json; saved reproduction and final scoped Git closure"
+    },
+    {
+      "id": "REQ-008",
+      "stage": "GLOBAL",
+      "requirement": "8. Do not repeatedly request authorization for ordinary coding, testing, documentation or bounded bug repair.",
+      "status": "VERIFIED",
+      "evidence": "paper13/M0_REPORT.md; paper13/results/M0/M0_audit.json; saved reproduction and final scoped Git closure"
+    },
+    {
+      "id": "REQ-009",
+      "stage": "GLOBAL",
+      "requirement": "9. Stop for genuine scientific protocol changes or critical violations.",
+      "status": "VERIFIED",
+      "evidence": "paper13/M0_REPORT.md; paper13/results/M0/M0_audit.json; saved reproduction and final scoped Git closure"
+    },
+    {
+      "id": "REQ-010",
+      "stage": "GLOBAL",
+      "requirement": "10. Do not turn P13 into another generic firing-rate benchmark.",
+      "status": "VERIFIED",
+      "evidence": "paper13/M0_REPORT.md; paper13/results/M0/M0_audit.json; saved reproduction and final scoped Git closure"
+    },
+    {
+      "id": "REQ-011",
+      "stage": "M0",
+      "requirement": "- Pin the exact IBL release/tag and source provenance.",
+      "status": "VERIFIED",
+      "evidence": "paper13/M0_REPORT.md; paper13/results/M0/M0_audit.json; saved reproduction and final scoped Git closure"
+    },
+    {
+      "id": "REQ-012",
+      "stage": "M0",
+      "requirement": "- Enumerate all relevant mouse/session/probe/cluster identities.",
+      "status": "VERIFIED",
+      "evidence": "paper13/M0_REPORT.md; paper13/results/M0/M0_audit.json; saved reproduction and final scoped Git closure"
+    },
+    {
+      "id": "REQ-013",
+      "stage": "M0",
+      "requirement": "- Use provider atlas labels without inventing anatomical certainty.",
+      "status": "VERIFIED",
+      "evidence": "paper13/M0_REPORT.md; paper13/results/M0/M0_audit.json; saved reproduction and final scoped Git closure"
+    },
+    {
+      "id": "REQ-014",
+      "stage": "M0",
+      "requirement": "- Examine ACAd as the first candidate PFC-associated region, ORBvl second and PL third.",
+      "status": "VERIFIED",
+      "evidence": "paper13/M0_REPORT.md; paper13/results/M0/M0_audit.json; saved reproduction and final scoped Git closure"
+    },
+    {
+      "id": "REQ-015",
+      "stage": "M0",
+      "requirement": "- Choose one primary region by a frozen anatomical-priority and metadata-coverage rule, never by neural predictive scores.",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "paper13/M0_REPORT.md: decisive upper-bound failure prevents full admission; further protocol needs separate approval"
+    },
+    {
+      "id": "REQ-016",
+      "stage": "M0",
+      "requirement": "- Do not pool different PFC regions merely to increase sample size.",
+      "status": "VERIFIED",
+      "evidence": "paper13/M0_REPORT.md; paper13/results/M0/M0_audit.json; saved reproduction and final scoped Git closure"
+    },
+    {
+      "id": "REQ-017",
+      "stage": "M0",
+      "requirement": "- Verify actual good-quality simultaneous unit coverage, task trials, source timing and available covariates.",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "paper13/M0_REPORT.md: decisive upper-bound failure prevents full admission; further protocol needs separate approval"
+    },
+    {
+      "id": "REQ-018",
+      "stage": "M0",
+      "requirement": "- Distinguish anatomical candidates from physiologically eligible units.",
+      "status": "VERIFIED",
+      "evidence": "paper13/M0_REPORT.md; paper13/results/M0/M0_audit.json; saved reproduction and final scoped Git closure"
+    },
+    {
+      "id": "REQ-019",
+      "stage": "M0",
+      "requirement": "- Establish whether independent development and final mice are adequately represented.",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "paper13/M0_REPORT.md: decisive upper-bound failure prevents full admission; further protocol needs separate approval"
+    },
+    {
+      "id": "REQ-020",
+      "stage": "M1",
+      "requirement": "- Exact anatomical primary region.",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-021",
+      "stage": "M1",
+      "requirement": "- Subject/session/unit eligibility.",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-022",
+      "stage": "M1",
+      "requirement": "- Primary and secondary hypotheses.",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-023",
+      "stage": "M1",
+      "requirement": "- Mouse-disjoint development and final evaluation.",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-024",
+      "stage": "M1",
+      "requirement": "- Within-session train/validation or calibration/evaluation trial assignments.",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-025",
+      "stage": "M1",
+      "requirement": "- Causal bin definitions and trial resets.",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-026",
+      "stage": "M1",
+      "requirement": "- Model families and fixed hyperparameter grids.",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-027",
+      "stage": "M1",
+      "requirement": "- Predictive scoring metric.",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-028",
+      "stage": "M1",
+      "requirement": "- Mouse-level statistical tests and multiplicity correction.",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-029",
+      "stage": "M1",
+      "requirement": "- Null procedures.",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-030",
+      "stage": "M1",
+      "requirement": "- Numerical acceptance rules.",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-031",
+      "stage": "M1",
+      "requirement": "- Stopping and falsification gates.",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-032",
+      "stage": "M2",
+      "requirement": "- Mouse identity",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-033",
+      "stage": "M2",
+      "requirement": "- Session identity",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-034",
+      "stage": "M2",
+      "requirement": "- Probe/unit identity",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-035",
+      "stage": "M2",
+      "requirement": "- Anatomical label",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-036",
+      "stage": "M2",
+      "requirement": "- Trial and bin identity",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-037",
+      "stage": "M2",
+      "requirement": "- Valid observation masks",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-038",
+      "stage": "M2",
+      "requirement": "- Stimulus and behavioral-event timestamps",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-039",
+      "stage": "M4",
+      "requirement": "- Independent small-scale numerical oracles",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-040",
+      "stage": "M4",
+      "requirement": "- Causal future-perturbation tests",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-041",
+      "stage": "M4",
+      "requirement": "- Exact score-denominator verification",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-042",
+      "stage": "M4",
+      "requirement": "- Fixed seed/configuration rules",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-043",
+      "stage": "M4",
+      "requirement": "- Model-complexity and parameter-budget reporting",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-044",
+      "stage": "M4",
+      "requirement": "- Training-only numerical diagnosis",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-045",
+      "stage": "M5",
+      "requirement": "- Discrete versus strong baseline",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-046",
+      "stage": "M5",
+      "requirement": "- Continuous versus strong baseline",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-047",
+      "stage": "M5",
+      "requirement": "- Discrete versus continuous, where both are valid",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-048",
+      "stage": "M6",
+      "requirement": "- Trial spike-count/rate-preserving temporal disruptions",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-049",
+      "stage": "M6",
+      "requirement": "- Causal history-shuffle controls",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-050",
+      "stage": "M6",
+      "requirement": "- Stimulus/time and trial-order controls",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-051",
+      "stage": "M6",
+      "requirement": "- Session drift and movement-related nuisance comparisons",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-052",
+      "stage": "M6",
+      "requirement": "- Unit-count and firing-rate sensitivity",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-053",
+      "stage": "M6",
+      "requirement": "- Anatomical and recording-quality sensitivity",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-054",
+      "stage": "M7",
+      "requirement": "- Full scientific manuscript",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-055",
+      "stage": "M7",
+      "requirement": "- Supplementary methods and results",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-056",
+      "stage": "M7",
+      "requirement": "- Anatomical/cohort tables",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-057",
+      "stage": "M7",
+      "requirement": "- Model comparison tables",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-058",
+      "stage": "M7",
+      "requirement": "- Animal-level effect sizes and uncertainty",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-059",
+      "stage": "M7",
+      "requirement": "- All null distributions and failure evidence",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-060",
+      "stage": "M7",
+      "requirement": "- Numerical validation report",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-061",
+      "stage": "M7",
+      "requirement": "- Publication-quality figures",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-062",
+      "stage": "M7",
+      "requirement": "- A1\u2013A10 evidence/claim audit",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-063",
+      "stage": "M7",
+      "requirement": "- Reproduction instructions",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-064",
+      "stage": "M7",
+      "requirement": "- Manuscript PDF and Supplement PDF",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-065",
+      "stage": "M7",
+      "requirement": "- Exact cohort denominator and eligible mouse counts",
+      "status": "VERIFIED",
+      "evidence": "Explicit NOT RUN / no allocation / M0_STOP reporting; actual Git commit only after closure receipt"
+    },
+    {
+      "id": "REQ-066",
+      "stage": "M7",
+      "requirement": "- Development/final split",
+      "status": "VERIFIED",
+      "evidence": "Explicit NOT RUN / no allocation / M0_STOP reporting; actual Git commit only after closure receipt"
+    },
+    {
+      "id": "REQ-067",
+      "stage": "M7",
+      "requirement": "- Baseline and dynamical predictive scores",
+      "status": "VERIFIED",
+      "evidence": "Explicit NOT RUN / no allocation / M0_STOP reporting; actual Git commit only after closure receipt"
+    },
+    {
+      "id": "REQ-068",
+      "stage": "M7",
+      "requirement": "- Statistical and null results",
+      "status": "VERIFIED",
+      "evidence": "Explicit NOT RUN / no allocation / M0_STOP reporting; actual Git commit only after closure receipt"
+    },
+    {
+      "id": "REQ-069",
+      "stage": "M7",
+      "requirement": "- Scientific verdict",
+      "status": "VERIFIED",
+      "evidence": "Explicit NOT RUN / no allocation / M0_STOP reporting; actual Git commit only after closure receipt"
+    },
+    {
+      "id": "REQ-070",
+      "stage": "M7",
+      "requirement": "- Manuscript/PDF status",
+      "status": "VERIFIED",
+      "evidence": "Explicit NOT RUN / no allocation / M0_STOP reporting; actual Git commit only after closure receipt"
+    },
+    {
+      "id": "REQ-071",
+      "stage": "M7",
+      "requirement": "- Reproduction results",
+      "status": "VERIFIED",
+      "evidence": "Explicit NOT RUN / no allocation / M0_STOP reporting; actual Git commit only after closure receipt"
+    },
+    {
+      "id": "REQ-072",
+      "stage": "M7",
+      "requirement": "- Bug/warning counts",
+      "status": "VERIFIED",
+      "evidence": "Explicit NOT RUN / no allocation / M0_STOP reporting; actual Git commit only after closure receipt"
+    },
+    {
+      "id": "REQ-073",
+      "stage": "M7",
+      "requirement": "- Verified Git commit",
+      "status": "OPEN",
+      "evidence": "Explicit NOT RUN / no allocation / M0_STOP reporting; actual Git commit only after closure receipt"
+    },
+    {
+      "id": "REQ-074",
+      "stage": "M0",
+      "requirement": "Single probe >=20 provider-good units and >=400 usable trials; >=8 independent mice/group; target12",
+      "status": "VERIFIED",
+      "evidence": "paper13/M0_REPORT.md; paper13/results/M0/M0_audit.json; saved reproduction and final scoped Git closure"
+    },
+    {
+      "id": "REQ-075",
+      "stage": "M0",
+      "requirement": "Pin release, full identity denominator, timing, masks and covariate availability before admission",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "paper13/M0_REPORT.md: decisive upper-bound failure prevents full admission; further protocol needs separate approval"
+    },
+    {
+      "id": "REQ-076",
+      "stage": "M0",
+      "requirement": "Stop on IBL insufficiency without unbounded alternative search",
+      "status": "VERIFIED",
+      "evidence": "paper13/M0_REPORT.md; paper13/results/M0/M0_audit.json; saved reproduction and final scoped Git closure"
+    },
+    {
+      "id": "REQ-077",
+      "stage": "M1",
+      "requirement": "Freeze all eligibility splits hypotheses models scores tests nulls and numerical criteria before scores",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-078",
+      "stage": "M2",
+      "requirement": "Training-only QC and scaling; no current/future spikes or unavailable behavioral outcomes in predictors",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-079",
+      "stage": "M3",
+      "requirement": "B0 stationary; B1 task/time/order; B2 own history; B3 population history; mandatory B4 combined nuisance GLMs",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-080",
+      "stage": "M4",
+      "requirement": "Discrete exact log-space forward HMM and continuous low-dimensional fixed-timescale causal history readout",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-081",
+      "stage": "M4",
+      "requirement": "Score before assimilating current counts; include nuisance structure; retain all invalid fits",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-082",
+      "stage": "M5",
+      "requirement": "Three comparisons to strongest baseline and each other; equal mouse paired inference and lab/session heterogeneity",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-083",
+      "stage": "M6",
+      "requirement": "Freeze development selection then one final assessment; calibration-only transfer; no retuning or equivalence claim",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-084",
+      "stage": "M7",
+      "requirement": "Complete manuscript and supplement PDFs only if scientific route valid; honest narrower report on failed gates",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "evidence": "Original M0_STOP; downstream conditional requirement retained and unexecuted; no automatic protocol replacement"
+    },
+    {
+      "id": "REQ-085",
+      "stage": "GLOBAL",
+      "requirement": "Preserve all P1-P12 bytes; no crypto custody architecture; no silent shrink",
+      "status": "VERIFIED",
+      "evidence": "paper13/M0_REPORT.md; paper13/results/M0/M0_audit.json; saved reproduction and final scoped Git closure"
+    },
+    {
+      "id": "REQ-086",
+      "stage": "GLOBAL",
+      "requirement": "Fresh tests, separate review, exact-file normal origin/test push, remote readback and clean gate",
+      "status": "OPEN",
+      "evidence": "Final review and actual Git closure pending"
+    }
+  ],
+  "counts": {
+    "VERIFIED": 27,
+    "OPEN": 2,
+    "BLOCKED_HUMAN_INPUT": 57
+  },
+  "note": "No full mission PASS. Original baseline bytes retained; conditional downstream items blocked, never waived. Final review resolves any overly broad automatic labels."
+}

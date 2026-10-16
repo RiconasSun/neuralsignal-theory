@@ -1,0 +1,50 @@
+{
+  "mission": "P13-PFC-LOCAL-PREDICTIVE-DYNAMICS",
+  "registered_utc": "2026-10-16T03:24:39.601911+00:00",
+  "base": "88a5873972b43f2f0ff5b28400f6a9cbb941add7",
+  "paper_type": "Method Paper",
+  "stage": "M0_METADATA_ONLY",
+  "region_priority": [
+    "ACAd",
+    "ORBvl",
+    "PL"
+  ],
+  "anatomy": "Provider Allen exact acronym or laminar descendants only; no pooling distinct areas",
+  "minimum_good_units_single_probe": 20,
+  "minimum_usable_trials": 400,
+  "good_units": "Provider label==1 is metadata feasibility only, not training-only physiological QC admission",
+  "minimum_mice_per_group": 8,
+  "target_mice_per_group": 12,
+  "sample_justification": "8 is feasibility floor, not efficacy power assurance. With 8 final mice, minimum two-sided exact signflip p=2/256=.0078125, Holm3 minimum=.0234375. Target12 improves precision. No prospective power claim.",
+  "selection": "Audit all3. Choose first priority area with >=16 independent mice meeting all verified metadata gates. Unknown essential metadata does not pass. Target>=24. No relaxation.",
+  "one_session_per_mouse": "Largest same-probe provider-good population, then most usable trials, then lexicographic eid/pid; before neural outcomes",
+  "allocation": "M1 will freeze deterministic lab-stratified identity-hash allocation of all eligible mice into near-equal halves; no outcome replacement",
+  "source_pin": "Brainwidemap provider tag plus frozen Git commit/fixture/aggregate header and downloaded-column SHA256; exact identity compatibility required",
+  "allowed": [
+    "identities",
+    "atlas",
+    "provider quality label",
+    "trial event timestamps/masks",
+    "covariate availability/timestamps",
+    "curated observation and saturation metadata"
+  ],
+  "forbidden_M0": [
+    "spike times",
+    "count arrays",
+    "predictive scores",
+    "fits",
+    "P1-P12 mutation"
+  ],
+  "bounds": {
+    "datasets": 1,
+    "regions": 3,
+    "probe_records": 800,
+    "sessions": 600,
+    "http_requests": 1800,
+    "transport_bytes": 250000000,
+    "attempts_per_request": 2
+  },
+  "support": "Curated active-task intervals, finite ordered event times and documented ephys clock, invalid/saturation masks where supplied. No absolute lossless hardware-packet assertion.",
+  "stop": "Insufficiency/leakage/essential incompatibility -> scientific STOP, no M1. Network failures are environment blockers, not scientific insufficiency.",
+  "downstream": "All M1-M7 conditional requirements retained; exact scientific protocol before relevant score access, not yet executed."
+}

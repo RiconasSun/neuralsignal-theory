@@ -1,0 +1,144 @@
+test_15_mice_fails (test_metadata_audit.AdmissionTests.test_15_mice_fails) ... ok
+test_19_units_fails (test_metadata_audit.AdmissionTests.test_19_units_fails) ... ok
+test_399_trials_fails (test_metadata_audit.AdmissionTests.test_399_trials_fails) ... ok
+test_bad_units_not_admitted (test_metadata_audit.AdmissionTests.test_bad_units_not_admitted) ... ok
+test_conflicting_session_mouse (test_metadata_audit.AdmissionTests.test_conflicting_session_mouse) ... ok
+test_deny_spike_and_unregistered_provider (test_metadata_audit.AdmissionTests.test_deny_spike_and_unregistered_provider) ... ok
+test_duplicate_cluster (test_metadata_audit.AdmissionTests.test_duplicate_cluster) ... ok
+test_duplicate_probe (test_metadata_audit.AdmissionTests.test_duplicate_probe) ... ok
+test_duplicate_uuid (test_metadata_audit.AdmissionTests.test_duplicate_uuid) ... ok
+test_exact_boundary_and_no_false_full_admission (test_metadata_audit.AdmissionTests.test_exact_boundary_and_no_false_full_admission) ... ok
+test_global_request_budget_uses_existing_journal (test_metadata_audit.AdmissionTests.test_global_request_budget_uses_existing_journal) ... ok
+test_http_200_range_response_never_read (test_metadata_audit.AdmissionTests.test_http_200_range_response_never_read) ... ok
+test_laminar_only (test_metadata_audit.AdmissionTests.test_laminar_only) ... ok
+test_missing_trials_not_pass (test_metadata_audit.AdmissionTests.test_missing_trials_not_pass) ... ok
+test_nonfinite_and_noncausal_trial_events (test_metadata_audit.AdmissionTests.test_nonfinite_and_noncausal_trial_events) ... ok
+test_probes_not_pooled (test_metadata_audit.AdmissionTests.test_probes_not_pooled) ... ok
+test_range_rejects_full_object_response (test_metadata_audit.AdmissionTests.test_range_rejects_full_object_response) ... ok
+test_regions_not_pooled (test_metadata_audit.AdmissionTests.test_regions_not_pooled) ... ok
+test_same_mouse_repeated_sessions_not_independent (test_metadata_audit.AdmissionTests.test_same_mouse_repeated_sessions_not_independent) ... ok
+test_saved_hash_tampering_fails_before_replay (test_metadata_audit.AdmissionTests.test_saved_hash_tampering_fails_before_replay) ... ok
+test_wrong_identity_join (test_metadata_audit.AdmissionTests.test_wrong_identity_join) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.151s
+
+OK
+{
+  "stage": "M0",
+  "scientific_gate": "FAIL_DATA_INSUFFICIENT",
+  "region_priority": [
+    "ACAd",
+    "ORBvl",
+    "PL"
+  ],
+  "selected_primary_region": null,
+  "regions": {
+    "ACAd": {
+      "all_labeled_units": 1960,
+      "provider_good_units": 369,
+      "anatomical_mice": 18,
+      "anatomical_sessions": 23,
+      "anatomical_probes": 24,
+      "unit_threshold_mice": 6,
+      "unit_threshold_sessions": 6,
+      "unit_threshold_probes": 6,
+      "count_upper_bound_mice": 4,
+      "count_upper_bound_sessions": 4,
+      "count_upper_bound_probes": 4,
+      "maximum_possible_smaller_group": 2,
+      "meets_minimum_upper_bound": false,
+      "labs_in_upper_bound": {
+        "mainenlab": 2,
+        "churchlandlab": 1,
+        "cortexlab": 1
+      },
+      "fully_admitted_mice": 0
+    },
+    "ORBvl": {
+      "all_labeled_units": 3060,
+      "provider_good_units": 669,
+      "anatomical_mice": 9,
+      "anatomical_sessions": 10,
+      "anatomical_probes": 10,
+      "unit_threshold_mice": 6,
+      "unit_threshold_sessions": 6,
+      "unit_threshold_probes": 6,
+      "count_upper_bound_mice": 4,
+      "count_upper_bound_sessions": 4,
+      "count_upper_bound_probes": 4,
+      "maximum_possible_smaller_group": 2,
+      "meets_minimum_upper_bound": false,
+      "labs_in_upper_bound": {
+        "churchlandlab": 1,
+        "mrsicflogellab": 1,
+        "zadorlab": 1,
+        "cortexlab": 1
+      },
+      "fully_admitted_mice": 0
+    },
+    "PL": {
+      "all_labeled_units": 2165,
+      "provider_good_units": 420,
+      "anatomical_mice": 16,
+      "anatomical_sessions": 19,
+      "anatomical_probes": 21,
+      "unit_threshold_mice": 8,
+      "unit_threshold_sessions": 8,
+      "unit_threshold_probes": 9,
+      "count_upper_bound_mice": 7,
+      "count_upper_bound_sessions": 7,
+      "count_upper_bound_probes": 8,
+      "maximum_possible_smaller_group": 3,
+      "meets_minimum_upper_bound": false,
+      "labs_in_upper_bound": {
+        "cortexlab": 3,
+        "mainenlab": 1,
+        "angelakilab": 1,
+        "churchlandlab": 1,
+        "churchlandlab_ucla": 1
+      },
+      "fully_admitted_mice": 0
+    }
+  },
+  "denominator": {
+    "fixture_mice": 139,
+    "fixture_sessions": 459,
+    "fixture_probes": 699,
+    "aggregate_clusters": 621733,
+    "aggregate_good_in_fixture": 75708,
+    "aggregate_cluster_uuids": 621733,
+    "outside_fixture_clusters": {},
+    "unknown_atlas_ids": {
+      "0": 12215
+    },
+    "trial_rows": 295920,
+    "trial_sessions": 459,
+    "outside_fixture_trials": 0,
+    "fixture_sessions_missing_trials": [],
+    "fixture_probes_missing_clusters": []
+  },
+  "development_mice": [],
+  "final_mice": [],
+  "development_final_allocation_performed": false,
+  "neural_outcome_access": false,
+  "model_fits": 0,
+  "reason": "No candidate reaches16 independent mice even before full covariate/support and training-only QC gates",
+  "continue_M1": false,
+  "stop_required": true
+}
+Independent implementation: all saved denominators and regional counts agree
+{
+  "pass": true,
+  "verified_file_hashes": 40,
+  "byte_identical_replays": [
+    "M0_audit.json",
+    "all_probe_region_denominators.csv",
+    "all_candidate_unit_identities.csv"
+  ],
+  "network_requests": 0,
+  "neural_array_reads": 0,
+  "model_fits": 0,
+  "scientific_gate": "FAIL_DATA_INSUFFICIENT",
+  "continue_M1": false
+}

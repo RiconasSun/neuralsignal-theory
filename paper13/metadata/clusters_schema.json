@@ -1,0 +1,42 @@
+{
+  "tag": "2024_Q2_IBL_et_al_BWM",
+  "kind": "clusters",
+  "head": {
+    "utc": "2026-10-16T03:26:15.098467+00:00",
+    "url": "https://ibl-brain-wide-map-public.s3.amazonaws.com/aggregates/2024_Q2_IBL_et_al_BWM/clusters.pqt",
+    "method": "HEAD",
+    "params": null,
+    "headers": null,
+    "attempt": 1,
+    "status": 200,
+    "response_headers": {
+      "x-amz-id-2": "YyNpynLTmfg8dKgJY7efS5Lnu6SH6MNYKpkM1ag01QMcEo750NquMKitw5pfAcWGG5axIGsUb90=",
+      "x-amz-request-id": "4PC6JX9WSW4SCW8T",
+      "Server": "AmazonS3",
+      "Date": "Fri, 16 Oct 2026 03:26:16 GMT",
+      "Last-Modified": "Thu, 13 Mar 2025 17:22:54 GMT",
+      "ETag": "\"b89fac76289f3a3d585910711f1eef41\"",
+      "x-amz-server-side-encryption": "AES256",
+      "Accept-Ranges": "bytes",
+      "Content-Length": "91555529",
+      "Content-Type": "binary/octet-stream"
+    },
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "schema": "channels: int64\ndepths: float\nuuids: large_string\ncluster_id: int64\namp_max: double\namp_min: double\namp_median: double\namp_std_dB: double\ncontamination: double\ncontamination_alt: double\ndrift: double\nmissed_spikes_est: double\nnoise_cutoff: double\npresence_ratio: double\npresence_ratio_std: double\nslidingRP_viol: double\nspike_count: double\nslidingRP_viol_forced: double\nmax_confidence: double\nmin_contamination: double\nn_spikes_below2: int64\nfiring_rate: double\nlabel: double\nbitwise_fail: uint8\nks2_label: large_string\nx: double\ny: double\nz: double\nacronym: large_string\natlas_id: int64\naxial_um: double\nlateral_um: double\npid: large_string\neid: large_string\nspike_count_good: double\n__index_level_0__: int64\n-- schema metadata --\npandas: '{\"index_columns\": [\"__index_level_0__\"], \"column_indexes\": [{\"na' + 4526",
+  "rows": 621733,
+  "groups": 1,
+  "allowed_columns": [
+    "uuids",
+    "cluster_id",
+    "label",
+    "atlas_id",
+    "pid",
+    "eid"
+  ],
+  "decoded": false,
+  "pyarrow_version": "26.0.0",
+  "requests": 2,
+  "transport_bytes": 65536
+}
