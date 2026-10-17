@@ -1,0 +1,48 @@
+{
+  "mission": "P14-V2-EXPLORATORY-CONTEXT-DYNAMICS",
+  "base": "b82425aab216f57b207d242c4361760f03b598d4",
+  "registered_at": "2026-10-17T06:24:57.141607+00:00",
+  "stage": "SOURCE_METADATA_ONLY_BEFORE_FRESH_CANONICAL_COUNTS_OR_NEURAL_OUTCOMES",
+  "source": {
+    "dandiset": "000409",
+    "version": "0.260309.1324",
+    "license": "CC-BY-4.0",
+    "frozen_directory": "paper14_pivot1/sources/assets_page1-3.json; exact2048IDs"
+  },
+  "old13": "Historicalmetadataupperbound only, not canonicalcohort; exactsubject/session/probe discrepancies preserved.",
+  "anatomy": [
+    "MOs",
+    "ACAd",
+    "ACAv",
+    "PL",
+    "ILA"
+  ],
+  "laminae": [
+    "",
+    "1",
+    "2/3",
+    "4",
+    "5",
+    "6a",
+    "6b"
+  ],
+  "unit_screen": "Canonicalibl_quality_score==1 plus documented canonicalunit->maxelectrode->atlaslabel finitecoordinate/probe mapping. Never import oldunitID/QC/anatomy byassumption. >=10sameprobe; identicalunitset acrosscontexts latertrain-onlyselected.",
+  "trial_screen": "Retain>=2qualifyingoriginalnonneutralruns/context,>=15usabletrials/run,>=60trials/context/wholeoriginalhalf,0.5sstimwindow. Runs/cut before exclusions; neutral/unknownbreak. Finiteorderedstart/stim/goCue/feedback/stop,windowinside; providerbwm_includeTrue andsaturation_stim_plus06False neededfromcanonicalfields or verified matchingoldannotationjoin.",
+  "annotation_compatibility": "IfcanonicalNWBdoesnotcarrybwm/saturation flags, transferonly after every originalrow is matched bysessionUUID/originalorder/trialboundaries/context and allavailable fields needed bysourcecuration, withfinite-timestampdifference<=1e-6seconds andidenticalcategoricvalues/missingness. 1microsecond isprospective serialization/timebasecomparison tolerance, not clock-quality/PG/scientificacceptancethreshold. No reordering, imputation or relaxedmask. Unresolvedessentialannotation/timebasejoin ->SOURCE_CONTRACT_INCONCLUSIVE.",
+  "selection": "No scores;canonicalprobes ranked byqualifiedtargetunitcount,min4context-halfcellcount,lexicaleID/probename;one exactsession perregisteredmouse. CanonicalUUID/probe identities used;oldtriplet comparisontable retained.",
+  "physiology": "NOT_AUTHORIZED_BY_SOURCE_STAGE. Fulltrain-onlyQC/model/split/controlprotocol must be frozen after sourcePASS and before any decodedneuraloutcomes. Prefer>=8physmice,6-7descriptive,<6stop; no replacements afterneuralQC/outcomes.",
+  "neural_boundary": "Thisstage NEVERopens/decodes spike_times,spike_times_index,spikecounts,firingrates,amplitudes,waveforms orrawcontinuousbehavior arrays,evenforschema shapes. Whitelistedunitanatomy/curation anddiscrete taskeventvalues only. Opaque HDF5metadata transport maycontainadjacentuninterpretedbytes; no neuraldatasetvaluesdecoded/exported/used.",
+  "access": {
+    "max_assets": 13,
+    "max_requests": 6000,
+    "max_total_bytes": 150000000,
+    "max_metadata_bytes_per_asset": 10000000,
+    "max_range_bytes": 1000000,
+    "attempts_per_range": 2,
+    "full_bulk_fallback": false,
+    "source_downloads": 0
+  },
+  "source_gate": "Require trustworthy canonicalunit-anatomy-QC andtask-clock/annotationmapping. No missingessentialfields assumedpass; criticalsourcefailureSTOP. Oneboundedaudit,no newdatasetsearch.",
+  "unchanged_scientific_rules": "Oldconfirmatory8+8failure unchanged;newexploratory6/8operatingfloors explicitlyowner-authorized. No otherthresholdchange.",
+  "next": "OnlysourcePASS permitsfullscientificprotocol/numericalimplementation/training-onlyneuralQC; reservedlateoutcomesneveraccessed until allprereleasegates andindependentreviewPASS."
+}

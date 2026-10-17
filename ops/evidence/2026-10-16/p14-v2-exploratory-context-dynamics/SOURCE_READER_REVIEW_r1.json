@@ -1,0 +1,27 @@
+{
+  "mission": "P14-V2-EXPLORATORY-CONTEXT-DYNAMICS",
+  "reviewer": "/root/v2_source_review",
+  "decision": "CHANGES_REQUIRED_BEFORE_REAL_SOURCE_READS",
+  "scope": "EARLY_METADATA_READER_ONLY",
+  "open_P0": 0,
+  "open_P1": 2,
+  "findings": [
+    {"id": "P1-001", "file": "paper14_v2/source_metadata.py", "line": 105, "title": "Redirect host checked only after follow", "required_regression": "Disallowed redirect destination receives zero requests"},
+    {"id": "P1-002", "file": "paper14_v2/source_metadata.py", "line": 89, "title": "Cache receipt not bound to requested coordinates", "required_regression": "Equal-length wrong-offset cached payload and receipt swap rejected"}
+  ],
+  "source_code_sha256": "5f664204a74ca319e521535418b8d21200271b0add29c2160a5e79b9abd7bb3d",
+  "test_code_sha256": "7855d090c22d9c7e1bbf1d6db70d933dbd744f97685b2a71020119232c29cd63",
+  "registration_sha256": "3e4b923a51fc55de63922fcb6cf5fe17cc1fe29759a976d045b24a3d411fc990",
+  "roster_sha256": "642547d1c017d8eef3fa76833d48e2903ac79611c5e8ec299787318b64db1235",
+  "saved_test_count": 14,
+  "saved_tests_passed": true,
+  "independent_test_rerun": false,
+  "review_network_requests": 0,
+  "review_real_NWB_or_cache_access": false,
+  "review_neural_or_raw_behavior_access": false,
+  "source_compatibility_certified": false,
+  "canonical_cohort_certified": false,
+  "full_scientific_protocol_accepted": false,
+  "neural_activation_accepted": false,
+  "MERGE_ALLOWED": false
+}

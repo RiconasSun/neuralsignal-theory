@@ -1,3 +1,10 @@
+# Current mission: P14-V2-EXPLORATORY-CONTEXT-DYNAMICS
+
+Scientific SOURCE_CONTRACT_INCONCLUSIVE; new exploratory within-animal temporal track stopped at registered essential source gate. BASEb82425aab216f57b207d242c4361760f03b598d4. Historical13 not canonicalcohort;1of13registered assets audited,12unread,canonicaleligible/physiological counts UNKNOWN. CSHL049837trials: canonical bwm/saturation masks absent;794first-movement discrepancies/1missingness disagreement (max.16523333s),1stimOff discrepancy12.69967s. Frozen1e-6serialization bridge fails; no mask transfer or source-wide DATA_INSUFFICIENT claim.1088UUID-set/UUID-keyedQC match and internal electrode/probe consistency do not certify fullanatomy/writer identity.
+
+No neural array/shapes/rawbehavior decoded,QC/fits/scores/lateevaluation.224range attempts448HTTP/499986opaque bytes; no fullNWB.28source/bridge tests, saved-only PowerShell and independent source/final reviews required for archive. All746historicalhashes/85requirements retained; downstream scientificrequirements blocked. No findingspaper/PDF,models/statistics/nulls NOTRUN; truthful STOPreport in paper14_v2/STOP_REPORT.md. bug_count0/warn_count2 source/scientific proofgaps. Exactcommit/origin-test/readback/clean only certified by executed externalclosure_receipt.json. No automatic continuation or newdataset/cryptoarchitecture. Prior headers preserved below.
+
+---
 # Current mission: P14-M1-BOUNDED-CONTEXT-PIVOT
 
 Scientific decision DATA_INSUFFICIENT for the prospectivelyfixed reused2024_Q2IBL metadata-screenroute; no global claim about allDANDIunit/QCversions. BASEc02eadba8e4770490f2f8a5787a90dfaa5b38550. New scheduledprobabilityLeft0.2vs0.8 estimand and exactMOs+ACAd+ACAv+PL+ILA medialfrontal target registered beforecounts; strictmPFC8preserved.139sourceanimals/699probes ->29with10provider-good targetunits ->20qualifyingprobe rows ->13independentmouse candidates<16;9majorityMOs,5pureMOs,7selectedprobesretain10nonMOs. No8+8allocation or fullM1freeze; Prompt3noteligible.

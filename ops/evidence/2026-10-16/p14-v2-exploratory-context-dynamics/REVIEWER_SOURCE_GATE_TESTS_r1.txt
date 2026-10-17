@@ -1,0 +1,40 @@
+test_bulk_response_denied_before_body (paper14_v2.test_source_metadata.MetadataTests.test_bulk_response_denied_before_body) ... ok
+test_corrupt_disk_cache_denied (paper14_v2.test_source_metadata.MetadataTests.test_corrupt_disk_cache_denied) ... ok
+test_equal_length_wrong_offset_cache_swap_denied (paper14_v2.test_source_metadata.MetadataTests.test_equal_length_wrong_offset_cache_swap_denied) ... ok
+test_etag_change_denied (paper14_v2.test_source_metadata.MetadataTests.test_etag_change_denied) ... ok
+test_every_http_hop_counts_toward_budget (paper14_v2.test_source_metadata.MetadataTests.test_every_http_hop_counts_toward_budget) ... ok
+test_exact_range_cache_and_seek (paper14_v2.test_source_metadata.MetadataTests.test_exact_range_cache_and_seek) ... ok
+test_historical_inputs (paper14_v2.test_source_metadata.MetadataTests.test_historical_inputs) ... ok
+test_metadata_values_and_missingness_only (paper14_v2.test_source_metadata.MetadataTests.test_metadata_values_and_missingness_only) ... ok
+test_neural_rawbehavior_and_arbitrary_values_denied (paper14_v2.test_source_metadata.MetadataTests.test_neural_rawbehavior_and_arbitrary_values_denied) ... ok
+test_oversized_metadata_rejected (paper14_v2.test_source_metadata.MetadataTests.test_oversized_metadata_rejected) ... ok
+test_schema_never_opens_neural_datasets_or_shapes (paper14_v2.test_source_metadata.MetadataTests.test_schema_never_opens_neural_datasets_or_shapes) ... ok
+test_soft_external_links_fail_closed (paper14_v2.test_source_metadata.MetadataTests.test_soft_external_links_fail_closed) ... ok
+test_truncated_range_denied (paper14_v2.test_source_metadata.MetadataTests.test_truncated_range_denied) ... ok
+test_unapproved_redirect_not_contacted (paper14_v2.test_source_metadata.MetadataTests.test_unapproved_redirect_not_contacted) ... ok
+test_unbounded_or_badseek_before_network (paper14_v2.test_source_metadata.MetadataTests.test_unbounded_or_badseek_before_network) ... ok
+test_unregistered_asset_denied (paper14_v2.test_source_metadata.MetadataTests.test_unregistered_asset_denied) ... ok
+test_wrong_blob_redirect_not_contacted (paper14_v2.test_source_metadata.MetadataTests.test_wrong_blob_redirect_not_contacted) ... ok
+test_wrong_range_denied (paper14_v2.test_source_metadata.MetadataTests.test_wrong_range_denied) ... ok
+test_any_required_mismatch_fails_bridge (paper14_v2.test_compatibility.CompatibilityTests.test_any_required_mismatch_fails_bridge) ... ok
+test_categorical_discrepancy_fails (paper14_v2.test_compatibility.CompatibilityTests.test_categorical_discrepancy_fails) ... ok
+test_context_exact_no_time_tolerance (paper14_v2.test_compatibility.CompatibilityTests.test_context_exact_no_time_tolerance) ... ok
+test_empty_bridge_never_passes (paper14_v2.test_compatibility.CompatibilityTests.test_empty_bridge_never_passes) ... ok
+test_finite_identity (paper14_v2.test_compatibility.CompatibilityTests.test_finite_identity) ... ok
+test_fixed_tolerance (paper14_v2.test_compatibility.CompatibilityTests.test_fixed_tolerance) ... ok
+test_identity_required (paper14_v2.test_compatibility.CompatibilityTests.test_identity_required) ... ok
+test_missingness_not_ignored_by_nanmax (paper14_v2.test_compatibility.CompatibilityTests.test_missingness_not_ignored_by_nanmax) ... ok
+test_no_row_reordering (paper14_v2.test_compatibility.CompatibilityTests.test_no_row_reordering) ... ok
+test_no_row_truncation (paper14_v2.test_compatibility.CompatibilityTests.test_no_row_truncation) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.415s
+
+OK
+Exception ignored in: <_io.FileIO name='paper14_v2\\results\\source_gate\\TRIAL_EVENT_COMPARISON.csv' mode='rb' closefd=True>
+Stored identity metadata: {'/general/institution': None, '/general/lab': None, '/general/session_id': None, '/general/subject/subject_id': 'CSHL049', '/identifier': '42315268-f832-408e-84e3-2260085e0b97', '/session_description': '', '/session_id': None, '/session_start_time': '2020-01-10T14:11:34-05:00', '/timestamps_reference_time': '2020-01-10T14:11:34-05:00'}
+Comparison rows: 6696
+Independent review:28 tests PASS;2 regenerated outputs byte-identical;network DENIED;only saved whitelisted metadata.
+Traceback (most recent call last):
+  File "<stdin>", line 20, in <module>
+ResourceWarning: unclosed file <_io.TextIOWrapper name='paper14_v2\\results\\source_gate\\TRIAL_EVENT_COMPARISON.csv' mode='r' encoding='cp1252'>

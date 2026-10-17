@@ -1,0 +1,462 @@
+# CCPN — PAPER 14-v2 EXPLORATORY SCIENTIFIC EXECUTION
+
+MISSION: `P14-V2-EXPLORATORY-CONTEXT-DYNAMICS`
+
+BASE:
+`origin/test @ b82425aab216f57b207d242c4361760f03b598d4`
+
+PRIORITY: HIGH
+
+EXECUTION MODE:
+SCIENCE-FIRST / AUTONOMOUS / BOUNDED
+
+## 0. HUMAN AUTHORIZATION
+
+I authorize a NEW, prospectively registered exploratory P14-v2 study.
+
+The earlier P14 confirmatory routes were stopped because their frozen eligibility protocols could not establish a minimum 8-development + 8-final cohort.
+
+Preserve all those decisions and their evidence.
+
+The new study does NOT retrospectively change the old verdicts.
+
+The new objective is to obtain scientifically interpretable context-dependent neural prediction evidence without requiring a separate held-out animal cohort.
+
+This is an explicitly exploratory study with within-animal, temporally held-out evaluation.
+
+It must not claim independent-animal confirmatory validation.
+
+Authorize:
+- Bounded canonical source reconciliation
+- Prospective scientific registration
+- Training-only neural physiological QC
+- Real model fitting
+- Development-only model selection
+- One frozen temporal held-out evaluation
+- Registered controls and sensitivities
+- Manuscript and supplement generation
+
+Only proceed through each stage after the corresponding scientific and numerical gates pass.
+
+Do not request additional human approval for ordinary engineering fixes, testing, reproduction or documentation.
+
+STOP for substantive scientific changes, unresolved essential provenance or critical numerical failures.
+
+## 1. RESEARCH QUESTION
+
+Working title:
+
+"Exploratory Context-Dependent Predictive Dynamics in Mouse Medial Frontal Cortex"
+
+Primary scientific question:
+
+Does the incremental predictive value of compact discrete-state or continuous-history neural representations vary between experimentally scheduled task-prior contexts?
+
+Primary contexts:
+
+- probabilityLeft = 0.2
+- probabilityLeft = 0.8
+
+These are experimenter-scheduled prior-probability conditions, not directly measured mouse beliefs.
+
+Investigate local predictive representations, not causal cognitive mechanisms or biological neural atoms.
+
+Do not assume the discrete family wins.
+
+## 2. DATASET AND CANONICAL SOURCE
+
+Primary source:
+
+IBL Brain Wide Map, DANDI 000409.
+
+Use the explicitly licensed CC BY 4.0 public release:
+
+`0.260309.1324`
+
+Preserve:
+- Exact dataset/version provenance
+- Original source attribution
+- Mouse/session/probe identities
+- Available processing and spike-sorting metadata
+- Unit/atlas mappings
+- Behavioral task-event identities
+
+The previous 2024_Q2 metadata produced 13 candidate mice under the expanded medial-frontal eligibility route.
+
+Those 13 are a HISTORICAL METADATA UPPER BOUND, not an established canonical cohort.
+
+Do not assume the older unit IDs, sorting revision, provider-good flags, trial masks or quality values are identical to the DANDI release.
+
+Perform ONE bounded source-compatibility audit.
+
+Use source-documented canonical metadata to establish actual candidate identities.
+
+If the older 13 identities cannot all be reconciled, preserve exact mismatches. A new cohort may be constructed from the fixed official release only through outcome-blind, prospectively registered metadata eligibility rules.
+
+Do not select mice by prediction results.
+
+Do not silently cherry-pick processing versions or reuse another session from the same mouse as an equivalent recording.
+
+No new dataset search.
+
+If trustworthy anatomical/unit/task-clock mapping cannot be established, STOP with SOURCE_CONTRACT_INCONCLUSIVE rather than manufacturing a cohort.
+
+## 3. ANATOMICAL TARGET
+
+Use exactly:
+
+- MOs
+- ACAd
+- ACAv
+- PL
+- ILA
+
+Include documented laminar descendants.
+
+Only one simultaneously recorded probe/population per mouse.
+
+Do not pool probes, sessions or animals to meet a population-size floor.
+
+The target must be named MEDIAL FRONTAL CORTEX.
+
+Do not describe an MOs-dominated sample as an isolated prefrontal-cortex mechanism.
+
+Report:
+- Exact leaf-region composition
+- Percentage of units from MOs
+- MOs-majority animals
+- Animals with exclusively MOs-selected units
+- Non-MOs anatomical sensitivity
+- Unit/probe/session selection limitations
+
+Keep one identical set of selected units across both primary contexts within each mouse.
+
+## 4. PROSPECTIVE EXPLORATORY ELIGIBILITY
+
+Register the new eligibility protocol BEFORE reading neural outcomes.
+
+Use scientifically justified, source-compatible rules.
+
+Prioritize retaining the previously registered:
+- At least 10 qualified candidate units on one probe
+- Both 0.2 and 0.8 contexts
+- Whole-block chronological task segmentation
+- At least 2 qualifying runs per context
+- At least 15 usable trials per contributing run
+- At least 60 usable trials per context in each original temporal half
+- Original 0.5-second stimulus-anchored observation window
+
+Any change from these metadata rules must be explicitly justified and prospectively registered before fresh canonical eligibility counting.
+
+No score-driven cutoff changes.
+
+All new physiological QC and unit selection must be performed using TRAINING data only.
+
+Provider release-level curation is an upstream sampling-frame limitation; do not falsely claim that it was calculated exclusively from training data.
+
+Report original and post-QC cohort denominators.
+
+Prefer at least 8 physiologically eligible independent mice for meaningful animal-level exploratory inference.
+
+If 6–7 mice remain, permit only explicitly limited descriptive/exploratory analysis with broad uncertainty and no claims of cross-animal confirmation.
+
+If fewer than 6 eligible mice remain, STOP the full dynamical comparison as DATA_INSUFFICIENT and produce a truthful feasibility report.
+
+These are prospective P14-v2 exploratory operating rules, not revisions of the old confirmatory 8+8 requirement.
+
+Do not replace failed mice with favorable alternatives after neural outcomes are observed.
+
+## 5. TEMPORAL DATA SEPARATION
+
+Do not require separate Development and Final animals.
+
+Instead, use all eligible mice with STRICT WITHIN-MOUSE TEMPORAL SEPARATION.
+
+For each mouse:
+
+- Early original whole blocks: model development/training
+- Training-internal, guarded validation: hyperparameter selection
+- Late original whole blocks: reserved temporal evaluation
+
+Preserve original context/block identities.
+
+Do not randomly intermingle adjacent neural bins or trials across training and evaluation.
+
+Ensure both contexts are represented in the training and evaluation partitions.
+
+Freeze the evaluation identities and all analysis code before accessing evaluation outcomes.
+
+Model coefficients, transformations, unit ranking and hyperparameters may only use permitted training/validation data.
+
+No late-block neural outcomes may determine model selection.
+
+Once the reserved evaluation is scored, do not modify the models or evaluate the same reserved partition again.
+
+This is TEMPORAL HOLDOUT VALIDATION WITHIN THE SAME ANIMALS.
+
+It is not independent held-out-animal replication.
+
+Disclose block-order and session-drift confounding.
+
+## 6. STRONG PREDICTIVE BASELINES
+
+Implement and validate:
+
+B0 — Stationary Poisson firing-rate baseline.
+
+B1 — Context, stimulus, within-trial time, block/time trend and causally available measured nuisance baseline.
+
+B2 — B1 plus own-spike-history predictors.
+
+B3 — B1 plus other-unit population-history predictors.
+
+B4 — Strong combined baseline including context, task, own-history and population-history features.
+
+Use causally available data only.
+
+Do not use a response, feedback, reward, movement event or other variable before its actual observation time.
+
+Do not use future spike counts.
+
+If continuous wheel/pupil signals lack verified alignment, do not silently impute them.
+
+Permit a narrower measured-task-conditional estimand where justified, but permanently withhold movement/arousal-independent interpretation.
+
+Freeze all predictors and missingness rules before scoring.
+
+B4 is mandatory.
+
+## 7. DISCRETE AND CONTINUOUS REPRESENTATIONS
+
+Use two tractable, numerically verifiable families.
+
+Discrete D:
+- Two-state causal conditional Poisson HMM
+- Exact forward log likelihood
+- No backward smoothing for prediction
+- Current neural counts assimilated only after scoring
+- Fixed, disclosed transition policy
+- Strong B4 nuisance offsets
+
+Continuous C:
+- Two-dimensional causal leaky-history representation
+- Fixed, disclosed projection and timescale policy
+- Past neural counts only
+- Poisson predictive readout
+- The same B4 nuisance structure
+
+Compare context-invariant and context-dependent variants.
+
+Freeze parameter counts, regularization, initialization, numerical budgets and complexity-selection rules before fitting.
+
+Equal nominal parameter counts do not automatically establish equal model capacity.
+
+Do not reuse P13's unstable autoregressive B* generative-null procedure.
+
+Numerical validation must include:
+- Synthetic scalar Poisson oracles
+- HMM forward/enumeration identity
+- Causal future-perturbation tests
+- Trial reset tests
+- Exact likelihood denominators
+- Analytic/independent-gradient agreement
+- Finite objectives and scores
+- Registered optimizer convergence thresholds
+
+No unlimited optimizer rescue.
+
+If a required model cannot be evaluated reliably, preserve the failure and do not substitute a favorable alternative.
+
+## 8. PRIMARY SCIENTIFIC ESTIMANDS
+
+For each model family F in {D,C}:
+
+G_F,context =
+LL(F,context) - LL(B4,context)
+
+Primary exploratory interaction:
+
+Delta_F =
+G_F,context0.2 - G_F,context0.8
+
+Register TWO primary interactions:
+1. Delta_D
+2. Delta_C
+
+Both are two-sided, with no presumed direction.
+
+Use the same units, masks and matched scoring rules within mouse.
+
+Additionally compare:
+
+- Context-dependent D versus context-invariant D
+- Context-dependent C versus context-invariant C
+
+These are essential interpretation checks.
+
+A difference in gain across contexts alone does not prove that a biological transition mechanism changes with context.
+
+A context-modulation interpretation must account for context-aware baseline performance, model complexity, stimulus/behavior differences and temporal drift.
+
+Report actual absolute predictive scores as well as all differences.
+
+## 9. SCIENTIFIC INFERENCE
+
+Mouse is the independent statistical unit.
+
+Never treat neural bins, trials, units, probes or sessions as independent mice.
+
+Report:
+- Every animal effect
+- Equal-mouse means
+- Directional consistency
+- Leave-one-mouse-out estimates
+- Whole-mouse bootstrap uncertainty
+- Effect heterogeneity
+- Corrected and uncorrected p-values where appropriate
+
+Register the two-hypothesis multiplicity family.
+
+If paired sign-flip testing is used, clearly state the conditional fair-sign/symmetry assumptions.
+
+Do not call computationally exact enumeration an assumption-free population mean test.
+
+If the sample is too small or assumptions are unsupported, make inference descriptive.
+
+Nonsignificance does not imply equivalence.
+
+No independent-animal confirmation or universal PFC effect may be claimed.
+
+## 10. FALSIFICATION AND SENSITIVITIES
+
+Before touching reserved evaluation outcomes, register bounded controls addressing:
+
+- Temporal history dependence
+- Context/task label interpretation
+- Block order and session drift
+- Stimulus imbalance
+- Prior reward and response history
+- Animal-level heterogeneity
+- Unit-count and firing-rate dependence
+- MOs versus other medial frontal composition
+- Available movement/arousal measurements
+- Source/QC and observation-support limitations
+
+Null operators must have defensible conditional assumptions.
+
+Do not call an arbitrary context shuffle a valid randomization test when experimental assignment is not exchangeable.
+
+Do not use unstable recursively simulated Poisson history models as mandatory nulls without independent prospective numerical certification.
+
+Report unfavorable, failed and unavailable controls.
+
+Do not introduce new controls after viewing reserved evaluation scores.
+
+## 11. RESERVED EVALUATION
+
+After all valid development work:
+
+1. Freeze model identities and hyperparameters.
+2. Freeze training-only unit QC and preprocessing states.
+3. Freeze evaluation partitions.
+4. Freeze statistics, nulls, sensitivities and reporting definitions.
+5. Complete independent implementation and scientific review.
+6. Evaluate reserved temporal blocks ONCE.
+
+Report all models and both primary context interactions.
+
+No selective mouse exclusion or post-result tuning.
+
+No second evaluation to rescue an unfavorable result.
+
+If evaluation is valid, produce the complete exploratory report even if both context interactions are negative or inconclusive.
+
+## 12. COMPLETE THE P14 MANUSCRIPT
+
+If a valid real neural evaluation is completed, produce:
+
+- Full scientific manuscript
+- Supplementary methods and results
+- Complete animal/unit/context tables
+- Baseline and dynamical model comparisons
+- Context-dependent versus context-invariant comparisons
+- All effect sizes and uncertainty
+- Null and sensitivity results
+- Failed controls and source limitations
+- Publication-quality figures
+- A1–A10 claim-to-evidence audit
+- Reproduction instructions
+- Manuscript PDF
+- Supplement PDF
+
+Working title:
+
+"Exploratory Context-Dependent Predictive Dynamics in Mouse Medial Frontal Cortex"
+
+Explicitly disclose:
+
+- P14-v2 was prospectively designed after earlier metadata-feasibility failures
+- The number and identity of eligible animals
+- Temporal holdout rather than independent-animal confirmation
+- MOs-heavy anatomical sampling where applicable
+- Provider source and sorting limitations
+- Behavioral and state confounding
+- No confirmed causal neural computation
+- No validated CWP/NAP ontology
+
+If a scientific gate prevents real evaluation, provide a complete STOP report instead of a fabricated findings paper.
+
+## 13. EXECUTION RULES
+
+SCIENCE FIRST.
+
+Use the existing repository, saved evidence and verified components wherever mathematically compatible.
+
+Do not re-run previous P14 metadata audits without a concrete source-compatibility need.
+
+Do not build:
+- Offline signing infrastructure
+- Cryptographic one-shot ledgers
+- Multi-principal custody systems
+- Unnecessary security architecture
+- Large new model frameworks unrelated to P14
+
+Do not indefinitely chase source provenance or optimize around scientific failures.
+
+Routine engineering repairs are allowed with regression tests and preserved failed attempts.
+
+Substantive scientific changes require STOP and explicit new authorization.
+
+Preserve all P1–P13 studies and prior P14 failure archives.
+
+The goal is to complete an honest neural-dynamics study, not to force a positive finding.
+
+## 14. FINAL DELIVERY
+
+Return:
+
+- SOURCE_COMPATIBILITY
+- LICENSE_VERIFIED
+- CANONICAL_COHORT_COUNT
+- PHYSIOLOGICAL_ELIGIBLE_MICE
+- TRAINING_EVALUATION_SPLIT
+- BASELINE_SCORES
+- DISCRETE_SCORES
+- CONTINUOUS_SCORES
+- CONTEXT_INTERACTION_EFFECTS
+- CORRECTED_STATISTICS
+- NULL_AND_SENSITIVITY_RESULTS
+- EXPLORATORY_SCIENTIFIC_VERDICT
+- MANUSCRIPT_COMPLETE
+- PDF_DELIVERABLES
+- REPRODUCTION_STATUS
+- BUG_COUNT / WARN_COUNT
+- GIT_COMMIT / REMOTE_VERIFICATION
+
+Begin with source compatibility and prospective protocol registration.
+
+Advance autonomously only after verified scientific gates pass.
+
+Stop after valid manuscript closeout or an evidence-backed scientific blocker.
+
+BEGIN P14-v2 NOW.
