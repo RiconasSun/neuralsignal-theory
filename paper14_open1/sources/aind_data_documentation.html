@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Data Access | Allen Institute for Neural Dynamics</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Data Access" />
+<meta name="author" content="Contact" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="https://allenneuraldynamics.github.io/data.html" />
+<meta property="og:url" content="https://allenneuraldynamics.github.io/data.html" />
+<meta property="og:site_name" content="Allen Institute for Neural Dynamics" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Data Access" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Contact"},"headline":"Data Access","url":"https://allenneuraldynamics.github.io/data.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://allenneuraldynamics.github.io/feed.xml" title="Allen Institute for Neural Dynamics" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Allen Institute for Neural Dynamics</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/data.html">Data Access</a><a class="page-link" href="/positions.html">Positions</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Data Access</h1>
+  </header>
+
+  <div class="post-content">
+    <p>The Allen Institute for Neural Dynamics (AIND) is committed to FAIR, Open, and Reproducible science. We therefore share all of the data we collect publicly with rich metadata as near to the time of collection as possible. We share data at all stages of the data lifecycle, including preliminary data collected during methods development, processed data that we are actively improving, or highly curated data used in a publication.</p>
+
+<h2 id="aind-open-data">aind-open-data</h2>
+
+<p>In addition to sharing curated datasets with modality-specific NIH data archives like DANDI and BIL, we are also excited to share all of our data in one public S3 bucket generously hosted by the Registry of Open Data on AWS.</p>
+
+<p>All data is stored here: <code class="language-plaintext highlighter-rouge">s3://aind-open-data</code></p>
+
+<h3 id="bucket-organization">Bucket Organization</h3>
+<p>AIND’s mission to share data early with full reproducibility has significant implications on how data and metadata should be organized and represented. Organizational principles include:</p>
+
+<ul>
+  <li><strong>Immutability</strong>: once data is collected it should not be touched to ensure reproducibility.</li>
+  <li><strong>Metadata Accessibility</strong>: metadata must be trivial to find and read for humans and machines.</li>
+  <li><strong>Cloud Compatibility</strong>: data should be stored in cloud-friendly formats.</li>
+</ul>
+
+<p>Based on these principles, <code class="language-plaintext highlighter-rouge">s3://aind-open-data</code> is organized as a flat list of data assets, where a data asset is simply a logical collection of files. Derived data assets are separate from their source assets, meaning they are not stored in the same path or directory.</p>
+
+<p>Inspired by <a href="https://bids-specification.readthedocs.io/en/stable/">BIDS</a> and the <a href="https://data.humancellatlas.org/metadata/structure">HCA metadata schema</a>, metadata describing a data asset is stored as sidecar JSON files that live adjacent to the data they describe. These JSON files conform to the schemas defined in <a href="https://github.com/allenNeuralDynamics/aind-data-schema/">aind-data-schema</a>.</p>
+
+<p>As soon as possible, data in this bucket are stored in cloud-friendly formats, including NWB-Zarr for physiology and OME-Zarr for imaging. We aspire to produce data in these formats at the time of acquisition.</p>
+
+<h3 id="naming-conventions">Naming Conventions</h3>
+<p>Raw data assets are named:</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;modality&gt;_&lt;subject-id&gt;_&lt;acquisition-date&gt;_&lt;acquisition-time&gt;</code></p>
+
+<p>Derived data assets are named:</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;source-data-asset-name&gt;_&lt;label&gt;_&lt;acquisition-date&gt;_&lt;acquisition-time&gt;</code></p>
+
+<p>A raw extracellular ephys asset would look like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ecephys_123456_2022-12-12_05-06-07/
+        ecephys/
+            &lt;ephys data&gt;
+        behavior/
+            &lt;video data&gt;
+        data_description.json
+        subject.json
+        procedures.json
+        processing.json
+        rig.json
+        acquisition.json
+</code></pre></div></div>
+
+<p>A spike-sorting result asset would look like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ecephys_123456_2022-12-12_05-06-07_sorted-ks25_2022-12-12_06-07-08/
+        sorted/
+            &lt;sorted ephys data&gt;
+        data_description.json
+        subject.json
+        procedures.json
+        processing.json
+        rig.json
+        acquisition.json
+</code></pre></div></div>
+
+<h2 id="benchmark-data">Benchmark Data</h2>
+
+<h3 id="aind-benchmark-dataephys-compression">aind-benchmark-data/ephys-compression</h3>
+
+<p>Extracellular electrophysiology data is growing at a remarkable pace. This data, collected neuropixels probes by the Allen Institute for Neural Dynamics (AIND) and the International Brain Lab (IBL) can be used to benchmark throughput rates and storage ratios of various data compression algorithms.</p>
+
+<p>All data is available within the <code class="language-plaintext highlighter-rouge">aind-benchmark-data</code> bucket at <code class="language-plaintext highlighter-rouge">s3://aind-benchmark-data/ephys-compression</code>.</p>
+
+<p>The bucket is organized in subfolders containing datasets from different sources.</p>
+
+<h4 id="experimental-data">Experimental data</h4>
+
+<p>The following folders include experimental data sources:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">aind-np2</code>: Neuropixels 2.0 data collected by AIND (8 sessions)</li>
+  <li><code class="language-plaintext highlighter-rouge">aind-np1</code>: Neuropixels 1.0 data collected by AIND (4 sessions)</li>
+  <li><code class="language-plaintext highlighter-rouge">ibl-np1</code>: Neuropixels 1.0 data collected by IBL (4 sessions)</li>
+</ul>
+
+<p>Each session (e.g. <code class="language-plaintext highlighter-rouge">aind-np2/612962_2022-04-13_19-18-04_ProbeB</code>) contains the raw traces in binary format as saved by <a href="https://github.com/SpikeInterface/spikeinterface">SpikeInterface</a>.</p>
+
+<p>To load one session, you can use the <code class="language-plaintext highlighter-rouge">spikeinterface</code> library (see <a href="https://spikeinterface.readthedocs.io/en/latest/installation.html">installation instructions</a>):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import spikeinterface as si
+
+recording = si.load_extractor("{local-path-to-aind-benchmark-data/ephys-compression}/aind-np2/612962_2022-04-13_19-18-04_ProbeB")
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">recording</code> is a <a href="https://spikeinterface.readthedocs.io/en/latest/api.html#spikeinterface.core.BaseRecording"><code class="language-plaintext highlighter-rouge">spikeinterface.BaseRecording</code></a> object.</p>
+
+<h4 id="simulated-data">Simulated data</h4>
+
+<p>The <code class="language-plaintext highlighter-rouge">mearec</code> subfolder contains two simulated datasets using the <a href="https://github.com/SpikeInterface/MEArec">MEArec</a> simulator.</p>
+
+<p>You can load a simulated session using <code class="language-plaintext highlighter-rouge">spikeinterface</code> (after <a href="https://mearec.readthedocs.io/en/latest/installation.html">installing MEArec</a>):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import spikeinterface.extractors as se
+
+recording_gt, sorting_gt = se.read_mearec("{local-path-to-aind-benchmark-data/ephys-compression}/mearec/mearec_NP1.h5")
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">recording_gt</code> is also <a href="https://spikeinterface.readthedocs.io/en/latest/api.html#spikeinterface.core.BaseRecording"><code class="language-plaintext highlighter-rouge">spikeinterface.BaseRecording</code></a> object. <code class="language-plaintext highlighter-rouge">sorting_gt</code> is a <a href="https://spikeinterface.readthedocs.io/en/latest/api.html#spikeinterface.core.BaseSorting"><code class="language-plaintext highlighter-rouge">spikeinterface.BaseSorting</code></a> containing the ground-truth spiking data.</p>
+
+<h3 id="aind-benchmark-dataephys-hybrid-evaluation">aind-benchmark-data/ephys-hybrid-evaluation</h3>
+
+<p>Evaluation of spike sorting methods is a challenging task, as it requires both ground-truth data and a variety of sorting algorithms to compare against. The <code class="language-plaintext highlighter-rouge">aind-benchmark-data/ephys-hybrid-evaluation</code> bucket contains a set of hybrid datasets specifically designed for benchmarking spike sorting methods.</p>
+
+<p>All data is available within the <code class="language-plaintext highlighter-rouge">aind-benchmark-data</code> bucket at <code class="language-plaintext highlighter-rouge">s3://aind-benchmark-data/ephys-hybrid-evaluation</code>.</p>
+
+<p>The datasets are used in the <a href="">Cloud-compatible pipelines for processing and evaluating large-scale electrophysiology data</a>. There are two subfolders, corresponding to the two applications used in the paper:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">sorters</code>: used for comparison between <code class="language-plaintext highlighter-rouge">Kilosort2.5</code> and <code class="language-plaintext highlighter-rouge">Kilosort4</code></li>
+  <li><code class="language-plaintext highlighter-rouge">lossy</code>: used for comparison between lossless and lossy compression (using <a href="www.wavpack.com">WavPack</a>)</li>
+</ul>
+
+<p>For each application, there are two subfolders, one for Neuropixels 1.0 (<code class="language-plaintext highlighter-rouge">np1</code>) data and one for Neuropixels 2.0 - 4 shank (<code class="language-plaintext highlighter-rouge">np2</code>) data. Each subfolder contains hybrid datasets from multiple sessions, with the following structure:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;application&gt;/&lt;np1|np2&gt;/&lt;session-id&gt;/&lt;recording-id&gt;/
+        recording.zarr/
+        sorting.zarr/
+</code></pre></div></div>
+
+<p>For Neuropixels 2.0, the different shanks (or groups) are split into separate recording ids.
+The last part of the path is the recording id, <code class="language-plaintext highlighter-rouge">_{i}</code> is the hybrid case: for each dataset and probe,
+5 cases with randomly sampled hybrid units are available.</p>
+
+<p>Recordings and sortings can be easily loaded using the <code class="language-plaintext highlighter-rouge">spikeinterface</code> library (version 0.102.3 or later).</p>
+
+<p>The following code loads session id: <code class="language-plaintext highlighter-rouge">ecephys_644864_2023-01-31_15-27-43</code>, recording id: <code class="language-plaintext highlighter-rouge">experiment1_Record Node 110#Neuropix-PXI-107.ProbeA-AP_recording1_0/</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import spikeinterface as si
+
+session_id = "ecephys_644864_2023-01-31_15-27-43"
+recording_id = "experiment1_Record Node 110#Neuropix-PXI-107.ProbeA-AP_recording1_0"
+
+sorting = si.load(
+    f"s3://aind-benchmark-data/ephys-hybrid-evaluation/sorters/np1/{session_id}/{recording_id}/sorting.zarr"
+)
+recording = si.load(
+    f"s3://aind-benchmark-data/ephys-hybrid-evaluation/sorters/np1/{session_id}/{recording_id}/recording.zarr"
+)
+</code></pre></div></div>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <!-- <h2 class="footer-heading">Allen Institute for Neural Dynamics</h2> -->
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <ul class="contact-list">
+          <li class="p-name">
+            Contact Us: <a class="u-email" href="mailto:neural.dynamics@alleninstitute.org">neural.dynamics@alleninstitute.org</a>
+          </li>            
+        </ul>
+      </div>
+
+      <div class="footer-col"><ul class="social-media-list"><li><a href="https://github.com/AllenNeuralDynamics"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">AllenNeuralDynamics</span></a></li></ul>
+</div>
+
+      <div class="footer-col">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

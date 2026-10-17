@@ -1,0 +1,289 @@
+# CCPN — P14 MASTER PROMPT 2/5
+# OPEN-RELEASE RECOVERY & SCIENTIFIC PROTOCOL FREEZE
+
+MISSION: `P14-M1-OPEN-RELEASE-RECOVERY`
+
+BASE:
+`origin/test @ 35e344278cd25574764290b54550ec82d7e963a2`
+
+PRIORITY: HIGH
+
+EXECUTION MODE: SCIENCE-FIRST / AUTONOMOUS / BOUNDED
+
+## PRIMARY OBJECTIVE
+
+Resolve P14's source-rights blocker by prioritizing officially released, explicitly licensed public neuroscience datasets.
+
+Do not make correspondence with the original researchers a prerequisite unless no adequately licensed alternative exists.
+
+Preserve the original P14 M0 and M1 findings, including:
+
+- M0: INCONCLUSIVE_METADATA
+- M1: SOURCE_RIGHTS_BLOCKED
+- Original 18 Dynamic Routing scratch-session candidates
+- Original incomplete 9/9 allocation reservation
+- All historical negative findings, reviews and source evidence
+
+Those decisions must not be retrospectively converted to PASS.
+
+The objective is to establish a new, scientifically defensible licensed-source route and finish M1 if possible.
+
+No neural spike-value access or model fitting is authorized by this mission.
+
+---
+
+## PHASE 1 — OPEN-RELEASE FIRST
+
+Investigate the official AIND Open Data release:
+
+https://registry.opendata.aws/allen-nd-open-data/
+
+Prioritize officially released Dynamic Routing datasets that can support the original P14 context-dynamics research question.
+
+Check official AIND/Allen metadata, released asset manifests and available public data catalogs.
+
+For each candidate, establish:
+
+1. Exact dataset identity, release and processing version.
+2. Applicable dataset-level or asset-level license.
+3. Whether secondary computational analysis and academic publication are permitted.
+4. Attribution and redistribution requirements.
+5. Mouse/session/probe identity.
+6. Recording and processing provenance.
+7. Publicly documented neural, stimulus, behavior and timing support.
+
+Do not assume all AIND buckets or files share the same license.
+
+A valid CC BY 4.0 or equivalently suitable explicit permission covering the selected objects is sufficient; do not require individually negotiated permission in addition to an applicable open license.
+
+Do not demand an exact license statement for every individual file when a verified dataset-wide license clearly covers the files.
+
+Use the officially documented release and its permitted access methods. Do not bypass access restrictions.
+
+## PHASE 2 — RECONCILE THE EXISTING 18 SESSIONS
+
+Use the prior M1 evidence as the starting point.
+
+The earlier M1 audit found three exact-date canonical counterparts, but this was not enough to establish the entire original 18-session cohort.
+
+For each original scratch candidate, investigate:
+
+- Canonical mouse identity
+- Exact session date / session UUID
+- Probe identity
+- Recording version
+- Corresponding official release
+- Processing lineage
+- Available source rights
+
+Distinguish:
+
+EXACT_SESSION_MATCH
+
+SAME_MOUSE_DIFFERENT_SESSION
+
+NO_VERIFIED_MATCH
+
+RIGHTS_UNRESOLVED
+
+Never treat another recording date from the same mouse as the original recording.
+
+Never infer equality between HDF5 scratch data and Zarr canonical data merely because their mouse IDs match.
+
+If all 18 original sessions can be located in appropriately licensed canonical releases, preserve their original identities and assess source/schema equivalence.
+
+If only a subset matches, do not silently declare the original 18-session design recovered.
+
+## PHASE 3 — NEW LICENSED COHORT IF NECESSARY
+
+If the original 18 sessions cannot all be established within licensed releases, permit a separately registered, prospective licensed-source cohort.
+
+Maintain P14's core research question:
+
+Does local medial-prefrontal predictive dynamics change between auditory-reward and visual-reward task contexts?
+
+Preserve the scientifically justified target:
+
+- Mouse medial PFC
+- ACAd / ACAv / PL / ILA composite
+- Same simultaneously recorded probe/population
+- Both experimental contexts in the same mouse/session
+- Context-aware strong predictive baselines
+- Independent development and final animals
+
+Recalculate eligibility from the licensed release itself.
+
+Do not transfer the scratch cohort's counts, QC annotations or trial masks without verifying their equivalence.
+
+Use the existing M0 eligibility rules where scientifically and operationally applicable.
+
+If the canonical release requires a different source-specific rule, register and justify it BEFORE examining the relevant new eligibility counts.
+
+Do not adjust thresholds to force a viable cohort.
+
+Target:
+- At least 8 Development mice
+- At least 8 independent Final mice
+- Prefer larger samples where available
+
+No mouse/session/probe pseudoreplication.
+
+Do not select a dataset based on neural model scores.
+
+If officially released Dynamic Routing remains insufficient, permit at most ONE additional explicitly licensed public electrophysiology dataset with genuine within-mouse PFC context variation.
+
+Do not restart an unlimited dataset search or silently combine unrelated experiments.
+
+## PHASE 4 — SOURCE, CLOCK AND BEHAVIOR CONTRACT
+
+For the proposed licensed cohort, verify:
+
+- Spike sorting and anatomical source provenance
+- Stimulus and reward-context timing
+- Behavioral event timing
+- Neural/behavior synchronization documentation
+- Recording support
+- Available running/locomotion measurements
+- Lick/response events
+- Pupil/arousal measurement availability
+- Missing event fields
+- Source exclusions and saturation annotations
+
+Do not infer actual sampling quality or alignment from metadata field names alone.
+
+Determine whether sufficient source documentation supports freezing a valid prediction-time contract.
+
+If necessary, define a narrower scientific estimand:
+
+"Context-dependent neural prediction conditional on available measured task variables."
+
+Under this narrower estimand, permanently prohibit claims that predictive differences are independent of unmeasured movement, arousal or behavioral state.
+
+For missing response timestamps:
+
+- Preserve exact missingness.
+- Never infer timestamps from response flags.
+- Define source-supported exclusion or missingness handling prospectively.
+- Recalculate eligibility consequences before activation.
+- Stop if essential causal timing remains unresolved.
+
+Do not read neural array values or continuous raw behavioral signal samples in this mission.
+
+## PHASE 5 — COMPLETE M1 SCIENTIFIC FREEZE
+
+Only if a sufficiently licensed, documented and metadata-feasible cohort is identified:
+
+Complete the previously blocked P14 M1 requirements.
+
+Freeze:
+
+A. Dataset, source revision and license.
+
+B. Exact candidate mouse/session/probe roster.
+
+C. Independent development/final allocation, with no later swapping.
+
+D. Anatomical population definition and subregion composition.
+
+E. Both context labels and trial/epoch masks.
+
+F. Training/calibration-only physiological QC.
+
+G. Causal covariate availability, exclusion and scaling policies.
+
+H. Full predictive model equations.
+
+I. Model-complexity and hyperparameter-selection policies.
+
+J. Numerical acceptance and stopping thresholds.
+
+K. Mouse-level statistical inference and multiple-comparison correction.
+
+L. Finite and scientifically defensible null/falsification controls.
+
+M. Sensitivity analyses and coverage requirements.
+
+N. One-time final held-out evaluation policy.
+
+Keep the original P14 primary question:
+
+For model family F in {Discrete, Continuous}:
+
+Delta_F =
+[LL(F) - LL(B4)]_Auditory
+-
+[LL(F) - LL(B4)]_Visual
+
+Freeze two primary context-interaction hypotheses.
+
+Use mandatory strong B0–B4 baselines, including stimulus/time, own-history, population-history and causally available behavioral features.
+
+Preserve the tractable two-state Poisson HMM and two-dimensional continuous-history representation design, subject to independently validated mathematical implementation.
+
+Do not import the unstable P13 conditional B* autoregressive generator.
+
+No assumed Discrete winner.
+
+No unregistered post-outcome model redesign.
+
+## PHASE 6 — SCIENTIFIC GATES
+
+Before declaring M1 ready:
+
+1. Verify the selected source is actually covered by an appropriate license.
+2. Confirm the independent-animal denominator and both-context coverage.
+3. Confirm the prospective split is frozen before neural-outcome access.
+4. Confirm necessary timebases and event semantics are supported.
+5. Confirm the proposed model and statistical protocols are fully specified.
+6. Run bounded synthetic protocol, identity, timing and null-definition tests.
+7. Obtain independent internal scientific/source review.
+
+Do not replace missing evidence with assertions.
+
+Do not create cryptographic custody infrastructure, offline signing ceremonies or multi-principal approval architecture.
+
+Use ordinary versioned manifests, hashes, access logs and scientific review.
+
+## FINAL DECISION
+
+Return exactly one:
+
+- `OPEN_RELEASE_M1_READY`
+- `LICENSED_COHORT_FOUND_BUT_M1_INCOMPLETE`
+- `OPEN_RELEASE_DATA_INSUFFICIENT`
+- `SOURCE_OR_TIMING_INCONCLUSIVE`
+
+`OPEN_RELEASE_M1_READY` requires verified applicable licensing, adequate metadata-level cohort coverage and a fully frozen M1 scientific protocol.
+
+It does not mean physiological QC has passed.
+
+If no suitable cohort is found, stop with a concise evidence-backed report. Do not generate another long chain of source-discovery missions automatically.
+
+No researcher email is to be sent under this mission.
+
+## EXECUTION AND DELIVERABLES
+
+Work autonomously within this bounded mission.
+
+Produce:
+
+1. Open-release source/license evidence.
+2. Original 18-session canonical matching table.
+3. New licensed cohort inventory, if necessary.
+4. Exact independent-animal/context denominator.
+5. Timing and measured-behavior evidence matrix.
+6. Registered scientific source/amendment record.
+7. Frozen P14 M1 protocol, if feasible.
+8. Synthetic tests and saved-only PowerShell reproduction.
+9. Independent internal review.
+10. Verified origin/test commit, remote readback and clean working tree.
+
+Preserve P1–P13 and all prior P14 evidence.
+
+No spike arrays, model fits, neural predictive scoring, final assessment or manuscript-completion claims.
+
+Stop after this M1 recovery.
+
+If M1 is ready, explicitly state that P14 Prompt 3/5 may be separately authorized.
+
+BEGIN OPEN-RELEASE RECOVERY NOW.

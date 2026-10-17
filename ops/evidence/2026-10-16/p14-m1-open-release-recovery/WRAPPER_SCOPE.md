@@ -1,0 +1,3 @@
+# Mission wrapper and narrow workspace boundary
+
+The JSON Mission Spec was created prospectively and passed the wrapper dry-run/risk review in WRAPPER_DRY_RUN.txt. No OpenRouter call or secret was used. The wrapper default bulk staging copies the research workspace; this repository contains historical protected neural bundles unrelated to this metadata-only mission. Running a second whole-workspace implementation agent would unnecessarily read those bundles. Direct explicit new-file edits here implement the user-authorized narrow mission without that copy, following the existing scientific mission pattern. No missing skill permission, automatic-approval rejection or alternative neural-access authorization is implied.

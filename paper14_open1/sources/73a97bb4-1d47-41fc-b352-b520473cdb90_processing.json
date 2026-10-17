@@ -1,0 +1,5229 @@
+{
+   "data_processes": [
+      {
+         "code": {
+            "commit_hash": null,
+            "container": null,
+            "core_dependency": null,
+            "input_data": null,
+            "language": null,
+            "language_version": null,
+            "name": "Compression",
+            "object_type": "Code",
+            "parameters": {},
+            "run_script": null,
+            "url": "oras://ghcr.io/allenneuraldynamics/aind-ephys-transformation:0.1.2",
+            "version": null
+         },
+         "end_date_time": "2024-11-06T23:07:06.329421Z",
+         "experimenters": [
+            "AIND Scientific Computing"
+         ],
+         "name": "Compression",
+         "notes": null,
+         "object_type": "Data process",
+         "output_parameters": {},
+         "output_path": "/allen/aind/stage/svc_aind_airflow/prod/ecephys_742903_job_1730922262_fb936/ecephys",
+         "pipeline_name": null,
+         "process_type": "Compression",
+         "resources": null,
+         "stage": "Processing",
+         "start_date_time": "2024-11-06T19:50:55.278291Z"
+      },
+      {
+         "code": {
+            "commit_hash": null,
+            "container": null,
+            "core_dependency": null,
+            "input_data": null,
+            "language": null,
+            "language_version": null,
+            "name": null,
+            "object_type": "Code",
+            "parameters": {
+               "custom_preprocessing_pipeline": null,
+               "denoising_strategy": "cmr",
+               "filter_type": "highpass",
+               "job_kwargs": {
+                  "chunk_duration": "1s",
+                  "mp_context": "spawn",
+                  "n_jobs": 16,
+                  "progress_bar": false
+               },
+               "max_bad_channel_fraction": 0.5,
+               "min_preprocessing_duration": 120,
+               "motion_correction": {
+                  "apply": false,
+                  "compute": true,
+                  "detect_kwargs": {},
+                  "estimate_motion_kwargs": {
+                     "bin_s": 2,
+                     "win_scale_um": 382,
+                     "win_step_um": 382
+                  },
+                  "interpolate_motion_kwargs": {},
+                  "localize_peaks_kwargs": {},
+                  "preset": "dredge_fast",
+                  "select_kwargs": {}
+               },
+               "recording_name": "experiment1_Record Node 108#Neuropix-PXI-100.ProbeB-AP_recording1",
+               "remove_bad_channels": true,
+               "remove_out_channels": true
+            },
+            "run_script": null,
+            "url": "https://github.com/AllenNeuralDynamics/aind-ephys-preprocessing",
+            "version": "1.0"
+         },
+         "end_date_time": "2026-09-04T11:41:26.274326Z",
+         "experimenters": [
+            "AIND Pipeline"
+         ],
+         "name": "Ephys preprocessing - experiment1_Record Node 108#Neuropix-PXI-100.ProbeB-AP_recording1",
+         "notes": "",
+         "object_type": "Data process",
+         "output_parameters": {
+            "channel_labels": [
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "dead",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "dead",
+               "good",
+               "good",
+               "good",
+               "good",
+               "dead",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "dead",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "dead",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "dead",
+               "dead",
+               "good",
+               "dead",
+               "good",
+               "dead",
+               "noise",
+               "dead",
+               "noise",
+               "dead",
+               "noise",
+               "dead",
+               "noise",
+               "dead",
+               "noise",
+               "dead",
+               "noise",
+               "dead",
+               "noise",
+               "dead",
+               "noise",
+               "dead",
+               "noise",
+               "dead",
+               "noise",
+               "dead",
+               "noise",
+               "dead",
+               "noise",
+               "dead",
+               "noise",
+               "dead",
+               "noise",
+               "dead",
+               "noise",
+               "dead",
+               "noise",
+               "dead",
+               "noise",
+               "dead",
+               "noise",
+               "dead",
+               "noise",
+               "dead",
+               "good",
+               "dead",
+               "good",
+               "dead",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "dead",
+               "good",
+               "dead",
+               "good",
+               "dead",
+               "noise",
+               "dead",
+               "noise",
+               "dead",
+               "noise",
+               "dead",
+               "noise",
+               "dead",
+               "noise",
+               "dead",
+               "noise",
+               "dead",
+               "noise",
+               "dead",
+               "noise",
+               "dead",
+               "noise",
+               "dead",
+               "good",
+               "dead",
+               "noise",
+               "dead",
+               "noise",
+               "dead",
+               "noise",
+               "dead",
+               "noise",
+               "dead",
+               "noise",
+               "dead",
+               "noise",
+               "dead",
+               "noise",
+               "dead",
+               "noise",
+               "dead",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out"
+            ]
+         },
+         "output_path": "../results",
+         "pipeline_name": "AIND Ephys Pipeline",
+         "process_type": "Ephys preprocessing",
+         "resources": null,
+         "stage": "Processing",
+         "start_date_time": "2026-09-04T11:28:13.274326Z"
+      },
+      {
+         "code": {
+            "commit_hash": null,
+            "container": null,
+            "core_dependency": null,
+            "input_data": null,
+            "language": null,
+            "language_version": null,
+            "name": null,
+            "object_type": "Code",
+            "parameters": {
+               "custom_preprocessing_pipeline": null,
+               "denoising_strategy": "cmr",
+               "filter_type": "highpass",
+               "job_kwargs": {
+                  "chunk_duration": "1s",
+                  "mp_context": "spawn",
+                  "n_jobs": 16,
+                  "progress_bar": false
+               },
+               "max_bad_channel_fraction": 0.5,
+               "min_preprocessing_duration": 120,
+               "motion_correction": {
+                  "apply": false,
+                  "compute": true,
+                  "detect_kwargs": {},
+                  "estimate_motion_kwargs": {
+                     "bin_s": 2,
+                     "win_scale_um": 382,
+                     "win_step_um": 382
+                  },
+                  "interpolate_motion_kwargs": {},
+                  "localize_peaks_kwargs": {},
+                  "preset": "dredge_fast",
+                  "select_kwargs": {}
+               },
+               "recording_name": "experiment1_Record Node 104#Neuropix-PXI-100.ProbeF-AP_recording1",
+               "remove_bad_channels": true,
+               "remove_out_channels": true
+            },
+            "run_script": null,
+            "url": "https://github.com/AllenNeuralDynamics/aind-ephys-preprocessing",
+            "version": "1.0"
+         },
+         "end_date_time": "2026-09-04T11:53:21.360559Z",
+         "experimenters": [
+            "AIND Pipeline"
+         ],
+         "name": "Ephys preprocessing - experiment1_Record Node 104#Neuropix-PXI-100.ProbeF-AP_recording1",
+         "notes": "",
+         "object_type": "Data process",
+         "output_parameters": {
+            "channel_labels": [
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "dead",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good"
+            ]
+         },
+         "output_path": "../results",
+         "pipeline_name": "AIND Ephys Pipeline",
+         "process_type": "Ephys preprocessing",
+         "resources": null,
+         "stage": "Processing",
+         "start_date_time": "2026-09-04T11:28:13.360559Z"
+      },
+      {
+         "code": {
+            "commit_hash": null,
+            "container": null,
+            "core_dependency": null,
+            "input_data": null,
+            "language": null,
+            "language_version": null,
+            "name": null,
+            "object_type": "Code",
+            "parameters": {
+               "custom_preprocessing_pipeline": null,
+               "denoising_strategy": "cmr",
+               "filter_type": "highpass",
+               "job_kwargs": {
+                  "chunk_duration": "1s",
+                  "mp_context": "spawn",
+                  "n_jobs": 16,
+                  "progress_bar": false
+               },
+               "max_bad_channel_fraction": 0.5,
+               "min_preprocessing_duration": 120,
+               "motion_correction": {
+                  "apply": false,
+                  "compute": true,
+                  "detect_kwargs": {},
+                  "estimate_motion_kwargs": {
+                     "bin_s": 2,
+                     "win_scale_um": 382,
+                     "win_step_um": 382
+                  },
+                  "interpolate_motion_kwargs": {},
+                  "localize_peaks_kwargs": {},
+                  "preset": "dredge_fast",
+                  "select_kwargs": {}
+               },
+               "recording_name": "experiment1_Record Node 104#Neuropix-PXI-100.ProbeD-AP_recording1",
+               "remove_bad_channels": true,
+               "remove_out_channels": true
+            },
+            "run_script": null,
+            "url": "https://github.com/AllenNeuralDynamics/aind-ephys-preprocessing",
+            "version": "1.0"
+         },
+         "end_date_time": "2026-09-04T11:56:31.284724Z",
+         "experimenters": [
+            "AIND Pipeline"
+         ],
+         "name": "Ephys preprocessing - experiment1_Record Node 104#Neuropix-PXI-100.ProbeD-AP_recording1",
+         "notes": "",
+         "object_type": "Data process",
+         "output_parameters": {
+            "channel_labels": [
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "noise",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out"
+            ]
+         },
+         "output_path": "../results",
+         "pipeline_name": "AIND Ephys Pipeline",
+         "process_type": "Ephys preprocessing",
+         "resources": null,
+         "stage": "Processing",
+         "start_date_time": "2026-09-04T11:28:17.284724Z"
+      },
+      {
+         "code": {
+            "commit_hash": null,
+            "container": null,
+            "core_dependency": null,
+            "input_data": null,
+            "language": null,
+            "language_version": null,
+            "name": null,
+            "object_type": "Code",
+            "parameters": {
+               "custom_preprocessing_pipeline": null,
+               "denoising_strategy": "cmr",
+               "filter_type": "highpass",
+               "job_kwargs": {
+                  "chunk_duration": "1s",
+                  "mp_context": "spawn",
+                  "n_jobs": 16,
+                  "progress_bar": false
+               },
+               "max_bad_channel_fraction": 0.5,
+               "min_preprocessing_duration": 120,
+               "motion_correction": {
+                  "apply": false,
+                  "compute": true,
+                  "detect_kwargs": {},
+                  "estimate_motion_kwargs": {
+                     "bin_s": 2,
+                     "win_scale_um": 382,
+                     "win_step_um": 382
+                  },
+                  "interpolate_motion_kwargs": {},
+                  "localize_peaks_kwargs": {},
+                  "preset": "dredge_fast",
+                  "select_kwargs": {}
+               },
+               "recording_name": "experiment1_Record Node 108#Neuropix-PXI-100.ProbeC-AP_recording1",
+               "remove_bad_channels": true,
+               "remove_out_channels": true
+            },
+            "run_script": null,
+            "url": "https://github.com/AllenNeuralDynamics/aind-ephys-preprocessing",
+            "version": "1.0"
+         },
+         "end_date_time": "2026-09-04T12:02:06.522621Z",
+         "experimenters": [
+            "AIND Pipeline"
+         ],
+         "name": "Ephys preprocessing - experiment1_Record Node 108#Neuropix-PXI-100.ProbeC-AP_recording1",
+         "notes": "",
+         "object_type": "Data process",
+         "output_parameters": {
+            "channel_labels": [
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "dead",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "dead",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "dead",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good"
+            ]
+         },
+         "output_path": "../results",
+         "pipeline_name": "AIND Ephys Pipeline",
+         "process_type": "Ephys preprocessing",
+         "resources": null,
+         "stage": "Processing",
+         "start_date_time": "2026-09-04T11:28:17.522621Z"
+      },
+      {
+         "code": {
+            "commit_hash": null,
+            "container": null,
+            "core_dependency": null,
+            "input_data": null,
+            "language": null,
+            "language_version": null,
+            "name": null,
+            "object_type": "Code",
+            "parameters": {
+               "custom_preprocessing_pipeline": null,
+               "denoising_strategy": "cmr",
+               "filter_type": "highpass",
+               "job_kwargs": {
+                  "chunk_duration": "1s",
+                  "mp_context": "spawn",
+                  "n_jobs": 16,
+                  "progress_bar": false
+               },
+               "max_bad_channel_fraction": 0.5,
+               "min_preprocessing_duration": 120,
+               "motion_correction": {
+                  "apply": false,
+                  "compute": true,
+                  "detect_kwargs": {},
+                  "estimate_motion_kwargs": {
+                     "bin_s": 2,
+                     "win_scale_um": 382,
+                     "win_step_um": 382
+                  },
+                  "interpolate_motion_kwargs": {},
+                  "localize_peaks_kwargs": {},
+                  "preset": "dredge_fast",
+                  "select_kwargs": {}
+               },
+               "recording_name": "experiment1_Record Node 104#Neuropix-PXI-100.ProbeE-AP_recording1",
+               "remove_bad_channels": true,
+               "remove_out_channels": true
+            },
+            "run_script": null,
+            "url": "https://github.com/AllenNeuralDynamics/aind-ephys-preprocessing",
+            "version": "1.0"
+         },
+         "end_date_time": "2026-09-04T12:03:10.420150Z",
+         "experimenters": [
+            "AIND Pipeline"
+         ],
+         "name": "Ephys preprocessing - experiment1_Record Node 104#Neuropix-PXI-100.ProbeE-AP_recording1",
+         "notes": "",
+         "object_type": "Data process",
+         "output_parameters": {
+            "channel_labels": [
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "dead",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good"
+            ]
+         },
+         "output_path": "../results",
+         "pipeline_name": "AIND Ephys Pipeline",
+         "process_type": "Ephys preprocessing",
+         "resources": null,
+         "stage": "Processing",
+         "start_date_time": "2026-09-04T11:28:18.420150Z"
+      },
+      {
+         "code": {
+            "commit_hash": null,
+            "container": null,
+            "core_dependency": null,
+            "input_data": null,
+            "language": null,
+            "language_version": null,
+            "name": null,
+            "object_type": "Code",
+            "parameters": {
+               "custom_preprocessing_pipeline": null,
+               "denoising_strategy": "cmr",
+               "filter_type": "highpass",
+               "job_kwargs": {
+                  "chunk_duration": "1s",
+                  "mp_context": "spawn",
+                  "n_jobs": 16,
+                  "progress_bar": false
+               },
+               "max_bad_channel_fraction": 0.5,
+               "min_preprocessing_duration": 120,
+               "motion_correction": {
+                  "apply": false,
+                  "compute": true,
+                  "detect_kwargs": {},
+                  "estimate_motion_kwargs": {
+                     "bin_s": 2,
+                     "win_scale_um": 382,
+                     "win_step_um": 382
+                  },
+                  "interpolate_motion_kwargs": {},
+                  "localize_peaks_kwargs": {},
+                  "preset": "dredge_fast",
+                  "select_kwargs": {}
+               },
+               "recording_name": "experiment1_Record Node 108#Neuropix-PXI-100.ProbeA-AP_recording1",
+               "remove_bad_channels": true,
+               "remove_out_channels": true
+            },
+            "run_script": null,
+            "url": "https://github.com/AllenNeuralDynamics/aind-ephys-preprocessing",
+            "version": "1.0"
+         },
+         "end_date_time": "2026-09-04T12:01:32.743280Z",
+         "experimenters": [
+            "AIND Pipeline"
+         ],
+         "name": "Ephys preprocessing - experiment1_Record Node 108#Neuropix-PXI-100.ProbeA-AP_recording1",
+         "notes": "",
+         "object_type": "Data process",
+         "output_parameters": {
+            "channel_labels": [
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "dead",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "good",
+               "dead",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out",
+               "out"
+            ]
+         },
+         "output_path": "../results",
+         "pipeline_name": "AIND Ephys Pipeline",
+         "process_type": "Ephys preprocessing",
+         "resources": null,
+         "stage": "Processing",
+         "start_date_time": "2026-09-04T11:28:18.743280Z"
+      },
+      {
+         "code": {
+            "commit_hash": null,
+            "container": null,
+            "core_dependency": null,
+            "input_data": null,
+            "language": null,
+            "language_version": null,
+            "name": null,
+            "object_type": "Code",
+            "parameters": {
+               "sorter_name": "kilosort4",
+               "sorter_params": {
+                  "Th_learned": 8,
+                  "Th_single_ch": 6,
+                  "Th_universal": 9,
+                  "acg_threshold": 0.2,
+                  "artifact_threshold": null,
+                  "bad_channels": null,
+                  "batch_downsampling": 1,
+                  "batch_size": 60000,
+                  "binning_depth": 5,
+                  "ccg_threshold": 0.25,
+                  "chunk_duration": "1s",
+                  "clear_cache": false,
+                  "cluster_downsampling": 20,
+                  "cluster_init_seed": 5,
+                  "cluster_neighbors": 10,
+                  "delete_recording_dat": true,
+                  "dmin": null,
+                  "dminx": 32,
+                  "do_CAR": true,
+                  "do_correction": true,
+                  "drift_smoothing": [
+                     0.5,
+                     0.5,
+                     0.5
+                  ],
+                  "duplicate_spike_ms": 0.25,
+                  "highpass_cutoff": 300,
+                  "invert_sign": false,
+                  "keep_good_only": false,
+                  "max_channel_distance": null,
+                  "max_cluster_subset": 25000,
+                  "max_peels": 100,
+                  "max_threads_per_worker": 1,
+                  "min_template_size": 10,
+                  "mp_context": null,
+                  "n_jobs": 16,
+                  "n_pcs": 6,
+                  "n_templates": 6,
+                  "nblocks": 5,
+                  "nearest_chans": 10,
+                  "nearest_templates": 100,
+                  "nskip": 25,
+                  "nt": 61,
+                  "nt0min": null,
+                  "pool_engine": "process",
+                  "position_limit": 100,
+                  "progress_bar": false,
+                  "save_extra_vars": false,
+                  "save_preprocessed_copy": false,
+                  "scale": null,
+                  "shift": null,
+                  "sig_interp": 20,
+                  "skip_kilosort_preprocessing": false,
+                  "template_sizes": 5,
+                  "templates_from_data": true,
+                  "torch_device": "auto",
+                  "use_binary_file": null,
+                  "whitening_range": 32,
+                  "x_centers": null
+               }
+            },
+            "run_script": null,
+            "url": "https://github.com/AllenNeuralDynamics/aind-ephys-spikesort-kilosort4",
+            "version": "1.0"
+         },
+         "end_date_time": "2026-09-04T15:43:01.775629Z",
+         "experimenters": [
+            "AIND Pipeline"
+         ],
+         "name": "Spike sorting - experiment1_Record Node 108#Neuropix-PXI-100.ProbeB-AP_recording1",
+         "notes": "\n- KS4 found 755 units, 755 after removing empty templates.\n",
+         "object_type": "Data process",
+         "output_parameters": {
+            "empty_units": 0
+         },
+         "output_path": "../results",
+         "pipeline_name": "AIND Ephys Pipeline",
+         "process_type": "Spike sorting",
+         "resources": null,
+         "stage": "Processing",
+         "start_date_time": "2026-09-04T11:51:09.775629Z"
+      },
+      {
+         "code": {
+            "commit_hash": null,
+            "container": null,
+            "core_dependency": null,
+            "input_data": null,
+            "language": null,
+            "language_version": null,
+            "name": null,
+            "object_type": "Code",
+            "parameters": {
+               "sorter_name": "kilosort4",
+               "sorter_params": {
+                  "Th_learned": 8,
+                  "Th_single_ch": 6,
+                  "Th_universal": 9,
+                  "acg_threshold": 0.2,
+                  "artifact_threshold": null,
+                  "bad_channels": null,
+                  "batch_downsampling": 1,
+                  "batch_size": 60000,
+                  "binning_depth": 5,
+                  "ccg_threshold": 0.25,
+                  "chunk_duration": "1s",
+                  "clear_cache": false,
+                  "cluster_downsampling": 20,
+                  "cluster_init_seed": 5,
+                  "cluster_neighbors": 10,
+                  "delete_recording_dat": true,
+                  "dmin": null,
+                  "dminx": 32,
+                  "do_CAR": true,
+                  "do_correction": true,
+                  "drift_smoothing": [
+                     0.5,
+                     0.5,
+                     0.5
+                  ],
+                  "duplicate_spike_ms": 0.25,
+                  "highpass_cutoff": 300,
+                  "invert_sign": false,
+                  "keep_good_only": false,
+                  "max_channel_distance": null,
+                  "max_cluster_subset": 25000,
+                  "max_peels": 100,
+                  "max_threads_per_worker": 1,
+                  "min_template_size": 10,
+                  "mp_context": null,
+                  "n_jobs": 16,
+                  "n_pcs": 6,
+                  "n_templates": 6,
+                  "nblocks": 5,
+                  "nearest_chans": 10,
+                  "nearest_templates": 100,
+                  "nskip": 25,
+                  "nt": 61,
+                  "nt0min": null,
+                  "pool_engine": "process",
+                  "position_limit": 100,
+                  "progress_bar": false,
+                  "save_extra_vars": false,
+                  "save_preprocessed_copy": false,
+                  "scale": null,
+                  "shift": null,
+                  "sig_interp": 20,
+                  "skip_kilosort_preprocessing": false,
+                  "template_sizes": 5,
+                  "templates_from_data": true,
+                  "torch_device": "auto",
+                  "use_binary_file": null,
+                  "whitening_range": 32,
+                  "x_centers": null
+               }
+            },
+            "run_script": null,
+            "url": "https://github.com/AllenNeuralDynamics/aind-ephys-spikesort-kilosort4",
+            "version": "1.0"
+         },
+         "end_date_time": "2026-09-04T16:40:19.315900Z",
+         "experimenters": [
+            "AIND Pipeline"
+         ],
+         "name": "Spike sorting - experiment1_Record Node 104#Neuropix-PXI-100.ProbeF-AP_recording1",
+         "notes": "\n- KS4 found 1385 units, 1385 after removing empty templates.\n",
+         "object_type": "Data process",
+         "output_parameters": {
+            "empty_units": 0
+         },
+         "output_path": "../results",
+         "pipeline_name": "AIND Ephys Pipeline",
+         "process_type": "Spike sorting",
+         "resources": null,
+         "stage": "Processing",
+         "start_date_time": "2026-09-04T12:06:11.315900Z"
+      },
+      {
+         "code": {
+            "commit_hash": null,
+            "container": null,
+            "core_dependency": null,
+            "input_data": null,
+            "language": null,
+            "language_version": null,
+            "name": null,
+            "object_type": "Code",
+            "parameters": {
+               "sorter_name": "kilosort4",
+               "sorter_params": {
+                  "Th_learned": 8,
+                  "Th_single_ch": 6,
+                  "Th_universal": 9,
+                  "acg_threshold": 0.2,
+                  "artifact_threshold": null,
+                  "bad_channels": null,
+                  "batch_downsampling": 1,
+                  "batch_size": 60000,
+                  "binning_depth": 5,
+                  "ccg_threshold": 0.25,
+                  "chunk_duration": "1s",
+                  "clear_cache": false,
+                  "cluster_downsampling": 20,
+                  "cluster_init_seed": 5,
+                  "cluster_neighbors": 10,
+                  "delete_recording_dat": true,
+                  "dmin": null,
+                  "dminx": 32,
+                  "do_CAR": true,
+                  "do_correction": true,
+                  "drift_smoothing": [
+                     0.5,
+                     0.5,
+                     0.5
+                  ],
+                  "duplicate_spike_ms": 0.25,
+                  "highpass_cutoff": 300,
+                  "invert_sign": false,
+                  "keep_good_only": false,
+                  "max_channel_distance": null,
+                  "max_cluster_subset": 25000,
+                  "max_peels": 100,
+                  "max_threads_per_worker": 1,
+                  "min_template_size": 10,
+                  "mp_context": null,
+                  "n_jobs": 16,
+                  "n_pcs": 6,
+                  "n_templates": 6,
+                  "nblocks": 5,
+                  "nearest_chans": 10,
+                  "nearest_templates": 100,
+                  "nskip": 25,
+                  "nt": 61,
+                  "nt0min": null,
+                  "pool_engine": "process",
+                  "position_limit": 100,
+                  "progress_bar": false,
+                  "save_extra_vars": false,
+                  "save_preprocessed_copy": false,
+                  "scale": null,
+                  "shift": null,
+                  "sig_interp": 20,
+                  "skip_kilosort_preprocessing": false,
+                  "template_sizes": 5,
+                  "templates_from_data": true,
+                  "torch_device": "auto",
+                  "use_binary_file": null,
+                  "whitening_range": 32,
+                  "x_centers": null
+               }
+            },
+            "run_script": null,
+            "url": "https://github.com/AllenNeuralDynamics/aind-ephys-spikesort-kilosort4",
+            "version": "1.0"
+         },
+         "end_date_time": "2026-09-04T14:55:15.984958Z",
+         "experimenters": [
+            "AIND Pipeline"
+         ],
+         "name": "Spike sorting - experiment1_Record Node 104#Neuropix-PXI-100.ProbeD-AP_recording1",
+         "notes": "\n- KS4 found 251 units, 251 after removing empty templates.\n",
+         "object_type": "Data process",
+         "output_parameters": {
+            "empty_units": 0
+         },
+         "output_path": "../results",
+         "pipeline_name": "AIND Ephys Pipeline",
+         "process_type": "Spike sorting",
+         "resources": null,
+         "stage": "Processing",
+         "start_date_time": "2026-09-04T12:12:03.984958Z"
+      },
+      {
+         "code": {
+            "commit_hash": null,
+            "container": null,
+            "core_dependency": null,
+            "input_data": null,
+            "language": null,
+            "language_version": null,
+            "name": null,
+            "object_type": "Code",
+            "parameters": {
+               "sorter_name": "kilosort4",
+               "sorter_params": {
+                  "Th_learned": 8,
+                  "Th_single_ch": 6,
+                  "Th_universal": 9,
+                  "acg_threshold": 0.2,
+                  "artifact_threshold": null,
+                  "bad_channels": null,
+                  "batch_downsampling": 1,
+                  "batch_size": 60000,
+                  "binning_depth": 5,
+                  "ccg_threshold": 0.25,
+                  "chunk_duration": "1s",
+                  "clear_cache": false,
+                  "cluster_downsampling": 20,
+                  "cluster_init_seed": 5,
+                  "cluster_neighbors": 10,
+                  "delete_recording_dat": true,
+                  "dmin": null,
+                  "dminx": 32,
+                  "do_CAR": true,
+                  "do_correction": true,
+                  "drift_smoothing": [
+                     0.5,
+                     0.5,
+                     0.5
+                  ],
+                  "duplicate_spike_ms": 0.25,
+                  "highpass_cutoff": 300,
+                  "invert_sign": false,
+                  "keep_good_only": false,
+                  "max_channel_distance": null,
+                  "max_cluster_subset": 25000,
+                  "max_peels": 100,
+                  "max_threads_per_worker": 1,
+                  "min_template_size": 10,
+                  "mp_context": null,
+                  "n_jobs": 16,
+                  "n_pcs": 6,
+                  "n_templates": 6,
+                  "nblocks": 5,
+                  "nearest_chans": 10,
+                  "nearest_templates": 100,
+                  "nskip": 25,
+                  "nt": 61,
+                  "nt0min": null,
+                  "pool_engine": "process",
+                  "position_limit": 100,
+                  "progress_bar": false,
+                  "save_extra_vars": false,
+                  "save_preprocessed_copy": false,
+                  "scale": null,
+                  "shift": null,
+                  "sig_interp": 20,
+                  "skip_kilosort_preprocessing": false,
+                  "template_sizes": 5,
+                  "templates_from_data": true,
+                  "torch_device": "auto",
+                  "use_binary_file": null,
+                  "whitening_range": 32,
+                  "x_centers": null
+               }
+            },
+            "run_script": null,
+            "url": "https://github.com/AllenNeuralDynamics/aind-ephys-spikesort-kilosort4",
+            "version": "1.0"
+         },
+         "end_date_time": "2026-09-04T15:58:54.839739Z",
+         "experimenters": [
+            "AIND Pipeline"
+         ],
+         "name": "Spike sorting - experiment1_Record Node 108#Neuropix-PXI-100.ProbeC-AP_recording1",
+         "notes": "\n- KS4 found 455 units, 455 after removing empty templates.\n",
+         "object_type": "Data process",
+         "output_parameters": {
+            "empty_units": 0
+         },
+         "output_path": "../results",
+         "pipeline_name": "AIND Ephys Pipeline",
+         "process_type": "Spike sorting",
+         "resources": null,
+         "stage": "Processing",
+         "start_date_time": "2026-09-04T12:19:23.839739Z"
+      },
+      {
+         "code": {
+            "commit_hash": null,
+            "container": null,
+            "core_dependency": null,
+            "input_data": null,
+            "language": null,
+            "language_version": null,
+            "name": null,
+            "object_type": "Code",
+            "parameters": {
+               "sorter_name": "kilosort4",
+               "sorter_params": {
+                  "Th_learned": 8,
+                  "Th_single_ch": 6,
+                  "Th_universal": 9,
+                  "acg_threshold": 0.2,
+                  "artifact_threshold": null,
+                  "bad_channels": null,
+                  "batch_downsampling": 1,
+                  "batch_size": 60000,
+                  "binning_depth": 5,
+                  "ccg_threshold": 0.25,
+                  "chunk_duration": "1s",
+                  "clear_cache": false,
+                  "cluster_downsampling": 20,
+                  "cluster_init_seed": 5,
+                  "cluster_neighbors": 10,
+                  "delete_recording_dat": true,
+                  "dmin": null,
+                  "dminx": 32,
+                  "do_CAR": true,
+                  "do_correction": true,
+                  "drift_smoothing": [
+                     0.5,
+                     0.5,
+                     0.5
+                  ],
+                  "duplicate_spike_ms": 0.25,
+                  "highpass_cutoff": 300,
+                  "invert_sign": false,
+                  "keep_good_only": false,
+                  "max_channel_distance": null,
+                  "max_cluster_subset": 25000,
+                  "max_peels": 100,
+                  "max_threads_per_worker": 1,
+                  "min_template_size": 10,
+                  "mp_context": null,
+                  "n_jobs": 16,
+                  "n_pcs": 6,
+                  "n_templates": 6,
+                  "nblocks": 5,
+                  "nearest_chans": 10,
+                  "nearest_templates": 100,
+                  "nskip": 25,
+                  "nt": 61,
+                  "nt0min": null,
+                  "pool_engine": "process",
+                  "position_limit": 100,
+                  "progress_bar": false,
+                  "save_extra_vars": false,
+                  "save_preprocessed_copy": false,
+                  "scale": null,
+                  "shift": null,
+                  "sig_interp": 20,
+                  "skip_kilosort_preprocessing": false,
+                  "template_sizes": 5,
+                  "templates_from_data": true,
+                  "torch_device": "auto",
+                  "use_binary_file": null,
+                  "whitening_range": 32,
+                  "x_centers": null
+               }
+            },
+            "run_script": null,
+            "url": "https://github.com/AllenNeuralDynamics/aind-ephys-spikesort-kilosort4",
+            "version": "1.0"
+         },
+         "end_date_time": "2026-09-04T16:17:04.412445Z",
+         "experimenters": [
+            "AIND Pipeline"
+         ],
+         "name": "Spike sorting - experiment1_Record Node 108#Neuropix-PXI-100.ProbeA-AP_recording1",
+         "notes": "\n- KS4 found 820 units, 820 after removing empty templates.\n",
+         "object_type": "Data process",
+         "output_parameters": {
+            "empty_units": 0
+         },
+         "output_path": "../results",
+         "pipeline_name": "AIND Ephys Pipeline",
+         "process_type": "Spike sorting",
+         "resources": null,
+         "stage": "Processing",
+         "start_date_time": "2026-09-04T12:19:25.412445Z"
+      },
+      {
+         "code": {
+            "commit_hash": null,
+            "container": null,
+            "core_dependency": null,
+            "input_data": null,
+            "language": null,
+            "language_version": null,
+            "name": null,
+            "object_type": "Code",
+            "parameters": {
+               "sorter_name": "kilosort4",
+               "sorter_params": {
+                  "Th_learned": 8,
+                  "Th_single_ch": 6,
+                  "Th_universal": 9,
+                  "acg_threshold": 0.2,
+                  "artifact_threshold": null,
+                  "bad_channels": null,
+                  "batch_downsampling": 1,
+                  "batch_size": 60000,
+                  "binning_depth": 5,
+                  "ccg_threshold": 0.25,
+                  "chunk_duration": "1s",
+                  "clear_cache": false,
+                  "cluster_downsampling": 20,
+                  "cluster_init_seed": 5,
+                  "cluster_neighbors": 10,
+                  "delete_recording_dat": true,
+                  "dmin": null,
+                  "dminx": 32,
+                  "do_CAR": true,
+                  "do_correction": true,
+                  "drift_smoothing": [
+                     0.5,
+                     0.5,
+                     0.5
+                  ],
+                  "duplicate_spike_ms": 0.25,
+                  "highpass_cutoff": 300,
+                  "invert_sign": false,
+                  "keep_good_only": false,
+                  "max_channel_distance": null,
+                  "max_cluster_subset": 25000,
+                  "max_peels": 100,
+                  "max_threads_per_worker": 1,
+                  "min_template_size": 10,
+                  "mp_context": null,
+                  "n_jobs": 16,
+                  "n_pcs": 6,
+                  "n_templates": 6,
+                  "nblocks": 5,
+                  "nearest_chans": 10,
+                  "nearest_templates": 100,
+                  "nskip": 25,
+                  "nt": 61,
+                  "nt0min": null,
+                  "pool_engine": "process",
+                  "position_limit": 100,
+                  "progress_bar": false,
+                  "save_extra_vars": false,
+                  "save_preprocessed_copy": false,
+                  "scale": null,
+                  "shift": null,
+                  "sig_interp": 20,
+                  "skip_kilosort_preprocessing": false,
+                  "template_sizes": 5,
+                  "templates_from_data": true,
+                  "torch_device": "auto",
+                  "use_binary_file": null,
+                  "whitening_range": 32,
+                  "x_centers": null
+               }
+            },
+            "run_script": null,
+            "url": "https://github.com/AllenNeuralDynamics/aind-ephys-spikesort-kilosort4",
+            "version": "1.0"
+         },
+         "end_date_time": "2026-09-04T16:54:45.234724Z",
+         "experimenters": [
+            "AIND Pipeline"
+         ],
+         "name": "Spike sorting - experiment1_Record Node 104#Neuropix-PXI-100.ProbeE-AP_recording1",
+         "notes": "\n- KS4 found 654 units, 654 after removing empty templates.\n",
+         "object_type": "Data process",
+         "output_parameters": {
+            "empty_units": 0
+         },
+         "output_path": "../results",
+         "pipeline_name": "AIND Ephys Pipeline",
+         "process_type": "Spike sorting",
+         "resources": null,
+         "stage": "Processing",
+         "start_date_time": "2026-09-04T12:19:50.234724Z"
+      },
+      {
+         "code": {
+            "commit_hash": null,
+            "container": null,
+            "core_dependency": null,
+            "input_data": null,
+            "language": null,
+            "language_version": null,
+            "name": null,
+            "object_type": "Code",
+            "parameters": {
+               "duplicate_threshold": 0.9,
+               "extensions": {
+                  "amplitude_scalings": {},
+                  "correlograms": {
+                     "bin_ms": 1,
+                     "window_ms": 50
+                  },
+                  "isi_histograms": {
+                     "bin_ms": 5,
+                     "window_ms": 100
+                  },
+                  "noise_levels": {
+                     "random_slices_kwargs": {
+                        "chunk_size": 10000,
+                        "num_chunks_per_segment": 20,
+                        "seed": null
+                     }
+                  },
+                  "principal_components": {
+                     "mode": "by_channel_local",
+                     "n_components": 5,
+                     "whiten": true
+                  },
+                  "random_spikes": {
+                     "margin_size": null,
+                     "max_spikes_per_unit": 500,
+                     "method": "uniform",
+                     "seed": null
+                  },
+                  "spike_amplitudes": {
+                     "peak_sign": "neg"
+                  },
+                  "spike_locations": {
+                     "method": "grid_convolution"
+                  },
+                  "template_metrics": {
+                     "include_multi_channel_metrics": true,
+                     "upsampling_factor": 10
+                  },
+                  "template_similarity": {
+                     "method": "l1"
+                  },
+                  "templates": {},
+                  "unit_locations": {
+                     "method": "monopolar_triangulation"
+                  },
+                  "valid_unit_periods": {},
+                  "waveforms": {
+                     "dtype": null,
+                     "ms_after": 3,
+                     "ms_before": 2
+                  }
+               },
+               "recording_name": "experiment1_Record Node 108#Neuropix-PXI-100.ProbeB-AP_recording1",
+               "return_in_uV": true
+            },
+            "run_script": null,
+            "url": "https://github.com/AllenNeuralDynamics/aind-ephys-postprocessing",
+            "version": "1.0"
+         },
+         "end_date_time": "2026-09-04T18:14:12.986235Z",
+         "experimenters": [
+            "AIND Pipeline"
+         ],
+         "name": "Ephys postprocessing - experiment1_Record Node 108#Neuropix-PXI-100.ProbeB-AP_recording1",
+         "notes": "\n- Removed 2 duplicated units.\n",
+         "object_type": "Data process",
+         "output_parameters": {
+            "duplicated_units": 2
+         },
+         "output_path": "../results",
+         "pipeline_name": "AIND Ephys Pipeline",
+         "process_type": "Ephys postprocessing",
+         "resources": null,
+         "stage": "Processing",
+         "start_date_time": "2026-09-04T17:29:57.986235Z"
+      },
+      {
+         "code": {
+            "commit_hash": null,
+            "container": null,
+            "core_dependency": null,
+            "input_data": null,
+            "language": null,
+            "language_version": null,
+            "name": null,
+            "object_type": "Code",
+            "parameters": {
+               "duplicate_threshold": 0.9,
+               "extensions": {
+                  "amplitude_scalings": {},
+                  "correlograms": {
+                     "bin_ms": 1,
+                     "window_ms": 50
+                  },
+                  "isi_histograms": {
+                     "bin_ms": 5,
+                     "window_ms": 100
+                  },
+                  "noise_levels": {
+                     "random_slices_kwargs": {
+                        "chunk_size": 10000,
+                        "num_chunks_per_segment": 20,
+                        "seed": null
+                     }
+                  },
+                  "principal_components": {
+                     "mode": "by_channel_local",
+                     "n_components": 5,
+                     "whiten": true
+                  },
+                  "random_spikes": {
+                     "margin_size": null,
+                     "max_spikes_per_unit": 500,
+                     "method": "uniform",
+                     "seed": null
+                  },
+                  "spike_amplitudes": {
+                     "peak_sign": "neg"
+                  },
+                  "spike_locations": {
+                     "method": "grid_convolution"
+                  },
+                  "template_metrics": {
+                     "include_multi_channel_metrics": true,
+                     "upsampling_factor": 10
+                  },
+                  "template_similarity": {
+                     "method": "l1"
+                  },
+                  "templates": {},
+                  "unit_locations": {
+                     "method": "monopolar_triangulation"
+                  },
+                  "valid_unit_periods": {},
+                  "waveforms": {
+                     "dtype": null,
+                     "ms_after": 3,
+                     "ms_before": 2
+                  }
+               },
+               "recording_name": "experiment1_Record Node 104#Neuropix-PXI-100.ProbeD-AP_recording1",
+               "return_in_uV": true
+            },
+            "run_script": null,
+            "url": "https://github.com/AllenNeuralDynamics/aind-ephys-postprocessing",
+            "version": "1.0"
+         },
+         "end_date_time": "2026-09-04T17:54:27.802153Z",
+         "experimenters": [
+            "AIND Pipeline"
+         ],
+         "name": "Ephys postprocessing - experiment1_Record Node 104#Neuropix-PXI-100.ProbeD-AP_recording1",
+         "notes": "\n- Removed 0 duplicated units.\n",
+         "object_type": "Data process",
+         "output_parameters": {
+            "duplicated_units": 0
+         },
+         "output_path": "../results",
+         "pipeline_name": "AIND Ephys Pipeline",
+         "process_type": "Ephys postprocessing",
+         "resources": null,
+         "stage": "Processing",
+         "start_date_time": "2026-09-04T17:29:58.802153Z"
+      },
+      {
+         "code": {
+            "commit_hash": null,
+            "container": null,
+            "core_dependency": null,
+            "input_data": null,
+            "language": null,
+            "language_version": null,
+            "name": null,
+            "object_type": "Code",
+            "parameters": {
+               "duplicate_threshold": 0.9,
+               "extensions": {
+                  "amplitude_scalings": {},
+                  "correlograms": {
+                     "bin_ms": 1,
+                     "window_ms": 50
+                  },
+                  "isi_histograms": {
+                     "bin_ms": 5,
+                     "window_ms": 100
+                  },
+                  "noise_levels": {
+                     "random_slices_kwargs": {
+                        "chunk_size": 10000,
+                        "num_chunks_per_segment": 20,
+                        "seed": null
+                     }
+                  },
+                  "principal_components": {
+                     "mode": "by_channel_local",
+                     "n_components": 5,
+                     "whiten": true
+                  },
+                  "random_spikes": {
+                     "margin_size": null,
+                     "max_spikes_per_unit": 500,
+                     "method": "uniform",
+                     "seed": null
+                  },
+                  "spike_amplitudes": {
+                     "peak_sign": "neg"
+                  },
+                  "spike_locations": {
+                     "method": "grid_convolution"
+                  },
+                  "template_metrics": {
+                     "include_multi_channel_metrics": true,
+                     "upsampling_factor": 10
+                  },
+                  "template_similarity": {
+                     "method": "l1"
+                  },
+                  "templates": {},
+                  "unit_locations": {
+                     "method": "monopolar_triangulation"
+                  },
+                  "valid_unit_periods": {},
+                  "waveforms": {
+                     "dtype": null,
+                     "ms_after": 3,
+                     "ms_before": 2
+                  }
+               },
+               "recording_name": "experiment1_Record Node 108#Neuropix-PXI-100.ProbeC-AP_recording1",
+               "return_in_uV": true
+            },
+            "run_script": null,
+            "url": "https://github.com/AllenNeuralDynamics/aind-ephys-postprocessing",
+            "version": "1.0"
+         },
+         "end_date_time": "2026-09-04T18:57:05.492897Z",
+         "experimenters": [
+            "AIND Pipeline"
+         ],
+         "name": "Ephys postprocessing - experiment1_Record Node 108#Neuropix-PXI-100.ProbeC-AP_recording1",
+         "notes": "\n- Removed 3 duplicated units.\n",
+         "object_type": "Data process",
+         "output_parameters": {
+            "duplicated_units": 3
+         },
+         "output_path": "../results",
+         "pipeline_name": "AIND Ephys Pipeline",
+         "process_type": "Ephys postprocessing",
+         "resources": null,
+         "stage": "Processing",
+         "start_date_time": "2026-09-04T17:51:42.492897Z"
+      },
+      {
+         "code": {
+            "commit_hash": null,
+            "container": null,
+            "core_dependency": null,
+            "input_data": null,
+            "language": null,
+            "language_version": null,
+            "name": null,
+            "object_type": "Code",
+            "parameters": {
+               "duplicate_threshold": 0.9,
+               "extensions": {
+                  "amplitude_scalings": {},
+                  "correlograms": {
+                     "bin_ms": 1,
+                     "window_ms": 50
+                  },
+                  "isi_histograms": {
+                     "bin_ms": 5,
+                     "window_ms": 100
+                  },
+                  "noise_levels": {
+                     "random_slices_kwargs": {
+                        "chunk_size": 10000,
+                        "num_chunks_per_segment": 20,
+                        "seed": null
+                     }
+                  },
+                  "principal_components": {
+                     "mode": "by_channel_local",
+                     "n_components": 5,
+                     "whiten": true
+                  },
+                  "random_spikes": {
+                     "margin_size": null,
+                     "max_spikes_per_unit": 500,
+                     "method": "uniform",
+                     "seed": null
+                  },
+                  "spike_amplitudes": {
+                     "peak_sign": "neg"
+                  },
+                  "spike_locations": {
+                     "method": "grid_convolution"
+                  },
+                  "template_metrics": {
+                     "include_multi_channel_metrics": true,
+                     "upsampling_factor": 10
+                  },
+                  "template_similarity": {
+                     "method": "l1"
+                  },
+                  "templates": {},
+                  "unit_locations": {
+                     "method": "monopolar_triangulation"
+                  },
+                  "valid_unit_periods": {},
+                  "waveforms": {
+                     "dtype": null,
+                     "ms_after": 3,
+                     "ms_before": 2
+                  }
+               },
+               "recording_name": "experiment1_Record Node 108#Neuropix-PXI-100.ProbeA-AP_recording1",
+               "return_in_uV": true
+            },
+            "run_script": null,
+            "url": "https://github.com/AllenNeuralDynamics/aind-ephys-postprocessing",
+            "version": "1.0"
+         },
+         "end_date_time": "2026-09-04T19:22:19.995778Z",
+         "experimenters": [
+            "AIND Pipeline"
+         ],
+         "name": "Ephys postprocessing - experiment1_Record Node 108#Neuropix-PXI-100.ProbeA-AP_recording1",
+         "notes": "\n- Removed 21 duplicated units.\n",
+         "object_type": "Data process",
+         "output_parameters": {
+            "duplicated_units": 21
+         },
+         "output_path": "../results",
+         "pipeline_name": "AIND Ephys Pipeline",
+         "process_type": "Ephys postprocessing",
+         "resources": null,
+         "stage": "Processing",
+         "start_date_time": "2026-09-04T17:51:43.995778Z"
+      },
+      {
+         "code": {
+            "commit_hash": null,
+            "container": null,
+            "core_dependency": null,
+            "input_data": null,
+            "language": null,
+            "language_version": null,
+            "name": null,
+            "object_type": "Code",
+            "parameters": {
+               "duplicate_threshold": 0.9,
+               "extensions": {
+                  "amplitude_scalings": {},
+                  "correlograms": {
+                     "bin_ms": 1,
+                     "window_ms": 50
+                  },
+                  "isi_histograms": {
+                     "bin_ms": 5,
+                     "window_ms": 100
+                  },
+                  "noise_levels": {
+                     "random_slices_kwargs": {
+                        "chunk_size": 10000,
+                        "num_chunks_per_segment": 20,
+                        "seed": null
+                     }
+                  },
+                  "principal_components": {
+                     "mode": "by_channel_local",
+                     "n_components": 5,
+                     "whiten": true
+                  },
+                  "random_spikes": {
+                     "margin_size": null,
+                     "max_spikes_per_unit": 500,
+                     "method": "uniform",
+                     "seed": null
+                  },
+                  "spike_amplitudes": {
+                     "peak_sign": "neg"
+                  },
+                  "spike_locations": {
+                     "method": "grid_convolution"
+                  },
+                  "template_metrics": {
+                     "include_multi_channel_metrics": true,
+                     "upsampling_factor": 10
+                  },
+                  "template_similarity": {
+                     "method": "l1"
+                  },
+                  "templates": {},
+                  "unit_locations": {
+                     "method": "monopolar_triangulation"
+                  },
+                  "valid_unit_periods": {},
+                  "waveforms": {
+                     "dtype": null,
+                     "ms_after": 3,
+                     "ms_before": 2
+                  }
+               },
+               "recording_name": "experiment1_Record Node 104#Neuropix-PXI-100.ProbeE-AP_recording1",
+               "return_in_uV": true
+            },
+            "run_script": null,
+            "url": "https://github.com/AllenNeuralDynamics/aind-ephys-postprocessing",
+            "version": "1.0"
+         },
+         "end_date_time": "2026-09-04T19:39:12.152696Z",
+         "experimenters": [
+            "AIND Pipeline"
+         ],
+         "name": "Ephys postprocessing - experiment1_Record Node 104#Neuropix-PXI-100.ProbeE-AP_recording1",
+         "notes": "\n- Removed 5 duplicated units.\n",
+         "object_type": "Data process",
+         "output_parameters": {
+            "duplicated_units": 5
+         },
+         "output_path": "../results",
+         "pipeline_name": "AIND Ephys Pipeline",
+         "process_type": "Ephys postprocessing",
+         "resources": null,
+         "stage": "Processing",
+         "start_date_time": "2026-09-04T17:51:47.152696Z"
+      },
+      {
+         "code": {
+            "commit_hash": null,
+            "container": null,
+            "core_dependency": null,
+            "input_data": null,
+            "language": null,
+            "language_version": null,
+            "name": null,
+            "object_type": "Code",
+            "parameters": {
+               "duplicate_threshold": 0.9,
+               "extensions": {
+                  "amplitude_scalings": {},
+                  "correlograms": {
+                     "bin_ms": 1,
+                     "window_ms": 50
+                  },
+                  "isi_histograms": {
+                     "bin_ms": 5,
+                     "window_ms": 100
+                  },
+                  "noise_levels": {
+                     "random_slices_kwargs": {
+                        "chunk_size": 10000,
+                        "num_chunks_per_segment": 20,
+                        "seed": null
+                     }
+                  },
+                  "principal_components": {
+                     "mode": "by_channel_local",
+                     "n_components": 5,
+                     "whiten": true
+                  },
+                  "random_spikes": {
+                     "margin_size": null,
+                     "max_spikes_per_unit": 500,
+                     "method": "uniform",
+                     "seed": null
+                  },
+                  "spike_amplitudes": {
+                     "peak_sign": "neg"
+                  },
+                  "spike_locations": {
+                     "method": "grid_convolution"
+                  },
+                  "template_metrics": {
+                     "include_multi_channel_metrics": true,
+                     "upsampling_factor": 10
+                  },
+                  "template_similarity": {
+                     "method": "l1"
+                  },
+                  "templates": {},
+                  "unit_locations": {
+                     "method": "monopolar_triangulation"
+                  },
+                  "valid_unit_periods": {},
+                  "waveforms": {
+                     "dtype": null,
+                     "ms_after": 3,
+                     "ms_before": 2
+                  }
+               },
+               "recording_name": "experiment1_Record Node 104#Neuropix-PXI-100.ProbeF-AP_recording1",
+               "return_in_uV": true
+            },
+            "run_script": null,
+            "url": "https://github.com/AllenNeuralDynamics/aind-ephys-postprocessing",
+            "version": "1.0"
+         },
+         "end_date_time": "2026-09-04T19:36:38.874162Z",
+         "experimenters": [
+            "AIND Pipeline"
+         ],
+         "name": "Ephys postprocessing - experiment1_Record Node 104#Neuropix-PXI-100.ProbeF-AP_recording1",
+         "notes": "\n- Removed 25 duplicated units.\n",
+         "object_type": "Data process",
+         "output_parameters": {
+            "duplicated_units": 25
+         },
+         "output_path": "../results",
+         "pipeline_name": "AIND Ephys Pipeline",
+         "process_type": "Ephys postprocessing",
+         "resources": null,
+         "stage": "Processing",
+         "start_date_time": "2026-09-04T17:52:05.874162Z"
+      },
+      {
+         "code": {
+            "commit_hash": null,
+            "container": null,
+            "core_dependency": null,
+            "input_data": null,
+            "language": null,
+            "language_version": null,
+            "name": null,
+            "object_type": "Code",
+            "parameters": {
+               "bombcell": {
+                  "mua": {
+                     "amplitude_cutoff": {
+                        "greater": null,
+                        "less": 0.2
+                     },
+                     "amplitude_median": {
+                        "abs": true,
+                        "greater": 30,
+                        "less": null
+                     },
+                     "drift_ptp": {
+                        "greater": null,
+                        "less": 100
+                     },
+                     "num_spikes": {
+                        "greater": 300,
+                        "less": null
+                     },
+                     "presence_ratio": {
+                        "greater": 0.7,
+                        "less": null
+                     },
+                     "rp_contamination": {
+                        "greater": null,
+                        "less": 0.1
+                     },
+                     "snr": {
+                        "greater": 5,
+                        "less": null
+                     }
+                  },
+                  "noise": {
+                     "exp_decay": {
+                        "greater": 0.01,
+                        "less": 0.1
+                     },
+                     "num_negative_peaks": {
+                        "greater": null,
+                        "less": 1
+                     },
+                     "num_positive_peaks": {
+                        "greater": null,
+                        "less": 2
+                     },
+                     "peak_after_to_trough_ratio": {
+                        "greater": null,
+                        "less": 0.8
+                     },
+                     "peak_to_trough_duration": {
+                        "greater": 0.0001,
+                        "less": 0.00115
+                     },
+                     "waveform_baseline_flatness": {
+                        "greater": null,
+                        "less": 0.5
+                     }
+                  },
+                  "non-somatic": {
+                     "main_peak_to_trough_ratio": {
+                        "greater": null,
+                        "less": 0.8
+                     },
+                     "peak_before_to_peak_after_ratio": {
+                        "greater": null,
+                        "less": 3
+                     },
+                     "peak_before_to_trough_ratio": {
+                        "greater": null,
+                        "less": 3
+                     },
+                     "peak_before_width": {
+                        "greater": 0.00015,
+                        "less": null
+                     },
+                     "trough_width": {
+                        "greater": 0.0002,
+                        "less": null
+                     }
+                  }
+               },
+               "noise_strategy": "bombcell+unitrefine",
+               "qc_thresholds": {
+                  "amplitude_cutoff": {
+                     "less": 0.1
+                  },
+                  "presence_ratio": {
+                     "greater": 0.8
+                  },
+                  "rp_contamination": {
+                     "less": 0.5
+                  }
+               },
+               "recording_name": "experiment1_Record Node 104#Neuropix-PXI-100.ProbeD-AP_recording1",
+               "slay": {
+                  "slay": {
+                     "k1": 0.25,
+                     "k2": 1,
+                     "slay_threshold": 0.4
+                  },
+                  "template_similarity": {
+                     "templates_diff": 0.35
+                  }
+               },
+               "unitrefine": {
+                  "noise_neural_classifier": "SpikeInterface/UnitRefine_noise_neural_classifier",
+                  "sua_mua_classifier": "SpikeInterface/UnitRefine_sua_mua_classifier"
+               }
+            },
+            "run_script": null,
+            "url": "https://github.com/AllenNeuralDynamics/aind-ephys-curation",
+            "version": "2.0"
+         },
+         "end_date_time": "2026-09-04T17:56:18.858687Z",
+         "experimenters": [
+            "AIND Pipeline"
+         ],
+         "name": "Ephys curation - experiment1_Record Node 104#Neuropix-PXI-100.ProbeD-AP_recording1",
+         "notes": "Curation thresholds: {'rp_contamination': {'less': 0.5}, 'presence_ratio': {'greater': 0.8}, 'amplitude_cutoff': {'less': 0.1}}\nPassing default QC: 234/251UnitRefine Noise: 197 / 251\nUnitRefine SUA: 22 / 251\nUnitRefine MUA: 32 / 251\nBombcell Noise: 144 / 251\nBombcell SUA: 0 / 251\nBombcell MUA: 103 / 251\nBombcell NON-SOMA: 4 / 251\nSLAy found 0 potential merges\n",
+         "object_type": "Data process",
+         "output_parameters": {
+            "bombcell_mua": 103,
+            "bombcell_noise": 144,
+            "bombcell_non_somatic": 4,
+            "bombcell_sua": 0,
+            "failing_qc": 17,
+            "passing_qc": 234,
+            "slay_merges": 0,
+            "total_units": 251,
+            "unitrefine_mua": 32,
+            "unitrefine_noise": 197,
+            "unitrefine_sua": 22
+         },
+         "output_path": "../results",
+         "pipeline_name": "AIND Ephys Pipeline",
+         "process_type": "Ephys curation",
+         "resources": null,
+         "stage": "Processing",
+         "start_date_time": "2026-09-04T17:55:53.858687Z"
+      },
+      {
+         "code": {
+            "commit_hash": null,
+            "container": null,
+            "core_dependency": null,
+            "input_data": null,
+            "language": null,
+            "language_version": null,
+            "name": null,
+            "object_type": "Code",
+            "parameters": {
+               "bombcell": {
+                  "mua": {
+                     "amplitude_cutoff": {
+                        "greater": null,
+                        "less": 0.2
+                     },
+                     "amplitude_median": {
+                        "abs": true,
+                        "greater": 30,
+                        "less": null
+                     },
+                     "drift_ptp": {
+                        "greater": null,
+                        "less": 100
+                     },
+                     "num_spikes": {
+                        "greater": 300,
+                        "less": null
+                     },
+                     "presence_ratio": {
+                        "greater": 0.7,
+                        "less": null
+                     },
+                     "rp_contamination": {
+                        "greater": null,
+                        "less": 0.1
+                     },
+                     "snr": {
+                        "greater": 5,
+                        "less": null
+                     }
+                  },
+                  "noise": {
+                     "exp_decay": {
+                        "greater": 0.01,
+                        "less": 0.1
+                     },
+                     "num_negative_peaks": {
+                        "greater": null,
+                        "less": 1
+                     },
+                     "num_positive_peaks": {
+                        "greater": null,
+                        "less": 2
+                     },
+                     "peak_after_to_trough_ratio": {
+                        "greater": null,
+                        "less": 0.8
+                     },
+                     "peak_to_trough_duration": {
+                        "greater": 0.0001,
+                        "less": 0.00115
+                     },
+                     "waveform_baseline_flatness": {
+                        "greater": null,
+                        "less": 0.5
+                     }
+                  },
+                  "non-somatic": {
+                     "main_peak_to_trough_ratio": {
+                        "greater": null,
+                        "less": 0.8
+                     },
+                     "peak_before_to_peak_after_ratio": {
+                        "greater": null,
+                        "less": 3
+                     },
+                     "peak_before_to_trough_ratio": {
+                        "greater": null,
+                        "less": 3
+                     },
+                     "peak_before_width": {
+                        "greater": 0.00015,
+                        "less": null
+                     },
+                     "trough_width": {
+                        "greater": 0.0002,
+                        "less": null
+                     }
+                  }
+               },
+               "noise_strategy": "bombcell+unitrefine",
+               "qc_thresholds": {
+                  "amplitude_cutoff": {
+                     "less": 0.1
+                  },
+                  "presence_ratio": {
+                     "greater": 0.8
+                  },
+                  "rp_contamination": {
+                     "less": 0.5
+                  }
+               },
+               "recording_name": "experiment1_Record Node 108#Neuropix-PXI-100.ProbeB-AP_recording1",
+               "slay": {
+                  "slay": {
+                     "k1": 0.25,
+                     "k2": 1,
+                     "slay_threshold": 0.4
+                  },
+                  "template_similarity": {
+                     "templates_diff": 0.35
+                  }
+               },
+               "unitrefine": {
+                  "noise_neural_classifier": "SpikeInterface/UnitRefine_noise_neural_classifier",
+                  "sua_mua_classifier": "SpikeInterface/UnitRefine_sua_mua_classifier"
+               }
+            },
+            "run_script": null,
+            "url": "https://github.com/AllenNeuralDynamics/aind-ephys-curation",
+            "version": "2.0"
+         },
+         "end_date_time": "2026-09-04T18:16:41.868027Z",
+         "experimenters": [
+            "AIND Pipeline"
+         ],
+         "name": "Ephys curation - experiment1_Record Node 108#Neuropix-PXI-100.ProbeB-AP_recording1",
+         "notes": "Curation thresholds: {'rp_contamination': {'less': 0.5}, 'presence_ratio': {'greater': 0.8}, 'amplitude_cutoff': {'less': 0.1}}\nPassing default QC: 382/753UnitRefine Noise: 114 / 753\nUnitRefine SUA: 287 / 753\nUnitRefine MUA: 352 / 753\nBombcell Noise: 93 / 753\nBombcell SUA: 166 / 753\nBombcell MUA: 444 / 753\nBombcell NON-SOMA: 50 / 753\nSLAy found 3 potential merges\n",
+         "object_type": "Data process",
+         "output_parameters": {
+            "bombcell_mua": 444,
+            "bombcell_noise": 93,
+            "bombcell_non_somatic": 50,
+            "bombcell_sua": 166,
+            "failing_qc": 371,
+            "passing_qc": 382,
+            "slay_merges": 3,
+            "total_units": 753,
+            "unitrefine_mua": 352,
+            "unitrefine_noise": 114,
+            "unitrefine_sua": 287
+         },
+         "output_path": "../results",
+         "pipeline_name": "AIND Ephys Pipeline",
+         "process_type": "Ephys curation",
+         "resources": null,
+         "stage": "Processing",
+         "start_date_time": "2026-09-04T18:15:54.868027Z"
+      },
+      {
+         "code": {
+            "commit_hash": null,
+            "container": null,
+            "core_dependency": null,
+            "input_data": null,
+            "language": null,
+            "language_version": null,
+            "name": null,
+            "object_type": "Code",
+            "parameters": {
+               "bombcell": {
+                  "mua": {
+                     "amplitude_cutoff": {
+                        "greater": null,
+                        "less": 0.2
+                     },
+                     "amplitude_median": {
+                        "abs": true,
+                        "greater": 30,
+                        "less": null
+                     },
+                     "drift_ptp": {
+                        "greater": null,
+                        "less": 100
+                     },
+                     "num_spikes": {
+                        "greater": 300,
+                        "less": null
+                     },
+                     "presence_ratio": {
+                        "greater": 0.7,
+                        "less": null
+                     },
+                     "rp_contamination": {
+                        "greater": null,
+                        "less": 0.1
+                     },
+                     "snr": {
+                        "greater": 5,
+                        "less": null
+                     }
+                  },
+                  "noise": {
+                     "exp_decay": {
+                        "greater": 0.01,
+                        "less": 0.1
+                     },
+                     "num_negative_peaks": {
+                        "greater": null,
+                        "less": 1
+                     },
+                     "num_positive_peaks": {
+                        "greater": null,
+                        "less": 2
+                     },
+                     "peak_after_to_trough_ratio": {
+                        "greater": null,
+                        "less": 0.8
+                     },
+                     "peak_to_trough_duration": {
+                        "greater": 0.0001,
+                        "less": 0.00115
+                     },
+                     "waveform_baseline_flatness": {
+                        "greater": null,
+                        "less": 0.5
+                     }
+                  },
+                  "non-somatic": {
+                     "main_peak_to_trough_ratio": {
+                        "greater": null,
+                        "less": 0.8
+                     },
+                     "peak_before_to_peak_after_ratio": {
+                        "greater": null,
+                        "less": 3
+                     },
+                     "peak_before_to_trough_ratio": {
+                        "greater": null,
+                        "less": 3
+                     },
+                     "peak_before_width": {
+                        "greater": 0.00015,
+                        "less": null
+                     },
+                     "trough_width": {
+                        "greater": 0.0002,
+                        "less": null
+                     }
+                  }
+               },
+               "noise_strategy": "bombcell+unitrefine",
+               "qc_thresholds": {
+                  "amplitude_cutoff": {
+                     "less": 0.1
+                  },
+                  "presence_ratio": {
+                     "greater": 0.8
+                  },
+                  "rp_contamination": {
+                     "less": 0.5
+                  }
+               },
+               "recording_name": "experiment1_Record Node 108#Neuropix-PXI-100.ProbeC-AP_recording1",
+               "slay": {
+                  "slay": {
+                     "k1": 0.25,
+                     "k2": 1,
+                     "slay_threshold": 0.4
+                  },
+                  "template_similarity": {
+                     "templates_diff": 0.35
+                  }
+               },
+               "unitrefine": {
+                  "noise_neural_classifier": "SpikeInterface/UnitRefine_noise_neural_classifier",
+                  "sua_mua_classifier": "SpikeInterface/UnitRefine_sua_mua_classifier"
+               }
+            },
+            "run_script": null,
+            "url": "https://github.com/AllenNeuralDynamics/aind-ephys-curation",
+            "version": "2.0"
+         },
+         "end_date_time": "2026-09-04T19:00:19.748678Z",
+         "experimenters": [
+            "AIND Pipeline"
+         ],
+         "name": "Ephys curation - experiment1_Record Node 108#Neuropix-PXI-100.ProbeC-AP_recording1",
+         "notes": "Curation thresholds: {'rp_contamination': {'less': 0.5}, 'presence_ratio': {'greater': 0.8}, 'amplitude_cutoff': {'less': 0.1}}\nPassing default QC: 203/452UnitRefine Noise: 185 / 452\nUnitRefine SUA: 139 / 452\nUnitRefine MUA: 128 / 452\nBombcell Noise: 140 / 452\nBombcell SUA: 76 / 452\nBombcell MUA: 208 / 452\nBombcell NON-SOMA: 28 / 452\nSLAy found 2 potential merges\n",
+         "object_type": "Data process",
+         "output_parameters": {
+            "bombcell_mua": 208,
+            "bombcell_noise": 140,
+            "bombcell_non_somatic": 28,
+            "bombcell_sua": 76,
+            "failing_qc": 249,
+            "passing_qc": 203,
+            "slay_merges": 2,
+            "total_units": 452,
+            "unitrefine_mua": 128,
+            "unitrefine_noise": 185,
+            "unitrefine_sua": 139
+         },
+         "output_path": "../results",
+         "pipeline_name": "AIND Ephys Pipeline",
+         "process_type": "Ephys curation",
+         "resources": null,
+         "stage": "Processing",
+         "start_date_time": "2026-09-04T18:59:08.748678Z"
+      },
+      {
+         "code": {
+            "commit_hash": null,
+            "container": null,
+            "core_dependency": null,
+            "input_data": null,
+            "language": null,
+            "language_version": null,
+            "name": null,
+            "object_type": "Code",
+            "parameters": {
+               "bombcell": {
+                  "mua": {
+                     "amplitude_cutoff": {
+                        "greater": null,
+                        "less": 0.2
+                     },
+                     "amplitude_median": {
+                        "abs": true,
+                        "greater": 30,
+                        "less": null
+                     },
+                     "drift_ptp": {
+                        "greater": null,
+                        "less": 100
+                     },
+                     "num_spikes": {
+                        "greater": 300,
+                        "less": null
+                     },
+                     "presence_ratio": {
+                        "greater": 0.7,
+                        "less": null
+                     },
+                     "rp_contamination": {
+                        "greater": null,
+                        "less": 0.1
+                     },
+                     "snr": {
+                        "greater": 5,
+                        "less": null
+                     }
+                  },
+                  "noise": {
+                     "exp_decay": {
+                        "greater": 0.01,
+                        "less": 0.1
+                     },
+                     "num_negative_peaks": {
+                        "greater": null,
+                        "less": 1
+                     },
+                     "num_positive_peaks": {
+                        "greater": null,
+                        "less": 2
+                     },
+                     "peak_after_to_trough_ratio": {
+                        "greater": null,
+                        "less": 0.8
+                     },
+                     "peak_to_trough_duration": {
+                        "greater": 0.0001,
+                        "less": 0.00115
+                     },
+                     "waveform_baseline_flatness": {
+                        "greater": null,
+                        "less": 0.5
+                     }
+                  },
+                  "non-somatic": {
+                     "main_peak_to_trough_ratio": {
+                        "greater": null,
+                        "less": 0.8
+                     },
+                     "peak_before_to_peak_after_ratio": {
+                        "greater": null,
+                        "less": 3
+                     },
+                     "peak_before_to_trough_ratio": {
+                        "greater": null,
+                        "less": 3
+                     },
+                     "peak_before_width": {
+                        "greater": 0.00015,
+                        "less": null
+                     },
+                     "trough_width": {
+                        "greater": 0.0002,
+                        "less": null
+                     }
+                  }
+               },
+               "noise_strategy": "bombcell+unitrefine",
+               "qc_thresholds": {
+                  "amplitude_cutoff": {
+                     "less": 0.1
+                  },
+                  "presence_ratio": {
+                     "greater": 0.8
+                  },
+                  "rp_contamination": {
+                     "less": 0.5
+                  }
+               },
+               "recording_name": "experiment1_Record Node 108#Neuropix-PXI-100.ProbeA-AP_recording1",
+               "slay": {
+                  "slay": {
+                     "k1": 0.25,
+                     "k2": 1,
+                     "slay_threshold": 0.4
+                  },
+                  "template_similarity": {
+                     "templates_diff": 0.35
+                  }
+               },
+               "unitrefine": {
+                  "noise_neural_classifier": "SpikeInterface/UnitRefine_noise_neural_classifier",
+                  "sua_mua_classifier": "SpikeInterface/UnitRefine_sua_mua_classifier"
+               }
+            },
+            "run_script": null,
+            "url": "https://github.com/AllenNeuralDynamics/aind-ephys-curation",
+            "version": "2.0"
+         },
+         "end_date_time": "2026-09-04T19:25:01.844528Z",
+         "experimenters": [
+            "AIND Pipeline"
+         ],
+         "name": "Ephys curation - experiment1_Record Node 108#Neuropix-PXI-100.ProbeA-AP_recording1",
+         "notes": "Curation thresholds: {'rp_contamination': {'less': 0.5}, 'presence_ratio': {'greater': 0.8}, 'amplitude_cutoff': {'less': 0.1}}\nPassing default QC: 379/799UnitRefine Noise: 193 / 799\nUnitRefine SUA: 285 / 799\nUnitRefine MUA: 321 / 799\nBombcell Noise: 150 / 799\nBombcell SUA: 135 / 799\nBombcell MUA: 447 / 799\nBombcell NON-SOMA: 67 / 799\nSLAy found 3 potential merges\n",
+         "object_type": "Data process",
+         "output_parameters": {
+            "bombcell_mua": 447,
+            "bombcell_noise": 150,
+            "bombcell_non_somatic": 67,
+            "bombcell_sua": 135,
+            "failing_qc": 420,
+            "passing_qc": 379,
+            "slay_merges": 3,
+            "total_units": 799,
+            "unitrefine_mua": 321,
+            "unitrefine_noise": 193,
+            "unitrefine_sua": 285
+         },
+         "output_path": "../results",
+         "pipeline_name": "AIND Ephys Pipeline",
+         "process_type": "Ephys curation",
+         "resources": null,
+         "stage": "Processing",
+         "start_date_time": "2026-09-04T19:23:57.844528Z"
+      },
+      {
+         "code": {
+            "commit_hash": null,
+            "container": null,
+            "core_dependency": null,
+            "input_data": null,
+            "language": null,
+            "language_version": null,
+            "name": null,
+            "object_type": "Code",
+            "parameters": {
+               "bombcell": {
+                  "mua": {
+                     "amplitude_cutoff": {
+                        "greater": null,
+                        "less": 0.2
+                     },
+                     "amplitude_median": {
+                        "abs": true,
+                        "greater": 30,
+                        "less": null
+                     },
+                     "drift_ptp": {
+                        "greater": null,
+                        "less": 100
+                     },
+                     "num_spikes": {
+                        "greater": 300,
+                        "less": null
+                     },
+                     "presence_ratio": {
+                        "greater": 0.7,
+                        "less": null
+                     },
+                     "rp_contamination": {
+                        "greater": null,
+                        "less": 0.1
+                     },
+                     "snr": {
+                        "greater": 5,
+                        "less": null
+                     }
+                  },
+                  "noise": {
+                     "exp_decay": {
+                        "greater": 0.01,
+                        "less": 0.1
+                     },
+                     "num_negative_peaks": {
+                        "greater": null,
+                        "less": 1
+                     },
+                     "num_positive_peaks": {
+                        "greater": null,
+                        "less": 2
+                     },
+                     "peak_after_to_trough_ratio": {
+                        "greater": null,
+                        "less": 0.8
+                     },
+                     "peak_to_trough_duration": {
+                        "greater": 0.0001,
+                        "less": 0.00115
+                     },
+                     "waveform_baseline_flatness": {
+                        "greater": null,
+                        "less": 0.5
+                     }
+                  },
+                  "non-somatic": {
+                     "main_peak_to_trough_ratio": {
+                        "greater": null,
+                        "less": 0.8
+                     },
+                     "peak_before_to_peak_after_ratio": {
+                        "greater": null,
+                        "less": 3
+                     },
+                     "peak_before_to_trough_ratio": {
+                        "greater": null,
+                        "less": 3
+                     },
+                     "peak_before_width": {
+                        "greater": 0.00015,
+                        "less": null
+                     },
+                     "trough_width": {
+                        "greater": 0.0002,
+                        "less": null
+                     }
+                  }
+               },
+               "noise_strategy": "bombcell+unitrefine",
+               "qc_thresholds": {
+                  "amplitude_cutoff": {
+                     "less": 0.1
+                  },
+                  "presence_ratio": {
+                     "greater": 0.8
+                  },
+                  "rp_contamination": {
+                     "less": 0.5
+                  }
+               },
+               "recording_name": "experiment1_Record Node 104#Neuropix-PXI-100.ProbeF-AP_recording1",
+               "slay": {
+                  "slay": {
+                     "k1": 0.25,
+                     "k2": 1,
+                     "slay_threshold": 0.4
+                  },
+                  "template_similarity": {
+                     "templates_diff": 0.35
+                  }
+               },
+               "unitrefine": {
+                  "noise_neural_classifier": "SpikeInterface/UnitRefine_noise_neural_classifier",
+                  "sua_mua_classifier": "SpikeInterface/UnitRefine_sua_mua_classifier"
+               }
+            },
+            "run_script": null,
+            "url": "https://github.com/AllenNeuralDynamics/aind-ephys-curation",
+            "version": "2.0"
+         },
+         "end_date_time": "2026-09-04T19:39:53.756685Z",
+         "experimenters": [
+            "AIND Pipeline"
+         ],
+         "name": "Ephys curation - experiment1_Record Node 104#Neuropix-PXI-100.ProbeF-AP_recording1",
+         "notes": "Curation thresholds: {'rp_contamination': {'less': 0.5}, 'presence_ratio': {'greater': 0.8}, 'amplitude_cutoff': {'less': 0.1}}\nPassing default QC: 470/1360UnitRefine Noise: 229 / 1360\nUnitRefine SUA: 679 / 1360\nUnitRefine MUA: 452 / 1360\nBombcell Noise: 154 / 1360\nBombcell SUA: 197 / 1360\nBombcell MUA: 920 / 1360\nBombcell NON-SOMA: 89 / 1360\nSLAy found 30 potential merges\n",
+         "object_type": "Data process",
+         "output_parameters": {
+            "bombcell_mua": 920,
+            "bombcell_noise": 154,
+            "bombcell_non_somatic": 89,
+            "bombcell_sua": 197,
+            "failing_qc": 890,
+            "passing_qc": 470,
+            "slay_merges": 30,
+            "total_units": 1360,
+            "unitrefine_mua": 452,
+            "unitrefine_noise": 229,
+            "unitrefine_sua": 679
+         },
+         "output_path": "../results",
+         "pipeline_name": "AIND Ephys Pipeline",
+         "process_type": "Ephys curation",
+         "resources": null,
+         "stage": "Processing",
+         "start_date_time": "2026-09-04T19:38:31.756685Z"
+      },
+      {
+         "code": {
+            "commit_hash": null,
+            "container": null,
+            "core_dependency": null,
+            "input_data": null,
+            "language": null,
+            "language_version": null,
+            "name": null,
+            "object_type": "Code",
+            "parameters": {
+               "bombcell": {
+                  "mua": {
+                     "amplitude_cutoff": {
+                        "greater": null,
+                        "less": 0.2
+                     },
+                     "amplitude_median": {
+                        "abs": true,
+                        "greater": 30,
+                        "less": null
+                     },
+                     "drift_ptp": {
+                        "greater": null,
+                        "less": 100
+                     },
+                     "num_spikes": {
+                        "greater": 300,
+                        "less": null
+                     },
+                     "presence_ratio": {
+                        "greater": 0.7,
+                        "less": null
+                     },
+                     "rp_contamination": {
+                        "greater": null,
+                        "less": 0.1
+                     },
+                     "snr": {
+                        "greater": 5,
+                        "less": null
+                     }
+                  },
+                  "noise": {
+                     "exp_decay": {
+                        "greater": 0.01,
+                        "less": 0.1
+                     },
+                     "num_negative_peaks": {
+                        "greater": null,
+                        "less": 1
+                     },
+                     "num_positive_peaks": {
+                        "greater": null,
+                        "less": 2
+                     },
+                     "peak_after_to_trough_ratio": {
+                        "greater": null,
+                        "less": 0.8
+                     },
+                     "peak_to_trough_duration": {
+                        "greater": 0.0001,
+                        "less": 0.00115
+                     },
+                     "waveform_baseline_flatness": {
+                        "greater": null,
+                        "less": 0.5
+                     }
+                  },
+                  "non-somatic": {
+                     "main_peak_to_trough_ratio": {
+                        "greater": null,
+                        "less": 0.8
+                     },
+                     "peak_before_to_peak_after_ratio": {
+                        "greater": null,
+                        "less": 3
+                     },
+                     "peak_before_to_trough_ratio": {
+                        "greater": null,
+                        "less": 3
+                     },
+                     "peak_before_width": {
+                        "greater": 0.00015,
+                        "less": null
+                     },
+                     "trough_width": {
+                        "greater": 0.0002,
+                        "less": null
+                     }
+                  }
+               },
+               "noise_strategy": "bombcell+unitrefine",
+               "qc_thresholds": {
+                  "amplitude_cutoff": {
+                     "less": 0.1
+                  },
+                  "presence_ratio": {
+                     "greater": 0.8
+                  },
+                  "rp_contamination": {
+                     "less": 0.5
+                  }
+               },
+               "recording_name": "experiment1_Record Node 104#Neuropix-PXI-100.ProbeE-AP_recording1",
+               "slay": {
+                  "slay": {
+                     "k1": 0.25,
+                     "k2": 1,
+                     "slay_threshold": 0.4
+                  },
+                  "template_similarity": {
+                     "templates_diff": 0.35
+                  }
+               },
+               "unitrefine": {
+                  "noise_neural_classifier": "SpikeInterface/UnitRefine_noise_neural_classifier",
+                  "sua_mua_classifier": "SpikeInterface/UnitRefine_sua_mua_classifier"
+               }
+            },
+            "run_script": null,
+            "url": "https://github.com/AllenNeuralDynamics/aind-ephys-curation",
+            "version": "2.0"
+         },
+         "end_date_time": "2026-09-04T19:42:20.273880Z",
+         "experimenters": [
+            "AIND Pipeline"
+         ],
+         "name": "Ephys curation - experiment1_Record Node 104#Neuropix-PXI-100.ProbeE-AP_recording1",
+         "notes": "Curation thresholds: {'rp_contamination': {'less': 0.5}, 'presence_ratio': {'greater': 0.8}, 'amplitude_cutoff': {'less': 0.1}}\nPassing default QC: 343/649UnitRefine Noise: 141 / 649\nUnitRefine SUA: 244 / 649\nUnitRefine MUA: 264 / 649\nBombcell Noise: 102 / 649\nBombcell SUA: 100 / 649\nBombcell MUA: 364 / 649\nBombcell NON-SOMA: 83 / 649\nSLAy found 7 potential merges\n",
+         "object_type": "Data process",
+         "output_parameters": {
+            "bombcell_mua": 364,
+            "bombcell_noise": 102,
+            "bombcell_non_somatic": 83,
+            "bombcell_sua": 100,
+            "failing_qc": 306,
+            "passing_qc": 343,
+            "slay_merges": 7,
+            "total_units": 649,
+            "unitrefine_mua": 264,
+            "unitrefine_noise": 141,
+            "unitrefine_sua": 244
+         },
+         "output_path": "../results",
+         "pipeline_name": "AIND Ephys Pipeline",
+         "process_type": "Ephys curation",
+         "resources": null,
+         "stage": "Processing",
+         "start_date_time": "2026-09-04T19:40:55.273880Z"
+      },
+      {
+         "code": {
+            "commit_hash": null,
+            "container": null,
+            "core_dependency": null,
+            "input_data": null,
+            "language": null,
+            "language_version": null,
+            "name": null,
+            "object_type": "Code",
+            "parameters": {
+               "drift": {
+                  "alpha": 0.15,
+                  "cmap": "Greys_r",
+                  "detection": {
+                     "detect_threshold": 5,
+                     "exclude_sweep_ms": 0.1,
+                     "peak_sign": "neg"
+                  },
+                  "figsize": [
+                     10,
+                     10
+                  ],
+                  "localization": {
+                     "ms_after": 0.3,
+                     "ms_before": 0.1,
+                     "radius_um": 100
+                  },
+                  "n_skip": 30,
+                  "vmax": 0,
+                  "vmin": -200
+               },
+               "motion": {
+                  "cmap": "Greys_r",
+                  "figsize": [
+                     15,
+                     10
+                  ],
+                  "scatter_decimate": 15
+               },
+               "recording_name": "experiment1_Record Node 104#Neuropix-PXI-100.ProbeF-AP_recording1",
+               "timeseries": {
+                  "n_snippets_per_segment": 2,
+                  "snippet_duration_s": 0.5
+               }
+            },
+            "run_script": null,
+            "url": "https://github.com/AllenNeuralDynamics/aind-ephys-visualization",
+            "version": "1.0"
+         },
+         "end_date_time": "2026-09-04T20:18:39.918422Z",
+         "experimenters": [
+            "AIND Pipeline"
+         ],
+         "name": "Ephys visualization - experiment1_Record Node 104#Neuropix-PXI-100.ProbeF-AP_recording1",
+         "notes": "{\n    \"timeseries\": \"https://figurl.org/f?v=npm://@fi-sci/figurl-sortingview@12/dist&d=kachery:aind:sha1:d85abf62a29315e35f00c54a0f9a13d4e680cd56&label=ecephys_742903_2024-10-23_14-12-23%20-%20experiment1_Record%20Node%20104%23Neuropix-PXI-100.ProbeF-AP_recording1&zone=aind\"\n}",
+         "object_type": "Data process",
+         "output_parameters": {
+            "timeseries": "https://figurl.org/f?v=npm://@fi-sci/figurl-sortingview@12/dist&d=kachery:aind:sha1:d85abf62a29315e35f00c54a0f9a13d4e680cd56&label=ecephys_742903_2024-10-23_14-12-23%20-%20experiment1_Record%20Node%20104%23Neuropix-PXI-100.ProbeF-AP_recording1&zone=aind"
+         },
+         "output_path": "../results",
+         "pipeline_name": "AIND Ephys Pipeline",
+         "process_type": "Ephys visualization",
+         "resources": null,
+         "stage": "Processing",
+         "start_date_time": "2026-09-04T20:13:28.918422Z"
+      },
+      {
+         "code": {
+            "commit_hash": null,
+            "container": null,
+            "core_dependency": null,
+            "input_data": null,
+            "language": null,
+            "language_version": null,
+            "name": null,
+            "object_type": "Code",
+            "parameters": {
+               "drift": {
+                  "alpha": 0.15,
+                  "cmap": "Greys_r",
+                  "detection": {
+                     "detect_threshold": 5,
+                     "exclude_sweep_ms": 0.1,
+                     "peak_sign": "neg"
+                  },
+                  "figsize": [
+                     10,
+                     10
+                  ],
+                  "localization": {
+                     "ms_after": 0.3,
+                     "ms_before": 0.1,
+                     "radius_um": 100
+                  },
+                  "n_skip": 30,
+                  "vmax": 0,
+                  "vmin": -200
+               },
+               "motion": {
+                  "cmap": "Greys_r",
+                  "figsize": [
+                     15,
+                     10
+                  ],
+                  "scatter_decimate": 15
+               },
+               "recording_name": "experiment1_Record Node 108#Neuropix-PXI-100.ProbeC-AP_recording1",
+               "timeseries": {
+                  "n_snippets_per_segment": 2,
+                  "snippet_duration_s": 0.5
+               }
+            },
+            "run_script": null,
+            "url": "https://github.com/AllenNeuralDynamics/aind-ephys-visualization",
+            "version": "1.0"
+         },
+         "end_date_time": "2026-09-04T20:16:27.919521Z",
+         "experimenters": [
+            "AIND Pipeline"
+         ],
+         "name": "Ephys visualization - experiment1_Record Node 108#Neuropix-PXI-100.ProbeC-AP_recording1",
+         "notes": "{\n    \"timeseries\": \"https://figurl.org/f?v=npm://@fi-sci/figurl-sortingview@12/dist&d=kachery:aind:sha1:f17f959baffb6e7830b95e0e39290c050878719d&label=ecephys_742903_2024-10-23_14-12-23%20-%20experiment1_Record%20Node%20108%23Neuropix-PXI-100.ProbeC-AP_recording1&zone=aind\"\n}",
+         "object_type": "Data process",
+         "output_parameters": {
+            "timeseries": "https://figurl.org/f?v=npm://@fi-sci/figurl-sortingview@12/dist&d=kachery:aind:sha1:f17f959baffb6e7830b95e0e39290c050878719d&label=ecephys_742903_2024-10-23_14-12-23%20-%20experiment1_Record%20Node%20108%23Neuropix-PXI-100.ProbeC-AP_recording1&zone=aind"
+         },
+         "output_path": "../results",
+         "pipeline_name": "AIND Ephys Pipeline",
+         "process_type": "Ephys visualization",
+         "resources": null,
+         "stage": "Processing",
+         "start_date_time": "2026-09-04T20:13:28.919521Z"
+      },
+      {
+         "code": {
+            "commit_hash": null,
+            "container": null,
+            "core_dependency": null,
+            "input_data": null,
+            "language": null,
+            "language_version": null,
+            "name": null,
+            "object_type": "Code",
+            "parameters": {
+               "drift": {
+                  "alpha": 0.15,
+                  "cmap": "Greys_r",
+                  "detection": {
+                     "detect_threshold": 5,
+                     "exclude_sweep_ms": 0.1,
+                     "peak_sign": "neg"
+                  },
+                  "figsize": [
+                     10,
+                     10
+                  ],
+                  "localization": {
+                     "ms_after": 0.3,
+                     "ms_before": 0.1,
+                     "radius_um": 100
+                  },
+                  "n_skip": 30,
+                  "vmax": 0,
+                  "vmin": -200
+               },
+               "motion": {
+                  "cmap": "Greys_r",
+                  "figsize": [
+                     15,
+                     10
+                  ],
+                  "scatter_decimate": 15
+               },
+               "recording_name": "experiment1_Record Node 104#Neuropix-PXI-100.ProbeD-AP_recording1",
+               "timeseries": {
+                  "n_snippets_per_segment": 2,
+                  "snippet_duration_s": 0.5
+               }
+            },
+            "run_script": null,
+            "url": "https://github.com/AllenNeuralDynamics/aind-ephys-visualization",
+            "version": "1.0"
+         },
+         "end_date_time": "2026-09-04T20:15:47.936835Z",
+         "experimenters": [
+            "AIND Pipeline"
+         ],
+         "name": "Ephys visualization - experiment1_Record Node 104#Neuropix-PXI-100.ProbeD-AP_recording1",
+         "notes": "{\n    \"timeseries\": \"https://figurl.org/f?v=npm://@fi-sci/figurl-sortingview@12/dist&d=kachery:aind:sha1:b51f01a2f71e26ee162e38e07645f38d4de54fb1&label=ecephys_742903_2024-10-23_14-12-23%20-%20experiment1_Record%20Node%20104%23Neuropix-PXI-100.ProbeD-AP_recording1&zone=aind\"\n}",
+         "object_type": "Data process",
+         "output_parameters": {
+            "timeseries": "https://figurl.org/f?v=npm://@fi-sci/figurl-sortingview@12/dist&d=kachery:aind:sha1:b51f01a2f71e26ee162e38e07645f38d4de54fb1&label=ecephys_742903_2024-10-23_14-12-23%20-%20experiment1_Record%20Node%20104%23Neuropix-PXI-100.ProbeD-AP_recording1&zone=aind"
+         },
+         "output_path": "../results",
+         "pipeline_name": "AIND Ephys Pipeline",
+         "process_type": "Ephys visualization",
+         "resources": null,
+         "stage": "Processing",
+         "start_date_time": "2026-09-04T20:13:28.936835Z"
+      },
+      {
+         "code": {
+            "commit_hash": null,
+            "container": null,
+            "core_dependency": null,
+            "input_data": null,
+            "language": null,
+            "language_version": null,
+            "name": null,
+            "object_type": "Code",
+            "parameters": {
+               "drift": {
+                  "alpha": 0.15,
+                  "cmap": "Greys_r",
+                  "detection": {
+                     "detect_threshold": 5,
+                     "exclude_sweep_ms": 0.1,
+                     "peak_sign": "neg"
+                  },
+                  "figsize": [
+                     10,
+                     10
+                  ],
+                  "localization": {
+                     "ms_after": 0.3,
+                     "ms_before": 0.1,
+                     "radius_um": 100
+                  },
+                  "n_skip": 30,
+                  "vmax": 0,
+                  "vmin": -200
+               },
+               "motion": {
+                  "cmap": "Greys_r",
+                  "figsize": [
+                     15,
+                     10
+                  ],
+                  "scatter_decimate": 15
+               },
+               "recording_name": "experiment1_Record Node 104#Neuropix-PXI-100.ProbeE-AP_recording1",
+               "timeseries": {
+                  "n_snippets_per_segment": 2,
+                  "snippet_duration_s": 0.5
+               }
+            },
+            "run_script": null,
+            "url": "https://github.com/AllenNeuralDynamics/aind-ephys-visualization",
+            "version": "1.0"
+         },
+         "end_date_time": "2026-09-04T20:17:31.950861Z",
+         "experimenters": [
+            "AIND Pipeline"
+         ],
+         "name": "Ephys visualization - experiment1_Record Node 104#Neuropix-PXI-100.ProbeE-AP_recording1",
+         "notes": "{\n    \"timeseries\": \"https://figurl.org/f?v=npm://@fi-sci/figurl-sortingview@12/dist&d=kachery:aind:sha1:599c1aab954cd57cc30d9dca2f06047648770d9f&label=ecephys_742903_2024-10-23_14-12-23%20-%20experiment1_Record%20Node%20104%23Neuropix-PXI-100.ProbeE-AP_recording1&zone=aind\"\n}",
+         "object_type": "Data process",
+         "output_parameters": {
+            "timeseries": "https://figurl.org/f?v=npm://@fi-sci/figurl-sortingview@12/dist&d=kachery:aind:sha1:599c1aab954cd57cc30d9dca2f06047648770d9f&label=ecephys_742903_2024-10-23_14-12-23%20-%20experiment1_Record%20Node%20104%23Neuropix-PXI-100.ProbeE-AP_recording1&zone=aind"
+         },
+         "output_path": "../results",
+         "pipeline_name": "AIND Ephys Pipeline",
+         "process_type": "Ephys visualization",
+         "resources": null,
+         "stage": "Processing",
+         "start_date_time": "2026-09-04T20:13:28.950861Z"
+      },
+      {
+         "code": {
+            "commit_hash": null,
+            "container": null,
+            "core_dependency": null,
+            "input_data": null,
+            "language": null,
+            "language_version": null,
+            "name": null,
+            "object_type": "Code",
+            "parameters": {
+               "drift": {
+                  "alpha": 0.15,
+                  "cmap": "Greys_r",
+                  "detection": {
+                     "detect_threshold": 5,
+                     "exclude_sweep_ms": 0.1,
+                     "peak_sign": "neg"
+                  },
+                  "figsize": [
+                     10,
+                     10
+                  ],
+                  "localization": {
+                     "ms_after": 0.3,
+                     "ms_before": 0.1,
+                     "radius_um": 100
+                  },
+                  "n_skip": 30,
+                  "vmax": 0,
+                  "vmin": -200
+               },
+               "motion": {
+                  "cmap": "Greys_r",
+                  "figsize": [
+                     15,
+                     10
+                  ],
+                  "scatter_decimate": 15
+               },
+               "recording_name": "experiment1_Record Node 108#Neuropix-PXI-100.ProbeB-AP_recording1",
+               "timeseries": {
+                  "n_snippets_per_segment": 2,
+                  "snippet_duration_s": 0.5
+               }
+            },
+            "run_script": null,
+            "url": "https://github.com/AllenNeuralDynamics/aind-ephys-visualization",
+            "version": "1.0"
+         },
+         "end_date_time": "2026-09-04T20:16:49.993352Z",
+         "experimenters": [
+            "AIND Pipeline"
+         ],
+         "name": "Ephys visualization - experiment1_Record Node 108#Neuropix-PXI-100.ProbeB-AP_recording1",
+         "notes": "{\n    \"timeseries\": \"https://figurl.org/f?v=npm://@fi-sci/figurl-sortingview@12/dist&d=kachery:aind:sha1:c23cef56987b1afa77c8a2db43f6b224da03bd6d&label=ecephys_742903_2024-10-23_14-12-23%20-%20experiment1_Record%20Node%20108%23Neuropix-PXI-100.ProbeB-AP_recording1&zone=aind\"\n}",
+         "object_type": "Data process",
+         "output_parameters": {
+            "timeseries": "https://figurl.org/f?v=npm://@fi-sci/figurl-sortingview@12/dist&d=kachery:aind:sha1:c23cef56987b1afa77c8a2db43f6b224da03bd6d&label=ecephys_742903_2024-10-23_14-12-23%20-%20experiment1_Record%20Node%20108%23Neuropix-PXI-100.ProbeB-AP_recording1&zone=aind"
+         },
+         "output_path": "../results",
+         "pipeline_name": "AIND Ephys Pipeline",
+         "process_type": "Ephys visualization",
+         "resources": null,
+         "stage": "Processing",
+         "start_date_time": "2026-09-04T20:13:28.993352Z"
+      },
+      {
+         "code": {
+            "commit_hash": null,
+            "container": null,
+            "core_dependency": null,
+            "input_data": null,
+            "language": null,
+            "language_version": null,
+            "name": null,
+            "object_type": "Code",
+            "parameters": {
+               "drift": {
+                  "alpha": 0.15,
+                  "cmap": "Greys_r",
+                  "detection": {
+                     "detect_threshold": 5,
+                     "exclude_sweep_ms": 0.1,
+                     "peak_sign": "neg"
+                  },
+                  "figsize": [
+                     10,
+                     10
+                  ],
+                  "localization": {
+                     "ms_after": 0.3,
+                     "ms_before": 0.1,
+                     "radius_um": 100
+                  },
+                  "n_skip": 30,
+                  "vmax": 0,
+                  "vmin": -200
+               },
+               "motion": {
+                  "cmap": "Greys_r",
+                  "figsize": [
+                     15,
+                     10
+                  ],
+                  "scatter_decimate": 15
+               },
+               "recording_name": "experiment1_Record Node 108#Neuropix-PXI-100.ProbeA-AP_recording1",
+               "timeseries": {
+                  "n_snippets_per_segment": 2,
+                  "snippet_duration_s": 0.5
+               }
+            },
+            "run_script": null,
+            "url": "https://github.com/AllenNeuralDynamics/aind-ephys-visualization",
+            "version": "1.0"
+         },
+         "end_date_time": "2026-09-04T20:17:24.999334Z",
+         "experimenters": [
+            "AIND Pipeline"
+         ],
+         "name": "Ephys visualization - experiment1_Record Node 108#Neuropix-PXI-100.ProbeA-AP_recording1",
+         "notes": "{\n    \"timeseries\": \"https://figurl.org/f?v=npm://@fi-sci/figurl-sortingview@12/dist&d=kachery:aind:sha1:8f29ecd4a096d1fcaa89b3a73845b43652a4be6c&label=ecephys_742903_2024-10-23_14-12-23%20-%20experiment1_Record%20Node%20108%23Neuropix-PXI-100.ProbeA-AP_recording1&zone=aind\"\n}",
+         "object_type": "Data process",
+         "output_parameters": {
+            "timeseries": "https://figurl.org/f?v=npm://@fi-sci/figurl-sortingview@12/dist&d=kachery:aind:sha1:8f29ecd4a096d1fcaa89b3a73845b43652a4be6c&label=ecephys_742903_2024-10-23_14-12-23%20-%20experiment1_Record%20Node%20108%23Neuropix-PXI-100.ProbeA-AP_recording1&zone=aind"
+         },
+         "output_path": "../results",
+         "pipeline_name": "AIND Ephys Pipeline",
+         "process_type": "Ephys visualization",
+         "resources": null,
+         "stage": "Processing",
+         "start_date_time": "2026-09-04T20:13:28.999334Z"
+      }
+   ],
+   "dependency_graph": {
+      "Compression": [],
+      "Ephys curation - experiment1_Record Node 104#Neuropix-PXI-100.ProbeD-AP_recording1": [
+         "Ephys postprocessing - experiment1_Record Node 108#Neuropix-PXI-100.ProbeC-AP_recording1"
+      ],
+      "Ephys curation - experiment1_Record Node 104#Neuropix-PXI-100.ProbeE-AP_recording1": [
+         "Ephys curation - experiment1_Record Node 104#Neuropix-PXI-100.ProbeF-AP_recording1"
+      ],
+      "Ephys curation - experiment1_Record Node 104#Neuropix-PXI-100.ProbeF-AP_recording1": [
+         "Ephys postprocessing - experiment1_Record Node 104#Neuropix-PXI-100.ProbeE-AP_recording1"
+      ],
+      "Ephys curation - experiment1_Record Node 108#Neuropix-PXI-100.ProbeA-AP_recording1": [
+         "Ephys postprocessing - experiment1_Record Node 104#Neuropix-PXI-100.ProbeF-AP_recording1"
+      ],
+      "Ephys curation - experiment1_Record Node 108#Neuropix-PXI-100.ProbeB-AP_recording1": [
+         "Spike sorting - experiment1_Record Node 108#Neuropix-PXI-100.ProbeC-AP_recording1"
+      ],
+      "Ephys curation - experiment1_Record Node 108#Neuropix-PXI-100.ProbeC-AP_recording1": [
+         "Ephys curation - experiment1_Record Node 104#Neuropix-PXI-100.ProbeD-AP_recording1"
+      ],
+      "Ephys postprocessing - experiment1_Record Node 104#Neuropix-PXI-100.ProbeD-AP_recording1": [
+         "Ephys preprocessing - experiment1_Record Node 108#Neuropix-PXI-100.ProbeC-AP_recording1"
+      ],
+      "Ephys postprocessing - experiment1_Record Node 104#Neuropix-PXI-100.ProbeE-AP_recording1": [
+         "Ephys curation - experiment1_Record Node 108#Neuropix-PXI-100.ProbeA-AP_recording1"
+      ],
+      "Ephys postprocessing - experiment1_Record Node 104#Neuropix-PXI-100.ProbeF-AP_recording1": [
+         "Ephys postprocessing - experiment1_Record Node 108#Neuropix-PXI-100.ProbeA-AP_recording1"
+      ],
+      "Ephys postprocessing - experiment1_Record Node 108#Neuropix-PXI-100.ProbeA-AP_recording1": [
+         "Ephys curation - experiment1_Record Node 108#Neuropix-PXI-100.ProbeC-AP_recording1"
+      ],
+      "Ephys postprocessing - experiment1_Record Node 108#Neuropix-PXI-100.ProbeB-AP_recording1": [
+         "Ephys curation - experiment1_Record Node 108#Neuropix-PXI-100.ProbeB-AP_recording1"
+      ],
+      "Ephys postprocessing - experiment1_Record Node 108#Neuropix-PXI-100.ProbeC-AP_recording1": [
+         "Ephys postprocessing - experiment1_Record Node 108#Neuropix-PXI-100.ProbeB-AP_recording1"
+      ],
+      "Ephys preprocessing - experiment1_Record Node 104#Neuropix-PXI-100.ProbeD-AP_recording1": [
+         "Ephys preprocessing - experiment1_Record Node 108#Neuropix-PXI-100.ProbeB-AP_recording1"
+      ],
+      "Ephys preprocessing - experiment1_Record Node 104#Neuropix-PXI-100.ProbeE-AP_recording1": [
+         "Spike sorting - experiment1_Record Node 104#Neuropix-PXI-100.ProbeF-AP_recording1"
+      ],
+      "Ephys preprocessing - experiment1_Record Node 104#Neuropix-PXI-100.ProbeF-AP_recording1": [
+         "Ephys preprocessing - experiment1_Record Node 104#Neuropix-PXI-100.ProbeD-AP_recording1"
+      ],
+      "Ephys preprocessing - experiment1_Record Node 108#Neuropix-PXI-100.ProbeA-AP_recording1": [
+         "Ephys preprocessing - experiment1_Record Node 104#Neuropix-PXI-100.ProbeF-AP_recording1"
+      ],
+      "Ephys preprocessing - experiment1_Record Node 108#Neuropix-PXI-100.ProbeB-AP_recording1": [
+         "Compression"
+      ],
+      "Ephys preprocessing - experiment1_Record Node 108#Neuropix-PXI-100.ProbeC-AP_recording1": [
+         "Ephys preprocessing - experiment1_Record Node 108#Neuropix-PXI-100.ProbeA-AP_recording1"
+      ],
+      "Ephys visualization - experiment1_Record Node 104#Neuropix-PXI-100.ProbeD-AP_recording1": [
+         "Ephys curation - experiment1_Record Node 104#Neuropix-PXI-100.ProbeE-AP_recording1"
+      ],
+      "Ephys visualization - experiment1_Record Node 104#Neuropix-PXI-100.ProbeE-AP_recording1": [
+         "Ephys visualization - experiment1_Record Node 108#Neuropix-PXI-100.ProbeA-AP_recording1"
+      ],
+      "Ephys visualization - experiment1_Record Node 104#Neuropix-PXI-100.ProbeF-AP_recording1": [
+         "Ephys visualization - experiment1_Record Node 104#Neuropix-PXI-100.ProbeE-AP_recording1"
+      ],
+      "Ephys visualization - experiment1_Record Node 108#Neuropix-PXI-100.ProbeA-AP_recording1": [
+         "Ephys visualization - experiment1_Record Node 108#Neuropix-PXI-100.ProbeB-AP_recording1"
+      ],
+      "Ephys visualization - experiment1_Record Node 108#Neuropix-PXI-100.ProbeB-AP_recording1": [
+         "Ephys visualization - experiment1_Record Node 108#Neuropix-PXI-100.ProbeC-AP_recording1"
+      ],
+      "Ephys visualization - experiment1_Record Node 108#Neuropix-PXI-100.ProbeC-AP_recording1": [
+         "Ephys visualization - experiment1_Record Node 104#Neuropix-PXI-100.ProbeD-AP_recording1"
+      ],
+      "Spike sorting - experiment1_Record Node 104#Neuropix-PXI-100.ProbeD-AP_recording1": [
+         "Spike sorting - experiment1_Record Node 108#Neuropix-PXI-100.ProbeA-AP_recording1"
+      ],
+      "Spike sorting - experiment1_Record Node 104#Neuropix-PXI-100.ProbeE-AP_recording1": [
+         "Spike sorting - experiment1_Record Node 104#Neuropix-PXI-100.ProbeD-AP_recording1"
+      ],
+      "Spike sorting - experiment1_Record Node 104#Neuropix-PXI-100.ProbeF-AP_recording1": [
+         "Ephys postprocessing - experiment1_Record Node 104#Neuropix-PXI-100.ProbeD-AP_recording1"
+      ],
+      "Spike sorting - experiment1_Record Node 108#Neuropix-PXI-100.ProbeA-AP_recording1": [
+         "Ephys preprocessing - experiment1_Record Node 104#Neuropix-PXI-100.ProbeE-AP_recording1"
+      ],
+      "Spike sorting - experiment1_Record Node 108#Neuropix-PXI-100.ProbeB-AP_recording1": [
+         "Spike sorting - experiment1_Record Node 104#Neuropix-PXI-100.ProbeE-AP_recording1"
+      ],
+      "Spike sorting - experiment1_Record Node 108#Neuropix-PXI-100.ProbeC-AP_recording1": [
+         "Spike sorting - experiment1_Record Node 108#Neuropix-PXI-100.ProbeB-AP_recording1"
+      ]
+   },
+   "describedBy": "https://raw.githubusercontent.com/AllenNeuralDynamics/aind-data-schema/main/src/aind_data_schema/core/processing.py",
+   "notes": "Processes were reordered by start_date_time",
+   "object_type": "Processing",
+   "pipelines": [
+      {
+         "commit_hash": null,
+         "container": null,
+         "core_dependency": null,
+         "input_data": null,
+         "language": null,
+         "language_version": null,
+         "name": "AIND Ephys Pipeline",
+         "object_type": "Code",
+         "parameters": null,
+         "run_script": null,
+         "url": "https://github.com/AllenNeuralDynamics/aind-ephys-pipeline",
+         "version": "kilosort4_1.0.0"
+      }
+   ],
+   "schema_version": "2.3.0"
+}

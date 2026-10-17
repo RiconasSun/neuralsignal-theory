@@ -1,0 +1,30 @@
+{
+  "P13_unstable_conditional_generator": "NOT_IMPORTED",
+  "estimand": "Context-dependent neural prediction conditional on available measured task variables",
+  "forbidden_claims": [
+    "Movement-independent or arousal-independent dynamics without measured controls",
+    "Causal mechanism",
+    "Ontological, NAP/CWP or human validation",
+    "Independent laboratory replication",
+    "Original scratch M0/M1 retroactive PASS",
+    "Physiological eligibility from provider metadata",
+    "Neural prediction result or complete manuscript"
+  ],
+  "full_equations_hyperparameters_stats_nulls": "NOT_FROZEN_SOURCE_PREREQUISITES_UNMET",
+  "mandatory_models": [
+    "B0 stationary",
+    "B1 strong stimulus/time/context and causally measured behavior",
+    "B2 own history",
+    "B3 population history",
+    "B4 combined strong baseline",
+    "two-state causal Poisson HMM",
+    "two-dimensional fixed continuous history"
+  ],
+  "neural_execution_authorized": false,
+  "no_assumed_winner": true,
+  "observational": true,
+  "primary": {
+    "Continuous": "[LL(C)-LL(B4)]aud-[LL(C)-LL(B4)]vis",
+    "Discrete": "[LL(D)-LL(B4)]aud-[LL(D)-LL(B4)]vis"
+  }
+}

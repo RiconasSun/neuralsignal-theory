@@ -1,0 +1,2118 @@
+{
+    "metadata": {
+        ".zattrs": {
+            ".specloc": "specifications",
+            "namespace": "core",
+            "neurodata_type": "NWBFile",
+            "nwb_version": "2.7.0",
+            "object_id": "f6a1ccb2-c1d7-401c-a90b-db938f8f670e"
+        },
+        ".zgroup": {
+            "zarr_format": 2
+        },
+        "acquisition/.zgroup": {
+            "zarr_format": 2
+        },
+        "analysis/.zgroup": {
+            "zarr_format": 2
+        },
+        "file_create_date/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "id": "vlen-bytes"
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "file_create_date/.zattrs": {
+            "zarr_dtype": "bytes"
+        },
+        "general/.zgroup": {
+            "zarr_format": 2
+        },
+        "general/devices/.zgroup": {
+            "zarr_format": 2
+        },
+        "general/devices/ProbeA/.zattrs": {
+            "description": "Model:  - Serial number: 20097906812",
+            "manufacturer": "IMEC",
+            "namespace": "core",
+            "neurodata_type": "Device",
+            "object_id": "2027c4a7-4b24-4796-995a-ded67e5f847e"
+        },
+        "general/devices/ProbeA/.zgroup": {
+            "zarr_format": 2
+        },
+        "general/devices/ProbeB/.zattrs": {
+            "description": "Model:  - Serial number: 17131307152",
+            "manufacturer": "IMEC",
+            "namespace": "core",
+            "neurodata_type": "Device",
+            "object_id": "347fce03-c5a9-4538-8f52-02dfc8500acc"
+        },
+        "general/devices/ProbeB/.zgroup": {
+            "zarr_format": 2
+        },
+        "general/devices/ProbeC/.zattrs": {
+            "description": "Model:  - Serial number: 18005120322",
+            "manufacturer": "IMEC",
+            "namespace": "core",
+            "neurodata_type": "Device",
+            "object_id": "e688fcbe-6edb-4971-866c-8635afdcfd50"
+        },
+        "general/devices/ProbeC/.zgroup": {
+            "zarr_format": 2
+        },
+        "general/devices/ProbeD/.zattrs": {
+            "description": "Model:  - Serial number: 17216703422",
+            "manufacturer": "IMEC",
+            "namespace": "core",
+            "neurodata_type": "Device",
+            "object_id": "ff49f153-8efc-4a66-8606-442743cc6fbc"
+        },
+        "general/devices/ProbeD/.zgroup": {
+            "zarr_format": 2
+        },
+        "general/devices/ProbeE/.zattrs": {
+            "description": "Model:  - Serial number: 20097906862",
+            "manufacturer": "IMEC",
+            "namespace": "core",
+            "neurodata_type": "Device",
+            "object_id": "b5a46384-b580-407d-bd71-2aeec5e9ee2d"
+        },
+        "general/devices/ProbeE/.zgroup": {
+            "zarr_format": 2
+        },
+        "general/devices/ProbeF/.zattrs": {
+            "description": "Model:  - Serial number: 22175718152",
+            "manufacturer": "IMEC",
+            "namespace": "core",
+            "neurodata_type": "Device",
+            "object_id": "988ad763-9b07-474b-bb78-6092ca096d5b"
+        },
+        "general/devices/ProbeF/.zgroup": {
+            "zarr_format": 2
+        },
+        "general/extracellular_ephys/.zgroup": {
+            "zarr_format": 2
+        },
+        "general/extracellular_ephys/ProbeA/.zattrs": {
+            "description": "Recorded electrodes from probe ProbeA",
+            "location": "unknown",
+            "namespace": "core",
+            "neurodata_type": "ElectrodeGroup",
+            "object_id": "37bbfb41-caa9-490b-8c25-be0c8b5db4e0",
+            "zarr_link": [
+                {
+                    "name": "device",
+                    "path": "/general/devices/ProbeA",
+                    "source": "."
+                }
+            ]
+        },
+        "general/extracellular_ephys/ProbeA/.zgroup": {
+            "zarr_format": 2
+        },
+        "general/extracellular_ephys/ProbeB/.zattrs": {
+            "description": "Recorded electrodes from probe ProbeB",
+            "location": "unknown",
+            "namespace": "core",
+            "neurodata_type": "ElectrodeGroup",
+            "object_id": "d0d3d7a7-7e1f-4c9f-baf2-fbec685f39f5",
+            "zarr_link": [
+                {
+                    "name": "device",
+                    "path": "/general/devices/ProbeB",
+                    "source": "."
+                }
+            ]
+        },
+        "general/extracellular_ephys/ProbeB/.zgroup": {
+            "zarr_format": 2
+        },
+        "general/extracellular_ephys/ProbeC/.zattrs": {
+            "description": "Recorded electrodes from probe ProbeC",
+            "location": "unknown",
+            "namespace": "core",
+            "neurodata_type": "ElectrodeGroup",
+            "object_id": "dd08f748-3f47-450d-9035-567cd61679eb",
+            "zarr_link": [
+                {
+                    "name": "device",
+                    "path": "/general/devices/ProbeC",
+                    "source": "."
+                }
+            ]
+        },
+        "general/extracellular_ephys/ProbeC/.zgroup": {
+            "zarr_format": 2
+        },
+        "general/extracellular_ephys/ProbeD/.zattrs": {
+            "description": "Recorded electrodes from probe ProbeD",
+            "location": "unknown",
+            "namespace": "core",
+            "neurodata_type": "ElectrodeGroup",
+            "object_id": "33ee07ca-3de0-419b-9032-1821b652c691",
+            "zarr_link": [
+                {
+                    "name": "device",
+                    "path": "/general/devices/ProbeD",
+                    "source": "."
+                }
+            ]
+        },
+        "general/extracellular_ephys/ProbeD/.zgroup": {
+            "zarr_format": 2
+        },
+        "general/extracellular_ephys/ProbeE/.zattrs": {
+            "description": "Recorded electrodes from probe ProbeE",
+            "location": "unknown",
+            "namespace": "core",
+            "neurodata_type": "ElectrodeGroup",
+            "object_id": "0ebf10bc-68ef-4ec7-8ea2-ebedfc3b34cd",
+            "zarr_link": [
+                {
+                    "name": "device",
+                    "path": "/general/devices/ProbeE",
+                    "source": "."
+                }
+            ]
+        },
+        "general/extracellular_ephys/ProbeE/.zgroup": {
+            "zarr_format": 2
+        },
+        "general/extracellular_ephys/ProbeF/.zattrs": {
+            "description": "Recorded electrodes from probe ProbeF",
+            "location": "unknown",
+            "namespace": "core",
+            "neurodata_type": "ElectrodeGroup",
+            "object_id": "bf5d2ddd-8782-4d18-adfa-953edac54a94",
+            "zarr_link": [
+                {
+                    "name": "device",
+                    "path": "/general/devices/ProbeF",
+                    "source": "."
+                }
+            ]
+        },
+        "general/extracellular_ephys/ProbeF/.zgroup": {
+            "zarr_format": 2
+        },
+        "general/extracellular_ephys/electrodes/.zattrs": {
+            "colnames": [
+                "location",
+                "group",
+                "group_name",
+                "channel_name",
+                "inter_sample_shift",
+                "rel_x",
+                "rel_y"
+            ],
+            "description": "metadata about extracellular electrodes",
+            "namespace": "hdmf-common",
+            "neurodata_type": "DynamicTable",
+            "object_id": "f4afb2bd-f5c2-4f69-9d91-8f6129123ef0"
+        },
+        "general/extracellular_ephys/electrodes/.zgroup": {
+            "zarr_format": 2
+        },
+        "general/extracellular_ephys/electrodes/channel_name/.zarray": {
+            "chunks": [
+                2880
+            ],
+            "compressor": {
+                "id": "gzip",
+                "level": 1
+            },
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "id": "vlen-utf8"
+                }
+            ],
+            "order": "C",
+            "shape": [
+                2880
+            ],
+            "zarr_format": 2
+        },
+        "general/extracellular_ephys/electrodes/channel_name/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "dim0"
+            ],
+            "description": "unique channel reference",
+            "namespace": "hdmf-common",
+            "neurodata_type": "VectorData",
+            "object_id": "13b03d2b-cb22-406c-bfe9-5425204bdd1b",
+            "zarr_dtype": "str"
+        },
+        "general/extracellular_ephys/electrodes/group/.zarray": {
+            "chunks": [
+                2880
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "id": "pickle",
+                    "protocol": 5
+                }
+            ],
+            "order": "C",
+            "shape": [
+                2880
+            ],
+            "zarr_format": 2
+        },
+        "general/extracellular_ephys/electrodes/group/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "dim0"
+            ],
+            "description": "a reference to the ElectrodeGroup this electrode is a part of",
+            "namespace": "hdmf-common",
+            "neurodata_type": "VectorData",
+            "object_id": "dc7420cb-e136-4aaf-9464-ad97a7ffc47b",
+            "zarr_dtype": "object"
+        },
+        "general/extracellular_ephys/electrodes/group_name/.zarray": {
+            "chunks": [
+                2880
+            ],
+            "compressor": {
+                "id": "gzip",
+                "level": 1
+            },
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "id": "vlen-utf8"
+                }
+            ],
+            "order": "C",
+            "shape": [
+                2880
+            ],
+            "zarr_format": 2
+        },
+        "general/extracellular_ephys/electrodes/group_name/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "dim0"
+            ],
+            "description": "the name of the ElectrodeGroup this electrode is a part of",
+            "namespace": "hdmf-common",
+            "neurodata_type": "VectorData",
+            "object_id": "56e78af9-1c2f-47d0-a34c-5d1bef618feb",
+            "zarr_dtype": "str"
+        },
+        "general/extracellular_ephys/electrodes/id/.zarray": {
+            "chunks": [
+                2880
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<i8",
+            "fill_value": 0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                2880
+            ],
+            "zarr_format": 2
+        },
+        "general/extracellular_ephys/electrodes/id/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "num_rows"
+            ],
+            "namespace": "hdmf-common",
+            "neurodata_type": "ElementIdentifiers",
+            "object_id": "bae32fee-0b09-4e9a-ae19-4467fbac2e20",
+            "zarr_dtype": "int64"
+        },
+        "general/extracellular_ephys/electrodes/inter_sample_shift/.zarray": {
+            "chunks": [
+                2880
+            ],
+            "compressor": {
+                "id": "gzip",
+                "level": 1
+            },
+            "dtype": "<f8",
+            "fill_value": 0.0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                2880
+            ],
+            "zarr_format": 2
+        },
+        "general/extracellular_ephys/electrodes/inter_sample_shift/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "dim0"
+            ],
+            "description": "no description",
+            "namespace": "hdmf-common",
+            "neurodata_type": "VectorData",
+            "object_id": "9917ba6c-5276-465a-9799-3074d92fac14",
+            "zarr_dtype": "float64"
+        },
+        "general/extracellular_ephys/electrodes/location/.zarray": {
+            "chunks": [
+                2880
+            ],
+            "compressor": {
+                "id": "gzip",
+                "level": 1
+            },
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "id": "vlen-utf8"
+                }
+            ],
+            "order": "C",
+            "shape": [
+                2880
+            ],
+            "zarr_format": 2
+        },
+        "general/extracellular_ephys/electrodes/location/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "dim0"
+            ],
+            "description": "the location of channel within the subject e.g. brain region",
+            "namespace": "hdmf-common",
+            "neurodata_type": "VectorData",
+            "object_id": "3e86ebde-0486-4402-bdd0-8fdfe47f8ef8",
+            "zarr_dtype": "str"
+        },
+        "general/extracellular_ephys/electrodes/rel_x/.zarray": {
+            "chunks": [
+                2880
+            ],
+            "compressor": {
+                "id": "gzip",
+                "level": 1
+            },
+            "dtype": "<f8",
+            "fill_value": 0.0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                2880
+            ],
+            "zarr_format": 2
+        },
+        "general/extracellular_ephys/electrodes/rel_x/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "dim0"
+            ],
+            "description": "rel_x",
+            "namespace": "hdmf-common",
+            "neurodata_type": "VectorData",
+            "object_id": "7a771734-15cd-4721-91b4-1529056cdfae",
+            "zarr_dtype": "float64"
+        },
+        "general/extracellular_ephys/electrodes/rel_y/.zarray": {
+            "chunks": [
+                2880
+            ],
+            "compressor": {
+                "id": "gzip",
+                "level": 1
+            },
+            "dtype": "<f8",
+            "fill_value": 0.0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                2880
+            ],
+            "zarr_format": 2
+        },
+        "general/extracellular_ephys/electrodes/rel_y/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "dim0"
+            ],
+            "description": "rel_y",
+            "namespace": "hdmf-common",
+            "neurodata_type": "VectorData",
+            "object_id": "d3eba901-97ae-47a4-9942-78aefc98d684",
+            "zarr_dtype": "float64"
+        },
+        "general/institution/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "id": "vlen-utf8"
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "general/institution/.zattrs": {
+            "zarr_dtype": "scalar"
+        },
+        "general/session_id/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "id": "vlen-utf8"
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "general/session_id/.zattrs": {
+            "zarr_dtype": "scalar"
+        },
+        "general/subject/.zattrs": {
+            "namespace": "core",
+            "neurodata_type": "Subject",
+            "object_id": "5d108338-4f19-42ed-8f20-c00089a07e07"
+        },
+        "general/subject/.zgroup": {
+            "zarr_format": 2
+        },
+        "general/subject/age/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "id": "vlen-utf8"
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "general/subject/age/.zattrs": {
+            "reference": "birth",
+            "zarr_dtype": "scalar"
+        },
+        "general/subject/date_of_birth/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "id": "vlen-bytes"
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "general/subject/date_of_birth/.zattrs": {
+            "zarr_dtype": "scalar"
+        },
+        "general/subject/genotype/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "id": "vlen-utf8"
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "general/subject/genotype/.zattrs": {
+            "zarr_dtype": "scalar"
+        },
+        "general/subject/sex/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "id": "vlen-utf8"
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "general/subject/sex/.zattrs": {
+            "zarr_dtype": "scalar"
+        },
+        "general/subject/species/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "id": "vlen-utf8"
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "general/subject/species/.zattrs": {
+            "zarr_dtype": "scalar"
+        },
+        "general/subject/subject_id/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "id": "vlen-utf8"
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "general/subject/subject_id/.zattrs": {
+            "zarr_dtype": "scalar"
+        },
+        "identifier/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "id": "vlen-utf8"
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "identifier/.zattrs": {
+            "zarr_dtype": "scalar"
+        },
+        "processing/.zgroup": {
+            "zarr_format": 2
+        },
+        "processing/ecephys/.zattrs": {
+            "description": "Intermediate data from extracellular electrophysiology recordings, e.g., LFP.",
+            "namespace": "core",
+            "neurodata_type": "ProcessingModule",
+            "object_id": "bf30692f-6e1c-4d6e-8374-51b595fd28f7"
+        },
+        "processing/ecephys/.zgroup": {
+            "zarr_format": 2
+        },
+        "processing/ecephys/LFP/.zattrs": {
+            "namespace": "core",
+            "neurodata_type": "LFP",
+            "object_id": "79f77570-9ad6-4fd4-8eda-087cd0300fde"
+        },
+        "processing/ecephys/LFP/.zgroup": {
+            "zarr_format": 2
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeA-LFP/.zattrs": {
+            "comments": "no comments",
+            "description": "LFP voltage traces from ProbeA",
+            "namespace": "core",
+            "neurodata_type": "ElectricalSeries",
+            "object_id": "87bdbec1-86f3-4514-8dfe-ffa2bb9ec4a5"
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeA-LFP/.zgroup": {
+            "zarr_format": 2
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeA-LFP/data/.zarray": {
+            "chunks": [
+                78125,
+                64
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 9,
+                "cname": "zstd",
+                "id": "blosc",
+                "shuffle": 2
+            },
+            "dtype": "<i2",
+            "fill_value": 0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                8757380,
+                96
+            ],
+            "zarr_format": 2
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeA-LFP/data/.zattrs": {
+            "conversion": 4.679999828338622e-06,
+            "offset": 0.0,
+            "resolution": -1.0,
+            "unit": "volts",
+            "zarr_dtype": "<i2"
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeA-LFP/electrodes/.zarray": {
+            "chunks": [
+                96
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<i8",
+            "fill_value": 0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                96
+            ],
+            "zarr_format": 2
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeA-LFP/electrodes/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "num_rows"
+            ],
+            "description": "electrode_table_region",
+            "namespace": "hdmf-common",
+            "neurodata_type": "DynamicTableRegion",
+            "object_id": "88b9f42f-e0e7-4834-89a6-119a3c4b7ce4",
+            "table": {
+                "value": {
+                    "object_id": "f4afb2bd-f5c2-4f69-9d91-8f6129123ef0",
+                    "path": "/general/extracellular_ephys/electrodes",
+                    "source": ".",
+                    "source_object_id": "f6a1ccb2-c1d7-401c-a90b-db938f8f670e"
+                },
+                "zarr_dtype": "object"
+            },
+            "zarr_dtype": "int64"
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeA-LFP/timestamps/.zarray": {
+            "chunks": [
+                1250000
+            ],
+            "compressor": {
+                "id": "gzip",
+                "level": 1
+            },
+            "dtype": "<f8",
+            "fill_value": 0.0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                8757380
+            ],
+            "zarr_format": 2
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeA-LFP/timestamps/.zattrs": {
+            "interval": 1,
+            "unit": "seconds",
+            "zarr_dtype": "float64"
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeB-LFP/.zattrs": {
+            "comments": "no comments",
+            "description": "LFP voltage traces from ProbeB",
+            "namespace": "core",
+            "neurodata_type": "ElectricalSeries",
+            "object_id": "22a1459e-852d-4527-a70e-5a849c7488b6"
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeB-LFP/.zgroup": {
+            "zarr_format": 2
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeB-LFP/data/.zarray": {
+            "chunks": [
+                78125,
+                64
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 9,
+                "cname": "zstd",
+                "id": "blosc",
+                "shuffle": 2
+            },
+            "dtype": "<i2",
+            "fill_value": 0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                8757393,
+                96
+            ],
+            "zarr_format": 2
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeB-LFP/data/.zattrs": {
+            "conversion": 4.679999828338622e-06,
+            "offset": 0.0,
+            "resolution": -1.0,
+            "unit": "volts",
+            "zarr_dtype": "<i2"
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeB-LFP/electrodes/.zarray": {
+            "chunks": [
+                96
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<i8",
+            "fill_value": 0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                96
+            ],
+            "zarr_format": 2
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeB-LFP/electrodes/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "num_rows"
+            ],
+            "description": "electrode_table_region",
+            "namespace": "hdmf-common",
+            "neurodata_type": "DynamicTableRegion",
+            "object_id": "e0ee27ec-a0e8-4940-b34f-1d0455a5f1b2",
+            "table": {
+                "value": {
+                    "object_id": "f4afb2bd-f5c2-4f69-9d91-8f6129123ef0",
+                    "path": "/general/extracellular_ephys/electrodes",
+                    "source": ".",
+                    "source_object_id": "f6a1ccb2-c1d7-401c-a90b-db938f8f670e"
+                },
+                "zarr_dtype": "object"
+            },
+            "zarr_dtype": "int64"
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeB-LFP/timestamps/.zarray": {
+            "chunks": [
+                1250000
+            ],
+            "compressor": {
+                "id": "gzip",
+                "level": 1
+            },
+            "dtype": "<f8",
+            "fill_value": 0.0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                8757393
+            ],
+            "zarr_format": 2
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeB-LFP/timestamps/.zattrs": {
+            "interval": 1,
+            "unit": "seconds",
+            "zarr_dtype": "float64"
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeC-LFP/.zattrs": {
+            "comments": "no comments",
+            "description": "LFP voltage traces from ProbeC",
+            "namespace": "core",
+            "neurodata_type": "ElectricalSeries",
+            "object_id": "a72e7c8f-e83d-407c-9886-8681fc1f9aa8"
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeC-LFP/.zgroup": {
+            "zarr_format": 2
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeC-LFP/data/.zarray": {
+            "chunks": [
+                78125,
+                64
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 9,
+                "cname": "zstd",
+                "id": "blosc",
+                "shuffle": 2
+            },
+            "dtype": "<i2",
+            "fill_value": 0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                8757437,
+                96
+            ],
+            "zarr_format": 2
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeC-LFP/data/.zattrs": {
+            "conversion": 4.679999828338622e-06,
+            "offset": 0.0,
+            "resolution": -1.0,
+            "unit": "volts",
+            "zarr_dtype": "<i2"
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeC-LFP/electrodes/.zarray": {
+            "chunks": [
+                96
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<i8",
+            "fill_value": 0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                96
+            ],
+            "zarr_format": 2
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeC-LFP/electrodes/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "num_rows"
+            ],
+            "description": "electrode_table_region",
+            "namespace": "hdmf-common",
+            "neurodata_type": "DynamicTableRegion",
+            "object_id": "1a0ced3b-840c-46eb-8cf5-c8e34445c226",
+            "table": {
+                "value": {
+                    "object_id": "f4afb2bd-f5c2-4f69-9d91-8f6129123ef0",
+                    "path": "/general/extracellular_ephys/electrodes",
+                    "source": ".",
+                    "source_object_id": "f6a1ccb2-c1d7-401c-a90b-db938f8f670e"
+                },
+                "zarr_dtype": "object"
+            },
+            "zarr_dtype": "int64"
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeC-LFP/timestamps/.zarray": {
+            "chunks": [
+                1250000
+            ],
+            "compressor": {
+                "id": "gzip",
+                "level": 1
+            },
+            "dtype": "<f8",
+            "fill_value": 0.0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                8757437
+            ],
+            "zarr_format": 2
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeC-LFP/timestamps/.zattrs": {
+            "interval": 1,
+            "unit": "seconds",
+            "zarr_dtype": "float64"
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeD-LFP/.zattrs": {
+            "comments": "no comments",
+            "description": "LFP voltage traces from ProbeD",
+            "namespace": "core",
+            "neurodata_type": "ElectricalSeries",
+            "object_id": "24e846bc-7010-417e-926f-66267953f588"
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeD-LFP/.zgroup": {
+            "zarr_format": 2
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeD-LFP/data/.zarray": {
+            "chunks": [
+                78125,
+                64
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 9,
+                "cname": "zstd",
+                "id": "blosc",
+                "shuffle": 2
+            },
+            "dtype": "<i2",
+            "fill_value": 0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                8757414,
+                96
+            ],
+            "zarr_format": 2
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeD-LFP/data/.zattrs": {
+            "conversion": 4.679999828338622e-06,
+            "offset": 0.0,
+            "resolution": -1.0,
+            "unit": "volts",
+            "zarr_dtype": "<i2"
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeD-LFP/electrodes/.zarray": {
+            "chunks": [
+                96
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<i8",
+            "fill_value": 0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                96
+            ],
+            "zarr_format": 2
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeD-LFP/electrodes/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "num_rows"
+            ],
+            "description": "electrode_table_region",
+            "namespace": "hdmf-common",
+            "neurodata_type": "DynamicTableRegion",
+            "object_id": "b3029e4d-27c9-422f-9aa9-94b296e16240",
+            "table": {
+                "value": {
+                    "object_id": "f4afb2bd-f5c2-4f69-9d91-8f6129123ef0",
+                    "path": "/general/extracellular_ephys/electrodes",
+                    "source": ".",
+                    "source_object_id": "f6a1ccb2-c1d7-401c-a90b-db938f8f670e"
+                },
+                "zarr_dtype": "object"
+            },
+            "zarr_dtype": "int64"
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeD-LFP/timestamps/.zarray": {
+            "chunks": [
+                1250000
+            ],
+            "compressor": {
+                "id": "gzip",
+                "level": 1
+            },
+            "dtype": "<f8",
+            "fill_value": 0.0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                8757414
+            ],
+            "zarr_format": 2
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeD-LFP/timestamps/.zattrs": {
+            "interval": 1,
+            "unit": "seconds",
+            "zarr_dtype": "float64"
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeE-LFP/.zattrs": {
+            "comments": "no comments",
+            "description": "LFP voltage traces from ProbeE",
+            "namespace": "core",
+            "neurodata_type": "ElectricalSeries",
+            "object_id": "45b6205b-9e90-4724-bd05-47fb95db9064"
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeE-LFP/.zgroup": {
+            "zarr_format": 2
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeE-LFP/data/.zarray": {
+            "chunks": [
+                78125,
+                64
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 9,
+                "cname": "zstd",
+                "id": "blosc",
+                "shuffle": 2
+            },
+            "dtype": "<i2",
+            "fill_value": 0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                8757433,
+                96
+            ],
+            "zarr_format": 2
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeE-LFP/data/.zattrs": {
+            "conversion": 4.679999828338622e-06,
+            "offset": 0.0,
+            "resolution": -1.0,
+            "unit": "volts",
+            "zarr_dtype": "<i2"
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeE-LFP/electrodes/.zarray": {
+            "chunks": [
+                96
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<i8",
+            "fill_value": 0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                96
+            ],
+            "zarr_format": 2
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeE-LFP/electrodes/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "num_rows"
+            ],
+            "description": "electrode_table_region",
+            "namespace": "hdmf-common",
+            "neurodata_type": "DynamicTableRegion",
+            "object_id": "51b15422-93e4-4cda-9e36-b81e0c429c10",
+            "table": {
+                "value": {
+                    "object_id": "f4afb2bd-f5c2-4f69-9d91-8f6129123ef0",
+                    "path": "/general/extracellular_ephys/electrodes",
+                    "source": ".",
+                    "source_object_id": "f6a1ccb2-c1d7-401c-a90b-db938f8f670e"
+                },
+                "zarr_dtype": "object"
+            },
+            "zarr_dtype": "int64"
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeE-LFP/timestamps/.zarray": {
+            "chunks": [
+                1250000
+            ],
+            "compressor": {
+                "id": "gzip",
+                "level": 1
+            },
+            "dtype": "<f8",
+            "fill_value": 0.0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                8757433
+            ],
+            "zarr_format": 2
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeE-LFP/timestamps/.zattrs": {
+            "interval": 1,
+            "unit": "seconds",
+            "zarr_dtype": "float64"
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeF-LFP/.zattrs": {
+            "comments": "no comments",
+            "description": "LFP voltage traces from ProbeF",
+            "namespace": "core",
+            "neurodata_type": "ElectricalSeries",
+            "object_id": "b623e15e-c961-46bc-a42b-53213fa70b67"
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeF-LFP/.zgroup": {
+            "zarr_format": 2
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeF-LFP/data/.zarray": {
+            "chunks": [
+                78125,
+                64
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 9,
+                "cname": "zstd",
+                "id": "blosc",
+                "shuffle": 2
+            },
+            "dtype": "<i2",
+            "fill_value": 0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                8757401,
+                96
+            ],
+            "zarr_format": 2
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeF-LFP/data/.zattrs": {
+            "conversion": 4.679999828338622e-06,
+            "offset": 0.0,
+            "resolution": -1.0,
+            "unit": "volts",
+            "zarr_dtype": "<i2"
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeF-LFP/electrodes/.zarray": {
+            "chunks": [
+                96
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<i8",
+            "fill_value": 0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                96
+            ],
+            "zarr_format": 2
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeF-LFP/electrodes/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "num_rows"
+            ],
+            "description": "electrode_table_region",
+            "namespace": "hdmf-common",
+            "neurodata_type": "DynamicTableRegion",
+            "object_id": "3a2c40b8-add5-4cb2-9ecb-71bcbca3ff85",
+            "table": {
+                "value": {
+                    "object_id": "f4afb2bd-f5c2-4f69-9d91-8f6129123ef0",
+                    "path": "/general/extracellular_ephys/electrodes",
+                    "source": ".",
+                    "source_object_id": "f6a1ccb2-c1d7-401c-a90b-db938f8f670e"
+                },
+                "zarr_dtype": "object"
+            },
+            "zarr_dtype": "int64"
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeF-LFP/timestamps/.zarray": {
+            "chunks": [
+                1250000
+            ],
+            "compressor": {
+                "id": "gzip",
+                "level": 1
+            },
+            "dtype": "<f8",
+            "fill_value": 0.0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                8757401
+            ],
+            "zarr_format": 2
+        },
+        "processing/ecephys/LFP/ElectricalSeriesProbeF-LFP/timestamps/.zattrs": {
+            "interval": 1,
+            "unit": "seconds",
+            "zarr_dtype": "float64"
+        },
+        "session_description/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "id": "vlen-utf8"
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "session_description/.zattrs": {
+            "zarr_dtype": "scalar"
+        },
+        "session_start_time/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "id": "vlen-bytes"
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "session_start_time/.zattrs": {
+            "zarr_dtype": "scalar"
+        },
+        "specifications/.zgroup": {
+            "zarr_format": 2
+        },
+        "specifications/core/.zgroup": {
+            "zarr_format": 2
+        },
+        "specifications/core/2.7.0/.zgroup": {
+            "zarr_format": 2
+        },
+        "specifications/core/2.7.0/namespace/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": null,
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "allow_nan": true,
+                    "check_circular": true,
+                    "encoding": "utf-8",
+                    "ensure_ascii": true,
+                    "id": "json2",
+                    "indent": null,
+                    "separators": [
+                        ",",
+                        ":"
+                    ],
+                    "skipkeys": false,
+                    "sort_keys": true,
+                    "strict": true
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "specifications/core/2.7.0/namespace/.zattrs": {
+            "zarr_dtype": "scalar"
+        },
+        "specifications/core/2.7.0/nwb.base/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": null,
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "allow_nan": true,
+                    "check_circular": true,
+                    "encoding": "utf-8",
+                    "ensure_ascii": true,
+                    "id": "json2",
+                    "indent": null,
+                    "separators": [
+                        ",",
+                        ":"
+                    ],
+                    "skipkeys": false,
+                    "sort_keys": true,
+                    "strict": true
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "specifications/core/2.7.0/nwb.base/.zattrs": {
+            "zarr_dtype": "scalar"
+        },
+        "specifications/core/2.7.0/nwb.behavior/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": null,
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "allow_nan": true,
+                    "check_circular": true,
+                    "encoding": "utf-8",
+                    "ensure_ascii": true,
+                    "id": "json2",
+                    "indent": null,
+                    "separators": [
+                        ",",
+                        ":"
+                    ],
+                    "skipkeys": false,
+                    "sort_keys": true,
+                    "strict": true
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "specifications/core/2.7.0/nwb.behavior/.zattrs": {
+            "zarr_dtype": "scalar"
+        },
+        "specifications/core/2.7.0/nwb.device/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": null,
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "allow_nan": true,
+                    "check_circular": true,
+                    "encoding": "utf-8",
+                    "ensure_ascii": true,
+                    "id": "json2",
+                    "indent": null,
+                    "separators": [
+                        ",",
+                        ":"
+                    ],
+                    "skipkeys": false,
+                    "sort_keys": true,
+                    "strict": true
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "specifications/core/2.7.0/nwb.device/.zattrs": {
+            "zarr_dtype": "scalar"
+        },
+        "specifications/core/2.7.0/nwb.ecephys/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": null,
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "allow_nan": true,
+                    "check_circular": true,
+                    "encoding": "utf-8",
+                    "ensure_ascii": true,
+                    "id": "json2",
+                    "indent": null,
+                    "separators": [
+                        ",",
+                        ":"
+                    ],
+                    "skipkeys": false,
+                    "sort_keys": true,
+                    "strict": true
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "specifications/core/2.7.0/nwb.ecephys/.zattrs": {
+            "zarr_dtype": "scalar"
+        },
+        "specifications/core/2.7.0/nwb.epoch/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": null,
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "allow_nan": true,
+                    "check_circular": true,
+                    "encoding": "utf-8",
+                    "ensure_ascii": true,
+                    "id": "json2",
+                    "indent": null,
+                    "separators": [
+                        ",",
+                        ":"
+                    ],
+                    "skipkeys": false,
+                    "sort_keys": true,
+                    "strict": true
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "specifications/core/2.7.0/nwb.epoch/.zattrs": {
+            "zarr_dtype": "scalar"
+        },
+        "specifications/core/2.7.0/nwb.file/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": null,
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "allow_nan": true,
+                    "check_circular": true,
+                    "encoding": "utf-8",
+                    "ensure_ascii": true,
+                    "id": "json2",
+                    "indent": null,
+                    "separators": [
+                        ",",
+                        ":"
+                    ],
+                    "skipkeys": false,
+                    "sort_keys": true,
+                    "strict": true
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "specifications/core/2.7.0/nwb.file/.zattrs": {
+            "zarr_dtype": "scalar"
+        },
+        "specifications/core/2.7.0/nwb.icephys/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": null,
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "allow_nan": true,
+                    "check_circular": true,
+                    "encoding": "utf-8",
+                    "ensure_ascii": true,
+                    "id": "json2",
+                    "indent": null,
+                    "separators": [
+                        ",",
+                        ":"
+                    ],
+                    "skipkeys": false,
+                    "sort_keys": true,
+                    "strict": true
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "specifications/core/2.7.0/nwb.icephys/.zattrs": {
+            "zarr_dtype": "scalar"
+        },
+        "specifications/core/2.7.0/nwb.image/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": null,
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "allow_nan": true,
+                    "check_circular": true,
+                    "encoding": "utf-8",
+                    "ensure_ascii": true,
+                    "id": "json2",
+                    "indent": null,
+                    "separators": [
+                        ",",
+                        ":"
+                    ],
+                    "skipkeys": false,
+                    "sort_keys": true,
+                    "strict": true
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "specifications/core/2.7.0/nwb.image/.zattrs": {
+            "zarr_dtype": "scalar"
+        },
+        "specifications/core/2.7.0/nwb.misc/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": null,
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "allow_nan": true,
+                    "check_circular": true,
+                    "encoding": "utf-8",
+                    "ensure_ascii": true,
+                    "id": "json2",
+                    "indent": null,
+                    "separators": [
+                        ",",
+                        ":"
+                    ],
+                    "skipkeys": false,
+                    "sort_keys": true,
+                    "strict": true
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "specifications/core/2.7.0/nwb.misc/.zattrs": {
+            "zarr_dtype": "scalar"
+        },
+        "specifications/core/2.7.0/nwb.ogen/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": null,
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "allow_nan": true,
+                    "check_circular": true,
+                    "encoding": "utf-8",
+                    "ensure_ascii": true,
+                    "id": "json2",
+                    "indent": null,
+                    "separators": [
+                        ",",
+                        ":"
+                    ],
+                    "skipkeys": false,
+                    "sort_keys": true,
+                    "strict": true
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "specifications/core/2.7.0/nwb.ogen/.zattrs": {
+            "zarr_dtype": "scalar"
+        },
+        "specifications/core/2.7.0/nwb.ophys/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": null,
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "allow_nan": true,
+                    "check_circular": true,
+                    "encoding": "utf-8",
+                    "ensure_ascii": true,
+                    "id": "json2",
+                    "indent": null,
+                    "separators": [
+                        ",",
+                        ":"
+                    ],
+                    "skipkeys": false,
+                    "sort_keys": true,
+                    "strict": true
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "specifications/core/2.7.0/nwb.ophys/.zattrs": {
+            "zarr_dtype": "scalar"
+        },
+        "specifications/core/2.7.0/nwb.retinotopy/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": null,
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "allow_nan": true,
+                    "check_circular": true,
+                    "encoding": "utf-8",
+                    "ensure_ascii": true,
+                    "id": "json2",
+                    "indent": null,
+                    "separators": [
+                        ",",
+                        ":"
+                    ],
+                    "skipkeys": false,
+                    "sort_keys": true,
+                    "strict": true
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "specifications/core/2.7.0/nwb.retinotopy/.zattrs": {
+            "zarr_dtype": "scalar"
+        },
+        "specifications/hdmf-common/.zgroup": {
+            "zarr_format": 2
+        },
+        "specifications/hdmf-common/1.8.0/.zgroup": {
+            "zarr_format": 2
+        },
+        "specifications/hdmf-common/1.8.0/base/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": null,
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "allow_nan": true,
+                    "check_circular": true,
+                    "encoding": "utf-8",
+                    "ensure_ascii": true,
+                    "id": "json2",
+                    "indent": null,
+                    "separators": [
+                        ",",
+                        ":"
+                    ],
+                    "skipkeys": false,
+                    "sort_keys": true,
+                    "strict": true
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "specifications/hdmf-common/1.8.0/base/.zattrs": {
+            "zarr_dtype": "scalar"
+        },
+        "specifications/hdmf-common/1.8.0/namespace/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": null,
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "allow_nan": true,
+                    "check_circular": true,
+                    "encoding": "utf-8",
+                    "ensure_ascii": true,
+                    "id": "json2",
+                    "indent": null,
+                    "separators": [
+                        ",",
+                        ":"
+                    ],
+                    "skipkeys": false,
+                    "sort_keys": true,
+                    "strict": true
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "specifications/hdmf-common/1.8.0/namespace/.zattrs": {
+            "zarr_dtype": "scalar"
+        },
+        "specifications/hdmf-common/1.8.0/sparse/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": null,
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "allow_nan": true,
+                    "check_circular": true,
+                    "encoding": "utf-8",
+                    "ensure_ascii": true,
+                    "id": "json2",
+                    "indent": null,
+                    "separators": [
+                        ",",
+                        ":"
+                    ],
+                    "skipkeys": false,
+                    "sort_keys": true,
+                    "strict": true
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "specifications/hdmf-common/1.8.0/sparse/.zattrs": {
+            "zarr_dtype": "scalar"
+        },
+        "specifications/hdmf-common/1.8.0/table/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": null,
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "allow_nan": true,
+                    "check_circular": true,
+                    "encoding": "utf-8",
+                    "ensure_ascii": true,
+                    "id": "json2",
+                    "indent": null,
+                    "separators": [
+                        ",",
+                        ":"
+                    ],
+                    "skipkeys": false,
+                    "sort_keys": true,
+                    "strict": true
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "specifications/hdmf-common/1.8.0/table/.zattrs": {
+            "zarr_dtype": "scalar"
+        },
+        "specifications/hdmf-experimental/.zgroup": {
+            "zarr_format": 2
+        },
+        "specifications/hdmf-experimental/0.5.0/.zgroup": {
+            "zarr_format": 2
+        },
+        "specifications/hdmf-experimental/0.5.0/experimental/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": null,
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "allow_nan": true,
+                    "check_circular": true,
+                    "encoding": "utf-8",
+                    "ensure_ascii": true,
+                    "id": "json2",
+                    "indent": null,
+                    "separators": [
+                        ",",
+                        ":"
+                    ],
+                    "skipkeys": false,
+                    "sort_keys": true,
+                    "strict": true
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "specifications/hdmf-experimental/0.5.0/experimental/.zattrs": {
+            "zarr_dtype": "scalar"
+        },
+        "specifications/hdmf-experimental/0.5.0/namespace/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": null,
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "allow_nan": true,
+                    "check_circular": true,
+                    "encoding": "utf-8",
+                    "ensure_ascii": true,
+                    "id": "json2",
+                    "indent": null,
+                    "separators": [
+                        ",",
+                        ":"
+                    ],
+                    "skipkeys": false,
+                    "sort_keys": true,
+                    "strict": true
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "specifications/hdmf-experimental/0.5.0/namespace/.zattrs": {
+            "zarr_dtype": "scalar"
+        },
+        "specifications/hdmf-experimental/0.5.0/resources/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": null,
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "allow_nan": true,
+                    "check_circular": true,
+                    "encoding": "utf-8",
+                    "ensure_ascii": true,
+                    "id": "json2",
+                    "indent": null,
+                    "separators": [
+                        ",",
+                        ":"
+                    ],
+                    "skipkeys": false,
+                    "sort_keys": true,
+                    "strict": true
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "specifications/hdmf-experimental/0.5.0/resources/.zattrs": {
+            "zarr_dtype": "scalar"
+        },
+        "stimulus/.zgroup": {
+            "zarr_format": 2
+        },
+        "stimulus/presentation/.zgroup": {
+            "zarr_format": 2
+        },
+        "stimulus/templates/.zgroup": {
+            "zarr_format": 2
+        },
+        "timestamps_reference_time/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "id": "vlen-bytes"
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "timestamps_reference_time/.zattrs": {
+            "zarr_dtype": "scalar"
+        }
+    },
+    "zarr_consolidated_format": 1
+}

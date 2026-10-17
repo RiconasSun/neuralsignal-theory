@@ -1,0 +1,66 @@
+test_anatomy_exact_descendants (paper14_open1.test_recovery.RecoveryTests.test_anatomy_exact_descendants) ... ok
+test_clock_inversion_and_block_merging_denied (paper14_open1.test_recovery.RecoveryTests.test_clock_inversion_and_block_merging_denied) ... ok
+test_count_preserving_finite_definition_not_biological_null (paper14_open1.test_recovery.RecoveryTests.test_count_preserving_finite_definition_not_biological_null) ... ok
+test_every_required_ready_gate (paper14_open1.test_recovery.RecoveryTests.test_every_required_ready_gate) ... ok
+test_exact_session_not_same_mouse (paper14_open1.test_recovery.RecoveryTests.test_exact_session_not_same_mouse) ... ok
+test_fixed_block_halves_and_first_five (paper14_open1.test_recovery.RecoveryTests.test_fixed_block_halves_and_first_five) ... ok
+test_historical_evidence (paper14_open1.test_recovery.RecoveryTests.test_historical_evidence) ... ok
+test_insufficient_cohort_no_swap_or_split (paper14_open1.test_recovery.RecoveryTests.test_insufficient_cohort_no_swap_or_split) ... ok
+test_license_bucket_not_cross_transferred (paper14_open1.test_recovery.RecoveryTests.test_license_bucket_not_cross_transferred) ... ok
+test_listing_trailing_slash_regression (paper14_open1.test_recovery.RecoveryTests.test_listing_trailing_slash_regression) ... ok
+test_literal_None_restriction_regression (paper14_open1.test_recovery.RecoveryTests.test_literal_None_restriction_regression) ... ok
+test_metadata_decoder_known_finite_dimensions (paper14_open1.test_recovery.RecoveryTests.test_metadata_decoder_known_finite_dimensions) ... ok
+test_metadata_decoder_rejects_neural (paper14_open1.test_recovery.RecoveryTests.test_metadata_decoder_rejects_neural) ... ok
+test_missing_events_never_imputed (paper14_open1.test_recovery.RecoveryTests.test_missing_events_never_imputed) ... ok
+test_network_validator_denies_signal_and_unregistered_paths (paper14_open1.test_recovery.RecoveryTests.test_network_validator_denies_signal_and_unregistered_paths) ... ok
+test_opto_unknown_timing_and_missing_response_excluded (paper14_open1.test_recovery.RecoveryTests.test_opto_unknown_timing_and_missing_response_excluded) ... ERROR
+test_public_pagination_and_sorted_agreement (paper14_open1.test_recovery.RecoveryTests.test_public_pagination_and_sorted_agreement) ... ok
+test_registered_access_journal_no_signal (paper14_open1.test_recovery.RecoveryTests.test_registered_access_journal_no_signal) ... ok
+test_unknown_flags_fail_closed (paper14_open1.test_recovery.RecoveryTests.test_unknown_flags_fail_closed) ... ok
+test_unknown_sessions_retained_in_upper (paper14_open1.test_recovery.RecoveryTests.test_unknown_sessions_retained_in_upper) ... ok
+
+======================================================================
+ERROR: test_opto_unknown_timing_and_missing_response_excluded (paper14_open1.test_recovery.RecoveryTests.test_opto_unknown_timing_and_missing_response_excluded)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\pandas\core\internals\blocks.py", line 1115, in setitem
+    casted = np_can_hold_element(values.dtype, value)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\pandas\core\dtypes\cast.py", line 1750, in np_can_hold_element
+    raise LossySetitemError
+pandas.errors.LossySetitemError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper14_open1\test_recovery.py", line 100, in test_opto_unknown_timing_and_missing_response_excluded
+    f=trials();f.loc[10,'is_opto']=True;f.loc[11,'is_opto']=None;f.loc[12,'is_response']=True;f.loc[13,'stop_time']=131.1
+                                                                                              ~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\pandas\core\indexing.py", line 938, in __setitem__
+    iloc._setitem_with_indexer(indexer, value, self.name)
+  File "C:\Users\85993\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\pandas\core\indexing.py", line 1953, in _setitem_with_indexer
+    self._setitem_with_indexer_split_path(indexer, value, name)
+  File "C:\Users\85993\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\pandas\core\indexing.py", line 2044, in _setitem_with_indexer_split_path
+    self._setitem_single_column(loc, value, pi)
+  File "C:\Users\85993\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\pandas\core\indexing.py", line 2181, in _setitem_single_column
+    self.obj._mgr.column_setitem(loc, plane_indexer, value)
+  File "C:\Users\85993\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\pandas\core\internals\managers.py", line 1541, in column_setitem
+    new_mgr = col_mgr.setitem((idx,), value)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\pandas\core\internals\managers.py", line 620, in setitem
+    return self.apply("setitem", indexer=indexer, value=value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\pandas\core\internals\managers.py", line 445, in apply
+    applied = getattr(b, f)(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\pandas\core\internals\blocks.py", line 1118, in setitem
+    nb = self.coerce_to_target_dtype(value, raise_on_upcast=True)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\pandas\core\internals\blocks.py", line 468, in coerce_to_target_dtype
+    raise TypeError(f"Invalid value '{other}' for dtype '{self.values.dtype}'")
+TypeError: Invalid value '131.1' for dtype 'int64'
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.201s
+
+FAILED (errors=1)

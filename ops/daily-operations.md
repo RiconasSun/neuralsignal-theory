@@ -1,3 +1,12 @@
+# Current mission: P14-M1-OPEN-RELEASE-RECOVERY
+
+Bounded public-source audit scientific decision SOURCE_OR_TIMING_INCONCLUSIVE; intended NEED_ENV after reviewed archive. BASE35e344278cd25574764290b54550ec82d7e963a2. AIND Open Data dataset and registered assets explicitly CC-BY4.0; no extra negotiated permission or email prerequisite.595unique public project assets,252ecephys/62inventorymice (not a target cohort);53publicNWB versions/18mice23sessions.12Zarr anatomy/probe/unit-ID/provider-QC metadata screens,11HDF5sessions conservatively unknown; latest-version NWB independent-animal upper13<16. Broader raw/sorted routes remain unresolved, never globally declared insufficient. Original18:8same-date public matches,7NWB;5other-date-only,5noverifiedmatch; no probe/UUID/content equivalence inferred.
+
+No new licensed target cohort or allocation, full M1 protocol not frozen, no Prompt3. Original M0 INCONCLUSIVE_METADATA/M1 SOURCE_RIGHTS_BLOCKED and old9/9 reservation preserved. No spike arrays/raw behavior values/fits/scores/final assessment/external correspondence. One additional IBL documentary screen has mismatched left/right prior contexts; no hypothesis substitution or second source.20source/synthetic policy tests; saved-only PowerShell, final independent review and actual Git remote/clean receipts required for archive acceptance.69atomic requirements remain traceable;25scientific prerequisites blocked. bug_count0/warn_count2.
+
+Evidence: ops/evidence/2026-10-16/p14-m1-open-release-recovery. Report: paper14_open1/OPEN_RELEASE_REPORT.md. Saved-only: & .\paper14_open1\reproduce.ps1. Missing item: compatible public processed target-unit/QC, both-context and task-clock metadata demonstrating>=8+8independent mice. No automatic new search mission or scientific activation. Prior headers preserved verbatim.
+
+---
 # Current mission: P14-M1-SOURCE-CONTRACT-AND-PROTOCOL-FREEZE
 
 Source/metadata checkpoint scientificdecision SOURCE_RIGHTS_BLOCKED. ExactBASE9cb5568be20821f5487d8987ff484201ecc22632. Applicable rights for all18originalscratchv0.0.289sessions remainunresolved. Sevenrelatedcanonicalv289assets were found forselectedsubjects, only3exactselecteddates;4otherdates cannotreplace originalsessions. No cross-bucket license transfer. All18coverage rowsretain unknownrunning/pupil/clockquality;5missingresponseeventtimes in4sessionsnotimputed. No neural/behavioralsignal values, fits, scores, finalassessment or externalcorrespondence. All104frozenM0hashes and originalINCONCLUSIVE_METADATApreserved.

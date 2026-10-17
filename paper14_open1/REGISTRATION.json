@@ -1,0 +1,51 @@
+{
+  "mission": "P14-M1-OPEN-RELEASE-RECOVERY",
+  "base": "35e344278cd25574764290b54550ec82d7e963a2",
+  "registered_at": "2026-10-17T04:24:13.751344+00:00",
+  "before_new_eligibility_counts": true,
+  "known_history": "M0/M1 publicly inspected behavior/anatomy metadata; no P14 neural values/outcomes inspected. New AWS registry read describes dataset-wide CC-BY-4.0 on aind-open-data; inspect binding and terms, no scratch license transfer.",
+  "scope": "Official Dynamic Routing open releases first, across released processing versions; original18 reconciliation is separate from prospective canonical-only cohort.",
+  "release_snapshot": "Freeze API result and processing/source/asset IDs, S3 metadata hashes and receipts; no assertion of immutable bucket. Prioritize latest npc_sessions conversion per exact session, version parsed semantically, then creation date/asset ID lexical; preserve all alternatives.",
+  "primary": "brainwide AND provider behavior pass; no naive/Templeton/perturbation pooling. Require explicit source flags/documentation; missing is unresolved.",
+  "anatomy": "ACAd/ACAv/PL/ILA exact laminar descendants, finite CCF coordinates, provider QC; one same probe same units supported in both contexts. No MOs/ORB.",
+  "original_thresholds": {
+    "provider_good_units": 10,
+    "min_valid_trials_block": 15,
+    "min_blocks_each_context": 2,
+    "min_trials_each_context_half": 60,
+    "min_development": 8,
+    "min_final": 8
+  },
+  "trial_policy": "Original six scheduled blocks; first five scheduled trials each excluded before masks; planned opto or unknown excluded; finite ordered trial/stimulus/stop times and 0.5s window within trial. Whole original block halves 1-3 vs4-6. Require exact aud/vis labels; no outcome-dependent engagement admission.",
+  "missing_event_policy": "For any trial with response/reward flag true and nonfinite corresponding event timestamp exclude the entire trial from all primary/sensitivity bin masks, before counts; flag false requires no event. Never impute. This stricter canonical-source rule is registered before new counts and preserves original scratch masks/evidence.",
+  "support": "Finite sorted nonoverlapping unit obs_intervals or explicit source recording support; every retained prediction window supported. Missing mandatory support/QC/clock evidence stays unresolved, never good.",
+  "selection": "Among eligible metadata single probes choose greatest qualified unit count, greatest minimum four context-half count, then lexical session/probe; one per mouse, no model scores. Preserve alternative rows.",
+  "allocation": "If >=16 qualified independent candidates sort SHA256(ASCII P14-OPEN-V1|canonical_mouse_id); first floor(n/2) development, rest final; no replacement/swap. Actual physiology remains unmeasured.",
+  "interpretation": "Conditional on available measured task variables; permanently no movement/arousal-independent, causal/ontological, NAP/CWP or independent-lab replication claims.",
+  "access": {
+    "metadata_only": true,
+    "no_neural": true,
+    "no_raw_continuous_behavior": true,
+    "no_sdk": true,
+    "allowed": "Official docs/metadata API/S3 object listings/JSON descriptors plus explicitly registered unit anatomy/QC/support and discrete trial-event columns. Never full NWB, spike values, waveforms or raw continuous channels. Inspect descriptors before registering any canonical column GET."
+  },
+  "budget": {
+    "attempts": 900,
+    "total_bytes": 120000000,
+    "single_response_bytes": 8000000,
+    "attempts_per_request": 2,
+    "max_sessions": 500,
+    "additional_datasets": 1
+  },
+  "endpoints": [
+    "registry.opendata.aws",
+    "allenneuraldynamics.github.io",
+    "docs.allenneuraldynamics.org",
+    "api.allenneuraldynamics.org",
+    "raw.githubusercontent.com official repositories",
+    "api.github.com official repositories",
+    "aind-open-data.s3.us-west-2.amazonaws.com registered metadata paths",
+    "creativecommons.org/licenses/by/4.0/"
+  ],
+  "stop": "No neural activation; exact source/timing/denominator failure -> report grounded owner outcome. Complete protocol only if prerequisites verified. No correspondence, no automatic additional mission."
+}

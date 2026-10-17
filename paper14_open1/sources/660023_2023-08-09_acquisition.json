@@ -1,0 +1,1073 @@
+{
+   "acquisition_end_time": "2023-08-09T14:14:09.314462Z",
+   "acquisition_start_time": "2023-08-09T08:09:09-07:00",
+   "acquisition_type": "brainwide survey",
+   "calibrations": [],
+   "coordinate_system": null,
+   "data_streams": [
+      {
+         "active_devices": [
+            "Camstim DAQ",
+            "Eye camera",
+            "Front camera",
+            "Nose camera",
+            "Opto DAQ",
+            "Opto laser #1",
+            "Opto laser #2",
+            "Opto laser galvo X",
+            "Opto laser galvo Y",
+            "Side camera",
+            "Stimulus microphone",
+            "Stimulus monitor",
+            "Stimulus photodiode",
+            "Stimulus speaker",
+            "Sync DAQ",
+            "Sync DAQ",
+            "TaskControl DAQ",
+            "probeA",
+            "probeB",
+            "probeC",
+            "probeD",
+            "probeE",
+            "probeF"
+         ],
+         "code": [
+            {
+               "container": null,
+               "core_dependency": {
+                  "name": "Open Ephys GUI",
+                  "object_type": "Software",
+                  "version": "0.6.4"
+               },
+               "input_data": null,
+               "language": "Python",
+               "language_version": "3.9",
+               "name": null,
+               "object_type": "Code",
+               "parameters": null,
+               "run_script": null,
+               "url": "https://github.com/AllenInstitute/np_services/blob/main/src/np_services/open_ephys.py",
+               "version": null
+            },
+            {
+               "container": null,
+               "core_dependency": {
+                  "name": "nidaqmx",
+                  "object_type": "Software",
+                  "version": "0.6.2"
+               },
+               "input_data": null,
+               "language": "Python",
+               "language_version": "3.9",
+               "name": null,
+               "object_type": "Code",
+               "parameters": null,
+               "run_script": null,
+               "url": "https://github.com/AllenInstitute/np_services/blob/main/src/np_services/proxies.py",
+               "version": null
+            },
+            {
+               "container": null,
+               "core_dependency": {
+                  "name": "PsychoPy",
+                  "object_type": "Software",
+                  "version": "2022.1.2"
+               },
+               "input_data": null,
+               "language": "Python",
+               "language_version": "3.9",
+               "name": null,
+               "object_type": "Code",
+               "parameters": null,
+               "run_script": null,
+               "url": "https://github.com/AllenInstitute/np_services/blob/main/src/np_services/proxies.py",
+               "version": null
+            },
+            {
+               "container": null,
+               "core_dependency": {
+                  "name": "MultiVideoRecorder",
+                  "object_type": "Software",
+                  "version": "1.1.7"
+               },
+               "input_data": null,
+               "language": "Python",
+               "language_version": "3.9",
+               "name": null,
+               "object_type": "Code",
+               "parameters": null,
+               "run_script": null,
+               "url": "https://github.com/AllenInstitute/np_services/blob/main/src/np_services/proxies.py",
+               "version": null
+            }
+         ],
+         "configurations": [
+            {
+               "device_name": "A",
+               "manipulator": {
+                  "coordinate_system": {
+                     "axes": [
+                        {
+                           "direction": "Left_to_right",
+                           "name": "X",
+                           "object_type": "Axis"
+                        },
+                        {
+                           "direction": "Back_to_front",
+                           "name": "Y",
+                           "object_type": "Axis"
+                        },
+                        {
+                           "direction": "Superior_to_inferior",
+                           "name": "Z",
+                           "object_type": "Axis"
+                        }
+                     ],
+                     "axis_unit": "micrometer",
+                     "name": "probeA XYZ",
+                     "object_type": "Coordinate system",
+                     "origin": "Tip"
+                  },
+                  "device_name": "A",
+                  "local_axis_positions": {
+                     "object_type": "Translation",
+                     "translation": [
+                        11930.5,
+                        8851.5,
+                        9649
+                     ]
+                  },
+                  "object_type": "Manipulator config"
+               },
+               "modules": null,
+               "object_type": "Ephys assembly config",
+               "probes": [
+                  {
+                     "atlas_coordinate": null,
+                     "coordinate_system": {
+                        "axes": [
+                           {
+                              "direction": "Left_to_right",
+                              "name": "X",
+                              "object_type": "Axis"
+                           },
+                           {
+                              "direction": "Back_to_front",
+                              "name": "Y",
+                              "object_type": "Axis"
+                           },
+                           {
+                              "direction": "Superior_to_inferior",
+                              "name": "Z",
+                              "object_type": "Axis"
+                           }
+                        ],
+                        "axis_unit": "micrometer",
+                        "name": "probeA XYZ",
+                        "object_type": "Coordinate system",
+                        "origin": "Tip"
+                     },
+                     "device_name": "probeA",
+                     "dye": "DiI",
+                     "notes": null,
+                     "object_type": "Probe config",
+                     "other_targeted_structure": null,
+                     "primary_targeted_structure": {
+                        "acronym": "root",
+                        "atlas": "CCFv3",
+                        "id": "997",
+                        "name": "root"
+                     },
+                     "transform": [
+                        {
+                           "object_type": "Translation",
+                           "translation": [
+                              11930.5,
+                              8851.5,
+                              9649
+                           ]
+                        }
+                     ]
+                  }
+               ]
+            },
+            {
+               "device_name": "B",
+               "manipulator": {
+                  "coordinate_system": {
+                     "axes": [
+                        {
+                           "direction": "Left_to_right",
+                           "name": "X",
+                           "object_type": "Axis"
+                        },
+                        {
+                           "direction": "Back_to_front",
+                           "name": "Y",
+                           "object_type": "Axis"
+                        },
+                        {
+                           "direction": "Superior_to_inferior",
+                           "name": "Z",
+                           "object_type": "Axis"
+                        }
+                     ],
+                     "axis_unit": "micrometer",
+                     "name": "probeB XYZ",
+                     "object_type": "Coordinate system",
+                     "origin": "Tip"
+                  },
+                  "device_name": "B",
+                  "local_axis_positions": {
+                     "object_type": "Translation",
+                     "translation": [
+                        10214.5,
+                        4142.5,
+                        8454.5
+                     ]
+                  },
+                  "object_type": "Manipulator config"
+               },
+               "modules": null,
+               "object_type": "Ephys assembly config",
+               "probes": [
+                  {
+                     "atlas_coordinate": null,
+                     "coordinate_system": {
+                        "axes": [
+                           {
+                              "direction": "Left_to_right",
+                              "name": "X",
+                              "object_type": "Axis"
+                           },
+                           {
+                              "direction": "Back_to_front",
+                              "name": "Y",
+                              "object_type": "Axis"
+                           },
+                           {
+                              "direction": "Superior_to_inferior",
+                              "name": "Z",
+                              "object_type": "Axis"
+                           }
+                        ],
+                        "axis_unit": "micrometer",
+                        "name": "probeB XYZ",
+                        "object_type": "Coordinate system",
+                        "origin": "Tip"
+                     },
+                     "device_name": "probeB",
+                     "dye": "DiI",
+                     "notes": null,
+                     "object_type": "Probe config",
+                     "other_targeted_structure": null,
+                     "primary_targeted_structure": {
+                        "acronym": "root",
+                        "atlas": "CCFv3",
+                        "id": "997",
+                        "name": "root"
+                     },
+                     "transform": [
+                        {
+                           "object_type": "Translation",
+                           "translation": [
+                              10214.5,
+                              4142.5,
+                              8454.5
+                           ]
+                        }
+                     ]
+                  }
+               ]
+            },
+            {
+               "device_name": "C",
+               "manipulator": {
+                  "coordinate_system": {
+                     "axes": [
+                        {
+                           "direction": "Left_to_right",
+                           "name": "X",
+                           "object_type": "Axis"
+                        },
+                        {
+                           "direction": "Back_to_front",
+                           "name": "Y",
+                           "object_type": "Axis"
+                        },
+                        {
+                           "direction": "Superior_to_inferior",
+                           "name": "Z",
+                           "object_type": "Axis"
+                        }
+                     ],
+                     "axis_unit": "micrometer",
+                     "name": "probeC XYZ",
+                     "object_type": "Coordinate system",
+                     "origin": "Tip"
+                  },
+                  "device_name": "C",
+                  "local_axis_positions": {
+                     "object_type": "Translation",
+                     "translation": [
+                        8174,
+                        7168.5,
+                        6357.5
+                     ]
+                  },
+                  "object_type": "Manipulator config"
+               },
+               "modules": null,
+               "object_type": "Ephys assembly config",
+               "probes": [
+                  {
+                     "atlas_coordinate": null,
+                     "coordinate_system": {
+                        "axes": [
+                           {
+                              "direction": "Left_to_right",
+                              "name": "X",
+                              "object_type": "Axis"
+                           },
+                           {
+                              "direction": "Back_to_front",
+                              "name": "Y",
+                              "object_type": "Axis"
+                           },
+                           {
+                              "direction": "Superior_to_inferior",
+                              "name": "Z",
+                              "object_type": "Axis"
+                           }
+                        ],
+                        "axis_unit": "micrometer",
+                        "name": "probeC XYZ",
+                        "object_type": "Coordinate system",
+                        "origin": "Tip"
+                     },
+                     "device_name": "probeC",
+                     "dye": "DiI",
+                     "notes": null,
+                     "object_type": "Probe config",
+                     "other_targeted_structure": null,
+                     "primary_targeted_structure": {
+                        "acronym": "root",
+                        "atlas": "CCFv3",
+                        "id": "997",
+                        "name": "root"
+                     },
+                     "transform": [
+                        {
+                           "object_type": "Translation",
+                           "translation": [
+                              8174,
+                              7168.5,
+                              6357.5
+                           ]
+                        }
+                     ]
+                  }
+               ]
+            },
+            {
+               "device_name": "D",
+               "manipulator": {
+                  "coordinate_system": {
+                     "axes": [
+                        {
+                           "direction": "Left_to_right",
+                           "name": "X",
+                           "object_type": "Axis"
+                        },
+                        {
+                           "direction": "Back_to_front",
+                           "name": "Y",
+                           "object_type": "Axis"
+                        },
+                        {
+                           "direction": "Superior_to_inferior",
+                           "name": "Z",
+                           "object_type": "Axis"
+                        }
+                     ],
+                     "axis_unit": "micrometer",
+                     "name": "probeD XYZ",
+                     "object_type": "Coordinate system",
+                     "origin": "Tip"
+                  },
+                  "device_name": "D",
+                  "local_axis_positions": {
+                     "object_type": "Translation",
+                     "translation": [
+                        5906.5,
+                        5006,
+                        10136
+                     ]
+                  },
+                  "object_type": "Manipulator config"
+               },
+               "modules": null,
+               "object_type": "Ephys assembly config",
+               "probes": [
+                  {
+                     "atlas_coordinate": null,
+                     "coordinate_system": {
+                        "axes": [
+                           {
+                              "direction": "Left_to_right",
+                              "name": "X",
+                              "object_type": "Axis"
+                           },
+                           {
+                              "direction": "Back_to_front",
+                              "name": "Y",
+                              "object_type": "Axis"
+                           },
+                           {
+                              "direction": "Superior_to_inferior",
+                              "name": "Z",
+                              "object_type": "Axis"
+                           }
+                        ],
+                        "axis_unit": "micrometer",
+                        "name": "probeD XYZ",
+                        "object_type": "Coordinate system",
+                        "origin": "Tip"
+                     },
+                     "device_name": "probeD",
+                     "dye": "DiI",
+                     "notes": null,
+                     "object_type": "Probe config",
+                     "other_targeted_structure": null,
+                     "primary_targeted_structure": {
+                        "acronym": "root",
+                        "atlas": "CCFv3",
+                        "id": "997",
+                        "name": "root"
+                     },
+                     "transform": [
+                        {
+                           "object_type": "Translation",
+                           "translation": [
+                              5906.5,
+                              5006,
+                              10136
+                           ]
+                        }
+                     ]
+                  }
+               ]
+            },
+            {
+               "device_name": "E",
+               "manipulator": {
+                  "coordinate_system": {
+                     "axes": [
+                        {
+                           "direction": "Left_to_right",
+                           "name": "X",
+                           "object_type": "Axis"
+                        },
+                        {
+                           "direction": "Back_to_front",
+                           "name": "Y",
+                           "object_type": "Axis"
+                        },
+                        {
+                           "direction": "Superior_to_inferior",
+                           "name": "Z",
+                           "object_type": "Axis"
+                        }
+                     ],
+                     "axis_unit": "micrometer",
+                     "name": "probeE XYZ",
+                     "object_type": "Coordinate system",
+                     "origin": "Tip"
+                  },
+                  "device_name": "E",
+                  "local_axis_positions": {
+                     "object_type": "Translation",
+                     "translation": [
+                        5911,
+                        7393,
+                        9379
+                     ]
+                  },
+                  "object_type": "Manipulator config"
+               },
+               "modules": null,
+               "object_type": "Ephys assembly config",
+               "probes": [
+                  {
+                     "atlas_coordinate": null,
+                     "coordinate_system": {
+                        "axes": [
+                           {
+                              "direction": "Left_to_right",
+                              "name": "X",
+                              "object_type": "Axis"
+                           },
+                           {
+                              "direction": "Back_to_front",
+                              "name": "Y",
+                              "object_type": "Axis"
+                           },
+                           {
+                              "direction": "Superior_to_inferior",
+                              "name": "Z",
+                              "object_type": "Axis"
+                           }
+                        ],
+                        "axis_unit": "micrometer",
+                        "name": "probeE XYZ",
+                        "object_type": "Coordinate system",
+                        "origin": "Tip"
+                     },
+                     "device_name": "probeE",
+                     "dye": "DiI",
+                     "notes": null,
+                     "object_type": "Probe config",
+                     "other_targeted_structure": null,
+                     "primary_targeted_structure": {
+                        "acronym": "root",
+                        "atlas": "CCFv3",
+                        "id": "997",
+                        "name": "root"
+                     },
+                     "transform": [
+                        {
+                           "object_type": "Translation",
+                           "translation": [
+                              5911,
+                              7393,
+                              9379
+                           ]
+                        }
+                     ]
+                  }
+               ]
+            },
+            {
+               "device_name": "F",
+               "manipulator": {
+                  "coordinate_system": {
+                     "axes": [
+                        {
+                           "direction": "Left_to_right",
+                           "name": "X",
+                           "object_type": "Axis"
+                        },
+                        {
+                           "direction": "Back_to_front",
+                           "name": "Y",
+                           "object_type": "Axis"
+                        },
+                        {
+                           "direction": "Superior_to_inferior",
+                           "name": "Z",
+                           "object_type": "Axis"
+                        }
+                     ],
+                     "axis_unit": "micrometer",
+                     "name": "probeF XYZ",
+                     "object_type": "Coordinate system",
+                     "origin": "Tip"
+                  },
+                  "device_name": "F",
+                  "local_axis_positions": {
+                     "object_type": "Translation",
+                     "translation": [
+                        6039.5,
+                        12572.5,
+                        10724
+                     ]
+                  },
+                  "object_type": "Manipulator config"
+               },
+               "modules": null,
+               "object_type": "Ephys assembly config",
+               "probes": [
+                  {
+                     "atlas_coordinate": null,
+                     "coordinate_system": {
+                        "axes": [
+                           {
+                              "direction": "Left_to_right",
+                              "name": "X",
+                              "object_type": "Axis"
+                           },
+                           {
+                              "direction": "Back_to_front",
+                              "name": "Y",
+                              "object_type": "Axis"
+                           },
+                           {
+                              "direction": "Superior_to_inferior",
+                              "name": "Z",
+                              "object_type": "Axis"
+                           }
+                        ],
+                        "axis_unit": "micrometer",
+                        "name": "probeF XYZ",
+                        "object_type": "Coordinate system",
+                        "origin": "Tip"
+                     },
+                     "device_name": "probeF",
+                     "dye": "DiI",
+                     "notes": null,
+                     "object_type": "Probe config",
+                     "other_targeted_structure": null,
+                     "primary_targeted_structure": {
+                        "acronym": "root",
+                        "atlas": "CCFv3",
+                        "id": "997",
+                        "name": "root"
+                     },
+                     "transform": [
+                        {
+                           "object_type": "Translation",
+                           "translation": [
+                              6039.5,
+                              12572.5,
+                              10724
+                           ]
+                        }
+                     ]
+                  }
+               ]
+            }
+         ],
+         "connections": [],
+         "modalities": [
+            {
+               "abbreviation": "behavior",
+               "name": "Behavior"
+            },
+            {
+               "abbreviation": "behavior-videos",
+               "name": "Behavior videos"
+            },
+            {
+               "abbreviation": "ecephys",
+               "name": "Extracellular electrophysiology"
+            }
+         ],
+         "notes": null,
+         "object_type": "Data stream",
+         "stream_end_time": "2023-08-09T14:14:08.499780-07:00",
+         "stream_start_time": "2023-08-09T08:09:09.814462Z"
+      }
+   ],
+   "describedBy": "https://raw.githubusercontent.com/AllenNeuralDynamics/aind-data-schema/main/src/aind_data_schema/core/acquisition.py",
+   "ethics_review_id": [
+      "2403"
+   ],
+   "experimenters": [
+      "Jackie Kuyat"
+   ],
+   "instrument_id": "NP3",
+   "maintenance": [],
+   "manipulations": [],
+   "notes": null,
+   "object_type": "Acquisition",
+   "protocol_id": null,
+   "schema_version": "2.2.3",
+   "specimen_id": null,
+   "stimulus_epochs": [
+      {
+         "active_devices": [
+            "Camstim DAQ",
+            "Stimulus microphone",
+            "Stimulus monitor",
+            "Stimulus photodiode",
+            "Stimulus speaker",
+            "Sync DAQ",
+            "TaskControl DAQ"
+         ],
+         "code": {
+            "container": null,
+            "core_dependency": {
+               "name": "PsychoPy",
+               "object_type": "Software",
+               "version": "2022.1.2"
+            },
+            "input_data": null,
+            "language": "Python",
+            "language_version": "3.9",
+            "name": null,
+            "object_type": "Code",
+            "parameters": null,
+            "run_script": null,
+            "url": "https://github.com/samgale/DynamicRoutingTask/blob/main/RFMapping.py",
+            "version": null
+         },
+         "configurations": [
+            {
+               "device_name": "Speaker",
+               "object_type": "Speaker config",
+               "volume": 68,
+               "volume_unit": "decibels"
+            }
+         ],
+         "curriculum_status": null,
+         "notes": "",
+         "object_type": "Stimulus epoch",
+         "performance_metrics": null,
+         "stimulus_end_time": "2023-08-09T12:15:41.847470-07:00",
+         "stimulus_modalities": [
+            "Visual",
+            "Auditory"
+         ],
+         "stimulus_name": "RFMapping",
+         "stimulus_start_time": "2023-08-09T12:01:21.776865-07:00",
+         "training_protocol_name": null
+      },
+      {
+         "active_devices": [
+            "Camstim DAQ",
+            "Opto DAQ",
+            "Opto laser #1",
+            "Opto laser #2",
+            "Opto laser galvo X",
+            "Opto laser galvo Y",
+            "Sync DAQ",
+            "TaskControl DAQ"
+         ],
+         "code": {
+            "container": null,
+            "core_dependency": {
+               "name": "PsychoPy",
+               "object_type": "Software",
+               "version": "2022.1.2"
+            },
+            "input_data": null,
+            "language": "Python",
+            "language_version": "3.9",
+            "name": null,
+            "object_type": "Code",
+            "parameters": null,
+            "run_script": null,
+            "url": "https://github.com/samgale/DynamicRoutingTask/blob/main/OptoTagging.py",
+            "version": null
+         },
+         "configurations": [
+            {
+               "device_name": "Opto laser #1",
+               "object_type": "Laser config",
+               "power": 5,
+               "power_measured_at": "Brain surface",
+               "power_unit": "milliwatt",
+               "wavelength": 488,
+               "wavelength_unit": "nanometer"
+            },
+            {
+               "device_name": "Opto laser #2",
+               "object_type": "Laser config",
+               "power": 5,
+               "power_measured_at": "Brain surface",
+               "power_unit": "milliwatt",
+               "wavelength": 633,
+               "wavelength_unit": "nanometer"
+            }
+         ],
+         "curriculum_status": null,
+         "notes": "",
+         "object_type": "Stimulus epoch",
+         "performance_metrics": null,
+         "stimulus_end_time": "2023-08-09T12:19:43.400030-07:00",
+         "stimulus_modalities": [
+            "Optogenetics"
+         ],
+         "stimulus_name": "OptoTagging",
+         "stimulus_start_time": "2023-08-09T12:15:53.273840-07:00",
+         "training_protocol_name": null
+      },
+      {
+         "active_devices": [
+            "Camstim DAQ",
+            "Stimulus monitor",
+            "Stimulus photodiode",
+            "Sync DAQ",
+            "TaskControl DAQ"
+         ],
+         "code": {
+            "container": null,
+            "core_dependency": {
+               "name": "PsychoPy",
+               "object_type": "Software",
+               "version": "2022.1.2"
+            },
+            "input_data": null,
+            "language": "Python",
+            "language_version": "3.9",
+            "name": null,
+            "object_type": "Code",
+            "parameters": null,
+            "run_script": null,
+            "url": "https://github.com/samgale/DynamicRoutingTask/blob/main/TaskControl.py",
+            "version": null
+         },
+         "configurations": [],
+         "curriculum_status": null,
+         "notes": "",
+         "object_type": "Stimulus epoch",
+         "performance_metrics": null,
+         "stimulus_end_time": "2023-08-09T12:29:56.096900-07:00",
+         "stimulus_modalities": [
+            "Visual"
+         ],
+         "stimulus_name": "Spontaneous",
+         "stimulus_start_time": "2023-08-09T12:19:53.174930-07:00",
+         "training_protocol_name": null
+      },
+      {
+         "active_devices": [
+            "Camstim DAQ",
+            "Stimulus monitor",
+            "Stimulus photodiode",
+            "Sync DAQ",
+            "TaskControl DAQ"
+         ],
+         "code": {
+            "container": null,
+            "core_dependency": {
+               "name": "PsychoPy",
+               "object_type": "Software",
+               "version": "2022.1.2"
+            },
+            "input_data": null,
+            "language": "Python",
+            "language_version": "3.9",
+            "name": null,
+            "object_type": "Code",
+            "parameters": null,
+            "run_script": null,
+            "url": "https://github.com/samgale/DynamicRoutingTask/blob/main/TaskControl.py",
+            "version": null
+         },
+         "configurations": [],
+         "curriculum_status": null,
+         "notes": "",
+         "object_type": "Stimulus epoch",
+         "performance_metrics": null,
+         "stimulus_end_time": "2023-08-09T12:46:08.128410-07:00",
+         "stimulus_modalities": [
+            "Visual"
+         ],
+         "stimulus_name": "SpontaneousRewards",
+         "stimulus_start_time": "2023-08-09T12:36:07.641230-07:00",
+         "training_protocol_name": null
+      },
+      {
+         "active_devices": [
+            "Camstim DAQ",
+            "Stimulus microphone",
+            "Stimulus monitor",
+            "Stimulus photodiode",
+            "Stimulus speaker",
+            "Sync DAQ",
+            "TaskControl DAQ"
+         ],
+         "code": {
+            "container": null,
+            "core_dependency": {
+               "name": "PsychoPy",
+               "object_type": "Software",
+               "version": "2022.1.2"
+            },
+            "input_data": null,
+            "language": "Python",
+            "language_version": "3.9",
+            "name": null,
+            "object_type": "Code",
+            "parameters": null,
+            "run_script": null,
+            "url": "https://github.com/samgale/DynamicRoutingTask/blob/main/DynamicRouting1.py",
+            "version": null
+         },
+         "configurations": [
+            {
+               "device_name": "Speaker",
+               "object_type": "Speaker config",
+               "volume": 68,
+               "volume_unit": "decibels"
+            }
+         ],
+         "curriculum_status": "stage 5",
+         "notes": "",
+         "object_type": "Stimulus epoch",
+         "performance_metrics": {
+            "object_type": "Performance metrics",
+            "output_parameters": {
+               "block_metrics": {
+                  "0": {
+                     "block_index": 0,
+                     "block_stim_rewarded": "sound1",
+                     "dprime_other_modal_go": 2.085625331395128,
+                     "dprime_same_modal": 0.6784124189954537,
+                     "hit_count": 20
+                  },
+                  "1": {
+                     "block_index": 1,
+                     "block_stim_rewarded": "vis1",
+                     "dprime_other_modal_go": 3.396852411774198,
+                     "dprime_same_modal": 2.4856575906317393,
+                     "hit_count": 16
+                  },
+                  "2": {
+                     "block_index": 2,
+                     "block_stim_rewarded": "sound1",
+                     "dprime_other_modal_go": 1.5784676846837338,
+                     "dprime_same_modal": 1.5371138812270029,
+                     "hit_count": 18
+                  },
+                  "3": {
+                     "block_index": 3,
+                     "block_stim_rewarded": "vis1",
+                     "dprime_other_modal_go": 3.0833722162690016,
+                     "dprime_same_modal": 3.0130812477976594,
+                     "hit_count": 16
+                  },
+                  "4": {
+                     "block_index": 4,
+                     "block_stim_rewarded": "sound1",
+                     "dprime_other_modal_go": 2.779552744425744,
+                     "dprime_same_modal": 1.263441760656748,
+                     "hit_count": 19
+                  },
+                  "5": {
+                     "block_index": 5,
+                     "block_stim_rewarded": "vis1",
+                     "dprime_other_modal_go": 0.09859656077225554,
+                     "dprime_same_modal": 1.2102986950970127,
+                     "hit_count": 13
+                  }
+               },
+               "task_version": "stage 5 AMN ori moving"
+            },
+            "reward_consumed_during_epoch": "3.9599999999999995",
+            "reward_consumed_unit": "milliliter",
+            "trials_finished": null,
+            "trials_rewarded": 122,
+            "trials_total": 501
+         },
+         "stimulus_end_time": "2023-08-09T13:46:46.260230-07:00",
+         "stimulus_modalities": [
+            "Visual",
+            "Auditory"
+         ],
+         "stimulus_name": "DynamicRouting1",
+         "stimulus_start_time": "2023-08-09T12:46:16.751170-07:00",
+         "training_protocol_name": "dynamic_routing"
+      },
+      {
+         "active_devices": [
+            "Camstim DAQ",
+            "Stimulus monitor",
+            "Stimulus photodiode",
+            "Sync DAQ",
+            "TaskControl DAQ"
+         ],
+         "code": {
+            "container": null,
+            "core_dependency": {
+               "name": "PsychoPy",
+               "object_type": "Software",
+               "version": "2022.1.2"
+            },
+            "input_data": null,
+            "language": "Python",
+            "language_version": "3.9",
+            "name": null,
+            "object_type": "Code",
+            "parameters": null,
+            "run_script": null,
+            "url": "https://github.com/samgale/DynamicRoutingTask/blob/main/TaskControl.py",
+            "version": null
+         },
+         "configurations": [],
+         "curriculum_status": null,
+         "notes": "",
+         "object_type": "Stimulus epoch",
+         "performance_metrics": null,
+         "stimulus_end_time": "2023-08-09T13:56:56.505855-07:00",
+         "stimulus_modalities": [
+            "Visual"
+         ],
+         "stimulus_name": "SpontaneousRewards",
+         "stimulus_start_time": "2023-08-09T13:46:56.018500-07:00",
+         "training_protocol_name": null
+      },
+      {
+         "active_devices": [
+            "Camstim DAQ",
+            "Opto DAQ",
+            "Opto laser #1",
+            "Opto laser #2",
+            "Opto laser galvo X",
+            "Opto laser galvo Y",
+            "Sync DAQ",
+            "TaskControl DAQ"
+         ],
+         "code": {
+            "container": null,
+            "core_dependency": {
+               "name": "PsychoPy",
+               "object_type": "Software",
+               "version": "2022.1.2"
+            },
+            "input_data": null,
+            "language": "Python",
+            "language_version": "3.9",
+            "name": null,
+            "object_type": "Code",
+            "parameters": null,
+            "run_script": null,
+            "url": "https://github.com/samgale/DynamicRoutingTask/blob/main/OptoTagging.py",
+            "version": null
+         },
+         "configurations": [
+            {
+               "device_name": "Opto laser #1",
+               "object_type": "Laser config",
+               "power": 5,
+               "power_measured_at": "Brain surface",
+               "power_unit": "milliwatt",
+               "wavelength": 488,
+               "wavelength_unit": "nanometer"
+            },
+            {
+               "device_name": "Opto laser #2",
+               "object_type": "Laser config",
+               "power": 5,
+               "power_measured_at": "Brain surface",
+               "power_unit": "milliwatt",
+               "wavelength": 633,
+               "wavelength_unit": "nanometer"
+            }
+         ],
+         "curriculum_status": null,
+         "notes": "",
+         "object_type": "Stimulus epoch",
+         "performance_metrics": null,
+         "stimulus_end_time": "2023-08-09T14:00:56.556005-07:00",
+         "stimulus_modalities": [
+            "Optogenetics"
+         ],
+         "stimulus_name": "OptoTagging",
+         "stimulus_start_time": "2023-08-09T13:57:06.314230-07:00",
+         "training_protocol_name": null
+      }
+   ],
+   "subject_details": {
+      "anaesthesia": null,
+      "animal_weight_post": null,
+      "animal_weight_prior": null,
+      "mouse_platform_name": "Brain Observatory running disc",
+      "object_type": "Acquisition subject details",
+      "reward_consumed_total": "3.9599999999999995",
+      "reward_consumed_unit": "milliliter",
+      "weight_unit": "gram"
+   },
+   "subject_id": "660023"
+}

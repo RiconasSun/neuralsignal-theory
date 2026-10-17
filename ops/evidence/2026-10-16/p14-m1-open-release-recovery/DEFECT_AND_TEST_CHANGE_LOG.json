@@ -1,0 +1,34 @@
+{
+  "resolved": [
+    {
+      "cause": "Exact listing prefix validator rejected the intended trailing slash before any network request",
+      "evidence": "CATALOG_r1.txt",
+      "fix": "Accept optional trailing slash only for exact registered prefix, deny suffix changes",
+      "kind": "CODE_BUG",
+      "regression": "test_listing_trailing_slash_regression"
+    },
+    {
+      "cause": "Five source descriptions use exact literal None string for absence; initial check accepted JSON null only",
+      "evidence": "CATALOG_STABILITY_r1.txt",
+      "fix": "Explicitly accept JSON null and exact literal None only; substantive restrictions still fail",
+      "kind": "SOURCE_SCHEMA_INCOMPATIBILITY",
+      "regression": "test_literal_None_restriction_regression"
+    },
+    {
+      "baseline": "REQ-056 malformed/unknown causal metadata coverage",
+      "cause": "pandas3 rejects nullable flags in bool fixture and fractional timestamps in integer fixture before reaching oracle",
+      "evidence": [
+        "TESTS_r1.txt",
+        "TESTS_r2.txt"
+      ],
+      "fix": "Use object flags and float seconds in synthetic fixture; all cases/assertions retained",
+      "kind": "TEST_BUG",
+      "regressions": "test_unknown_flags_fail_closed, test_opto_unknown_timing_and_missing_response_excluded"
+    }
+  ],
+  "scientific_warning_categories": [
+    "No verified >=8+8 canonical target cohort; NWB conservative upper13, other released routes unresolved",
+    "Actual target event/clock/coverage completeness unverified; full scientific protocol not frozen"
+  ],
+  "unresolved_implementation_bugs": 0
+}
