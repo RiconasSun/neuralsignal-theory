@@ -1,0 +1,18 @@
+{
+  "headers": {
+    "Content-Length": "2050",
+    "Content-Type": "application/json"
+  },
+  "method": "GET",
+  "params": {
+    "filter": "{\"data_description.subject_id\": {\"$in\": [\"664851\", \"690706\", \"686740\", \"743199\", \"666986\", \"702131\", \"714748\", \"733891\", \"668755\", \"742903\", \"737403\", \"681532\", \"686176\", \"741137\", \"746439\", \"759434\", \"712815\", \"733780\"]}, \"processing.data_processes\": {\"$elemMatch\": {\"process_type\": \"File format conversion\", \"code.version\": \"0.0.289\"}}}",
+    "limit": "100",
+    "projection": "{\"_id\": 1, \"name\": 1, \"location\": 1, \"data_description\": 1, \"processing.data_processes.process_type\": 1, \"processing.data_processes.code.url\": 1, \"processing.data_processes.code.version\": 1, \"processing.data_processes.code.commit_hash\": 1}"
+  },
+  "purpose": "RIGHTS_PROVENANCE_OR_DESCRIPTOR_METADATA_ONLY",
+  "saved_as": "sources\\all_selected_subjects_v289_query.json",
+  "sha256": "fa112b737930a0012b0ed3df1833b76ef821cf4313c9549238d06ec6c9582aa0",
+  "status": 200,
+  "url": "https://api.allenneuraldynamics.org/v2/metadata_index/data_assets",
+  "utc": "2026-10-17T01:04:13.636007+00:00"
+}

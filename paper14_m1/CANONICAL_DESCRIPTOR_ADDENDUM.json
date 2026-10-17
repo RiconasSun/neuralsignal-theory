@@ -1,0 +1,17 @@
+{
+  "allowed": "S3 LIST object metadata under these exact3prefixes and HEAD only for matchingNWB; GET only data_description.json/processing.json/nwb_contents.json; never GETNWB or datachunks",
+  "canonical_prefixes": [
+    "ecephys_741137_2024-10-10_13-15-50_nwb_2026-08-04_15-10-12/",
+    "ecephys_759434_2025-02-04_12-27-22_nwb_2026-08-04_15-01-21/",
+    "ecephys_743199_2024-12-05_12-42-34_nwb_2026-08-04_15-00-49/"
+  ],
+  "purpose": "Compare exact public canonical descriptors/object fingerprints with scratch; this is evidence seeking, not automatic transfer of a bucket license",
+  "registered_at": "2026-10-17T01:05:13.821479+00:00",
+  "source_rights_rule": "CCBY4canonicalasset does not by itself resolve all18scratchcopies; require explicit applicability or independently reviewed object/provenance linkage; mismatches/unknowns remainblocking",
+  "descriptor_addendum_before_reads": {
+    "utc": "2026-10-17T01:06:20.385366+00:00",
+    "allowed_suffix": ".nwb.zarr/.zmetadata",
+    "purpose": "Metadata only: groups, attributes, dtype and shape; never data chunks or timestamps/sample arrays; exact3canonicalprefixes only",
+    "interpretation": "Canonical counterpart metadata cannot prove actual scratch presence or sample alignment; those remain separate"
+  }
+}

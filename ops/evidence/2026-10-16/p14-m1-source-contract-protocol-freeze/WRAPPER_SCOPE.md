@@ -1,0 +1,3 @@
+# Mission wrapper scope receipt
+
+The74-item JSONMissionSpec was compiled in dry-runmode. Initial wrapper matched the substring production in reproduction and returned its own review-risk signal; it was not a deployment or toolapproval rejection. A second dryrun with documented --risk-allow-review compiled the same bounded metadata-only contract successfully. Bothlogs retained. No childCodexrun or whole-workspace stagedcopy was executed because that would unnecessarily read priorprotectedneuralbundles. Direct narrow source/specification edits stayed within the user-authorized scope. No OpenRouterrequest, neuralexecution, modelimplementation or externalsend occurred.

@@ -1,0 +1,531 @@
+{
+  "baseline_count": 74,
+  "blocked_requirements": 32,
+  "full_M1_PASS": false,
+  "meaning": "Owner-source-stop checkpoint. Blocked downstreamrequirements remain unmet; savedmetadata success never offsets them.",
+  "pending_review_git_delivery": 2,
+  "required_items_omitted": 0,
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Exact BASE, clean bootstrap and fresh origin/test classification",
+      "status": "VERIFIED",
+      "verification": "REGISTRATION_RECEIPT.json; currentHEAD/origin-test9cb5568; noorigin/main"
+    },
+    {
+      "id": "REQ-002",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Preserve P1-P13 and every historical P14M0result/verdict",
+      "status": "VERIFIED",
+      "verification": "INPUT_FREEZE.json104M0hashes; exactmissionGitdiff"
+    },
+    {
+      "id": "REQ-003",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "No neural/spike values, raw behavior samples, model fits, neural scores or final assessment",
+      "status": "VERIFIED",
+      "verification": "sourcejournal/APIprojection/descriptorpolicy; no signal GET, fits or scores"
+    },
+    {
+      "id": "REQ-004",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Target only existing DynamicRouting source; no new dataset discovery",
+      "status": "VERIFIED",
+      "verification": "REGISTRATION.json; DRonlysources"
+    },
+    {
+      "id": "REQ-005",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Keep datacube0.1.1/cachev0.0.289 and original18mouse/session/probe identities",
+      "status": "VERIFIED",
+      "verification": "cohort(); original18triples, sourcecache/versionpins"
+    },
+    {
+      "id": "REQ-006",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Establish applicable rights for exact scratch objects; no other-bucket license transfer",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification": "SOURCE_RIGHTS_18.csv; applicable scratchrights UNRESOLVED"
+    },
+    {
+      "id": "REQ-007",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Confirm secondary noncommercial analysis rights separately from public accessibility",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification": "Generalterms/canonicallicense do not establish exactscratch applicability"
+    },
+    {
+      "id": "REQ-008",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Confirm publication permission",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification": "DATA_OWNER_INQUIRY_UNSENT.md; publicationpermission pending"
+    },
+    {
+      "id": "REQ-009",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Record required attribution and redistribution restrictions",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification": "Source-specific attribution/restrictions unresolved; genericpolicy recorded"
+    },
+    {
+      "id": "REQ-010",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Find corresponding canonical release only with object/session/revision linkage evidence",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification": "7v289same-subjectrecords/3exactdates/4wrongdates; no complete18canonical/byteequivalenceproof"
+    },
+    {
+      "id": "REQ-011",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Record revisions, available checksums, source identities and processing provenance",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification": "Versionedsource/checksumtokens documented; completeconversionlineage unresolved"
+    },
+    {
+      "id": "REQ-012",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "If rights unresolved prepare specific owner inquiry; do not send without separate approval",
+      "status": "VERIFIED",
+      "verification": "DATA_OWNER_INQUIRY_UNSENT.md; externalmessages0"
+    },
+    {
+      "id": "REQ-013",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Preserve rights stop and activation boundary; never fabricate resolved rights",
+      "status": "VERIFIED",
+      "verification": "M1_DECISION.json SOURCE_RIGHTS_BLOCKED; no activeprotocol"
+    },
+    {
+      "id": "REQ-014",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Exact18session running/locomotion metadata coverage",
+      "status": "VERIFIED",
+      "verification": "SESSION_COVERAGE_18.csv runningtargetUNRESOLVED,3canonicaldescriptorsseparate"
+    },
+    {
+      "id": "REQ-015",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Exact18session licking/response-event metadata coverage",
+      "status": "VERIFIED",
+      "verification": "SESSION_COVERAGE_18.csv;5missingresponsetimesin4sessions"
+    },
+    {
+      "id": "REQ-016",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Exact18session pupil/arousal metadata coverage",
+      "status": "VERIFIED",
+      "verification": "SESSION_COVERAGE_18.csv pupilstatusunknown, not NOT_RECORDED"
+    },
+    {
+      "id": "REQ-017",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Sampling-frequency evidence or explicit unknown",
+      "status": "VERIFIED",
+      "verification": "No measuredsamplingHz inferredfromshape/filtercutoff; testoracle"
+    },
+    {
+      "id": "REQ-018",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Behavior-ephys clock mapping evidence or explicit blocker",
+      "status": "VERIFIED",
+      "verification": "Clockmapping UNRESOLVED; pinnedprovidercontractnot persessionproof"
+    },
+    {
+      "id": "REQ-019",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Observation-support and interruption metadata",
+      "status": "VERIFIED",
+      "verification": "M0supportannotations plus currenttracking; interruptionunknown retained"
+    },
+    {
+      "id": "REQ-020",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Missingness and per-trial alignment evidence",
+      "status": "VERIFIED",
+      "verification": "Exacteventmissingness/clocklimitations table; no imputations"
+    },
+    {
+      "id": "REQ-021",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Coverage statuses distinguish confirmed/limited/not-recorded/unresolved",
+      "status": "VERIFIED",
+      "verification": "Four registeredstatuslabels; absent evidence never NOT_RECORDED"
+    },
+    {
+      "id": "REQ-022",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "No raw behavioral samples or continuous value reconstruction",
+      "status": "VERIFIED",
+      "verification": "Only .zmetadata structuralattributes/shapes, no rawdatachunks"
+    },
+    {
+      "id": "REQ-023",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Assess narrower conditional task-prediction question before outcomes if movement unavailable",
+      "status": "VERIFIED",
+      "verification": "INTERPRETATION_BOUNDARY.json narrowconditionalquestion"
+    },
+    {
+      "id": "REQ-024",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Permanently prohibit movement/arousal-independent claims if proceeding without those measures",
+      "status": "VERIFIED",
+      "verification": "Movement/arousal independence permanentlydisallowed undercurrentlimits"
+    },
+    {
+      "id": "REQ-025",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Critical alignment/essential task measurement failure stops activation",
+      "status": "VERIFIED",
+      "verification": "Source/clockstopnotwaived; activationfalse"
+    },
+    {
+      "id": "REQ-026",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Preserve same-probe ACAd/ACAv/PL/ILA target; no MOs/orbital/single-leaf substitution",
+      "status": "VERIFIED",
+      "verification": "Originalsameprobe4leafcompositepreserved; noMOs/ORB"
+    },
+    {
+      "id": "REQ-027",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Preserve auditory-versus-visual reward contexts and original six-block structure",
+      "status": "VERIFIED",
+      "verification": "Originalcontexts/sixblocktrials/masks unchanged by104hashes"
+    },
+    {
+      "id": "REQ-028",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Same selected units acrosscontexts; explicit heterogeneous anatomical composition",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification": "Originalcandidatepopulations retained; actualselected fittedunitidentitiesnotfrozen"
+    },
+    {
+      "id": "REQ-029",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Freeze deterministic9development/9final identity allocation before neuralaccess when protocolstage allowed",
+      "status": "VERIFIED",
+      "verification": "RESERVED_ALLOCATION_9_9.csv fixedhashpolicy, inactiveprotocol"
+    },
+    {
+      "id": "REQ-030",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "At least8physiologically eligible development and8independentfinal mice with bothcontexts",
+      "status": "VERIFIED",
+      "verification": "PROTOCOL_STATUS.md >=8+8futurephysiologycriterion, no eligiblecountclaimed"
+    },
+    {
+      "id": "REQ-031",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "No animal swap/refill/reshuffle afterQC",
+      "status": "VERIFIED",
+      "verification": "No swap/refill/reshuffle policy and fixedidentitylist"
+    },
+    {
+      "id": "REQ-032",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Maintain originalM0metadata selection/trial-support policies",
+      "status": "VERIFIED",
+      "verification": "104originalM0hashes unchanged"
+    },
+    {
+      "id": "REQ-033",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Operational A/C-onlyphysiologicalQC before any spikeaccess",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification": "Source stop: operationalfutureC-onlyQCnotfinalized"
+    },
+    {
+      "id": "REQ-034",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Deterministic selected-unit identity rule before spikeaccess; actualpostQCidentities cannot be invented",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification": "Source stop: actualunitidentity/QCcontractnotcompleted; no inventedselectedunits"
+    },
+    {
+      "id": "REQ-035",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Training-onlyscaling and clock requirements",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification": "Source/clockhold: scalers/clockacceptance notcompletefrozenprotocol"
+    },
+    {
+      "id": "REQ-036",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Disclose provider release/full-sessioncuration is not C-onlyphysiology",
+      "status": "VERIFIED",
+      "verification": "PROTOCOL_STATUS.md providerfullsessioncurationcaveat"
+    },
+    {
+      "id": "REQ-037",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Freeze DeltaF incrementalprediction aud-minus-vis estimand",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification": "OwnerDeltaFretained inreport; completeestimandprotocolnotfrozen"
+    },
+    {
+      "id": "REQ-038",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Twoprimary interactions discrete/continuous; equalmouse paired two-sided inference",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification": "Owner2primarytestsretained, completeinferencefreezeheld"
+    },
+    {
+      "id": "REQ-039",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "B0stationaryrate and mandatoryB1context/stimulus/time/causalbehavior",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification": "MandatoryB0/B1scope retained, unexecuted specificationphase"
+    },
+    {
+      "id": "REQ-040",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "B2ownhistory, B3populationhistory, B4completecombinedcontext-aware baseline",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification": "B2/B3/B4scope retained; no weakerbaseline substituted"
+    },
+    {
+      "id": "REQ-041",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Tractable two-state causalPoissonHMM definition",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification": "Two-stateHMMscope retained but completeequations/budgetheld"
+    },
+    {
+      "id": "REQ-042",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Two-dimensional causal continuous-history representation definition",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification": "2Dcontinuoushistoryscope retained, not an implementedfit"
+    },
+    {
+      "id": "REQ-043",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Matched invariant/dependent definitions and explicit complexity/parameter counts",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification": "Complexity/parametercountfreeze remainsblocked"
+    },
+    {
+      "id": "REQ-044",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Model equations and feature event-availability timing",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification": "Completecausalfeaturetimings/equations stillheld"
+    },
+    {
+      "id": "REQ-045",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Exactridge/bounds/seed policies",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification": "Exactridge/bounds/seedfreeze not substituted frominactiveM0draft"
+    },
+    {
+      "id": "REQ-046",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Exactnumerical fit budgets and termination gates",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification": "Numericalfitbudget/terminationfreeze notcompleted"
+    },
+    {
+      "id": "REQ-047",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Independentgradient/oracle tests planned; boundedsyntheticdefinitiontests only",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification": "No modelgradients/oracles falselycertified by metadata16tests"
+    },
+    {
+      "id": "REQ-048",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Hyperparameter selection frozen without realneuraloutcomes",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification": "No outcome-informedhyperparameterselection; fullruleheld"
+    },
+    {
+      "id": "REQ-049",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Statistical hypotheses/correction/uncertainty assumptions",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification": "Completehypothesis/correction/intervalfreezeheld"
+    },
+    {
+      "id": "REQ-050",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Sensitivity plan and validated null-model definitions",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification": "Completevalidatedsensitivity/nullplanheld; no Bstarreuse"
+    },
+    {
+      "id": "REQ-051",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "No P13coefficients/failedBstarautoregressive generative-null inheritance",
+      "status": "VERIFIED",
+      "verification": "No P13coefficients/statesimports/failedgenerativenullcalls"
+    },
+    {
+      "id": "REQ-052",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "No presumed superior model family",
+      "status": "VERIFIED",
+      "verification": "No superiorfamilyassumption; reportscope"
+    },
+    {
+      "id": "REQ-053",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Prospective blockorder/drift and stimulusimbalance controls",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification": "Fullfalsificationplanheld aftersourcestop"
+    },
+    {
+      "id": "REQ-054",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Rewardhistory/choice/motor-timing controls with causalavailability",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification": "Missingcurrenteventtimes notimputed; completemodeltimingpolicyheld"
+    },
+    {
+      "id": "REQ-055",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Movement/arousal limits, composition and recording-quality sensitivity",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification": "Fullsensitivitydesignheld; anatomical/sourceconstraints retained"
+    },
+    {
+      "id": "REQ-056",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "No futurechoice/feedback/reward/response/neuralpredictor",
+      "status": "VERIFIED",
+      "verification": "No futureoutcome aspredictor; no realneuralpredictorsbuilt"
+    },
+    {
+      "id": "REQ-057",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Experimenter-scheduled contextlabel, not mousebelief or causalmechanism",
+      "status": "VERIFIED",
+      "verification": "Experimenterscheduledctx, no mousebelief/causalclaim"
+    },
+    {
+      "id": "REQ-058",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Negative/temporalcontrols onlywith defensible assumptions and numerical implementation",
+      "status": "VERIFIED",
+      "verification": "No indefensibleconditionalcontrolregistered as validated; heldscopeexplicit"
+    },
+    {
+      "id": "REQ-059",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Forbid unbounded self-exciting Poisson simulation",
+      "status": "VERIFIED",
+      "verification": "UnboundedselfexcitingPoisson forbidden/no simulations"
+    },
+    {
+      "id": "REQ-060",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Explicitlevels observed/statistical/robust conditionalinteraction/inconclusive claims",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification": "Completeclaimlevel/statisticalconditionsheld, no positiveclaim"
+    },
+    {
+      "id": "REQ-061",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "No causalmechanism/physicalprimitive/independent-laboratory validationclaim",
+      "status": "VERIFIED",
+      "verification": "INTERPRETATION_BOUNDARY.json allforbiddenclaimsfalse"
+    },
+    {
+      "id": "REQ-062",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Hashlocked finalscientificprotocol only if source/scientific prerequisites satisfactory",
+      "status": "VERIFIED",
+      "verification": "Phase6conditionalstop respected; checkpointfreezeexplicitlynot scientificfreeze"
+    },
+    {
+      "id": "REQ-063",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Freeze cohort/allocation/trialmasks/source/clock/QC/model/selection/stats/null/numerical definitions",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification": "Completescientificfreeze unavailable; everyitemretained inPROTOCOL_STATUS.md"
+    },
+    {
+      "id": "REQ-064",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "One-timefinalassessment boundary, interpretation and stoppingconditions",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification": "One-timefinalboundary scopeheld, noassessmentauthorization"
+    },
+    {
+      "id": "REQ-065",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Source-contract/metadata/allocation/syntheticprotocol-oracle reviews",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification": "Source/metadata/allocationreviewonly; modelprotocol-oraclereviewnotcompleted"
+    },
+    {
+      "id": "REQ-066",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "No realmodelimplementation required beyond bounded specification/oracles",
+      "status": "VERIFIED",
+      "verification": "Only boundedmetadata/specoracles; no realmodelimplementation orfit"
+    },
+    {
+      "id": "REQ-067",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Exactlyone allowed M1scientificdecision; only READYpermits ownerconsideration of separatelyauthorized M2",
+      "status": "VERIFIED",
+      "verification": "ExactlySOURCE_RIGHTS_BLOCKED; Prompt3false"
+    },
+    {
+      "id": "REQ-068",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Nevercall18metadata candidates18physiologicallyeligibleanimals",
+      "status": "VERIFIED",
+      "verification": "Physiologicallyeligiblemice null, not18"
+    },
+    {
+      "id": "REQ-069",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Deliver source/provenance evidence and exact18sessioncoverage matrix",
+      "status": "VERIFIED",
+      "verification": "SOURCEREGISTRY/rights/18sessionmatrixallprovided"
+    },
+    {
+      "id": "REQ-070",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Deliver hypotheses/9-9allocation/models/stats/QC onlyas justified; blockedrequirements remain traceable",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "verification": "Partialdeliveryscopeexplicit; fullmodels/stats/QCrequirementsnotcalledcomplete"
+    },
+    {
+      "id": "REQ-071",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Saved-only reproduction and meaningfulsynthetic tests",
+      "status": "VERIFIED",
+      "verification": "REPRODUCTION_r1.txt16tests/6exactoutputs/104historicalhashes"
+    },
+    {
+      "id": "REQ-072",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Independent internal review; retain unsuccessful attempts/reviews",
+      "status": "VERIFIED",
+      "verification": "INDEPENDENT_REVIEW_r1.md/json: ACCEPTED_BLOCKED_ARCHIVE_ONLY; open P0/P1 zero; independent saved reproduction PASS"
+    },
+    {
+      "id": "REQ-073",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Exactmission-only commit/push origin/test/no-force/no-main/remotehashes/clean",
+      "status": "OPEN",
+      "verification": "Actualexactcommit/push/readback/cleanpending"
+    },
+    {
+      "id": "REQ-074",
+      "implementation": "paper14_m1 andcurrentmissionevidence",
+      "requirement": "Finaldelivery exactstatus/bugwarn/evidence/review/Git/blockers/nextaction; STOP afterM1",
+      "status": "OPEN",
+      "verification": "Ownerinquirynext, finalarchive/deliverypending; stopafterM1checkpoint"
+    }
+  ],
+  "unresolved_shrink_risk": 0,
+  "verified_before_review": 39,
+  "verified_after_review": 40
+}
