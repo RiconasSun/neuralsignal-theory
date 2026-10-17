@@ -1,0 +1,86 @@
+{
+  "anatomy": {
+    "floor": 10,
+    "laminae": [
+      "",
+      "1",
+      "2/3",
+      "4",
+      "5",
+      "6a",
+      "6b"
+    ],
+    "parents": [
+      "MOs",
+      "ACAd",
+      "ACAv",
+      "PL",
+      "ILA"
+    ],
+    "quality": "canonicalibl_quality_score==1;providerrelease/sessionQC not trainingonlyphysiology",
+    "selection": "Preserve exact historicalsession+probe;one permouse. Sourcewide enumeration ifactivateduseshighestqualifiedtargetunitcount,minimumcontext-halfcoverage,lexicaleID/probe;no outcome.",
+    "unit_mapping": "Canonicalunit->max_electrode row->canonical localization localized_entity->brain_region/atlas_id; verify sameprobe,finitecoordinates,uniqueunitIDs/UUIDs. Exactacronyms only, no fuzzyfullname/oldunitatlasimport. AtlasreferenceID-to-acronym allowed as ontology only."
+  },
+  "base": "b09b1b254d3f8b9c5fd4be948befae0332f6b96a",
+  "bounded_audit": {
+    "attempts_per_range": 2,
+    "boundary": "Metadatafields only;no neural values/shapes orrawbehavior. Opaque exact HDF5 transport maycarryadjacentuninterpretedbytes;neverdecodeforbiddendatasets. Newjournals/cacheonly;oldfilesimmutable.",
+    "documentary_max_bytes": 12000000,
+    "documentary_max_requests": 24,
+    "full_bulk_fallback": false,
+    "max_assets": 13,
+    "max_metadata_bytes_per_asset": 5000000,
+    "max_range_bytes": 1000000,
+    "max_requests": 16000,
+    "max_total_bytes": 100000000,
+    "primary_assets": 13,
+    "sourcewide": "ONEoptionalmetadataenumeration onlyifprimaryframe ordinaryeligibility<6 ANDsourceunit/task/observationcontract verified. DoNOT usemassre-enumerationtoevadecriticalobservation/provenanceunknown. No alternatedates/probepooling;fixedreleaseonly."
+  },
+  "estimand": "Conditional incremental D/C vsstrongB4 predictivegain interaction scheduledprior.2minus.8 usingcanonicalnative trials/curation andsameunits;futurewithin-mouseearly/lateholdout. No movement-independent,belief,causal oranimalconfirmationclaim.",
+  "frozen_at": "2026-10-17T15:19:17.254245+00:00",
+  "historical_policy": "OldsourcebridgeFAIL/794differences/1e-6unchanged. Newroute doesNOT requireoldprocessingagreement; oldbwm/saturationannotations NEVER transferred.",
+  "mission": "P14-V2-CANONICAL-NATIVE-RECOVERY",
+  "mode": "METADATA_ONLY_BEFORE_NEW_CANONICAL_COUNTS",
+  "next": "Ifsourceunit/task/support andcapacityPASS completeM1protocolonly. No realneuralQC/fits/scoring/modelselection/final access underthismission.",
+  "observation": {
+    "decision": "Any essentialsource-supportunknown => SOURCE_CONTRACT_INCONCLUSIVE ratherthan interpretingunknownaszeroeligibleorDATA_INSUFFICIENT.",
+    "evidence": "Nativeunitobs_intervals/validobservationtables orrelease/probe-specific authoritativecoveragecertificate;artifact/bad/saturationintervals orverified exhaustive negativeannotationcertificate. Validateclock,probe/unit scope,finiteorderedintervals andwindowcoverage.",
+    "required": "Exact.5s windows mustbe within authoritative neuralobservation/support intervals and exclude documented artifact/invalid intervals with completeness/scope provenance. Both recordingcoverage and artifactvalidity required independently of task-event validity.",
+    "unknown": "Absentrecording/artifactannotation UNKNOWN;emptyundocumentedtable isUNKNOWN,notproofartifactabsence. Trial/active-sessionepochs,providerunitquality,finitecoordinates,spikesortinglabel andfileexistence alone never certify continuousobserved/artifactvalidwindows. Knownartifactoverlap excludeswindow;unknownsupportblocksanalysis."
+  },
+  "operating": {
+    "physiology": "Allcapacities metadata-only pending A-onlyQC;zero neuraladmissions.",
+    "preferred": 8,
+    "restricted_descriptive": [
+      6,
+      7
+    ],
+    "stop_below": 6
+  },
+  "scientific_verdicts": [
+    "CANONICAL_NATIVE_M1_READY_FOR_NEURAL_QC",
+    "CANONICAL_NATIVE_FEASIBLE_BUT_PROTOCOL_INCOMPLETE",
+    "SOURCE_CONTRACT_INCONCLUSIVE",
+    "DATA_INSUFFICIENT"
+  ],
+  "source": {
+    "dandiset": "000409",
+    "license": "CC-BY-4.0",
+    "version": "0.260309.1324"
+  },
+  "task": {
+    "blocks": "Maximalconsecutive .2/.8 runs on ORIGINALroworder beforeexclusions;neutral/unknownbreak. Cutfloor(numbernonneutralruns/2) beforeexclusions;earlytraining/lateevaluation capacities, never random bins.",
+    "contexts": [
+      0.2,
+      0.8
+    ],
+    "future_behavior": "Choice/reward/feedback/responsenever used beforemeasuredtime; thismission fits nothing.",
+    "min_runs_per_context": 2,
+    "min_trials_per_context_half": 60,
+    "min_trials_per_run": 15,
+    "movement": "Prospectively version-dependent nuisance; NOT required forprimarytrialvalidity orprimarypredictors. No oldmovementmask; no movementindependenceclaim. Canonicalcausalpredictor onlyifmeaning/synchronizationindependentlyproved in futureprotocol.",
+    "neutral": 0.5,
+    "validity": "Canonicalfiniteordered start<=stimOn<=goCue<=feedback<=stop,start<stop,stimOn+.5<=stop;finitechronologicalstim. Exactcanonicalstimulus/side/context fields required forbaseline; missingunknownexclude/report. No oldbwm/saturationreactiontime/performance mask.",
+    "window_seconds": 0.5
+  }
+}

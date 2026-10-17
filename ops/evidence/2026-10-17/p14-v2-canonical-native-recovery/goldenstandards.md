@@ -1,0 +1,13 @@
+# Canonical-native prospective contract
+
+Mission P14-V2-CANONICAL-NATIVE-RECOVERY;BASE b09b1b254d3f8b9c5fd4be948befae0332f6b96a;frozen 2026-10-17T15:19:17.254245+00:00;53 atomic items inbaseline.json.
+
+Product/science decision: ownerresearcher asks whether fixedofficialcanonicalrelease can independentlysupport scheduledprior-context predictive-dynamicsquestion. Newcanonicalvalidity replacesoldtableequivalence forNEWtrackonly,explicitlyownerauthorized. OldsourceFAIL remainsimmutable. Bothcontext/sameprobe/wholeblock/.5s and scientificclaim boundariespreserved. Movementversiondependentnuisance unavailable;no movementindependence claim. Missingobservation/artifactevidence staysUNKNOWN. Openmaterialdecisions=0atmetadata-stage.
+
+Preflight: HEAD=origin/test=BASE,initialtreeclean,origin/mainabsent(TEST_ONLY_REMOTE_NO_MAIN);no branchrepair. Localopsfoundation/engineer/review/templatesabsent;userdirectiveused.
+
+Plan:freeze ->independentlyreviewcontract/readercanaries ->staticcanonicalsource/task/observationmetadata ->same13sessionauditincludingremaining12 ->canonicalunit/taskcapacityandobservationtri-state/exclusions -> independentdecision. Sourcewideenumeration isconditional andcannotrepairmissingobservationcontract. OnlysourcePASSpermitsfullM1freeze;thismissionNEVERneuralQC/fits/outcomes.
+
+Oracle: exactassetID/blob/size/ETag/rangeandhash;whitelistmetadata;sourceunit-electrode-atlas/probeidentity;canonicaltaskorder/blockwindows;explicitneuralobservationsupportandartifactannotationprovenance. UnknownneverPASS. TestlevelL0-L2synthetic/savedmetadata;noUI/channelapplicability.
+
+Exit:oneoffourregisteredscientificdecisions,separateK4Cterminalstatus. FullPASSonlyallatomicrequirementsverified/approvedequivalent,bug0warn0;sourceSTOPretainsblockeddownstreamrequirements andstillfinishesreport,repro,review,normalorigin-test/readback/clean. No hiddenrelaxation,datasetsearchornewcustodyarchitecture.

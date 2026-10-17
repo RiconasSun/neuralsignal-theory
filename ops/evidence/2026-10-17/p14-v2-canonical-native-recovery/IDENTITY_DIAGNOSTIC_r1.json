@@ -1,0 +1,22 @@
+{
+  "classification": "CODE_BUG_RESOLVED_BEFORE_COHORT_COUNT",
+  "observed": [
+    [
+      "CSH_ZAD_024",
+      "CSH-ZAD-024"
+    ],
+    [
+      "NR_0027",
+      "NR-0027"
+    ],
+    [
+      "SWC_038",
+      "SWC-038"
+    ]
+  ],
+  "cause": "Filename-safe alias was incorrectly compared to unmodified NWB Subject.subject_id",
+  "authority": "paper14_pivot1/sources/converter_subject_handling.py sanitize_subject_id_for_dandi: replace underscores only in filenames; raw nickname preserved in Subject.subject_id; fixed official asset Participant identifiers agree",
+  "repair": "Require exact raw subject==originalmouse==officialParticipant and exact documented normalized filename alias; no fallback substitutions",
+  "old_roster_unchanged": true,
+  "new_cohort_counts_before_repair": 0
+}

@@ -1,3 +1,10 @@
+# Current mission: P14-V2-CANONICAL-NATIVE-RECOVERY
+
+Scientific SOURCE_CONTRACT_INCONCLUSIVE, metadata-only canonicalnative amendment. BASEb09b1b254d3f8b9c5fd4be948befae0332f6b96a;all13historical sessions audited includingprevious12unread;13canonicaltask/anatomy-onlypotentialmice, source-supportedeligible/physiologicalcountsUNKNOWN. No oldbwm/saturationmasktransfer or1e-6relaxation;old794differences/sourceFAIL/confirmatoryFAIL preserved. Nativeunit/localization/QC andbothcontextcapacities reported; taskepochs arenotneuralrecording/artifactcertificates. BothessentialobservationsupportgatesUNKNOWN;source-wideenumerationnotactivated.
+
+38synthetic/source tests and5savedoutputs withnetworkdenied;772historicalhashes unchanged.53requirements retained,5conditionalfullM1requirements sourceblocked;bug0/warn2. No neuralarrays/shapes/rawbehavior,QC/fits/modelselection/scores/temporalassessment/M2-M7. Report paper14_native1/CANONICAL_NATIVE_REPORT.md;reproduce & .\paper14_native1\reproduce.ps1. Independentreview/normalorigin-test/readback/clean certifiedonlybyexecuted externalreceipt. RecommendarchivecurrentP14route;stop,noautomaticnewsource/bridgerescue/neuralmission. Priorheaderspreservedbyteexactbelow.
+
+---
 # Current mission: P14-V2-EXPLORATORY-CONTEXT-DYNAMICS
 
 Scientific SOURCE_CONTRACT_INCONCLUSIVE; new exploratory within-animal temporal track stopped at registered essential source gate. BASEb82425aab216f57b207d242c4361760f03b598d4. Historical13 not canonicalcohort;1of13registered assets audited,12unread,canonicaleligible/physiological counts UNKNOWN. CSHL049837trials: canonical bwm/saturation masks absent;794first-movement discrepancies/1missingness disagreement (max.16523333s),1stimOff discrepancy12.69967s. Frozen1e-6serialization bridge fails; no mask transfer or source-wide DATA_INSUFFICIENT claim.1088UUID-set/UUID-keyedQC match and internal electrode/probe consistency do not certify fullanatomy/writer identity.
