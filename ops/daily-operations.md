@@ -1,3 +1,12 @@
+# Current mission: P15-M1-SCIENTIFIC-PROTOCOL-FREEZE
+
+M1_FROZEN_READY_FOR_M2: complete reviewed prospective protocol, exactBASE bac678914065609bb3786ea9437fb2c5a215fb38. Fixed20MOpmetadata-candidates/12Development8Final,1probe/session/mouse,2pilotsremainDevelopment; no realneuraldata/fits/scores/C-D access inM1. 18nativeannotationequivalences andallphysiologicaladmission remainpending separatelyauthorizedQC. ImmediatePrompt3realfitREADY=false untilnativeQC andproductionworker gates pass.
+
+Primary B4-B1 nats/actualscorednominalunitbin;50ms/500ms/8units/37causalnuisances. B0-B4,DconditionalHMM,CfixedDCTstate,Sstaticcapacityguard; boundedgrids/seeds/PG<=.001/AD-FD/no-retry;1928laterfitceiling. Exactpercontrastclaims,11sensitivities/4x999surrogatereferenceswithassumptionlimits,signsymmetry/10kbootstrap/Holm5/lab/precision/attritionrules. WholeALFfutureC decoding requiresC-scopedreaderorseparateexplicittrusted-readerpermission,otherwisestop; no Dpermissionhere. No cryptographicsystem.
+
+Firstinternalreview3P1preserved;prospectivefixes/r2review0P0P1.17syntheticchecks/3saveddesigntables,6M0pins/cohortidentity andfinalprotocolhashes reproduceoffline; productionworkerNOTcertified.54atomicrequirements,52preGit/2actualGitpending;bug0warn0. Report paper15_m1/M1_REPORT.md; & .\paper15_m1\reproduce.ps1. Actualorigin/test/ref/allchangedblob/clean final54/54 certifiedonlybyexecutedexternalclosure_receipt.json. P1-P14/M0unchanged,previousheadersbyteexactbelow. STOPafterM1;noM2-M7activation.
+
+---
 # Current mission: P15-SENSORIMOTOR-DATA-FIRST-M0
 
 Scientific FEASIBLE_INDEPENDENT_HOLDOUT for candidate MOp study on native IBL Brain Wide Map. BASE 3f8e903d68c0990af1e1891c7444ff1210830f43. Registered before counts:139 source mice/699 probes ->23 anatomical MOp mice/37 probes ->31 tier8 probes/20 independent candidates, reserved12development/8final. Not full-cohort physiological admission or statistical power. Exactly2prespecified development pilots:84/22goodMOpunits;actualfiniteorderedspikes;nativeevent/wheel/recordingsupport/knownsaturation checks pass. Native/aggregate version differences retained; nooldmasktransfer.

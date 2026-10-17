@@ -1,0 +1,45 @@
+# P15 M1 scientific protocol, version 1
+
+**Predictive Temporal Structure of Neural Population Activity in Mouse Primary Motor Cortex**
+
+Mission P15-M1-SCIENTIFIC-PROTOCOL-FREEZE. Base `bac678914065609bb3786ea9437fb2c5a215fb38`. This is a prospective **Method Paper** protocol: predictive information, not causal mechanism or physical primitives. No new real neural arrays, fitting, model scores, C/D access or M2–M7 execution is authorized here. Final file hashes and actual freeze timestamp are recorded after independent internal review. Revisions before any scientific activation must remain versioned; nothing may be retuned from D.
+
+## Question, estimands and claim boundaries
+
+Primary: does strictly past local MOp history improve held-out prediction beyond strong task/stimulus/wheel/rate nuisances? For mouse m, define d_m=(LL_B4,m−LL_B1,m)/Q_m, where Q_m is the **actual number of valid scored nominal curated-release unit-bins** (8 units × retained score bins). LL includes −log(y!) and exposure. Equal-mouse effect is mean_m d_m, not pooled unit/trial likelihood. Missing/invalid bins are excluded from both numerator and denominator, genuine zero counts retained. All models in a contrast use exactly the same unit/bin mask; there is no model-specific deletion of hard observations.
+
+Five secondary contrasts are B4−B3 (conditional own history), B4−B2 (conditional other-unit history), D−B4, C−B4 and D−S. Attribution is conditional predictive ablation, not synaptic connectivity. D−B4 alone cannot establish persistent state dependence; D must also beat the prespecified static comparator S under its interpretive gates. No model winner, biological discrete atom, CWP/NAP validation, causal connectivity, independent-laboratory replication or real-time movement prediction is presupposed or permitted.
+
+## Fixed source and animals
+
+Native IBL Brain Wide Map, ONE/ALF public AWS source, CC BY 4.0; source denominator 139 mice / 459 sessions / 699 insertions. COHORT.csv is byte-identical to M0 ALLOCATION.csv: 20 candidate mice, 12 Development / 8 Final, exact fixed eid/pid/probe. No animal, session, probe or region replacement. All sessions of a mouse share its role; only the one selected session/probe is analyzed. MOp includes exact parent and suffixes 1,2/3,4,5,6a,6b; no MOs/SSp/SSs pooling. Both M0 pilot mice remain Development permanently.
+
+SOURCE_QC.md freezes native collection/revision rules, observation checks, training-only QC and the 18 remaining sessions' metadata-resolution procedure. M0's two real pilots are reused without redownload/reprocessing. Their saved proof establishes technical feasibility, not admission of the other 18 or all 20. Unknown equivalence remains unknown. P1–P14/M0 source, results and failed gates remain immutable.
+
+## Partitions and exposure
+
+Let N be the original ordered rows of the **pinned native** trial table, before exclusions. Development A=[0,floor(.6N)), B=[floor(.6N),floor(.8N)), E=[floor(.8N),N). Final C=[0,floor(.6N)), D=[floor(.6N),N). Drop the last original trial before and first trial after each boundary from both adjoining roles. Never recompute cuts after exclusions. M0 aggregate N is an inventory estimate, not authority to impose old row identities on a different native table. Future metadata resolution must serialize original native trial ordinals/values and deterministic partitions before any neural QC.
+
+Primary bin width Δ=0.05 s. Each eligible trial has a warm-up [stim−0.5,stim) and score [stim,stim+0.5), aligned to stimulus, 10 bins each. The entire 1 s epoch must be inside the trial and source recording support, with finite event ordering and no known invalid/saturation overlap. Trials may not overlap epochs. Reset all neural histories, C state and HMM prior at epoch start. Unobserved pre-epoch history is zero by definition. Warm-up observations initialize histories/filtering but contribute no fit/selection/evaluation LL. No history crosses trials, role cuts, or excluded gaps. If an invalid bin enters an epoch, exclude that entire epoch, preserving a common exposure. This conservative rule is fixed before neural outcomes.
+
+Minimum Development: at least 8 admitted mice, each with >=80 A epochs, >=40 B, >=40 E, 8 eligible units; otherwise stop scientific activation, no smaller fallback. At least 4 distinct Development labs must remain. Final >=8 primary-eligible mice allows the registered inferential assessment, subject to assumptions/precision. 6–7 allows only the prospectively registered **descriptive fallback**, with all confirmatory/validated labels withheld regardless of p. <6 stops the full cross-animal dynamical comparison and D assessment; archive C/source failures without D. Require >=80 C and >=60 D metadata-valid epochs/mouse; final model/units/QC are based on C alone. D neural values must not determine eligibility. A D-only essential integrity failure discovered during the one batch yields an incomplete/inconclusive assessment, never a replacement/retry.
+
+E is a disjoint exploratory development report of B-selected frozen models; no E-driven selection or protocol modification. All development evidence is exploratory, including the already exposed two M0 pilot mice. B/E real access and any future final C/D access require separately authorized later missions.
+
+## Models and selection
+
+FEATURE_MODELS.md defines every predictor, equation, nominal/free parameter count, bounds and penalty. B0–B4 use Poisson emissions; D is a small conditional Poisson HMM with exact causal forward probabilities; C is a fixed-projection, truncated exponential history state; S is an IID static mixture with at least the chosen D's nominal parameter capacity. Strong B4 features are shared in D/C/S. Training-only transformations are fixed and persisted. There is no recurrent learned integration or autoregressive null simulation.
+
+NUMERICAL_POLICY.json and NUMERICAL_SELECTION.md freeze float64, objective normalization, box projected gradients, analytical/AD/fixed-FD gates, budgets, seeds and all candidate attempts. Development B chooses one global hyperparameter policy per family by equal-mouse predictive LL on the same B rows; no per-mouse winner or E/final tuning. Grid: λ∈{.01,.1,1}; D K∈{2,3}; C rank∈{1,2},τ∈{.1,.25}s; S K∈{3,4}, with the selected D's capacity-pair rule. All attempted fits, failed seeds and warnings remain in journals. No retry, new initializer, budget increase or substitute family is allowed. A/C fits are never initialized from another mouse's fitted coefficients.
+
+STATISTICS_CONTROLS.md fixes tests, precision, verdicts, sensitivities and finite reference operators. Falsification/reference results cannot rescue a failed numerical/source/coverage gate. The observation and inference contract deliberately limits claims when assumptions or controls fail.
+
+## Future one-shot D gate
+
+Before D: all development selection/E reports and failures archived; source/native animal/unit/trial identities fixed; numerical synthetic/implementation gates passed; complete C-only calibration and scalers/states frozen; all registered selected-state successes/failure certificates serialized; statistical/control code and masks frozen; independent pre-D scientific implementation review; **explicit human authorization in Prompt 4**. M1 grants no C/D access. There is no signing/offline-key entitlement architecture.
+
+Primary D assessment requires valid B0–B4 C states for every included primary mouse. A failed secondary family remains unavailable and its p is fixed to1 in the secondary family, without changing the primary cohort or selecting a new model. This conditional primary-only reporting path must be disclosed to the pre-D reviewer and explicitly included in later human authorization; it is not automatic promotion. Family comparisons require their registered common C-valid cohort and minimum coverage, determined before D. Six/seven-mouse fallback also requires explicit later descriptive authorization under this frozen restriction. D cannot be used to select which path to report.
+
+Whole-recording ALF files do not grant implicit D decoding permission during C extraction. SOURCE_QC.md requires a C-scoped read path or separate explicit future trusted-reader authorization for necessary underlying decoding; otherwise STOP before C. Nothing in M1 authorizes that decoding or claims a completed access-isolation implementation. Every primary/secondary positive-label condition is now an exact named predicate in STATISTICS_CONTROLS.md; D/C/S cannot borrow robustness from baseline-only sensitivity refits.
+
+One evaluation means one frozen batch producing all original contrasts, sensitivities and 999-replicate reference suites. Those prespecified transformations are part of that batch, not extra opportunities to retune. An interrupted batch is sealed as incomplete with its partial outputs; no D rerun is authorized by this protocol. No animal swapping, score-dependent exclusion, post-D coefficient update, model switching or threshold amendment. Nonsignificance never establishes equivalence. STOP after this M1 freeze.

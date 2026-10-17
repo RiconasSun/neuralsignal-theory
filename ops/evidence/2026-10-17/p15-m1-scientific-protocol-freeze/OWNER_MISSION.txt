@@ -1,0 +1,416 @@
+# CCPN / NEURALSIGNAL — PAPER 15 MASTER PROMPT 2/5
+
+MISSION: `P15-M1-SCIENTIFIC-PROTOCOL-FREEZE`
+
+BASE:
+`origin/test @ bac678914065609bb3786ea9437fb2c5a215fb38`
+
+PRIORITY: HIGH
+
+EXECUTION MODE: SCIENCE-FIRST / DATA-FIRST / AUTONOMOUS / BOUNDED
+
+## OBJECTIVE
+
+Complete M1 of Paper 15:
+
+"Predictive Temporal Structure of Neural Population Activity in Mouse Primary Motor Cortex"
+
+Freeze a complete, scientifically defensible experimental protocol based on the successful M0 data-feasibility study.
+
+Do not activate neural fitting or held-out evaluation in this mission.
+
+Use the actual M0 evidence rather than repeating data discovery.
+
+## 1. SCIENTIFIC QUESTION
+
+Primary question:
+
+Does strictly causal local MOp spike history improve prediction of subsequent MOp population activity beyond strong task, stimulus, movement and firing-rate baselines?
+
+Primary estimand:
+
+Incremental held-out predictive log likelihood of the combined causal-history model B4 relative to the frozen non-neural-history nuisance baseline B1.
+
+Use nats per actual scored nominal curated-release unit-bin.
+
+The goal is incremental predictive information, not causal neural mechanism discovery.
+
+Secondary questions:
+
+- How much incremental prediction is attributable to own-unit versus other-unit history?
+- Do compact discrete-state representations predict better than the strong combined history baseline?
+- Do low-dimensional continuous-history representations predict better than the same baseline?
+- Does any apparent discrete advantage survive comparison with a capacity-controlled static mixture?
+
+Do not assume Discrete or Continuous wins.
+
+Do not claim biological discrete atoms, validated CWP/NAP primitives, causal connectivity or real-time movement prediction.
+
+## 2. FIXED SOURCE AND ANATOMY
+
+Primary dataset:
+
+Native IBL Brain Wide Map, publicly released ONE/ALF source, CC BY 4.0.
+
+Primary anatomical target:
+
+MOp, including documented Allen laminar descendants.
+
+Use:
+- One simultaneously recorded probe/session per mouse
+- Original source mouse identities
+- The existing 20 metadata candidates
+- No pooling with SSp, SSs or other brain regions
+- No cross-probe pooling
+- No animal replacement based on neural outcomes
+
+Preserve original source denominators:
+
+139 mice / 459 sessions / 699 probe insertions.
+
+Pin the native provider sorting, task, cluster-mapping, wheel and synchronization revisions.
+
+Use M0's successful two-session real-spike pilots as technical feasibility evidence.
+
+Both pilot mice remain Development permanently.
+
+Do not re-download or re-audit the two pilots unless an exact unresolved M1 source-contract issue requires it.
+
+The remaining 18 candidate sessions need their native metadata and observation rules specified before future physiological QC.
+
+Unknown native annotation equivalence must be reported, not fabricated.
+
+## 3. FREEZE THE ANIMAL DESIGN
+
+Preserve the 20-mouse metadata candidate cohort and the prospective 12 Development / 8 Final reservation.
+
+Use the exact existing allocation identities from:
+
+`paper15_m0/results/ALLOCATION.csv`
+
+Do not reroll allocation to improve laboratory balance or statistical results.
+
+All sessions of the same mouse must remain in the same role.
+
+Freeze:
+
+Development:
+- Training A
+- Validation/selection B
+- Exploratory reporting E, if scientifically justified
+
+Final:
+- Calibration C
+- One locked evaluation D
+
+Partition original whole trials chronologically, with causal history resets and appropriate guard gaps.
+
+Do not randomly intermix adjacent spike bins between fitting and evaluation.
+
+Final C uses only its own calibration partition for permitted QC, scaling and fitting. Final D cannot influence any of these decisions.
+
+Before scientific activation, decide and register the consequences of physiological attrition:
+
+- At least 8 eligible Final mice: eligible for the registered held-out statistical assessment, subject to actual inferential assumptions and precision.
+- 6–7 eligible Final mice: exploratory/descriptive evidence only if a prospective fallback is scientifically justified.
+- Fewer than 6: stop the full cross-animal dynamical comparison.
+
+Specify a separate defensible Development minimum.
+
+Do not equate a sample-size floor with proof of sufficient statistical power.
+
+No swapping or replacement after neural results.
+
+## 4. OBSERVATION AND PHYSIOLOGICAL QC
+
+Use the source-supported native observation contract established by M0:
+
+- Original AP acquisition duration
+- Provider probe/session synchronization
+- Native trial event timestamps
+- Known saturation interval exclusion
+- Valid observation masks
+- Explicit retention of genuine zero-spike bins
+- Provider atlas and sorting annotations
+
+Do not require impossible absolute hardware-packet completeness.
+
+Do not assume undocumented artifacts are absent.
+
+Before any new neural fitting, freeze:
+
+- Primary time bin width: choose and justify 50 ms or 100 ms using source resolution and scientific timescales, not predictive scores.
+- Causal history horizon and lag structure
+- Stimulus-anchored scoring window
+- Trial warm-up and reset rules
+- Native timebase and synchronization checks
+- Known invalid interval exclusion
+- Saturation-neighborhood sensitivity
+- Selected local population size
+- Training-only physiological quality rules
+
+Prefer an eight-unit primary local population if supported by the frozen feasibility design, with prespecified unit-count sensitivities.
+
+Provider-good labels are an upstream, potentially whole-session curated sampling frame, not newly computed training-only physiological QC.
+
+New downstream unit selection, rate estimates, refractory diagnostics and normalization must use A/C only.
+
+Choose numerical quality thresholds before inspecting new neural-model outcomes.
+
+If native source identity, timing or essential measurement support cannot be defended, stop rather than inventing a compatible annotation.
+
+## 5. CAUSAL MOVEMENT AND TASK COVARIATES
+
+Specify predictors by their actual availability at each prediction-bin start.
+
+Include when supported:
+
+- Stimulus identity and contrast
+- Known task and trial timing
+- Trial order/session drift
+- Previously observed response/reward history
+- Wheel position and strictly past movement history
+- Previously observed neural activity
+
+Do not use:
+
+- Future spike counts
+- Current-bin target spike counts as predictors
+- Future wheel samples
+- Future-smoothed behavioral features
+- Response, choice or reward before its event timestamp
+- Retrospectively inferred movement onset as a real-time predictor
+
+Wheel-only controls do not establish independence from unmeasured face, whisker, body movement or arousal.
+
+Distinguish observational prediction from event-conditioned offline analyses.
+
+## 6. FREEZE STRONG BASELINES
+
+Define exact mathematical equations, parameter counts, regularization and numerical acceptance for:
+
+B0: Stationary Poisson firing-rate baseline.
+
+B1: Strong causal stimulus/task/time/wheel nuisance baseline.
+
+B2: B1 plus own-unit spike-history predictors.
+
+B3: B1 plus other-unit population-history predictors.
+
+B4: B1 plus both own- and other-unit causal histories.
+
+Require explicit nested-model identities and identical evaluation exposures.
+
+The primary contrast is B4 − B1.
+
+Register conditional own-history and population-history contributions as secondary comparisons without changing the primary question.
+
+Use training/calibration-only transformations.
+
+Report observed and predictive log likelihoods with the Poisson factorial term and a consistent scored-unit-bin denominator.
+
+Freeze hyperparameter grids and selection policies using Development only.
+
+Do not select an artificially weak nuisance baseline to favor neural history.
+
+## 7. FREEZE DISCRETE AND CONTINUOUS MODELS
+
+Define two tractable secondary representation families.
+
+Discrete D:
+- Small-state conditional Poisson HMM
+- Exact causal forward prediction
+- No future-state smoothing
+- Same strong B4 nuisance structure
+- Fixed bounded state/parameter/hyperparameter policy
+
+Continuous C:
+- Low-dimensional fixed-timescale causal history state
+- Past neural observations only
+- Poisson predictive readout
+- Same B4 nuisance structure
+- Fixed projection/timescale policy
+
+If a temporal discrete-state interpretation is contemplated, include a capacity-controlled static mixture S as a mandatory interpretive comparator.
+
+Freeze exact model complexity and account for hyperparameter search.
+
+Equal parameter counts alone do not establish equal effective capacity.
+
+Do not inherit P11/P12's failed recurrent integrations or P13's unstable self-exciting B* generator.
+
+Model families that fail registered numerical conditions must remain failed, not replaced after looking at scores.
+
+## 8. NUMERICAL VALIDATION CONTRACT
+
+Before real fitting in Prompt 3, require independent synthetic tests for:
+
+- Poisson likelihood and exposure normalization
+- Model nesting and parameter counts
+- Analytical derivatives
+- Independent automatic differentiation
+- Fixed finite-difference checks
+- Projected gradients at box constraints
+- HMM exact forward versus enumerated likelihood
+- Strict causal indexing
+- Future-neural and future-behavior perturbation invariance
+- Trial reset and excluded-gap handling
+- Finite objectives and likelihoods
+- Static versus temporal-mixture distinction
+
+Specify exact solver budgets, seeds, retry policies, numerical thresholds and invalid-fit treatment.
+
+Prefer simple, bounded numerical models.
+
+Do not demand unbounded optimizer rescue to complete P15.
+
+Synthetic implementation tests in M1 may be performed without accessing additional real neural data.
+
+Do not fit real models in this mission.
+
+## 9. FREEZE THE SCIENTIFIC STATISTICS
+
+Mouse is the independent inference unit.
+
+Primary hypothesis:
+Positive incremental B4 − B1 predictive log likelihood on held-out Final mice.
+
+Register:
+
+- Equal-mouse aggregation
+- Individual mouse effects
+- Whole-mouse bootstrap confidence intervals
+- Paired sign-flip tests with explicit symmetry assumptions
+- Multiplicity treatment for secondary comparisons
+- Leave-one-mouse-out analysis
+- Laboratory dependence and heterogeneity
+- Minimum sample and precision conditions
+- Positive, mixed, negative and inconclusive verdict rules
+
+Do not describe an exact computational sign enumeration as an assumption-free test of population mean equality.
+
+If assumptions are scientifically indefensible, withhold confirmatory interpretation rather than selecting a more favorable test afterward.
+
+A nonsignificant result does not establish equivalence.
+
+No independent-laboratory replication claim.
+
+## 10. FALSIFICATION
+
+Prospectively define bounded controls for:
+
+- Rate and unit-count sensitivity
+- Own-history versus other-unit-history attribution
+- Within-trial temporal ordering
+- Trial/task/stimulus confounding
+- Wheel and movement-related nuisance
+- Session drift and trial order
+- Anatomical boundary and laminar composition
+- Saturation/observation-mask sensitivity
+- Laboratory and mouse heterogeneity
+- Static versus persistent state mixture
+
+Freeze null operators, assumptions, replicates, RNG policy and statistical correction before real scoring.
+
+Use finite, scientifically defensible controls.
+
+Avoid recursively simulated unbounded autoregressive Poisson nulls.
+
+Controls that fail numerically or violate their own assumptions cannot be relabeled as PASS.
+
+## 11. ONE FINAL D BOUNDARY
+
+Before a later Final D assessment, require:
+
+- Complete development model selection
+- Frozen source/animal/unit/trial identities
+- Numerical and source integrity PASS
+- Complete valid C-only calibration
+- Frozen model states and scalers
+- Frozen statistical tests and nulls
+- Independent pre-D scientific implementation review
+- Explicit one-shot evaluation authorization in Prompt 4
+
+Final D must be evaluated once.
+
+No result-driven refitting, animal replacement, model switching, new thresholds or repeated evaluation.
+
+This M1 mission does not grant Final C/D neural access.
+
+## 12. M1 COMPLETION REQUIREMENTS
+
+Produce:
+
+1. Final P15 scientific protocol
+2. Frozen cohort and animal allocation
+3. Native data and observation contract
+4. Training-only QC specification
+5. Complete feature and model equations
+6. Numerical and model-selection policy
+7. Primary and secondary hypotheses
+8. Animal-level statistical analysis plan
+9. Registered falsification and sensitivity plan
+10. Final D evaluation and claim-boundary policy
+11. Compact synthetic regression tests
+12. Saved-only PowerShell reproduction
+13. Independent internal scientific review
+14. Verified origin/test archival commit
+
+M1 must return one of:
+
+- M1_FROZEN_READY_FOR_M2
+- M1_FROZEN_PENDING_NATIVE_QC
+- SCIENTIFIC_PROTOCOL_INCONCLUSIVE
+- DATA_OR_SOURCE_INSUFFICIENT
+
+M1_FROZEN_READY_FOR_M2 means the scientific contract is complete and later training-only physiological QC may be separately authorized.
+
+It does NOT mean all 20 mice passed physiological admission or any model has been fitted.
+
+## EXECUTION RULES
+
+SCIENCE FIRST.
+
+Reuse the reviewed M0 evidence.
+
+No new dataset search.
+
+No P14 source rescue.
+
+No unrelated security engineering, offline signing or cryptographic entitlement system.
+
+No unnecessary giant acceptance framework.
+
+Do not mutate P1–P14 or retroactively change historical failures.
+
+Complete all ordinary bounded documentation, specification, synthetic tests, review and Git work autonomously.
+
+Stop for unresolved substantive scientific definitions, source contradictions or essential measurement problems.
+
+Do not run M2–M7 in this mission.
+
+## FINAL REPORT
+
+Return:
+
+M1_STATUS
+SCIENTIFIC_PROTOCOL_FROZEN
+FROZEN_SOURCE
+FROZEN_MICE
+DEVELOPMENT_FINAL_ALLOCATION
+PRIMARY_ESTIMAND
+MODEL_FAMILIES
+STATISTICAL_PLAN
+NUMERICAL_GATES
+FALSIFICATION_PLAN
+OBSERVATION_CONTRACT
+REMAINING_PHYSIOLOGICAL_QC
+PROMPT_3_READY
+BUG_COUNT
+WARN_COUNT
+GIT_COMMIT
+REMOTE_VERIFICATION
+
+BEGIN P15 M1 NOW.
+
+STOP AFTER REVIEWED PROTOCOL FREEZE.

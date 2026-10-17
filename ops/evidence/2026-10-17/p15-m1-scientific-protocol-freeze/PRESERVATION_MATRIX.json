@@ -1,0 +1,443 @@
+{
+  "count": 54,
+  "pending_executed_git": [
+    "REQ-053",
+    "REQ-054"
+  ],
+  "requirements": [
+    {
+      "evidence": "BOOTSTRAP_RECEIPT.json",
+      "id": "REQ-001",
+      "implementation_location": "BOOTSTRAP_RECEIPT.json",
+      "requirement": "Exact BASE/current origin-test and clean prechange; absent origin/main explicitly recorded",
+      "status": "VERIFIED",
+      "verification_method": "ExactBASE/freshfetch/initialclean, origin/main absent, no inventedrepair"
+    },
+    {
+      "evidence": "CLOSURE_SCOPE.md",
+      "id": "REQ-002",
+      "implementation_location": "CLOSURE_SCOPE.md",
+      "requirement": "Preserve P1-P14/M0 and historical failures; only new M1 files/prepended daily header",
+      "status": "VERIFIED",
+      "verification_method": "NewM1files only + byte-preserving daily prefix; nooldscientificpackagechanges"
+    },
+    {
+      "evidence": "paper15_m1/FINAL_DELIVERY.json",
+      "id": "REQ-003",
+      "implementation_location": "paper15_m1/FINAL_DELIVERY.json",
+      "requirement": "M1 only, no new real neural access/C-D/fitting/scoring/M2-M7 or dataset/source rescue",
+      "status": "VERIFIED",
+      "verification_method": "No new neural arrays, fits/scores,C/D or M2-M7; syntheticonly"
+    },
+    {
+      "evidence": "paper15_m1/SCIENTIFIC_PROTOCOL.md",
+      "id": "REQ-004",
+      "implementation_location": "paper15_m1/SCIENTIFIC_PROTOCOL.md",
+      "requirement": "Primary causal local MOp B4-B1 estimand in nats/actual scored nominal curated unit-bin",
+      "status": "VERIFIED",
+      "verification_method": "Primary B4-B1 actualnominalunitbin denominator,equalmouse causal prediction"
+    },
+    {
+      "evidence": "paper15_m1/STATISTICS_CONTROLS.md",
+      "id": "REQ-005",
+      "implementation_location": "paper15_m1/STATISTICS_CONTROLS.md",
+      "requirement": "Secondary own/other history,D/C vs B4,D vs capacity-controlled S without assumed winner",
+      "status": "VERIFIED",
+      "verification_method": "Five secondary contrasts,exact percontrast claims,map and staticguard,no assumedwinner"
+    },
+    {
+      "evidence": "paper15_m1/COHORT.csv;SOURCE_QC.md",
+      "id": "REQ-006",
+      "implementation_location": "paper15_m1/COHORT.csv;SOURCE_QC.md",
+      "requirement": "Native IBL CC BY4 source/global139-459-699 and exact20candidate identities",
+      "status": "VERIFIED",
+      "verification_method": "Native license/source/globaldenominators and20fixedcandidateIDs"
+    },
+    {
+      "evidence": "paper15_m1/SOURCE_QC.md",
+      "id": "REQ-007",
+      "implementation_location": "paper15_m1/SOURCE_QC.md",
+      "requirement": "One fixed probe/session per mouse; MOp exact parent/laminar,no regional/probe pooling or replacement",
+      "status": "VERIFIED",
+      "verification_method": "Onefixedsession/probe,MOp exact,nomouseoutcomereplacement/pooling"
+    },
+    {
+      "evidence": "paper15_m1/COHORT.csv;test_contract.py",
+      "id": "REQ-008",
+      "implementation_location": "paper15_m1/COHORT.csv;test_contract.py",
+      "requirement": "Exact12dev/8final allocation, all mouse sessions same role, both pilot mice permanentdev",
+      "status": "VERIFIED",
+      "verification_method": "Byteexact12/8 andwholemouse roles,2pilotsdevpermanently"
+    },
+    {
+      "evidence": "paper15_m1/SOURCE_QC.md;M0_INPUTS.json",
+      "id": "REQ-009",
+      "implementation_location": "paper15_m1/SOURCE_QC.md;M0_INPUTS.json",
+      "requirement": "Pin sorting/task/mapping/wheel/sync native policy and saved pilot identities;18remaining unknown equivalence explicit",
+      "status": "VERIFIED",
+      "verification_method": "Exactnativeversions/collections,unrevisionedUUIDpinprocedure;18unknownnotfabricated"
+    },
+    {
+      "evidence": "paper15_m1/M0_INPUTS.json",
+      "id": "REQ-010",
+      "implementation_location": "paper15_m1/M0_INPUTS.json",
+      "requirement": "No repeat pilot download/audit absent exact unresolved issue; reuse M0 proof",
+      "status": "VERIFIED",
+      "verification_method": "Twoexistingpilotproofs reused,noread/redownload ofneuralcache"
+    },
+    {
+      "evidence": "paper15_m1/SCIENTIFIC_PROTOCOL.md;test_contract.py",
+      "id": "REQ-011",
+      "implementation_location": "paper15_m1/SCIENTIFIC_PROTOCOL.md;test_contract.py",
+      "requirement": "Chronological original whole-trial A/B/E and C/D partitions; boundary guards/history resets",
+      "status": "VERIFIED",
+      "verification_method": "OriginaltrialA/B/E,C/Dcuts,guards,resets andstrictchronology"
+    },
+    {
+      "evidence": "paper15_m1/SOURCE_QC.md",
+      "id": "REQ-012",
+      "implementation_location": "paper15_m1/SOURCE_QC.md",
+      "requirement": "C-only QC/scaling/fits;D never affects selection/calibration",
+      "status": "VERIFIED",
+      "verification_method": "A/C-only units/scales/QC,wholeALF permissionSTOPrule,noD influence"
+    },
+    {
+      "evidence": "paper15_m1/SCIENTIFIC_PROTOCOL.md",
+      "id": "REQ-013",
+      "implementation_location": "paper15_m1/SCIENTIFIC_PROTOCOL.md",
+      "requirement": "Final>=8 inferentialcandidate,6-7registereddescriptivefallback,<6stop; independent Development minimum",
+      "status": "VERIFIED",
+      "verification_method": "Dev>=8/4labs,Final8inferencecandidate/6-7descriptive/<6stop andepochfloors"
+    },
+    {
+      "evidence": "paper15_m1/STATISTICS_CONTROLS.md",
+      "id": "REQ-014",
+      "implementation_location": "paper15_m1/STATISTICS_CONTROLS.md",
+      "requirement": "Sample floors not power; no outcome replacement/allocation reroll",
+      "status": "VERIFIED",
+      "verification_method": "No power claim fromfloor;hypotheticalplanningcurveexplicitnotempirical,no replacement"
+    },
+    {
+      "evidence": "paper15_m1/SCIENTIFIC_PROTOCOL.md;FEATURE_MODELS.md",
+      "id": "REQ-015",
+      "implementation_location": "paper15_m1/SCIENTIFIC_PROTOCOL.md;FEATURE_MODELS.md",
+      "requirement": "Freeze bin width/history lag/horizon/stimuluswindow/warmup/reset before neural fitting",
+      "status": "VERIFIED",
+      "verification_method": "50ms,500ms,4physicalhistorywindows,stim[0,.5),10warmbins,resets"
+    },
+    {
+      "evidence": "paper15_m1/SOURCE_QC.md",
+      "id": "REQ-016",
+      "implementation_location": "paper15_m1/SOURCE_QC.md",
+      "requirement": "Native AP duration/sync/trial/knowninvalid support, masks/zero retention; no impossible certificate",
+      "status": "VERIFIED",
+      "verification_method": "APdurationsyncnativeevents/invalidmask/truezero,separatedscope,no absolutecertificate"
+    },
+    {
+      "evidence": "paper15_m1/SOURCE_QC.md;STATISTICS_CONTROLS.md",
+      "id": "REQ-017",
+      "implementation_location": "paper15_m1/SOURCE_QC.md;STATISTICS_CONTROLS.md",
+      "requirement": "Saturation-neighborhood sensitivity and unresolved other artifact burden",
+      "status": "VERIFIED",
+      "verification_method": "Knownsatprimarymask and10/50msdilation,otherartifactunknown"
+    },
+    {
+      "evidence": "paper15_m1/SOURCE_QC.md;STATISTICS_CONTROLS.md",
+      "id": "REQ-018",
+      "implementation_location": "paper15_m1/SOURCE_QC.md;STATISTICS_CONTROLS.md",
+      "requirement": "Eight-unit primary population with prespecified unitcount/rate sensitivities",
+      "status": "VERIFIED",
+      "verification_method": "Primary8;5mandatory/12-20capacityconditional;ratecap sensitivitywithlimits"
+    },
+    {
+      "evidence": "paper15_m1/SOURCE_QC.md",
+      "id": "REQ-019",
+      "implementation_location": "paper15_m1/SOURCE_QC.md",
+      "requirement": "Provider-good upstream whole-session frame distinguished from new A/C-only physiology",
+      "status": "VERIFIED",
+      "verification_method": "Providerwhole-sessionlabel curatedframe distinctfromdownstreamA/ConlyQC"
+    },
+    {
+      "evidence": "paper15_m1/SOURCE_QC.md",
+      "id": "REQ-020",
+      "implementation_location": "paper15_m1/SOURCE_QC.md",
+      "requirement": "Freeze rate/refractory/coverage/unitranking/scaling rules using A/C only",
+      "status": "VERIFIED",
+      "verification_method": "Exactrate/spikecount/ISI/quartile/ranking/scales/clipping rules beforefits"
+    },
+    {
+      "evidence": "paper15_m1/SOURCE_QC.md",
+      "id": "REQ-021",
+      "implementation_location": "paper15_m1/SOURCE_QC.md",
+      "requirement": "Stop on essential source/identity/timing contradiction, never fabricate equivalence",
+      "status": "VERIFIED",
+      "verification_method": "Native/clock/mapping/sourcecontradictionsSTOP, no compatibleannotationinvented"
+    },
+    {
+      "evidence": "paper15_m1/FEATURE_MODELS.md",
+      "id": "REQ-022",
+      "implementation_location": "paper15_m1/FEATURE_MODELS.md",
+      "requirement": "Exact causal stimulus/task/time/order/previous events/wheel feature availability",
+      "status": "VERIFIED",
+      "verification_method": "37exactnuisancefeatures/timeavailability/previousobservedevents/wheel"
+    },
+    {
+      "evidence": "paper15_m1/FEATURE_MODELS.md;test_contract.py",
+      "id": "REQ-023",
+      "implementation_location": "paper15_m1/FEATURE_MODELS.md;test_contract.py",
+      "requirement": "No current/futuretargetcounts,wheel,future smoothing or earlyresponse/reward/retrospectiveonsetpredictor",
+      "status": "VERIFIED",
+      "verification_method": "Strictpastneural/wheel,eventtimes,nosmoothing/current-bin target/retrospectiveonset"
+    },
+    {
+      "evidence": "paper15_m1/FEATURE_MODELS.md;SCIENTIFIC_PROTOCOL.md",
+      "id": "REQ-024",
+      "implementation_location": "paper15_m1/FEATURE_MODELS.md;SCIENTIFIC_PROTOCOL.md",
+      "requirement": "Measured-wheel-only limits and offline eventconditioned vs realtime distinction",
+      "status": "VERIFIED",
+      "verification_method": "Unobservedmovementconfounds,noonlineforecast/mechanismclaim"
+    },
+    {
+      "evidence": "paper15_m1/FEATURE_MODELS.md;results/PARAMETER_COUNTS.json",
+      "id": "REQ-025",
+      "implementation_location": "paper15_m1/FEATURE_MODELS.md;results/PARAMETER_COUNTS.json",
+      "requirement": "Exact B0/B1/B2/B3/B4 equations,parametercounts,nesting and common exposures",
+      "status": "VERIFIED",
+      "verification_method": "ExactB0-B4 nesting/parameters/commonmask/contrast"
+    },
+    {
+      "evidence": "paper15_m1/FEATURE_MODELS.md;NUMERICAL_SELECTION.md",
+      "id": "REQ-026",
+      "implementation_location": "paper15_m1/FEATURE_MODELS.md;NUMERICAL_SELECTION.md",
+      "requirement": "Likelihood factorial/normalization and A/C-only transforms; avoid weak nuisance comparator",
+      "status": "VERIFIED",
+      "verification_method": "Factorial/exposure J/T versus LL/TU,sharedA-Ctransforms,37strongnuisancefeatures"
+    },
+    {
+      "evidence": "paper15_m1/NUMERICAL_POLICY.json;NUMERICAL_SELECTION.md",
+      "id": "REQ-027",
+      "implementation_location": "paper15_m1/NUMERICAL_POLICY.json;NUMERICAL_SELECTION.md",
+      "requirement": "Exact grids/developmentselection/tiebreak/search budgets;no final selection",
+      "status": "VERIFIED",
+      "verification_method": "Frozen grids/equalmouseBselection/ties/searchcount,noE/Dtuning"
+    },
+    {
+      "evidence": "paper15_m1/FEATURE_MODELS.md;test_contract.py",
+      "id": "REQ-028",
+      "implementation_location": "paper15_m1/FEATURE_MODELS.md;test_contract.py",
+      "requirement": "Small conditional Poisson HMM D exact causal forward,no smoothing,same B4 structure",
+      "status": "VERIFIED",
+      "verification_method": "ConditionalPoissonHMMexactcausalforward,warmup/enumeration,nosmoothing"
+    },
+    {
+      "evidence": "paper15_m1/FEATURE_MODELS.md;test_contract.py",
+      "id": "REQ-029",
+      "implementation_location": "paper15_m1/FEATURE_MODELS.md;test_contract.py",
+      "requirement": "Fixed-timescale lowdim history C,past only,fixed projection/budget,same B4 structure",
+      "status": "VERIFIED",
+      "verification_method": "FixedDCT rank/tau/truncatedhistory C,zeroreset,pastonly"
+    },
+    {
+      "evidence": "paper15_m1/FEATURE_MODELS.md",
+      "id": "REQ-030",
+      "implementation_location": "paper15_m1/FEATURE_MODELS.md",
+      "requirement": "Capacity-controlled static mixture S for temporal interpretation;effectivecapacity caveat",
+      "status": "VERIFIED",
+      "verification_method": "Pairedlarger staticS countguard,effectivecapacitylimitation explicit"
+    },
+    {
+      "evidence": "paper15_m1/FEATURE_MODELS.md;NUMERICAL_SELECTION.md",
+      "id": "REQ-031",
+      "implementation_location": "paper15_m1/FEATURE_MODELS.md;NUMERICAL_SELECTION.md",
+      "requirement": "Exact D/C/S complexity/penalties/bounds; no failed recurrent or selfexciting simulation inheritance",
+      "status": "VERIFIED",
+      "verification_method": "Finite boxes/gauges/penalties/counts,nofailedrecurrent/B*inheritance"
+    },
+    {
+      "evidence": "paper15_m1/test_contract.py;SYNTHETIC_RECEIPT.json",
+      "id": "REQ-032",
+      "implementation_location": "paper15_m1/test_contract.py;SYNTHETIC_RECEIPT.json",
+      "requirement": "Numerical contract likelihood/exposure/nesting/parametercount synthetic oracles",
+      "status": "VERIFIED",
+      "verification_method": "Poisson/factorial/exposure/count/nesting numericaloracles"
+    },
+    {
+      "evidence": "paper15_m1/test_contract.py;NUMERICAL_SELECTION.md",
+      "id": "REQ-033",
+      "implementation_location": "paper15_m1/test_contract.py;NUMERICAL_SELECTION.md",
+      "requirement": "Analytic derivatives + independentAD + fixedFD + outwardPG bounds before Prompt3realfit",
+      "status": "VERIFIED",
+      "verification_method": "AnalyticGLM/independentAD/allfixedFD/outwardPG;productionendpointgatesdeferredexplicitly"
+    },
+    {
+      "evidence": "paper15_m1/test_contract.py;NUMERICAL_SELECTION.md",
+      "id": "REQ-034",
+      "implementation_location": "paper15_m1/test_contract.py;NUMERICAL_SELECTION.md",
+      "requirement": "HMM forward/enumeration,causality/futureperturbation/reset/gap,finite/state-mixture tests",
+      "status": "VERIFIED",
+      "verification_method": "HMMenumeration/IIDdistinction/futureperturbation/reset/gap/finitechecks,notwholeworkercertification"
+    },
+    {
+      "evidence": "paper15_m1/NUMERICAL_POLICY.json;NUMERICAL_SELECTION.md",
+      "id": "REQ-035",
+      "implementation_location": "paper15_m1/NUMERICAL_POLICY.json;NUMERICAL_SELECTION.md",
+      "requirement": "Exact solverbudgets,seeds,no-retry and invalidfit treatment;bounded no rescue",
+      "status": "VERIFIED",
+      "verification_method": "Exactsolverseeds/limits/zero-retries/invalidfit,no unboundedrescue;1928ceiling"
+    },
+    {
+      "evidence": "paper15_m1/STATISTICS_CONTROLS.md",
+      "id": "REQ-036",
+      "implementation_location": "paper15_m1/STATISTICS_CONTROLS.md",
+      "requirement": "Equalmouse individualeffects/wholemousebootstrap intervals and paired signflips",
+      "status": "VERIFIED",
+      "verification_method": "Equalmouseeffects/10kwholemouseintervals/pairedsign enumeration"
+    },
+    {
+      "evidence": "paper15_m1/STATISTICS_CONTROLS.md",
+      "id": "REQ-037",
+      "implementation_location": "paper15_m1/STATISTICS_CONTROLS.md",
+      "requirement": "Explicit symmetry/independence assumptions, no assumptionfree claim; withholdconfirmation whenindefensible",
+      "status": "VERIFIED",
+      "verification_method": "Symmetry/independence assumptions,preDscientificreview,withholdconfirmationifindefensible"
+    },
+    {
+      "evidence": "paper15_m1/STATISTICS_CONTROLS.md",
+      "id": "REQ-038",
+      "implementation_location": "paper15_m1/STATISTICS_CONTROLS.md",
+      "requirement": "Secondary multiplicity,LOMO,labdependence/heterogeneity and minimumprecision",
+      "status": "VERIFIED",
+      "verification_method": "Holm5/LOMO/labs/heterogeneity/minprecision/fixedcasegates"
+    },
+    {
+      "evidence": "paper15_m1/STATISTICS_CONTROLS.md",
+      "id": "REQ-039",
+      "implementation_location": "paper15_m1/STATISTICS_CONTROLS.md",
+      "requirement": "Positive/mixed/negative/inconclusive rules; nonsignificance not equivalence/no externalreplication",
+      "status": "VERIFIED",
+      "verification_method": "Positive/mixed/negative/inconclusive/descriptive rules,no equivalence/replication claim"
+    },
+    {
+      "evidence": "paper15_m1/STATISTICS_CONTROLS.md",
+      "id": "REQ-040",
+      "implementation_location": "paper15_m1/STATISTICS_CONTROLS.md",
+      "requirement": "Finite controls rate/unitcount,own/other attribution,withintrialordering",
+      "status": "VERIFIED",
+      "verification_method": "11rate/unitcount/sensitivitycases,conditionalown/other andorderreferences"
+    },
+    {
+      "evidence": "paper15_m1/STATISTICS_CONTROLS.md",
+      "id": "REQ-041",
+      "implementation_location": "paper15_m1/STATISTICS_CONTROLS.md",
+      "requirement": "Controls task/stimulus/wheel/order/drift/anatomy/laminar/saturation/labs/static state",
+      "status": "VERIFIED",
+      "verification_method": "Task/stim/wheel/order/drift/anatomy/layer/saturation/lab/static panels exactscope"
+    },
+    {
+      "evidence": "paper15_m1/STATISTICS_CONTROLS.md;REVIEW_REPAIR_1.md",
+      "id": "REQ-042",
+      "implementation_location": "paper15_m1/STATISTICS_CONTROLS.md;REVIEW_REPAIR_1.md",
+      "requirement": "Exact nulloperators,assumptions,replicates,RNG/correction; failed controls neverPASS",
+      "status": "VERIFIED",
+      "verification_method": "Exactoperators/RNG/draws/999rep/corrections/assumptionlimits,failed/unavailable retained"
+    },
+    {
+      "evidence": "paper15_m1/STATISTICS_CONTROLS.md",
+      "id": "REQ-043",
+      "implementation_location": "paper15_m1/STATISTICS_CONTROLS.md",
+      "requirement": "No unstable recursively simulated Poisson nulls",
+      "status": "VERIFIED",
+      "verification_method": "Finite transformations,no recursivelygeneratedPoissoncounts"
+    },
+    {
+      "evidence": "paper15_m1/SCIENTIFIC_PROTOCOL.md;SOURCE_QC.md",
+      "id": "REQ-044",
+      "implementation_location": "paper15_m1/SCIENTIFIC_PROTOCOL.md;SOURCE_QC.md",
+      "requirement": "One-shot futureD boundary developmentfreeze/Cstates/numerical/source/preDreview/Prompt4authorization",
+      "status": "VERIFIED",
+      "verification_method": "Futureone-shotDreview/states/source/numerical/Ccalibration/Prompt4auth;Cdecoderpermissionseparate"
+    },
+    {
+      "evidence": "paper15_m1/SCIENTIFIC_PROTOCOL.md",
+      "id": "REQ-045",
+      "implementation_location": "paper15_m1/SCIENTIFIC_PROTOCOL.md",
+      "requirement": "No postDretuning/refit/replacement/modelthresholdchanges/repeatedevaluation",
+      "status": "VERIFIED",
+      "verification_method": "No postDrefit/replacement/model/thresholdchange/rerun;interruptionsealedincomplete"
+    },
+    {
+      "evidence": "paper15_m1/SCIENTIFIC_PROTOCOL.md;SOURCE_QC.md;FEATURE_MODELS.md;NUMERICAL_SELECTION.md",
+      "id": "REQ-046",
+      "implementation_location": "paper15_m1/SCIENTIFIC_PROTOCOL.md;SOURCE_QC.md;FEATURE_MODELS.md;NUMERICAL_SELECTION.md",
+      "requirement": "Complete scientificprotocol/cohort/nativecontract/QC/features/model/numerical/hypothesisdeliverables",
+      "status": "VERIFIED",
+      "verification_method": "Fullprotocol/source/cohort/QC/model/numerical/hypotheses delivered"
+    },
+    {
+      "evidence": "paper15_m1/STATISTICS_CONTROLS.md;A1_A10_CLAIM_AUDIT.md",
+      "id": "REQ-047",
+      "implementation_location": "paper15_m1/STATISTICS_CONTROLS.md;A1_A10_CLAIM_AUDIT.md",
+      "requirement": "Statistics/falsification/finalclaimboundarydeliverables",
+      "status": "VERIFIED",
+      "verification_method": "Stats/falsification/finalclaims/boundary deliverables,not empiricalresults"
+    },
+    {
+      "evidence": "paper15_m1/test_contract.py;SYNTHETIC_RECEIPT.json",
+      "id": "REQ-048",
+      "implementation_location": "paper15_m1/test_contract.py;SYNTHETIC_RECEIPT.json",
+      "requirement": "Compact meaningful synthetic regressions without accessing extra real data",
+      "status": "VERIFIED",
+      "verification_method": "17meaningfulsyntheticchecks including2reviewregressions,norealdata"
+    },
+    {
+      "evidence": "paper15_m1/reproduce.ps1;SAVED_REPRODUCTION_RECEIPT.json",
+      "id": "REQ-049",
+      "implementation_location": "paper15_m1/reproduce.ps1;SAVED_REPRODUCTION_RECEIPT.json",
+      "requirement": "Saved-only PowerShell reproduce protocol/counts/tests, not fictitious realfit proof",
+      "status": "VERIFIED",
+      "verification_method": "Offline3savedtablebyteequality/cohort6pins/finalprotocolhashes/syntheticoracles"
+    },
+    {
+      "evidence": "INDEPENDENT_REVIEW_1.md;REVIEW_REPAIR_1.md;INDEPENDENT_REVIEW_2.md",
+      "id": "REQ-050",
+      "implementation_location": "INDEPENDENT_REVIEW_1.md;REVIEW_REPAIR_1.md;INDEPENDENT_REVIEW_2.md",
+      "requirement": "Independent INTERNAL scientific review and preservation of unsuccessful review/fixes",
+      "status": "VERIFIED",
+      "verification_method": "Original3P1reviewpreserved,resolvedbeforefreeze,internalnotexternalpeerreview"
+    },
+    {
+      "evidence": "paper15_m1/FINAL_DELIVERY.json;M1_REPORT.md",
+      "id": "REQ-051",
+      "implementation_location": "paper15_m1/FINAL_DELIVERY.json;M1_REPORT.md",
+      "requirement": "One of four M1 scientificstatuses, all requested finalfields, readiness distinguished from admission",
+      "status": "VERIFIED",
+      "verification_method": "OneM1status/allrequestedfields,protocolM2readynotimmediatePrompt3fit/admission"
+    },
+    {
+      "evidence": "baseline.json;PRESERVATION_MATRIX.json;verdict.md",
+      "id": "REQ-052",
+      "implementation_location": "baseline.json;PRESERVATION_MATRIX.json;verdict.md",
+      "requirement": "Freeze/trace baseline,bug0warn0,no silent scope/test/claim shrink",
+      "status": "VERIFIED",
+      "verification_method": "All54unchangedrequirements individuallymapped,no silent shrink/zeroopen defects"
+    },
+    {
+      "evidence": "paper15_m1/work/closure_receipt.json",
+      "id": "REQ-053",
+      "implementation_location": "paper15_m1/work/closure_receipt.json",
+      "requirement": "Exact mission staging,normal origin-test commit/push,no main/force/PR",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "verification_method": "Actualexactscopedstage/normalorigin-testcommit/push,noMainForcePR"
+    },
+    {
+      "evidence": "paper15_m1/work/closure_receipt.json",
+      "id": "REQ-054",
+      "implementation_location": "paper15_m1/work/closure_receipt.json",
+      "requirement": "Live remote SHA/all changed blob readback/evidencehashes/clean gate and STOPafterM1",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "verification_method": "Actualliveref/allchangedbytes/clean proof thenSTOPafterM1"
+    }
+  ],
+  "transition": "Final executed external receipt individually closes REQ-053/054 to54/54; no anticipated GitPASS",
+  "verified_pre_git": 52
+}
