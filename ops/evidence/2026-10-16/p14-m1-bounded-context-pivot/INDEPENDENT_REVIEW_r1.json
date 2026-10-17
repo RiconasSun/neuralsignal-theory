@@ -1,0 +1,73 @@
+{
+  "mission": "P14-M1-BOUNDED-CONTEXT-PIVOT",
+  "reviewer": "independent_internal_agent_pivot_review",
+  "reviewed_at": "2026-10-17T05:56:20.352797+00:00",
+  "decision": "ACCEPTED_BLOCKED_ARCHIVE_ONLY",
+  "open_P0": 0,
+  "open_P1": 0,
+  "candidate_freeze_sha256": "244065ffcbffaf859df4a3b02ea8d1e539afcf9e21a7fdc306203fa727b114c1",
+  "scientific_decision": "DATA_INSUFFICIENT",
+  "decision_scope": "Prospectively fixed reused2024_Q2IBL metadata-screen route only; no global claim of insufficiency across every DANDI unit/QC version",
+  "full_M1_protocol_ready": false,
+  "Prompt3_eligible": false,
+  "MERGE_ALLOWED": false,
+  "independent_reproduction": {
+    "command": "& .\\paper14_pivot1\\reproduce.ps1",
+    "actual_run": true,
+    "exit_code": 0,
+    "saved_metadata_audit": "PASS",
+    "tests": 21,
+    "byte_exact_results": 11,
+    "payload_hashes": 77,
+    "source_hashes": 49,
+    "historical_hashes": 673,
+    "network": "DENIED",
+    "new_neural_values_or_model_fits": 0,
+    "final_access": 0
+  },
+  "independent_denominator_review": {
+    "source_mice": 139,
+    "probes": 699,
+    "sessions": 459,
+    "anatomical_good_mice": 29,
+    "qualifying_probe_rows": 20,
+    "expanded_independent_candidates": 13,
+    "strict_independent_candidates": 8,
+    "selected_MOs_majority": 9,
+    "selected_entirely_MOs": 5,
+    "selected_nonMOs_at_least10": 7,
+    "selected_minimum_context_half_trial_range": [
+      62,
+      147
+    ],
+    "release_assets": 2048,
+    "processed_NWB_assets": 459,
+    "exact_session_UUID_matches": 459,
+    "observed_bijective_animal_crosswalk": 139,
+    "literal_subject_matches": 237
+  },
+  "scope_review": {
+    "baseline_requirements": 38,
+    "full_protocol_requirements_marked_blocked": true,
+    "required_items_omitted": 0,
+    "unresolved_shrink_risk": 0,
+    "historical_failures_reclassified": false,
+    "source_unit_QC_trial_equivalence": false,
+    "actual_physiological_QC": false,
+    "actual_dev_final_allocation": false,
+    "scientific_STOP_required": true,
+    "archive_recommended": true,
+    "indefinite_source_recovery_authorized": false
+  },
+  "warnings": [
+    "Registered route supplies13metadata candidates, fewer than16independent animals before further admission.",
+    "Canonical unit/QC/trial equality, actual per-session observation/clock/behavior coverage and C-only physiological admission remain unverified."
+  ],
+  "bug_count": 0,
+  "warn_count": 2,
+  "closure_conditions": [
+    "Only normal exact-file origin/test archive is accepted; not scientific READY/M1PASS or Prompt3.",
+    "Execute and separately verify actual commit, live remote readback, changed-file hashes and clean working tree before final handoff.",
+    "Do not alter reviewed payload; any relevant source/code/result edit requires renewed verification/review."
+  ]
+}

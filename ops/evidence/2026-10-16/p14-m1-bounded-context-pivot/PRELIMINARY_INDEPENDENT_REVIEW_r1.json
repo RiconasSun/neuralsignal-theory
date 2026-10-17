@@ -1,0 +1,37 @@
+{
+  "mission": "P14-M1-BOUNDED-CONTEXT-PIVOT",
+  "reviewer": "independent_internal_agent_pivot_review",
+  "review_stage": "PRELIMINARY_SOURCE_SCIENTIFIC_NOT_FINAL_ARCHIVE_REVIEW",
+  "utc": "2026-10-17T05:48:23.875591+00:00",
+  "inputs": "Existing pinned fixture, atlas, unit-label/anatomy metadata, task-event metadata and saved DANDI release/assets JSON only; no network or neural/raw arrays",
+  "method": "Independent pandas/numpy recomputation of original-order context runs, finite/order/window/provider masks, whole-run half split, >=15 valid trials/run, >=2 qualifying runs/context, >=60 trials/context/half, exact provider label1, atlas laminar regex, same-probe counts and one-mouse selection; production audit functions were not called.",
+  "independently_confirmed": {
+    "strict_mouse_count": 8,
+    "expanded_mouse_count": 13,
+    "qualifying_probe_rows": 20,
+    "selected_MOs_dominated": 9,
+    "selected_at_least10_nonMOs_units": 7,
+    "fixture_mice": 139,
+    "fixture_probes": 699,
+    "fixture_sessions": 459,
+    "release_processed_NWB_assets": 459,
+    "all_session_UUIDs_exact": true,
+    "literal_subject_session_matches": 237,
+    "observed_one_to_one_subject_crosswalk_size": 139,
+    "all_crosswalk_pairs_observed_underscore_to_hyphen": true,
+    "license": [
+      "spdx:CC-BY-4.0"
+    ]
+  },
+  "judgment": "DATA_INSUFFICIENT is supportable only for the prospectively fixed pinned2024_Q2 metadata-screen route: 13<16. It is not a claim that every DANDI unit/version route is globally insufficient. Complete session UUID coverage and one-to-one observed subject crosswalk rule out alleged missing-session coverage as an explanation. DANDI unit/QC-version equivalence remains unestablished, independently blocks READY and cannot be silently waived.",
+  "required_final_scope": [
+    "Label 13 as reused pinned-curatorial metadata candidates, not C-only physiologically admitted animals.",
+    "Do not infer DANDI unit/quality-table equality from source identity crosswalk.",
+    "Do not describe 237 literal subject matches as 222 missing/different sessions.",
+    "Keep historical strict8 and all failure decisions immutable.",
+    "Complete package tests/reproduction/hash freeze and final independent review are still required."
+  ],
+  "open_P0": 0,
+  "open_P1": 0,
+  "final_review_complete": false
+}

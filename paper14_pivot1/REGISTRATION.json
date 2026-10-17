@@ -1,0 +1,66 @@
+{
+  "mission": "P14-M1-BOUNDED-CONTEXT-PIVOT",
+  "base": "c02eadba8e4770490f2f8a5787a90dfaa5b38550",
+  "registered_at": "2026-10-17T05:43:39.492184+00:00",
+  "before_expanded_eligibility_counts": true,
+  "scientific_amendment": "New priorLeft interaction estimand; original DynamicRouting auditory/visual experiment and all failed gates remain immutable. No P14 neural predictive outcomes examined.",
+  "source": {
+    "dandiset": "000409",
+    "published_version": "0.260309.1324",
+    "status": "Verify exact published version and CC-BY4 from official API before adoption; no release substitution",
+    "reuse": "Existing pinned2024_Q2_IBL_et_al_BWM clusters/trials/fixture and M0 behavior-only extras. Join to DANDI lineage/identities where independently supported; mismatch cannot be waived."
+  },
+  "contexts": {
+    "low_priorLeft": 0.2,
+    "high_priorLeft": 0.8,
+    "neutral_excluded": 0.5,
+    "meaning": "Experimenter-scheduled uncued block prior; not directly measured belief, no neural-derived context"
+  },
+  "strict_historical": "Exact ACAd/ACAv/PL/ILA same-probe metadata result8candidates preserved, not expanded retrospectively",
+  "expanded_target": [
+    "MOs",
+    "ACAd",
+    "ACAv",
+    "PL",
+    "ILA"
+  ],
+  "anatomy": "Exact atlas acronym or laminar descendants 1/2/3/4/5/6a/6b only; no orbital/lateral/MOp. Label medial frontal cortex. Same simultaneous probe population throughout contexts/halves.",
+  "rationale": "A prospective heterogeneous medial-frontal sampling target that includes premotor MOs is scientifically plausible for task/context prediction but changes anatomical scope; no uniform PFC mechanism, belief or regional localization claim. Preserve composition, report MOs fraction and whether>50percent; no post-count anatomy choice.",
+  "unit_screen": {
+    "minimum_provider_good_units": 10,
+    "label": "exact provider label==1; externally curated full-session frame, not A/Cphysiology; missing notgood",
+    "future": "A/C-only physiology separate, must retain>=10units on frozenprobe. No spikes accessed now."
+  },
+  "trial_screen": "Reuse exact M0 IBL session_blocks algorithm: required finite interval/start/stim/goCue/feedback/stop;start<=stim<=goCue<=feedback<=stop;stim+.5<=stop;bwm_include=True;saturation_stim_plus06=False. Missing timing/masks fail closed. Masks are source/exclusion metadata, never causal predictors. Record outcome-dependent source frame limitation.",
+  "blocks": "Maximal contiguous original-trial probabilityLeft runs before filtering; neutral/unknown breaks. Original trial-order stimulus times strictly increase. Cut all nonneutral runs atfloor(K/2); first whole-block half A/C, last B/EorD. Runs<15valid trials notqualifying but never merged/removed before cut.",
+  "observations": {
+    "min_valid_trials_qualifying_run": 15,
+    "min_qualifying_runs_each_context": 2,
+    "min_usable_trials_each_context_each_half": 60,
+    "prediction_window": [
+      0,
+      0.5
+    ],
+    "bin_seconds": 0.1,
+    "min_development": 8,
+    "min_final": 8
+  },
+  "support": "Provider curated active-task intervals and saturation mask, finite within-trial timestamps, documented ephys timebase; never infer neural recording support from spike endpoints or field names. DANDI/aggregate source equality and any needed packet/annotation support remain explicit gates. No full-record raw values.",
+  "selection": "Among qualifying same-probe target populations choose most good units, then greatest minimum4context-half cells, then lexical eid/pid. One canonical mouse only; report all exclusions/otherprobes, no cross-session pooling.",
+  "allocation": "Only if >=16verifiedmetadata-qualified independent animals and source gates pass: sortSHA256(ASCII P14-IBL-MFC-V1|canonical_mouse_id), firstfloor(n/2)development,lastremainingfinal. No replacements/swaps. Do not execute allocation before source compatibility established.",
+  "MOs_dominance": "For each selected probe list all five good-unit counts;MOsfractionofexpandedgood;>0.5 dominance descriptive flag, not tuned eligibility rule. Future mandatoryMOs-removal sensitivity must retain>=8paired final mice or broad composite claims INCONCLUSIVE, never retargetafteroutcomes.",
+  "new_hypotheses": [
+    "Delta_D=(LL(D)-LL(B4))_pLeft0.2-(LL(D)-LL(B4))_pLeft0.8",
+    "Delta_C=(LL(C)-LL(B4))_pLeft0.2-(LL(C)-LL(B4))_pLeft0.8"
+  ],
+  "conditional_freeze": "Complete fullM1onlyif>=8+8and source/clockcompatible. If below16 STOP DATA_INSUFFICIENT, recommendarchive; no otherdataset or floor change.",
+  "access": {
+    "allowed": "Source/license/provenance API JSON, official docs/code, reused whitelisted identity/anatomy/label/discrete trial metadata. No SDKfallthrough, fullNWB, spike/count/amplitude/waveform/rawbehavior arrays, fits/scores/finalvalues.",
+    "http_attempts": 100,
+    "total_bytes": 30000000,
+    "single_response_bytes": 5000000,
+    "attempts_per_request": 2
+  },
+  "interpretation": "Conditional observational predictive structure; no direct beliefs, causality, movement/arousal independence, unit/session pseudoreplication or independent-lab proof",
+  "stop": "One bounded P14M1decision; no automatic nextmission, email or newdataset search."
+}

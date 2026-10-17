@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper14_pivot1\audit.py", line 78, in <module>
+    if __name__=='__main__':print(json.dumps(run(),indent=2))
+                                             ^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper14_pivot1\audit.py", line 60, in run
+    assets=asset_metadata();dandi=[]
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper14_pivot1\audit.py", line 22, in asset_metadata
+    if x['count']!=2048:raise ValueError('Unexpected release count; preserve and review')
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unexpected release count; preserve and review

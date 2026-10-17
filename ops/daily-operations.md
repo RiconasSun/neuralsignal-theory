@@ -1,3 +1,12 @@
+# Current mission: P14-M1-BOUNDED-CONTEXT-PIVOT
+
+Scientific decision DATA_INSUFFICIENT for the prospectivelyfixed reused2024_Q2IBL metadata-screenroute; no global claim about allDANDIunit/QCversions. BASEc02eadba8e4770490f2f8a5787a90dfaa5b38550. New scheduledprobabilityLeft0.2vs0.8 estimand and exactMOs+ACAd+ACAv+PL+ILA medialfrontal target registered beforecounts; strictmPFC8preserved.139sourceanimals/699probes ->29with10provider-good targetunits ->20qualifyingprobe rows ->13independentmouse candidates<16;9majorityMOs,5pureMOs,7selectedprobesretain10nonMOs. No8+8allocation or fullM1freeze; Prompt3noteligible.
+
+DANDI000409/0.260309.1324 explicitlyCC-BY4/OpenAccess.2048assetmetadata records/459processedNWBsessionUUIDs/139subjectbijectionsverified; originalvsconvertedunit/QC/trialvalueequivalence NOTestablished. All673historicalmetadata/packagehashes preserved; alloriginalP14DRfailures/18candidate/old9-9reservation unchanged. No neural/rawbehaviorvalues,fits,scores,finalaccess,email,newdataset or cryptographicarchitecture.21synthetic/sourcepolicyregressions;11savedmetadataresults.38atomicrequirements retained,11scientificitemsblocked;actualrepro/review/Git/clean receipts certifyarchivalgates. bug_count0/warn_count2, no fullM1PASS.
+
+Report: paper14_pivot1/PIVOT_REPORT.md; decisionmemo recommendsarchivecurrentP14route. Evidence: ops/evidence/2026-10-16/p14-m1-bounded-context-pivot. Saved-only: & .\paper14_pivot1\reproduce.ps1. Stopafterboundeddecision; no automatic searchrecovery or neuralmission. Priorheadersbelowpreservedverbatim.
+
+---
 # Current mission: P14-M1-OPEN-RELEASE-RECOVERY
 
 Bounded public-source audit scientific decision SOURCE_OR_TIMING_INCONCLUSIVE; intended NEED_ENV after reviewed archive. BASE35e344278cd25574764290b54550ec82d7e963a2. AIND Open Data dataset and registered assets explicitly CC-BY4.0; no extra negotiated permission or email prerequisite.595unique public project assets,252ecephys/62inventorymice (not a target cohort);53publicNWB versions/18mice23sessions.12Zarr anatomy/probe/unit-ID/provider-QC metadata screens,11HDF5sessions conservatively unknown; latest-version NWB independent-animal upper13<16. Broader raw/sorted routes remain unresolved, never globally declared insufficient. Original18:8same-date public matches,7NWB;5other-date-only,5noverifiedmatch; no probe/UUID/content equivalence inferred.
