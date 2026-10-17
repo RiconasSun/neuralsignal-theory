@@ -1,0 +1,92 @@
+{
+  "anatomy": "Exactparentorstandardlaminardescendants(1,2/3,4,5,6a,6b); distinctSSpsubdivisionsreportseparately,noMOp-SSp/SSs/probepooling. Unrecognizedparent-prefixedlabelsreported,notfuzzyjoined.",
+  "base": "3f8e903d68c0990af1e1891c7444ff1210830f43",
+  "candidates": [
+    "A_native_IBL_Brainwidemap",
+    "B_DANDI000010_only_if_A_unsuitable",
+    "C_one_extra_only_if_A_and_B_unsuitable_with_prior_reason"
+  ],
+  "design": {
+    "allocation": "Onceprimaryregionselected,sortmicebySHA256(mission+subject) withinlabs andinterleaveorderedlabs;finalinitialeveryroughly40percent usingfloor cumulativefinalfraction,devotherwise. No neuraloutcomes/exposedpilotcanenterfinal.",
+    "independent": ">=12metadata-candidatemiceattier8andtrialscreen;dev=n-max(6,floor(.4*n)),final=max(6,floor(.4*n));both>=6. Feasibilityonly,notpower/confirmatoryPASS. n_final6minsignflip2/64=.03125foronesinglecontrast;anyfuturefamily/powerneedsM1assessment.",
+    "pilot": "Atmosttwo distinctdevelopmentmice,metadata-only highestavailabletier/validtrials thenlexicaleID/probe;theirwholemouse isdevelopment permanently. FreezeexactIDs beforefirstspikeread. No replacementafter neuralfeasibilityfailure without newprospective scope.",
+    "pilot_capacity": "1-5candidateindependentmice:limitedpilot/feasibility,nopopulationconfirmation;0qualifiedmiceinsufficientforthisregion.",
+    "region_selection": "Firstregioninregisteredorderqualifyingindependentdesign,elsefirsttemporaldesign,elsefirstlimitedpilot;notbestneuraloutcome. Sameprobe/sessionwithinmouse rankedgoodtargetunits,minhalftrials,lexicaleID/pid.",
+    "temporal": "6-11candidateindependentmiceattier8:within-mouseearly/latewholetrialholdout,exploratoryonly.",
+    "tier_role": "5/8/12/20screensnotuniversalphysiologythresholds. Primary8permitslocalpopulationhistorywith>=7otherunits;smallcapacityrequiresrestrictedinterpretation."
+  },
+  "exposure": "P13IBLroutewasmetadataonly;P13realexposedKIandP14metadatastudiesarenotfreshconfirmationdata. Verifysource/exposurebeforepilot;allP15pilotmicepermanentlydevelopment. Allotherreservedfinalneuraloutcomesforbidden.",
+  "limits": {
+    "download_attempts_per_file": 2,
+    "essential_files": "spikes.times/clusters;clustermetrics/UUID/channel/atlasmapping;trialevents,wheelposition/timestamps andsourceinvalid/saturationintervals ifavailable. No rawAP/LFP/video/waveforms/fullcohortspikes.",
+    "max_file_bytes": 450000000,
+    "metadata_documents_bytes": 30000000,
+    "metadata_requests": 200,
+    "real_pilot_sessions": 2,
+    "real_spike_files_total_bytes": 1200000000,
+    "supported_api": "OfficialONE/ALFobject/datasetreader;isolateinstallruntimeandcacheundernewwork/. Registeredexactnativefileinventorybeforeaccess."
+  },
+  "mission": "P15-SENSORIMOTOR-DATA-FIRST-M0",
+  "no_models": true,
+  "primary_population_screen": 8,
+  "question_selection": "Aftermetadataandpilotchooseonescientificquestiononcausalnuisanceavailability/timebaseandregionrelevance;no predictivefit/scores;M1mustfreezehypotheses/architecture.",
+  "questions": [
+    "Localown/populationhistoryincrementbeyondmovement/task/ratebaselines",
+    "Compactdiscrete/continuousincrementaroundmotorpreparation/execution",
+    "Predictivestructuretransitionacrossdocumentedsensory/motorepochs"
+  ],
+  "regions": [
+    "MOp",
+    "SSp-ul",
+    "SSp-bfd",
+    "SSp-ll",
+    "SSp-tr",
+    "SSp-n",
+    "SSp-m",
+    "SSp-un",
+    "SSs"
+  ],
+  "registered_at": "2026-10-17T19:48:10.929614+00:00",
+  "scientific_verdicts": [
+    "FEASIBLE_INDEPENDENT_HOLDOUT",
+    "FEASIBLE_TEMPORAL_EXPLORATORY",
+    "LIMITED_PILOT_ONLY",
+    "INCONCLUSIVE_DATA_VALIDITY",
+    "DATA_INSUFFICIENT"
+  ],
+  "sourceA": {
+    "metadata_aggregate": "2024_Q2_IBL_et_al_BWM",
+    "metadata_insertion_fixture": "2023_12_bwm_release",
+    "provider_code_commit": "118fc36cb3602934466ad2c6087c2b3b441f9f1f",
+    "sorting_revision": "2024-05-06",
+    "source": "NativeONE/ALFpublicIBL; exactpilotdatasetUUID/revision/size/hashfrozensubsequentlybeforedataaccess. NoNWBconversiondependency. Originalmatchedaggregatemetadatacountsarecandidates,notguaranteeofcurrentper-sessionannotationequivalence.",
+    "tag": "Brainwidemap"
+  },
+  "stage": "BEFORE_NEW_SENSORIMOTOR_COUNTS_OR_SPIKE_OUTCOMES",
+  "stop_after": "M0reviewedhandoffandverifiedGitarchive;noM1-M7activation",
+  "trial_screen": {
+    "anchor": "stimOn_times",
+    "halves": "Originaltrialordinalfloor(N/2) beforeexclusion;wholechronologicaltrialgroups, no adjacentbinrandomization.",
+    "metadata_rule": "Finiteintervalstart/stim/goCue/feedback/stop;start<=stim<=feedback<=stop,cueinsidetrialbeforefeedback,stim+.5<=stop;bwm_includeTrue andsaturation_stim_plus06False forpairednativeaggregatemetadata. Cue/stimneednotarbitraryfixedordering. No taskcontextrequirement.",
+    "minimum_per_original_half": 40,
+    "minimum_total": 100,
+    "pilot_rule": "Nativepilotactualevent/mask/intervalrevisionsverified. DoNOTtransferoldaggregatemasksifsourceevents/revisionsincompatible. Nativecurrent documentedtrialcuration andknownbadintervals maybeused transparentlywithoutold-equivalenceclaim; exactsourcepin/curationfacts frozenbeforepilot.",
+    "window": [
+      0.0,
+      0.5
+    ]
+  },
+  "unit_QC": "Providerlabel==1 ononeprobe. Sourcecuration canusesession-widespikes; notnewtrainingonlyphysiology.",
+  "unit_tiers": [
+    5,
+    8,
+    12,
+    20
+  ],
+  "validity": {
+    "accepted": "ConventionalpubliccuratedALFspikes/providerQC+documentedtimebaseandusableboundedobservations,withtransparentmeasurementlimits. Notabsolutelosslesshardwareguarantee.",
+    "artifacts": "Useproviderknownsaturation/badintervals/releasecurationwhenavailable. Missingannotations=>unknownartifactburden/limitation,notautomaticallywhole-recordinginvalidorartifact-free.",
+    "essential": "Mustdefendunit/probe/anatomyidentity,finiteorderedspikes,task/spikecommonclock,realrecording/trialwindowmeaning. Source/timebasecontradictionorindefensibleduration=>INCONCLUSIVE_DATA_VALIDITY.",
+    "zeros": "Binswithzerospikesretainedinsideconventionalcoveredtaskwindows;knowninvalidsupportmaskedseparately(not0). Neverinfervalidextentsolelyfirst/lastobservedspike."
+  }
+}

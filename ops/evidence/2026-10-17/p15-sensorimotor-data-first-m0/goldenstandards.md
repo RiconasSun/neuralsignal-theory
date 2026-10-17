@@ -1,0 +1,11 @@
+# P15 M0 data-first baseline
+
+P15-SENSORIMOTOR-DATA-FIRST-M0;BASE3f8e903d68c0990af1e1891c7444ff1210830f43;frozen2026-10-17T19:48:10.929614+00:00;59atomicitems. Ownerauthorizesonedatasetfeasibilityselection,atmosttwoprespecifieddevelopmentspikepilots,nomodelscores/finaloutcomes. ThisisnewP15,notP14recovery.
+
+Product/sciencedecision: scientificdatafeasibilityprecedesbiologicalhypothesis/modelarchitecture. NativeIBLfirst,conditionalDANDI000010second,atmostoneexceptionalfallbackonlyifbothunsuitable. Targetregionsdistinct,tiers5/8/12/20,primarytier8;independentdesign>=12with>=6dev/6final,temporal6-11,limited1-5. Nopowerprooforforcedconfirmatoryclaimfromcounts. Openmaterialdecisions=0atmetadata-stage.
+
+FreshfetchHEAD=origin/test=BASE;initialclean;origin/mainabsent(TEST_ONLY_REMOTE_NO_MAIN). Repositoryfoundation/engineer/review/templatesabsent;userdirectiveretained.
+
+Plan:freeze ->nativeofficiallicense/methods ->reusedmatchedmetadataregioncoverage ->selectregion/dev-final/pilotIDsandexactsourceinventory ->compactcanaries ->boundedtwo-realspikepilots ->scientificquestion/M1proposal ->independentM0review ->savedrepro/normalGit/remotehash/clean ->STOP. Nounnecessarycodeframework/custody/thousandsoffilehashes.
+
+Validityoracle: normalpubliccuration/timebase/identity/orderedtimestamps,knowninvalidintervalmaskseparatefromzeroobservedbins;noabsolutepacketcertificate. Allpredictorsfuturecausal,butnonefittedhere. L0-L2scientificbackend,realpilotproofcannotbereplacedbymetadata/synthetic. NoUI/channelcertificationapplicable. Allrequirementsretained;conditionalitemsnotactivatedmusthaveexplicitreason. PASSonlycompleteapplicablecontractbug0warn0;source/physiologylimitationsneverbecamemodelvalidation.

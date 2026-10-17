@@ -1,0 +1,365 @@
+# CCPN / NEURALSIGNAL — PAPER 15 MASTER PROMPT 1/5
+
+MISSION: P15-SENSORIMOTOR-DATA-FIRST-M0
+
+BASE:
+origin/test @ 3f8e903d68c0990af1e1891c7444ff1210830f43
+
+EXECUTION MODE:
+SCIENCE-FIRST / DATA-FIRST / AUTONOMOUS / BOUNDED
+
+PRIORITY: HIGH
+
+## OBJECTIVE
+
+Begin Paper 15 of Computational Cognitive Primitive Neurodynamics (CCPN).
+
+Research area:
+Mouse Sensorimotor Cortex Neurodynamics.
+
+Provisional title:
+"Predictive Temporal Structure of Neural Population Activity in Mouse Sensorimotor Cortex"
+
+This is a data-first research program.
+
+Do not finalize the paper's biological hypotheses, model architecture or confirmatory claims before establishing actual scientific data feasibility.
+
+The purpose of M0 is to identify ONE public dataset capable of supporting a rigorous study of local neural population temporal prediction.
+
+Preserve all P1–P14 results and historical negative findings.
+
+P14 remains ARCHIVED / SOURCE CONTRACT INCONCLUSIVE.
+
+Do not reuse P13/P14 exposed evaluation data as fresh independent confirmation.
+
+## M0.1 — PRIMARY DATASET CANDIDATES
+
+Assess the following in order.
+
+### Candidate A — IBL Brain Wide Map
+
+Official documentation:
+https://docs.internationalbrainlab.org/notebooks_external/2025_data_release_brainwidemap.html
+
+Official open-data registry:
+https://registry.opendata.aws/ibl-brain-wide-map/
+
+Prefer the documented native IBL ONE/ALF release and its supported data-loading functions when they provide a coherent spike, anatomy, event and artifact contract.
+
+Do not require conversion to NWB when native data are scientifically sufficient.
+
+Inspect sensorimotor cortical regions:
+
+- MOp
+- SSp, including documented limb/barrel subdivisions
+- SSs where relevant
+
+Start with anatomically distinct regions.
+
+Do not automatically pool MOp and SSp.
+
+### Candidate B — DANDI 000010
+
+https://dandiarchive.org/dandiset/000010
+
+"A motor cortex circuit for motor planning and movement"
+
+Check:
+- Exact release and CC BY 4.0 applicability
+- Unique animals
+- Electrophysiology versus imaging modalities
+- Simultaneous spike-sorted populations
+- Motor planning and execution event timestamps
+- Task/behavior alignment
+- Available regional labels
+- Recording observation support
+
+The published subject count does not imply that all subjects have comparable simultaneous extracellular populations.
+
+Do not mix calcium observations with spikes as if they were equivalent neural measurements.
+
+### Candidate C — Exceptional fallback
+
+Only if A and B are demonstrably unsuitable, allow ONE additional published, explicitly licensed sensorimotor electrophysiology dataset.
+
+Document the reason before searching.
+
+No indefinite dataset-discovery loop.
+
+## M0.2 — REGISTER DATA FEASIBILITY RULES
+
+Before new candidate counts, prospectively document the screening rules for:
+
+- Independent mouse identity
+- Session and probe identity
+- Anatomical target
+- Simultaneous unit availability
+- Recording/trial support
+- Behavioral and motor event timing
+- Source quality labels
+- Necessary artifact exclusions
+- Available movement covariates
+- License and provenance
+
+Use modest, scientifically justified unit-count feasibility tiers, such as 5, 8, 12 and 20 units.
+
+These are screening tiers, not automatic physiological admission or universal thresholds.
+
+Do not repeat P14's rigid 8+8 requirement by default.
+
+Prospectively classify feasible study designs:
+
+A. Independent held-out mouse design, where sample size genuinely supports it.
+
+B. Within-mouse temporal holdout exploratory design, when independent held-out animals are insufficient.
+
+C. Limited pilot or feasibility evidence only, when animal coverage is small.
+
+Propose defensible sample-size and interpretation boundaries before new counts. Do not derive thresholds from predictive outcomes.
+
+Mouse remains the independent animal-level statistical unit.
+
+## M0.3 — EXACT COHORT COVERAGE
+
+For each serious candidate, enumerate:
+
+- Original dataset mice
+- Candidate anatomical mice
+- Candidate probe populations
+- Number of simultaneous labeled units
+- Provider-quality candidate units
+- Usable trial/observation windows
+- Motion or sensorimotor task coverage
+- Independent mice per relevant region
+- Multiple sessions per animal
+- Laboratory/source composition
+- Metadata-level exclusions
+
+Report exact denominators.
+
+Do not treat global dataset size as local sensorimotor sample size.
+
+Do not turn units, trials, sessions or probes into additional animals.
+
+Prioritize ONE anatomical region with adequate real coverage over arbitrary multi-region pooling.
+
+If a wider sensorimotor region is scientifically necessary, require a separate explicitly named estimand and disclose subregion composition.
+
+## M0.4 — LIMITED REAL SPIKE DATA FEASIBILITY TEST
+
+Important improvement over P14:
+
+Metadata existence alone is not sufficient.
+
+After source rights, provisional anatomy, mouse identities and evaluation-access boundaries are registered, permit bounded real spike-timestamp feasibility testing.
+
+Choose at most TWO prespecified development/pilot sessions using metadata-only rules.
+
+No final reserved evaluation animals may enter this pilot.
+
+Using the original provider-supported API or documented reader:
+
+1. Confirm actual spike timestamps can be loaded.
+2. Verify unit-to-probe and unit-to-anatomy mapping.
+3. Verify finite/ordered timestamp behavior under documented curation.
+4. Build a small, non-predictive example of time-bin counting.
+5. Confirm event/spike clocks can be joined.
+6. Inspect source-defined observation support, known bad intervals and artifact handling.
+7. Verify that zero-spike bins are retained rather than confused with missing acquisition.
+8. Record real data-access and processing limitations.
+
+Do not fit predictive models or compare dynamical hypotheses.
+
+Do not access reserved test outcomes.
+
+Do not compute exploratory model-winning scores.
+
+Treat the pilot as technical and physiological-data feasibility evidence, not model-selection evidence.
+
+Use bounded downloads and cache only essential files.
+
+## M0.5 — REALISTIC DATA VALIDITY
+
+Require normal scientific recording QC, not impossible absolute guarantees of hardware packet completeness.
+
+Accept documented public curated-release spike sorting and standard provenance as an explicit sampling frame, with disclosed limitations.
+
+Use known recording-invalid intervals and artifact annotations when available.
+
+Do not invent artifact-free coverage from missing annotations.
+
+Equally, do not automatically declare every recording unusable because no absolute lossless-acquisition certificate exists.
+
+Determine what the intended neural prediction estimand actually requires.
+
+Separate:
+
+- Verified valid observations
+- Conventional curated observations with known limitations
+- Known invalid intervals
+- Unresolved essential timing or source integrity
+
+Stop when an essential scientific measurement cannot be defended, not simply because a nonessential administrative certificate is unavailable.
+
+No cryptographic source custody or separate-offline-device authorization infrastructure.
+
+## M0.6 — SENSORIMOTOR SCIENTIFIC QUESTION SELECTION
+
+Depending on actual data availability, evaluate which primary question is best supported.
+
+Candidate A:
+
+Does local motor/somatosensory neural history improve prediction beyond strong movement, task and firing-rate baselines?
+
+Candidate B:
+
+Do compact discrete-state or continuous-history representations provide additional predictive structure around motor preparation and execution?
+
+Candidate C:
+
+Is there a reproducible transition in local predictive structure across documented sensory and motor task epochs?
+
+These are alternative designs.
+
+Choose ONE primary question on scientific relevance, recording support and feasible nuisance control.
+
+Do not select the question based on favorable neural model results.
+
+Do not assume an HMM wins or that physical neural primitives exist.
+
+If windows are retrospectively aligned to movement onset, explicitly characterize the estimand as offline event-conditioned prediction, not real-time movement forecasting.
+
+All eventual predictors must use only information available before their prediction bin.
+
+## M0.7 — STRONG MODEL FEASIBILITY
+
+Assess whether the selected data could support:
+
+B0 — Stationary firing-rate baseline
+
+B1 — Task/time/stimulus/movement nuisance baseline
+
+B2 — Own spike-history baseline
+
+B3 — Population-history baseline
+
+B4 — Strong combined causal baseline
+
+D — Small discrete-state predictive representation
+
+C — Low-dimensional continuous-history predictive representation
+
+Consider a static mixture comparator if a claim specifically concerns temporal state dependence.
+
+Do not import P13's unstable autoregressive Poisson simulation as a mandatory generative null.
+
+Ensure the candidate design can distinguish predictive benefit from movement covariates, trial timing and simple spike history.
+
+Do not implement or fit the models in M0.
+
+## M0.8 — SCIENTIFIC DECISION
+
+Return exactly one:
+
+1. FEASIBLE_INDEPENDENT_HOLDOUT
+2. FEASIBLE_TEMPORAL_EXPLORATORY
+3. LIMITED_PILOT_ONLY
+4. INCONCLUSIVE_DATA_VALIDITY
+5. DATA_INSUFFICIENT
+
+A feasible verdict requires:
+
+- Verified applicable data license
+- Exact candidate animal identities and adequate population coverage
+- Usable neural spike access demonstrated in bounded pilot sessions
+- Defensible event timing and observation support
+- A scientifically interpretable proposed research question
+- A credible model and nuisance-control design
+- An appropriately limited evaluation strategy
+
+Metadata-eligible animals are NOT yet physiologically admitted.
+
+Do not claim confirmed model superiority or validated neurodynamics.
+
+If data support only exploratory analysis, label that explicitly rather than forcing a confirmatory claim.
+
+If neither public dataset supports a useful study, stop with a concise evidence-backed explanation.
+
+## M0.9 — PROPOSED M1 HANDOFF
+
+If feasible, provide one recommended dataset and target region.
+
+Include:
+- Final proposed scientific question
+- Exact source and version
+- Candidate cohort denominator
+- Pilot-tested spike access
+- Source-defined timebase and observation contract
+- Proposed physiological QC
+- Development/holdout strategy
+- Strong baseline requirements
+- Discrete/continuous model suitability
+- Statistical unit and inference assumptions
+- Essential falsification controls
+- Known limitations
+
+This handoff is NOT activation of the full study.
+
+## ENGINEERING RULES
+
+SCIENCE FIRST.
+
+Reuse existing mathematically compatible tools.
+
+Keep engineering proportional to the experiment.
+
+Ordinary parser bugs, API issues, bounded source extraction and synthetic tests may be repaired autonomously.
+
+Preserve failures, but do not turn every routine software correction into a new research mission.
+
+No:
+- Open-ended source archaeology
+- Unnecessary cryptographic custody
+- Thousands of decorative file hashes
+- Repeated complete source audits
+- Premature scientific model fitting
+- Result-driven eligibility changes
+- Final outcome access
+- New datasets outside the registered bound
+
+Independent internal scientific review is required for the M0 conclusion, not an invented claim of external peer review.
+
+## REQUIRED DELIVERABLES
+
+Create:
+
+1. P15_M0_REPORT.md
+2. Source/license registry
+3. Mouse × session × probe × region coverage
+4. Real-spike pilot feasibility report
+5. Observation/timing/artifact limitations
+6. Selected scientific question and rationale
+7. Proposed M1 frozen-protocol specification
+8. Compact synthetic/regression tests
+9. Saved-only PowerShell reproduction
+10. Reviewed origin/test commit with remote verification
+
+Report:
+- M0_STATUS
+- SCIENTIFIC_FEASIBILITY_VERDICT
+- SELECTED_DATASET
+- SELECTED_REGION
+- CANDIDATE_INDEPENDENT_MICE
+- SPIKE_ACCESS_PILOT_PASS
+- SOURCE_OBSERVATION_CONTRACT
+- PROPOSED_HOLDOUT_DESIGN
+- KEY_SCIENTIFIC_LIMITATIONS
+- PROMPT_2_READY
+- BUG_COUNT / WARN_COUNT
+- GIT_COMMIT / REMOTE_VERIFICATION
+
+STOP AFTER M0.
+
+Do not activate M1–M7 automatically.
+
+BEGIN P15 DATA-FIRST FEASIBILITY NOW.

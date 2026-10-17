@@ -1,0 +1,400 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading SpikeSorting Data &mdash; IBL Library  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/nbsphinx-code-cells.css?v=2aa19091" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/style.css?v=17142d56" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Loading Spike Waveforms" href="../loading_examples/loading_spike_waveforms.html" />
+    <link rel="prev" title="Loading Wheel Data" href="loading_wheel_data.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            IBL Library
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">The Open Neurophysiology Environment</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="one_quickstart.html">ONE Quick Start</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://int-brain-lab.github.io/ONE/">Full documentation Website for ONE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../public_docs/public_introduction.html">Publicly Available IBL Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../public_docs/dataset_overview.html">What is available for download ?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Datasets - Collaboration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="2025_data_release_brainwidemap.html">2025 - Brain Wide Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024_data_release_repro_ephys.html">2024 - Reproducible Ephys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2021_data_release_behavior.html">2021 - Behavior</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Datasets - Projects</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="2025_data_release_autism_noel.html">2025 - Autism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025_data_release_autism_davatolhagh.html">2025 - Autism Widefield</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025_data_release_aging_zang.html">2025 - Ageing and neural variability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2022_data_release_spikesorting_benchmarks.html">2022 - Spike sorting benchmark datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../public_docs/data_release_pilot.html">Data Release - Pilot Dataset</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Exploring IBL Data</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../02_installation.html">Installation of IBL Unified Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_structure.html">Get to know the datasets and folder structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_download.html">Setting up credentials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_download.html#Explore-and-download-data-using-the-ONE-api">Explore and download data using the ONE-api</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../loading_examples.html">Loading Data</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="loading_trials_data.html">Loading Trials Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_wheel_data.html">Loading Wheel Data</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Loading SpikeSorting Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Relevant-Alf-objects">Relevant Alf objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Loading">Loading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#More-details">More details</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Important-information">Important information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Useful-modules">Useful modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Exploring-spikesorting-data">Exploring spikesorting data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Example-1:-Loading-different-spikesorting-versions">Example 1: Loading different spikesorting versions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Example-2:-Loading-additional-data">Example 2: Loading additional data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Example-3:-Compute-firing-rate-across-session">Example 3: Compute firing rate across session</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Example-4:-Find-clusters-labelled-as-good">Example 4: Find clusters labelled as good</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Example-5:-Plot-a-raster-for-all-units">Example 5: Plot a raster for all units</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#Other-relevant-examples">Other relevant examples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../loading_examples/loading_spike_waveforms.html">Loading Spike Waveforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_passive_data.html">Loading Passive Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_ephys_data.html">Loading Ephys Data (AP and LFP band)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_raw_ephys_data.html">Loading Raw Ephys Data (AP and LFP band)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_video_data.html">Loading Video Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_raw_video_data.html">Loading Raw Video Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_widefield_data.html">Loading Widefield Imaging Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_multi_photon_imaging_data.html">Loading Multi-photon Calcium Imaging Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_raw_mesoscope_data.html">Loading Raw Mesoscope Imaging Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_raw_mesoscope_data.html#Downloading-the-raw-images">Downloading the raw images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_photometry_data.html">Loading Fiber Photometry Data</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../09_contribution.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../public_docs/information_contact.html">Getting Help: Information and Troubleshooting</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples &amp; Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../atlas_examples.html">Atlas Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs_wheel_moves.html">Working with wheel data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs_wheel_screen_stimulus.html">Computing the stimulus position using the wheel</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../010_api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">IBL Library</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../loading_examples.html">Loading Data</a></li>
+      <li class="breadcrumb-item active">Loading SpikeSorting Data</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/notebooks_external/loading_spikesorting_data.nblink.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="Loading-SpikeSorting-Data">
+<h1>Loading SpikeSorting Data<a class="headerlink" href="#Loading-SpikeSorting-Data" title="Link to this heading"></a></h1>
+<p>Spikesorted output of electrophysiology data.</p>
+<section id="Relevant-Alf-objects">
+<h2>Relevant Alf objects<a class="headerlink" href="#Relevant-Alf-objects" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>channels</p></li>
+<li><p>clusters</p></li>
+<li><p>spikes</p></li>
+<li><p>waveforms</p></li>
+</ul>
+</section>
+<section id="Loading">
+<h2>Loading<a class="headerlink" href="#Loading" title="Link to this heading"></a></h2>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">one.api</span><span class="w"> </span><span class="kn">import</span> <span class="n">ONE</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">brainbox.io.one</span><span class="w"> </span><span class="kn">import</span> <span class="n">SpikeSortingLoader</span>
+<span class="n">one</span> <span class="o">=</span> <span class="n">ONE</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="s1">'https://openalyx.internationalbrainlab.org'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pid</span> <span class="o">=</span> <span class="s1">'da8dfec1-d265-44e8-84ce-6ae9c109b8bd'</span>
+<span class="n">ssl</span> <span class="o">=</span> <span class="n">SpikeSortingLoader</span><span class="p">(</span><span class="n">pid</span><span class="o">=</span><span class="n">pid</span><span class="p">,</span> <span class="n">one</span><span class="o">=</span><span class="n">one</span><span class="p">)</span>
+<span class="n">spikes</span><span class="p">,</span> <span class="n">clusters</span><span class="p">,</span> <span class="n">channels</span> <span class="o">=</span> <span class="n">ssl</span><span class="o">.</span><span class="n">load_spike_sorting</span><span class="p">()</span>
+<span class="n">clusters</span> <span class="o">=</span> <span class="n">ssl</span><span class="o">.</span><span class="n">merge_clusters</span><span class="p">(</span><span class="n">spikes</span><span class="p">,</span> <span class="n">clusters</span><span class="p">,</span> <span class="n">channels</span><span class="p">)</span>
+<span class="n">waveforms</span> <span class="o">=</span> <span class="n">ssl</span><span class="o">.</span><span class="n">load_spike_sorting_object</span><span class="p">(</span><span class="s1">'waveforms'</span><span class="p">)</span>  <span class="c1"># loads in the template waveforms</span>
+</pre></div>
+</div>
+</div>
+<p>Alternatively, one can instantiate the spike sorting loader using the session unique identifier eid and the probe name pname:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eid</span><span class="p">,</span> <span class="n">pname</span> <span class="o">=</span> <span class="n">one</span><span class="o">.</span><span class="n">pid2eid</span><span class="p">(</span><span class="n">pid</span><span class="p">)</span>
+<span class="n">sl</span> <span class="o">=</span> <span class="n">SpikeSortingLoader</span><span class="p">(</span><span class="n">eid</span><span class="o">=</span><span class="n">eid</span><span class="p">,</span> <span class="n">pname</span><span class="o">=</span><span class="n">pname</span><span class="p">,</span> <span class="n">one</span><span class="o">=</span><span class="n">one</span><span class="p">)</span>
+<span class="n">spikes</span><span class="p">,</span> <span class="n">clusters</span><span class="p">,</span> <span class="n">channels</span> <span class="o">=</span> <span class="n">sl</span><span class="o">.</span><span class="n">load_spike_sorting</span><span class="p">()</span>
+<span class="n">clusters</span> <span class="o">=</span> <span class="n">sl</span><span class="o">.</span><span class="n">merge_clusters</span><span class="p">(</span><span class="n">spikes</span><span class="p">,</span> <span class="n">clusters</span><span class="p">,</span> <span class="n">channels</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="More-details">
+<h2>More details<a class="headerlink" href="#More-details" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.google.com/document/d/1OqIqqakPakHXRAwceYLwFY9gOrm8_P62XIfCTnHwstg/edit#heading=h.5houj8bng5o">Description of spikesorting datasets</a></p></li>
+<li><p>Available spikesorting algorithms</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/int-brain-lab/pykilosort#readme">pykilosort</a> (All data)</p></li>
+<li><p><a class="reference external" href="https://github.com/MouseLand/Kilosort/releases/tag/v2.5">Kilosort 2.5</a> (Most data collected before August 2021)</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="Important-information">
+<h2>Important information<a class="headerlink" href="#Important-information" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Data sorted with pykilosort is loaded by default. If the pykilosort spikesorting data is not available, the matlab kilosort 2.5 version will be loaded. See <a class="reference internal" href="#Example-1:-Loading-different-spikesorting-versions"><span class="std std-ref">Example 1</span></a> for more information.</p></li>
+<li><p>The channel locations in the brain can come from several sources. it will load the most advanced version of the histology available, regardless of the spike sorting version loaded.
+The steps, from most to least advanced, are:</p>
+<ul class="simple">
+<li><p><strong>alf</strong>: the final version of channel locations, same as resolved with the difference that data has been written out to files</p></li>
+<li><p><strong>resolved</strong>: channel location alignments have been agreed upon</p></li>
+<li><p><strong>aligned</strong>: channel locations have been aligned, but review or other alignments are pending, potentially not accurate</p></li>
+<li><p><strong>traced</strong>: the histology track has been recovered from microscopy, however the depths may not match, inacurate data</p></li>
+</ul>
+</li>
+<li><p>The attributes <code class="docutils literal notranslate"><span class="pre">mlapdv</span></code>, <code class="docutils literal notranslate"><span class="pre">atlas_ids</span></code> and <code class="docutils literal notranslate"><span class="pre">acronyms</span></code> in the <code class="docutils literal notranslate"><span class="pre">clusters</span></code> and <code class="docutils literal notranslate"><span class="pre">channels</span></code> objects are only available for probe insertions where <code class="docutils literal notranslate"><span class="pre">sl.histology</span></code> is equal to <strong>traced</strong>, <strong>aligned</strong>, <strong>resolved</strong> or <strong>alf</strong>.</p></li>
+<li><p>The cluster and channel locations in the brain are only considered final for probe insertions with <code class="docutils literal notranslate"><span class="pre">sl.histology='resolved'</span></code>or <code class="docutils literal notranslate"><span class="pre">sl.histology='alf'</span></code>.</p></li>
+</ol>
+</section>
+<section id="Useful-modules">
+<h2>Useful modules<a class="headerlink" href="#Useful-modules" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://int-brain-lab.github.io/iblenv/_autosummary/brainbox.io.one.html#brainbox.io.one.SpikeSortingLoader">brainbox.io.one.SpikeSortingLoader</a></p></li>
+<li><p><a class="reference external" href="https://int-brain-lab.github.io/iblenv/_autosummary/brainbox.ephys_plots.html">brainbox.ephys_plots</a></p></li>
+<li><p><a class="reference external" href="https://int-brain-lab.github.io/iblenv/_autosummary/brainbox.population.decode.html#brainbox.population.decode.get_spike_counts_in_bins">brainbox.population.decode.get_spike_counts_in_bins</a></p></li>
+<li><p><a class="reference external" href="https://int-brain-lab.github.io/iblenv/_autosummary/brainbox.processing.html#brainbox.processing">brainbox.processing</a></p></li>
+<li><p><a class="reference external" href="https://int-brain-lab.github.io/iblenv/_autosummary/brainbox.metrics.single_units.html#module-brainbox.metrics.single_units">brainbox.metrics.single_units</a></p></li>
+</ul>
+</section>
+<section id="Exploring-spikesorting-data">
+<h2>Exploring spikesorting data<a class="headerlink" href="#Exploring-spikesorting-data" title="Link to this heading"></a></h2>
+<section id="Example-1:-Loading-different-spikesorting-versions">
+<h3>Example 1: Loading different spikesorting versions<a class="headerlink" href="#Example-1:-Loading-different-spikesorting-versions" title="Link to this heading"></a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># By default, if available, the data spikesorted with pykilosort is loaded.</span>
+<span class="c1"># To find the spikesorting version that is loaded we can use</span>
+<span class="n">sl</span><span class="o">.</span><span class="n">collection</span>
+
+<span class="c1"># To see all available spikesorted data for this probe insertion we can list the collections.</span>
+<span class="c1"># N.B. ks2.5 matlab spikesorted data is stored in the alf/probe00 folder</span>
+<span class="n">sl</span><span class="o">.</span><span class="n">collections</span>
+
+<span class="c1"># The following can be used to load a specific version of spikesorting</span>
+
+<span class="c1"># pykilosort version</span>
+<span class="n">spikes</span><span class="p">,</span> <span class="n">clusters</span><span class="p">,</span> <span class="n">channels</span> <span class="o">=</span> <span class="n">sl</span><span class="o">.</span><span class="n">load_spike_sorting</span><span class="p">(</span><span class="n">spike_sorter</span><span class="o">=</span><span class="s1">'pykilosort'</span><span class="p">)</span>
+
+<span class="c1"># ks2.5 matlab version</span>
+<span class="n">spikes</span><span class="p">,</span> <span class="n">clusters</span><span class="p">,</span> <span class="n">channels</span> <span class="o">=</span> <span class="n">sl</span><span class="o">.</span><span class="n">load_spike_sorting</span><span class="p">(</span><span class="n">spike_sorter</span><span class="o">=</span><span class="s1">''</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="Example-2:-Loading-additional-data">
+<h3>Example 2: Loading additional data<a class="headerlink" href="#Example-2:-Loading-additional-data" title="Link to this heading"></a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The default spikes and cluster attributes loaded are:</span>
+<span class="c1"># spikes - amps, clusters, depths, times</span>
+<span class="c1"># cluster - channels, depths, metrics</span>
+
+<span class="c1">#Other attributes can additionally be loaded in the following way</span>
+<span class="n">spikes</span><span class="p">,</span> <span class="n">clusters</span><span class="p">,</span> <span class="n">channels</span> <span class="o">=</span> <span class="n">sl</span><span class="o">.</span><span class="n">load_spike_sorting</span><span class="p">(</span><span class="n">dataset_types</span><span class="o">=</span><span class="p">[</span><span class="s1">'clusters.amps'</span><span class="p">,</span> <span class="s1">'spikes.samples'</span><span class="p">])</span>
+<span class="n">clusters</span> <span class="o">=</span> <span class="n">sl</span><span class="o">.</span><span class="n">merge_clusters</span><span class="p">(</span><span class="n">spikes</span><span class="p">,</span> <span class="n">clusters</span><span class="p">,</span> <span class="n">channels</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/one/util.py:442: ALFWarning: No default revision for dataset alf/probe00/pykilosort/#2022-10-31#/clusters.amps.npy; using most recent
+  warnings.warn(
+</pre></div></div>
+</div>
+</section>
+<section id="Example-3:-Compute-firing-rate-across-session">
+<h3>Example 3: Compute firing rate across session<a class="headerlink" href="#Example-3:-Compute-firing-rate-across-session" title="Link to this heading"></a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">brainbox.ephys_plots</span><span class="w"> </span><span class="kn">import</span> <span class="n">image_fr_plot</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">iblutil.numerical</span><span class="w"> </span><span class="kn">import</span> <span class="n">bincount2D</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">time_bin</span> <span class="o">=</span> <span class="mf">0.05</span> <span class="c1"># time bin in seconds</span>
+<span class="n">depth_bin</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># depth bin in um</span>
+
+<span class="c1"># Remove any nan values</span>
+<span class="n">kp_idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">bitwise_and</span><span class="p">(</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">spikes</span><span class="p">[</span><span class="s1">'times'</span><span class="p">]),</span> <span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">spikes</span><span class="p">[</span><span class="s1">'depths'</span><span class="p">]))</span>
+
+<span class="n">fr</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">depth</span> <span class="o">=</span> <span class="n">bincount2D</span><span class="p">(</span><span class="n">spikes</span><span class="p">[</span><span class="s1">'times'</span><span class="p">][</span><span class="n">kp_idx</span><span class="p">],</span> <span class="n">spikes</span><span class="p">[</span><span class="s1">'depths'</span><span class="p">][</span><span class="n">kp_idx</span><span class="p">],</span> <span class="n">time_bin</span><span class="p">,</span> <span class="n">depth_bin</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="Example-4:-Find-clusters-labelled-as-good">
+<h3>Example 4: Find clusters labelled as good<a class="headerlink" href="#Example-4:-Find-clusters-labelled-as-good" title="Link to this heading"></a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">good_clusterIDs</span> <span class="o">=</span> <span class="n">clusters</span><span class="p">[</span><span class="s1">'cluster_id'</span><span class="p">][</span><span class="n">clusters</span><span class="p">[</span><span class="s1">'label'</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="Example-5:-Plot-a-raster-for-all-units">
+<h3>Example 5: Plot a raster for all units<a class="headerlink" href="#Example-5:-Plot-a-raster-for-all-units" title="Link to this heading"></a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sl</span><span class="o">.</span><span class="n">raster</span><span class="p">(</span><span class="n">spikes</span><span class="p">,</span> <span class="n">channels</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>Out[9]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(&lt;Figure size 1600x900 with 4 Axes&gt;,
+ array([[&lt;Axes: title={&#39;center&#39;: &#39;2020-09-21_1_SWC_043_probe00, None \n39_835_238 spikes, 1_143 clusters&#39;}&gt;,
+         &lt;Axes: &gt;],
+        [&lt;Axes: xlabel=&#39;time (secs)&#39;, ylabel=&#39;depth (um)&#39;&gt;,
+         &lt;Axes: title={&#39;center&#39;: &#39;alf&#39;}&gt;]], dtype=object))
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/notebooks_external_loading_spikesorting_data_22_1.png" src="../_images/notebooks_external_loading_spikesorting_data_22_1.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="Other-relevant-examples">
+<h2>Other relevant examples<a class="headerlink" href="#Other-relevant-examples" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>COMING SOON</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="loading_wheel_data.html" class="btn btn-neutral float-left" title="Loading Wheel Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../loading_examples/loading_spike_waveforms.html" class="btn btn-neutral float-right" title="Loading Spike Waveforms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, International Brain Laboratory.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

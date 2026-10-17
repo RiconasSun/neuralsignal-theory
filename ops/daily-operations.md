@@ -1,3 +1,10 @@
+# Current mission: P15-SENSORIMOTOR-DATA-FIRST-M0
+
+Scientific FEASIBLE_INDEPENDENT_HOLDOUT for candidate MOp study on native IBL Brain Wide Map. BASE 3f8e903d68c0990af1e1891c7444ff1210830f43. Registered before counts:139 source mice/699 probes ->23 anatomical MOp mice/37 probes ->31 tier8 probes/20 independent candidates, reserved12development/8final. Not full-cohort physiological admission or statistical power. Exactly2prespecified development pilots:84/22goodMOpunits;actualfiniteorderedspikes;nativeevent/wheel/recordingsupport/knownsaturation checks pass. Native/aggregate version differences retained; nooldmasktransfer.
+
+No predictive fits, model scores, reserved final neural access or M1-M7 activation. Ordinary curated-release contract accepted with unknown other artifact/movement/anatomy limits; no absolute lossless certificate or cryptographic architecture. P1-P14 unchanged;P14 remains archived/source-contract-inconclusive. CandidateB/C notactivated becauseAuseful.59requirements,9regressions,5byteexactmetadata+2savedcountfixtures reproducedoffline. Independentinternalreview0P0/0P1;bug0/warn0. Report paper15_m0/P15_M0_REPORT.md;proposedM1speconly. & .\paper15_m0\reproduce.ps1. Actual origin/test commit/readback/clean and final57->59 verification require executed externalclosure_receipt.json; no prospectiveGitPASS. STOPafterM0,Prompt2requiresseparateauthorization. Previousheaderspreservedbyteexactbelow.
+
+---
 # Current mission: P14-V2-CANONICAL-NATIVE-RECOVERY
 
 Scientific SOURCE_CONTRACT_INCONCLUSIVE, metadata-only canonicalnative amendment. BASEb09b1b254d3f8b9c5fd4be948befae0332f6b96a;all13historical sessions audited includingprevious12unread;13canonicaltask/anatomy-onlypotentialmice, source-supportedeligible/physiologicalcountsUNKNOWN. No oldbwm/saturationmasktransfer or1e-6relaxation;old794differences/sourceFAIL/confirmatoryFAIL preserved. Nativeunit/localization/QC andbothcontextcapacities reported; taskepochs arenotneuralrecording/artifactcertificates. BothessentialobservationsupportgatesUNKNOWN;source-wideenumerationnotactivated.
