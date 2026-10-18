@@ -1,0 +1,60 @@
+{
+  "counterexamples": [
+    {
+      "boundary": "Previously exposed mouse must not be fresh Final",
+      "expected": "Development",
+      "id": "P1-01A",
+      "observed_group": "Final_candidate"
+    },
+    {
+      "boundary": "Previously reserved Final mouse must not enter new pilot in any session",
+      "expected_excluded_mouse": "11",
+      "id": "P1-01B",
+      "observed_pilot_mouse_ids": [
+        "11",
+        "other"
+      ]
+    }
+  ],
+  "history_mapping_assumption": {
+    "historical_mouse": "11",
+    "historical_session": 9999,
+    "selected_new_session": 1011
+  },
+  "mission": "P16-VISUAL-CORTEX-DATA-FIRST-M0",
+  "no_neural_access": true,
+  "no_source_population_counts": true,
+  "reviewed_hashes": {
+    "ops/evidence/2026-10-18/p16-visual-cortex-data-first-m0/CORE_IMPLEMENTATION_SPEC.json": "038ba8fc0a69f45f5c4c95701601e866b2e0a2359b6af8c83fcc076d9544796f",
+    "ops/evidence/2026-10-18/p16-visual-cortex-data-first-m0/CORE_IMPLEMENTATION_SPEC_2.json": "d4540ebb681a898af4130d0ca97a06c60d615c2fedad590b794142bb7c69c760",
+    "ops/evidence/2026-10-18/p16-visual-cortex-data-first-m0/OWNER_REQUEST.txt": "6c3e58e0ea5abd7028c4db0d85bfdef6feef5d273209bb23eeec99d139d07018",
+    "ops/evidence/2026-10-18/p16-visual-cortex-data-first-m0/REGISTRATION_RECEIPT.json": "b91d9510ef8e5c994614c0737cc43f534b8c6670e7e9b28f3eb6f24b8e0cdc09",
+    "ops/evidence/2026-10-18/p16-visual-cortex-data-first-m0/SYNTHETIC_CORE_TESTS_2.log": "e347a244f6e2c39baa2308a2428cbc0b7d4168675bde8f1837debcfbde462dd7",
+    "ops/evidence/2026-10-18/p16-visual-cortex-data-first-m0/baseline.json": "8f6c751ac7c12476bfe2a2fdee946fc7bedc380707c117658d79291e8f285a05",
+    "paper16_m0/FEASIBILITY_REGISTRATION.json": "d0b13d5b4e41b42523946c083c9761276e610974605d24962e43738a9116497c",
+    "paper16_m0/FEASIBILITY_REGISTRATION.md": "320517241fa01221aa37c36ab6ddda4cb8ea34fa07fe091bf2b026f0bf43f7aa",
+    "paper16_m0/SOURCE_RIGHTS_REGISTRY.json": "106c780e8218b234284ca9238046403bb7cc1575ffd3bf3d282486627df8164b",
+    "paper16_m0/code/FEASIBILITY_REGISTRATION.json": "d0b13d5b4e41b42523946c083c9761276e610974605d24962e43738a9116497c",
+    "paper16_m0/code/core.py": "050eb3914c3f6afb86bf44a2886f242cbb79728b6b4244136a578963e8f1ee31",
+    "paper16_m0/code/test_core.py": "8af83a14df8605c2730bd2c2761db3eef36a8b1efedd19c43f02943d41491b50"
+  },
+  "reviewer": "/root/pivot_review",
+  "source_validity_mismatch": {
+    "code_extra_rules": [
+      "amplitude_cutoff>=0",
+      "presence_ratio<=1",
+      "isi_violations>=0",
+      "finite positive probe sampling_rate"
+    ],
+    "precount_registration_explicit_rules": [
+      "quality good",
+      "finite metrics",
+      "amplitude_cutoff<=.1",
+      "presence_ratio>=.95",
+      "isi_violations<=.5"
+    ],
+    "repair": "Prospectively specify source validity domains and separate reason counts before first actual eligibility computation;do not change scientific threshold values"
+  },
+  "synthetic_only": true,
+  "time": "2026-10-18T21:29:22.782102+00:00"
+}

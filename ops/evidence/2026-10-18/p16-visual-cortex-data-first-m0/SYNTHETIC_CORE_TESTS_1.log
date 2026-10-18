@@ -1,0 +1,58 @@
+test_binary64_adjacent_roundtrip (paper16_m0.code.test_core.NativeM0Tests.test_binary64_adjacent_roundtrip) ... ok
+test_equality_is_not_past (paper16_m0.code.test_core.NativeM0Tests.test_equality_is_not_past) ... ok
+test_explicit_source_qc_boundaries (paper16_m0.code.test_core.NativeM0Tests.test_explicit_source_qc_boundaries) ... ok
+test_halfopen_zero_missing_and_invalid_are_distinct (paper16_m0.code.test_core.NativeM0Tests.test_halfopen_zero_missing_and_invalid_are_distinct) ... ok
+test_missing_behavior_remains_missing (paper16_m0.code.test_core.NativeM0Tests.test_missing_behavior_remains_missing) ... ok
+test_presentation_ids_native_boundaries_and_gaps (paper16_m0.code.test_core.NativeM0Tests.test_presentation_ids_native_boundaries_and_gaps) ... ok
+test_role_reservation_is_deterministic_and_history_excluded (paper16_m0.code.test_core.NativeM0Tests.test_role_reservation_is_deterministic_and_history_excluded) ... ok
+test_same_probe_and_duplicate_mouse_are_not_pooled (paper16_m0.code.test_core.NativeM0Tests.test_same_probe_and_duplicate_mouse_are_not_pooled) ... ok
+test_small_cohort_not_claimed_independent (paper16_m0.code.test_core.NativeM0Tests.test_small_cohort_not_claimed_independent) ... ok
+test_transfer_failure_and_interruption_do_not_reset_consumption (paper16_m0.code.test_core.NativeM0Tests.test_transfer_failure_and_interruption_do_not_reset_consumption) ... ERROR
+
+======================================================================
+ERROR: test_transfer_failure_and_interruption_do_not_reset_consumption (paper16_m0.code.test_core.NativeM0Tests.test_transfer_failure_and_interruption_do_not_reset_consumption)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m0\code\test_core.py", line 77, in test_transfer_failure_and_interruption_do_not_reset_consumption
+    self.assertEqual(b.charge(60, 'partial'), 60)
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m0\code\core.py", line 219, in charge
+    fd = os.open(lock, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{2dc17acf-1c0a-4ee4-8072-d387714c6baa}\\AC\\Temp\\tmp94_7_h7o\\ledger.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{2dc17acf-1c0a-4ee4-8072-d387714c6baa}\\AC\\Temp\\tmp94_7_h7o'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m0\code\test_core.py", line 75, in test_transfer_failure_and_interruption_do_not_reset_consumption
+    with tempfile.TemporaryDirectory() as d:
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 943, in __exit__
+    self.cleanup()
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{2dc17acf-1c0a-4ee4-8072-d387714c6baa}\\AC\\Temp\\tmp94_7_h7o'
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.068s
+
+FAILED (errors=1)

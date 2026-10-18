@@ -1,0 +1,447 @@
+# CCPN / NEURALSIGNAL — PAPER 16 MASTER PROMPT 1/5
+
+MISSION: P16-VISUAL-CORTEX-DATA-FIRST-M0
+
+BASE:
+origin/test @ bf0e948f57dc49d7c315170c67b9911f72d92530
+
+PRIORITY: HIGH
+MODE: SCIENCE-FIRST / DATA-FIRST / BOUNDED AUTONOMOUS EXECUTION
+
+## 0. OBJECTIVE
+
+Begin CCPN Paper 16.
+
+Proposed direction:
+
+Mouse Visual Cortex Predictive Neurodynamics.
+
+Provisional title:
+
+"Predictive Temporal Structure of Neural Population Activity in Mouse Visual Cortex"
+
+The title, primary dataset and specific biological hypotheses are NOT yet frozen.
+
+This mission must establish real scientific data feasibility before proposing the definitive P16 experimental design.
+
+Use the completed P15 study as methodological experience, not as evidence that the same models will work in visual cortex.
+
+Preserve all P1–P15 artifacts, historical negative findings, research protocols and used holdouts.
+
+Record the historical P16 Transcriptomic/Gene Mapping roadmap separately. Do not silently overwrite that earlier proposed topic. This mission evaluates the proposed visual-cortex sequence only.
+
+Do not modify P15 or reopen its consumed Final D.
+
+## 1. DATASET PRIORITY
+
+### Candidate A — Allen Visual Coding Neuropixels
+
+Official documentation:
+
+https://allensdk.readthedocs.io/en/latest/visual_coding_neuropixels.html
+
+Evaluate extracellular spike recordings from the Allen Brain Observatory Visual Coding Neuropixels release.
+
+Use the official AllenSDK/NWB data interfaces.
+
+Prioritize:
+- Primary visual cortex, VISp
+- Simultaneously observed spike-sorted units
+- Repeated or controlled visual stimulation
+- Available stimulus presentation timestamps
+- Running and pupil information where available
+- Unit-quality metadata
+- Documented recording support and artifacts
+
+Pin the exact data manifest, release, SDK version, session IDs and source files.
+
+Do not mix old and new NWB file versions without verified compatibility.
+
+Do not substitute optical calcium data for extracellular spike observations.
+
+### Candidate B — Allen Visual Behavior Neuropixels
+
+Official documentation:
+
+https://allensdk.readthedocs.io/en/latest/visual_behavior_neuropixels.html
+
+Only evaluate Candidate B if A cannot support a scientifically useful study.
+
+Preserve its separate task, stimulus and behavioral definitions.
+
+### Candidate C — Native IBL Brain Wide Map VISp
+
+Official documentation:
+
+https://docs.internationalbrainlab.org/notebooks_external/2025_data_release_brainwidemap.html
+
+Only activate if Candidates A and B are inadequate.
+
+Use the existing native ONE/ALF approach where supported.
+
+This is a separate regional analysis, not a fresh independent-dataset replication of P15 if it reuses IBL's broader source.
+
+No unlimited public-dataset search.
+
+## 2. SOURCE RIGHTS AND SCIENTIFIC PROVENANCE
+
+Before neural data access:
+
+- Verify the exact dataset's applicable license or terms.
+- Distinguish dataset rights from SDK software license.
+- Verify permitted noncommercial academic research use.
+- Verify citation requirements and publication restrictions.
+- Preserve original creators and source provenance.
+- Record any restrictions on raw-data redistribution and commercial reuse.
+
+Do not automatically claim Allen Institute datasets are CC BY 4.0.
+
+Do not request external written permission unless genuinely necessary for the intended research activity.
+
+Do not initiate emails or external correspondence.
+
+If permitted academic use cannot be established, stop or assess the next preauthorized dataset.
+
+## 3. PROSPECTIVE M0 REGISTRATION
+
+Before counting eligible mouse populations, register:
+
+- Target anatomical identity
+- Mouse/session/probe identity rules
+- Simultaneous-unit population definitions
+- Source-defined QC requirements
+- Valid spike recording windows
+- Stimulus and spike-clock alignment
+- Available movement/arousal covariates
+- Known artifact rules
+- Original stimulus presentation boundaries
+- Feasibility unit tiers
+- Animal-level inclusion and exclusion
+- Future evaluation isolation policy
+
+Primary anatomical candidate:
+
+VISp, including documented valid laminar descendants.
+
+Do not automatically pool VISp with VISl, VISal, VISpm, VISam or other higher visual regions.
+
+If VISp is insufficient, any regional expansion must be evaluated under a separate prospective scientific amendment, not by favorable model outcomes.
+
+Register population feasibility tiers of 5, 8, 12 and 20 qualified simultaneous units.
+
+These are screening tiers, not proof of physiological admission or statistical power.
+
+The unit of independent animal inference is the mouse.
+
+## 4. INDEPENDENT ANIMAL CAPACITY
+
+Enumerate the actual candidate population.
+
+Report:
+- All source mouse identities
+- VISp anatomical mouse count
+- Unique eligible sessions
+- Unique recording populations
+- Qualified units per mouse
+- Stimulus presentation coverage
+- Recording and stimulus timing support
+- Available running/pupil observations
+- Source QC limitations
+- Candidate evaluation-group sizes
+
+Avoid pseudoreplication.
+
+Multiple units, trials, probes or repeated sessions from one mouse are NOT independent animals.
+
+Prioritize a credible independent-animal holdout design.
+
+Aspirational design:
+20 or more independent candidate animals, where possible.
+
+Do not require an unverified sample size merely because P15 used 20 metadata candidates.
+
+Define sample-size/precision and claim restrictions prospectively.
+
+If only temporal holdout is defensible, label the design exploratory.
+
+Do not make a confirmatory claim on feasibility alone.
+
+## 5. LIMITED REAL SPIKE PILOT
+
+After source and prospective data-access registration, authorize at most TWO metadata-selected Development pilot sessions.
+
+Choose pilot identities before opening spike arrays.
+
+The entire mouse containing a pilot session must remain Development.
+
+No reserved Final animal may enter the pilot.
+
+Authorize bounded real data access sufficient to:
+
+1. Load actual spike timestamps.
+2. Confirm unit/probe/anatomy identity.
+3. Verify spike ordering and finite values.
+4. Check valid observation support.
+5. Align spike timing to stimulus events.
+6. Confirm the existence of repeated suitable visual stimulus presentations.
+7. Check running/pupil timestamps where available.
+8. Construct small non-predictive spike-count examples.
+9. Preserve genuine zero-spike bins.
+10. Distinguish invalid/missing recording support from zero counts.
+
+Use a total pilot transfer ceiling of 6 GB across the two sessions.
+
+If the official dataset format requires more, report the resource problem rather than silently exceeding the limit.
+
+No predictive-model fitting or held-out likelihood comparison in M0.
+
+No Final outcome access.
+
+## 6. STRICT TIMESTAMP FIDELITY
+
+Carry forward the key engineering lesson from P15.
+
+Persist native event timestamps without lossy decimal serialization.
+
+Require binary64 round-trip integrity for finite timestamp values when their source representation is binary64.
+
+Preserve missingness, original event ordinals and original presentation identifiers.
+
+Any strict-past predictor must satisfy:
+
+observed_event_time < prediction_bin_start.
+
+Equality must not count as a past event.
+
+Test:
+- Exact-equality boundaries
+- Adjacent representable timestamps
+- Zero-spike versus missing support
+- Original stimulus interval boundaries
+- Recording clock and stimulus clock alignment
+- Missing running/pupil samples
+- Trial/presentation gap resets
+
+Do not use rounded JSON event timestamps to construct causal features.
+
+Do not invent clock correction tolerances after observing model results.
+
+## 7. VISUAL STIMULUS CONFOUNDING
+
+This is the main scientific difference from P15.
+
+Visual stimulation creates structured neural responses.
+
+A predictive model using local neural history may simply recover visual stimulus timing or predictable image/movie sequences.
+
+For each candidate stimulus family, assess:
+
+- Exact stimulus identity
+- Stimulus onset/offset times
+- Repetition counts
+- Frame/condition information
+- Presentation order
+- Interstimulus intervals
+- Session drift
+- Running/pupil coverage
+- Potential habituation/adaptation
+- Source timestamp quality
+
+Evaluate whether a strong stimulus-conditioned baseline can be constructed.
+
+Avoid models where a weak stimulus baseline makes local neural history appear artificially valuable.
+
+A movie's next frame must not become a real-time predictor unless the experiment's predetermined stimulus schedule makes it genuinely available at the prediction time.
+
+If a predictor uses retrospectively known stimulus or behavioral outcomes, explicitly identify it as an offline conditional analysis, not online forecasting.
+
+Do not select a stimulus family based on favorable neural prediction scores.
+
+## 8. SCIENTIFIC QUESTION SELECTION
+
+Assess three possible designs based only on data suitability.
+
+### A — VISp History Increment
+
+Does strictly past local VISp spike history improve prediction beyond strong stimulus, firing-rate and measured behavioral baseline models?
+
+### B — Repeated Visual Stimulus Dynamics
+
+Does the predictive contribution of local neural history differ across prospectively defined repeated visual-stimulus presentations, beyond stimulus and repetition covariates?
+
+### C — Discrete versus Continuous Visual Population Dynamics
+
+Do small causal discrete-state or continuous-history representations improve visual cortical prediction beyond a strong task/stimulus/history GLM?
+
+Choose ONE primary research question.
+
+Prefer A if it is strongly supported by the data and allows an interpretable cross-region methodological comparison with P15.
+
+B or C can become prospective secondary questions only when their data and falsification requirements are adequately supported.
+
+Do not assume discrete-state representations win.
+
+No biological cognitive primitive is treated as established.
+
+## 9. MODEL FEASIBILITY
+
+Assess whether the selected data could support:
+
+B0 — Stationary Poisson baseline
+
+B1 — Strong causal visual stimulus, session/time and measured-behavior baseline
+
+B2 — B1 plus own-unit spike history
+
+B3 — B1 plus other-unit population history
+
+B4 — Strong combined own/other-unit history baseline
+
+D — Small causal discrete-state representation
+
+C — Small causal continuous-history representation
+
+S — Static mixture comparator, where necessary for temporal-state interpretation
+
+These are proposed representation classes.
+
+Do not automatically copy P15's feature count, time bin, history horizon, regularization grid, unit population size or numerical acceptance criteria without evaluating VISp data suitability.
+
+Reusing mathematically valid P15 production code is allowed after independent compatibility testing.
+
+Do not fit models or select hyperparameters in M0.
+
+## 10. FUTURE HOLDOUT PROTECTION
+
+Before any neural pilot:
+
+Register which animals can serve as Development and which are prospective Final candidates using metadata-only selection.
+
+Once a Final animal is reserved, do not read its neural outcomes during M0.
+
+Do not use pilot spike results to reroll the Final cohort.
+
+Development may later contain A/B/E partitions.
+
+Final should later contain C calibration and one locked D evaluation, only if a future M1 protocol authorizes this.
+
+The Final D assessment is not authorized by this mission.
+
+Do not require a separate cryptographic custody framework.
+
+Ordinary source access controls, frozen cohort identity, scientific role separation and audit records are sufficient.
+
+## 11. SCIENTIFIC FEASIBILITY GATES
+
+A successful M0 requires:
+
+- A verified source-rights and provenance contract.
+- Exact candidate independent-mouse capacity.
+- Credible anatomical and unit mapping.
+- Real spike access in bounded prespecified pilot sessions.
+- Valid spike/stimulus timebase alignment.
+- Defensible observation validity and known-artifact treatment.
+- Adequate visual stimulus coverage.
+- Credible strong nuisance baseline feasibility.
+- A scientifically interpretable proposed primary question.
+- An honest holdout or exploratory statistical design.
+
+Ordinary curated electrophysiology data may be acceptable with transparently disclosed limitations.
+
+Do not require impossible proof that absolutely no unknown hardware artifact ever existed.
+
+Equally, do not infer perfect observation support from an NWB file's mere existence.
+
+Source or timing contradictions that invalidate the intended estimand must stop the study.
+
+## 12. FINAL VERDICT
+
+Return exactly one:
+
+FEASIBLE_INDEPENDENT_HOLDOUT
+
+FEASIBLE_TEMPORAL_EXPLORATORY
+
+LIMITED_PILOT_ONLY
+
+SOURCE_OR_TIMING_INCONCLUSIVE
+
+DATA_INSUFFICIENT
+
+Do not promote metadata capacity to full physiological admission.
+
+Do not claim model superiority, neural mechanisms or validated CWP/NAP structure.
+
+If a source fails, preserve the evidence and respect the bounded fallback order.
+
+No indefinite rescue loop.
+
+## 13. DELIVERABLES
+
+Create a new isolated P16 directory.
+
+Produce:
+
+1. P16_M0_REPORT.md
+2. Prospective feasibility registration
+3. Dataset source/license registry
+4. Exact mouse/session/probe/VISp coverage table
+5. Stimulus-family feasibility table
+6. Spike/stimulus/behavior alignment pilot report
+7. Observation and artifact limitations
+8. Source compatibility and timestamp checks
+9. Proposed primary scientific question
+10. Proposed independent or exploratory evaluation strategy
+11. Proposed M1 scientific protocol handoff
+12. Compact meaningful synthetic regression tests
+13. Saved-only PowerShell reproduction
+14. Independent internal scientific review
+15. Verified origin/test archival commit
+
+Required final response fields:
+
+MISSION_ID
+M0_STATUS
+SCIENTIFIC_FEASIBILITY_VERDICT
+SELECTED_DATASET
+SELECTED_SOURCE_VERSION
+SOURCE_RIGHTS_PASS
+SELECTED_REGION
+INDEPENDENT_CANDIDATE_MICE
+QUALIFIED_POPULATION_DISTRIBUTION
+STIMULUS_COVERAGE
+REAL_SPIKE_PILOT_PASS
+STIMULUS_SPIKE_ALIGNMENT_PASS
+OBSERVATION_CONTRACT
+PROPOSED_PRIMARY_QUESTION
+PROPOSED_HOLDOUT_DESIGN
+KNOWN_LIMITATIONS
+PROMPT_2_READY
+BUG_COUNT
+WARN_COUNT
+GIT_COMMIT
+REMOTE_VERIFICATION
+
+## 14. EXECUTION BOUNDARIES
+
+SCIENCE FIRST.
+
+Reuse existing verified scientific tooling where compatible.
+
+Avoid unnecessary source archaeology, excessive custody engineering, redundant review bureaucracy and unrelated infrastructure.
+
+Ordinary implementation repairs may proceed autonomously with focused regression tests.
+
+Do not alter scientific admission rules after examining favorable neural outcomes.
+
+Preserve negative evidence.
+
+Do not fit B0–B4, D, C or S in M0.
+
+Do not access reserved Final neural outcomes.
+
+Do not activate M1–M7 automatically.
+
+Complete one reviewed M0 feasibility assessment and STOP.
+
+BEGIN P16 M0 NOW.

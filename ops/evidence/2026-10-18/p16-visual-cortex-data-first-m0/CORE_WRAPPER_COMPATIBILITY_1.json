@@ -1,0 +1,23 @@
+{
+  "failure1": "Wrapper keyword risk review triggered by negative constraints secret/production; no realproductionorcredentialoperation requested. Task explicitly authorized and narrowwritepolicy retained; risk-allow-review used.",
+  "failure2": "Installedcodexexec rejectsobsolete --ask-for-approval; exec--help supports--config",
+  "source_scripts_sha256": {
+    "codex-code.js": "cdb83933572b8efaca77e950ce049bf55094c9ff8a53d9dd9e6b346f2ccb53b9",
+    "risk-policy.js": "250bb1568b3d96f59d480220c7bcc3bad49eb8a7455818267e45154494531f3e",
+    "write-control.js": "955d977b7d31899e00c6d0313c83d02a1d900e25b6a1bbc11dffba1c4efc80a7"
+  },
+  "one_line_compatibility_patch": {
+    "old": "if (runtime.approval) args.push(\"--ask-for-approval\", runtime.approval);",
+    "new": "if (runtime.approval) args.push(\"--config\", `approval_policy=\"${runtime.approval}\"`);"
+  },
+  "patched_script_sha256": "7b9d834aea21bc03975a4bec309bdea09de6d75d02d031758db7c670bc6d3cfd",
+  "approval_policy_preserved": "on-request",
+  "sandbox_preserved": "workspace-write",
+  "write_policy_preserved": [
+    "core.py",
+    "test_core.py"
+  ],
+  "global_skill_or_security_edits": false,
+  "no_data_access": true,
+  "isolated_code_target": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper16_m0\\code"
+}

@@ -1,0 +1,3 @@
+# One proposed primary question
+
+A — Does strictly past local VISp neural history improve prediction beyond a strong visual-stimulus,rate,session/time and measured-behavior baseline? This is a proposed observational predictive estimand,not a frozen M1 hypothesis or causal mechanism. Controlled repeated gratings are the suitability preference;shared original condition support across BO/FC and the exact analysis population must be registered before future fitting. No favorable score was used. B repetition-conditioned history differences and C small discrete/continuous models remain prospective secondary possibilities requiring their own falsification/numerical design. No discrete-state winner is assumed.

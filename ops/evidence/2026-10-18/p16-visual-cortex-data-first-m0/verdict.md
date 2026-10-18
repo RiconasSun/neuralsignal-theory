@@ -1,0 +1,9 @@
+# Preterminal verdict — P16-VISUAL-CORTEX-DATA-FIRST-M0
+
+Scientific assessment: FEASIBLE_INDEPENDENT_HOLDOUT under registered M0 capacity/source-curated restrictions. Completed2fixedDevelopmentpilots,16selectedVISpunitcertificates,2nativeeventbundles,16nativefamilies,12624nonpredictiveexample rows. Source55candidate mice/28Dev27prospectiveFinal;not same-protocolIID8+8,physiological admission,power or confirmation. No Final outcomes,model fits/scores,nulls or automaticM1.
+
+Current engineering bug_count=0,warn_count=0,unresolved_shrink_risk=0 after saved-only integrity repair;independent repaired full review and executed Git closure are still mandatory. Old failures/negativecase and intermediate revoked review remain preserved. No requirement dropped,test assertion weakened,realpilot mocked,threshold loosened,oldscientificfile edited or inactive source relabeledtested. Source/calendar/rawcontinuity/phase/behavior/protocol/anatomical limitations remain scientific scope boundaries,not erased.
+
+Immutable baseline281original rows;pre-review matrix273VERIFIED/8pendingfinalreview/Git,with semantic conjunctive gates separately expanded. Do not infer281independent scientifictests from original owner-line count. Native PowerShell saved-only reproduction verifies74science files and27tests with no network,realNWB reopening,model orFinalaccess. Full real-source execution evidence and saved reproduction are distinct.
+
+Final terminal PASS requires independently accepted actual final package plus normal exact-file origin/test commit/push,remoteSHA/allchangedGitblob readback,and clean working tree before/after ignored external receipt. This precommit verdict cannot self-certify a future commit. The executed final receipt will be paper16_m0/work/GIT_CLOSURE_RECEIPT.json and FINAL_DELIVERY.json;their SHA/remote results must be reported from actual execution. No main/force/PR or next mission.

@@ -1,0 +1,85 @@
+{
+  "mission": "P16-VISUAL-CORTEX-DATA-FIRST-M0",
+  "registered_at": "2026-10-18T21:18:04.651917+00:00",
+  "registered_before_VISp_eligibility_counts": true,
+  "registered_before_any_P16_spike_array_access": true,
+  "scientific_topic": "VISp predictive temporal structure; provisional Method Paper, no model/biological outcome claims",
+  "source_order": [
+    "Allen Visual Coding Neuropixels",
+    "Allen Visual Behavior Neuropixels only after documented A inadequacy",
+    "Native IBL VISp only after A and B inadequacy"
+  ],
+  "primary_source_interface": "Allen Visual Coding public warehouse NWB generation compatible with official AllenSDK v2.16.2 source definitions; official PyNWB selective lazy access after actual schema/version checks. Object Last-Modified is not a release-generation certificate. No incompatible file-generation mixing.",
+  "region_acronyms": [
+    "VISp",
+    "VISp1",
+    "VISp2/3",
+    "VISp4",
+    "VISp5",
+    "VISp6a",
+    "VISp6b"
+  ],
+  "mapping": "Exact CCFv3 acronym/descendant identity, unit peak channel->probe->session->specimen. No VISl/al/pm/am pooling; laminar proxy not histological certainty.",
+  "unit_screen": {
+    "quality": "good",
+    "amplitude_cutoff_max": 0.1,
+    "presence_ratio_min": 0.95,
+    "isi_violations_max": 0.5,
+    "finite_required": true,
+    "inclusive_comparisons": true,
+    "rationale": "Conservative overview-documented Allen metrics; explicitly .95 rather than .9 from older tutorial. Version-verified explicit values,not unstated defaults. Provider whole-session QC is metadata screening,not future training-only physiological admission. No stimulus response/tuning metrics used."
+  },
+  "tiers": [
+    5,
+    8,
+    12,
+    20
+  ],
+  "primary_capacity_tier": 8,
+  "simultaneous_population": "One selected probe/session/mouse. Select earliest acquired eligible session (tie numeric session ID); within session maximize metadata QC VISp count, tie numeric probe ID. Report all other probes/sessions without treating them as independent mice.",
+  "historical_exposure": "Audit existing P12/P1-P15 metadata/role/access source evidence,without importing workers or accessing old neural arrays. Conservatively classify all prior neural-session or protected Final roster overlaps as historical-exposed; they cannot be new P16 prospective Final. Preserve cross-study dependence disclosure. P15usedholdout untouched. Whole-mouse specimen IDs,not selected session alone,control both Final freshness and pilot denial. Resolve every historical session against complete source roster and verify recorded mouse identity. Missing/ambiguous mappings fail closed before allocation. Conservatively all26 prior P12 roster mice are exposed; all13 historical Final mice are pilot-protected across every session. Preserve exact roster/session provenance.",
+  "cohort_allocation": "If >=16 tier8 candidate mice and >=8 without historical neural/Final overlap: reserve min(floor(N/2),Nfresh) fresh mice by ascending SHA256(mission+specimenID), leaving>=8Development. All historical overlaps Development only. Otherwise temporal exploratory/allDevelopment; no independent Final claim. Report sex/genotype/session-type composition, no outcome balancing.",
+  "pilot_selection": "At most2 Development sessions; no historically protected Final animal. Prefer one each source session type where available. Within type choose minimal declared NWB byte size, tie numeric session ID, among selected Development populations satisfyingtier8. Freeze exact2IDs/probes/unitIDs/objectETag-size-version and all prospective Final identities before spike GET/decode. If a pair exceeds remaining6GB do not silently expand or swap after neural inspection.",
+  "pilot_transfer_budget_bytes": 6000000000,
+  "pilot_transfer": "Count all newly transferred pilot payload bytes including failed/partial transfers; no automatic full-file retries. Locally existing same-version hash-verified objects have zero new transfer but provenance/read access recorded. Reserve20MBfor metadata; enforce streaming cap and preserve interruptions. No LFP/rawAP/movie templates/fullcohort downloads.",
+  "stimulus_feasibility_priority": [
+    "drifting_gratings",
+    "static_gratings",
+    "natural_scenes",
+    "natural_movie_one",
+    "natural_movie_three",
+    "flashes",
+    "gabors",
+    "dot_motion"
+  ],
+  "stimulus_selection": "Assess every available family; primary A history increment preferred. Prefer controlled gratings with finite onset/offset,exact orientation/temporal/spatial/phase identity and repeats; natural-movie frame/repeat/order strongly conditioned, not retrospectively available real-time input. Do not select by neural score. Source-nominal coverage outside pilots is explicitly not observed per-animal physiological coverage.",
+  "pilot_coverage_gate": "At least one controlled/repeated family in each pilot: >=20 distinct native valid presentation IDs,>=2 repeated conditions,finite positive durations and nondecreasing starts. Retain every family counts/order/gaps/null parameters; first64valid presentations/family inspected without neural-response ranking. Proposed future per-role coverage must be registered in M1,not claimed satisfied here.",
+  "observation_contract": "Use documented common session clock, explicit NWB recording/observation epochs or source acquisition support where present,selected-probe/global invalid intervals and full original presentation boundaries. Never infer support from first/last spike or mere NWB existence. If explicit raw/APdomain unavailable, only source-curated scheduled recording support may be considered, with independently verified source documentation/sessionepochs+knowninvalid masks and prominent unverifieddropout limitations. If no defensible source-curated observation contract or clock contradiction, STOP SOURCE_OR_TIMING_INCONCLUSIVE. No rate/QC from Final outcomes.",
+  "invalid_rule": "Require finite positive stimulus intervals; preserve originalIDs/ordinals/NaN. Subtract known invalid intervals affecting selectedprobe or global session; unknowntag interpretation fails closed rather than silently unmask. Missing covariate intervals not zero/forward-extrapolated; resets at presentation/gap/invalid windows.",
+  "clock_contract": "Source-prealigned seconds on common session clock; pin SDK/NWB definitions. No new resampling/clockcorrection/tolerance optimization. Verify finite sorted spikes/nondecreasing identicaltime allowed withduplicate counts reported; no nonfinite partition inference. Native events persist as .npy float64 or exact float.hex with missingness/IDs; binary64 bits roundtrip. strictpast uses searchsorted side=left and excludes equality.",
+  "pilot_nonpredictive_examples": "Use8lowestnumericmetadata-qualifiedVISpunits from selectedprobe; first64valid presentations per available family, 10ms and50ms illustrative count bins within native boundaries, original IDs/gap resets. Preserve genuine zeros; invalid support missing notzero. No predictive parameter or future bin-width selection.",
+  "behavior": "Running and pupil timestamps/quality/missingness audited; source fail_eye_tracking retained. Behavior is a nuisance measurement,not allmovement. No requiring pupil when absent; record complete-case feasibility andmissingness risk. No future samples or indefinitecarryforward.",
+  "scientific_verdict_rules": {
+    "FEASIBLE_INDEPENDENT_HOLDOUT": "Rights/provenance+mapping+>=16metadata tier8mice with>=8fresh Final and>=8Dev+registered2pilots realspike/time/observation/stimulus/covariate-baseline gates pass. Capacity only,not final physiological admission/power/confirmation.",
+    "FEASIBLE_TEMPORAL_EXPLORATORY": "Same source/pilot validity but independentfloor fails and>=4metadata mice; all inference exploratory with future temporal splits prospectively M1.",
+    "LIMITED_PILOT_ONLY": "Valid bounded pilot evidence but cohort/coverage/independent design not established; no M1readyclaim.",
+    "SOURCE_OR_TIMING_INCONCLUSIVE": "Rights/source/support/clock contradiction or unresolved indispensable source information.",
+    "DATA_INSUFFICIENT": "Verified source insufficient metadata/specimen/unit/stimulus capacity, preserve denominator and fallback evidence."
+  },
+  "precision_claim_restrictions": "20+candidateanimals aspirational,not required as unverifiedfact. Eight+eight is an M0 design-capacity floor only. No effect size/power/precision estimated from pilot spikes; future M1 must predefine quantitative primary CI-width/effect and sensitivity/multiplicity rules before model outcomes. Pilot mice and historically exposed animals remain exploratory Development. Feasibility alone cannot support confirmation,mechanism,discrete superiority or CWP/NAP.",
+  "models": "ProposedB0-B4,D,C,S classes only; no inherited P15bin/history/grid/unitfit/numericalthreshold policy. Future compatibility/synthetic numerical validation is M1/M2 work, not M0 fits.",
+  "stop": "At most2real pilot sessions,total6e9payloadbytes, no B0-B4/D/C/S fitting,hyperparameterselection,heldoutlikelihood,Finalneuralaccess,sourcefishing,custodyarchitecture,externalcorrespondence or M1activation. Preserve every failure; no replacing failed pilots after neural results.",
+  "revision": 2,
+  "revision_registered_at": "2026-10-18T21:35:27.769343+00:00",
+  "precount_revision_reason": "Independent review P1-01 whole-mouse implementation repair and P1-02 explicit source-validity clarification. No actual eligibility counts or neural arrays examined. Original revision1 and failed review retained. Scientific thresholds unchanged.",
+  "previous_registration_sha256": "d0b13d5b4e41b42523946c083c9761276e610974605d24962e43738a9116497c",
+  "source_validity": {
+    "metric_domains": "Finite amplitude_cutoff>=0, isi_violations>=0, 0<=presence_ratio<=1; probability and nonnegative measurement domains, separately reported from scientific threshold failures. Missing/non-numeric/nonfinite/out-of-domain source metric makes unit source-invalid,never eligible.",
+    "probe_sampling_rate": "Finite strictly positive acquisition sampling_rate required; missing/corrupt/zero/negative rate makes probe source-invalid; retain row and report separately.",
+    "thresholds_unchanged": [
+      0.1,
+      0.95,
+      0.5
+    ]
+  }
+}
