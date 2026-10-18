@@ -1,0 +1,71 @@
+{
+  "mission": "P15-M2-M5-NATIVE-QC-AND-DEVELOPMENT",
+  "reviewed_at": "2026-10-18T03:07:48.506936+00:00",
+  "decision": "ACCEPTED_STOPPED_EVIDENCE_ARCHIVE_ONLY",
+  "candidate_freeze_sha256": "a03124fbedd69869ef6f346c4c882322ae42adb453532676f19a875d55ee7779",
+  "reviewed_hashes": {
+    "stop_verify.py": "c4fa3e579ce7e7f94a542bb8662d4d1162f7ffc75c6192c592878616291db129",
+    "test_stop_verify.py": "b6d4d9877ba3180f5064018393c4e6a2b3a20ebdf6e54f5a7ab1b6566f67c005",
+    "reproduce_stop.ps1": "67898b61d928374dfe088f0637558719bb7b03f47f5a0ea042345d041507b7f4",
+    "test_time_serialization.py": "1fd25e32c6ef1621c097b5fdb30fe7f28badc4e3524dd7debbb4e02bf6ff40b9",
+    "STOP_REPORT.md": "f5de62c01dbaaf234542d9ea397f4febb54945f1a395fc662a20518730f80d18",
+    "STOP_CLAIM_AUDIT.md": "2d870db91dd1a352bbaa9af37fd61d66f3199c5c6818c132c3660bae64aa3201",
+    "README.md": "1a76fdec42585c22af72223a205b638788ba77ab7a1b126707edf2fe6fc30353",
+    "results/DEVELOPMENT_STATUS.json": "4be066ca694aec82b95a0f11b273d3de6fd7ad824668501f30221481cce3b0c9"
+  },
+  "new_archival_open_P0": 0,
+  "new_archival_open_P1": 0,
+  "known_scientific_open_P0": 0,
+  "known_scientific_open_P1": 1,
+  "known_scientific_defect": "VERIFIED_SOURCE_FEATURE_FIDELITY_DEFECT: native task timestamp serialization changes strict-past wheel sample membership",
+  "bug_count": 1,
+  "warn_count": 1,
+  "scientific_gate_pass": false,
+  "full_mission_PASS": false,
+  "MERGE_ALLOWED": false,
+  "Prompt4_ready": false,
+  "independent_saved_reproduction": {
+    "command": "& .\\paper15_dev\\reproduce_stop.ps1",
+    "actual_run": true,
+    "session_id": 48909,
+    "exit_code": 0,
+    "synthetic_tests": 123,
+    "ResourceWarning": "error",
+    "package_files_verified": 538,
+    "evidence_files_verified": 70,
+    "historical_files_verified": 32616,
+    "network_denied": true,
+    "real_neural_arrays_loaded": 0,
+    "new_real_fits": 0,
+    "Final_access": false,
+    "attempted": 359,
+    "completed": 358,
+    "numerical_pass_on_rounded_inputs": 358,
+    "interrupted": 1,
+    "unattempted": 251
+  },
+  "independent_negative_probes": {
+    "duplicate_seal": "REJECTED",
+    "unsealed_actual_fit": "REJECTED",
+    "unexpected_configuration": "REJECTED",
+    "unsafe_relative_paths_rejected": 6,
+    "valid_inventory_difference_recomputed": 1
+  },
+  "preservation": {
+    "original_serializer_unmodified": true,
+    "scientific_models_thresholds_seeds_unchanged": true,
+    "prior_failed_reviews_retained": true,
+    "all_complete_and_started_attempts_retained": true,
+    "interrupted_in_memory_trajectory_not_invented": true,
+    "native_equivalence_or_spike_boundary_completeness_claimed": false,
+    "new_B_selection": false,
+    "new_E_prediction": false,
+    "new_Final_access": false
+  },
+  "scope": "Saved stopped-archive integrity/arithmetic and synthetic regressions only. Source-index conclusions are supported by preserved independent TIME_PRECISION_REVIEW_2/TIME_INDEX evidence; this reviewer did not rerun raw-source diagnostics.",
+  "closure_conditions": [
+    "Complete exact-file normal origin/test commit, live remote changed-file hash readback and clean-tree gate before requesting any new scientific owner decision.",
+    "Archive acceptance does not authorize mathematical/source repair, new export/QC/refit, retry, budget reset, B/E execution or Final access.",
+    "A separately prospective human repair/execution decision is required to progress scientifically; preserve all historical attempts and known failures."
+  ]
+}

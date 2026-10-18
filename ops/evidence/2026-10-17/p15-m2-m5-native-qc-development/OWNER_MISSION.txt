@@ -1,0 +1,414 @@
+# CCPN / NEURALSIGNAL — PAPER 15 MASTER PROMPT 3/5
+
+MISSION: `P15-M2-M5-NATIVE-QC-AND-DEVELOPMENT`
+
+BASE:
+`origin/test @ 30cb925f505d63ae52bb1461d9ab153a52f1888e`
+
+PRIORITY: HIGH
+
+EXECUTION MODE: SCIENCE-FIRST / CONDITIONAL AUTONOMOUS EXECUTION
+
+## MISSION OBJECTIVE
+
+Execute the authorized P15 Development study using the existing frozen M1 scientific protocol.
+
+This mission has four ordered stages:
+
+M2 — Native Source Verification and Physiological QC
+
+M3 — Production Numerical Implementation and Strong Baselines
+
+M4 — Discrete / Continuous / Static Model Comparison
+
+M5 — Development Evaluation and Scientific Freeze
+
+Advance only when every preceding required scientific gate passes.
+
+The prior `PROMPT_3_READY=false` is an accurate historical readiness statement. This new owner instruction authorizes M2 and conditionally authorizes M3–M5 after their prerequisites are actually verified.
+
+It does not declare production implementation, physiological admission or numerical validity already passed.
+
+## AUTHORITATIVE FROZEN CONTRACT
+
+Use the exact frozen M1 package:
+
+- `paper15_m1/SCIENTIFIC_PROTOCOL.md`
+- `paper15_m1/SOURCE_QC.md`
+- `paper15_m1/FEATURE_MODELS.md`
+- `paper15_m1/NUMERICAL_POLICY.json`
+- `paper15_m1/NUMERICAL_SELECTION.md`
+- `paper15_m1/STATISTICS_CONTROLS.md`
+- `paper15_m1/COHORT.csv`
+- `paper15_m1/PROTOCOL_FREEZE.json`
+
+Verify their original hashes and review evidence before implementation.
+
+The registered M1 protocol overrides any conflicting abbreviated wording in this mission prompt.
+
+Do not silently amend:
+- Cohort or allocation
+- Scientific estimands
+- Eligibility thresholds
+- Model equations
+- Numerical gates
+- Hyperparameter grids
+- Sensitivity definitions
+- Statistical families
+- Holdout rules
+
+Preserve all P1–P14 and P15 M0/M1 artifacts.
+
+## M2 — NATIVE SOURCE AND PHYSIOLOGICAL QC
+
+### M2.1 Source identity verification
+
+Use only native IBL Brain Wide Map.
+
+Preserve the 20 original candidate animals:
+- 12 Development
+- 8 Final
+
+Keep their original session/probe identities.
+
+The two M0 pilot animals are permanently Development.
+
+Resolve native metadata for the 18 previously unverified candidate sessions.
+
+Pin:
+- Native sorting revision
+- Native task revision
+- Dataset UUIDs and exact source identities
+- Session/probe/cluster/atlas correspondence
+- AP acquisition support
+- Provider synchronization
+- Wheel observations
+- Known saturation intervals
+- Native trial identities and exclusions
+
+Do not borrow incompatible old aggregate masks.
+
+Do not automatically replace a mouse, probe, session, source revision or task table.
+
+Preserve every discrepancy and exclusion reason.
+
+### M2.2 Neural access boundary
+
+Authorize real Development animal spike access only under the frozen A/B/E role contract.
+
+Development A may be used for:
+- Training-only physiological QC
+- Unit selection
+- Feature scaling
+- Model fitting
+
+Development B may be used for:
+- Registered model and hyperparameter selection
+
+Development E may be used only after Development selections are frozen, for exploratory reporting.
+
+If full-record native ALF files must be decoded, implement a narrowly scoped trusted local reader that exports only currently authorized Development-role observations and records the access boundary.
+
+No Final mouse neural arrays may be decoded, scanned, summarized, fitted or scored in this mission.
+
+Final metadata may be inspected for source and trial feasibility, but Final C/D neural access remains separately gated.
+
+No future D extraction authorization is implied.
+
+Do not introduce cryptographic entitlement, offline signing or a complex custody framework.
+
+### M2.3 Train-only physiological QC
+
+Implement the frozen native QC rules exactly.
+
+Use only the Development A partition for newly computed physiology.
+
+Apply:
+- Native MOp anatomical membership
+- Provider-good curated sampling frame
+- Training rate and exposure requirements
+- Original refractory-fraction rule
+- Original within-role temporal coverage
+- Valid AP observation support
+- Known saturation exclusion
+- Eight selected MOp units per admitted mouse
+
+Preserve zero-spike observations inside valid coverage.
+
+Do not interpret missing observation support as zero spikes.
+
+Do not infer unknown unannotated artifacts are absent.
+
+Use the frozen ranking:
+1. Refractory fraction
+2. Training mean rate
+3. Unit UUID
+
+Do not select units by B/E predictive outcomes.
+
+Apply the frozen 50-ms bins, 500-ms history, one-second warm-up/scoring epoch and original whole-trial partition policy.
+
+### M2.4 Admission gate
+
+Require:
+- At least 8 physiologically eligible Development mice
+- At least 4 Development laboratories
+- Every admitted mouse satisfies frozen A/B/E trial coverage
+- Eight valid primary units per admitted mouse
+
+No replacement or threshold relaxation.
+
+For Final mice, report native metadata coverage only; actual C-only physiological admission belongs to the separately authorized Final stage.
+
+If an essential source or Development QC gate fails, STOP with a truthful scientific report.
+
+Do not proceed to real fitting.
+
+## M3 — PRODUCTION NUMERICAL IMPLEMENTATION
+
+First construct the actual scientific production worker.
+
+This is NOT automatically certified by the 17 M1 synthetic specification tests.
+
+Implement exactly the frozen equations and transformations.
+
+### Strong baselines
+
+B0 — Stationary Poisson
+
+B1 — Task, stimulus, time, movement and nuisance
+
+B2 — B1 plus own-spike history
+
+B3 — B1 plus other-unit history
+
+B4 — B1 plus own and other-unit histories
+
+PRIMARY:
+B4 − B1 predictive log-likelihood gain.
+
+Preserve the full 37-column nuisance policy, strictly past movement measurements and all nested-model identities.
+
+### Dynamic representations
+
+D — Conditional causal Poisson HMM
+
+C — Fixed DCT-projection finite-history representation
+
+S — Capacity-controlled static mixture
+
+Preserve:
+- Shared B4 nuisance predictor
+- Frozen state-count and rank grids
+- Original λ grid
+- Original seeds
+- Original parameter bounds
+- Causal prediction-before-assimilation
+- Model capacity accounting
+- Static-versus-persistent state distinction
+
+No new model architectures or P13 autoregressive generative null.
+
+### Independent numerical certification
+
+Before any real fitting, test:
+
+- Exact Poisson likelihood, factorial and exposure
+- Source and bin denominators
+- Baseline nesting
+- Causal history ordering
+- Future-neural perturbation invariance
+- Future-behavior perturbation invariance
+- HMM exact forward versus brute-force enumeration
+- Conditional warm-up scoring
+- Static IID mixture identity
+- Parameter bounds and objective normalization
+- Analytical gradients versus independent AD
+- Every frozen fixed finite-difference step
+- Original projected-gradient gate
+- Deterministic seed and partition behavior
+- Invalid-value and failure preservation
+
+Use the unchanged registered numerical thresholds:
+
+PG <= 0.001
+
+Independent gradient error <= 1e-5
+
+All registered solver budgets and start policies remain unchanged.
+
+If a mandatory numerical test fails, distinguish a verified implementation defect from a mathematically invalid model.
+
+Ordinary implementation bugs may be repaired with targeted tests and independent review before production use.
+
+Do not change scientific mathematics, tolerances, seeds, solvers or fit budgets to rescue a failed model.
+
+## M4 — REAL DEVELOPMENT MODEL FITTING
+
+Only after M2 and M3 gates pass, execute the frozen Development A fits.
+
+Run all mandatory candidates and registered starts.
+
+Original main Development budget:
+- Maximum 61 attempts per mouse
+- Maximum 732 main fits for 12 Development mice
+
+Do not exceed registered budgets or add retries.
+
+Select global model configurations on Development B only.
+
+Selection must obey the existing equal-mouse log-likelihood and frozen tie rules.
+
+Do not use Development E to select or modify winners.
+
+If no numerically valid required B1 or B4 configuration remains, STOP the primary study.
+
+If a secondary D/C/S family cannot satisfy its numerical conditions, preserve its failure and continue primary-only Development evidence only where explicitly permitted by the frozen M1 protocol.
+
+Do not pretend that baseline-only completion validates the dynamic comparison.
+
+## M5 — DEVELOPMENT SCIENTIFIC RESULTS
+
+After B selection is frozen, evaluate Development E once for exploratory reporting.
+
+Report the full frozen contrast family:
+
+Primary:
+- B4 − B1
+
+Secondary:
+- B4 − B3
+- B4 − B2
+- D − B4
+- C − B4
+- D − S
+
+Use:
+- Actual scored nominal unit-bin denominators
+- Equal-mouse aggregation
+- Mouse-level effects
+- Registered uncertainty calculations
+- Registered primary and Holm-secondary statistics
+- All available laboratories
+- Full model and numerical failure evidence
+
+Development results are exploratory.
+
+Do not call Development findings independent-animal confirmation.
+
+No result-driven new hyperparameter grid, QC threshold, population selection or model substitution.
+
+### Falsification preparation
+
+Implement and test all frozen:
+- Eleven sensitivity definitions
+- Four finite destructive-reference operators
+- Exact RNG and iteration schedules
+- Original coverage and interpretation rules
+
+Run authorized Development controls and sensitivity analyses only as registered.
+
+Do not perform unauthorized Final null draws or Final role-dependent thinning.
+
+Do not use alternative surrogate draws to rescue failed controls.
+
+Preserve unavailable or failed suites.
+
+Do not import P13's unstable recursively generated Poisson B* null.
+
+## CRITICAL STOP RULES
+
+Stop for:
+- Essential source identity or clock failure
+- Insufficient Development physiology/coverage
+- Critical numerical invalidity
+- Invalid model likelihood or causal indexing
+- Unresolved mandatory scientific gate
+- A substantive need to change the frozen scientific contract
+
+Do not treat an ordinary coding defect as a biological result.
+
+Do not treat valid nonsignificant or negative Development results as an engineering failure.
+
+Preserve every failure, but do not create endless rescue missions.
+
+## STRICT FINAL BOUNDARY
+
+This mission must NOT:
+
+- Fit Final C models
+- Compute Final C physiology
+- Decode or evaluate Final D outcomes
+- Select models using any Final observations
+- Issue a Final D evaluation entitlement
+- Execute a Final D assessment
+- Claim completed independent holdout validation
+- Generate a final scientific-results manuscript from incomplete experiments
+
+After successful M5:
+
+Freeze the actual selected Development configurations, source/model code and all real scientific outputs.
+
+Prepare a Final C/D implementation-readiness handoff for the next mission.
+
+Prompt 4 must separately authorize Final C access, its necessary trusted-reader scope, calibration, independent pre-D review and one Final D assessment.
+
+No automatic Final progression from this mission.
+
+## DELIVERABLES
+
+Provide:
+
+1. Complete native-source and cohort QC report
+2. Exact Development eligible mouse and lab counts
+3. Final metadata-only readiness report
+4. Production mathematical/gradient certification
+5. All authorized baseline Development fits
+6. Discrete, Continuous and Static model Development results
+7. B-selected frozen hyperparameters
+8. Development E exploratory contrasts
+9. Complete fit/attempt/failure records
+10. Sensitivity and finite-control implementation status
+11. Scientific claim/evidence audit
+12. Saved-only PowerShell reproduction
+13. Independent internal review
+14. Verified origin/test archival commit
+
+Final status fields:
+
+M2_SOURCE_QC_PASS
+DEVELOPMENT_ELIGIBLE_MICE
+DEVELOPMENT_LABS
+FINAL_METADATA_READY
+PRODUCTION_NUMERICAL_PASS
+M3_BASELINE_PASS
+M4_DYNAMIC_PASS
+M5_DEVELOPMENT_COMPLETE
+PRIMARY_DEVELOPMENT_EFFECT
+SECONDARY_DEVELOPMENT_EFFECTS
+FROZEN_MODEL_SELECTION
+SENSITIVITY_IMPLEMENTATION_STATUS
+FINAL_C_ACCESS
+FINAL_D_ACCESS
+PROMPT_4_READY
+SCIENTIFIC_VERDICT
+BUG_COUNT
+WARN_COUNT
+GIT_COMMIT
+REMOTE_VERIFICATION
+
+## EXECUTION PRINCIPLES
+
+SCIENCE FIRST.
+
+Reuse M0/M1 evidence and compatible tooling.
+
+Minimize unnecessary engineering, while preserving genuine numerical and scientific safeguards.
+
+Do not add unrelated infrastructure.
+
+Proceed autonomously within the newly authorized Development scope, advancing only through verified gates.
+
+STOP after completed Development handoff or a documented scientific blocker.
+
+BEGIN M2 NOW.

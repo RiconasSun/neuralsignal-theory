@@ -1,3 +1,8 @@
+# Current mission: P15-M2-M5-NATIVE-QC-AND-DEVELOPMENT
+
+WAIT_FOR_HUMAN_INPUT after required scientific stop and reviewed archival closure. ExactBASE30cb925f505d63ae52bb1461d9ab153a52f1888e. Native task ten-decimal JSON serialization changes strict-past wheel inputs in5/10Development mice; no silent repair or refit. Historical M2 admission10mice/8labs/80units and numerical receipts preserved, current native source/production scientific gate FAIL. Plan610:359started/358completed numericalPASS on rounded inputs/1STARTED interrupted/251unattempted;130baseline+228dynamic complete,0retries. No B selection/E evaluation/real sensitivity fits or controls; no Final neural/C/D access. All6Development effects unavailable; Prompt4ready=false. bug1/warn1 retained; no scientific completion or biological conclusion. Source/saved-stop reports:paper15_dev/STOP_REPORT.md and results/DEVELOPMENT_STATUS.json. Saved-only command:& .\paper15_dev\reproduce_stop.ps1. Exact origin/test commit/readback/clean certified only by executed external closure_receipt.json. Next required owner action is a separately prospective exact-native input repair/revalidation/new bounded execution decision; no automatic continuation. All previous daily headers preserved byte-for-byte below.
+
+---
 # Current mission: P15-M1-SCIENTIFIC-PROTOCOL-FREEZE
 
 M1_FROZEN_READY_FOR_M2: complete reviewed prospective protocol, exactBASE bac678914065609bb3786ea9437fb2c5a215fb38. Fixed20MOpmetadata-candidates/12Development8Final,1probe/session/mouse,2pilotsremainDevelopment; no realneuraldata/fits/scores/C-D access inM1. 18nativeannotationequivalences andallphysiologicaladmission remainpending separatelyauthorizedQC. ImmediatePrompt3realfitREADY=false untilnativeQC andproductionworker gates pass.
