@@ -12,14 +12,14 @@
   "FINAL_D_RERUN_COUNT": 0,
   "BUG_COUNT": 0,
   "WARN_COUNT": 0,
-  "GIT_COMMIT": null,
-  "REMOTE_VERIFICATION": false,
+  "GIT_COMMIT": "37a7adbdcf4e237c163a254c3fae9239bb6fa971",
+  "REMOTE_VERIFICATION": true,
   "independent_review": "ACCEPTED_RESULTS_LOCKED_PUBLICATION_PACKAGE: two independent reviews2, strictP0=0/P1=0; bothunsuccessfulreviews1 preserved",
   "scientific_verdict": "DESCRIPTIVE ONLY",
   "external_submission_authorized": false,
   "candidate_sha256": "c98ee27cd207a556ac087fb220f05b81392ae2dbe01f4629d0c5682eb3bc94f7",
   "native_reproduction_receipt": "ops/evidence/2026-10-18/p15-m7-full-manuscript-and-publication-package/NATIVE_DOCUMENT_REPRODUCTION_RECEIPT_4.json",
-  "transport_status": "PENDING actual H1push/readback then metadataH2/currentclean; no prospective GitPASS",
+  "transport_status": "H1_PUSH_AND_READBACK_VERIFIED; metadataH2review/push/currentcleanpending",
   "final_requirement_count": 326,
   "pretransport_verified_requirements": 318,
   "reviews": [
@@ -30,5 +30,12 @@
     "main": 19,
     "supplement": 36
   },
-  "figures": 7
+  "figures": 7,
+  "GIT_COMMIT_scope": "Actual reviewed publication-content archive H1. Metadata-only H2 can advance branch without changing74publicationpayloads. Live currentH2SHA/remote/cleanproof is separately materialized afteractualpush to avoid commitself-reference.",
+  "REMOTE_VERIFICATION_scope": "H1 actualSHA plusall259changedblobs andclean-before-receiptverified. CurrentH2clean/readback remains pending until executed.",
+  "remote_verification_receipt": "ops/evidence/2026-10-18/p15-m7-full-manuscript-and-publication-package/GIT_READBACK_H1.json",
+  "remote_verification_receipt_sha256": "7e47cb1842730be58a7cba218779772f79f1906618055e4a0b3d8a2faf9e7f7b",
+  "CURRENT_BRANCH_CLEAN_GATE": false,
+  "ARCHIVE_CONTENT_READBACK_PASS": true,
+  "stop_boundary": "No more scientificexecution; STOPafteractualmetadataH2readbackcleanhandoff. No submission/main/nextmission."
 }
