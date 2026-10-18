@@ -1,0 +1,474 @@
+{
+  "C_or_A_QC": {
+    "minimum_spikes": 100,
+    "primary_units": 8,
+    "quartiles": "Each original chronological A/C quartile>=10s valid exposure and rate>=.1Hz;empty quartile rejects",
+    "ranking": [
+      "refractory fraction ascending",
+      "A/C mean rate descending",
+      "UUID lexical"
+    ],
+    "rate_Hz_inclusive": [
+      0.5,
+      100
+    ],
+    "refractory": "Within-epoch adjacent ISI<1ms fraction<=.005;at least99 within-epoch adjacent ISIs",
+    "transforms": "A/C score-row mean and population SD;SD<1e-8 means fixed-zero coefficient;nonconstant nuisance/history inputs standardized and clipped\u00b13;intercept not standardized;all persisted before scoring",
+    "valid_exposure": "Only valid A/C warm+score epochs;no ISI pairs across epochs/gaps",
+    "wheel": "Finite,strictly increasing timestamps;backward sample-and-hold/no future interpolation;unmeasured face/body/whisker/arousal remains"
+  },
+  "S07_seed": "First8bytes big-endian SHA256 of UTF8 P15-M1|150108|S07|subject|unit_uuid|role;role A/B/E/C/D independently;PCG64,one uniform per original within-role spike ordinal including outside retained epochs,retain uniform<p;no D stream consumed during C.",
+  "cohort": {
+    "admitted_development": {
+      "excluded": {
+        "CSHL059": "Identity sync domain[0,1],no covered epochs",
+        "NYU-37": "B31<40 epochs"
+      },
+      "labs": 8,
+      "mice": 10
+    },
+    "admitted_final": {
+      "excluded": {
+        "NYU-21": "Native wheel strict-order failure;16485 equal adjacent pairs",
+        "UCLA033": "6 C-qualified units below8-unit floor"
+      },
+      "labs": 4,
+      "mice": 6
+    },
+    "development_all_exploratory": true,
+    "final_interpretation": "Prospectively authorized6-7 mouse DESCRIPTIVE ONLY fallback,regardless of effect or p; fewer6 STOP;8 necessary but insufficient for confirmation",
+    "no_replacement": true,
+    "original": {
+      "development": 12,
+      "final_reserved": 8,
+      "total": 20
+    },
+    "upstream_good_labels": "Provider label1 and native anatomy are whole-session release curation,not new A/C-only QC"
+  },
+  "current_read_scope": "Static saved documents/code/JSON/CSV only; no scientific executable imports, neural arrays, new fits, likelihood/AD/FD/model predictions, selection or tests; no D reassessment",
+  "features": {
+    "history_features": "Per-unit count/window_duration Hz,4U disjoint lag columns,no current-bin counts;A/C score scales shared across nested models",
+    "history_windows_seconds": [
+      [
+        0,
+        0.05
+      ],
+      [
+        0.05,
+        0.1
+      ],
+      [
+        0.1,
+        0.2
+      ],
+      [
+        0.2,
+        0.5
+      ]
+    ],
+    "missing_contrast": "One source-absent side maps0;both sides absent/unknown or finite contrast outside[0,1] excludes trial;do not drop legitimate missing-side trials indiscriminately",
+    "nuisance_columns": 37,
+    "nuisance_groups": {
+      "1-2": "clipped trial elapsed/10 and square",
+      "12-17": "observed goCue/elapsed,response/choice,feedback/type indicators",
+      "18-19": "last completed-trial reward and choice observed strictly before epochStart,frozen at epochStart",
+      "20-23": "original trial ordinal/1000 and square;session b/3600 and square",
+      "24-37": "strict-past wheel position relative epochStart;four signed displacements,absolute increment totals,squared displacement/window-speed and .001rad movement flag",
+      "3-5": "strictly observed stimulus elapsed clipped1s and square/cube",
+      "6-11": "observed contrasts,presence indicators and contrast x elapsed"
+    }
+  },
+  "inference": {
+    "all_final_verdicts": "DESCRIPTIVE ONLY",
+    "assumptions": "Independent sign-exchangeable symmetric zero-centered mouse effects under null boundary;sharedlab/asymmetry undermine inferential interpretation;no D-driven assumption pretest/alternative test",
+    "bootstrap": "10000 whole-mouse resamples,size n,PCG64seed150101,95%linear-quantile percentile intervals;same stream for secondary;not unit/trial CI",
+    "diagnostics": "Individual effects,range,median/IQR,SD,signproportions,LOMO,labmeans,equal-labmean,leave-one-lab-out;lab-block bootstrap10000 seed150102 as dependence diagnostic only",
+    "effect": "Per mouse(LL_left-LL_right)/actual common scored Q;equal mice,not pooled trials/units/probes",
+    "n6_resolution": "64sign assignments;minone-sided1/64=.015625;mintwo-sided2/64=.03125;minimum possible adjusted Holm5>=.15625;no claim of equivalence or formal empirical power",
+    "ordered_contrasts": [
+      "B4-B1",
+      "B4-B3",
+      "B4-B2",
+      "D-B4",
+      "C-B4",
+      "D-S"
+    ],
+    "positive_conjunction": "At least8mice,4labs,no lab>50%,source/numerics/assumptions valid,mean>=.001,CI lower>0,width<=.01,p<=.05(primary) orHolm5<=.05(secondary),>=ceil(.75n)positive,everyLOMO/leave-labmean>0,contrast-specificmandatorysens/refs;allconditions,not selected subset",
+    "primary": "Exhaustive all2^n signs,one-sided-positive mean,including observed sign and equality;no MonteCarlo plus1 correction",
+    "secondary": "Two-sided abs(mean),fixed Holm5 across all five,missing p=1 retains slot"
+  },
+  "mission": "P15-M7-FULL-MANUSCRIPT-AND-PUBLICATION-PACKAGE",
+  "models": {
+    "C": "Fixed first-r orthonormal DCT-II columns in frozen unit order;finite10past50ms microbin weighted history q=sum_j w_j R^T z_(t-j),w_j proportional exp(-(j-1)*.05/tau);no learned recurrent integration,PCA or roll-forward generated counts;eta=etaB4+gamma*q",
+    "C_scaling_nuance": "Microbin rate z uses A/C score-row mean/SD and is NOT itself clipped;resulting q uses separate A/C score-row scale and\u00b13 clipping;zero standardized state before reset",
+    "D": "Conditional Poisson HMM: etaB4+delta_ku,delta0u=0;reference-last softmax pi/P;score predictive sum a_t(k)g_t(k),then update posterior and transition after observing y;warmup filters differentiated but LL excluded;conditionalLL=logL(warm+score)-logL(warm);no smoothing/current-bin posterior leakage",
+    "S": "IID latent mixture with fixed pre-bin pi and same B4/offset gauge,not HMM filtering;pair selected D_K with S_(K+1);same-K IID transition identity is a separate mathematical test",
+    "actual_active_counts": "Report from saved fit/case states separately;constant transformed columns have zero free coefficients;nominal count is not an actual fitted-active count",
+    "baselines": {
+      "B0": "unit intercept",
+      "B1": "B0+37 measured nuisance features",
+      "B2": "B1+own4lag history",
+      "B3": "B1+other-unit4lag history",
+      "B4": "B1+own and other history"
+    },
+    "capacity": "Larger S has more emission components;D has transitions;nominal counts do not establish equal effective capacity",
+    "ensemble": "D/S seeds11/23/37 each pass;uniform mix of pre-bin JOINT predictive masses via logmeanexp;each HMM has own causal filter;do not average coefficients or unit marginals",
+    "nominal_U8": {
+      "B0": 8,
+      "B1": 304,
+      "B2": 336,
+      "B3": 528,
+      "B4": 560,
+      "C_r1": 568,
+      "C_r2": 576,
+      "D_K2": 571,
+      "D_K3": 584,
+      "S_K3": 578,
+      "S_K4": 587
+    },
+    "nominal_parameter_formulas": {
+      "B0": "U",
+      "B1": "38U",
+      "B2": "42U",
+      "B3": "U[38+4(U-1)]",
+      "B4": "U(38+4U)",
+      "C": "qB4+Ur",
+      "D": "qB4+(K-1)U+K(K-1)+(K-1)",
+      "S": "qB4+(Ks-1)U+(Ks-1)"
+    },
+    "objective": "J=-LL_score/T+lambda/2*sum(nonintercept free coefficient^2);T=population score bins,NOT T*U;reported effect denominator Q=actual valid nominal unit-bins",
+    "poisson": "mu_tu=Delta*exp(eta_tu);log p=y*log(mu)-mu-lgamma(y+1);joint mass=product units,including factorial/exposure"
+  },
+  "old_source_manifest_entries": 3099,
+  "open_P0": 0,
+  "open_P1": 0,
+  "paper_type": "Methods-oriented empirical secondary analysis: exploratory Development and DESCRIPTIVE ONLY independent-animal evaluation",
+  "partitions_and_timing": {
+    "behavioral_support": "[stim-1,stim+.5) plus strict predecessor encoder sample; may precede trial,inside authorized role/support",
+    "cuts": "Before exclusions,from original pinned native row count N: A[0,floor(.6N)),B[floor(.6N),floor(.8N)),E[floor(.8N),N); C[0,floor(.6N)),D[floor(.6N),N)",
+    "epochs": "Finite required events;start<=stim<=feedback<=end;goCue within trial before feedback,no arbitrary goCue/stim order;entire warm+score inside trial/support and disjoint known invalid/saturation;invalid bin excludes whole epoch",
+    "guards": "Drop last original trial before and first after each boundary from both adjoining roles;never recompute cuts after exclusions",
+    "native_correction": "Original pandas ten-decimal native-table persistence violated exact boundary identity; corrected version stores binary64 bit patterns/hex and missingness tags,original ordinals and strict-past predecessor indices;PL033 equal-time wheel trial224 regression;old rounded fits remain invalid for corrected science",
+    "neural_reset": "All history,C state,HMM prior reset at epoch start; zero before reset; no neural cross-trial/gap/role history",
+    "neural_warmup": "[stim-.5,stim),10bins",
+    "primary_delta_seconds": 0.05,
+    "saturation": "Known intervals half-open source sample intervals mapped through same sync;unknown artifacts remain unknown,not artifact-free",
+    "score": "[stim,stim+.5),10bins; warm-up LL excluded from objective and scoring",
+    "source_reader": "Whole-record ALF decode explicitly approved only in trusted low-level C projector; no pre-D scientific D counts/QC/ranges/scalers/selection/streams;ordinary local controls,not independent third-party/admin protection",
+    "source_support": "AP metadata duration/fs/sample count checked to one sample; finite strictly monotone Nx2 probe/session sync,piecewise-linear mapping,no extrapolation;no support inference from first/last spike",
+    "strict_feature_availability": "All task/wheel/neural predictor observations have time<bin start; equality deferred as a predictor,while target counts retain half-open bins"
+  },
+  "provenance": {
+    "anatomy": "Native channels[clusters.channels] mapping; MOp parent and1,2/3,4,5,6a,6b only; no MOs/SSp/SSs pooling",
+    "external_online_bibliography_reverification_in_this_oracle": false,
+    "frozen_provider_loader_commit": "118fc36cb3602934466ad2c6087c2b3b441f9f1f",
+    "global_source_denominator": {
+      "insertions": 699,
+      "mice": 139,
+      "sessions": 459
+    },
+    "license": "CC BY 4.0 data; provider code keeps its own license",
+    "metadata_screen": "2024_Q2_IBL_et_al_BWM cluster/trial aggregates paired with 2023_12_bwm_release insertion roster",
+    "native_identity": "Exact mouse/lab/date/session/eid/pid/probe and file UUID/ETag/size/version/last-modified identities; no revision/session/probe substitution",
+    "native_sorting": "alf/{probe}/pykilosort/#2024-05-06#/",
+    "native_trial_revision": "alf/#2025-03-03#/_ibl_trials.table.*.pqt",
+    "official_links": [
+      "https://registry.opendata.aws/ibl-brain-wide-map/",
+      "https://docs.internationalbrainlab.org/notebooks_external/2025_data_release_brainwidemap.html",
+      "https://docs.internationalbrainlab.org/notebooks_external/loading_spikesorting_data.html",
+      "https://docs.internationalbrainlab.org/notebooks_external/loading_wheel_data.html",
+      "https://docs.internationalbrainlab.org/notebooks_external/loading_trials_data.html"
+    ],
+    "source": "Native IBL Brain Wide Map, ONE/ALF public AWS ibl-brain-wide-map-public,us-east-1",
+    "wheel": "Unique unrevisioned alf wheel timestamps/position, individually pinned; unrevisioned does not mean unpinned"
+  },
+  "purpose": "Independent reviewer-owned Methods consistency oracle; not manuscript authorship or final document acceptance",
+  "references": {
+    "N1": "Within-epoch20bin multivariate warm+score rotate1..19,allunits together,countpreserving pertrial/unit;original targets/task/wheel fixed;HMM filters surrogatepast",
+    "N2": "Whole multivariate history donors within side(L/R/other),contrast<=.25vs>.25,original rolehalf,andwheelabsdisplacement above A/C median strata;singleton excludedfromoriginal+reference only",
+    "N3": "Same epochdonorstrata omitting wheel;substitute measured wheel columns24-37 in B1/B4;formal statistic B4LL/Q,copy+labeled acrosscontrastslots;alsoB4-B1gainchange;notD/Cwheelnull",
+    "N4": "Cyclic donors of complete5originaltrialblocks;>=2blocks,keepwithinblockorder;originaltask/wheel/order fixed",
+    "RNG": "PCG64 seed first8bytes big-endian SHA256 UTF8 P15-M1|150107|suite|subject|partition|replicate",
+    "actual_restrictions": "Development primaryN1 7/10<8 fails,N2 10/10pass,N4only5unavailable;FinalprimaryN1/N2 6/6pass,N4only3unavailable;D-B4/N2fails,D-S/N1andN2fail. N4requiredforD-B4/D-S persistent-stateinterpretation. None overridesFinalDESC.",
+    "assumptions": "Finite destructive alignment/order references,not assumption-free exact mechanistic/causal or conditional-null draws;no generated autoregressive Bstar/no null refits",
+    "count": 999,
+    "coverage": "N2/N3/N4>=60%eligibleprimaryepochs and>=30controlepochs per mouse;aggregate>=6paired;no post-scorecoarsening",
+    "disruption_gate": "N1/N2 requiredforprimary;original>medianreference in>=ceil(.75n)mice AND positiveequalmouse mean(original-medianreference),with>=6paired andsourcecoverage;favorablepdoesnotoverridegate",
+    "p_reference": "(1+number equal-mouse reference means>=original)/1000;Holm4 separately each registeredcontrast;missingp1/unavailable",
+    "schedule": "N1 increasing trial ordinal one nonzero rotation;N2/N3 lexicographic(side,contrast,roleHalf,wheel ifN2)strata,originalordinalsort,one nonzero cyclic donor shift;N4 complete original5trialblocks increasing ordinal/nonzero blockshift;no draws for skipped singletons/incompleteblocks;allcontrasts share realization"
+  },
+  "reviewer": "/root/pivot_review",
+  "scientific_label": "DESCRIPTIVE ONLY",
+  "selection_and_numerics": {
+    "B_selection": "Same admitted mice,equal-mouse B LL/Q maximum;ties within1e-6 nats/unit-bin:fewer nominal parameters,stronger ridge,smallerK/r,smallertau,lexicalID;S ridge selected only at chosenD_K+1;not one-SE;no E or Final selection",
+    "PG": "Outward-gradient removal:lower bound remove g>0;upper remove g<0;otherwise retain;infinity norm<=.001;optimizer success insufficient",
+    "fit_history": "Historical359starts=358completed numerical PASS on rounded inputs+1STARTED/251unattempted of610;not scientific validity or reusable corrected fits. Corrective1135=610main+525sensitivity;Final392=72main+320sensitivity;separate budgets,cumulative1886. Do not retrospectively claim original1928 aggregate ceiling certified all later maxima.",
+    "gradient_gate_nuance": "Synthetic analytic/AD scaled-coordinate<=1e-8;real endpoint analytic/AD<=1e-5;every predefined central FD step1e-4,1e-5,1e-6<=1e-5;no favorable step selection;mathematical extension at bounds then independent PG projection",
+    "grid": "B0one;B1-B4each3ridge;D2Kx3ridge x3seeds18;C2rankx2tau x3ridge12;S2Kx3ridge x3seeds18;61 fits/mouse,37 seed-grouped candidates",
+    "initialization": "Only same-mouse A/C score rates with +.5 initialization pseudocount,not modified likelihood;baseline/C other coefficients0;D/S seed PCG64 offsets Uniform[-.05,.05],pi logits0,D diagonal-preference logits;no reused Development fitted coefficients for Final",
+    "no_model_or_test_execution_in_writing": true,
+    "policy": {
+      "AD_relative_scaled_error_max": 1e-08,
+      "CI_max_width_nats_per_unit_bin": 0.01,
+      "C_ranks": [
+        1,
+        2
+      ],
+      "C_tau_seconds": [
+        0.1,
+        0.25
+      ],
+      "D_states": [
+        2,
+        3
+      ],
+      "FD_rule": "all predefined steps must satisfy fixed scaled max coordinate error <=1e-5; no post-result favorable step selection",
+      "FD_steps": [
+        0.0001,
+        1e-05,
+        1e-06
+      ],
+      "PG_max": 0.001,
+      "S_pairing": "K_S=selected_K_D+1",
+      "S_states": [
+        3,
+        4
+      ],
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 150101,
+      "delta_seconds": 0.05,
+      "development_minimum": 8,
+      "development_minimum_labs": 4,
+      "dtype": "float64",
+      "final_confirmatory_minimum": 8,
+      "final_descriptive_minimum": 6,
+      "final_minimum_labs": 4,
+      "ftol": 1e-12,
+      "gradient_scale": "max_i |g_i-gref_i| / max(1,|g_i|,|gref_i|)",
+      "gtol": 1e-06,
+      "history_edges_seconds": [
+        0,
+        0.05,
+        0.1,
+        0.2,
+        0.5
+      ],
+      "history_seconds": 0.5,
+      "independent_gradient_error_max": 1e-05,
+      "max_all_later_real_fits": 1928,
+      "max_main_development_fits": 732,
+      "max_main_final_C_fits": 96,
+      "max_main_final_C_fits_per_mouse": 12,
+      "max_main_fit_attempts_per_development_mouse": 61,
+      "max_retries": 0,
+      "max_sensitivity_fits": 1100,
+      "maxfun": 80000,
+      "maxiter": 2000,
+      "maxls": 40,
+      "new_real_neural_access_in_M1": false,
+      "nuisance_columns": 37,
+      "null_master_seed": 150107,
+      "null_replicates": 999,
+      "objective": "negative score LL / population score bins T + ridge/2 * squared nonintercept free coefficients",
+      "parameters_bounds": {
+        "intercept": [
+          -8,
+          8
+        ],
+        "linear": [
+          -1,
+          1
+        ],
+        "mixture_transition_logit": [
+          -4,
+          4
+        ],
+        "state_offset": [
+          -2,
+          2
+        ]
+      },
+      "practical_gain_min_nats_per_unit_bin": 0.001,
+      "primary_alpha_one_sided": 0.05,
+      "primary_units": 8,
+      "real_fitting_in_M1": false,
+      "ridge_grid": [
+        0.01,
+        0.1,
+        1.0
+      ],
+      "secondary_family_size": 5,
+      "secondary_holm_alpha_two_sided": 0.05,
+      "seeds": [
+        11,
+        23,
+        37
+      ],
+      "sensitivity_cases": [
+        "units5",
+        "units12",
+        "units20",
+        "bin100ms",
+        "history250ms",
+        "strictQC",
+        "rate_thinning",
+        "saturation10ms",
+        "saturation50ms",
+        "rich_drift",
+        "boundary5"
+      ],
+      "solver": "L-BFGS-B"
+    },
+    "selected": {
+      "B1": {
+        "ridge": 0.01
+      },
+      "B2": {
+        "ridge": 0.01
+      },
+      "B3": {
+        "ridge": 1.0
+      },
+      "B4": {
+        "ridge": 0.1
+      },
+      "C": {
+        "rank": 1,
+        "ridge": 0.1,
+        "tau_seconds": 0.1
+      },
+      "D": {
+        "K": 3,
+        "ridge": 0.01,
+        "seeds": [
+          11,
+          23,
+          37
+        ]
+      },
+      "S": {
+        "K": 4,
+        "ridge": 0.01,
+        "seeds": [
+          11,
+          23,
+          37
+        ]
+      }
+    }
+  },
+  "sensitivity_cases": [
+    {
+      "id": "S01",
+      "mandatory": true,
+      "rule": "first5 same-ranked qualified units"
+    },
+    {
+      "actual_Final": "6paired available",
+      "id": "S02",
+      "mandatory": false,
+      "rule": "first12"
+    },
+    {
+      "actual_Final": "4paired,aggregateunavailable;2Cstatesmissingcapacity",
+      "id": "S03",
+      "mandatory": false,
+      "rule": "first20"
+    },
+    {
+      "id": "S04",
+      "mandatory": true,
+      "rule": "100ms bins/5scorebins;physicalhistory from strictlypast50msmicrobins;do not compare raw nats/bin as equal rate"
+    },
+    {
+      "id": "S05",
+      "mandatory": true,
+      "rule": "history250ms with edges[0,.05,.1,.2,.25],warmup.25s;behaviorwarmupunchanged"
+    },
+    {
+      "id": "S06",
+      "mandatory": true,
+      "rule": "rate1-50Hz,ISI<=.0025,>=100spikes,quartilerate>=.2Hz;first8"
+    },
+    {
+      "id": "S07",
+      "mandatory": true,
+      "rule": "original8units/unthinnedA-Crate p=min(1,2/r);independent PCG64 streams perUUID/role,draw every original within-role spike ordinal including outsideepochs;no rerank/reQC/thinning repeat"
+    },
+    {
+      "id": "S08",
+      "mandatory": true,
+      "rule": "known saturation endpoint dilation\u00b1.010s"
+    },
+    {
+      "id": "S09",
+      "mandatory": true,
+      "rule": "dilation\u00b1.050s"
+    },
+    {
+      "id": "S10",
+      "mandatory": true,
+      "rule": "add original trialOrdinal/1000 cubic/quartic and sessionHour cubic/quartic nuisance features to nonstationary baselines"
+    },
+    {
+      "id": "S11",
+      "mandatory": true,
+      "rule": "first5 eligible units with central and\u00b12nativechannel-indexcontacts MOp;layer/contactproxy,not true histological distance"
+    }
+  ],
+  "sensitivity_scope": "Refit B0-B4 only using selected ridge,no new grid;33baselinecontrastpanels;9mandatorycases each>=6pairedmice andpositive mean for B4-B1,B4-B3,B4-B2. D/C/S never borrow these refits. Root/unknown anatomy stays denominator,MOp4separate;Pearson associationdescriptive/no newp;physicaldepth unavailable.",
+  "source_freeze_sha256": "529a361ab349eb85bf76284265b76241e09d8b6a21ecb12d7194c69c0f5efc04",
+  "source_hashes": {
+    "paper15_final1/C_FIT_PLAN.json": "7d654270c7a443102be67e0db5dc0e9099ea08f50fc054500a24441d6d9f1722",
+    "paper15_final1/D_BATCH_CLAIM.json": "95108b1b992ae69185f083826dc67b0a79765afec3ee195449afd49017a8b726",
+    "paper15_final1/FINAL_SCIENTIFIC_REPORT.md": "3c084064202a232f9dee9f63f5cf2f7ad31ae8917157f14ed51edfa5c6d479fa",
+    "paper15_final1/ONE_SHOT_D_SPECIFICATION.json": "4782744a789740d945095b50897138d3bf60e46643ccc11435aa0126b9fef8a4",
+    "paper15_final1/anatomy_report.py": "7372f92ff30682f9a8b7a44525880d0035a39c17fa91f7081a13d629b5705ddf",
+    "paper15_final1/final_statistics.py": "4d6489625c661eb5782e7d0426762ca51e0c31fb15828301bdec9a7789d0dc20",
+    "paper15_final1/requirements.txt": "28bfda2c15d2a46a6c9dc91cacc2a328aef9e24a9ed3d6224ee3c80cd64606a2",
+    "paper15_final1/results/FINAL_DELIVERY.json": "c10468848589b33fd577b23d99097711b3682a53d0a90530abbd493210874d64",
+    "paper15_final1/statistics.py": "a62ba9119624b293ff0ffcc8a6679120b3956dc10e63a47bf66d9d29c1c54382",
+    "paper15_final1/tables/FINAL_CONTRASTS.csv": "e6a5cf8d3929be1dd443dc0daa572f0da046ee577dfc9bb30babbae36832bf9f",
+    "paper15_final1/tables/FINAL_CONTROLS.csv": "3f9d749446e94e29432c6faa5961ba32bd18fefe7dc13690934d3897c2d2cb79",
+    "paper15_final1/tables/FINAL_SENSITIVITIES.csv": "4d9d0debb7bde3f331dca0cf045f12dddb993d0c3e41c41c66d4ec0d05938101",
+    "paper15_final1/tables/FINAL_SOURCE_AND_C_QC.csv": "d2f1ec91513cbd4fed793421870afac5a9edc179c9305ff24698fd6b4f7a248a",
+    "paper15_m0/SOURCE_REGISTRY.md": "daaf68b84b8081717c4d8be1c15a764b6849ae21f28c24be63e809a05bb15bc0",
+    "paper15_m1/COHORT.csv": "b1b29b6f70f81bee2d96884670f1b2105610b676bc489a58a479b253d7fc148c",
+    "paper15_m1/FEATURE_MODELS.md": "37ef100353913eb2a99d92ffb9404093b2d850ce326fd6b497dec31ec2453b4e",
+    "paper15_m1/NUMERICAL_POLICY.json": "cc0c926b04540f1787e0a005f6566bf42225cb2bca159fd9accdd3e74ab0358e",
+    "paper15_m1/NUMERICAL_SELECTION.md": "6580c55effc5ce13f07649279a39a009a66734407312413681d40e941a16bbef",
+    "paper15_m1/PROTOCOL_FREEZE.json": "298c8e9892db22b4ce130c745c54a73734891706654c15dfc2c2cf4272fa48c1",
+    "paper15_m1/SCIENTIFIC_PROTOCOL.md": "fbdc36c393456b02a87b7e23b15bf7aa422458478ff1a621a0e6f1bdf2da03cc",
+    "paper15_m1/SOURCE_QC.md": "da5ca1a926df11cdce32f786a6e1de5ea9ed7648a5ca73045a4bbead4b8407e7",
+    "paper15_m1/STATISTICS_CONTROLS.md": "3a2665cc43cffac9af7e33ae5c61d937f7caf9cb4ca89c4e692ae4dc39fa0254",
+    "paper15_r1/DEVELOPMENT_REPORT.md": "3f6d5cf6dbdc4b78b2fbced8267ca0dcf0042d6a272a670df77667fc52130979",
+    "paper15_r1/SELECTION_FREEZE.json": "58acfc619525b32500f60519675eb1d75fcef81ffd532932bfa108c116278bda",
+    "paper15_r1/features.py": "30d17b3a902429537e8b83fc9ac5a483933bdb8080ff890c5f43c6fc5f4dd3fd",
+    "paper15_r1/native_table.py": "fb7ca090776f2096a9ec3fd102afd0cc115d0bca3d01b57a8c6defabbc637aaf",
+    "paper15_r1/source.py": "ad8d0f786690d414f07568556d017e0bdb14edd0137fb246789e7ffb7cedddbb",
+    "paper15_r1/tables/B_SELECTION.csv": "e312db9bfd77fb0fec73d6e1896da115ae19bc11cbe824ec4e41a95a4b033c1b",
+    "paper15_r1/tables/COHORT_FINAL_NATIVE_QC.csv": "14ccaa4a410d1f8397c87ae73ed835909c254bc9101c1eaddd37c7ebccd613b9"
+  },
+  "status": "REVIEW_PREPARATION_ONLY",
+  "time": "2026-10-18T19:35:39.072971+00:00",
+  "writing_pitfalls": [
+    "Do not call 139 global mice the analyzed cohort;12/8reserved versus10/6admitted must remain distinct.",
+    "Do not transpose own-history B4-B3 and other-unit B4-B2.",
+    "Do not describe C as an optimized learned recurrent dynamical system or P12 optimizer-rescue model.",
+    "Do not average label-switched D/S coefficients;ensemble is per-bin jointmass.",
+    "Do not use T*U in loss normalization or nominal T*U when actual scored masks change.",
+    "Do not describe clipped features as clipped predicted rates or counts;C micro z itself un-clipped.",
+    "Do not report all intermediate/actual coefficients as nominal counts or claim equal capacity.",
+    "Do not impose arbitrary stim/goCue ordering or silently impute invalid wheel support.",
+    "Do not claim all QC is training-only:providergood/anatomy labels are upstream whole-session curation.",
+    "Do not repeat historical stage noFinalaccess statements as current status;M6oneD is complete and consumed.",
+    "Do not infer all S02/S03 failures from generic M6 wording;FinalS02sixavailable,S03fourunavailable.",
+    "Do not treat S03 four-mouse descriptive interval as coverage PASS or credit D/C/S with baseline sensitivity robustness.",
+    "Do not substitute significant reference p for75percent/positive-degradation disruption conjunction.",
+    "Do not treat N3 repeated slots as six independent wheel tests or D/C wheel evidence.",
+    "Do not equate negative/mixed/nonsignificant results to equivalence or absence of biology.",
+    "Do not claim independent-lab replication,causal/motor-command/allmovement/persistentbiologicalstates/discreteneuralatoms/CWP-NAP/humanBCI validation.",
+    "Do not call saved-table reproduction an independent raw-data/fit reproduction;no old reproduction command that reruns tests/models in this writing mission.",
+    "Do not invent author names,affiliations,ORCIDs,funding or bibliography;current oracle verifies archived attribution record,not fresh onlinebibliographic metadata."
+  ]
+}

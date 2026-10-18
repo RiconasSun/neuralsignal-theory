@@ -1,0 +1,536 @@
+# CCPN / NEURALSIGNAL — PAPER 15 MASTER PROMPT 5/5
+
+MISSION: P15-M7-FULL-MANUSCRIPT-AND-PUBLICATION-PACKAGE
+
+BASE:
+origin/test @ bdec0e19621cc8018abe11c5633ce76aff611443
+
+MODE: SCIENCE-FIRST / RESULTS-LOCKED / MANUSCRIPT PRODUCTION
+
+PRIORITY: HIGH
+
+## 0. EXPLICIT AUTHORIZATION
+
+I authorize Paper 15 manuscript preparation, supplementary materials, figures, PDFs, scientific claim auditing, and reproducibility documentation.
+
+This is a RESULTS-LOCKED WRITING AND REPORTING MISSION.
+
+No new neural data collection, model fitting, model selection, hyperparameter tuning, hypothesis testing or Final D assessment is authorized.
+
+No second Final D evaluation.
+
+The scientific results of M0–M6 are fixed.
+
+Preserve all original source evidence and negative or inconclusive scientific outcomes.
+
+## 1. AUTHORITATIVE SCIENTIFIC SOURCES
+
+Read and verify:
+
+paper15_m0/
+paper15_m1/
+paper15_dev/
+paper15_r1/
+paper15_final1/
+
+In particular:
+
+paper15_m1/SCIENTIFIC_PROTOCOL.md
+paper15_m1/FEATURE_MODELS.md
+paper15_m1/SOURCE_QC.md
+paper15_m1/STATISTICS_CONTROLS.md
+
+paper15_r1/DEVELOPMENT_REPORT.md
+
+paper15_final1/FINAL_SCIENTIFIC_REPORT.md
+paper15_final1/results/FINAL_DELIVERY.json
+
+And all relevant archived animal-level, numerical, sensitivity, control and independent-review tables.
+
+Verify immutable source identities and historical protocol boundaries.
+
+Never replace archived scientific results with values reconstructed from assumptions.
+
+Use saved calculations and verified result tables as the authoritative scientific record.
+
+Cross-check manuscript numbers against archived primary evidence.
+
+Do not execute any neural prediction worker.
+
+Do not read or reassess Final D neural arrays.
+
+## 2. MANUSCRIPT POSITIONING
+
+Working title:
+
+"Predictive Contributions of Local Spike History in Mouse Primary Motor Cortex: A Development and Independent-Animal Descriptive Evaluation"
+
+Article type:
+
+Methods-oriented empirical secondary analysis with exploratory Development and descriptive independent-animal evaluation.
+
+Primary scientific question:
+
+Does strictly past local mouse MOp spike history contribute predictive information beyond a strong task, stimulus, wheel-movement and firing-rate nuisance baseline?
+
+Secondary question:
+
+Do compact discrete-state and continuous-history representations improve prediction beyond the strong combined history model?
+
+Core contribution:
+
+A reproducible, causally indexed comparison of local neural-history prediction, conventional nuisance/history baselines, and compact dynamical representations using public mouse motor-cortex electrophysiology.
+
+Do not frame the study as a discovery of physical cognitive primitives.
+
+## 3. COMPLETE SCIENTIFIC RESULTS
+
+Use exact archived values.
+
+Development:
+
+10 admitted mice from 8 laboratories.
+
+Primary B4-B1:
++0.1125291851306621 nats/unit-bin.
+
+95% CI:
+[0.06745810552609997, 0.16368155129436163].
+
+Final:
+
+Eight original reserved animals.
+Six admitted animals from four laboratories.
+
+Two exclusions:
+- NYU-21: native wheel strict-order failure.
+- UCLA033: six C-qualified units, below the frozen eight-unit requirement.
+
+Primary B4-B1:
++0.08658239652342035 nats/unit-bin.
+
+95% CI:
+[0.04944033234175033, 0.14110164811873427].
+
+One-sided raw sign-flip p:
+0.015625.
+
+All six Final primary mouse effects are positive.
+
+However:
+
+SCIENTIFIC VERDICT = DESCRIPTIVE ONLY.
+
+This label is mandatory throughout the paper.
+
+Do not describe the Final primary as confirmed, validated, robustly established or causally identified.
+
+The eight-mouse confirmation floor is unmet.
+
+The Final CI width is approximately 0.0916613, exceeding the frozen 0.01 precision requirement.
+
+The statistical result remains conditional on the original mouse-effect symmetry and independence assumptions.
+
+## 4. SECONDARY RESULTS
+
+Report all five registered secondary contrasts.
+
+Final means:
+
+B4-B3:
++0.05208972400526927
+
+B4-B2:
++0.006353386392021677
+
+D-B4:
++0.00235862122254638
+
+C-B4:
++0.00013410738971923112
+
+D-S:
++0.0016697806796088692
+
+Units: nats per actual scored nominal curated-release unit-bin.
+
+Report exact archived confidence intervals, raw p-values and Holm-adjusted p-values in the original registered comparison order.
+
+All five secondary Holm-adjusted tests are nonsignificant.
+
+At n=6, the registered exhaustive two-sided sign-flip resolution makes the smallest possible five-test Holm-adjusted p-value 0.15625.
+
+Explain this limitation accurately.
+
+Do not reinterpret nonsignificance as equivalence.
+
+Do not claim D or C superiority.
+
+Do not claim persistent discrete biological states.
+
+The Development D-B4 mean was negative while the Final descriptive mean was positive; report this difference without inventing a new pooled test or biological transition.
+
+## 5. FALSIFICATION AND ROBUSTNESS
+
+Report the eleven registered sensitivity cases, including failures and unavailable panels.
+
+Explain which sensitivities were baseline-only.
+
+Never attribute B0-B4 sensitivity-refit results to D/C/S.
+
+Report all four registered finite-reference suites and their actual available populations.
+
+Primary Final N1:
+6/6 mice exceed the reference median.
+Original descriptive disruption gate passed.
+
+Primary Final N2:
+6/6 mice exceed the reference median.
+Original descriptive disruption gate passed.
+
+But Development N1:
+7/10, below the frozen 8/10 condition.
+
+N4:
+Unavailable at the aggregate level for both Development and Final, with only three qualifying Final mice.
+
+Do not describe these surrogate procedures as assumption-free exact causal or mechanistic null tests.
+
+N3 measures wheel-related B4 likelihood reliance, not all-movement independence or an independent D/C wheel null.
+
+Preserve failed D-B4 and D-S descriptive disruption conditions.
+
+Explain that positive N1/N2 observations in Final do not override the prospectively restricted DESCRIPTIVE ONLY verdict.
+
+## 6. MAIN MANUSCRIPT STRUCTURE
+
+Produce a complete English-language scientific manuscript with:
+
+Title
+
+Author and affiliation placeholders, without inventing personal names, institutional appointments or ORCIDs.
+
+Abstract (approximately 200–250 words).
+
+Introduction:
+- Temporal predictive structure in neural populations
+- The distinction between task/movement information and local neural history
+- Why simple history-aware GLMs are demanding comparison baselines
+- Why compact latent-state models require strong falsification
+
+Methods:
+- Public IBL Brain Wide Map source
+- License and precise provenance
+- Source cohort definition and attrition
+- Original MOp anatomy and unit selection
+- Development versus Final partition
+- Native acquisition/support/timing contract
+- Strictly past wheel and neural predictors
+- Poisson B0-B4 models
+- Conditional Poisson HMM D
+- Continuous-history C
+- Static mixture S
+- Development selection
+- Final C calibration and single D assessment
+- Animal-level statistics and assumptions
+- Sensitivity and finite-reference tests
+
+Results:
+- Feasibility and population selection
+- Native data QC
+- Development predictive gains
+- Independent Final descriptive gains
+- Own versus population-history contributions
+- D/C versus B4 comparison
+- D versus static mixture
+- Falsification and sensitivity results
+- Animal/laboratory heterogeneity
+
+Discussion:
+- What the observed predictive increments support
+- What they do not establish
+- Development-to-Final consistency and differences
+- Six-mouse precision and inference limitations
+- Model-capacity and representation limitations
+- Source annotation, movement and anatomy confounds
+- Future work requiring new independent cohorts
+
+Limitations
+
+Conclusion
+
+Data Availability
+
+Code Availability
+
+Funding and Competing Interests placeholders
+
+Acknowledgments
+
+References
+
+Use scientifically restrained prose, not promotional slogans.
+
+## 7. SUPPLEMENTARY MATERIAL
+
+Produce a complete supplementary document containing:
+
+- Exact data versions and access methods
+- Original cohort identifiers and exclusions
+- Per-mouse lab/session/probe identities
+- Final selected unit IDs and QC summaries
+- Trial partition and observation-mask rules
+- Native timing and binary64 correction provenance
+- Full model equations and parameter counts
+- Hyperparameter grids, seeds and numerical policies
+- Development model-selection records
+- Complete Final numerical acceptance
+- All six contrast result tables
+- Uncertainty and multiplicity methods
+- All eleven sensitivity panels
+- All four reference suites
+- Missing and failed control outcomes
+- Animal and lab heterogeneity tables
+- Exact limitations and claim-audit mappings
+- Reproduction and environment instructions
+
+The earlier timestamp-serialization failure and separately authorized corrective execution should be documented as a transparent methodological correction.
+
+Do not bury scientific failures in the supplement.
+
+## 8. PUBLICATION-QUALITY FIGURES
+
+Generate figures from frozen saved result tables only.
+
+Suggested figure set:
+
+Figure 1:
+Study design, original 20-mouse allocation and actual Development/Final attrition.
+
+Figure 2:
+Primary B4-B1 animal-level Development and Final effects, separately displayed.
+
+Figure 3:
+All six model contrasts, with correct signs, units and uncertainty.
+
+Figure 4:
+Own-history and population-history contribution comparisons.
+
+Figure 5:
+N1/N2/N3/N4 falsification outcomes and unavailable coverage.
+
+Figure 6:
+Sensitivity analyses across unit-count, history, binning, saturation and drift conditions.
+
+Figure 7:
+Anatomical composition and laboratory/animal heterogeneity.
+
+Figures may be consolidated when doing so improves clarity.
+
+Use actual values, not schematic effect-size illustrations masquerading as measured data.
+
+Every axis must identify units.
+
+Every error bar must identify the interval type and independent statistical unit.
+
+Represent unavailable tests visibly, rather than hiding them.
+
+Do not use asterisks or color to suggest confirmation when the full registered criterion failed.
+
+Export high-resolution PNG/SVG/PDF figure files where supported.
+
+## 9. SCIENTIFIC AUTHOR REVIEW
+
+Before finalizing the manuscript, conduct a claim-by-claim author-style scientific review.
+
+Check explicitly:
+
+A. Is the primary descriptive result accurately described?
+
+B. Does the title avoid confirmation/causal implications?
+
+C. Are the 10 Development and 6 Final animals distinguished everywhere?
+
+D. Are the eight originally reserved Final mice and two attrition reasons disclosed?
+
+E. Is the five-test Holm resolution limitation explained?
+
+F. Are N1/N2 successes and N4 unavailability handled without selective interpretation?
+
+G. Are the negative or inconclusive D/C findings represented fairly?
+
+H. Are movement, anatomy, artifacts, sorting and laboratory dependencies disclosed?
+
+I. Are the originally frozen thresholds preserved?
+
+J. Are source licensing and bibliographic attribution verifiable?
+
+Any claim without direct archived evidence must be removed or weakened.
+
+Do not fabricate external peer review.
+
+If an issue requires new neural experiments, mark it as a limitation or future work; do not rerun Final D.
+
+## 10. REFERENCES AND ATTRIBUTION
+
+Verify and cite the relevant original IBL Brain Wide Map work and official public-release documentation.
+
+Identify the actual dataset version, source provider and CC BY 4.0 conditions.
+
+Cite original methodological references for point-process GLMs, spike-history prediction, latent-state models and permutation/sign-flip testing where verified and relevant.
+
+No fabricated papers, DOIs, author details or citation metadata.
+
+Use primary sources when reasonably available.
+
+Distinguish earlier work from the present secondary analysis.
+
+Do not assert publication acceptance, peer review or bioRxiv acceptance.
+
+## 11. A1–A10 SCIENTIFIC CLAIM AUDIT
+
+Produce A1–A10 evidence coverage:
+
+A1 — Research question and frozen protocol
+
+A2 — Data provenance, licensing and cohort
+
+A3 — Recording/source/physiological QC
+
+A4 — Exact mathematical models and strong baselines
+
+A5 — Development/Final separation and leakage prevention
+
+A6 — Primary and secondary effects/statistics
+
+A7 — Falsification/sensitivity and failed controls
+
+A8 — One-shot Final D integrity
+
+A9 — Negative findings, limits and prohibited claims
+
+A10 — Reproducible archival deliverables
+
+Every section must reference actual saved artifacts and manuscript figures/tables.
+
+Do not manufacture completion of any missing original scientific gate.
+
+## 12. REPRODUCIBILITY
+
+Provide one-command saved-only scientific reproduction where feasible.
+
+It may:
+- Verify archived data-source identities
+- Recompute published tables from saved mouse-level outcomes
+- Verify statistical arithmetic
+- Re-render figures
+- Rebuild manuscript and supplement PDFs
+- Verify file consistency
+
+It must not:
+- Rerun Final D
+- Refit old Final models
+- Introduce new statistical tests
+- Change model parameters
+- Retrieve neural outcomes for a second scientific evaluation
+
+Distinguish saved-result reproduction from an independent reproduction of all raw-data fits.
+
+Provide documentation for the original data-processing procedure without bypassing the consumed one-shot evaluation boundary.
+
+## 13. COMPLETE PDF PRODUCTION
+
+Generate:
+
+- Main manuscript PDF
+- Supplementary PDF
+- All main figures
+- All supplementary tables/figures
+- Editable Markdown or LaTeX source
+- Reference bibliography
+- Reproduction guide
+- A1–A10 audit
+
+Use a clean academic manuscript layout.
+
+Requirements:
+- Readable mathematical equations
+- Proper figure placement and captions
+- No missing glyphs or clipped text
+- Consistent table formatting
+- Page numbers
+- Correct references and citations
+- Clearly differentiated Development and Final populations
+- No accidental inclusion of private local machine paths in the manuscript
+
+Inspect rendered PDFs for visual and content problems.
+
+Repair ordinary formatting and document-production defects autonomously.
+
+No scientific-result modification is authorized as a formatting repair.
+
+## 14. FINAL STATUS AND ARCHIVE
+
+Create a new versioned manuscript directory:
+
+paper15_manuscript/
+
+Do not overwrite prior scientific result packages.
+
+Deliver:
+
+MAIN_MANUSCRIPT.md or .tex
+MAIN_MANUSCRIPT.pdf
+
+SUPPLEMENT.md or .tex
+SUPPLEMENT.pdf
+
+figures/
+tables/
+references/
+A1_A10_CLAIM_AUDIT.md
+REPRODUCIBILITY.md
+AUTHOR_SCIENTIFIC_REVIEW.md
+FINAL_DELIVERY.json
+
+Preserve original Development and Final result hashes.
+
+Obtain independent internal document/scientific consistency review.
+
+Run saved-only reproduction.
+
+Commit and push the manuscript-only package to origin/test.
+
+Verify remote commit SHA, changed-file contents and clean working tree.
+
+Do not merge into main unless separately authorized.
+
+## TERMINAL VERDICTS
+
+Return:
+
+MANUSCRIPT_COMPLETE
+SUPPLEMENT_COMPLETE
+FIGURES_COMPLETE
+PDF_RENDER_PASS
+SCIENTIFIC_CLAIM_AUDIT_PASS
+SOURCE_ATTRIBUTION_PASS
+RESULT_NUMBERS_UNCHANGED
+FINAL_D_RERUN_COUNT=0
+SAVED_REPRODUCTION_PASS
+AUTHOR_REVIEW_REQUIRED_FOR_EXTERNAL_SUBMISSION
+BUG_COUNT
+WARN_COUNT
+GIT_COMMIT
+REMOTE_VERIFICATION
+
+A successful deliverable is a complete, truthful, technically polished scientific manuscript, including mixed and negative results.
+
+It is not a claim that the original confirmatory research criteria were met.
+
+SCIENCE FIRST.
+RESULTS LOCKED.
+NO SCIENTIFIC RETUNING.
+NO FINAL D REASSESSMENT.
+
+BEGIN P15 MANUSCRIPT PRODUCTION NOW.

@@ -1,0 +1,28 @@
+{
+  "fixture": "CRLF_trailing_tab",
+  "input_sha256": "f4a6cd5fbb89d9e56dc4886dcdd0fdee5b0e090d14cc40025be68bc0f628b208",
+  "expected_reject": true,
+  "actual_reject": true,
+  "exit_code": 3,
+  "first_probe_expected_exit_incorrectly": 2,
+  "first_probe_status": "PRESERVED in GIT_WHITESPACE_ADDITIONAL_TAB_TEST_1.json",
+  "fresh_conflicting_evidence": "Existing six fixtures show no-index clean diffs exit1 and whitespace diffs exit3; no-index difference bit1 combines with whitespace-error bit2.",
+  "repair": "Require actual whitespace diagnostic and nonzero whitespace-error bit; no expected badcase changed, no assertion on content weakened.",
+  "command": [
+    "git",
+    "-c",
+    "core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol",
+    "-c",
+    "diff.astextplain.binary=true",
+    "diff",
+    "--no-textconv",
+    "--no-index",
+    "--check",
+    "--",
+    "/dev/null",
+    "paper15_manuscript\\work\\whitespace_fixtures\\CRLF_trailing_tab.txt"
+  ],
+  "publication_changes": 0,
+  "status": "PASS_CURRENT_ADDITIONAL_NEGATIVE_FIXTURE",
+  "checked_exit_rule": "Actual trailingwhitespace diagnostic and (exitcode &2)==2"
+}

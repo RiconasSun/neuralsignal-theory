@@ -1,0 +1,41 @@
+{
+  "mission": "P15-M7-FULL-MANUSCRIPT-AND-PUBLICATION-PACKAGE",
+  "saved_reproduction_build5": "PASS before visual review",
+  "visual_review1": "REPAIR_REQUIRED",
+  "issues": [
+    {
+      "issue": "Figure5/6 footer overlaps axis labels",
+      "repair": "Reserve bottom margin and position annotations inside fixed figure coordinates; no values changed"
+    },
+    {
+      "issue": "Supplement mojibake from default Windows read_text decoding in a transient authoring command",
+      "repair": "Strict cp1252 encode then UTF8 decode recovers original symbols; explicit UTF8 throughout renderer and future edits"
+    },
+    {
+      "issue": "Orphan final reference pages",
+      "repair": "Dedicated readable9pt bibliography style"
+    },
+    {
+      "issue": "Page number assertion assumed extraction order",
+      "classification": "TEST_BUG",
+      "evidence": "PDF drawing order puts footer before body; actual right-footer region now checked on every page"
+    },
+    {
+      "issue": "Unified control coverage originally read document rather than suite level",
+      "repair": "Iterate all4saved suites for16mice;64coverage rows now exact,existing aggregate results unchanged"
+    },
+    {
+      "issue": "Exact statistic numerals split in narrow cells",
+      "repair": "Widen mean column; copy full saved mean/CI strings"
+    }
+  ],
+  "failed_logs": [
+    "BUILD_1.log",
+    "BUILD_2.log",
+    "BUILD_3.log",
+    "BUILD_4.log",
+    "PDF_QA_1.log"
+  ],
+  "source_results_changed": false,
+  "Final_D_reruns": 0
+}

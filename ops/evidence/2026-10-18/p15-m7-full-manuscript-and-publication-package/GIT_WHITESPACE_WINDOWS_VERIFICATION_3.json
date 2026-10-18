@@ -1,0 +1,178 @@
+{
+  "policy": "Command-local CRLF and binary-PDF recognition preserving frozen bytes; rawartifact check without installed PDF textconv; all ordinary whitespace checks retained. No persistent Git configuration changed.",
+  "command_prefix": [
+    "git",
+    "-c",
+    "core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol",
+    "-c",
+    "diff.astextplain.binary=true"
+  ],
+  "flags": [
+    "--no-textconv"
+  ],
+  "fixtures": [
+    {
+      "fixture": "LF_clean",
+      "sha256": "e49c81e2d2f84e259d40e2fb8192f3bcd198b355184845d76d8f58807d0d78ee",
+      "expected_whitespace_rejection": false,
+      "observed_rejection": false,
+      "exit_code": 1
+    },
+    {
+      "fixture": "CRLF_clean",
+      "sha256": "98ab4d3aeab1e120560e942e2df6a0db1147bf94bafcf1590000ffb3c2b6fc80",
+      "expected_whitespace_rejection": false,
+      "observed_rejection": false,
+      "exit_code": 1
+    },
+    {
+      "fixture": "LF_trailing_space",
+      "sha256": "94282539899bace79ab7110cb3e34b89cbe2bc965c3a9023d229baec25a555ea",
+      "expected_whitespace_rejection": true,
+      "observed_rejection": true,
+      "exit_code": 3
+    },
+    {
+      "fixture": "CRLF_trailing_space",
+      "sha256": "36505a33e771dbdf3f78496d2353c55e3a46f6a9f47a158d1f7f108679aacfa0",
+      "expected_whitespace_rejection": true,
+      "observed_rejection": true,
+      "exit_code": 3
+    },
+    {
+      "fixture": "space_before_tab",
+      "sha256": "3daeeca814f6b6ae0306775c662bbe931e62aea95a20a8cb5f58d9e6bc893538",
+      "expected_whitespace_rejection": true,
+      "observed_rejection": true,
+      "exit_code": 3
+    },
+    {
+      "fixture": "blank_EOF",
+      "sha256": "b08a27b4becfd4c606ec55a152dafb24f2104f7cc7cbda0bae9d7ef08012ed51",
+      "expected_whitespace_rejection": true,
+      "observed_rejection": true,
+      "exit_code": 3
+    }
+  ],
+  "binary_PDFs": [
+    {
+      "path": "paper15_manuscript/MAIN_MANUSCRIPT.pdf",
+      "sha256": "f8a77fe5e7dbbcb2f260d43f24f22b369877fac6b7f7208317122ceadb1418b6",
+      "pages": 19,
+      "verified_binary_PDF_header": true
+    },
+    {
+      "path": "paper15_manuscript/SUPPLEMENT.pdf",
+      "sha256": "85e08d3ad0f57ec1d696cc095d2f4f67923cbea02ef89dff7d7ff9f9556cf500",
+      "pages": 36,
+      "verified_binary_PDF_header": true
+    },
+    {
+      "path": "paper15_manuscript/figures/Figure_1_Design_and_attrition.pdf",
+      "sha256": "bec05c3ce3b6ec28d7f9aab4b48f20a3a1b5b4723338080179ac51fffb98dec6",
+      "pages": 1,
+      "verified_binary_PDF_header": true
+    },
+    {
+      "path": "paper15_manuscript/figures/Figure_2_Primary_mouse_effects.pdf",
+      "sha256": "06516f4bf4086da80efb2c7db354a73b2ec7e5bcd3130478be644da240ee2235",
+      "pages": 1,
+      "verified_binary_PDF_header": true
+    },
+    {
+      "path": "paper15_manuscript/figures/Figure_3_All_registered_contrasts.pdf",
+      "sha256": "380a8e2de8801f949f81dabbd89c5d93b2cfe30fa2ed228190c0ee2960310282",
+      "pages": 1,
+      "verified_binary_PDF_header": true
+    },
+    {
+      "path": "paper15_manuscript/figures/Figure_4_Own_and_other_history.pdf",
+      "sha256": "2476a3e94d0cc5124b28dcc05226020ea601c9c39f32f8bc7d283e446304deb0",
+      "pages": 1,
+      "verified_binary_PDF_header": true
+    },
+    {
+      "path": "paper15_manuscript/figures/Figure_5_Reference_outcomes.pdf",
+      "sha256": "8fd06b0e095b3e794c8d08f2ac564c3464633896b879b375813db70b8c3e6436",
+      "pages": 1,
+      "verified_binary_PDF_header": true
+    },
+    {
+      "path": "paper15_manuscript/figures/Figure_6_Final_baseline_sensitivities.pdf",
+      "sha256": "3f10a2a92fd0155d0c77fdc67a128233ead469e9198798b7d0ad1eeca25fc255",
+      "pages": 1,
+      "verified_binary_PDF_header": true
+    },
+    {
+      "path": "paper15_manuscript/figures/Figure_7_Anatomy_and_laboratories.pdf",
+      "sha256": "cce60e6e55de0186dd40ece286506c37f94cd71c7c08f3a00b40782ecfe0f976",
+      "pages": 1,
+      "verified_binary_PDF_header": true
+    },
+    {
+      "path": "ops/evidence/2026-10-18/p15-m7-full-manuscript-and-publication-package/rejected_publication_candidate_1/MAIN_MANUSCRIPT.pdf",
+      "sha256": "a1c92bab91e07c0609eaec2cf907023845f53757c7fadc68eb3a90f26d7d70d9",
+      "pages": 19,
+      "verified_binary_PDF_header": true
+    },
+    {
+      "path": "ops/evidence/2026-10-18/p15-m7-full-manuscript-and-publication-package/rejected_publication_candidate_1/SUPPLEMENT.pdf",
+      "sha256": "aac3bd81bddc5e298eb407640e44ac974d9feb53345e43ced880c2ea5fd1f31b",
+      "pages": 36,
+      "verified_binary_PDF_header": true
+    },
+    {
+      "path": "ops/evidence/2026-10-18/p15-m7-full-manuscript-and-publication-package/rejected_publication_candidate_1/figures/Figure_1_Design_and_attrition.pdf",
+      "sha256": "bec05c3ce3b6ec28d7f9aab4b48f20a3a1b5b4723338080179ac51fffb98dec6",
+      "pages": 1,
+      "verified_binary_PDF_header": true
+    },
+    {
+      "path": "ops/evidence/2026-10-18/p15-m7-full-manuscript-and-publication-package/rejected_publication_candidate_1/figures/Figure_2_Primary_mouse_effects.pdf",
+      "sha256": "927940360b62b233ddd28958dcf518df50d323b04611f728a7518f5f264345b8",
+      "pages": 1,
+      "verified_binary_PDF_header": true
+    },
+    {
+      "path": "ops/evidence/2026-10-18/p15-m7-full-manuscript-and-publication-package/rejected_publication_candidate_1/figures/Figure_3_All_registered_contrasts.pdf",
+      "sha256": "380a8e2de8801f949f81dabbd89c5d93b2cfe30fa2ed228190c0ee2960310282",
+      "pages": 1,
+      "verified_binary_PDF_header": true
+    },
+    {
+      "path": "ops/evidence/2026-10-18/p15-m7-full-manuscript-and-publication-package/rejected_publication_candidate_1/figures/Figure_4_Own_and_other_history.pdf",
+      "sha256": "2476a3e94d0cc5124b28dcc05226020ea601c9c39f32f8bc7d283e446304deb0",
+      "pages": 1,
+      "verified_binary_PDF_header": true
+    },
+    {
+      "path": "ops/evidence/2026-10-18/p15-m7-full-manuscript-and-publication-package/rejected_publication_candidate_1/figures/Figure_5_Reference_outcomes.pdf",
+      "sha256": "8fd06b0e095b3e794c8d08f2ac564c3464633896b879b375813db70b8c3e6436",
+      "pages": 1,
+      "verified_binary_PDF_header": true
+    },
+    {
+      "path": "ops/evidence/2026-10-18/p15-m7-full-manuscript-and-publication-package/rejected_publication_candidate_1/figures/Figure_6_Final_baseline_sensitivities.pdf",
+      "sha256": "3f10a2a92fd0155d0c77fdc67a128233ead469e9198798b7d0ad1eeca25fc255",
+      "pages": 1,
+      "verified_binary_PDF_header": true
+    },
+    {
+      "path": "ops/evidence/2026-10-18/p15-m7-full-manuscript-and-publication-package/rejected_publication_candidate_1/figures/Figure_7_Anatomy_and_laboratories.pdf",
+      "sha256": "cce60e6e55de0186dd40ece286506c37f94cd71c7c08f3a00b40782ecfe0f976",
+      "pages": 1,
+      "verified_binary_PDF_header": true
+    }
+  ],
+  "nonexempt_paths_checked_before_new_metadata": 228,
+  "all_nonexempt_exit": 0,
+  "exact_exemption_policy_sha256": "191cfc9d6beaf4cb4a4ae74f87545b0673dcad1c37b6c9240179bafa8de5b5d0",
+  "actual_exempt_diagnostic_count": 1745,
+  "raw_output": {
+    "path": "paper15_manuscript/work/GIT_DIFF_CHECK_BINARY_CRLF_3.log",
+    "sha256": "888f5558be9fb8fdf3456f79b2e15981f1c409a74a49ce3a0e1e813bab7ebf57",
+    "bytes": 284707
+  },
+  "scientific_candidate_unchanged": "c98ee27cd207a556ac087fb220f05b81392ae2dbe01f4629d0c5682eb3bc94f7",
+  "publication_or_source_edits": 0
+}

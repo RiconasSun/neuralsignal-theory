@@ -1,0 +1,35 @@
+Verified immutable saved source identities 3099
+Copied saved tables and reproduced original mouse arithmetic
+Seven figures exported to PNG/SVG/PDF
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper15_manuscript\build.py", line 24, in <module>
+    if __name__=='__main__':run()
+                            ^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper15_manuscript\build.py", line 14, in run
+    render_documents();print('Main manuscript and supplement PDF produced',flush=True)
+    ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper15_manuscript\render.py", line 193, in render_documents
+    for name in ['MAIN_MANUSCRIPT','SUPPLEMENT']:pdf(name)
+                                                 ^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper15_manuscript\render.py", line 163, in pdf
+    story.append(math_flow(expr[:-2].strip()));continue
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper15_manuscript\render.py", line 150, in math_flow
+    mathtext.math_to_image('$'+expression+'$',str(target),dpi=400,format='png',color='#24313b')
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper15_manuscript\work\render-runtime\Lib\site-packages\matplotlib\mathtext.py", line 134, in math_to_image
+    width, height, depth, _, _ = parser.parse(s, dpi=72, prop=prop)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper15_manuscript\work\render-runtime\Lib\site-packages\matplotlib\mathtext.py", line 86, in parse
+    return self._parse_cached(s, dpi, prop, antialiased, load_glyph_flags)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper15_manuscript\work\render-runtime\Lib\site-packages\matplotlib\mathtext.py", line 100, in _parse_cached
+    box = self._parser.parse(s, fontset, fontsize, dpi)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper15_manuscript\work\render-runtime\Lib\site-packages\matplotlib\_mathtext.py", line 2167, in parse
+    raise ValueError("\n" + ParseException.explain(err, 0)) from None
+ValueError: 
+\eta^{B0}_{tu}=\alpha_u,\qquad \eta^{B1}_{tu}=\alpha_u+\beta_u^{\mathsf T}x_t.
+                                                                ^
+ParseSyntaxException: Unknown symbol: \mathsf, found '\'  (at char 64), (line:1, col:65)

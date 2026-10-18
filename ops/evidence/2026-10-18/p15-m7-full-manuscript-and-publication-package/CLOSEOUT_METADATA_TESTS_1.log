@@ -1,0 +1,17 @@
+..E..
+======================================================================
+ERROR: test_missing_current_readback_never_becomes_terminal (__main__.ClosureMetadataTests.test_missing_current_readback_never_becomes_terminal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "ops/evidence/2026-10-18/p15-m7-full-manuscript-and-publication-package/test_closeout.py", line 26, in test_missing_current_readback_never_becomes_terminal
+    with self.assertRaises(AssertionError):fn(Path('s'),Path('n'),Path('r'),Path('g'),terminal=True)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\ops\evidence\2026-10-18\p15-m7-full-manuscript-and-publication-package\closeout.py", line 75, in matrix
+    baseline=read(E/'baseline.json');assert baseline['source_sha256']==sha(E/'OWNER_REQUEST.txt')
+                                            ~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'source_sha256'
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.003s
+
+FAILED (errors=1)

@@ -1,0 +1,13 @@
+# Prospective manuscript contract
+
+Mission P15-M7-FULL-MANUSCRIPT-AND-PUBLICATION-PACKAGE; BASE bdec0e19621cc8018abe11c5633ce76aff611443; 326 atomic owner-line/operational requirements in baseline.json, frozen before manuscript code edits. One results-locked Method Paper. Product intent is explicit; ENGINEER_MODE for document production, then REVIEW_MODE and CLOSURE_MODE.
+
+Actor: scientific authors. Outcome: complete truthful English manuscript and supplement, seven publication-quality saved-result figures and underlying tables, editable sources, verified references, PDFs, A1-A10 and A-J reviews, saved-only one-command reproduction and verified origin/test handoff. Final scientific interpretation remains DESCRIPTIVE ONLY throughout. Development10/8labs, Final originally8/admitted6/4labs. Preserve every source/QC/numerical/precision/control failure and historical correction.
+
+Preservation: all five original scientific packages and archived source/review dependencies are hashed in SOURCE_HASHES.json. No neural arrays/work caches are inputs; do not import or execute prediction, fitting, selection, likelihood or AD/FD modules. No new statistics/hypotheses; only compare/reproduce existing saved arithmetic. No scientific thresholds or model changes. No fabricated identities/ORCIDs/funding, causal or confirmation labels. No external submission, main merge or Prompt beyond this mission.
+
+Scope: new paper15_manuscript, this mission evidence and a current daily prefix preserving exact BASE bytes. No old file edits. Minimum patch means complete original contract, not a reduced draft. Full main/supplement and all requested metadata must exist. Scientific failures are findings, not publication success.
+
+L0-L2 document oracle: exact input/hash equality; all six contrasts in registered order; every mouse/lab/sensitivity/reference/fit/selection row retained; figures use saved values and explicitly named units/intervals; all PDFs render without missing glyphs/clipping and private machine paths; citations verified from primary public sources; output/table/bibliography/PDF consistency. Fresh independent scientific/document review after final relevant changes. No UI/channel scope.
+
+PASS requires full baseline verified, bug_count=0,warn_count=0,no shrink/deletions/substitutes, independent P0/P1=0, saved-only reproduction, actual remote changed-file hashes and clean current tree. Source/main templates absent as recorded; use explicit evidence artifacts rather than inventing templates. Current remote has test only; no invented main SHA. Exact-file staging, no force/main/PR. Tracked closure snapshots may precede actual transport; final live receipt goes to ignored work to avoid commit self-reference. STOP after handoff.
