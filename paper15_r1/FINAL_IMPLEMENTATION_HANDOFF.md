@@ -1,0 +1,11 @@
+# Conditional Final handoff; no access authorization
+
+R1 grants no Final C/D neural access,physiology,fitting,score,reference draw or assessment. The eight original Final mouse/session/probe identities remain frozen. Their entries in the current cohort table are marked NOT_REASSESSED_R1; an exact corrected Final timestamp packet has not been built here. Historical metadata identities/feasibility remain preserved in the preceding mission and are not new physiological admission.
+
+Reuse the reviewed original mathematical definitions,lossless binary64/typed/missingness importer,strict-past query policy,QCs and numerical gates only after separate Final authorization. Never import Development fitted coefficients,scalers,rates,unit selection or a favorable reference seed. Future C-only source preparation must apply the exact importer to original pinned Final task events and independently revalidate native masks/support/anatomy,wheel observations,C-only unit QC/ranks/scalers/fullsource ordinals and every calibration state before any D assessment. Native full-record neural decoding for C requires the separately explicit trusted-reader scope in original M1; R1 authorizes none.
+
+Actual B-selected global configurations and all Development outcomes/limitations must be complete and independently reviewed before Prompt4 consideration. Conditional implementation files or component/synthetic PASS are not selection/outcome/readiness evidence. Negative Development findings remain valid,exploratory findings; no tuning against E or hypothesis substitution is allowed.
+
+A future separately authorized Final plan retains original eight animals,minimumanimal/lab floors,model/bounds/seed/solver policy,all original numerical gates,case eligibility and positive-claim map. Fit only on C with no final model/grid search and freeze all coefficients/preprocessing/case states before independently reviewed one D batch. Preserve missing/failed gates,exact finite-reference controls and sixcontrast inference; no threshold relaxation,second D assessment or result-driven model rescue.
+
+R1 stops after reviewed Development completion or its required scientific blocker. No crypto/offline-key system,dataset search,automatic next mission or completed-paper claim is introduced.

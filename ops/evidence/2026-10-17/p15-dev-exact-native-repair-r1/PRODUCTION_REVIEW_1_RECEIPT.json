@@ -1,0 +1,61 @@
+{
+  "B_E_Final_access": false,
+  "command": "paper15_dev/work/runtime/Scripts/python.exe -B -W error::ResourceWarning -m unittest paper15_r1.test_models paper15_r1.test_features paper15_r1.test_worker -v",
+  "core_byte_identical_to_historical": [
+    "models.py",
+    "features.py",
+    "independent_ad.py",
+    "physiology.py"
+  ],
+  "environment": {
+    "MKL_NUM_THREADS": 1,
+    "OMP_NUM_THREADS": 1,
+    "OPENBLAS_NUM_THREADS": 1,
+    "PYTHONDONTWRITEBYTECODE": 1
+  },
+  "exact_61_configurations_equal_historical": true,
+  "full_native_input_gate_certified": false,
+  "gradient_fixture_sha256": "c71696d4699e7f1037ed5bd37e5b82d5ffe405f6cbe51ceb8e1a78024aec42c4",
+  "gradient_point_definitions": [
+    "initial",
+    "fixed_intermediate",
+    "synthetic_endpoint"
+  ],
+  "gradient_points": 24,
+  "limitation": "Numerical and worker component review only; real execution requires complete independent exact-native input review and exact production/input/plan binding",
+  "max_AD_scaled": 1.6653345369377348e-16,
+  "max_fixed_FD_scaled": 1.1584238013284676e-09,
+  "mission": "P15-DEV-EXACT-NATIVE-REPAIR-R1",
+  "real_fits": 0,
+  "reviewer": "/root/gradient_review",
+  "source_hashes": {
+    "cached_source.py": "cbc1a8cefdc2743cc96587f65c2dc9201a876cd843e3f0eee055f638268aa800",
+    "features.py": "30d17b3a902429537e8b83fc9ac5a483933bdb8080ff890c5f43c6fc5f4dd3fd",
+    "independent_ad.py": "8c69998bd1d03004325fb24d39c4d33fb4be15966b8e30321248d13480521ec0",
+    "metadata_access.py": "bd32678410e38a262150a015df1f6b896ac6f9fa62da1aaf169153ab37f2dfb9",
+    "models.py": "e13d12d3986b42ba1691075804df7b2ec6a033dcfe20fac36e5b6ed8e359ba90",
+    "physiology.py": "1e85584d4f779df9b063941b153715def105ad9cf006046fa7694eb1a12176fd",
+    "source.py": "ad8d0f786690d414f07568556d017e0bdb14edd0137fb246789e7ffb7cedddbb",
+    "test_features.py": "751fd03f1e084a9c7d1d35f5e001f43f028a18f2afc23a68a482b1ac6eb0b122",
+    "test_models.py": "3010b2979c9ca98bc6aee4c02992b9e657f5163c450c243a9aaf9dc1bbdac8af",
+    "test_worker.py": "75aa02a9a07713208ae52b610e227ae7d2e1f166ff4999bb4ab02e2420012ca1",
+    "training.py": "9bedaaa5b3cb4d96c25471d86edd84ab3501bb6b312fee6b2e0ceda826c3eb8c"
+  },
+  "status": "SYNTHETIC_PRODUCTION_COMPONENT_PASS",
+  "time": "2026-10-18T04:19:19.238092+00:00",
+  "training_function_hashes": {
+    "admitted": "8a71d1256087de058079858c8e0fa1d5c72bebaf5c12c257aafb56ddf73b88dd",
+    "baseline_availability": "f20859c14ba3e014323dd6cb1cf5998220ec01852f55d1e2a8a7a8fe0aef0978",
+    "build_model": "cd9074bc070d0e9dadefcad0e19a290221e31c031996daf27855fb78de3307f5",
+    "claim_attempt": "b32d6726db86f947e9ae32b45d80440902cb003c42dc473dfdb576df124594e0",
+    "configurations": "2013e3cd24aeb357c8dd8aebcbca3b18c5a42f7bc62df2de1f085666b6360bd7",
+    "execute": "2618e5de391ed11d8b5841cbe5beeb3e86141f551443028ad4cc5cd7e6424208",
+    "prepare": "567cd0bb0a13974c3b6528cf298ddd1a5de1e1ebe63251280e34b15a924a5412",
+    "register": "e661a213e14ea30e86cb77eeb8b858446fa116377819af7a29d4d1f03c93ba18",
+    "sha": "570e443652b61d29c2eba6dd59ed39f7be9cadb8934192ef52dd75f4c7af88d3",
+    "verify_completed_attempt": "0553dbc9ccf409eebaefb5ed370224ddfbe2c2a51afab5e4d6b82ccb7c3b7772"
+  },
+  "unittest_count": 33,
+  "unittest_exit_code": 0,
+  "unittest_failures": 0
+}

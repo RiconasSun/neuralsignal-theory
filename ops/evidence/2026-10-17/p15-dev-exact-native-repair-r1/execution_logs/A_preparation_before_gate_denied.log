@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper15_r1\training.py", line 206, in <module>
+    if action=='prepare':prepare()
+                         ^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper15_r1\training.py", line 29, in prepare
+    for subject in admitted():
+                   ^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper15_r1\training.py", line 22, in admitted
+    gate=load_json((P/'results/M2_PHYSIOLOGY_GATE.json').read_text(encoding='utf8'))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1058, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper15_r1\\results\\M2_PHYSIOLOGY_GATE.json'

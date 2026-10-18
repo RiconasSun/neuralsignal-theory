@@ -1,0 +1,20 @@
+# P15 R1 evidence and claim audit
+
+This is a corrective Method-paper Development track, not a completed paper or independent-animal validation. Original M1 hypotheses, all previous failures,20mouse identities/12Development8Final and source/holdout boundaries remain frozen. An old numerical PASS on rounded inputs is not a native scientific result.
+
+|Item|Prospective/current evidence location|Limit|
+|---|---|---|
+|A1 Protocol|Original paper15_m1/PROTOCOL_FREEZE; new owner/baseline/mission; A_FIT_PLAN|Only native representation repair and separate corrective budget authorized; no scientific equation,threshold,grid,seed or test-family amendment|
+|A2 Sources|SOURCE_FILE_FREEZE, original read-only cache receipts, twelve corrected metadata documents, FULL_A_SOURCE_REVALIDATION|Original12Development candidates reassessed;10admitted/8labs; eight Final identities retained without new neural/physiology access|
+|A3 Pipeline|native_table,source codecs,cached_source,reader,source/input/QC/scaler/ordinal audits; exact reviewed production gate|Finite binary64 bits/missingness/strict predecessor/fullrole A source verified before fitting; only source-authorized A observations are exported|
+|A4 Models|All new fits/ and sensitivity_fits/, original config grids/starts, numerical journals, ledger|Old358completed+1interrupted never recovered/reused; newmain/sensitivity/cumulative accounting separate and capped; optimizer success alone insufficient|
+|A5 Holdout|Stage claims/B selection/E exclusive batch and all role receipts; original8Final roster|Development E is exploratory; no Final C/D decoding/QC/fitting/scoring/release or independently held-out validation|
+|A6 Statistics|statistics.py; actual E_STATISTICS and per-mouse scores after valid batch|Actual nominal unit-bin denominators/equalmouse/exhaustive signflips/fixedHolm5/10kbootstrap; conditional symmetry/independence and lab limitations; absence of significance is not equivalence|
+|A7 Falsification|All eleven case states including unavailable, four fixed999reference journals, E summaries|No reference model refits/generated Poisson feedback; fixedRNG and immutable failed prefixes; no missing gate rescued by favorable subset/result|
+|A8 Input/QC leakage|All12native metadata,96642finite binary64 numeric cells,382487strictwheelqueries, all446unit QC/314qualified/80selected; independent fullinput review|96642counts numeric table cells, not distinct timestamps. ActualPL033224equal event excluded. Main and each case use A-only masks/QC/scales; no B/E-driven physiological selection|
+|A9 Failure/limits|Old paper15_dev/STOP_REPORT and unchanged old359attempts; new unsuccessful/successful reviews and all new numerical/coverage failures|No retroactive PASS; curated-release sampling,unknown artifacts,contact-index anatomy,unmeasured movements,smallmouse/lab denominators and exploratory scope remain|
+|A10 Reproduction|reproduce.ps1,saved_verify,saved_audit,saved_corrective,ARCHIVE_FREEZE and executed saved/Git receipts|Saved-output arithmetic/hash/synthetic verification only; no new raw neural access,real refit or second E prediction. Production and saved reproduction are distinct evidence|
+
+Actual B winners, six Development effects, confidence intervals,p-values,sensitivities and reference outcomes may be reported only after their real saved outputs exist and the complete one-shot E batch is independently reviewed. Until then those are NOT YET RUN; source and synthetic certificates are not scientific results. Report all negative,mixed,failed,inconclusive and unavailable panels.
+
+Always withheld in R1: held-out-animal confirmation,biological discrete primitives/causal mechanisms,all-movement independence,layer mechanism from atlas/contact proxies,human validation,independent-lab replication,CWP/NAP ontology proof or a completed-paper claim. Original per-contrast positive-claim conjunctions remain for a separately authorized Final stage; Development p-values cannot relax them or change models. Prompt4 requires separate explicit owner authorization after a complete reviewed Development handoff.

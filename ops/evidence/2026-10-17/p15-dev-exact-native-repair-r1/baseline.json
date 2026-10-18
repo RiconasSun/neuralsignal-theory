@@ -1,0 +1,1183 @@
+{
+  "base": "b0b692bd9b7e42f767117a51d0119644327a97f0",
+  "frozen_at": "2026-10-18T04:09:01.485084+00:00",
+  "mission": "P15-DEV-EXACT-NATIVE-REPAIR-R1",
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "requirement": "I authorize one prospective, versioned engineering repair of P15's native timestamp serialization defect and a bounded fresh Development execution.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-002",
+      "requirement": "This authorization does not amend the original scientific hypotheses, model equations, cohort allocation, physiological thresholds, statistical tests, hyperparameter grid, seeds or per-fit numerical acceptance rules.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-003",
+      "requirement": "The previous STOP verdict and all historical fit attempts remain immutable.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-004",
+      "requirement": "Explicitly authorize a separate corrective execution budget, as defined below, because the previous implementation did not satisfy the registered native-input fidelity contract.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-005",
+      "requirement": "Do not silently reset or erase the original attempt accounting.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-006",
+      "requirement": "No Final C/D neural access is authorized.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-007",
+      "requirement": "First verify and preserve the original:",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-008",
+      "requirement": "- 358 completed numerical PASS fits on rounded inputs.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-009",
+      "requirement": "- 1 interrupted STARTED fit without a valid endpoint.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-010",
+      "requirement": "- 251 configurations never started.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-011",
+      "requirement": "- 130 completed baseline fits.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-012",
+      "requirement": "- 228 completed D/C/S fits.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-013",
+      "requirement": "- Original 10-mouse / 8-laboratory provisional admission.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-014",
+      "requirement": "- Exact timing discrepancies and independent reviews.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-015",
+      "requirement": "- Original M1 protocol freeze.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-016",
+      "requirement": "These are historical execution records, not valid scientific results for the corrected native-source estimand.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-017",
+      "requirement": "Never overwrite them, silently relabel them as corrected, or reuse their fitted coefficients for scientific selection.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-018",
+      "requirement": "The interrupted fit must not be represented as successfully recovered.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-019",
+      "requirement": "The demonstrated defect is:",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-020",
+      "requirement": "`metadata_qc.py`",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-021",
+      "requirement": "uses:",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-022",
+      "requirement": "`tr.to_json(orient='records')`",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-023",
+      "requirement": "without an explicitly lossless timestamp representation.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-024",
+      "requirement": "This changes original binary64 event values, occasionally crossing strict-past wheel lookup boundaries.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-025",
+      "requirement": "Replace this source-event persistence mechanism with an exact binary64 round-tripping format.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-026",
+      "requirement": "Acceptable examples:",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-027",
+      "requirement": "- Typed NumPy float64 arrays with separate field/missingness metadata.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-028",
+      "requirement": "- Explicit float.hex()/float.fromhex() serialization.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-029",
+      "requirement": "- Another demonstrably bit-exact binary64 representation.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-030",
+      "requirement": "Do NOT assume merely increasing pandas JSON decimal precision always proves exact equivalence.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-031",
+      "requirement": "Preserve:",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-032",
+      "requirement": "- Original native numeric values.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-033",
+      "requirement": "- Missingness and nullable event semantics.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-034",
+      "requirement": "- Original trial row order and ordinals.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-035",
+      "requirement": "- Source IDs and field names.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-036",
+      "requirement": "- Event timestamps and role cuts.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-037",
+      "requirement": "- Wheel timestamps without quantization.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-038",
+      "requirement": "- Existing timebase units.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-039",
+      "requirement": "For every finite timestamp, independently verify exact float64 bit-pattern roundtrip.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-040",
+      "requirement": "For nonfinite/missing values, verify the original missingness classification and its scientific handling.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-041",
+      "requirement": "No new timestamp tolerance.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-042",
+      "requirement": "No synchronization offset or interpolation correction.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-043",
+      "requirement": "No source version, model or scientific cutoff changes.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-044",
+      "requirement": "Verify the exact frozen condition:",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-045",
+      "requirement": "wheel observation timestamp < prediction-bin start.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-046",
+      "requirement": "Use the existing:",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-047",
+      "requirement": "`searchsorted(..., side='left') - 1`",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-048",
+      "requirement": "semantics.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-049",
+      "requirement": "Build independent tests including the original PL033 trial 224 witness.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-050",
+      "requirement": "Require that the wheel event exactly equal to the original native boundary is excluded.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-051",
+      "requirement": "Test all registered predecessor queries:",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-052",
+      "requirement": "- Bin start",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-053",
+      "requirement": "- Bin minus 0.05 seconds",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-054",
+      "requirement": "- Bin minus 0.10 seconds",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-055",
+      "requirement": "- Bin minus 0.25 seconds",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-056",
+      "requirement": "- Bin minus 0.50 seconds",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-057",
+      "requirement": "- Epoch start",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-058",
+      "requirement": "Check strict-past lookup under exact equal timestamps, neighboring representable binary64 values, and missing wheel support.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-059",
+      "requirement": "The result must reproduce the actual native input contract, not the previous rounded contract.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-060",
+      "requirement": "Test the full 37 nuisance columns, including wheel columns 24\u201337, using independent source-level construction.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-061",
+      "requirement": "A synthetic test passing is insufficient if the original native witness still fails.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-062",
+      "requirement": "Using the exact original native source files, reconstruct Development metadata and the authorized A observations.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-063",
+      "requirement": "Reassess all 12 frozen Development candidate mice, including the two previously excluded animals.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-064",
+      "requirement": "Do not substitute another mouse/session/probe or change eligibility.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-065",
+      "requirement": "Recompute and independently verify:",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-066",
+      "requirement": "- Original native trial identities and timestamps.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-067",
+      "requirement": "- A/B/E whole-trial partitions and guards.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-068",
+      "requirement": "- Trial/recording observation support.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-069",
+      "requirement": "- Saturation exclusions.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-070",
+      "requirement": "- Causal behavioral support.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-071",
+      "requirement": "- Strict-past wheel indexes and feature values.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-072",
+      "requirement": "- A neural bin boundaries.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-073",
+      "requirement": "- Actual A target spike counts and histories.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-074",
+      "requirement": "- Physiological QC.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-075",
+      "requirement": "- Selected unit UUIDs and rankings.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-076",
+      "requirement": "- Refractory and rate measurements.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-077",
+      "requirement": "- A-only feature scalers.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-078",
+      "requirement": "- Role-local source spike ordinals required by S07.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-079",
+      "requirement": "- Every source and downstream input hash.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-080",
+      "requirement": "Do not use previously serialized rounded trial times as source truth.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-081",
+      "requirement": "Previous observations that target/history cells appeared unchanged in a limited audit do not replace this full source-level test.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-082",
+      "requirement": "Record exact differences versus historical A input exports.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-083",
+      "requirement": "Do not force agreement with invalid historical exports.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-084",
+      "requirement": "Apply the unchanged M1 requirements.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-085",
+      "requirement": "Require:",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-086",
+      "requirement": "- At least 8 valid Development mice.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-087",
+      "requirement": "- At least 4 distinct Development laboratories.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-088",
+      "requirement": "- Eight qualified MOp units per included mouse.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-089",
+      "requirement": "- Frozen A/B/E epoch coverage requirements.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-090",
+      "requirement": "- Source and numerical input integrity.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-091",
+      "requirement": "If the corrected cohort differs from the historical ten animals, explain every difference without changing the rules or reallocating animals.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-092",
+      "requirement": "If required coverage is not met, STOP before new model fitting.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-093",
+      "requirement": "Final mice remain reserved.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-094",
+      "requirement": "Final neural values, C physiology, D observations and C/D model fitting remain forbidden.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-095",
+      "requirement": "After source repair and before real refitting:",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-096",
+      "requirement": "Run the original required mathematical and numerical gates.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-097",
+      "requirement": "Retain:",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-098",
+      "requirement": "- Original exact model equations B0\u2013B4, D, C, S.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-099",
+      "requirement": "- Original float64 policy.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-100",
+      "requirement": "- Original solver and parameter constraints.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-101",
+      "requirement": "- Original PG, AD and finite-difference acceptance thresholds.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-102",
+      "requirement": "- Original lambda/state/rank/timescale grids.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-103",
+      "requirement": "- Original three D/S seeds.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-104",
+      "requirement": "- Original no-retry rule.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-105",
+      "requirement": "Revalidate actual integration of corrected inputs into the frozen production worker.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-106",
+      "requirement": "Ordinary implementation defects may be repaired before scientific attempts, with independent regressions.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-107",
+      "requirement": "Do not change mathematical objectives, solver tolerances or optimization budgets to force a PASS.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-108",
+      "requirement": "Create a versioned corrective execution ledger.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-109",
+      "requirement": "Historical ledger:",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-110",
+      "requirement": "359 previously started attempts, permanently retained.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-111",
+      "requirement": "New authorized budget:",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-112",
+      "requirement": "MAIN:",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-113",
+      "requirement": "- Maximum 61 fresh A attempts per corrected eligible Development mouse.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-114",
+      "requirement": "- Absolute new MAIN cap: 732 attempts.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-115",
+      "requirement": "- If exactly 10 mice qualify, maximum MAIN attempts: 610.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-116",
+      "requirement": "SENSITIVITY:",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-117",
+      "requirement": "- Only the original eleven cases.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-118",
+      "requirement": "- Maximum five B0\u2013B4 fits per applicable case per eligible Development mouse.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-119",
+      "requirement": "- Absolute new Development sensitivity cap: 660 attempts.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-120",
+      "requirement": "- If exactly 10 mice qualify, maximum: 550.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-121",
+      "requirement": "REFERENCE:",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-122",
+      "requirement": "- Only the original four fixed 999-replicate reference suites.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-123",
+      "requirement": "- No additional model fitting for these suites.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-124",
+      "requirement": "Every fresh fit has one original configuration, original start policy and no retries.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-125",
+      "requirement": "Do not initialize corrected fits from historical rounded-input coefficients.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-126",
+      "requirement": "No new seeds, solver budgets, favorable retry or post-result selection.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-127",
+      "requirement": "Log historical plus new attempt totals separately and cumulatively.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-128",
+      "requirement": "This new budget is explicitly authorized as a corrective execution amendment. It does not retrospectively assert compliance with the original aggregate attempt ceiling.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-129",
+      "requirement": "Stop at the caps; do not request another expansion automatically.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-130",
+      "requirement": "Only after the complete repaired input and production certification passes:",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-131",
+      "requirement": "A. Execute the fresh authorized Development A baseline and D/C/S fits.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-132",
+      "requirement": "B. Independently verify all required numerical results and failure journals.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-133",
+      "requirement": "C. Freeze eligible global model and hyperparameter choices using Development B only.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-134",
+      "requirement": "D. Register and execute the originally frozen Development sensitivity fits within the new budget.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-135",
+      "requirement": "E. Freeze the required E-batch implementation and control configuration.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-136",
+      "requirement": "F. Evaluate Development E once, producing all registered exploratory comparisons and controls.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-137",
+      "requirement": "Development E outcomes must never influence model selection, source/QC thresholds, feature construction or new scientific amendments.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-138",
+      "requirement": "Do not create a model winner before B selection is complete.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-139",
+      "requirement": "Failures and negative results are scientifically acceptable outputs.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-140",
+      "requirement": "Report the original primary contrast:",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-141",
+      "requirement": "B4 \u2212 B1.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-142",
+      "requirement": "Report the five secondary contrasts:",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-143",
+      "requirement": "- B4 \u2212 B3",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-144",
+      "requirement": "- B4 \u2212 B2",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-145",
+      "requirement": "- D \u2212 B4",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-146",
+      "requirement": "- C \u2212 B4",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-147",
+      "requirement": "- D \u2212 S",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-148",
+      "requirement": "Use exact scored nominal unit-bin denominators and equal-mouse aggregation.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-149",
+      "requirement": "Apply the frozen uncertainty and statistical procedures only to legitimately completed results.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-150",
+      "requirement": "Report all negative, mixed, failed, missing or inconclusive outcomes.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-151",
+      "requirement": "Do not promote Development results to independent held-out confirmation.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-152",
+      "requirement": "Do not claim biological discrete primitives, neural mechanisms, movement independence or CWP/NAP ontology validation.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-153",
+      "requirement": "If the final Development stage is scientifically incomplete, deliver a truthful STOP report.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-154",
+      "requirement": "Reuse compatible existing source readers, source inventories, math workers, synthetic tests and independent review evidence.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-155",
+      "requirement": "Do not rerun unrelated data-source investigations.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-156",
+      "requirement": "Avoid rebuilding an entire engineering framework around one timestamp serialization defect.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-157",
+      "requirement": "Prioritize:",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-158",
+      "requirement": "Lossless input repair \u2192 exact native verification \u2192 corrected A QC \u2192 numerical certification \u2192 fresh Development fits \u2192 B selection \u2192 E report.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-159",
+      "requirement": "No new unrelated infrastructure.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-160",
+      "requirement": "No offline cryptographic signing system.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-161",
+      "requirement": "No repeated full historical audits.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-162",
+      "requirement": "Preserve existing failures without duplicating thousands of unnecessary archive operations.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-163",
+      "requirement": "This mission does not authorize:",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-164",
+      "requirement": "- Final C neural access",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-165",
+      "requirement": "- Final C calibration",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-166",
+      "requirement": "- Final D neural access",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-167",
+      "requirement": "- Final D assessment",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-168",
+      "requirement": "- Reallocation of Final animals",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-169",
+      "requirement": "- A completed-paper claim",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-170",
+      "requirement": "- Any modification of original P15 scientific hypotheses based on Development results",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-171",
+      "requirement": "Prompt 4 requires separate explicit human authorization after a complete, independently reviewed Development handoff.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-172",
+      "requirement": "Return:",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-173",
+      "requirement": "- EXACT_NATIVE_REPAIR_PASS",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-174",
+      "requirement": "- NATIVE_TIME_BITWISE_VERIFICATION",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-175",
+      "requirement": "- STRICT_PAST_WHEEL_GATE",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-176",
+      "requirement": "- FULL_A_SOURCE_REVALIDATION",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-177",
+      "requirement": "- CORRECTED_ELIGIBLE_DEVELOPMENT_MICE",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-178",
+      "requirement": "- CORRECTED_DEVELOPMENT_LABS",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-179",
+      "requirement": "- PRODUCTION_NUMERICAL_PASS",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-180",
+      "requirement": "- ORIGINAL_ATTEMPTS_PRESERVED",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-181",
+      "requirement": "- NEW_MAIN_ATTEMPTS",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-182",
+      "requirement": "- NEW_SENSITIVITY_ATTEMPTS",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-183",
+      "requirement": "- TOTAL_CUMULATIVE_ATTEMPTS",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-184",
+      "requirement": "- B_SELECTION_FROZEN",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-185",
+      "requirement": "- DEVELOPMENT_E_COMPLETE",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-186",
+      "requirement": "- PRIMARY_DEVELOPMENT_EFFECT",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-187",
+      "requirement": "- SECONDARY_DEVELOPMENT_EFFECTS",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-188",
+      "requirement": "- FALSIFICATION_RESULTS",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-189",
+      "requirement": "- FINAL_C_ACCESS=false",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-190",
+      "requirement": "- FINAL_D_ACCESS=false",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-191",
+      "requirement": "- PROMPT_4_READY",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-192",
+      "requirement": "- BUG_COUNT / WARN_COUNT",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-193",
+      "requirement": "- GIT_COMMIT / REMOTE_VERIFICATION",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-194",
+      "requirement": "Require independent internal review and reproducible evidence.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-195",
+      "requirement": "Push only the authorized correction and new Development artifacts to origin/test.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    },
+    {
+      "id": "REQ-196",
+      "requirement": "Stop after valid Development completion or an evidence-backed scientific blocker.",
+      "status": "OPEN",
+      "verification": "Explicit stage evidence, original scope or preserved required stop"
+    }
+  ]
+}

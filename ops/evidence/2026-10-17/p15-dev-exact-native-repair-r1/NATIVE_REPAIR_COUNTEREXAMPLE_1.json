@@ -1,0 +1,46 @@
+{
+  "scope": "In-memory synthetic table only; no real source or neural arrays",
+  "candidate_native_table_sha256": "b409c7ad1273c4e9dbec69ca6b7e5394ecd515f2196cccb0c237b79d414782e8",
+  "candidate_metadata_qc_sha256": "d8b813edfd7a795286776ba65dd2dcb027ee3397367992158d2e8e3bc0829933",
+  "fixture": {
+    "n": 20,
+    "a": "numpy.arange(20)*3.",
+    "stimOn_times": "a+1.2",
+    "goCue_times": "stimOn_times-.1",
+    "feedback_times": "stimOn_times+.8",
+    "intervals_0": "a",
+    "intervals_1": "a+2.9",
+    "contrastLeft": ".25 except trial5 positive infinity",
+    "contrastRight": "NaN except trial5 .25",
+    "support": [0, 100],
+    "saturation": [],
+    "development": true
+  },
+  "observed": {
+    "native_inf": {
+      "kind": "binary64",
+      "bits": "7ff0000000000000",
+      "classification": "positive_infinity",
+      "hex": "inf"
+    },
+    "compatibility_value": null,
+    "verification": {
+      "finite_binary64_bit_patterns_verified": 120,
+      "classifications": {"finite": 120, "positive_infinity": 1, "nan": 19},
+      "original_row_order": true,
+      "bitwise_pass": true
+    },
+    "native_trial5_admitted": false,
+    "compatibility_trial5_admitted": true,
+    "changed_mask_rows": 1,
+    "compatibility_None_pdNA_NaN_positiveInf_negativeInf_all_None": true,
+    "finite_edge_cases_bitwise_verified": 8
+  },
+  "execution_exit_code": 0,
+  "resource_warning_policy": "error",
+  "real_source_bodies_read": 0,
+  "neural_arrays_read": 0,
+  "real_fits": 0,
+  "B_E_Final_access": false,
+  "interpretation": "Synthetic source/scientific-handling defect, not evidence that real source contains infinities"
+}
