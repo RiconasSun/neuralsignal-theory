@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper15_final1\saved_verify.py", line 41, in <module>
+    if __name__=='__main__':run()
+                            ^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper15_final1\saved_verify.py", line 19, in run
+    verify_archive(archive)
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper15_final1\saved_audit.py", line 55, in verify_archive
+    assert re.fullmatch('[0-9a-f]{64}',h) and sha(base/rel)==h,rel
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ops/evidence/2026-10-18/p15-m6-independent-final-validation/ARCHIVE_FREEZE_1.log
+Saved-only verification failed with exit 1
+At C:\Users\85993\Desktop\codebase\neuralsignal institute\paper15_final1\reproduce.ps1:11 char:28
++ ... DE -ne 0) { throw "Saved-only verification failed with exit $LASTEXIT ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (Saved-only veri...led with exit 1:String) [], RuntimeException
+    + FullyQualifiedErrorId : Saved-only verification failed with exit 1
+ 

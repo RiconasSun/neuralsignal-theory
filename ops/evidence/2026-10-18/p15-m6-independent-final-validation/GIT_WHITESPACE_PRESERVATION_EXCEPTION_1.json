@@ -1,0 +1,21 @@
+{
+  "check": [
+    "git",
+    "-c",
+    "core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol",
+    "diff",
+    "--cached",
+    "--check"
+  ],
+  "commit_or_push_executed": false,
+  "diagnostic": "ops/evidence/2026-10-18/p15-m6-independent-final-validation/NATIVE_SAVED_REPRODUCTION_1.log:19: trailing whitespace.\n+ \nops/evidence/2026-10-18/p15-m6-independent-final-validation/NATIVE_SAVED_REPRODUCTION_1.log:19: new blank line at EOF.\npaper15_final1/reference_evaluation.py:153: new blank line at EOF.\npaper15_final1/sensitivities.py:35: new blank line at EOF.\n",
+  "exit_code": 2,
+  "files": {
+    "ops/evidence/2026-10-18/p15-m6-independent-final-validation/NATIVE_SAVED_REPRODUCTION_1.log": "2357f003bec704c0ce70f062e342ba5298f20b18cd02c5a47d54ee8e66bc2f26",
+    "paper15_final1/reference_evaluation.py": "cba7b00e962a74d9175d13a454f6e0e92c0d71b92b3028bc00ef5525e2824572",
+    "paper15_final1/sensitivities.py": "256c27f8fa2df2a76294ad097b00d97517b2c7d3d62f1168f32b742a370ba191"
+  },
+  "frozen_scientific_inputs_unchanged": 546,
+  "reason": "Frozen scientific source and immutable failed execution output; trailing/EOF blank lines only. Preserve exact pre-D and failed-receipt bytes. No semantic/source/result alteration or test assertion weakening.",
+  "scope": "Narrow formatting exception only; all other staged paths must pass original whitespace check"
+}

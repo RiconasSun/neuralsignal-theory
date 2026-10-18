@@ -1,0 +1,9 @@
+# Saved-proof integrity repair before D
+
+Independent static review1 was CHANGES_REQUIRED (P0=0/P1=2). The rejected source, report, receipt and synthetic counterexamples remain unchanged. No real D assessment has been attempted.
+
+The new saved_audit module checks an exact nonempty archive set and mandatory original source/review identities, exact planned C certificate sets and terminal/completion journals, original numeric certificates and synthetic-only mask/bounds reconstruction. It independently reconstructs main/case denominators and available family sets, original control effects, all999 reference seeds and donor/offset maps against zero arrays, interleaved journal event order, scores-to-effects arithmetic, copied N3 B4 LL versus its distinct wheel-gain diagnostic, coverage statuses and final saved aggregate statistics. No predictions, objective, real AD/FD, fitting, neural arrays or network are used by the saved audit.
+
+Eleven new regressions include valid complete999 journals and self-consistent forged-effect/seed/mapping examples, missing/interrupted journals, wrong exposure, missing model family, empty archive and omitted/unplanned certificate sets. Together with the five D boundary/statistic regressions they passed16/16; the complete focused suite passed65/65 with warnings treated as errors. The corrected saved certificate arithmetic also passed on all72 actual main C states without reopening source data. Sensitivity fitting remains the original single run; no C production dependency was modified.
+
+Report text now discloses the pre-D discrete n=6 resolution: one-sided minimum1/64, two-sided minimum2/64, five-test secondary Holm minimum.15625. This does not change statistics, threshold, hypothesis or scientific verdict rules. All six contrasts remain capped DESCRIPTIVE ONLY.

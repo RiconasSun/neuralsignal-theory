@@ -1,0 +1,490 @@
+# CCPN / NEURALSIGNAL — PAPER 15 MASTER PROMPT 4/5
+
+MISSION: P15-M6-INDEPENDENT-FINAL-VALIDATION
+
+BASE:
+origin/test @ 47608d2db5bae32b150e6fccd9567c059fe43e63
+
+PRIORITY: HIGH
+MODE: SCIENCE-FIRST / FROZEN PROTOCOL / ONE FINAL ASSESSMENT
+
+## 0. EXPLICIT HUMAN AUTHORIZATION
+
+I authorize the next P15 scientific stage:
+
+1. Final native source and metadata verification.
+2. Trusted Final C-only neural extraction.
+3. Frozen C-only physiological QC and calibration.
+4. Numerical and scientific pre-D review.
+5. Exactly ONE Final D evaluation batch, conditional on successful pre-D gates.
+6. Complete independent-animal scientific reporting.
+
+This authorization is prospective and applies only to the eight Final-reserved mice frozen in M1.
+
+The prior Development results are exploratory and must not influence the Final model configuration or scientific thresholds.
+
+No unrestricted Final exploration is authorized.
+
+Do not execute Final D until every required pre-D gate has passed.
+
+## 1. AUTHORITATIVE SCIENTIFIC CONTRACT
+
+Verify and preserve:
+
+paper15_m1/PROTOCOL_FREEZE.json
+paper15_m1/SCIENTIFIC_PROTOCOL.md
+paper15_m1/SOURCE_QC.md
+paper15_m1/FEATURE_MODELS.md
+paper15_m1/NUMERICAL_POLICY.json
+paper15_m1/NUMERICAL_SELECTION.md
+paper15_m1/STATISTICS_CONTROLS.md
+paper15_m1/COHORT.csv
+
+Also verify the final Development handoff from:
+
+paper15_r1/
+
+Use the original M1 frozen scientific definitions.
+
+Do not change:
+- Animal identities or allocation
+- Primary and secondary estimands
+- Source revisions
+- Anatomical boundaries
+- Unit and physiological QC thresholds
+- Task/behavior feature definitions
+- Time bins or history windows
+- Model equations
+- Hyperparameter grids or selected winners
+- Numerical tolerances
+- Statistical inference
+- Multiplicity correction
+- Sensitivity cases
+- Null/reference operators
+- Positive-claim criteria
+
+Preserve the earlier P15 rounded-input STOP and corrective R1 execution.
+
+## 2. SCIENTIFIC OBJECTIVE
+
+Primary question:
+
+Does strictly past local MOp neural history improve held-out neural population count prediction beyond strong causal task, stimulus, wheel movement and firing-rate nuisance baselines?
+
+Primary contrast:
+
+B4 − B1
+
+Five secondary contrasts:
+
+B4 − B3
+B4 − B2
+D − B4
+C − B4
+D − S
+
+All model comparisons use the frozen actual scored nominal unit-bin denominator.
+
+Each mouse receives equal weight.
+
+No neural mechanism, biological primitive or movement-independent causal claim is assumed.
+
+## 3. PRESERVE DEVELOPMENT RESULTS
+
+Do not rerun Development A, B or E.
+
+Development is complete and model selection is frozen.
+
+The following Development limitations remain permanently disclosed:
+
+- B4−B1 mean gain approximately +0.112529 nats/unit-bin.
+- Development N1 criterion failed at 7/10 versus required 8/10.
+- Primary Development confidence-interval width exceeded 0.01.
+- Development N4 was unavailable at the aggregate level.
+- All five secondary Holm-adjusted tests were nonsignificant.
+- D and C did not establish superiority over B4.
+
+These findings must not be rewritten as validated or used to weaken Final criteria.
+
+The actual B-selected policies must be loaded from the frozen Development selection artifact.
+
+Verify that they correspond to the archived choices, including:
+
+B1 λ=.01
+B2 λ=.01
+B3 λ=1
+B4 λ=.1
+
+D K=3, λ=.01
+C rank=1, τ=.1s, λ=.1
+S K=4, λ=.01
+
+The authoritative saved selection overrides this descriptive list if any transcription differs; stop on an unexplained inconsistency.
+
+No new Final hyperparameter search.
+
+## 4. FINAL SOURCE PREPARATION
+
+Use only the original eight Final-reserved mice.
+
+No substitution, additional animal, source revision, session, probe or anatomical expansion.
+
+For each Final mouse, independently verify:
+
+- Exact source/session/probe identity
+- Native MOp atlas membership
+- Provider good-unit candidate set
+- Native task revision and original trial ordinals
+- Source AP acquisition support
+- Probe-to-session synchronization
+- Exact binary64 event timestamps
+- Known saturation and invalid interval handling
+- Wheel observation availability and timing
+- Frozen C/D original chronological partition
+- Source-document compatibility
+
+Reuse the exact-native corrective reader and strictly-past timing fix.
+
+Do not reintroduce pandas default ten-decimal timestamp serialization.
+
+Confirm the PL033-style equal-time wheel regression remains satisfied in the production source path.
+
+All source-based C/D masks must be frozen before any D neural evaluation.
+
+No Final D neural content is needed for this preparation.
+
+## 5. TRUSTED FINAL C READER — EXPLICIT SCOPE
+
+I separately authorize a minimal trusted local reader for Final C preparation.
+
+The source ALF spike arrays may be whole-recording files.
+
+Where the documented format makes partial physical decoding impractical, the trusted low-level reader may load the necessary whole-recording spike-time and cluster arrays solely to classify source observations and extract authorized C observations.
+
+This narrow technical permission does NOT authorize scientific use of D values.
+
+Before the D gate, the trusted reader must not expose, compute for scientific use, export, or log:
+
+- D neural spike counts
+- D firing-rate summaries
+- D neural finite/range statistics
+- D-derived unit QC
+- D likelihoods
+- D predictive effects
+- D model-selection information
+- D-dependent calibration parameters
+
+Only C neural observations may reach the C calibration, QC, model-fitting and selection roles.
+
+Document the actual low-level decoding scope and its limitations truthfully.
+
+Use ordinary local scientific access controls and an auditable extraction receipt.
+
+Do not construct offline cryptographic signing, multi-party custody or unrelated security infrastructure.
+
+If a safe C-only scientific projection cannot be implemented, STOP before calibration.
+
+## 6. FINAL C PHYSIOLOGICAL ADMISSION
+
+Apply the registered C-only QC rules from SOURCE_QC.md.
+
+Use exactly:
+- Original Final C chronological partition
+- Native valid observations
+- Original saturation masks
+- Exact eight-unit population requirement
+- Registered rate, refractory and coverage floors
+- Original qualified-unit ranking
+- C-only scales and normalization
+- C-only spike-history and nuisance extraction
+
+The Final C/D split remains:
+
+C: first 60% of original native trials
+D: remaining 40%
+
+Apply original guard trials and exclusions without changing the split after QC.
+
+No D neural outcome may influence C admission.
+
+Record every mouse's:
+- C qualified unit count
+- Selected unit UUIDs
+- C valid epoch count
+- Metadata-only D epoch capacity
+- Source and wheel support
+- Exact exclusion reasons
+- Source/laboratory identity
+
+## 7. FINAL COHORT DECISION
+
+Apply the existing prospective attrition rules.
+
+If eight Final mice satisfy the primary pre-D requirements:
+
+Proceed with the registered primary independent-animal assessment, subject to valid lab and statistical assumptions.
+
+If six or seven Final mice qualify:
+
+I explicitly authorize the already registered descriptive-only fallback, provided the required source, numerical and pre-D integrity gates pass.
+
+The output must be labeled DESCRIPTIVE ONLY, regardless of p-values or effect magnitude.
+
+If fewer than six qualify:
+
+STOP before D. The full cross-animal dynamical comparison is DATA INSUFFICIENT under the frozen study design.
+
+For eight primary mice, preserve the requirement to assess laboratory coverage and independence.
+
+If inferential assumptions or lab requirements are not defensible, withhold confirmatory interpretation even when a descriptive D batch is otherwise valid under the frozen policy.
+
+Do not replace animals or modify thresholds.
+
+## 8. FINAL C MODEL CALIBRATION
+
+Fit only the Development-selected global model policies.
+
+Use C observations from each Final mouse exclusively for its own:
+
+- Physiological selection
+- Feature scaling
+- Initial count-rate estimates
+- Model coefficient fitting
+- HMM and mixture initialization
+- Fixed sensitivity calibration
+
+Do not import mouse-specific fitted coefficients from Development.
+
+Use the same equations, constraints, numerical gradients, bounds, seeds and solvers frozen in M1.
+
+No additional hyperparameter selection is allowed.
+
+Respect the registered Final budgets:
+
+- Up to 12 main model attempts per Final mouse.
+- Up to 96 Final main attempts in total.
+- Up to 5 baseline fits per applicable sensitivity case per mouse.
+- Up to 440 Final sensitivity fits across the eight mice.
+
+These are ceilings, not required fit counts.
+
+A required numerical failure must be reported.
+
+No retry, favorable seed replacement, optimizer budget expansion or alternative model is authorized.
+
+If mandatory B1 or B4 fitting fails, follow the frozen primary stop rule.
+
+Secondary family failure is handled only through the registered unavailable/primary-only rules.
+
+## 9. COMPLETE PRE-D FREEZE
+
+Before accessing D neural results, freeze and independently review:
+
+1. All actual Final C source identities.
+2. C physiological admission and selected units.
+3. C transformations and model states.
+4. Development-selected global model policies.
+5. Complete source and numerical acceptance evidence.
+6. Exact D metadata-only masks and exposure definitions.
+7. All primary and secondary comparison definitions.
+8. Eleven sensitivity cases.
+9. Four finite-reference operators and original RNG schedules.
+10. Statistical and multiplicity implementation.
+11. Animal/lab coverage and inference assumptions.
+12. All conditional descriptive/unavailable pathways.
+13. One-batch D execution code and its synthetic end-to-end tests.
+
+Run a full synthetic or C-only rehearsal of the planned D batch without D neural values.
+
+Review expected output schemas, finite calculations, resource requirements and failure handling.
+
+Require an independent internal scientific and numerical review.
+
+No pre-D reviewer may inspect D neural scores.
+
+If a required gate fails, STOP and report the C-only study status.
+
+Do not use the D data to diagnose or repair a failed pre-D implementation.
+
+## 10. EXACTLY ONE FINAL D BATCH
+
+Only after every pre-D condition passes, execute the authorized Final D batch once.
+
+The batch must include every applicable frozen assessment:
+
+Primary:
+B4 − B1
+
+Secondary:
+B4 − B3
+B4 − B2
+D − B4
+C − B4
+D − S
+
+Also include:
+
+- Individual animal predictive effects
+- Actual valid unit-bin denominators
+- Equal-mouse mean
+- Whole-mouse bootstrap intervals
+- One-sided primary sign-flip test
+- Fixed five-comparison two-sided Holm family
+- Leave-one-mouse-out estimates
+- Leave-one-lab-out and lab diagnostics
+- All eleven registered sensitivities
+- All four registered 999-replicate finite reference suites
+- Failed and unavailable controls
+- Exact source/numerical failure records
+
+No additional model fitting from D.
+
+No model choice based on D.
+
+Within a D trial, frozen causal filtering may assimilate earlier observed D-trial bins only after their prediction and only as specified in M1.
+
+No smoothing from future observations.
+
+No changed reference draws or surrogate replicates.
+
+If an essential D-only measurement problem or interrupted one-shot batch invalidates the assessment, preserve the incomplete result and STOP.
+
+Do not rerun or perform a replacement assessment.
+
+## 11. SCIENTIFIC VERDICTS
+
+Evaluate the entire registered positive-claim conjunction.
+
+For the primary comparison, this includes:
+
+- Valid Final cohort and laboratory coverage
+- Defensible statistical assumptions
+- Correct direction and minimum effect
+- One-sided p <= .05
+- Positive 95% CI lower bound
+- CI width <= .01 nats/unit-bin
+- At least 75% positive animal effects
+- Positive leave-one-mouse and leave-one-lab means
+- All mandatory baseline sensitivities
+- Both mandatory N1/N2 descriptive disruption gates
+- Complete source and numerical validity
+
+Do not select favorable subsets to clear these conditions.
+
+For secondary comparisons, use the fixed Holm5 correction and their original interpretation-specific gates.
+
+N4 limitations must be respected.
+
+Do not claim that a significant D−B4 test alone establishes discrete persistent biological states.
+
+A valid, completed but nonsignificant or mixed result must still be reported.
+
+Do not call failure to reject the null equivalence.
+
+Use exactly the appropriate verdict:
+
+SUPPORTED UNDER REGISTERED PREDICTIVE CRITERIA
+
+NOT SUPPORTED / MIXED
+
+DESCRIPTIVE ONLY
+
+INCONCLUSIVE REQUIRED GATE
+
+DATA INSUFFICIENT
+
+Separate the verdict for each scientific contrast.
+
+If the primary fails its complete registered criteria, do not claim robust primary confirmation merely because its p-value is small.
+
+The Final result must not overwrite the earlier Development results or their failed controls.
+
+## 12. SCIENTIFIC INTERPRETATION
+
+Discuss:
+
+- Whether local MOp neural history contributes held-out predictive information.
+- Whether the result generalizes from Development to independent Final animals.
+- How much attribution to own versus other-unit history is supported.
+- Whether D or C adds prediction beyond B4.
+- Whether D beats the static mixture S.
+- Sensitivity to movement, firing rates, unit counts and recording artifacts.
+- Heterogeneity across animals and laboratories.
+- How the pre-registered falsification conditions affect interpretation.
+
+Always disclose that the study remains observational.
+
+No claim of:
+- Causal connectivity
+- Motor-command mechanism
+- All-movement independence
+- Discrete neural atoms
+- General CWP/NAP ontology validation
+- Independent laboratory replication
+- Human consciousness or BCI validation
+
+These are outside the registered estimand.
+
+## 13. REPORTING AND ARCHIVE
+
+If Final D completes validly, generate:
+
+- Complete Final scientific report
+- Final mouse QC and source tables
+- Exact main contrast results
+- Raw and corrected statistics
+- Sensitivities and null/reference results
+- Development versus Final comparison
+- Complete numerical and fit attempts
+- Failure/unavailable panels
+- Scientific claim-to-evidence audit
+- Reproduction instructions
+- Independently reviewed closeout
+
+Manuscript and publication-quality PDF production remain Prompt 5, not this mission.
+
+A valid negative or mixed result is a completed scientific assessment, not an engineering failure.
+
+If Final D cannot proceed, deliver a complete source/C-only STOP report instead.
+
+## 14. FINAL DELIVERY
+
+Return:
+
+FINAL_SOURCE_PASS
+FINAL_C_READER_SCOPE
+FINAL_C_QC_PASS
+FINAL_ELIGIBLE_MICE
+FINAL_ELIGIBLE_LABS
+FINAL_C_MODEL_CALIBRATION
+FINAL_MAIN_FIT_ATTEMPTS
+FINAL_SENSITIVITY_FIT_ATTEMPTS
+PRE_D_INDEPENDENT_REVIEW
+ONE_SHOT_D_EXECUTED
+FINAL_PRIMARY_EFFECT
+FINAL_PRIMARY_CI
+FINAL_PRIMARY_P_VALUE
+FINAL_SECONDARY_EFFECTS
+FINAL_HOLM_ADJUSTED_RESULTS
+FINAL_FALSIFICATION_RESULTS
+DEVELOPMENT_FINAL_CONSISTENCY
+SCIENTIFIC_PRIMARY_VERDICT
+SCIENTIFIC_SECONDARY_VERDICTS
+PROMPT_5_READY
+BUG_COUNT
+WARN_COUNT
+GIT_COMMIT
+REMOTE_VERIFICATION
+
+All statuses must reflect actual completed work.
+
+SCIENCE FIRST.
+PRESERVE ALL HISTORICAL EVIDENCE.
+NO POST-D TUNING.
+NO SECOND D ASSESSMENT.
+
+BEGIN FINAL C PREPARATION NOW.
+
+EXECUTE FINAL D ONLY AFTER VERIFIED PRE-D APPROVAL GATES.
+
+STOP AFTER FINAL SCIENTIFIC HANDOFF.

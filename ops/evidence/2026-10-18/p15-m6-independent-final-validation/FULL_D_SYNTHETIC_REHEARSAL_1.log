@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper15_final1\synthetic_rehearsal.py", line 122, in <module>
+    if __name__=='__main__':run()
+                            ^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper15_final1\synthetic_rehearsal.py", line 99, in run
+    row,cs,control=one_mouse(index,folder);rows.append(row);cases.extend(cs);controls.append(control)
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper15_final1\synthetic_rehearsal.py", line 49, in one_mouse
+    subject=f'SYNTHETIC_ONLY_{index}';meta,ct,cl,dt,dl,wt,wp,cids,dids,metrics,units,ranking=synthetic_source(index)
+                                                                                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper15_final1\synthetic_rehearsal.py", line 41, in synthetic_source
+    assert len(ranked)>=20
+           ^^^^^^^^^^^^^^^
+AssertionError

@@ -1,0 +1,19 @@
+UCLA037 {'C': 222, 'D': 171} native good 214 trial gate True
+DY_014 {'C': 335, 'D': 218} native good 57 trial gate True
+ZFM-01576 {'C': 601, 'D': 402} native good 47 trial gate True
+NR_0027 {'C': 484, 'D': 191} native good 21 trial gate True
+UCLA033 {'C': 263, 'D': 154} native good 21 trial gate True
+DY_011 {'C': 227, 'D': 154} native good 25 trial gate True
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper15_final1\metadata_qc.py", line 151, in <module>
+    if __name__=='__main__':run()
+                            ^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper15_final1\metadata_qc.py", line 119, in run
+    roles,mask,checks,cuts=task_masks(tr,support,bad,dev,wheel)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper15_final1\metadata_qc.py", line 50, in task_masks
+    assert np.isfinite(wt).all() and np.isfinite(wp).all() and (np.diff(wt)>0).all()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

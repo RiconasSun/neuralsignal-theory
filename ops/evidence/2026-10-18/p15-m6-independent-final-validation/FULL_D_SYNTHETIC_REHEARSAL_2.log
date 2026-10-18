@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper15_final1\synthetic_rehearsal.py", line 122, in <module>
+    if __name__=='__main__':run()
+                            ^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper15_final1\synthetic_rehearsal.py", line 99, in run
+    row,cs,control=one_mouse(index,folder);rows.append(row);cases.extend(cs);controls.append(control)
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper15_final1\synthetic_rehearsal.py", line 88, in one_mouse
+    controls=run_controls(subject,main,predictor,prep,metadata,journal_root=root/subject)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper15_final1\reference_evaluation.py", line 38, in run_controls
+    assert trial_ids.tolist()==reference_metadata['E_trial_ids']
+                               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'E_trial_ids'
