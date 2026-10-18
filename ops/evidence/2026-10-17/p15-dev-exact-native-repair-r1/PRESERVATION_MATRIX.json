@@ -4187,13 +4187,20 @@
         {
           "path": "ops/evidence/2026-10-17/p15-dev-exact-native-repair-r1/SAVED_REPRODUCTION_RECEIPT_1.json",
           "sha256": "9764cbdad2e791107f888b2e36e123a7b07a210046cbc81c0d7e2819aadf57de"
+        },
+        {
+          "path": "ops/evidence/2026-10-17/p15-dev-exact-native-repair-r1/H1_REMOTE_READBACK.json",
+          "sha256": "74ff1de717e07f41721da4b478a41325ceefabc943254b212f3591042ad334d1"
+        },
+        {
+          "path": "ops/evidence/2026-10-17/p15-dev-exact-native-repair-r1/FINAL_DELIVERY.json",
+          "sha256": "d17a5345681e3e473e76cdeeeafdb0a445b1d595be327f994c2cbd5334a5061d"
         }
       ],
       "implementation_location": "paper15_r1/results/DEVELOPMENT_STATUS.json",
-      "remaining_gate": "FullownerreturnincludesverifiedGitcommit",
       "requirement": "Return:",
       "requirement_id": "REQ-172",
-      "status": "IMPLEMENTED_UNVERIFIED",
+      "status": "VERIFIED",
       "verification_method": "Ownerfields/allnegative-mixed-unavailablefindings and exact actualbudget/holdout flags"
     },
     {
@@ -4629,13 +4636,20 @@
         {
           "path": "ops/evidence/2026-10-17/p15-dev-exact-native-repair-r1/SAVED_REPRODUCTION_RECEIPT_1.json",
           "sha256": "9764cbdad2e791107f888b2e36e123a7b07a210046cbc81c0d7e2819aadf57de"
+        },
+        {
+          "path": "ops/evidence/2026-10-17/p15-dev-exact-native-repair-r1/H1_REMOTE_READBACK.json",
+          "sha256": "74ff1de717e07f41721da4b478a41325ceefabc943254b212f3591042ad334d1"
+        },
+        {
+          "path": "ops/evidence/2026-10-17/p15-dev-exact-native-repair-r1/FINAL_DELIVERY.json",
+          "sha256": "d17a5345681e3e473e76cdeeeafdb0a445b1d595be327f994c2cbd5334a5061d"
         }
       ],
       "implementation_location": "paper15_r1/results/DEVELOPMENT_STATUS.json",
-      "remaining_gate": "Gitcommit/remoteverification",
       "requirement": "- GIT_COMMIT / REMOTE_VERIFICATION",
       "requirement_id": "REQ-193",
-      "status": "IMPLEMENTED_UNVERIFIED",
+      "status": "VERIFIED",
       "verification_method": "Ownerfields/allnegative-mixed-unavailablefindings and exact actualbudget/holdout flags"
     },
     {
@@ -4680,13 +4694,20 @@
         {
           "path": "paper15_r1/FINAL_IMPLEMENTATION_HANDOFF.md",
           "sha256": "b33303ec70f9e6c8d3f798c3f2482e703da1d6bc7d2edc66620c2c8176c71393"
+        },
+        {
+          "path": "ops/evidence/2026-10-17/p15-dev-exact-native-repair-r1/H1_REMOTE_READBACK.json",
+          "sha256": "74ff1de717e07f41721da4b478a41325ceefabc943254b212f3591042ad334d1"
+        },
+        {
+          "path": "ops/evidence/2026-10-17/p15-dev-exact-native-repair-r1/FINAL_DELIVERY.json",
+          "sha256": "d17a5345681e3e473e76cdeeeafdb0a445b1d595be327f994c2cbd5334a5061d"
         }
       ],
       "implementation_location": "ops/evidence/2026-10-17/p15-dev-exact-native-repair-r1/SAVED_REPRODUCTION_RECEIPT_1.json",
-      "remaining_gate": "Normalorigin/testpush/readback",
       "requirement": "Push only the authorized correction and new Development artifacts to origin/test.",
       "requirement_id": "REQ-195",
-      "status": "IMPLEMENTED_UNVERIFIED",
+      "status": "VERIFIED",
       "verification_method": "Independentstage/fullreview,saved-only126testreproduction and scopednormalGitclosure/stop"
     },
     {
@@ -4702,16 +4723,23 @@
         {
           "path": "paper15_r1/FINAL_IMPLEMENTATION_HANDOFF.md",
           "sha256": "b33303ec70f9e6c8d3f798c3f2482e703da1d6bc7d2edc66620c2c8176c71393"
+        },
+        {
+          "path": "ops/evidence/2026-10-17/p15-dev-exact-native-repair-r1/H1_REMOTE_READBACK.json",
+          "sha256": "74ff1de717e07f41721da4b478a41325ceefabc943254b212f3591042ad334d1"
+        },
+        {
+          "path": "ops/evidence/2026-10-17/p15-dev-exact-native-repair-r1/FINAL_DELIVERY.json",
+          "sha256": "d17a5345681e3e473e76cdeeeafdb0a445b1d595be327f994c2cbd5334a5061d"
         }
       ],
       "implementation_location": "ops/evidence/2026-10-17/p15-dev-exact-native-repair-r1/SAVED_REPRODUCTION_RECEIPT_1.json",
-      "remaining_gate": "Finalreviewedclosureandstop",
       "requirement": "Stop after valid Development completion or an evidence-backed scientific blocker.",
       "requirement_id": "REQ-196",
-      "status": "IMPLEMENTED_UNVERIFIED",
+      "status": "VERIFIED",
       "verification_method": "Independentstage/fullreview,saved-only126testreproduction and scopednormalGitclosure/stop"
     }
   ],
-  "scope": "H1 reviewed archive candidate; four Git/return/stop closure obligations remain open.",
-  "verified_baseline_count": 192
+  "scope": "Complete Development handoff; H1 actual remote proof archived. H2 own push/readback/clean and final handoff are enforced before terminal return.",
+  "verified_baseline_count": 196
 }

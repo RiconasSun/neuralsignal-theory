@@ -175,7 +175,7 @@ All 196 original IDs and requirement texts retained. Scientific mixed/unavailabl
 |REQ-169|VERIFIED|FinalIDsreserved,nofinalC/Dpayload/QC/fits/predictions;futureexplicitPrompt4only|paper15_r1/FINAL_IMPLEMENTATION_HANDOFF.md|
 |REQ-170|VERIFIED|FinalIDsreserved,nofinalC/Dpayload/QC/fits/predictions;futureexplicitPrompt4only|paper15_r1/FINAL_IMPLEMENTATION_HANDOFF.md|
 |REQ-171|VERIFIED|FinalIDsreserved,nofinalC/Dpayload/QC/fits/predictions;futureexplicitPrompt4only|paper15_r1/FINAL_IMPLEMENTATION_HANDOFF.md|
-|REQ-172|IMPLEMENTED_UNVERIFIED|Ownerfields/allnegative-mixed-unavailablefindings and exact actualbudget/holdout flags|paper15_r1/results/DEVELOPMENT_STATUS.json|
+|REQ-172|VERIFIED|Ownerfields/allnegative-mixed-unavailablefindings and exact actualbudget/holdout flags|paper15_r1/results/DEVELOPMENT_STATUS.json|
 |REQ-173|VERIFIED|Ownerfields/allnegative-mixed-unavailablefindings and exact actualbudget/holdout flags|paper15_r1/results/DEVELOPMENT_STATUS.json|
 |REQ-174|VERIFIED|Ownerfields/allnegative-mixed-unavailablefindings and exact actualbudget/holdout flags|paper15_r1/results/DEVELOPMENT_STATUS.json|
 |REQ-175|VERIFIED|Ownerfields/allnegative-mixed-unavailablefindings and exact actualbudget/holdout flags|paper15_r1/results/DEVELOPMENT_STATUS.json|
@@ -196,7 +196,7 @@ All 196 original IDs and requirement texts retained. Scientific mixed/unavailabl
 |REQ-190|VERIFIED|Ownerfields/allnegative-mixed-unavailablefindings and exact actualbudget/holdout flags|paper15_r1/results/DEVELOPMENT_STATUS.json|
 |REQ-191|VERIFIED|Ownerfields/allnegative-mixed-unavailablefindings and exact actualbudget/holdout flags|paper15_r1/results/DEVELOPMENT_STATUS.json|
 |REQ-192|VERIFIED|Ownerfields/allnegative-mixed-unavailablefindings and exact actualbudget/holdout flags|paper15_r1/results/DEVELOPMENT_STATUS.json|
-|REQ-193|IMPLEMENTED_UNVERIFIED|Ownerfields/allnegative-mixed-unavailablefindings and exact actualbudget/holdout flags|paper15_r1/results/DEVELOPMENT_STATUS.json|
+|REQ-193|VERIFIED|Ownerfields/allnegative-mixed-unavailablefindings and exact actualbudget/holdout flags|paper15_r1/results/DEVELOPMENT_STATUS.json|
 |REQ-194|VERIFIED|Independentstage/fullreview,saved-only126testreproduction and scopednormalGitclosure/stop|ops/evidence/2026-10-17/p15-dev-exact-native-repair-r1/SAVED_REPRODUCTION_RECEIPT_1.json|
-|REQ-195|IMPLEMENTED_UNVERIFIED|Independentstage/fullreview,saved-only126testreproduction and scopednormalGitclosure/stop|ops/evidence/2026-10-17/p15-dev-exact-native-repair-r1/SAVED_REPRODUCTION_RECEIPT_1.json|
-|REQ-196|IMPLEMENTED_UNVERIFIED|Independentstage/fullreview,saved-only126testreproduction and scopednormalGitclosure/stop|ops/evidence/2026-10-17/p15-dev-exact-native-repair-r1/SAVED_REPRODUCTION_RECEIPT_1.json|
+|REQ-195|VERIFIED|Independentstage/fullreview,saved-only126testreproduction and scopednormalGitclosure/stop|ops/evidence/2026-10-17/p15-dev-exact-native-repair-r1/SAVED_REPRODUCTION_RECEIPT_1.json|
+|REQ-196|VERIFIED|Independentstage/fullreview,saved-only126testreproduction and scopednormalGitclosure/stop|ops/evidence/2026-10-17/p15-dev-exact-native-repair-r1/SAVED_REPRODUCTION_RECEIPT_1.json|

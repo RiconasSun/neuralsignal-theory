@@ -1,0 +1,145 @@
+{
+  "BUG_COUNT": 0,
+  "B_SELECTION_FROZEN": true,
+  "CORRECTED_DEVELOPMENT_LABS": 8,
+  "CORRECTED_ELIGIBLE_DEVELOPMENT_MICE": 10,
+  "DEVELOPMENT_E_COMPLETE": true,
+  "EXACT_NATIVE_REPAIR_PASS": true,
+  "FALSIFICATION_RESULTS": {
+    "N3": "B4 wheel-reliance diagnostic only; not a D/C null or all-movement independence test",
+    "N4_aggregate_available": false,
+    "N4_mice": 5,
+    "N4_p": 1,
+    "N4_required": 6,
+    "full_panels": "paper15_r1/tables/E_CONTROLS.csv",
+    "original_precision_screen": 0.01,
+    "precision_screen_pass": false,
+    "primary_CI_width": 0.09622344576826165,
+    "primary_N1": {
+      "Holm4_reference_p": 0.004,
+      "above_median": 7,
+      "gate": false,
+      "required": 8
+    },
+    "primary_N2_gate": true,
+    "reference_bundles": 34965,
+    "robust_positive_primary_claim": false,
+    "unavailable_reference_suites": 5,
+    "valid_reference_suites": 35
+  },
+  "FINAL_C_ACCESS": false,
+  "FINAL_D_ACCESS": false,
+  "FULL_A_SOURCE_REVALIDATION": true,
+  "GIT_COMMIT": "4567c5c07102d6d254dad7ad4c920ed60d89555d",
+  "GIT_COMMIT_SCOPE": "Reviewed scientific/source archive H1",
+  "NATIVE_TIME_BITWISE_VERIFICATION": true,
+  "NEW_MAIN_ATTEMPTS": 610,
+  "NEW_SENSITIVITY_ATTEMPTS": 525,
+  "ORIGINAL_ATTEMPTS_PRESERVED": true,
+  "PRIMARY_DEVELOPMENT_EFFECT": {
+    "CI95": [
+      0.06745810552609997,
+      0.16368155129436163
+    ],
+    "Holm5_p": null,
+    "claim": "EXPLORATORY_ONLY",
+    "contrast": "B4-B1",
+    "equal_mouse_mean": 0.1125291851306621,
+    "raw_p": 0.0009765625,
+    "source": "results/E_STATISTICS.json#B4-B1",
+    "validated": false
+  },
+  "PRODUCTION_NUMERICAL_PASS": true,
+  "PROMPT_4_READINESS_SCOPE": "Development handoff only; no assertion that actual Final C physiology, wheel support, numerics, assumptions or pre-D review have passed",
+  "PROMPT_4_READY": true,
+  "REMOTE_VERIFICATION": {
+    "H1": true,
+    "H2": "Own post-push verification must pass before terminal return; local ignored work/H2_REMOTE_READBACK.json records actual result",
+    "receipt": "H1_REMOTE_READBACK.json"
+  },
+  "SECONDARY_DEVELOPMENT_EFFECTS": {
+    "B4-B2": {
+      "CI95": [
+        0.0050302065057874785,
+        0.05501082886164163
+      ],
+      "Holm5_p": 0.1796875,
+      "claim": "EXPLORATORY_ONLY",
+      "contrast": "B4-B2",
+      "equal_mouse_mean": 0.026306579812766885,
+      "raw_p": 0.044921875,
+      "source": "results/E_STATISTICS.json#B4-B2",
+      "validated": false
+    },
+    "B4-B3": {
+      "CI95": [
+        0.01734158461894405,
+        0.06278710159999801
+      ],
+      "Holm5_p": 0.05859375,
+      "claim": "EXPLORATORY_ONLY",
+      "contrast": "B4-B3",
+      "equal_mouse_mean": 0.03930120524139896,
+      "raw_p": 0.01171875,
+      "source": "results/E_STATISTICS.json#B4-B3",
+      "validated": false
+    },
+    "C-B4": {
+      "CI95": [
+        -0.000400099229921444,
+        0.000568692298035778
+      ],
+      "Holm5_p": 0.859375,
+      "claim": "EXPLORATORY_ONLY",
+      "contrast": "C-B4",
+      "equal_mouse_mean": 0.00010824211289161302,
+      "raw_p": 0.685546875,
+      "source": "results/E_STATISTICS.json#C-B4",
+      "validated": false
+    },
+    "D-B4": {
+      "CI95": [
+        -0.03601613299004298,
+        0.0021497034444591255
+      ],
+      "Holm5_p": 0.59765625,
+      "claim": "EXPLORATORY_ONLY",
+      "contrast": "D-B4",
+      "equal_mouse_mean": -0.01477973215700219,
+      "raw_p": 0.19921875,
+      "source": "results/E_STATISTICS.json#D-B4",
+      "validated": false
+    },
+    "D-S": {
+      "CI95": [
+        -0.0059149205271999674,
+        0.00047306207126944814
+      ],
+      "Holm5_p": 0.859375,
+      "claim": "EXPLORATORY_ONLY",
+      "contrast": "D-S",
+      "equal_mouse_mean": -0.0019684110379102277,
+      "raw_p": 0.4296875,
+      "source": "results/E_STATISTICS.json#D-S",
+      "validated": false
+    }
+  },
+  "STRICT_PAST_WHEEL_GATE": true,
+  "TOTAL_CUMULATIVE_ATTEMPTS": 1494,
+  "WARN_COUNT": 0,
+  "completed_paper": false,
+  "independent_reviews": [
+    "FINAL_SCIENTIFIC_REVIEW_1.md",
+    "FINAL_NUMERICAL_EVIDENCE_REVIEW_1.md"
+  ],
+  "mission": "P15-DEV-EXACT-NATIVE-REPAIR-R1",
+  "next_action": "STOP. Prompt 4 requires separate explicit human authorization; no Final C/D or next mission.",
+  "reproduction": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File paper15_r1/reproduce.ps1",
+    "native_saved_only_exit_code": 0,
+    "no_real_array_loading": true,
+    "tests": 126
+  },
+  "scientific_validation": false,
+  "time": "2026-10-18T08:50:56.093614+00:00"
+}
