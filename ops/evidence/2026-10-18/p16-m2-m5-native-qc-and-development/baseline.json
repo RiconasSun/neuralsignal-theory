@@ -1,0 +1,2880 @@
+{
+  "mission": "P16-M2-M5-NATIVE-QC-AND-DEVELOPMENT",
+  "base": "020388b6a8ed35d7fcba817e5f2bad4412b3dc02",
+  "frozen_at": "2026-10-19T04:01:51.191412+00:00",
+  "baseline_revision": 1,
+  "owner_sha256": "81e2b7d39442ef8d3ada302051659bd6fc9b8f55d3b3eff373283e9f609cf9f1",
+  "requirement_count": 410,
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "source_line": 1,
+      "requirement": "# CCPN / NEURALSIGNAL \u2014 PAPER 16 MASTER PROMPT 3/5",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-002",
+      "source_line": 3,
+      "requirement": "MISSION: P16-M2-M5-NATIVE-QC-AND-DEVELOPMENT",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-003",
+      "source_line": 5,
+      "requirement": "BASE:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-004",
+      "source_line": 6,
+      "requirement": "origin/test @ 020388b6a8ed35d7fcba817e5f2bad4412b3dc02",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-005",
+      "source_line": 8,
+      "requirement": "PRIORITY: HIGH",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-006",
+      "source_line": 9,
+      "requirement": "MODE: SCIENCE-FIRST / FROZEN-PROTOCOL / CONDITIONAL AUTONOMOUS EXECUTION",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-007",
+      "source_line": 11,
+      "requirement": "## 0. EXPLICIT OWNER AUTHORIZATION",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-008",
+      "source_line": 13,
+      "requirement": "I authorize the following P16 Development activities:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-009",
+      "source_line": 15,
+      "requirement": "M2 \u2014 Native source/behavior verification and Development A physiological QC.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-010",
+      "source_line": 17,
+      "requirement": "M3 \u2014 Complete production numerical implementation and independent certification.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-011",
+      "source_line": 19,
+      "requirement": "M4 \u2014 Registered Development A fitting and Development B model-policy selection.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-012",
+      "source_line": 21,
+      "requirement": "M5 \u2014 One frozen Development E exploratory evaluation and authorized Development sensitivity/reference analyses.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-013",
+      "source_line": 23,
+      "requirement": "Each stage may begin ONLY if its prerequisite scientific gates pass.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-014",
+      "source_line": 25,
+      "requirement": "The frozen M1 protocol has precedence over any abbreviated instruction here.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-015",
+      "source_line": 27,
+      "requirement": "No new scientific thresholds, model architectures, animal assignments, stimulus choices, optimizer retries or computation-budget expansions are authorized.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-016",
+      "source_line": 29,
+      "requirement": "This mission does NOT authorize Final C or Final D neural access, model fitting or evaluation.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-017",
+      "source_line": 31,
+      "requirement": "## 1. AUTHORITATIVE CONTRACT",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-018",
+      "source_line": 33,
+      "requirement": "Read and verify all normative M1 files, especially:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-019",
+      "source_line": 35,
+      "requirement": "paper16_m1/M1_SCIENTIFIC_PROTOCOL.md",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-020",
+      "source_line": 36,
+      "requirement": "paper16_m1/protocol.json",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-021",
+      "source_line": 37,
+      "requirement": "paper16_m1/M1_FREEZE_MANIFEST.json",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-022",
+      "source_line": 38,
+      "requirement": "paper16_m1/NUMERICAL_POLICY.json",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-023",
+      "source_line": 39,
+      "requirement": "paper16_m1/FEATURE_AND_MODEL_EQUATIONS.md",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-024",
+      "source_line": 40,
+      "requirement": "paper16_m1/SOURCE_OBSERVATION_QC.md",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-025",
+      "source_line": 41,
+      "requirement": "paper16_m1/STIMULUS_CONTRACT.md",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-026",
+      "source_line": 42,
+      "requirement": "paper16_m1/BO_FC_TRANSPORT_PLAN.md",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-027",
+      "source_line": 43,
+      "requirement": "paper16_m1/STATISTICAL_ANALYSIS_PLAN.md",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-028",
+      "source_line": 44,
+      "requirement": "paper16_m1/FALSIFICATION_AND_SENSITIVITY_PLAN.md",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-029",
+      "source_line": 45,
+      "requirement": "paper16_m1/EVALUATION_BOUNDARY.md",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-030",
+      "source_line": 46,
+      "requirement": "paper16_m1/controls.json",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-031",
+      "source_line": 47,
+      "requirement": "paper16_m1/FROZEN_COHORT.csv",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-032",
+      "source_line": 49,
+      "requirement": "Verify the actual freeze identities and review records.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-033",
+      "source_line": 51,
+      "requirement": "Do not rely solely on the synthetic PASS counts.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-034",
+      "source_line": 53,
+      "requirement": "Preserve P1\u2013P15 and all P16 M0/M1 historical artifacts.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-035",
+      "source_line": 55,
+      "requirement": "## 2. FIXED SCIENTIFIC DESIGN",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-036",
+      "source_line": 57,
+      "requirement": "Data source:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-037",
+      "source_line": 58,
+      "requirement": "Allen Visual Coding Neuropixels, pinned curated NWB 2.2.2 source.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-038",
+      "source_line": 60,
+      "requirement": "Region:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-039",
+      "source_line": 61,
+      "requirement": "VISp and the six registered laminar descendants.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-040",
+      "source_line": 63,
+      "requirement": "Population:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-041",
+      "source_line": 64,
+      "requirement": "One selected original probe and eight A-qualified units per mouse.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-042",
+      "source_line": 66,
+      "requirement": "Stimulus:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-043",
+      "source_line": 67,
+      "requirement": "Nominal black/white flashes, exactly the registered source conditions.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-044",
+      "source_line": 69,
+      "requirement": "Cohort:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-045",
+      "source_line": 70,
+      "requirement": "55 original metadata candidates.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-046",
+      "source_line": 72,
+      "requirement": "Development:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-047",
+      "source_line": 73,
+      "requirement": "28 mice \u2014 5 Brain Observatory, 23 Functional Connectivity.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-048",
+      "source_line": 75,
+      "requirement": "Final:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-049",
+      "source_line": 76,
+      "requirement": "27 Brain Observatory mice, fully reserved.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-050",
+      "source_line": 78,
+      "requirement": "Never reroll, replace or pool animals.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-051",
+      "source_line": 80,
+      "requirement": "Primary effect:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-052",
+      "source_line": 82,
+      "requirement": "B4 \u2212 B1 held-out predictive log-likelihood gain.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-053",
+      "source_line": 84,
+      "requirement": "Report in nats per actual valid scored nominal unit-bin.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-054",
+      "source_line": 86,
+      "requirement": "This is observational prediction conditional on the registered baseline.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-055",
+      "source_line": 88,
+      "requirement": "The study remains prospectively exploratory/descriptive, even if a future held-out test is statistically significant.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-056",
+      "source_line": 90,
+      "requirement": "## 3. M2 \u2014 NATIVE SOURCE AND BEHAVIOR VALIDITY",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-057",
+      "source_line": 92,
+      "requirement": "### 3.1 Source integrity",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-058",
+      "source_line": 94,
+      "requirement": "Verify exact native identities, source revisions and provenance.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-059",
+      "source_line": 96,
+      "requirement": "Use the existing 55-mouse stimulus metadata evidence.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-060",
+      "source_line": 98,
+      "requirement": "Do not repeat unrelated dataset searches or previously completed metadata audits.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-061",
+      "source_line": 100,
+      "requirement": "Preserve:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-062",
+      "source_line": 102,
+      "requirement": "- All original stimulus presentation IDs.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-063",
+      "source_line": 103,
+      "requirement": "- Nominal color -1/+1.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-064",
+      "source_line": 104,
+      "requirement": "- Original order and duration.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-065",
+      "source_line": 105,
+      "requirement": "- Exact float64 stimulus onset/offset values.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-066",
+      "source_line": 106,
+      "requirement": "- Known source-invalid interval masks.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-067",
+      "source_line": 107,
+      "requirement": "- Original session/probe/cluster identities.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-068",
+      "source_line": 108,
+      "requirement": "- Original VISp atlas/peak-channel membership.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-069",
+      "source_line": 110,
+      "requirement": "The seven already known invalid flash presentations remain excluded.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-070",
+      "source_line": 112,
+      "requirement": "Do not shrink invalid intervals or impute missing neural observation support to increase eligibility.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-071",
+      "source_line": 114,
+      "requirement": "### 3.2 Chronological roles",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-072",
+      "source_line": 116,
+      "requirement": "For the original 150 presentations, register:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-073",
+      "source_line": 118,
+      "requirement": "Development A:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-074",
+      "source_line": 119,
+      "requirement": "Original indices 0\u201389.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-075",
+      "source_line": 121,
+      "requirement": "Development B:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-076",
+      "source_line": 122,
+      "requirement": "Original indices 90\u2013119.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-077",
+      "source_line": 124,
+      "requirement": "Development E:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-078",
+      "source_line": 125,
+      "requirement": "Original indices 120\u2013149.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-079",
+      "source_line": 127,
+      "requirement": "Cuts precede exclusions.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-080",
+      "source_line": 129,
+      "requirement": "An excluded stimulus cannot move another presentation into a different role.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-081",
+      "source_line": 131,
+      "requirement": "Minimum complete presentations per color:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-082",
+      "source_line": 133,
+      "requirement": "A: 30",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-083",
+      "source_line": 134,
+      "requirement": "B: 8",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-084",
+      "source_line": 135,
+      "requirement": "E: 8",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-085",
+      "source_line": 137,
+      "requirement": "No neural history may cross presentation, invalidity or role boundaries.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-086",
+      "source_line": 139,
+      "requirement": "### 3.3 Exact temporal contract",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-087",
+      "source_line": 141,
+      "requirement": "Use frozen 20-ms bins.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-088",
+      "source_line": 143,
+      "requirement": "Main scoring:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-089",
+      "source_line": 144,
+      "requirement": "100\u2013220 ms following native stimulus onset.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-090",
+      "source_line": 146,
+      "requirement": "Six scored bins.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-091",
+      "source_line": 148,
+      "requirement": "History:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-092",
+      "source_line": 149,
+      "requirement": "Strictly past 100 ms within the same flash.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-093",
+      "source_line": 151,
+      "requirement": "No pre-onset neural history.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-094",
+      "source_line": 153,
+      "requirement": "Use binary64 native timestamps without lossy decimal reconstruction.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-095",
+      "source_line": 155,
+      "requirement": "Verify:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-096",
+      "source_line": 157,
+      "requirement": "event_time < prediction_bin_start",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-097",
+      "source_line": 159,
+      "requirement": "Do not include an event equal to the bin start.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-098",
+      "source_line": 161,
+      "requirement": "Retain genuine zero-spike bins inside valid recording support.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-099",
+      "source_line": 163,
+      "requirement": "Never confuse invalid/missing support with zero observed spikes.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-100",
+      "source_line": 165,
+      "requirement": "### 3.4 Primary running covariate",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-101",
+      "source_line": 167,
+      "requirement": "This is a mandatory source-validity gate.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-102",
+      "source_line": 169,
+      "requirement": "Use only the registered native:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-103",
+      "source_line": 171,
+      "requirement": "running_wheel_rotation net_rotation",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-104",
+      "source_line": 173,
+      "requirement": "divided by the same-row actual native end-start duration.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-105",
+      "source_line": 175,
+      "requirement": "Verify source angular units and row correspondence.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-106",
+      "source_line": 177,
+      "requirement": "Do not use the SDK's whole-session normalized processed running velocity.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-107",
+      "source_line": 179,
+      "requirement": "Do not use raw dx as an undocumented fallback.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-108",
+      "source_line": 181,
+      "requirement": "Enforce:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-109",
+      "source_line": 183,
+      "requirement": "- Native parent interval end strictly before bin start.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-110",
+      "source_line": 184,
+      "requirement": "- Duration >0 and <=0.1 seconds.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-111",
+      "source_line": 185,
+      "requirement": "- Age >0 and <=0.1 seconds.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-112",
+      "source_line": 186,
+      "requirement": "- No invalid support crossing.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-113",
+      "source_line": 187,
+      "requirement": "- Latest valid past interval only.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-114",
+      "source_line": 188,
+      "requirement": "- Explicit missingness when unavailable.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-115",
+      "source_line": 190,
+      "requirement": "The transformed running predictor and missingness flag must match M1 exactly.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-116",
+      "source_line": 192,
+      "requirement": "Require at least 50% available score bins per role and stimulus color.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-117",
+      "source_line": 194,
+      "requirement": "Do not infer stationarity from source-removed near-zero rows.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-118",
+      "source_line": 196,
+      "requirement": "Pupil remains optional and cannot silently replace missing running.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-119",
+      "source_line": 198,
+      "requirement": "If the primary running/source mapping cannot be defended, STOP before fitting.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-120",
+      "source_line": 200,
+      "requirement": "## 4. M2 \u2014 A-ONLY PHYSIOLOGICAL QC",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-121",
+      "source_line": 202,
+      "requirement": "Authorize bounded real neural extraction from Development A.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-122",
+      "source_line": 204,
+      "requirement": "Use the exact original source-qualified unit candidates and source-selected probes.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-123",
+      "source_line": 206,
+      "requirement": "For each Development mouse, evaluate A-only:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-124",
+      "source_line": 208,
+      "requirement": "- Valid curated recording exposure.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-125",
+      "source_line": 209,
+      "requirement": "- Provider-good and source QC requirements.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-126",
+      "source_line": 210,
+      "requirement": "- At least 30 training/QC spikes.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-127",
+      "source_line": 211,
+      "requirement": "- At least 20 occupied presentations.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-128",
+      "source_line": 212,
+      "requirement": "- Mean rate from 0.5 to 150 Hz.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-129",
+      "source_line": 213,
+      "requirement": "- At least 20 eligible within-window adjacent ISI pairs.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-130",
+      "source_line": 214,
+      "requirement": "- ISI <1.5 ms fraction <=0.02.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-131",
+      "source_line": 215,
+      "requirement": "- Original A presentation/color coverage.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-132",
+      "source_line": 216,
+      "requirement": "- Fully supported onset-to-220ms intervals.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-133",
+      "source_line": 218,
+      "requirement": "Calculate physiology using the frozen A QC windows.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-134",
+      "source_line": 220,
+      "requirement": "Do not create ISIs across stimulus presentation gaps.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-135",
+      "source_line": 222,
+      "requirement": "Select the lowest eight numeric unit IDs passing all frozen requirements.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-136",
+      "source_line": 224,
+      "requirement": "After selection, verify the complete eight-unit common observation support once.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-137",
+      "source_line": 226,
+      "requirement": "Do not replace selected units after a common-support failure.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-138",
+      "source_line": 228,
+      "requirement": "Do not use B/E neural outcomes for unit admission, ranking, scaling or QC.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-139",
+      "source_line": 230,
+      "requirement": "Keep source-derived provider curation separate from newly measured A physiology.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-140",
+      "source_line": 232,
+      "requirement": "### Required Development admission",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-141",
+      "source_line": 234,
+      "requirement": "At least:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-142",
+      "source_line": 236,
+      "requirement": "14 eligible mice overall.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-143",
+      "source_line": 237,
+      "requirement": "3 eligible BO mice.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-144",
+      "source_line": 238,
+      "requirement": "10 eligible FC mice.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-145",
+      "source_line": 240,
+      "requirement": "All three conditions are mandatory.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-146",
+      "source_line": 242,
+      "requirement": "If any fails, STOP before Development predictive fitting.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-147",
+      "source_line": 244,
+      "requirement": "Report actual animal IDs, laboratory/protocol composition, exclusion reasons and complete exposure denominators.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-148",
+      "source_line": 246,
+      "requirement": "Metadata capacity alone is not physiological admission.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-149",
+      "source_line": 248,
+      "requirement": "## 5. M3 \u2014 PRODUCTION NUMERICAL CERTIFICATION",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-150",
+      "source_line": 250,
+      "requirement": "Only after M2 source/physiological gates pass, implement and independently certify the full production worker.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-151",
+      "source_line": 252,
+      "requirement": "Reuse compatible P15 code only where mathematics and source semantics actually match.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-152",
+      "source_line": 254,
+      "requirement": "### Required models",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-153",
+      "source_line": 256,
+      "requirement": "B0:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-154",
+      "source_line": 257,
+      "requirement": "Bounded stationary Poisson rate.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-155",
+      "source_line": 259,
+      "requirement": "B1:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-156",
+      "source_line": 260,
+      "requirement": "Strong stimulus-conditioned nuisance model:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-157",
+      "source_line": 261,
+      "requirement": "12 color \u00d7 time PSTH columns and the 12 frozen adaptation, session, timing and running-nuisance columns.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-158",
+      "source_line": 263,
+      "requirement": "B2:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-159",
+      "source_line": 264,
+      "requirement": "B1 + own history.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-160",
+      "source_line": 266,
+      "requirement": "B3:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-161",
+      "source_line": 267,
+      "requirement": "B1 + other-unit history.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-162",
+      "source_line": 269,
+      "requirement": "B4:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-163",
+      "source_line": 270,
+      "requirement": "B1 + both histories.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-164",
+      "source_line": 272,
+      "requirement": "C:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-165",
+      "source_line": 273,
+      "requirement": "B4 + four fixed causal continuous-history kernel predictors with time constants 0.04 and 0.10 seconds.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-166",
+      "source_line": 275,
+      "requirement": "D:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-167",
+      "source_line": 276,
+      "requirement": "Two-state causal conditional Poisson HMM.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-168",
+      "source_line": 278,
+      "requirement": "S:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-169",
+      "source_line": 279,
+      "requirement": "Two-state presentation-static latent mixture.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-170",
+      "source_line": 281,
+      "requirement": "All classes are mandatory under the original M1 failure policy.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-171",
+      "source_line": 283,
+      "requirement": "Do not treat D/S joint population predictive gains as proof of extra causal neural history.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-172",
+      "source_line": 285,
+      "requirement": "### Frozen mathematical requirements",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-173",
+      "source_line": 287,
+      "requirement": "Keep exact:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-174",
+      "source_line": 288,
+      "requirement": "- Model equations and full likelihood.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-175",
+      "source_line": 289,
+      "requirement": "- Unit-bin exposure denominators.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-176",
+      "source_line": 290,
+      "requirement": "- Regularization and normalization.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-177",
+      "source_line": 291,
+      "requirement": "- Parameter bounds.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-178",
+      "source_line": 292,
+      "requirement": "- Fixed feature scaling.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-179",
+      "source_line": 293,
+      "requirement": "- Model nesting.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-180",
+      "source_line": 294,
+      "requirement": "- Latent-state definitions.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-181",
+      "source_line": 295,
+      "requirement": "- State reset and causal filtering.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-182",
+      "source_line": 296,
+      "requirement": "- Initialization policies.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-183",
+      "source_line": 297,
+      "requirement": "- Original random seeds.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-184",
+      "source_line": 299,
+      "requirement": "D/S must use all three registered seeds:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-185",
+      "source_line": 300,
+      "requirement": "11, 23, 37.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-186",
+      "source_line": 302,
+      "requirement": "No seed replacement or extra initialization.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-187",
+      "source_line": 304,
+      "requirement": "### Numerical acceptance",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-188",
+      "source_line": 306,
+      "requirement": "Projected gradient infinity norm:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-189",
+      "source_line": 307,
+      "requirement": "<=1e-5.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-190",
+      "source_line": 309,
+      "requirement": "Independent automatic differentiation scaled error:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-191",
+      "source_line": 310,
+      "requirement": "<=1e-8.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-192",
+      "source_line": 312,
+      "requirement": "Frozen finite-difference step:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-193",
+      "source_line": 313,
+      "requirement": "1e-5.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-194",
+      "source_line": 315,
+      "requirement": "Frozen finite-difference scaled error:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-195",
+      "source_line": 316,
+      "requirement": "<=2e-5.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-196",
+      "source_line": 318,
+      "requirement": "Apply all checkpoint, parameter, source, feature and likelihood tests exactly as registered.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-197",
+      "source_line": 320,
+      "requirement": "Verify production implementation using synthetic tests and source-compatible A fixtures before starting A optimization.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-198",
+      "source_line": 322,
+      "requirement": "No synthetic PASS may be interpreted as a biological result.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-199",
+      "source_line": 324,
+      "requirement": "## 6. REAL EXECUTION BUDGET",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-200",
+      "source_line": 326,
+      "requirement": "Respect the exact frozen NUMERICAL_POLICY.json.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-201",
+      "source_line": 328,
+      "requirement": "The registered whole-study optimizer-attempt ceiling is 16,178, including future stages.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-202",
+      "source_line": 330,
+      "requirement": "Do NOT treat all 16,178 attempts as a Development-only allowance.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-203",
+      "source_line": 332,
+      "requirement": "Derive and archive the precise Development-only attempt allocation from the normative fit-budget formula and admitted mouse count before the first attempt.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-204",
+      "source_line": 334,
+      "requirement": "Reserve future Final-stage capacity separately without using it now.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-205",
+      "source_line": 336,
+      "requirement": "Global protections:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-206",
+      "source_line": 338,
+      "requirement": "- At most four concurrent workers.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-207",
+      "source_line": 339,
+      "requirement": "- 48-hour Development stage wall-time ceiling.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-208",
+      "source_line": 340,
+      "requirement": "- Maximum 1,500 accepted optimizer iterations per attempt.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-209",
+      "source_line": 341,
+      "requirement": "- Maximum 6,000 objective/analytic-gradient pairs per attempt.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-210",
+      "source_line": 342,
+      "requirement": "- Original bounded diagnostic-call accounting.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-211",
+      "source_line": 343,
+      "requirement": "- No optimizer retries.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-212",
+      "source_line": 344,
+      "requirement": "- No expanded grid, seed or fit budget.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-213",
+      "source_line": 346,
+      "requirement": "Implement external guards that refuse unauthorized calls BEFORE execution, not merely SciPy option flags.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-214",
+      "source_line": 348,
+      "requirement": "Before launching the full workload, estimate required time, storage and resources from non-neural synthetic or short non-scoring implementation benchmarks.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-215",
+      "source_line": 350,
+      "requirement": "Do not change fit policy based on performance outcomes.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-216",
+      "source_line": 352,
+      "requirement": "Budget exhaustion produces a documented STOP, not a silent extension.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-217",
+      "source_line": 354,
+      "requirement": "## 7. M4 \u2014 DEVELOPMENT MODEL FITTING",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-218",
+      "source_line": 356,
+      "requirement": "Proceed only after actual production numerical certification passes.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-219",
+      "source_line": 358,
+      "requirement": "### Stage A \u2014 B1 grid",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-220",
+      "source_line": 360,
+      "requirement": "Fit B1 on Development A using original \u03bb:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-221",
+      "source_line": 362,
+      "requirement": "0.01",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-222",
+      "source_line": 363,
+      "requirement": "0.1",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-223",
+      "source_line": 364,
+      "requirement": "1.0",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-224",
+      "source_line": 366,
+      "requirement": "Fit all registered B1 grid choices and score on B.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-225",
+      "source_line": 368,
+      "requirement": "Select exactly one global \u03bb using:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-226",
+      "source_line": 370,
+      "requirement": "1. Equal-mouse mean within BO.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-227",
+      "source_line": 371,
+      "requirement": "2. Equal-mouse mean within FC.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-228",
+      "source_line": 372,
+      "requirement": "3. Overall 0.5 BO + 0.5 FC weighting.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-229",
+      "source_line": 374,
+      "requirement": "The criterion is B1 held-out B predictive log score ONLY.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-230",
+      "source_line": 376,
+      "requirement": "Do not select \u03bb from B4 gains, D/C/S scores or Development E outcomes.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-231",
+      "source_line": 378,
+      "requirement": "Tie within 1e-12:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-232",
+      "source_line": 379,
+      "requirement": "Choose larger \u03bb.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-233",
+      "source_line": 381,
+      "requirement": "Reject incomplete, duplicate, off-grid or source-inconsistent selection records.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-234",
+      "source_line": 383,
+      "requirement": "### Stage B \u2014 Frozen model execution",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-235",
+      "source_line": 385,
+      "requirement": "After \u03bb selection:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-236",
+      "source_line": 387,
+      "requirement": "Reuse the selected B1 fit.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-237",
+      "source_line": 389,
+      "requirement": "Fit B2, B3, B4, C, D and S under the frozen selected \u03bb and original per-mouse A data.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-238",
+      "source_line": 391,
+      "requirement": "No unused grid search.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-239",
+      "source_line": 393,
+      "requirement": "Do not use B neural outcomes as input to training.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-240",
+      "source_line": 395,
+      "requirement": "Do not remove D/C/S because one performs poorly.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-241",
+      "source_line": 397,
+      "requirement": "For D/S, all required seeds and numerical certificates must pass before model selection is scientifically valid.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-242",
+      "source_line": 399,
+      "requirement": "Do not promote a numerical failure to an unfavorable scientific result.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-243",
+      "source_line": 401,
+      "requirement": "A required numerical failure must STOP under the frozen policy.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-244",
+      "source_line": 403,
+      "requirement": "Preserve every attempted, completed, invalid and unattempted task.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-245",
+      "source_line": 405,
+      "requirement": "## 8. M5 \u2014 DEVELOPMENT E ASSESSMENT",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-246",
+      "source_line": 407,
+      "requirement": "After all Development selections are frozen, perform ONE exploratory E assessment.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-247",
+      "source_line": 409,
+      "requirement": "Report seven model log scores and six registered contrasts:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-248",
+      "source_line": 411,
+      "requirement": "Primary:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-249",
+      "source_line": 412,
+      "requirement": "B4\u2212B1.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-250",
+      "source_line": 414,
+      "requirement": "Secondary:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-251",
+      "source_line": 415,
+      "requirement": "B4\u2212B2",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-252",
+      "source_line": 416,
+      "requirement": "B4\u2212B3",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-253",
+      "source_line": 417,
+      "requirement": "D\u2212B4",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-254",
+      "source_line": 418,
+      "requirement": "C\u2212B4",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-255",
+      "source_line": 419,
+      "requirement": "D\u2212S",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-256",
+      "source_line": 421,
+      "requirement": "Apply original:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-257",
+      "source_line": 422,
+      "requirement": "- Equal-mouse weighting.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-258",
+      "source_line": 423,
+      "requirement": "- Original paired sign-flip procedure.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-259",
+      "source_line": 424,
+      "requirement": "- Original bootstrap policy, 10,000 whole-mouse resamples.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-260",
+      "source_line": 425,
+      "requirement": "- Holm5 secondary correction.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-261",
+      "source_line": 426,
+      "requirement": "- Individual-mouse and LOMO reporting.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-262",
+      "source_line": 427,
+      "requirement": "- Original minimum meaningful-effect rules.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-263",
+      "source_line": 429,
+      "requirement": "Do not describe E as independent Final validation.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-264",
+      "source_line": 431,
+      "requirement": "### BO/FC transport audit",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-265",
+      "source_line": 433,
+      "requirement": "Report separately:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-266",
+      "source_line": 435,
+      "requirement": "- BO Development E.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-267",
+      "source_line": 436,
+      "requirement": "- FC Development E.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-268",
+      "source_line": 437,
+      "requirement": "- Pooled descriptive results with correct weighting.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-269",
+      "source_line": 438,
+      "requirement": "- Mouse-level variability.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-270",
+      "source_line": 439,
+      "requirement": "- Source/batch/genotype/sex composition.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-271",
+      "source_line": 441,
+      "requirement": "The frozen BO-only S03 diagnostic requires at least three eligible BO Development mice.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-272",
+      "source_line": 443,
+      "requirement": "The frozen FC diagnostic requires at least ten.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-273",
+      "source_line": 445,
+      "requirement": "Do not change the 0.5/0.5 selection rule after examining the BO-only results.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-274",
+      "source_line": 447,
+      "requirement": "Do not claim causal effects of protocol assignment.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-275",
+      "source_line": 449,
+      "requirement": "## 9. FALSIFICATION AND SENSITIVITY",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-276",
+      "source_line": 451,
+      "requirement": "Implement and run the applicable registered Development tests from controls.json.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-277",
+      "source_line": 453,
+      "requirement": "Preserve all 12 sensitivities:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-278",
+      "source_line": 455,
+      "requirement": "S01\u2013S12.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-279",
+      "source_line": 457,
+      "requirement": "Use the eight originally registered refit panels:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-280",
+      "source_line": 459,
+      "requirement": "S01, S02, S05, S06, S07, S09, S10, S11.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-281",
+      "source_line": 461,
+      "requirement": "Honor optional source coverage rules before attempting an optional panel fit.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-282",
+      "source_line": 463,
+      "requirement": "Do not rename attempted numerical failures as UNAVAILABLE.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-283",
+      "source_line": 465,
+      "requirement": "Implement N1\u2013N4 with the exact frozen procedures:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-284",
+      "source_line": 467,
+      "requirement": "N1 \u2014 999 joint neural-history donor derangements.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-285",
+      "source_line": 469,
+      "requirement": "N2 \u2014 16 within-bin timestamp jitter controls.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-286",
+      "source_line": 471,
+      "requirement": "N3 \u2014 999 stimulus-disrupting circular-shift references.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-287",
+      "source_line": 473,
+      "requirement": "N4 \u2014 11 deterministic wrong-nuisance mappings.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-288",
+      "source_line": 475,
+      "requirement": "Run Development E controls only when supported and required under the existing frozen specification.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-289",
+      "source_line": 477,
+      "requirement": "Respect exact RNG, assignment, temporal and support constraints.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-290",
+      "source_line": 479,
+      "requirement": "N1 donor exchangeability is approximate.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-291",
+      "source_line": 481,
+      "requirement": "N3 changes stimulus alignment and is not an exact conditional history null.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-292",
+      "source_line": 483,
+      "requirement": "N2 must preserve B0\u2013B4/D/S count-based identities, while C's exact-time kernels may respond to within-bin jitter.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-293",
+      "source_line": 485,
+      "requirement": "N4 is a coding stress test, not a p-value-generating null.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-294",
+      "source_line": 487,
+      "requirement": "Do not substitute favorable draws or extend replicate counts.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-295",
+      "source_line": 489,
+      "requirement": "No recursively generated self-exciting Poisson null.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-296",
+      "source_line": 491,
+      "requirement": "Report every failed or unavailable control.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-297",
+      "source_line": 493,
+      "requirement": "## 10. SCIENTIFIC CLAIM BOUNDARIES",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-298",
+      "source_line": 495,
+      "requirement": "Even if Development B4\u2212B1 is strongly positive, it remains exploratory.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-299",
+      "source_line": 497,
+      "requirement": "Development can support statements about measured predictive improvement under the registered model and source assumptions.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-300",
+      "source_line": 499,
+      "requirement": "It cannot establish:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-301",
+      "source_line": 501,
+      "requirement": "- Causal neural interactions.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-302",
+      "source_line": 502,
+      "requirement": "- Movement/arousal-independent neural mechanisms.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-303",
+      "source_line": 503,
+      "requirement": "- Physical neural primitives.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-304",
+      "source_line": 504,
+      "requirement": "- Persistent discrete biological states.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-305",
+      "source_line": 505,
+      "requirement": "- Cross-laboratory replication.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-306",
+      "source_line": 506,
+      "requirement": "- Confirmatory generalization to all visual cortex.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-307",
+      "source_line": 507,
+      "requirement": "- Validation of CWP/NAP ontology.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-308",
+      "source_line": 509,
+      "requirement": "Pay special attention to BO/FC protocol transport.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-309",
+      "source_line": 511,
+      "requirement": "The Final target population consists of BO mice, while most Development mice are FC.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-310",
+      "source_line": 513,
+      "requirement": "Development success is not automatically evidence that the policy transports well to Final BO.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-311",
+      "source_line": 515,
+      "requirement": "All results must remain transparent about this difference.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-312",
+      "source_line": 517,
+      "requirement": "## 11. STRICT FINAL NEURAL BOUNDARY",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-313",
+      "source_line": 519,
+      "requirement": "Final C neural access: NOT AUTHORIZED.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-314",
+      "source_line": 521,
+      "requirement": "Final D neural access: NOT AUTHORIZED.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-315",
+      "source_line": 523,
+      "requirement": "No Final C physiological QC, neural calibration, model fitting or score computation.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-316",
+      "source_line": 525,
+      "requirement": "No Final D neural extraction, neural summary, null testing or assessment.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-317",
+      "source_line": 527,
+      "requirement": "Outcome-blind Final metadata/source evidence already authorized in M1 may be referenced without reopening neural outcomes.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-318",
+      "source_line": 529,
+      "requirement": "If a reader must decode whole-record files that contain reserved Final D neural values to extract Final C, that technical exception requires a separate future owner instruction.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-319",
+      "source_line": 531,
+      "requirement": "No implicit permission to decode Final D here.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-320",
+      "source_line": 533,
+      "requirement": "Do not create a separate cryptographic key system, offline-owner workstation ceremony or third-party custodian.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-321",
+      "source_line": 535,
+      "requirement": "Use straightforward scientific role separation and auditable native readers.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-322",
+      "source_line": 537,
+      "requirement": "## 12. HANDOFF TO PROMPT 4",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-323",
+      "source_line": 539,
+      "requirement": "Only after a valid Development completion:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-324",
+      "source_line": 541,
+      "requirement": "Freeze:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-325",
+      "source_line": 542,
+      "requirement": "- Exact eligible Development animals.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-326",
+      "source_line": 543,
+      "requirement": "- Complete original source IDs.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-327",
+      "source_line": 544,
+      "requirement": "- Valid observation and stimulus masks.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-328",
+      "source_line": 545,
+      "requirement": "- Selected A units.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-329",
+      "source_line": 546,
+      "requirement": "- Feature names, scalers and active maps.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-330",
+      "source_line": 547,
+      "requirement": "- Selected global \u03bb.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-331",
+      "source_line": 548,
+      "requirement": "- Model configurations.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-332",
+      "source_line": 549,
+      "requirement": "- All production numerical certificates.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-333",
+      "source_line": 550,
+      "requirement": "- Main model and sensitivity results.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-334",
+      "source_line": 551,
+      "requirement": "- E evaluation and controls.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-335",
+      "source_line": 552,
+      "requirement": "- Full limitations and claim audit.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-336",
+      "source_line": 553,
+      "requirement": "- Exact code/source hashes.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-337",
+      "source_line": 555,
+      "requirement": "Prepare a read-only Final C/D implementation handoff.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-338",
+      "source_line": 557,
+      "requirement": "Do not begin Final C or Final D automatically.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-339",
+      "source_line": 559,
+      "requirement": "A future Prompt 4 requires separate explicit authorization.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-340",
+      "source_line": 561,
+      "requirement": "## 13. DELIVERY REQUIREMENTS",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-341",
+      "source_line": 563,
+      "requirement": "Create a new versioned P16 Development directory.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-342",
+      "source_line": 565,
+      "requirement": "Provide:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-343",
+      "source_line": 567,
+      "requirement": "1. Native source and behavior verification report.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-344",
+      "source_line": 568,
+      "requirement": "2. Development physiological QC/admission table.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-345",
+      "source_line": 569,
+      "requirement": "3. BO/FC admitted cohort counts.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-346",
+      "source_line": 570,
+      "requirement": "4. Exact timebase and observation-support certificates.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-347",
+      "source_line": 571,
+      "requirement": "5. Real production numerical certification.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-348",
+      "source_line": 572,
+      "requirement": "6. Full baseline and latent-model fit ledgers.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-349",
+      "source_line": 573,
+      "requirement": "7. Development B global \u03bb selection.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-350",
+      "source_line": 574,
+      "requirement": "8. One Development E scientific report.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-351",
+      "source_line": 575,
+      "requirement": "9. BO-only and FC subgroup diagnostics.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-352",
+      "source_line": 576,
+      "requirement": "10. Twelve registered sensitivity statuses.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-353",
+      "source_line": 577,
+      "requirement": "11. Four registered reference/control statuses.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-354",
+      "source_line": 578,
+      "requirement": "12. Attempt budgets, elapsed time and failures.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-355",
+      "source_line": 579,
+      "requirement": "13. A1\u2013A10 scientific claim audit.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-356",
+      "source_line": 580,
+      "requirement": "14. Saved-only PowerShell reproduction.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-357",
+      "source_line": 581,
+      "requirement": "15. Independent internal scientific and numerical review.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-358",
+      "source_line": 582,
+      "requirement": "16. Verified origin/test Git commit and clean-worktree evidence.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-359",
+      "source_line": 584,
+      "requirement": "Required terminal fields:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-360",
+      "source_line": 586,
+      "requirement": "MISSION_ID",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-361",
+      "source_line": 587,
+      "requirement": "FINAL_STATUS",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-362",
+      "source_line": 588,
+      "requirement": "M2_SOURCE_VALIDITY_PASS",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-363",
+      "source_line": 589,
+      "requirement": "M2_RUNNING_SEMANTICS_PASS",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-364",
+      "source_line": 590,
+      "requirement": "DEVELOPMENT_ADMITTED_MICE",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-365",
+      "source_line": 591,
+      "requirement": "DEVELOPMENT_ADMITTED_BO",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-366",
+      "source_line": 592,
+      "requirement": "DEVELOPMENT_ADMITTED_FC",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-367",
+      "source_line": 593,
+      "requirement": "M2_PHYSIOLOGICAL_QC_PASS",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-368",
+      "source_line": 594,
+      "requirement": "M3_PRODUCTION_NUMERICAL_PASS",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-369",
+      "source_line": 595,
+      "requirement": "DEVELOPMENT_ATTEMPT_BUDGET",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-370",
+      "source_line": 596,
+      "requirement": "DEVELOPMENT_ATTEMPTS_USED",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-371",
+      "source_line": 597,
+      "requirement": "M4_B1_SELECTION_COMPLETE",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-372",
+      "source_line": 598,
+      "requirement": "FROZEN_LAMBDA",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-373",
+      "source_line": 599,
+      "requirement": "M4_ALL_MODEL_FITS_COMPLETE",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-374",
+      "source_line": 600,
+      "requirement": "M5_E_ASSESSMENT_COMPLETE",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-375",
+      "source_line": 601,
+      "requirement": "PRIMARY_DEVELOPMENT_EFFECT",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-376",
+      "source_line": 602,
+      "requirement": "SECONDARY_DEVELOPMENT_EFFECTS",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-377",
+      "source_line": 603,
+      "requirement": "BO_ONLY_DIAGNOSTIC",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-378",
+      "source_line": 604,
+      "requirement": "FC_DIAGNOSTIC",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-379",
+      "source_line": 605,
+      "requirement": "SENSITIVITY_RESULTS",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-380",
+      "source_line": 606,
+      "requirement": "REFERENCE_CONTROL_RESULTS",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-381",
+      "source_line": 607,
+      "requirement": "SCIENTIFIC_VERDICT",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-382",
+      "source_line": 608,
+      "requirement": "FINAL_C_ACCESS=false",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-383",
+      "source_line": 609,
+      "requirement": "FINAL_D_ACCESS=false",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-384",
+      "source_line": 610,
+      "requirement": "PROMPT_4_READY",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-385",
+      "source_line": 611,
+      "requirement": "BUG_COUNT",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-386",
+      "source_line": 612,
+      "requirement": "WARN_COUNT",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-387",
+      "source_line": 613,
+      "requirement": "GIT_COMMIT",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-388",
+      "source_line": 614,
+      "requirement": "REMOTE_VERIFICATION",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-389",
+      "source_line": 616,
+      "requirement": "## 14. TERMINAL CONDITIONS",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-390",
+      "source_line": 618,
+      "requirement": "If all required Development work completes:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-391",
+      "source_line": 620,
+      "requirement": "DEVELOPMENT_COMPLETE_EXPLORATORY",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-392",
+      "source_line": 622,
+      "requirement": "If source, behavior or physiological admission fails:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-393",
+      "source_line": 624,
+      "requirement": "STOP_SOURCE_OR_QC",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-394",
+      "source_line": 626,
+      "requirement": "If required numerical certification or fitting fails:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-395",
+      "source_line": 628,
+      "requirement": "STOP_NUMERICAL",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-396",
+      "source_line": 630,
+      "requirement": "If a fixed execution budget is exhausted:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-397",
+      "source_line": 632,
+      "requirement": "STOP_BUDGET",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-398",
+      "source_line": 634,
+      "requirement": "If the scientific experiment cannot remain consistent with M1:",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-399",
+      "source_line": 636,
+      "requirement": "SCIENTIFIC_PROTOCOL_BLOCKER",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-400",
+      "source_line": 638,
+      "requirement": "Do not declare scientific success from an engineering PASS.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-401",
+      "source_line": 640,
+      "requirement": "Negative or nonsignificant valid neural results are acceptable scientific outputs.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-402",
+      "source_line": 642,
+      "requirement": "Preserve failures and original evidence.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-403",
+      "source_line": 644,
+      "requirement": "No post-result optimization rescue.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-404",
+      "source_line": 646,
+      "requirement": "No Final C/D execution.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-405",
+      "source_line": 648,
+      "requirement": "STOP after a completed Development handoff or an evidence-backed blocker.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-406",
+      "source_line": 650,
+      "requirement": "BEGIN M2 NOW.",
+      "conditionality": "Mandatory as specified; downstream execution is forbidden on prerequisite STOP; report NOT_RUN_PREREQUISITE_FAILED,never executed PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-407",
+      "source_line": null,
+      "requirement": "Preserve every BASE tracked file except byte-exact original daily suffix",
+      "conditionality": "Mandatory",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-408",
+      "source_line": null,
+      "requirement": "Independent scientific/numerical review and preservation of unsuccessful reviews",
+      "conditionality": "Mandatory",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-409",
+      "source_line": null,
+      "requirement": "Exact mission-only staging,normal origin/test push,all changed blob readback,clean gate",
+      "conditionality": "Mandatory",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-410",
+      "source_line": null,
+      "requirement": "Stop after current Development completion or evidence-backed frozen gate failure",
+      "conditionality": "Mandatory",
+      "status": "OPEN"
+    }
+  ]
+}

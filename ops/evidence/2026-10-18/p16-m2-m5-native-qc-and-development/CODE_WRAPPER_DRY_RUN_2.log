@@ -1,0 +1,114 @@
+$ codex exec - --cd C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_dev --sandbox workspace-write --ask-for-approval on-request --skip-git-repo-check --ephemeral
+
+--- mission prompt ---
+
+You are Codex CLI running as a coding agent.
+Execute the following JSON Mission Spec against the target repository.
+Treat the Mission Spec JSON as the development task contract.
+Keep edits scoped, follow existing project style, and run relevant validation when practical.
+## Mission Spec JSON
+```json
+{
+  "version": "1.0",
+  "mission": {
+    "id": "P16-M2-M5-NATIVE-QC-AND-DEVELOPMENT",
+    "objective": "Implement only synthetic pure M2 running validity and A physiology core under existing frozen protocol; no source access or fitting."
+  },
+  "target": {
+    "workdir": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper16_dev",
+    "files": [
+      "m2_core.py",
+      "test_m2_core.py"
+    ]
+  },
+  "instructions": {
+    "context": "Read immutable scientific contracts at C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper16_m1 . Parent coordinator handles actualsourceaccess/independentreview. This is first gated implementation subtask only.",
+    "requirements": [
+      "Pure numpy binary64 source running row validation,strict causal latest valid parent interval,duration/age0< <=.1,r=tanh(net_rotation/(end-start)/10),missingflag",
+      "A physiological QC fixed windows,finite sortedspikes,exposure/30spikes/20occupied/rate.5..150/20withinwindowISIpairs/short<.0015fraction<=.02",
+      "Tests causal boundary/futuremutation/invalidsupport/zeromissing/roleB-E-Ddenial and fixed QC thresholds"
+    ],
+    "constraints": [
+      "No network,NWB,realcounts,fits,Finalaccess;no subprocess except localtests;no scientific changes;edit only twofiles",
+      "Use numpy only;tests unittest;repository runtime executable C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper16_m1\\work\\runtime\\Scripts\\python.exe"
+    ],
+    "nonGoals": [
+      "M3production/M4/M5;nativeacquisition;Git;oldfileedits"
+    ]
+  },
+  "acceptance": {
+    "criteria": [
+      "All fixedcontract synthetic tests pass",
+      "Source unknownunits/rowmismatch/nonfinite timestamps failclosed"
+    ],
+    "validation": [
+      "Run unittest on two new files only"
+    ]
+  },
+  "codex": {
+    "sandbox": "workspace-write",
+    "approval": "on-request",
+    "skipGitRepoCheck": true,
+    "ephemeral": true
+  },
+  "policy": {
+    "risk": {
+      "decision": "allow"
+    },
+    "write": {
+      "mode": "strict",
+      "allow": [
+        "m2_core.py",
+        "test_m2_core.py"
+      ],
+      "deny": [
+        "MISSION_SPEC.json",
+        ".git/**",
+        "work/**"
+      ],
+      "maxFilesChanged": 2,
+      "maxBytesChanged": 60000,
+      "allowDelete": false
+    }
+  }
+}
+```
+## Mission
+- Version: 1.0
+- ID: P16-M2-M5-NATIVE-QC-AND-DEVELOPMENT
+- Objective: Implement only synthetic pure M2 running validity and A physiology core under existing frozen protocol; no source access or fitting.
+
+## Context
+Read immutable scientific contracts at C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1 . Parent coordinator handles actualsourceaccess/independentreview. This is first gated implementation subtask only.
+
+
+## Requirements
+- Pure numpy binary64 source running row validation,strict causal latest valid parent interval,duration/age0< <=.1,r=tanh(net_rotation/(end-start)/10),missingflag
+- A physiological QC fixed windows,finite sortedspikes,exposure/30spikes/20occupied/rate.5..150/20withinwindowISIpairs/short<.0015fraction<=.02
+- Tests causal boundary/futuremutation/invalidsupport/zeromissing/roleB-E-Ddenial and fixed QC thresholds
+
+
+## Target Files
+- m2_core.py
+- test_m2_core.py
+
+
+## Constraints
+- No network,NWB,realcounts,fits,Finalaccess;no subprocess except localtests;no scientific changes;edit only twofiles
+- Use numpy only;tests unittest;repository runtime executable C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\work\runtime\Scripts\python.exe
+
+
+## Non-Goals
+- M3production/M4/M5;nativeacquisition;Git;oldfileedits
+
+
+## Acceptance Criteria
+- All fixedcontract synthetic tests pass
+- Source unknownunits/rowmismatch/nonfinite timestamps failclosed
+
+
+## Validation
+- Run unittest on two new files only
+
+## Final Response
+Summarize changed files, validation performed, and any follow-up needed.

@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_dev\source_running.py", line 341, in <module>
+    main(float(sys.argv[sys.argv.index('--deadline') + 1]))
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_dev\source_running.py", line 266, in main
+    a, b, q = native_running(f, sid, header, audit)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_dev\source_running.py", line 129, in native_running
+    ts = hard_object(file, '/processing/running/running_wheel_rotation/timestamps')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_dev\source_running.py", line 91, in hard_object
+    raise ValueError('External/soft/noncanonical source link denied')
+ValueError: External/soft/noncanonical source link denied

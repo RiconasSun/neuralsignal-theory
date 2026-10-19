@@ -1,0 +1,37 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_dev\verify_saved.py", line 124, in <module>
+    main()
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_dev\verify_saved.py", line 117, in main
+    suite = unittest.TestSuite(unittest.defaultTestLoader.loadTestsFromName(x) for x in ['paper16_dev.test_m2','paper16_dev.test_saved_stop'])
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\unittest\suite.py", line 24, in __init__
+    self.addTests(tests)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\unittest\suite.py", line 57, in addTests
+    for test in tests:
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_dev\verify_saved.py", line 117, in <genexpr>
+    suite = unittest.TestSuite(unittest.defaultTestLoader.loadTestsFromName(x) for x in ['paper16_dev.test_m2','paper16_dev.test_saved_stop'])
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\unittest\loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_dev\test_m2.py", line 6, in <module>
+    from unittest import mock
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\unittest\mock.py", line 26, in <module>
+    import asyncio
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\__init__.py", line 42, in <module>
+    from .windows_events import *
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\windows_events.py", line 25, in <module>
+    from . import windows_utils
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\windows_utils.py", line 125, in <module>
+    class Popen(subprocess.Popen):
+TypeError: function() argument 'code' must be code, not str
+{"FINAL_STATUS": "STOP_SOURCE_OR_QC", "frozen_stop_payloads": 55, "M1_frozen_payloads": 334, "source_attempts": 1, "source_failed": 1, "source_unattempted": 27, "payload_bytes": 81912, "reserved_bytes": 81951, "running_values_decoded": 0, "new_neural_arrays": 0, "real_model_fits": 0, "Final_C_D": false, "planned_unactivated_fit_slots": 8456}
+Saved stop reproduction failed: 1
+At C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_dev\reproduce.ps1:8 char:32
++ ... CODE -ne 0) { throw "Saved stop reproduction failed: $LASTEXITCODE" }
++                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (Saved stop reproduction failed: 1:String) [], RuntimeException
+    + FullyQualifiedErrorId : Saved stop reproduction failed: 1
+ 
