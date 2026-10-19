@@ -1,0 +1,56 @@
+{
+  "historical_M2": {
+    "mission": "P16-M2-M5-NATIVE-QC-AND-DEVELOPMENT",
+    "attempts": 1,
+    "failed": 1,
+    "unattempted": 27,
+    "requests": 39,
+    "payload_bytes": 81912,
+    "reserved_bytes": 81951,
+    "verdict": "STOP_SOURCE_OR_QC"
+  },
+  "historical_R1": {
+    "mission": "P16-M2-NATIVE-LINK-DIAGNOSTIC-R1",
+    "attempts": 1,
+    "metadata_completed": 1,
+    "requests": 44,
+    "payload_bytes": 85712,
+    "reserved_bytes": 85756,
+    "verdict": "SOURCE_SCHEMA_INCOMPATIBLE"
+  },
+  "new_R2": {
+    "requests": 1676,
+    "payload_bytes": 207760032,
+    "reserved_bytes": 207761708,
+    "attempts": 28,
+    "completed": 28,
+    "failed": 0,
+    "unattempted": 0,
+    "per_source_limits": {
+      "per_object_bytes": 134217728,
+      "total_bytes": 3758096384,
+      "per_request_bytes": 1048576,
+      "per_object_requests": 4096,
+      "concurrency": 1,
+      "maximum_authorized_concurrency": 4,
+      "stage_seconds": 14400,
+      "request_timeout_seconds": 30,
+      "network_retries": 0,
+      "allow_redirects": false,
+      "bulk_fallback": false,
+      "native_rows_max": 2000000
+    },
+    "deadline": 339696.781,
+    "global_elapsed_seconds": 921.062,
+    "verdict": "RUNNING_SOURCE_GATE_PASS"
+  },
+  "administrative_cumulative": {
+    "attempts_across_missions": 30,
+    "requests": 1759,
+    "payload_bytes": 207927656,
+    "reserved_bytes": 207929415,
+    "budget_refunded": false,
+    "historical_verdicts_changed": false,
+    "not_a_single_combined_scientific_attempt": true
+  }
+}

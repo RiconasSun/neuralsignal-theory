@@ -1,0 +1,112 @@
+"""Synthetic end-to-end native source interface and first-gate tests."""
+import io
+import json
+from pathlib import Path
+import tempfile
+import time
+import sys
+import unittest
+from unittest.mock import patch
+import numpy as np
+
+from . import run_sources as run
+from .reader import ROT,TARGET,END,SCALARS
+from .test_running import fixture,flash_fixture,WORK,Response
+
+
+class ImageHTTP:
+    def __init__(self,image):self.image=image;self.calls=0
+    def get(self,url,params,headers,**kwargs):
+        self.calls+=1
+        assert kwargs['allow_redirects'] is False
+        first=int(params['p16_r2_offset']);n=int(params['p16_r2_length'])
+        return Response(content_range=f'bytes {first}-{first+n-1}/{len(self.image)}',body=self.image[first:first+n])
+    def close(self):pass
+
+
+class InterfaceTests(unittest.TestCase):
+    def integration(self,passing):
+        with tempfile.TemporaryDirectory(dir=WORK) as tmp:
+            root=Path(tmp);data=flash_fixture();a,b,q,onset,colors,valid=data
+            with fixture(str(root/'fixture.h5')) as file:
+                if passing:
+                    for path,values in [(ROT,q),(TARGET,a),(END,b)]:
+                        del file[path];ds=file.create_dataset(path,data=values)
+                        ds.attrs['unit']='radians' if path==ROT else 'seconds'
+                file.flush();image=file.id.get_file_image() # Synthetic only.
+            item={'session_id':750749662,'mouse_id':'synthetic','role':'Development','protocol':'brain_observatory_1.1','size':len(image),'file_id':'synthetic','etag':'fixed'}
+            reg={'objects':[item],'denied_final_session_ids':[]}
+            stage=root/'stage';(stage/'results').mkdir(parents=True);(stage/'ACCESS_REGISTRATION.json').write_text('{}',encoding='utf8')
+            (stage/'reader.py').write_text('# synthetic source identity',encoding='utf8')
+            http=ImageHTTP(image)
+            with patch.object(run,'P',stage),patch.object(run,'source_inputs',return_value=({SCALARS[1]:'clock0',SCALARS[2]:'clock0'},onset,colors,valid,[],{'synthetic':True})),patch('requests.Session',return_value=http):
+                journal=run.BudgetJournal(stage/'results/budget.jsonl')
+                result=run.run_one(item,reg,time.monotonic()+10,journal,True);journal.close()
+                self.assertEqual(result['status'],'SOURCE_RUNNING_PASS' if passing else 'FIRST_SOURCE_COVERAGE_STOP')
+                self.assertEqual(result['neural_values_read'],0);self.assertEqual(result['model_fits'],0)
+                self.assertFalse(result['Final_C_access']);self.assertTrue(result['float64_promotion_exact'])
+                self.assertTrue(result['native_arrays_unchanged_after_features'])
+                self.assertEqual(result['new_requests'],http.calls);self.assertLess(result['new_reserved_bytes'],134217728)
+                saved={}
+                for name,entry in result['native_bundle']['vectors'].items():
+                    with np.load(run.R/entry['path'],allow_pickle=False) as vector:saved[name]=vector['values'].copy()
+                self.assertEqual(saved['rotation'].dtype,np.dtype('float32'))
+                if passing:
+                    self.assertEqual(saved['start'].tobytes(),a.tobytes());self.assertEqual(saved['end'].tobytes(),b.tobytes());self.assertEqual(saved['rotation'].tobytes(),q.tobytes())
+                oldcalls=http.calls
+                with self.assertRaises(FileExistsError):run.run_one(item,reg,time.monotonic()+10,journal,True)
+                self.assertEqual(http.calls,oldcalls)
+                if not passing:self.assertIn('remaining27 not authorized',result['error'])
+
+    def test_full_synthetic_source_interface_pass_and_native_bit_preservation(self):self.integration(True)
+    def test_valid_source_with_failed_first_coverage_stops_without_retry(self):self.integration(False)
+
+    def test_first_actual_review_gate_missing_or_failed_cannot_unlock_remaining(self):
+        with tempfile.TemporaryDirectory(dir=WORK) as tmp:
+            e=Path(tmp)
+            with patch.object(run,'E',e):
+                with self.assertRaises(FileNotFoundError):run.first_review_gate()
+                (e/'FIRST_SOURCE_APPROVAL.json').write_text(json.dumps({'decision':'REPAIR_REQUIRED','open_P0':0,'open_P1':1}),encoding='utf8')
+                with self.assertRaises(ValueError):run.first_review_gate()
+                (e/'FIRST_SOURCE_APPROVAL.json').write_text(json.dumps({'decision':'ACCEPTED_FIRST_R2_SOURCE_RUNNING_PASS','open_P0':0,'open_P1':0,'reviewed_hashes':{}}),encoding='utf8')
+                with self.assertRaisesRegex(ValueError,'Incomplete actual first-source artifact review'):run.first_review_gate()
+
+    def test_unknown_worker_phase_denied_before_review_or_stage_mutation(self):
+        with patch.object(run,'review_gate',side_effect=AssertionError('No effect before phase validation')):
+            for phase in ['typo','rest','FIRST','',None]:
+                with self.assertRaisesRegex(ValueError,'Unknown worker phase'):run.worker(phase,time.monotonic()+10)
+
+    def test_external_hardkill_retains_completed_native_vector_before_next_read(self):
+        with tempfile.TemporaryDirectory(dir=WORK) as tmp:
+            root=Path(tmp);script=root/'child.py'
+            script.write_text('''import sys,time,json
+from pathlib import Path
+from unittest.mock import patch
+import h5py,numpy as np
+from paper16_running_r2 import run_sources as run
+from paper16_running_r2.test_running import fixture,flash_fixture
+from paper16_running_r2.test_interface import ImageHTTP
+from paper16_running_r2.reader import TARGET,SCALARS
+root=Path(sys.argv[1]);stage=root/'stage';(stage/'results').mkdir(parents=True)
+(stage/'ACCESS_REGISTRATION.json').write_text('{}',encoding='utf8')
+(stage/'reader.py').write_text('# synthetic',encoding='utf8')
+with fixture(str(root/'image.h5')) as f:
+ f.flush();image=f.id.get_file_image()
+item={'session_id':750749662,'mouse_id':'synthetic','role':'Development','protocol':'brain_observatory_1.1','size':len(image),'file_id':'synthetic','etag':'fixed'}
+_,_,_,onset,color,valid=flash_fixture()
+old=h5py.Dataset.__getitem__
+def block_next(ds,key,*a,**kw):
+ if ds.name==TARGET and isinstance(key,slice):time.sleep(60)
+ return old(ds,key,*a,**kw)
+run.P=stage
+with patch.object(run,'source_inputs',return_value=({SCALARS[1]:'clock0',SCALARS[2]:'clock0'},onset,color,valid,[],{'synthetic':True})),patch('requests.Session',return_value=ImageHTTP(image)),patch.object(h5py.Dataset,'__getitem__',block_next):
+ j=run.BudgetJournal(stage/'results/budget.jsonl')
+ run.run_one(item,{'objects':[item],'denied_final_session_ids':[]},float(sys.argv[sys.argv.index('--deadline')+1]),j,True)
+''',encoding='utf8')
+            code=run.supervise([sys.executable,'-B','-c',script.read_text(encoding='utf8'),str(root)],time.monotonic()+3,root/'SUPERVISION.json')
+            self.assertEqual(code,124)
+            folder=root/'stage/results/750749662'
+            self.assertTrue((folder/'NATIVE_rotation.json').exists())
+            with np.load(folder/'NATIVE_rotation.npz',allow_pickle=False) as data:
+                self.assertEqual(data['values'].tobytes(),np.array([.1,-.2],dtype='<f4').tobytes())
+            self.assertFalse((folder/'NATIVE_start.npz').exists());self.assertFalse((folder/'RESULT.json').exists())

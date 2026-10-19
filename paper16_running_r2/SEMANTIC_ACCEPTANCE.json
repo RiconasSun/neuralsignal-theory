@@ -1,0 +1,623 @@
+{
+  "count": 88,
+  "items": [
+    {
+      "id": "AC-001",
+      "requirement": "Exact BASE/test preflight",
+      "evidence": "BOOTSTRAP.json",
+      "oracle": "HEAD/origin-test67188e8e;clean;mainabsent notinvented",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-002",
+      "requirement": "Owner197row freeze before code/access",
+      "evidence": "baseline.json;MISSION_SPEC.json",
+      "oracle": "191UTF8owner lines+6closure rows unchanged",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-003",
+      "requirement": "All55 original identities",
+      "evidence": "HISTORICAL_STOP_PRESERVATION_AUDIT.json",
+      "oracle": "M1/allocation hashes and BASE tree retained",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-004",
+      "requirement": "Development28/BO5/FC23 fixed",
+      "evidence": "ACCESS_REGISTRATION.json;SOURCE_ATTEMPT_LEDGER.csv",
+      "oracle": "28exact unique original mouse/session/probe IDs",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-005",
+      "requirement": "Final27 identities/no real access",
+      "evidence": "ACCESS_REGISTRATION.json;test_running.py",
+      "oracle": "AllFinal/altered sources denied; no realFinal",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-006",
+      "requirement": "Models/equations unchanged",
+      "evidence": "old492hash audit;SCIENTIFIC_CLAIM_AUDIT.md",
+      "oracle": "B0-B4/C/D/S source pins unchanged",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-007",
+      "requirement": "A/B/E and C/D masks unchanged",
+      "evidence": "verify_saved.py;DEVELOPMENT_RUNNING_COVERAGE.csv",
+      "oracle": "Originalordinals/IDs/role cuts/knowninvalid flags",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-008",
+      "requirement": "Physiological thresholds unchanged",
+      "evidence": "old492hash audit",
+      "oracle": "NoAphysiology executed or threshold edits",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-009",
+      "requirement": "Numerical/optimizer ceilings unchanged",
+      "evidence": "old492hash audit;ACCESS_REGISTRATION.json",
+      "oracle": "Nooptimizer policy amendment or fit budget",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-010",
+      "requirement": "Sensitivities/null/statistics unchanged",
+      "evidence": "old492hash audit",
+      "oracle": "Original12/4 untouched and unrun",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-011",
+      "requirement": "Independent normative precision comparison",
+      "evidence": "PRECISION_CONTRACT_REVIEW_1.md;PRECISION_CONTRACT_REVIEW_2.md",
+      "oracle": "Allcurrent normative clauses/hash context reviewed",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-012",
+      "requirement": "No contradictory rotation-storage clause assumed away",
+      "evidence": "PRECISION_CONTRACT_DECISION.md",
+      "oracle": "ExplicitstorageamendmentSTOP branch; noM1normativef64storageclause found",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-013",
+      "requirement": "Nativefloat32 source retained",
+      "evidence": "results/*/NATIVE_rotation.npz",
+      "oracle": "28nativef4/fulloriginal rows/rawbytes/file hashes",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-014",
+      "requirement": "Exact finite32->64->32 roundtrip",
+      "evidence": "precision.py;verify_saved.py",
+      "oracle": "Everyfinitevalue byte-equal; not tolerance",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-015",
+      "requirement": "Signedzero/subnormal/extremes checked",
+      "evidence": "test_running.py",
+      "oracle": "Exact bit roundtripincludingnegative0",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-016",
+      "requirement": "Oldfloat64 rotation support preserved",
+      "evidence": "test_running.py;precision.py",
+      "oracle": "f8nativebytes unchanged; no silent support contraction",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-017",
+      "requirement": "Knownfirstsource dtypef4 fixed",
+      "evidence": "reader.py;results/750749662/RESULT.json",
+      "oracle": "Actualdiagnosedstorage mustmatch",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-018",
+      "requirement": "Native64 timestamps retained",
+      "evidence": "verify_saved.py;results/*/NATIVE_start.npz;results/*/NATIVE_end.npz",
+      "oracle": "Allbefore/afterrawbytes equal; no cast",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-019",
+      "requirement": "No rounding/interpolation/clock correction",
+      "evidence": "reader.py;precision.py",
+      "oracle": "Originalscalarstrings and binary64 times preserved",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-020",
+      "requirement": "No extra sensor precision claimed",
+      "evidence": "NATIVE_SOURCE_VALIDATION.md",
+      "oracle": "Quantized sourceexactness != sensoraccuracy",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-021",
+      "requirement": "Frozenangular velocity formula",
+      "evidence": "precision.py;verify_saved.py",
+      "oracle": "Originalnet_rotation/(end-start), no medianprocessedvelocity",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-022",
+      "requirement": "r/r2/color*r/missing unchanged",
+      "evidence": "verify_saved.py",
+      "oracle": "All14arraydtype/shape/bytes independently match",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-023",
+      "requirement": "Strict end<target",
+      "evidence": "test_running.py;verify_saved.py",
+      "oracle": "25,200 independentcandidate lookup checks",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-024",
+      "requirement": "Duration/age bounds unchanged",
+      "evidence": "precision.py;test_running.py",
+      "oracle": "Both(0,.1], latestvalidsourceparent",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-025",
+      "requirement": "Source removedzero rows not inferred",
+      "evidence": "NATIVE_SOURCE_VALIDATION.md;test_running.py",
+      "oracle": "No zero-fill; missingflag distinguishes encoded0",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-026",
+      "requirement": "Invalid interval exclusion",
+      "evidence": "test_running.py;verify_saved.py",
+      "oracle": "Originalselectedprobe/globalmetadata/causalinvalidcheck",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-027",
+      "requirement": "Nativefinite vectors",
+      "evidence": "precision.py;results/*/RESULT.json",
+      "oracle": "All10,279,046rows finite no clipping",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-028",
+      "requirement": "Nativeordered timestamps",
+      "evidence": "precision.py;verify_saved.py",
+      "oracle": "Originalnondecreasingorder;duplicates audited not sortedaway",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-029",
+      "requirement": "Same-row correspondence",
+      "evidence": "reader.py;NATIVE_SOURCE_VALIDATION.md",
+      "oracle": "Frozenwriter mapping+aliasidentity+shapes+positiveactualduration",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-030",
+      "requirement": "Sourceunit radians/scaling",
+      "evidence": "results/*/RESULT.json",
+      "oracle": "Storedunit/attrs and originaldefault0/1semantics",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-031",
+      "requirement": "Sourcefile identity and clockscalars",
+      "evidence": "reader.py;results/*/RESULT.json",
+      "oracle": "AllfileIDs/sizes/ETags/NWBversion/3scalar checks",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-032",
+      "requirement": "Literal exact diagnosedalias",
+      "evidence": "reader.py;test_running.py",
+      "oracle": "OnlyALIAS->TARGET absoluteexactliteral",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-033",
+      "requirement": "Samefile exactobjectidentity",
+      "evidence": "results/*/RESULT.json",
+      "oracle": "NativeDatasetIDs/address equal canonicalobject",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-034",
+      "requirement": "CanonicalHardLink traversal",
+      "evidence": "reader.py;test_running.py",
+      "oracle": "NoSoftLink canonicalcomponents",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-035",
+      "requirement": "External/relative/cycle/spoofed targets rejected",
+      "evidence": "test_running.py",
+      "oracle": "No unsafe dereference",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-036",
+      "requirement": "Missing/unexpectedtype rejected",
+      "evidence": "test_running.py",
+      "oracle": "Everypathcomponent/type error failsclosed",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-037",
+      "requirement": "Neural/unknownvalue APIs denied",
+      "evidence": "test_running.py;results/*/RESULT.json",
+      "oracle": "Exactly3scalars+3vectors read/source",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-038",
+      "requirement": "All28native manifests complete",
+      "evidence": "results/*/NATIVE_SOURCE.json;verify_saved.py",
+      "oracle": "3vectorfiles/receipts andderivedstate percase",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-039",
+      "requirement": "Decodedvector durable before laterread",
+      "evidence": "test_interface.py",
+      "oracle": "Actualsyntheticexternalhardkill retainsnativebytes",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-040",
+      "requirement": "Failedpartialarray files preserved",
+      "evidence": "REJECTED_PREACCESS_1_CANDIDATE.zip;test_interface.py",
+      "oracle": "No validstate from partial/killed worker",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-041",
+      "requirement": "Preaccess exactindependent approval",
+      "evidence": "PREACCESS_APPROVAL.json",
+      "oracle": "Source/precision/code/tests hashes checked before open",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-042",
+      "requirement": "One newfirstattempt only",
+      "evidence": "results/750749662/ATTEMPT.json",
+      "oracle": "No originalM2/R1refund/retry",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-043",
+      "requirement": "First source all numerical gates",
+      "evidence": "FIRST_SOURCE_REVIEW.md",
+      "oracle": "Full365911native rows independentbits/finite/order/causal check",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-044",
+      "requirement": "Firstdirect6coveragecells/floors PASS",
+      "evidence": "FIRST_SOURCE_REVIEW.md",
+      "oracle": "A46/44 B14/16 E15/15, all100%, originalfloors",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-045",
+      "requirement": "Firstreview before remaining27",
+      "evidence": "FIRST_SOURCE_APPROVAL.json;run_sources.py",
+      "oracle": "14requiredimmutableartifactboundgate beforephase",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-046",
+      "requirement": "Unknownphase cannotbypass firstreview",
+      "evidence": "test_interface.py;run_sources.py",
+      "oracle": "Rejectedbeforeanyreview/stage/sourceeffects",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-047",
+      "requirement": "Firstbudget snapshot retained",
+      "evidence": "results/BUDGET_FIRST.jsonl;verify_saved.py",
+      "oracle": "Exactimmutableprefix of cumulativejournal",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-048",
+      "requirement": "Remaining27 samefixedsemantics",
+      "evidence": "SOURCE_ATTEMPT_LEDGER.csv;PREACCESS_APPROVAL.json",
+      "oracle": "All27 originalIDs, identicalsourcecodehash",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-049",
+      "requirement": "No replacement after failure",
+      "evidence": "run_sources.py;SOURCE_ATTEMPT_LEDGER.csv",
+      "oracle": "Oneattempt/source; compatibilityfailSTOP branch",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-050",
+      "requirement": "Directcoverage exact168cells",
+      "evidence": "DEVELOPMENT_RUNNING_COVERAGE.csv;verify_saved.py",
+      "oracle": "All25,182eligiblebins/denominators; 3knowninvalid presentations excluded",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-051",
+      "requirement": "Originaloptimisticbound retained",
+      "evidence": "DEVELOPMENT_RUNNING_COVERAGE.csv",
+      "oracle": "Not selectedmask oractualadmission",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-052",
+      "requirement": "Potentialoverall floor14",
+      "evidence": "RUNNING_COHORT_FACTS.json",
+      "oracle": "28potential>=14, not physiology",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-053",
+      "requirement": "PotentialBO floor3",
+      "evidence": "RUNNING_COHORT_FACTS.json",
+      "oracle": "5potential>=3",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-054",
+      "requirement": "PotentialFC floor10",
+      "evidence": "RUNNING_COHORT_FACTS.json",
+      "oracle": "23potential>=10",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-055",
+      "requirement": "Physiologicaladmission notdeclared",
+      "evidence": "RUNNING_COHORT_REPORT.md",
+      "oracle": "A_QCfalse;futureselectedunit supportunknown",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-056",
+      "requirement": "Per-source byte ceiling",
+      "evidence": "RESOURCE_LEDGER.json;verify_saved.py",
+      "oracle": "Maxpayload7,869,768<134,217,728",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-057",
+      "requirement": "Totalbyteceiling",
+      "evidence": "RESOURCE_LEDGER.json;verify_saved.py",
+      "oracle": "207,761,708reserved<3,758,096,384",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-058",
+      "requirement": "Perrequest limit1MiB",
+      "evidence": "results/BUDGET_JOURNAL.jsonl;verify_saved.py",
+      "oracle": "Everyreservedrequest checked",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-059",
+      "requirement": "Per-source request4096",
+      "evidence": "SOURCE_ATTEMPT_LEDGER.csv",
+      "oracle": "Max64;exact1676total",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-060",
+      "requirement": "Concurrency<=4",
+      "evidence": "ACCESS_REGISTRATION.json;results/STAGE_ATTEMPT.json",
+      "oracle": "Sequential1",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-061",
+      "requirement": "Singleexternal4hdeadline",
+      "evidence": "results/STAGE_ATTEMPT.json;supervisors;verify_saved.py",
+      "oracle": "921.062seconds includingreview; noreset",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-062",
+      "requirement": "No networkretry/redirect/bulkfallback",
+      "evidence": "test_running.py;run_sources.py",
+      "oracle": "Explicitallow_redirectsFalse;exact206headers/body",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-063",
+      "requirement": "Durablepartialbudget accounting",
+      "evidence": "results/BUDGET_JOURNAL.jsonl;test_running.py",
+      "oracle": "Reservebefore request;incrementalpayload events;partialfailure tests",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-064",
+      "requirement": "OldM2andR1 ledgers separate",
+      "evidence": "RESOURCE_LEDGER.json",
+      "oracle": "39/81912/81951 and44/85712/85756 unchanged",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-065",
+      "requirement": "No historicalfailedattemptrefund",
+      "evidence": "RESOURCE_LEDGER.json",
+      "oracle": "Cumulative30attempts1759requests;oldverdicts unchanged",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-066",
+      "requirement": "Sourcearrayhash distinct fromfullNWBhash",
+      "evidence": "NATIVE_SOURCE_VALIDATION.md",
+      "oracle": "No fullobjectchecksum claim",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-067",
+      "requirement": "No neuralextraction/QC",
+      "evidence": "results/*/RESULT.json;sourcevalueguard",
+      "oracle": "0neuralvalues/physiology percase",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-068",
+      "requirement": "No model/Bselection/Eassessment",
+      "evidence": "results/*/RESULT.json;SCIENTIFIC_CLAIM_AUDIT.md",
+      "oracle": "0fits/scores;sourcebehavioronly",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-069",
+      "requirement": "No new sensitivities/neuralnulls",
+      "evidence": "SCIENTIFIC_CLAIM_AUDIT.md",
+      "oracle": "Originalscientificoperatorsunrun",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-070",
+      "requirement": "No FinalC/D",
+      "evidence": "HANDOFF_FIELDS.json;sourcevalidationtests",
+      "oracle": "False both, allnewobjectsDevelopment",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-071",
+      "requirement": "No scientificinference",
+      "evidence": "SCIENTIFIC_CLAIM_AUDIT.md",
+      "oracle": "No neural/biological/power/causalpositiveclaim",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-072",
+      "requirement": "Rejectedcontract1 preserved",
+      "evidence": "REJECTED_CONTRACT_1_CANDIDATE.zip;PRECISION_CONTRACT_REVIEW_1.md",
+      "oracle": "Original2P1 evidence/hash intact",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-073",
+      "requirement": "Rejectedpreaccess1 preserved",
+      "evidence": "REJECTED_PREACCESS_1_CANDIDATE.zip;PREACCESS_REVIEW_1.md",
+      "oracle": "Original2P1 andexactcandidate intact",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-074",
+      "requirement": "Failedtestsetup preserved",
+      "evidence": "SYNTHETIC_4.log;SYNTHETIC_TEST_FIX_1.json",
+      "oracle": "Import-onlyfix;no assertionweakened",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-075",
+      "requirement": "Synthetic19 source/security/numerical regressions",
+      "evidence": "SYNTHETIC_6.log;PREACCESS_REVIEW_2.md",
+      "oracle": "19PASS includingrealchildsynthetichardkill",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-076",
+      "requirement": "Savedonly nativePowerShellreproduction",
+      "evidence": "reproduce.ps1;SAVED_REPRODUCTION_2.log",
+      "oracle": "No network/nativeNWB/neural/realworker;all28savedstates/19tests",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-077",
+      "requirement": "Independentallcohortscientific review",
+      "evidence": "review.md",
+      "oracle": "Exactallsourceidentity/numerics/missingness/coverage/budgets/datafreeze",
+      "status": "OPEN_CLOSURE"
+    },
+    {
+      "id": "AC-078",
+      "requirement": "Complete requiredreports and tables",
+      "evidence": "NATIVE_SOURCE_VALIDATION.md;RUNNING_COHORT_REPORT.md;INTERNAL_LINK_RESOLVER_TESTS.md",
+      "oracle": "Exactownerlistedartifacts",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-079",
+      "requirement": "Original492frozen hashes",
+      "evidence": "HISTORICAL_STOP_PRESERVATION_AUDIT.json",
+      "oracle": "334M1+58M2+100R1 size/hash unchanged",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-080",
+      "requirement": "AllBASEtracked files preserved",
+      "evidence": "PRECHANGE_GIT_TREE.bin;closure_receipt.json",
+      "oracle": "OnlynewR2files+byte-exactdaily suffix",
+      "status": "OPEN_CLOSURE"
+    },
+    {
+      "id": "AC-081",
+      "requirement": "Staticpayload denominator",
+      "evidence": "payload_contract.py;RUNNING_FREEZE_MANIFEST.json",
+      "oracle": "Exactnonemptyfilenameset andeverySHA/size",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-082",
+      "requirement": "All197requirements traced",
+      "evidence": "REQUIREMENT_TRACE.json;baseline.json",
+      "oracle": "185contentverified/12closurepending until actualclosure",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-083",
+      "requirement": "Terminalfields honest",
+      "evidence": "HANDOFF_FIELDS.json;closure_receipt.json",
+      "oracle": "Git fields pending until actualreadback",
+      "status": "OPEN_CLOSURE"
+    },
+    {
+      "id": "AC-084",
+      "requirement": "Exact mission-only normal origin/test archive",
+      "evidence": "closure_receipt.json",
+      "oracle": "No broadstage/main/force/PR/deletion",
+      "status": "OPEN_CLOSURE"
+    },
+    {
+      "id": "AC-085",
+      "requirement": "Allchangedremote blobs byte-readback",
+      "evidence": "closure_receipt.json",
+      "oracle": "Everycommitblob/SHA/localbytes match, actualremoteSHA",
+      "status": "OPEN_CLOSURE"
+    },
+    {
+      "id": "AC-086",
+      "requirement": "Clean gate",
+      "evidence": "closure_receipt.json",
+      "oracle": "Before/afterignoredactualreceipt clean",
+      "status": "OPEN_CLOSURE"
+    },
+    {
+      "id": "AC-087",
+      "requirement": "M2fullresumption withheld",
+      "evidence": "HANDOFF_FIELDS.json;CLOSURE_CONTRACT.md",
+      "oracle": "M2_FULL_RESUME_READYfalse;newauthorization/worker gates needed",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "AC-088",
+      "requirement": "Stop after handoff",
+      "evidence": "closure_receipt.json",
+      "oracle": "No automatic nextmission or newsource/fit",
+      "status": "OPEN_CLOSURE"
+    }
+  ],
+  "all_baseline_requirements_preserved": true,
+  "closure_overlay": "work/closure_receipt.json"
+}

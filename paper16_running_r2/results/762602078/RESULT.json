@@ -1,0 +1,1580 @@
+{
+  "source": {
+    "mouse_id": "744915204",
+    "session_id": 762602078,
+    "probe_id": 768909182,
+    "probe_name": "probeC",
+    "role": "Development",
+    "protocol": "brain_observatory_1.1",
+    "file_id": "1026124569",
+    "size": 2021557700,
+    "etag": "\"5a68872013c80\"",
+    "candidate_unit_ids": [
+      951844342,
+      951844363,
+      951844370,
+      951844377,
+      951844385,
+      951844425,
+      951844456,
+      951844463,
+      951844470,
+      951844476,
+      951844520,
+      951844561,
+      951844568,
+      951844582,
+      951844591,
+      951844601,
+      951844617,
+      951844627,
+      951844634,
+      951844701,
+      951844710,
+      951844737,
+      951844746,
+      951844773,
+      951844851,
+      951844858,
+      951844872,
+      951844879,
+      951844886,
+      951844894,
+      951844903,
+      951844911,
+      951844918,
+      951844926,
+      951844933,
+      951844956,
+      951844969,
+      951844975,
+      951844981,
+      951844989,
+      951844995,
+      951845004,
+      951845018,
+      951845024,
+      951845029,
+      951845035,
+      951845051,
+      951845065,
+      951845098,
+      951845108,
+      951845114,
+      951845119,
+      951845126,
+      951845135,
+      951845153,
+      951845171,
+      951845187,
+      951845313,
+      951845411,
+      951845488,
+      951845585,
+      951845611,
+      951845653,
+      951846069,
+      951846076,
+      951846133,
+      951846141,
+      951846148,
+      951846165,
+      951846180,
+      951846190,
+      951846223,
+      951846279,
+      951846333,
+      951846428
+    ],
+    "source_probe_name": "probeC"
+  },
+  "session_id": 762602078,
+  "mouse_id": "744915204",
+  "protocol": "brain_observatory_1.1",
+  "status": "SOURCE_RUNNING_PASS",
+  "structure": {
+    "root": {
+      "type": "File",
+      "address": 96,
+      "same_file": true,
+      "attributes": {
+        "namespace": "core",
+        "neurodata_type": "NWBFile",
+        "object_id": "71c0b056-a0e1-4d06-a182-47e339dfb85f",
+        "nwb_version": "2.2.2"
+      }
+    },
+    "objects": {
+      "/identifier": {
+        "type": "Dataset",
+        "address": 2020238948,
+        "same_file": true,
+        "attributes": {},
+        "shape": [],
+        "dtype": "|O"
+      },
+      "/processing/running/running_speed/timestamps": {
+        "type": "Dataset",
+        "address": 20686128,
+        "same_file": true,
+        "attributes": {
+          "unit": "seconds",
+          "interval": 1
+        },
+        "shape": [
+          387063
+        ],
+        "dtype": "<f8"
+      },
+      "/processing/running/running_speed_end_times/timestamps": {
+        "type": "Dataset",
+        "address": 23784832,
+        "same_file": true,
+        "attributes": {
+          "unit": "seconds",
+          "interval": 1
+        },
+        "shape": [
+          387063
+        ],
+        "dtype": "<f8"
+      },
+      "/processing/running/running_wheel_rotation/data": {
+        "type": "Dataset",
+        "address": 23786256,
+        "same_file": true,
+        "attributes": {
+          "unit": "radians",
+          "conversion": 1.0
+        },
+        "shape": [
+          387063
+        ],
+        "dtype": "<f4"
+      },
+      "/processing/running/running_wheel_rotation/timestamps": {
+        "type": "Dataset",
+        "address": 20686128,
+        "same_file": true,
+        "attributes": {
+          "unit": "seconds",
+          "interval": 1
+        },
+        "shape": [
+          387063
+        ],
+        "dtype": "<f8"
+      },
+      "/session_start_time": {
+        "type": "Dataset",
+        "address": 2020257468,
+        "same_file": true,
+        "attributes": {},
+        "shape": [],
+        "dtype": "|O"
+      },
+      "/timestamps_reference_time": {
+        "type": "Dataset",
+        "address": 2020257740,
+        "same_file": true,
+        "attributes": {},
+        "shape": [],
+        "dtype": "|O"
+      }
+    },
+    "source_clock_scalars": {
+      "/identifier": "762602078",
+      "/session_start_time": "2018-10-26T00:58:47-07:00",
+      "/timestamps_reference_time": "2018-10-26T00:58:47-07:00"
+    },
+    "rotation_attributes": {
+      "unit": "radians",
+      "conversion": 1.0
+    },
+    "same_file_alias_identity": true,
+    "original_writer_same_row_mapping": "Frozen nwb_writer.py source maps net_rotation/start_time/end_time from the same running_speed rows; actual link identity/shapes checked; no physical sensor-truth claim."
+  },
+  "native_bundle": {
+    "manifest_path": "paper16_running_r2/results/762602078/NATIVE_SOURCE.json",
+    "manifest_sha256": "c1358aa2f25536862a2f6b5cd3fd47ee6435e8bdf11c3a7be47558f779453692",
+    "vectors": {
+      "rotation": {
+        "path": "paper16_running_r2/results/762602078/NATIVE_rotation.npz",
+        "sha256": "fcba0bbbb4de50635842541335ad464fd6ac7936c54d2acacf54b18cf81b5f7b",
+        "arrays": {
+          "values": {
+            "dtype": "<f4",
+            "shape": [
+              387063
+            ],
+            "raw_bytes_sha256": "762192fd6aa65bf56755351cd0ccb0e9dea12ee26a18d2185120d8c78daf6634"
+          }
+        }
+      },
+      "start": {
+        "path": "paper16_running_r2/results/762602078/NATIVE_start.npz",
+        "sha256": "2a5b3756731bfe0ac59a082a59382e026263702147d4dfadfb7851513d0af1de",
+        "arrays": {
+          "values": {
+            "dtype": "<f8",
+            "shape": [
+              387063
+            ],
+            "raw_bytes_sha256": "651fcfa95cac8e6471fa8a424cc952ba2ecf1624366c8827a558f58e35a9e746"
+          }
+        }
+      },
+      "end": {
+        "path": "paper16_running_r2/results/762602078/NATIVE_end.npz",
+        "sha256": "174e226a80ad86ebcae39f931eee3edb36e5d51022560df2d1b79450ef465372",
+        "arrays": {
+          "values": {
+            "dtype": "<f8",
+            "shape": [
+              387063
+            ],
+            "raw_bytes_sha256": "f0b6191254ee43c3cb9780680b09906ed79052609f2c1ed819e03a91957911da"
+          }
+        }
+      }
+    },
+    "complete": true
+  },
+  "derived_bundle": {
+    "path": "paper16_running_r2/results/762602078/DERIVED_RUNNING.npz",
+    "sha256": "8169a05e5f6dad6657b278fbca5414338be532035bfb005c5a6d78dea1e7550b",
+    "arrays": {
+      "start": {
+        "dtype": "<f8",
+        "shape": [
+          11897
+        ],
+        "raw_bytes_sha256": "41f7b7c36b6b0cdfd765052dd7a35698667b5232164a2f176ac59efe38c23985"
+      },
+      "end": {
+        "dtype": "<f8",
+        "shape": [
+          11897
+        ],
+        "raw_bytes_sha256": "357e56594e7f01e6e8409d845b7a21324d9b8500ccc0631105f6307c601a961e"
+      },
+      "net_rotation_promoted": {
+        "dtype": "<f8",
+        "shape": [
+          11897
+        ],
+        "raw_bytes_sha256": "edf4069edc531e862e13981992c3fcc874568bc6a834c503c42c2ff73e979f3a"
+      },
+      "source_row_index": {
+        "dtype": "<i8",
+        "shape": [
+          11897
+        ],
+        "raw_bytes_sha256": "abff110b283ff4d6df0c4d499ac796e15b398f4c89af0595a9344c06c304d532"
+      },
+      "targets": {
+        "dtype": "<f8",
+        "shape": [
+          150,
+          6
+        ],
+        "raw_bytes_sha256": "e081d7363b3c5544ae3018c480a48770e0c5fdb54a0bef8e6464d7695b4544e7"
+      },
+      "running": {
+        "dtype": "<f8",
+        "shape": [
+          150,
+          6
+        ],
+        "raw_bytes_sha256": "6958092998714819771b016f28cae2e2fc2fa9419257f854defcd904f50eda68"
+      },
+      "running_squared": {
+        "dtype": "<f8",
+        "shape": [
+          150,
+          6
+        ],
+        "raw_bytes_sha256": "a0742fcd6e62d658f3da500abc542405aa1af9bed1586614397a5ed9d658762e"
+      },
+      "color_running": {
+        "dtype": "<f8",
+        "shape": [
+          150,
+          6
+        ],
+        "raw_bytes_sha256": "44287207176e8d2f0a7bcf7955d8738adb129077285a1354ec7c0f2247088a70"
+      },
+      "missing": {
+        "dtype": "|b1",
+        "shape": [
+          150,
+          6
+        ],
+        "raw_bytes_sha256": "fa807c957eafe34b850cb453a096df2e5899f0902a837fccd59f9aafa869fb44"
+      },
+      "parent": {
+        "dtype": "<i8",
+        "shape": [
+          150,
+          6
+        ],
+        "raw_bytes_sha256": "cefc1b7e218cb2ef27cf9134c08963a30c45fb9c0d3147f28d67e200ff69bbf6"
+      },
+      "parent_original_row": {
+        "dtype": "<i8",
+        "shape": [
+          150,
+          6
+        ],
+        "raw_bytes_sha256": "d4dd77c6037bdf5ace92dce3aade04dccd68509ecd8e9569629a641afa981bb1"
+      },
+      "color": {
+        "dtype": "<f8",
+        "shape": [
+          150
+        ],
+        "raw_bytes_sha256": "b9e1741cbfd6f920aa0c234de10fcfeeb8f1ffb0cd48344c92dd6aec34c184df"
+      },
+      "source_valid": {
+        "dtype": "|b1",
+        "shape": [
+          150
+        ],
+        "raw_bytes_sha256": "a795c048f28bc4307f8599dc5140fe6e971bce6a34a0349b6c18d6cbb197f75f"
+      },
+      "invalid": {
+        "dtype": "<f8",
+        "shape": [
+          0,
+          2
+        ],
+        "raw_bytes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  },
+  "start": {
+    "dtype": "<f8",
+    "shape": [
+      387063
+    ],
+    "raw_bytes_sha256": "651fcfa95cac8e6471fa8a424cc952ba2ecf1624366c8827a558f58e35a9e746"
+  },
+  "end": {
+    "dtype": "<f8",
+    "shape": [
+      387063
+    ],
+    "raw_bytes_sha256": "f0b6191254ee43c3cb9780680b09906ed79052609f2c1ed819e03a91957911da"
+  },
+  "native_rotation": {
+    "dtype": "<f4",
+    "shape": [
+      387063
+    ],
+    "raw_bytes_sha256": "762192fd6aa65bf56755351cd0ccb0e9dea12ee26a18d2185120d8c78daf6634"
+  },
+  "promoted_rotation": {
+    "dtype": "<f8",
+    "shape": [
+      387063
+    ],
+    "raw_bytes_sha256": "bf658a80632c5b39be8dc189f2957b9dc3edd445612f563537ac6564d3744d4f"
+  },
+  "float32_source_preserved": true,
+  "float64_promotion_exact": true,
+  "timestamps_preserved": true,
+  "stored_zero_rows_retained": 0,
+  "duplicate_start_differences": 0,
+  "duplicate_end_differences": 0,
+  "duration_over_point1_excluded_later": 0,
+  "extra_sensor_precision_claimed": false,
+  "coverage": {
+    "A": {
+      "-1.0": {
+        "presentations": 46,
+        "score_bins": 276,
+        "available": 276,
+        "fraction": 1.0,
+        "pass": true,
+        "optimistic_fraction_upper_bound": 1.0,
+        "possible_after_observation_support": true
+      },
+      "1.0": {
+        "presentations": 44,
+        "score_bins": 264,
+        "available": 264,
+        "fraction": 1.0,
+        "pass": true,
+        "optimistic_fraction_upper_bound": 1.0,
+        "possible_after_observation_support": true
+      }
+    },
+    "B": {
+      "-1.0": {
+        "presentations": 14,
+        "score_bins": 84,
+        "available": 84,
+        "fraction": 1.0,
+        "pass": true,
+        "optimistic_fraction_upper_bound": 1.0,
+        "possible_after_observation_support": true
+      },
+      "1.0": {
+        "presentations": 16,
+        "score_bins": 96,
+        "available": 96,
+        "fraction": 1.0,
+        "pass": true,
+        "optimistic_fraction_upper_bound": 1.0,
+        "possible_after_observation_support": true
+      }
+    },
+    "E": {
+      "-1.0": {
+        "presentations": 15,
+        "score_bins": 90,
+        "available": 90,
+        "fraction": 1.0,
+        "pass": true,
+        "optimistic_fraction_upper_bound": 1.0,
+        "possible_after_observation_support": true
+      },
+      "1.0": {
+        "presentations": 15,
+        "score_bins": 90,
+        "available": 90,
+        "fraction": 1.0,
+        "pass": true,
+        "optimistic_fraction_upper_bound": 1.0,
+        "possible_after_observation_support": true
+      }
+    }
+  },
+  "direct_running_coverage_pass": true,
+  "potential_running_coverage_pass": true,
+  "native_arrays_unchanged_after_features": true,
+  "rows_retained_for_features": 11897,
+  "strict_past_verified": true,
+  "no_imputed_zero_rows": true,
+  "native_retained_rows": 387063,
+  "frozen_flash_metadata": {
+    "metadata_path": "paper16_m1/metadata/roster_flashes/762602078.json",
+    "metadata_sha256": "df3e2da772a743a83ce3479b73b0173ab5544141fc8f2dd46b5153493fba106d",
+    "flash_array_sha256": "7551b37d9649013adbee98d70a0f0e050420fef89e89d3b3210460876fb96f9b"
+  },
+  "neural_values_read": 0,
+  "A_physiology_executed": false,
+  "model_fits": 0,
+  "Final_C_access": false,
+  "Final_D_access": false,
+  "dataset_paths_read": [
+    "/identifier",
+    "/session_start_time",
+    "/timestamps_reference_time",
+    "/processing/running/running_wheel_rotation/data",
+    "/processing/running/running_speed/timestamps",
+    "/processing/running/running_speed_end_times/timestamps"
+  ],
+  "component_audit": [
+    {
+      "path": "/identifier",
+      "requested_path": "/identifier",
+      "link_class": "HardLink",
+      "literal_target": null,
+      "parent_address": 96,
+      "metadata": {
+        "type": "Dataset",
+        "address": 2020238948,
+        "same_file": true,
+        "attributes": {},
+        "shape": [],
+        "dtype": "|O"
+      }
+    },
+    {
+      "path": "/processing",
+      "requested_path": "/processing/running/running_speed/timestamps",
+      "link_class": "HardLink",
+      "literal_target": null,
+      "parent_address": 96,
+      "metadata": {
+        "type": "Group",
+        "address": 1456,
+        "same_file": true,
+        "attributes": {}
+      }
+    },
+    {
+      "path": "/processing/running",
+      "requested_path": "/processing/running/running_speed/timestamps",
+      "link_class": "HardLink",
+      "literal_target": null,
+      "parent_address": 1456,
+      "metadata": {
+        "type": "Group",
+        "address": 17577856,
+        "same_file": true,
+        "attributes": {
+          "namespace": "core",
+          "neurodata_type": "ProcessingModule",
+          "object_id": "12759dd1-8125-40ad-8bff-52ebe9001608"
+        }
+      }
+    },
+    {
+      "path": "/processing/running/running_speed",
+      "requested_path": "/processing/running/running_speed/timestamps",
+      "link_class": "HardLink",
+      "literal_target": null,
+      "parent_address": 17577856,
+      "metadata": {
+        "type": "Group",
+        "address": 17560408,
+        "same_file": true,
+        "attributes": {
+          "namespace": "core",
+          "neurodata_type": "TimeSeries",
+          "object_id": "1ccae19f-42f7-46ca-b6c3-ae70d8dde6c7"
+        }
+      }
+    },
+    {
+      "path": "/processing/running/running_speed/timestamps",
+      "requested_path": "/processing/running/running_speed/timestamps",
+      "link_class": "HardLink",
+      "literal_target": null,
+      "parent_address": 17560408,
+      "metadata": {
+        "type": "Dataset",
+        "address": 20686128,
+        "same_file": true,
+        "attributes": {
+          "unit": "seconds",
+          "interval": 1
+        },
+        "shape": [
+          387063
+        ],
+        "dtype": "<f8"
+      }
+    },
+    {
+      "path": "/processing",
+      "requested_path": "/processing/running/running_speed_end_times/timestamps",
+      "link_class": "HardLink",
+      "literal_target": null,
+      "parent_address": 96,
+      "metadata": {
+        "type": "Group",
+        "address": 1456,
+        "same_file": true,
+        "attributes": {}
+      }
+    },
+    {
+      "path": "/processing/running",
+      "requested_path": "/processing/running/running_speed_end_times/timestamps",
+      "link_class": "HardLink",
+      "literal_target": null,
+      "parent_address": 1456,
+      "metadata": {
+        "type": "Group",
+        "address": 17577856,
+        "same_file": true,
+        "attributes": {
+          "namespace": "core",
+          "neurodata_type": "ProcessingModule",
+          "object_id": "12759dd1-8125-40ad-8bff-52ebe9001608"
+        }
+      }
+    },
+    {
+      "path": "/processing/running/running_speed_end_times",
+      "requested_path": "/processing/running/running_speed_end_times/timestamps",
+      "link_class": "HardLink",
+      "literal_target": null,
+      "parent_address": 17577856,
+      "metadata": {
+        "type": "Group",
+        "address": 17539488,
+        "same_file": true,
+        "attributes": {
+          "namespace": "core",
+          "neurodata_type": "TimeSeries",
+          "object_id": "b67072d9-7aee-4620-8c48-eca001140293"
+        }
+      }
+    },
+    {
+      "path": "/processing/running/running_speed_end_times/timestamps",
+      "requested_path": "/processing/running/running_speed_end_times/timestamps",
+      "link_class": "HardLink",
+      "literal_target": null,
+      "parent_address": 17539488,
+      "metadata": {
+        "type": "Dataset",
+        "address": 23784832,
+        "same_file": true,
+        "attributes": {
+          "unit": "seconds",
+          "interval": 1
+        },
+        "shape": [
+          387063
+        ],
+        "dtype": "<f8"
+      }
+    },
+    {
+      "path": "/processing",
+      "requested_path": "/processing/running/running_wheel_rotation/data",
+      "link_class": "HardLink",
+      "literal_target": null,
+      "parent_address": 96,
+      "metadata": {
+        "type": "Group",
+        "address": 1456,
+        "same_file": true,
+        "attributes": {}
+      }
+    },
+    {
+      "path": "/processing/running",
+      "requested_path": "/processing/running/running_wheel_rotation/data",
+      "link_class": "HardLink",
+      "literal_target": null,
+      "parent_address": 1456,
+      "metadata": {
+        "type": "Group",
+        "address": 17577856,
+        "same_file": true,
+        "attributes": {
+          "namespace": "core",
+          "neurodata_type": "ProcessingModule",
+          "object_id": "12759dd1-8125-40ad-8bff-52ebe9001608"
+        }
+      }
+    },
+    {
+      "path": "/processing/running/running_wheel_rotation",
+      "requested_path": "/processing/running/running_wheel_rotation/data",
+      "link_class": "HardLink",
+      "literal_target": null,
+      "parent_address": 17577856,
+      "metadata": {
+        "type": "Group",
+        "address": 17539528,
+        "same_file": true,
+        "attributes": {
+          "namespace": "core",
+          "neurodata_type": "TimeSeries",
+          "object_id": "d7838b11-8fcf-457a-a4b4-d01d829df596"
+        }
+      }
+    },
+    {
+      "path": "/processing/running/running_wheel_rotation/data",
+      "requested_path": "/processing/running/running_wheel_rotation/data",
+      "link_class": "HardLink",
+      "literal_target": null,
+      "parent_address": 17539528,
+      "metadata": {
+        "type": "Dataset",
+        "address": 23786256,
+        "same_file": true,
+        "attributes": {
+          "unit": "radians",
+          "conversion": 1.0
+        },
+        "shape": [
+          387063
+        ],
+        "dtype": "<f4"
+      }
+    },
+    {
+      "path": "/processing",
+      "requested_path": "/processing/running/running_wheel_rotation/timestamps",
+      "link_class": "HardLink",
+      "literal_target": null,
+      "parent_address": 96,
+      "metadata": {
+        "type": "Group",
+        "address": 1456,
+        "same_file": true,
+        "attributes": {}
+      }
+    },
+    {
+      "path": "/processing/running",
+      "requested_path": "/processing/running/running_wheel_rotation/timestamps",
+      "link_class": "HardLink",
+      "literal_target": null,
+      "parent_address": 1456,
+      "metadata": {
+        "type": "Group",
+        "address": 17577856,
+        "same_file": true,
+        "attributes": {
+          "namespace": "core",
+          "neurodata_type": "ProcessingModule",
+          "object_id": "12759dd1-8125-40ad-8bff-52ebe9001608"
+        }
+      }
+    },
+    {
+      "path": "/processing/running/running_wheel_rotation",
+      "requested_path": "/processing/running/running_wheel_rotation/timestamps",
+      "link_class": "HardLink",
+      "literal_target": null,
+      "parent_address": 17577856,
+      "metadata": {
+        "type": "Group",
+        "address": 17539528,
+        "same_file": true,
+        "attributes": {
+          "namespace": "core",
+          "neurodata_type": "TimeSeries",
+          "object_id": "d7838b11-8fcf-457a-a4b4-d01d829df596"
+        }
+      }
+    },
+    {
+      "path": "/processing/running/running_wheel_rotation/timestamps",
+      "requested_path": "/processing/running/running_wheel_rotation/timestamps",
+      "link_class": "SoftLink",
+      "literal_target": "/processing/running/running_speed/timestamps",
+      "parent_address": 17539528,
+      "resolved_metadata": {
+        "type": "Dataset",
+        "address": 20686128,
+        "same_file": true,
+        "attributes": {
+          "unit": "seconds",
+          "interval": 1
+        },
+        "shape": [
+          387063
+        ],
+        "dtype": "<f8"
+      },
+      "expected_object_match": true
+    },
+    {
+      "path": "/processing",
+      "requested_path": "/processing/running/running_speed/timestamps",
+      "link_class": "HardLink",
+      "literal_target": null,
+      "parent_address": 96,
+      "metadata": {
+        "type": "Group",
+        "address": 1456,
+        "same_file": true,
+        "attributes": {}
+      }
+    },
+    {
+      "path": "/processing/running",
+      "requested_path": "/processing/running/running_speed/timestamps",
+      "link_class": "HardLink",
+      "literal_target": null,
+      "parent_address": 1456,
+      "metadata": {
+        "type": "Group",
+        "address": 17577856,
+        "same_file": true,
+        "attributes": {
+          "namespace": "core",
+          "neurodata_type": "ProcessingModule",
+          "object_id": "12759dd1-8125-40ad-8bff-52ebe9001608"
+        }
+      }
+    },
+    {
+      "path": "/processing/running/running_speed",
+      "requested_path": "/processing/running/running_speed/timestamps",
+      "link_class": "HardLink",
+      "literal_target": null,
+      "parent_address": 17577856,
+      "metadata": {
+        "type": "Group",
+        "address": 17560408,
+        "same_file": true,
+        "attributes": {
+          "namespace": "core",
+          "neurodata_type": "TimeSeries",
+          "object_id": "1ccae19f-42f7-46ca-b6c3-ae70d8dde6c7"
+        }
+      }
+    },
+    {
+      "path": "/processing/running/running_speed/timestamps",
+      "requested_path": "/processing/running/running_speed/timestamps",
+      "link_class": "HardLink",
+      "literal_target": null,
+      "parent_address": 17560408,
+      "metadata": {
+        "type": "Dataset",
+        "address": 20686128,
+        "same_file": true,
+        "attributes": {
+          "unit": "seconds",
+          "interval": 1
+        },
+        "shape": [
+          387063
+        ],
+        "dtype": "<f8"
+      }
+    },
+    {
+      "path": "/session_start_time",
+      "requested_path": "/session_start_time",
+      "link_class": "HardLink",
+      "literal_target": null,
+      "parent_address": 96,
+      "metadata": {
+        "type": "Dataset",
+        "address": 2020257468,
+        "same_file": true,
+        "attributes": {},
+        "shape": [],
+        "dtype": "|O"
+      }
+    },
+    {
+      "path": "/timestamps_reference_time",
+      "requested_path": "/timestamps_reference_time",
+      "link_class": "HardLink",
+      "literal_target": null,
+      "parent_address": 96,
+      "metadata": {
+        "type": "Dataset",
+        "address": 2020257740,
+        "same_file": true,
+        "attributes": {},
+        "shape": [],
+        "dtype": "|O"
+      }
+    }
+  ],
+  "new_requests": 59,
+  "new_payload_bytes": 7828884,
+  "new_reserved_bytes": 7828943,
+  "ranges": [
+    {
+      "request": 1,
+      "offset": 0,
+      "bytes": 8,
+      "sha256": "4ca2915fde0a9d1d5dd59e6f6e535c04337c9b4f05dbb4b38af0a5db3c50f933"
+    },
+    {
+      "request": 2,
+      "offset": 0,
+      "bytes": 48,
+      "sha256": "49f862eb75cf8ce4c244991f8543b6f24c6f1b3ad36e60500d3e78940c240497"
+    },
+    {
+      "request": 3,
+      "offset": 48,
+      "bytes": 48,
+      "sha256": "2fa4002bc38edf2592a61bf913cdcb4a2f1d01d61f8b447509d158f61dd7e368"
+    },
+    {
+      "request": 4,
+      "offset": 96,
+      "bytes": 512,
+      "sha256": "d1f784a717518bc8dc457e914b5ae48287306ef225f9c8c95e12e991ffbd9b8d"
+    },
+    {
+      "request": 5,
+      "offset": 1360420628,
+      "bytes": 208,
+      "sha256": "742b52ad3f5aa773f9b1f2f193627db063ff13d30f5b36599fb3d51b70b547aa"
+    },
+    {
+      "request": 6,
+      "offset": 131678084,
+      "bytes": 184,
+      "sha256": "bb6191c2dccea73e264b286a514310cab7f1811b1af8739dc26f2881a04848a0"
+    },
+    {
+      "request": 7,
+      "offset": 1360295748,
+      "bytes": 80,
+      "sha256": "d18f3e8314b724afc517029f230c5717dd67027d98e39959c2908d48efec10c4"
+    },
+    {
+      "request": 8,
+      "offset": 1360014852,
+      "bytes": 4096,
+      "sha256": "1737f47074b8107080fb9654dfbdc15ca60efb9af127663c43847240f541f75e"
+    },
+    {
+      "request": 9,
+      "offset": 1360018948,
+      "bytes": 61440,
+      "sha256": "721fc64dc8bee876274c6588d723f06222d9368b7d669ec2b9bfdbc416e51e51"
+    },
+    {
+      "request": 10,
+      "offset": 680,
+      "bytes": 512,
+      "sha256": "6f8c7a8b57d0cb4eba1c07649becc5904dc120414c8f752c2c759450fcaeb930"
+    },
+    {
+      "request": 11,
+      "offset": 2020257116,
+      "bytes": 352,
+      "sha256": "53a0a0d544cc664e69db75c2e2ea6ccb0b504b21fc80fd47c1a7099ba46eeb31"
+    },
+    {
+      "request": 12,
+      "offset": 136,
+      "bytes": 544,
+      "sha256": "56cf9dad65a0e40cad431048a97a6c517019ac6b829b1315c29c4d8da87c965a"
+    },
+    {
+      "request": 13,
+      "offset": 1504,
+      "bytes": 328,
+      "sha256": "eec4bdb44774a70d4d4f4e198b7ef21bea0c9d26de74504f0d4a753205757955"
+    },
+    {
+      "request": 14,
+      "offset": 2020238948,
+      "bytes": 512,
+      "sha256": "532d444a11e6a3d57368e353d8c23322b7312ba141231d48a6bbc0917b985200"
+    },
+    {
+      "request": 15,
+      "offset": 2020256788,
+      "bytes": 328,
+      "sha256": "2b066e8d859602bb1eac2232cdc464be2a47462c32b965767ea3b5ff870979f5"
+    },
+    {
+      "request": 16,
+      "offset": 1456,
+      "bytes": 512,
+      "sha256": "2d2b931f78f2c1a21ab439cd702b1ff2945f371a54db41d4c3df62672d1c3776"
+    },
+    {
+      "request": 17,
+      "offset": 11713096,
+      "bytes": 544,
+      "sha256": "a762c9f5c566004eb7108d7befb75771d957f2643ac9efcfc98f0d017304f99d"
+    },
+    {
+      "request": 18,
+      "offset": 16393704,
+      "bytes": 512,
+      "sha256": "3ae5f8afba335d6c616053d4f67af7aced609090ca702da82bf33fa7999d3fe8"
+    },
+    {
+      "request": 19,
+      "offset": 31529980,
+      "bytes": 176,
+      "sha256": "8a08e2409842344c52ec6a05b874554917bcc9c613db9f2c06b05c592f5fab8a"
+    },
+    {
+      "request": 20,
+      "offset": 16394488,
+      "bytes": 328,
+      "sha256": "78f72d1049fe3532c9ce9300d5c2adbb37265bf1dd3ae1916883e31ba4c51be6"
+    },
+    {
+      "request": 21,
+      "offset": 17577856,
+      "bytes": 512,
+      "sha256": "53cfd0dc3f12c4df516c506bb6a1c014bec633f1c3af92bba955e7478bddd8a9"
+    },
+    {
+      "request": 22,
+      "offset": 29980688,
+      "bytes": 368,
+      "sha256": "dbd8e5273ba9cf7a1393b954fd02be7716f1d976e34b0166f1b8cbe69d2038a1"
+    },
+    {
+      "request": 23,
+      "offset": 17587192,
+      "bytes": 544,
+      "sha256": "24e6b5f3c2b2e283c37e81d5d7cd5855c86fdda1ad7494ba178c154d5f955250"
+    },
+    {
+      "request": 24,
+      "offset": 17587736,
+      "bytes": 512,
+      "sha256": "71a9784280e4a6ce59d8490e21169101e204c66a93928dc5aebece614145696a"
+    },
+    {
+      "request": 25,
+      "offset": 17580784,
+      "bytes": 4096,
+      "sha256": "474e3a3fa10c9f63fca1f2b6616e520ae85fa0ff799f0b0eaaa2eedefe27b4c3"
+    },
+    {
+      "request": 26,
+      "offset": 17588520,
+      "bytes": 328,
+      "sha256": "8028c64a8d7dee22b56db97f0ab2a7f5a40ba887a0536fd0f5baf5a36ea852de"
+    },
+    {
+      "request": 27,
+      "offset": 17560408,
+      "bytes": 512,
+      "sha256": "adb290d7f13ad1aa18933f22859f9e0815639dbf69c58582a6caae599e144f52"
+    },
+    {
+      "request": 28,
+      "offset": 20686440,
+      "bytes": 448,
+      "sha256": "50baa60e84c34d6646c191f18f6497d3c16090960cca2815426dac7e64d37312"
+    },
+    {
+      "request": 29,
+      "offset": 17587856,
+      "bytes": 544,
+      "sha256": "090599dfb16ef02789bea185142dc9499bc336582dbdf83324b4a91de2243286"
+    },
+    {
+      "request": 30,
+      "offset": 17588400,
+      "bytes": 512,
+      "sha256": "a3a2efba76e398e3e3c9bbf0e24097b7454431dbe51965a9966deb7397fce87d"
+    },
+    {
+      "request": 31,
+      "offset": 17589120,
+      "bytes": 328,
+      "sha256": "a663340c39acba17ad1fb535d8b16adfad8554cc44c8f1ce386a17f5acface05"
+    },
+    {
+      "request": 32,
+      "offset": 20686128,
+      "bytes": 512,
+      "sha256": "bd10cf7550d4436bd27a68c346a252446436f31e36f841f5a556da28f308334b"
+    },
+    {
+      "request": 33,
+      "offset": 17539488,
+      "bytes": 512,
+      "sha256": "42105ce7f03c66858913392fc81ae4ba35a3460c89a8a6a77e5fbb805a4b89f3"
+    },
+    {
+      "request": 34,
+      "offset": 23785144,
+      "bytes": 448,
+      "sha256": "83d4446ba71d652fd822710aadb6795a2f36f62e4463de8f135cb12ef172611a"
+    },
+    {
+      "request": 35,
+      "offset": 20686888,
+      "bytes": 544,
+      "sha256": "9572f5d377ee91b1e118219e26290d4433fb2296281912c9fded846a8e972bd3"
+    },
+    {
+      "request": 36,
+      "offset": 20687432,
+      "bytes": 512,
+      "sha256": "f56e0f6dccbee491dfaf72e4dc27301cfa611c3818d1bcbd9289dabf59d1cbaf"
+    },
+    {
+      "request": 37,
+      "offset": 23784504,
+      "bytes": 328,
+      "sha256": "ebbfe7678ce921031f95b89dae8a0d41ec8217e90be55d61507290a24284c753"
+    },
+    {
+      "request": 38,
+      "offset": 23784832,
+      "bytes": 512,
+      "sha256": "d4cb66b6002a89b19f8a25919efdad6171a4ea2b98975de12bd799355d0dd178"
+    },
+    {
+      "request": 39,
+      "offset": 17539528,
+      "bytes": 512,
+      "sha256": "3f885884e4237008d05451207aaf786d425d3bdc62da153823d14241e1b234b1"
+    },
+    {
+      "request": 40,
+      "offset": 29980240,
+      "bytes": 448,
+      "sha256": "750ee4787ac29d139b5b0465ea1ca1a96d87949e57ec6dd43b54c98b4739dbb2"
+    },
+    {
+      "request": 41,
+      "offset": 23785592,
+      "bytes": 544,
+      "sha256": "953ac01214eaeb314a3d69d4420d5ca6a7444b672da59e4ccfa93b31c474dc11"
+    },
+    {
+      "request": 42,
+      "offset": 23786136,
+      "bytes": 512,
+      "sha256": "e141503e05d71e7fedaf65cbc19dab2ec82c98cdf0e62459db0d82edb9348459"
+    },
+    {
+      "request": 43,
+      "offset": 29980064,
+      "bytes": 176,
+      "sha256": "27e6262f8dfa8b09cf4a04412ee10d28dd707e29cb78968c0482da5696357e7b"
+    },
+    {
+      "request": 44,
+      "offset": 29979560,
+      "bytes": 328,
+      "sha256": "677b60d8c61a1c9a32364b3845e741c5da1e5ebbf252ffcf6b36b9a6a62d5de4"
+    },
+    {
+      "request": 45,
+      "offset": 23786256,
+      "bytes": 512,
+      "sha256": "1a05193d516fe3616aeb936ac046d5e44738c659769e17c5ac32b3af9724d04e"
+    },
+    {
+      "request": 46,
+      "offset": 29979888,
+      "bytes": 176,
+      "sha256": "52d75ac60b3ed7d3519426bf965fc7a83245d933fbbd05e7e55191537db2236a"
+    },
+    {
+      "request": 47,
+      "offset": 2020257468,
+      "bytes": 512,
+      "sha256": "24669165f4cfa3f817714c52b5132bb89cb1962ec1bb648b178587eb6470bfb2"
+    },
+    {
+      "request": 48,
+      "offset": 2020257740,
+      "bytes": 512,
+      "sha256": "fb5d25ee029c2c9ca9ba0a3476073aabb6e0a11d3dd7228b65a17610d504484a"
+    },
+    {
+      "request": 49,
+      "offset": 17586848,
+      "bytes": 16,
+      "sha256": "7c398f7bb33707565cd7466b37b4174334636dee0d16a20f1395e2c4fe275e1a"
+    },
+    {
+      "request": 50,
+      "offset": 17586880,
+      "bytes": 16,
+      "sha256": "e23b6704026c2f14719bf049ac17d205a9127027d22c8d754901da9d3dfd1011"
+    },
+    {
+      "request": 51,
+      "offset": 17586896,
+      "bytes": 16,
+      "sha256": "9bef65e79f3695fe995837045f04d72a06e1d8297af2eab51234bb1b01d771b7"
+    },
+    {
+      "request": 52,
+      "offset": 29981608,
+      "bytes": 1048576,
+      "sha256": "6337f561c5d65b7ac645ffbc58bc25f422ceb263ea102b7a289948a22d744236"
+    },
+    {
+      "request": 53,
+      "offset": 31030184,
+      "bytes": 499676,
+      "sha256": "9336826f9feda82041df96d15bd8ee254578381b52787d1e7dd371ee27946797"
+    },
+    {
+      "request": 54,
+      "offset": 20688000,
+      "bytes": 1048576,
+      "sha256": "409bbf4358ed6b4eef8421dca39623f51cda65b343261b3b1b7d0ace94eb0d75"
+    },
+    {
+      "request": 55,
+      "offset": 21736576,
+      "bytes": 1048576,
+      "sha256": "ae18696d75a9bbdcb6b87a76c594b3fd0f3993a5131e531b8dd3ba6b364dd36a"
+    },
+    {
+      "request": 56,
+      "offset": 22785152,
+      "bytes": 999352,
+      "sha256": "3e2583b44eab813e2e8711bc85284a46f63bdf8063b3ee7e3f78bb77e6a21345"
+    },
+    {
+      "request": 57,
+      "offset": 26883056,
+      "bytes": 1048576,
+      "sha256": "6f4e3847a8af264084f6c1ea86f0a4441bc839a081f5639c94fcbf7fa951025f"
+    },
+    {
+      "request": 58,
+      "offset": 27931632,
+      "bytes": 1048576,
+      "sha256": "848c1356d446fa0ff8413e5a2a64e3a6047fe0509aeb873400c6c0cc4358c5fb"
+    },
+    {
+      "request": 59,
+      "offset": 28980208,
+      "bytes": 999352,
+      "sha256": "2982cd9f8b84c02522ea077e3d49db952319b9b4e77f1cb02a0c37428d04ddc8"
+    }
+  ],
+  "response_headers": [
+    {
+      "request": 1,
+      "status": 206,
+      "content_range": "bytes 0-7/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 2,
+      "status": 206,
+      "content_range": "bytes 0-47/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 3,
+      "status": 206,
+      "content_range": "bytes 48-95/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 4,
+      "status": 206,
+      "content_range": "bytes 96-607/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 5,
+      "status": 206,
+      "content_range": "bytes 1360420628-1360420835/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 6,
+      "status": 206,
+      "content_range": "bytes 131678084-131678267/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 7,
+      "status": 206,
+      "content_range": "bytes 1360295748-1360295827/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 8,
+      "status": 206,
+      "content_range": "bytes 1360014852-1360018947/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 9,
+      "status": 206,
+      "content_range": "bytes 1360018948-1360080387/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 10,
+      "status": 206,
+      "content_range": "bytes 680-1191/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 11,
+      "status": 206,
+      "content_range": "bytes 2020257116-2020257467/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 12,
+      "status": 206,
+      "content_range": "bytes 136-679/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 13,
+      "status": 206,
+      "content_range": "bytes 1504-1831/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 14,
+      "status": 206,
+      "content_range": "bytes 2020238948-2020239459/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 15,
+      "status": 206,
+      "content_range": "bytes 2020256788-2020257115/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 16,
+      "status": 206,
+      "content_range": "bytes 1456-1967/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 17,
+      "status": 206,
+      "content_range": "bytes 11713096-11713639/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 18,
+      "status": 206,
+      "content_range": "bytes 16393704-16394215/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 19,
+      "status": 206,
+      "content_range": "bytes 31529980-31530155/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 20,
+      "status": 206,
+      "content_range": "bytes 16394488-16394815/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 21,
+      "status": 206,
+      "content_range": "bytes 17577856-17578367/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 22,
+      "status": 206,
+      "content_range": "bytes 29980688-29981055/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 23,
+      "status": 206,
+      "content_range": "bytes 17587192-17587735/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 24,
+      "status": 206,
+      "content_range": "bytes 17587736-17588247/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 25,
+      "status": 206,
+      "content_range": "bytes 17580784-17584879/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 26,
+      "status": 206,
+      "content_range": "bytes 17588520-17588847/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 27,
+      "status": 206,
+      "content_range": "bytes 17560408-17560919/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 28,
+      "status": 206,
+      "content_range": "bytes 20686440-20686887/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 29,
+      "status": 206,
+      "content_range": "bytes 17587856-17588399/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 30,
+      "status": 206,
+      "content_range": "bytes 17588400-17588911/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 31,
+      "status": 206,
+      "content_range": "bytes 17589120-17589447/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 32,
+      "status": 206,
+      "content_range": "bytes 20686128-20686639/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 33,
+      "status": 206,
+      "content_range": "bytes 17539488-17539999/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 34,
+      "status": 206,
+      "content_range": "bytes 23785144-23785591/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 35,
+      "status": 206,
+      "content_range": "bytes 20686888-20687431/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 36,
+      "status": 206,
+      "content_range": "bytes 20687432-20687943/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 37,
+      "status": 206,
+      "content_range": "bytes 23784504-23784831/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 38,
+      "status": 206,
+      "content_range": "bytes 23784832-23785343/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 39,
+      "status": 206,
+      "content_range": "bytes 17539528-17540039/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 40,
+      "status": 206,
+      "content_range": "bytes 29980240-29980687/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 41,
+      "status": 206,
+      "content_range": "bytes 23785592-23786135/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 42,
+      "status": 206,
+      "content_range": "bytes 23786136-23786647/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 43,
+      "status": 206,
+      "content_range": "bytes 29980064-29980239/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 44,
+      "status": 206,
+      "content_range": "bytes 29979560-29979887/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 45,
+      "status": 206,
+      "content_range": "bytes 23786256-23786767/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 46,
+      "status": 206,
+      "content_range": "bytes 29979888-29980063/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 47,
+      "status": 206,
+      "content_range": "bytes 2020257468-2020257979/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 48,
+      "status": 206,
+      "content_range": "bytes 2020257740-2020258251/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 49,
+      "status": 206,
+      "content_range": "bytes 17586848-17586863/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 50,
+      "status": 206,
+      "content_range": "bytes 17586880-17586895/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 51,
+      "status": 206,
+      "content_range": "bytes 17586896-17586911/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 52,
+      "status": 206,
+      "content_range": "bytes 29981608-31030183/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 53,
+      "status": 206,
+      "content_range": "bytes 31030184-31529859/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 54,
+      "status": 206,
+      "content_range": "bytes 20688000-21736575/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 55,
+      "status": 206,
+      "content_range": "bytes 21736576-22785151/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 56,
+      "status": 206,
+      "content_range": "bytes 22785152-23784503/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 57,
+      "status": 206,
+      "content_range": "bytes 26883056-27931631/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 58,
+      "status": 206,
+      "content_range": "bytes 27931632-28980207/2021557700",
+      "etag": "\"5a68872013c80\""
+    },
+    {
+      "request": 59,
+      "status": 206,
+      "content_range": "bytes 28980208-29979559/2021557700",
+      "etag": "\"5a68872013c80\""
+    }
+  ],
+  "payload_accounting_complete": true,
+  "finished_monotonic": 325807.546,
+  "source_array_hash_not_full_NWB_hash": true,
+  "R2_attempt_separate_from_M2_and_R1": true
+}

@@ -1,0 +1,1192 @@
+{
+  "mission": "P16-M2-RUNNING-PRECISION-RECOVERY-R2",
+  "base": "67188e8e53a5c9a6c2ae7835b8b29aab7768db9e",
+  "frozen_at": "2026-10-19T15:22:25.906510+00:00",
+  "baseline_revision": 1,
+  "owner_sha256": "129ad77a54b8a909495f7f8ccc031a65e773053bb8dc1b2003d5feb38bbb6c72",
+  "requirement_count": 197,
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "source_line": 1,
+      "requirement": "# CCPN — P16 NATIVE RUNNING PRECISION RECOVERY R2",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-002",
+      "source_line": 3,
+      "requirement": "MISSION: P16-M2-RUNNING-PRECISION-RECOVERY-R2",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-003",
+      "source_line": 5,
+      "requirement": "BASE:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-004",
+      "source_line": 6,
+      "requirement": "origin/test @ 67188e8e53a5c9a6c2ae7835b8b29aab7768db9e",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-005",
+      "source_line": 8,
+      "requirement": "MODE: SCIENCE-FIRST / BOUNDED CORRECTIVE EXECUTION",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-006",
+      "source_line": 10,
+      "requirement": "## OBJECTIVE",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-007",
+      "source_line": 12,
+      "requirement": "Resolve the identified native HDF5 representation mismatch without changing the P16 scientific estimand.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-008",
+      "source_line": 14,
+      "requirement": "Then, conditionally resume the Development running-only source-validity gate.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-009",
+      "source_line": 16,
+      "requirement": "Do not resume neural QC, model fitting or Final evaluation in this mission.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-010",
+      "source_line": 18,
+      "requirement": "## 1. EXPLICIT AUTHORIZATION",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-011",
+      "source_line": 20,
+      "requirement": "I authorize:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-012",
+      "source_line": 22,
+      "requirement": "1. A prospective source-storage-versus-computation precision contract clarification.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-013",
+      "source_line": 23,
+      "requirement": "2. A minimal new-version reader compatibility repair.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-014",
+      "source_line": 24,
+      "requirement": "3. Independent synthetic and source-interface tests.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-015",
+      "source_line": 25,
+      "requirement": "4. One newly authorized real Development source-validation run on session 750749662.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-016",
+      "source_line": 26,
+      "requirement": "5. Conditional running-only verification of the remaining 27 frozen Development sessions, if the first source passes.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-017",
+      "source_line": 27,
+      "requirement": "6. Independent scientific review and archival delivery.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-018",
+      "source_line": 29,
+      "requirement": "The original M2 STOP and R1 SOURCE_SCHEMA_INCOMPATIBLE result remain immutable.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-019",
+      "source_line": 31,
+      "requirement": "These are new prospective attempts, not retroactive successful retries.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-020",
+      "source_line": 33,
+      "requirement": "No scientific threshold relaxation.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-021",
+      "source_line": 35,
+      "requirement": "No Final C/D neural access.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-022",
+      "source_line": 37,
+      "requirement": "## 2. FROZEN SCIENTIFIC CONTRACT",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-023",
+      "source_line": 39,
+      "requirement": "Preserve:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-024",
+      "source_line": 41,
+      "requirement": "- All 55 original mice.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-025",
+      "source_line": 42,
+      "requirement": "- Development 28: 5 BO / 23 FC.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-026",
+      "source_line": 43,
+      "requirement": "- Final 27 BO.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-027",
+      "source_line": 44,
+      "requirement": "- Native flashes stimulus.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-028",
+      "source_line": 45,
+      "requirement": "- B0–B4/C/D/S equations.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-029",
+      "source_line": 46,
+      "requirement": "- Original A/B/E and C/D splits.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-030",
+      "source_line": 47,
+      "requirement": "- Original physiological thresholds.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-031",
+      "source_line": 48,
+      "requirement": "- All numerical tests, sensitivities and nulls.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-032",
+      "source_line": 49,
+      "requirement": "- Original optimization ceilings.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-033",
+      "source_line": 51,
+      "requirement": "The frozen M1 scientific question remains unchanged.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-034",
+      "source_line": 53,
+      "requirement": "## 3. SOURCE-PRESERVING PRECISION CONTRACT",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-035",
+      "source_line": 55,
+      "requirement": "The diagnostic established:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-036",
+      "source_line": 57,
+      "requirement": "Rotation dataset:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-037",
+      "source_line": 58,
+      "requirement": "`/processing/running/running_wheel_rotation/data`",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-038",
+      "source_line": 60,
+      "requirement": "Native storage dtype:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-039",
+      "source_line": 61,
+      "requirement": "IEEE float32, HDF5 `<f4`.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-040",
+      "source_line": 63,
+      "requirement": "Native start/end timestamps:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-041",
+      "source_line": 64,
+      "requirement": "IEEE float64, HDF5 `<f8`.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-042",
+      "source_line": 66,
+      "requirement": "Define:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-043",
+      "source_line": 68,
+      "requirement": "- Source rotation values retain their actual native float32 precision.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-044",
+      "source_line": 69,
+      "requirement": "- Exact float32-to-float64 promotion is permitted for subsequent model-feature arithmetic.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-045",
+      "source_line": 70,
+      "requirement": "- Promotion must preserve every finite original float32 value exactly.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-046",
+      "source_line": 71,
+      "requirement": "- It must not be represented as recovering additional sensor precision.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-047",
+      "source_line": 72,
+      "requirement": "- Original float64 timestamps must retain their binary64 values.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-048",
+      "source_line": 73,
+      "requirement": "- No timestamp rounding, interpolation or synchronization correction.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-049",
+      "source_line": 74,
+      "requirement": "- No inference of missing zero-rotation observations.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-050",
+      "source_line": 76,
+      "requirement": "Frozen running definition remains:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-051",
+      "source_line": 78,
+      "requirement": "angular_velocity =",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-052",
+      "source_line": 79,
+      "requirement": "native_net_rotation_radians /",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-053",
+      "source_line": 80,
+      "requirement": "(native_end_time - native_start_time)",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-054",
+      "source_line": 82,
+      "requirement": "r = tanh(angular_velocity / 10)",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-055",
+      "source_line": 84,
+      "requirement": "Keep r², color*r and explicit running-missing features exactly as registered.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-056",
+      "source_line": 86,
+      "requirement": "The strict-past condition remains:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-057",
+      "source_line": 88,
+      "requirement": "native_end_time < prediction_bin_start.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-058",
+      "source_line": 90,
+      "requirement": "Before approving this interpretation, independently compare it against every normative M1 source and mathematical requirement.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-059",
+      "source_line": 92,
+      "requirement": "If M1 actually requires float64 SOURCE STORAGE for rotation, rather than float64 COMPUTATION, STOP with CONTRACT_AMENDMENT_REQUIRED.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-060",
+      "source_line": 94,
+      "requirement": "Do not silently reinterpret contradictory normative text.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-061",
+      "source_line": 96,
+      "requirement": "## 4. EXACT INTERNAL LINK RESOLVER",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-062",
+      "source_line": 98,
+      "requirement": "Permit only the diagnosed internal alias:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-063",
+      "source_line": 100,
+      "requirement": "/processing/running/running_wheel_rotation/timestamps",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-064",
+      "source_line": 102,
+      "requirement": "SoftLink target:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-065",
+      "source_line": 104,
+      "requirement": "/processing/running/running_speed/timestamps",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-066",
+      "source_line": 106,
+      "requirement": "Requirements:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-067",
+      "source_line": 108,
+      "requirement": "- Literal expected target match.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-068",
+      "source_line": 109,
+      "requirement": "- Same already verified HDF5 file.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-069",
+      "source_line": 110,
+      "requirement": "- Exact source-object identity.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-070",
+      "source_line": 111,
+      "requirement": "- HardLink traversal for canonical target components.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-071",
+      "source_line": 112,
+      "requirement": "- No ExternalLink.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-072",
+      "source_line": 113,
+      "requirement": "- No arbitrary symlink traversal.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-073",
+      "source_line": 114,
+      "requirement": "- No path escape, cycle or unexpected target.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-074",
+      "source_line": 115,
+      "requirement": "- No unrestricted resolver.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-075",
+      "source_line": 117,
+      "requirement": "All other previously forbidden paths remain forbidden.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-076",
+      "source_line": 119,
+      "requirement": "Test hard links, permitted alias, missing links, external links, cycles and spoofed targets.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-077",
+      "source_line": 121,
+      "requirement": "## 5. SOURCE VALUE VERIFICATION",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-078",
+      "source_line": 123,
+      "requirement": "After independent preaccess approval, validate the first Development session.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-079",
+      "source_line": 125,
+      "requirement": "Verify:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-080",
+      "source_line": 127,
+      "requirement": "- Source file identity and original clock scalars.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-081",
+      "source_line": 128,
+      "requirement": "- Original source unit: radians.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-082",
+      "source_line": 129,
+      "requirement": "- Conversion=1 and offset=0.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-083",
+      "source_line": 130,
+      "requirement": "- Rotation finite native values.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-084",
+      "source_line": 131,
+      "requirement": "- Exact float32-to-float64 roundtrip.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-085",
+      "source_line": 132,
+      "requirement": "- Finite and ordered float64 start/end timestamps.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-086",
+      "source_line": 133,
+      "requirement": "- Same-row start/end/rotation correspondence.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-087",
+      "source_line": 134,
+      "requirement": "- Positive interval duration.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-088",
+      "source_line": 135,
+      "requirement": "- No unsupported dtype or conversion.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-089",
+      "source_line": 136,
+      "requirement": "- Preserved native row ordering.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-090",
+      "source_line": 137,
+      "requirement": "- Strictly past wheel lookup.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-091",
+      "source_line": 138,
+      "requirement": "- Native missingness and zero-removal semantics.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-092",
+      "source_line": 139,
+      "requirement": "- Invalid interval exclusion.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-093",
+      "source_line": 140,
+      "requirement": "- Frozen role/color running coverage.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-094",
+      "source_line": 142,
+      "requirement": "Retain the original float32 values and source hash alongside derived float64 feature arrays.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-095",
+      "source_line": 144,
+      "requirement": "Record relevant source precision/quantization limitations without inventing ground-truth sensor accuracy.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-096",
+      "source_line": 146,
+      "requirement": "Source interval division and tanh computation must be performed under the frozen float64 numerical policy.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-097",
+      "source_line": 148,
+      "requirement": "If the source fails these requirements, STOP.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-098",
+      "source_line": 150,
+      "requirement": "## 6. CONDITIONAL COHORT CONTINUATION",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-099",
+      "source_line": 152,
+      "requirement": "Only after the first corrected source passes:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-100",
+      "source_line": 154,
+      "requirement": "Continue running-only validation for the other 27 originally frozen Development sources.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-101",
+      "source_line": 156,
+      "requirement": "No session replacement.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-102",
+      "source_line": 158,
+      "requirement": "No new dataset or stimulus choice.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-103",
+      "source_line": 160,
+      "requirement": "No neural array access.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-104",
+      "source_line": 162,
+      "requirement": "Apply identical validated reader semantics and original running availability rules to all sessions.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-105",
+      "source_line": 164,
+      "requirement": "Determine whether the original cohort can potentially satisfy:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-106",
+      "source_line": 166,
+      "requirement": "- 14 Development mice overall.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-107",
+      "source_line": 167,
+      "requirement": "- At least 3 BO mice.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-108",
+      "source_line": 168,
+      "requirement": "- At least 10 FC mice.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-109",
+      "source_line": 170,
+      "requirement": "Preserve the difference between a valid running-source screen and full biological admission.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-110",
+      "source_line": 172,
+      "requirement": "Do not declare physiological admission from behavior coverage alone.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-111",
+      "source_line": 174,
+      "requirement": "If source compatibility fails again, STOP and retain exact evidence.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-112",
+      "source_line": 176,
+      "requirement": "## 7. RESOURCE AND ATTEMPT LIMITS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-113",
+      "source_line": 178,
+      "requirement": "Use no more than the original registered source-stage upper limits for this newly authorized recovery execution:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-114",
+      "source_line": 180,
+      "requirement": "- Per source object: 134,217,728 bytes.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-115",
+      "source_line": 181,
+      "requirement": "- Total for 28 Development objects: 3,758,096,384 bytes.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-116",
+      "source_line": 182,
+      "requirement": "- Per request: 1,048,576 bytes.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-117",
+      "source_line": 183,
+      "requirement": "- Per source object: 4,096 requests.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-118",
+      "source_line": 184,
+      "requirement": "- Maximum concurrency: 4.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-119",
+      "source_line": 185,
+      "requirement": "- Source stage deadline: 4 hours.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-120",
+      "source_line": 186,
+      "requirement": "- No network retries or full-file bulk fallback.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-121",
+      "source_line": 188,
+      "requirement": "Preserve historical source requests and bytes as separate cumulative evidence.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-122",
+      "source_line": 190,
+      "requirement": "No historical failed attempt is refunded or erased.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-123",
+      "source_line": 192,
+      "requirement": "No optimizer budget is activated.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-124",
+      "source_line": 194,
+      "requirement": "## 8. SCIENTIFIC AND ENGINEERING REVIEW",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-125",
+      "source_line": 196,
+      "requirement": "Before source access:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-126",
+      "source_line": 197,
+      "requirement": "Independent source/precision/reader review.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-127",
+      "source_line": 199,
+      "requirement": "After first real source:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-128",
+      "source_line": 200,
+      "requirement": "Verify actual native structure and numerical semantics, not just synthetic fixture compatibility.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-129",
+      "source_line": 202,
+      "requirement": "After full running stage:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-130",
+      "source_line": 203,
+      "requirement": "Independently verify all source identities, missingness, coverage and budget accounting.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-131",
+      "source_line": 205,
+      "requirement": "Do not claim float32 measurement accuracy beyond what the original source and metadata establish.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-132",
+      "source_line": 207,
+      "requirement": "Do not claim source-wide success based on the first session.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-133",
+      "source_line": 209,
+      "requirement": "## 9. STRICT BOUNDARY",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-134",
+      "source_line": 211,
+      "requirement": "Do not perform:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-135",
+      "source_line": 213,
+      "requirement": "- Development A neural extraction.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-136",
+      "source_line": 214,
+      "requirement": "- A-only physiology/QC.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-137",
+      "source_line": 215,
+      "requirement": "- Model optimization.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-138",
+      "source_line": 216,
+      "requirement": "- B selection.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-139",
+      "source_line": 217,
+      "requirement": "- E assessment.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-140",
+      "source_line": 218,
+      "requirement": "- Sensitivities or neural nulls.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-141",
+      "source_line": 219,
+      "requirement": "- Final C or D access.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-142",
+      "source_line": 220,
+      "requirement": "- Scientific inference.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-143",
+      "source_line": 222,
+      "requirement": "Those require a subsequent separately authorized M2–M5 continuation after this recovery gate succeeds.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-144",
+      "source_line": 224,
+      "requirement": "## 10. DELIVERY",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-145",
+      "source_line": 226,
+      "requirement": "Create:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-146",
+      "source_line": 228,
+      "requirement": "paper16_running_r2/",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-147",
+      "source_line": 230,
+      "requirement": "Deliver:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-148",
+      "source_line": 232,
+      "requirement": "- PRECISION_CONTRACT_DECISION.md",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-149",
+      "source_line": 233,
+      "requirement": "- INTERNAL_LINK_RESOLVER_TESTS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-150",
+      "source_line": 234,
+      "requirement": "- NATIVE_SOURCE_VALIDATION.md",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-151",
+      "source_line": 235,
+      "requirement": "- RUNNING_COHORT_REPORT.md",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-152",
+      "source_line": 236,
+      "requirement": "- Exact Development coverage table",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-153",
+      "source_line": 237,
+      "requirement": "- Source/attempt/resource ledgers",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-154",
+      "source_line": 238,
+      "requirement": "- Historical STOP preservation audit",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-155",
+      "source_line": 239,
+      "requirement": "- Independent preaccess and final scientific review",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-156",
+      "source_line": 240,
+      "requirement": "- Saved-only reproduction",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-157",
+      "source_line": 241,
+      "requirement": "- Verified origin/test commit",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-158",
+      "source_line": 243,
+      "requirement": "Required terminal fields:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-159",
+      "source_line": 245,
+      "requirement": "MISSION_ID",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-160",
+      "source_line": 246,
+      "requirement": "PRECISION_CONTRACT_STATUS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-161",
+      "source_line": 247,
+      "requirement": "INTERNAL_ALIAS_RESOLVER_PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-162",
+      "source_line": 248,
+      "requirement": "FLOAT32_SOURCE_PRESERVED",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-163",
+      "source_line": 249,
+      "requirement": "FLOAT64_PROMOTION_EXACT",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-164",
+      "source_line": 250,
+      "requirement": "FLOAT64_TIMESTAMPS_PRESERVED",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-165",
+      "source_line": 251,
+      "requirement": "FIRST_SOURCE_RUNNING_PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-166",
+      "source_line": 252,
+      "requirement": "DEVELOPMENT_RUNNING_SOURCES_COMPLETED",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-167",
+      "source_line": 253,
+      "requirement": "DEVELOPMENT_RUNNING_SOURCES_FAILED",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-168",
+      "source_line": 254,
+      "requirement": "DEVELOPMENT_RUNNING_COHORT_POTENTIALLY_VIABLE",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-169",
+      "source_line": 255,
+      "requirement": "DEVELOPMENT_BO_POTENTIALLY_VIABLE",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-170",
+      "source_line": 256,
+      "requirement": "DEVELOPMENT_FC_POTENTIALLY_VIABLE",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-171",
+      "source_line": 257,
+      "requirement": "A_PHYSIOLOGICAL_QC_EXECUTED=false",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-172",
+      "source_line": 258,
+      "requirement": "MODEL_FITS_EXECUTED=0",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-173",
+      "source_line": 259,
+      "requirement": "FINAL_C_ACCESS=false",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-174",
+      "source_line": 260,
+      "requirement": "FINAL_D_ACCESS=false",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-175",
+      "source_line": 261,
+      "requirement": "M2_FULL_RESUME_READY",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-176",
+      "source_line": 262,
+      "requirement": "BUG_COUNT",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-177",
+      "source_line": 263,
+      "requirement": "WARN_COUNT",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-178",
+      "source_line": 264,
+      "requirement": "GIT_COMMIT",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-179",
+      "source_line": 265,
+      "requirement": "REMOTE_VERIFICATION",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-180",
+      "source_line": 267,
+      "requirement": "## TERMINAL VERDICTS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-181",
+      "source_line": 269,
+      "requirement": "Choose exactly one:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-182",
+      "source_line": 271,
+      "requirement": "RUNNING_SOURCE_GATE_PASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-183",
+      "source_line": 273,
+      "requirement": "CONTRACT_AMENDMENT_REQUIRED",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-184",
+      "source_line": 275,
+      "requirement": "SOURCE_NUMERICAL_INCOMPATIBLE",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-185",
+      "source_line": 277,
+      "requirement": "DEVELOPMENT_RUNNING_COVERAGE_INSUFFICIENT",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-186",
+      "source_line": 279,
+      "requirement": "STOP_RESOURCE_OR_IMPLEMENTATION",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-187",
+      "source_line": 281,
+      "requirement": "A successful source gate does not automatically imply physiological QC, model fitting or scientific hypothesis support.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-188",
+      "source_line": 283,
+      "requirement": "Preserve all prior findings.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-189",
+      "source_line": 285,
+      "requirement": "No M2–M5 automatic restart.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-190",
+      "source_line": 287,
+      "requirement": "STOP AFTER RUNNING-SOURCE RECOVERY HANDOFF.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-191",
+      "source_line": 289,
+      "requirement": "BEGIN R2 NOW.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-192",
+      "source_line": null,
+      "requirement": "Preserve all BASE tracked files except new daily prefix with byte-exact BASE suffix",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-193",
+      "source_line": null,
+      "requirement": "Independent precision-contract, preaccess, first-real-source and final review gates",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-194",
+      "source_line": null,
+      "requirement": "Exact source/ledger/artifact hashes; source numeric arrays retained in new version only",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-195",
+      "source_line": null,
+      "requirement": "No reattempt, no scientific threshold/model/statistic changes, no neural/Final access",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-196",
+      "source_line": null,
+      "requirement": "Normal exact mission-only origin/test commit, allchangedblob remote readback and clean gate",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-197",
+      "source_line": null,
+      "requirement": "STOP after bounded running-only recovery handoff; no automatic M2-M5 continuation",
+      "status": "OPEN"
+    }
+  ]
+}

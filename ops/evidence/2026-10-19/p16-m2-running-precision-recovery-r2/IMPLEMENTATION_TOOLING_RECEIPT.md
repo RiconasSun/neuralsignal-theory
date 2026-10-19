@@ -1,0 +1,5 @@
+# Mission Spec and local implementation tooling
+
+The codex-code-wrapper skill was read. The populated197-row owner/closure baseline and MISSION_SPEC.json preceded implementation. Dry-run1 flagged the word production even though it appears in forbidden-scope constraints. This is explicitly authorized scientific engineering, so the risk-reviewed dry-run2 was performed without inventing new permission; both logs are retained. No OpenRouter/API account or external guidance was used.
+
+Dry-run2 builds `codex exec ... --ask-for-approval on-request`. The existing CLI rejects that argument: freshly tested with `codex exec --ask-for-approval on-request --help` in CLI_COMPATIBILITY_CHECK.log, before any code execution or source access. This matches the preserved prior M2 wrapper failure. No large staging-copy/identical failed implementation retry, external skill/CLI repair or new account setup is warranted in this bounded scientific mission. Narrow approved repository implementation will use normal workspace tools after the normative precision gate passes. This tooling limitation is neither scientific failure nor a reason to weaken any evidence requirement.
