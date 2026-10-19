@@ -1,0 +1,18 @@
+{
+  "registered_at": "2026-10-19T18:07:33.564300+00:00",
+  "observed_synthetic_runtime_probe": {
+    "supervisor_pid": 61412,
+    "Popen_pid": 24752,
+    "actual_child_pid": 60760,
+    "actual_child_parent_pid": 24752,
+    "exit": 0
+  },
+  "diagnosis": "Windows venv launcher creates a distinct base interpreter child; original direct-parent equality and launcher-only kill do not certify actual worker containment. No neural access occurred.",
+  "preserved_controller_sha256": "9b1bc5afcf60fddf34d564671d9edc8e251dcdae1246c34189252d077309c6fb",
+  "prospective_repair": "Standard Windows Job Object with KILL_ON_JOB_CLOSE. Spawn launcher suspended; assign Job before resuming primary thread; descendants inherit. Worker verifies membership in exact named Job, not a self-declared flag. Parent deadline terminates whole Job. Test actual child/grandchild kill and normal completion.",
+  "scientific_or_threshold_changes": false,
+  "deadline_increase": false,
+  "real_neural_reads": 0,
+  "optimizer_attempts": 0,
+  "no_new_custody_architecture": "Compute process containment only, not a data authorization/key/principal architecture."
+}

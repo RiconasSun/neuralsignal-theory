@@ -1,0 +1,59 @@
+{
+  "registered_at": "2026-10-19T18:23:49.621588+00:00",
+  "prior_review_sha256": "34a1248178cd7e65c9f714907ac55e236f6f489e95c50ad856b67c936ed8376e",
+  "reason": "Prospective preaccess P1 repair: preserve a single48h interval across restart; no scientific/source change",
+  "policy": [
+    "Persist original UTC start and exact UTC deadline plus actual Windows LastBootUpTime",
+    "Validate finite monotonic interval and UTC interval, same duration<=172800",
+    "Reject boot mismatch/unavailable boot identity, stale UTC/monotonic or clock rollback before worker and every source boundary",
+    "Supervise child with conservative min original monotonic and UTC remaining deadline, check original stage during polling",
+    "No rebasing/resetting/extending stage after restart; trusted machine clock, no malicious-admin security claim"
+  ],
+  "tests": [
+    "49h stale UTC with valid monotonic denied",
+    "changed or unavailable boot denied before launch",
+    "same-boot valid stage accepted",
+    "malformed/nonfinite/overlength or mismatch intervals denied",
+    "original stage unchanged across verification",
+    "original child/grandchild deadline and all source tests retained"
+  ],
+  "real_neural_sources": 0,
+  "optimizer_attempts": 0,
+  "preserved": [
+    {
+      "path": "paper16_dev_r3\\transport.py",
+      "preserved": "ops\\evidence\\2026-10-19\\p16-m2-m5-neural-qc-and-development-r3\\pre_clock_repair\\transport.py",
+      "sha256": "0e5ee2594ef00d576af5718153f21fa25d684d154c7e39a41574ee6dc47b7c50"
+    },
+    {
+      "path": "paper16_dev_r3\\run_m2.py",
+      "preserved": "ops\\evidence\\2026-10-19\\p16-m2-m5-neural-qc-and-development-r3\\pre_clock_repair\\run_m2.py",
+      "sha256": "cdf855e144415d70f1ccf1ff74bd2ed47709de9ff2485579b9c26c75383ee172"
+    },
+    {
+      "path": "paper16_dev_r3\\test_transport.py",
+      "preserved": "ops\\evidence\\2026-10-19\\p16-m2-m5-neural-qc-and-development-r3\\pre_clock_repair\\test_transport.py",
+      "sha256": "c2f6eb1f48ccd63aba3335432c9488bc1325e3cabf8bc54a2ab0492d4a99a5ca"
+    },
+    {
+      "path": "paper16_dev_r3\\test_controller.py",
+      "preserved": "ops\\evidence\\2026-10-19\\p16-m2-m5-neural-qc-and-development-r3\\pre_clock_repair\\test_controller.py",
+      "sha256": "9a7ed0a34f4c8791b17eb85a231c18861e9c60245f4820d20b089964bcce53e5"
+    },
+    {
+      "path": "paper16_dev_r3\\test_integration.py",
+      "preserved": "ops\\evidence\\2026-10-19\\p16-m2-m5-neural-qc-and-development-r3\\pre_clock_repair\\test_integration.py",
+      "sha256": "ca54a17e72456ac98256364e34ad1e61ce1d296725ddf8b81b237812a31b3133"
+    },
+    {
+      "path": "paper16_dev_r3\\README.md",
+      "preserved": "ops\\evidence\\2026-10-19\\p16-m2-m5-neural-qc-and-development-r3\\pre_clock_repair\\README.md",
+      "sha256": "a629c5f25b77199d74ec586bc27fbecafdd8e64a350462274015e559de975ac1"
+    },
+    {
+      "path": "paper16_dev_r3\\SOURCE_ACCESS_PLAN.md",
+      "preserved": "ops\\evidence\\2026-10-19\\p16-m2-m5-neural-qc-and-development-r3\\pre_clock_repair\\SOURCE_ACCESS_PLAN.md",
+      "sha256": "4b69820d7988ba97a88629666613b9d3d329866c03fe86b0de8949301b10b149"
+    }
+  ]
+}

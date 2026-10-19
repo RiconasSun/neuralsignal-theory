@@ -1,0 +1,73 @@
+{"session": 757216464, "source_pass": true, "A_admitted": true, "candidates": 85}
+{"session": 760345702, "source_pass": true, "A_admitted": true, "candidates": 72}
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\work\runtime\Lib\site-packages\urllib3\response.py", line 929, in _error_catcher
+    yield
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\work\runtime\Lib\site-packages\urllib3\response.py", line 1046, in _raw_read
+    data = self._fp_read(amt, read1=read1) if not fp_closed else b""
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\work\runtime\Lib\site-packages\urllib3\response.py", line 1029, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\http\client.py", line 478, in read
+    s = self.fp.read(amt)
+        ^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\socket.py", line 718, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\ssl.py", line 1314, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\ssl.py", line 1166, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_dev_r3\run_m2.py", line 250, in <module>
+    {'supervise': supervise, 'worker': worker}[sys.argv[1]](sys.argv[2])
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_dev_r3\run_m2.py", line 161, in worker
+    guard(stage); results.append(process_source(item, reg, stage, journal))
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_dev_r3\run_m2.py", line 122, in process_source
+    result = read_a_source(file, item, reg, header, flashes, candidates, persist, audit, reads)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_dev_r3\neural_reader.py", line 137, in read_a_source
+    spikes = target[lo:hi]
+             ~~~~~~^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_dev_r3\neural_reader.py", line 75, in get
+    return original(ds, key)
+           ^^^^^^^^^^^^^^^^^
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\work\runtime\Lib\site-packages\h5py\_hl\dataset.py", line 872, in __getitem__
+    return self._fast_reader.read(args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/_selector.pyx", line 393, in h5py._selector.Reader.read
+  File "h5py/h5fd.pyx", line 159, in h5py.h5fd.H5FD_fileobj_read
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_dev_r3\transport.py", line 120, in readinto
+    value = self.read(len(buffer)); buffer[:len(value)] = value; return len(value)
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_dev_r3\transport.py", line 114, in read
+    guard(self.stage); first = self.pos//block*block; payload = self._block(first)
+                                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_dev_r3\transport.py", line 91, in _block
+    chunk = response.raw.read(min(16384, length+1-len(data)))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\work\runtime\Lib\site-packages\urllib3\response.py", line 1134, in read
+    data = self._raw_read(amt)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\work\runtime\Lib\site-packages\urllib3\response.py", line 1045, in _raw_read
+    with self._error_catcher():
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\work\runtime\Lib\site-packages\urllib3\response.py", line 934, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.") from e  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.brain-map.org', port=443): Read timed out.

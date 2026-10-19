@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_dev_r3\run_m2.py", line 250, in <module>
+    {'supervise': supervise, 'worker': worker}[sys.argv[1]](sys.argv[2])
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_dev_r3\run_m2.py", line 230, in supervise
+    if not outcome['valid_completed_worker']: raise ResourceStop('Required source/supervision gate failed; stop/no retry')
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+paper16_dev_r3.core.ResourceStop: Required source/supervision gate failed; stop/no retry

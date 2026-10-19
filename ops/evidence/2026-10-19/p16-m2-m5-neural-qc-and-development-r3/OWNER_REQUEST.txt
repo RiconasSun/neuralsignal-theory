@@ -1,0 +1,531 @@
+# CCPN / NEURALSIGNAL — PAPER 16 DEVELOPMENT CONTINUATION
+
+MISSION: P16-M2-M5-NEURAL-QC-AND-DEVELOPMENT-R3
+
+BASE:
+origin/test @ 8801b945004cda0dd7ecd9ddde1daaa507414a96
+
+PRIORITY: HIGH
+MODE: SCIENCE-FIRST / FROZEN PROTOCOL / CONDITIONAL EXECUTION
+
+## 0. EXPLICIT OWNER AUTHORIZATION
+
+I authorize a new, versioned P16 Development continuation following the successful R2 running-source recovery.
+
+Authorized in sequence:
+
+M2 — Development neural source verification and A-only physiological QC.
+
+M3 — Real production mathematical and numerical certification.
+
+M4 — Development A model fitting and B-only global lambda selection.
+
+M5 — One Development E exploratory assessment with registered sensitivities and controls.
+
+Every later stage is conditional on all prerequisite gates passing.
+
+This is not a replay of the historical failed M2 mission.
+
+Do not rerun the completed R2 running-source acquisition.
+
+No Final C/D neural access or evaluation is authorized.
+
+## 1. SCIENTIFIC SOURCE OF TRUTH
+
+Read and verify the complete P16 M1 frozen contract:
+
+paper16_m1/M1_SCIENTIFIC_PROTOCOL.md
+paper16_m1/M1_FREEZE_MANIFEST.json
+paper16_m1/protocol.json
+paper16_m1/NUMERICAL_POLICY.json
+paper16_m1/FEATURE_AND_MODEL_EQUATIONS.md
+paper16_m1/SOURCE_OBSERVATION_QC.md
+paper16_m1/STIMULUS_CONTRACT.md
+paper16_m1/BO_FC_TRANSPORT_PLAN.md
+paper16_m1/STATISTICAL_ANALYSIS_PLAN.md
+paper16_m1/FALSIFICATION_AND_SENSITIVITY_PLAN.md
+paper16_m1/EVALUATION_BOUNDARY.md
+paper16_m1/controls.json
+
+Read and verify the completed R2 recovery package:
+
+paper16_running_r2/PRECISION_CONTRACT_DECISION.md
+paper16_running_r2/NATIVE_SOURCE_VALIDATION.md
+paper16_running_r2/RUNNING_COHORT_REPORT.md
+paper16_running_r2/DEVELOPMENT_RUNNING_COVERAGE.csv
+paper16_running_r2/RESOURCE_LEDGER.json
+
+Reuse the accepted exact-native running data and masks.
+
+All frozen M1 scientific definitions remain authoritative.
+
+Historical M2 STOP, R1 diagnosis and R2 source recovery must remain unchanged and separately documented.
+
+## 2. FIXED RESEARCH DESIGN
+
+Dataset:
+Allen Visual Coding Neuropixels.
+
+Brain region:
+VISp and registered laminar descendants.
+
+Stimulus:
+Original nominal -1/+1 flashes.
+
+Development:
+28 original mice.
+
+- BO: 5
+- FC: 23
+
+Final:
+27 reserved BO mice.
+
+Each mouse uses its original selected probe.
+
+Primary question:
+
+Does strictly past local VISp neural history improve prediction beyond the strong visual-stimulus, session/time, firing-rate and measured-running baseline?
+
+Primary comparison:
+B4 - B1.
+
+Scoring:
+20-ms bins in the original [100,220) ms post-onset interval.
+
+History:
+100 ms strictly past within the original flash.
+
+Primary population:
+Eight frozen-rule A-qualified units per admitted mouse.
+
+This is observational, descriptive/exploratory research.
+
+No validated neural-primitive claim.
+
+## 3. PRESERVE R2 SOURCE RECOVERY
+
+R2 established:
+
+- 28/28 Development running sources completed.
+- Native float32 rotation values retained.
+- Exact float32-to-float64 promotion.
+- Original float64 timestamps preserved.
+- Registered internal SoftLink resolved safely.
+- 25,182 source-valid scored bins with strictly past running support.
+- Original three invalid Development presentations excluded.
+- Complete direct running availability in all registered role/color cells.
+
+Do not repeat those source acquisitions.
+
+Verify saved identities, hashes, source masks, feature values and compatibility with the frozen M1 contract.
+
+Do not regenerate timestamps from rounded text.
+
+If R2 artifacts are insufficient for a necessary scientific calculation, state the precise missing information and STOP rather than silently performing new running-source acquisition.
+
+Source-valid running bins do not establish neural observation validity.
+
+## 4. M2 — DEVELOPMENT NEURAL ACCESS
+
+Authorize access to the original frozen Development neural sources only.
+
+Before live neural access:
+
+- Verify the selected source/session/probe identities.
+- Verify the original source and M1 freeze.
+- Define an allowlisted neural reader.
+- Complete focused source-reader tests.
+- Obtain independent preaccess implementation review.
+- Register bounded access and resource accounting.
+
+Only candidate source-qualified VISp units on the frozen selected probe may be read for the registered experiment.
+
+No other brain-region population.
+
+No new source, probe, session or mouse substitution.
+
+No Final source neural arrays.
+
+If the NWB ragged representation requires reading an entire selected-unit spike-time row to construct role-scoped observations, a narrowly scoped local reader may transiently decode that selected-unit row.
+
+It may not use B/E observations for A physiological QC, unit ranking, feature scaling or parameter fitting.
+
+Expose Development B only to the registered scoring step after A fits are fixed; expose E only after model selection is frozen.
+
+Do not treat a whole-source technical read as permission for unrestricted scientific access.
+
+Do not publish or commit raw neural arrays.
+
+## 5. M2 — A-ONLY PHYSIOLOGICAL QC
+
+Use only Development A observations for new physiological admission and unit ranking.
+
+Original chronological roles:
+
+A: presentations 0–89.
+B: presentations 90–119.
+E: presentations 120–149.
+
+Cuts are defined before source invalidity exclusions.
+
+Preserve original stimulus identities and role guards.
+
+Frozen physiology:
+
+- Provider-good source-qualified candidates.
+- Original VISp anatomy/peak-channel mapping.
+- At least 30 A QC spikes.
+- At least 20 occupied A presentations.
+- Mean rate 0.5–150 Hz.
+- At least 20 eligible within-window adjacent ISI pairs.
+- ISI <1.5 ms fraction <=0.02.
+- Original complete-presentation support rules.
+- At least 30 valid A presentations per stimulus color.
+- At least eight qualifying units on the selected probe.
+
+Select the lowest eight numeric unit IDs satisfying the registered rules.
+
+Then check their full common observation support once.
+
+If the common-support gate fails, do not choose replacement units.
+
+Do not compute ISIs across flash gaps.
+
+Do not infer neural recording support from spike extrema or NWB file existence.
+
+Combine registered neural masks with previously saved R2 source-valid running support without altering either scientific rule.
+
+Preserve valid zero-spike bins.
+
+### Development admission gate
+
+Require all three:
+
+- At least 14 eligible Development mice.
+- At least 3 eligible BO mice.
+- At least 10 eligible FC mice.
+
+If any requirement fails, STOP before predictive fitting.
+
+Report actual mice, selected units, exposure denominators and exact physiological/source exclusions.
+
+Do not relax thresholds because of attrition.
+
+## 6. M3 — PRODUCTION MODEL CERTIFICATION
+
+Implement and independently certify the frozen models:
+
+B0 — Stationary Poisson.
+
+B1 — Saturated flash color×time response plus the twelve frozen visual/adaptation/session/running nuisance features.
+
+B2 — B1 plus own-unit history.
+
+B3 — B1 plus other-unit population history.
+
+B4 — B1 plus both histories.
+
+C — B4 plus the four fixed causal continuous kernels.
+
+D — Two-state conditional Poisson HMM.
+
+S — Two-state presentation-static latent mixture.
+
+Use exact M1 equations, regularization, parameter bounds, initialization, feature scalers and likelihood normalization.
+
+Do not reuse an incompatible P15 mathematical implementation.
+
+Do not invent a new model family.
+
+### Mandatory numerical gates
+
+Projected gradient:
+<=1e-5.
+
+Independent AD error:
+<=1e-8.
+
+Frozen finite-difference scaled error:
+<=2e-5 at step 1e-5.
+
+Apply every registered checkpoint and numerical acceptance test.
+
+Test real production integration on synthetic fixtures and authorized A-derived source-compatible inputs before fitting.
+
+Require exact causal indexing, matched unit/bin targets, stable log-likelihood calculations, proper state resets, source identities and nested-model identities.
+
+For D/S, all three seeds 11/23/37 are mandatory.
+
+No post-result numerical tolerance changes.
+
+A mandatory model failure must be recorded and handled by the original frozen STOP rule.
+
+## 7. FROZEN COMPUTE BUDGET
+
+The registered whole-study ceiling remains:
+
+16,178 optimizer attempts.
+
+Development candidate upper bound:
+8,456 attempts.
+
+Future Final reserve:
+7,722 attempts.
+
+The Development ceiling is NOT automatically the number of fits to execute.
+
+For admitted Development mice, derive the actual permitted task schedule from the frozen formulas:
+
+Main:
+Up to 62 registered optimizer attempts per admitted mouse.
+
+Eight refit sensitivity panels:
+Up to 240 registered optimizer attempts per admitted mouse, subject to original panel applicability.
+
+Use original unit/seed/lambda identities.
+
+The actual task count must not exceed the corresponding registered ceilings.
+
+Original execution limits:
+
+- At most four concurrent workers.
+- Development stage maximum 48 hours.
+- At most 1,500 accepted iterations per optimizer attempt.
+- At most 6,000 objective/gradient-pair calls per attempt.
+- Original diagnostic-call allowance separately counted.
+- No retries.
+- No extra seeds.
+- No optimizer budget extension.
+
+Introduce a separate, explicit source-access resource ledger for the new neural acquisition. Prospectively cap the new neural transport at 8 GiB aggregate and 512 MiB per Development source, with no bulk-download or retry fallback.
+
+These additional transport ceilings are engineering safeguards, not changed biological thresholds. Stop before exceeding them.
+
+Preserve previous R2 source resources as historical accounting.
+
+If resource, wall-time or numerical constraints prevent completion, STOP and report accurately.
+
+## 8. M4 — B1 MODEL SELECTION
+
+After A fitting becomes valid, fit the frozen B1 lambda grid:
+
+0.01
+0.1
+1.0
+
+Score the B1 candidates using Development B only.
+
+Global selection uses the original:
+
+- Equal-mouse BO mean.
+- Equal-mouse FC mean.
+- 0.5 BO + 0.5 FC weighting.
+
+Select by B1 log score only.
+
+Do not select using B4 gains, C/D/S scores, E results or any Final outcome.
+
+Original tie policy:
+Choose the larger lambda within the registered 1e-12 tie tolerance.
+
+After selecting the global lambda, reuse the chosen B1 states and fit the remaining B2/B3/B4/C/D/S families under the fixed M1 policies.
+
+All required D/S seeds must pass their numerical conditions.
+
+Do not choose a favorable seed based on B/E scores.
+
+No E-based tuning.
+
+## 9. M5 — ONE DEVELOPMENT E ASSESSMENT
+
+When all mandatory fitting and selection gates pass, freeze the Development policy and execute exactly one registered E evaluation.
+
+Report:
+
+Primary:
+B4 - B1.
+
+Five secondary comparisons:
+
+B4 - B2.
+B4 - B3.
+D - B4.
+C - B4.
+D - S.
+
+Use actual matched valid nominal unit-bin denominators.
+
+Apply:
+- Mouse-level equal weighting.
+- Registered paired sign-flip tests.
+- 10,000 whole-mouse bootstrap resamples.
+- Holm5 secondary adjustment.
+- Leave-one-mouse-out diagnostics.
+- BO/FC subgroup reporting.
+- Original meaningful-effect criteria.
+
+Report all seven model scores, six contrasts, confidence intervals, raw/adjusted p-values and numerical failures.
+
+Development BO-only analysis remains descriptive, particularly with only five original BO candidates.
+
+Keep FC results separate.
+
+Do not reinterpret protocol effects causally.
+
+## 10. FALSIFICATION AND SENSITIVITY
+
+Implement and execute the authorized Development instances of all frozen:
+
+S01–S12 sensitivities.
+
+N1–N4 reference/control families.
+
+Eight registered refit panels remain:
+
+S01, S02, S05, S06, S07, S09, S10, S11.
+
+Honor each panel's original applicability and coverage gates.
+
+Mandatory attempted numerical failure is not an optional UNAVAILABLE result.
+
+Use exact registered source masks, transformations, RNG seeds, draws and model policies.
+
+Do not generate favorable replacement controls.
+
+Preserve the caveats:
+
+N1 approximate exchangeability.
+
+N2 within-bin count invariance does not imply exact-time C invariance.
+
+N3 stimulus destruction is not an exact conditional history null.
+
+N4 is a deterministic coding stress test.
+
+Negative and failed results are acceptable scientific findings when correctly reported.
+
+## 11. SCIENTIFIC LIMITATIONS
+
+The eventual Development results remain descriptive/exploratory.
+
+Never claim:
+
+- Confirmatory validation.
+- Causal connectivity.
+- Independence from unmeasured movement or arousal.
+- Biophysical discrete neural atoms.
+- Robust universal cortical primitives.
+- CWP/NAP ontology validation.
+- Independent-laboratory replication.
+
+D/S joint prediction can capture instantaneous population correlation and static heterogeneity, not only past neural information.
+
+A D-B4 gain does not automatically mean persistent biological states.
+
+Preserve all source, atlas, physiological and BO/FC domain-shift limitations.
+
+## 12. FINAL PROTECTION
+
+No Final C neural access.
+
+No Final D neural access.
+
+No Final C model fitting or physiological admission.
+
+No Final D score, statistics, nulls or evaluation.
+
+No automatic Final progression.
+
+After M5, prepare a complete read-only handoff for separately authorized Final C and one Final D assessment.
+
+No source reader may access Final neural data under this mission.
+
+## 13. DELIVERY
+
+Create a new versioned directory:
+
+paper16_dev_r3/
+
+Produce:
+
+1. R2 source reuse/identity verification.
+2. Development neural source and access receipts.
+3. A-only physiological QC/admission.
+4. Exact admitted BO/FC animal lists.
+5. Native observation and timing validation.
+6. Full production numerical certificates.
+7. Frozen B1 lambda selection.
+8. Actual baseline and D/C/S fits.
+9. Complete optimizer and resource ledgers.
+10. One E exploratory scientific report.
+11. BO-only/FC diagnostics.
+12. S01–S12 status and scientific results.
+13. N1–N4 status and scientific results.
+14. A1–A10 scientific claim audit.
+15. Saved-only reproduction.
+16. Independent internal scientific and numerical review.
+17. Verified origin/test commit and clean-tree receipt.
+
+## 14. TERMINAL FIELDS
+
+MISSION_ID
+FINAL_STATUS
+R2_RUNNING_EVIDENCE_REUSED
+M2_NEURAL_SOURCE_PASS
+DEVELOPMENT_ADMITTED_MICE
+DEVELOPMENT_ADMITTED_BO
+DEVELOPMENT_ADMITTED_FC
+M2_PHYSIOLOGICAL_QC_PASS
+M3_PRODUCTION_NUMERICAL_PASS
+DEVELOPMENT_ATTEMPTS_AUTHORIZED
+DEVELOPMENT_ATTEMPTS_USED
+DEVELOPMENT_SOURCE_BYTES
+M4_B1_SELECTION_COMPLETE
+FROZEN_LAMBDA
+M4_MODEL_FITTING_COMPLETE
+M5_E_ASSESSMENT_COMPLETE
+PRIMARY_DEVELOPMENT_EFFECT
+SECONDARY_DEVELOPMENT_EFFECTS
+BO_ONLY_DIAGNOSTIC
+FC_DIAGNOSTIC
+SENSITIVITY_RESULTS
+REFERENCE_CONTROL_RESULTS
+SCIENTIFIC_VERDICT
+FINAL_C_ACCESS=false
+FINAL_D_ACCESS=false
+PROMPT_4_READY
+BUG_COUNT
+WARN_COUNT
+GIT_COMMIT
+REMOTE_VERIFICATION
+
+## 15. STOP POLICY
+
+On a mandatory source, physiology, numerical, causality or frozen-protocol contradiction:
+
+STOP immediately.
+
+If required execution exceeds frozen budgets:
+
+STOP_BUDGET.
+
+If complete Development results are valid:
+
+DEVELOPMENT_COMPLETE_EXPLORATORY.
+
+Do not count failure to support the hypothesis as an engineering failure.
+
+Preserve original STOP evidence and all new attempts.
+
+No model rescue by retuning.
+
+No Final evaluation.
+
+SCIENCE FIRST.
+
+BEGIN P16 M2 NEURAL CONTINUATION NOW.
+
+Proceed to M3–M5 only after their prerequisites pass.
+
+STOP after completed Development handoff or documented blocker.

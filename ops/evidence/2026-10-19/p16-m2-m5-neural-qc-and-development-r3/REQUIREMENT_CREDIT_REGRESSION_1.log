@@ -1,0 +1,37 @@
+test_dispositions_exactly_partition_original_333_rows_without_extra_credit (__main__.RequirementCreditTests.test_dispositions_exactly_partition_original_333_rows_without_extra_credit) ... ERROR
+test_full_M2_deliverables_receive_no_completion_credit_from_partial_prefix (__main__.RequirementCreditTests.test_full_M2_deliverables_receive_no_completion_credit_from_partial_prefix) ... ERROR
+
+======================================================================
+ERROR: test_dispositions_exactly_partition_original_333_rows_without_extra_credit (__main__.RequirementCreditTests.test_dispositions_exactly_partition_original_333_rows_without_extra_credit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\ops\evidence\2026-10-19\p16-m2-m5-neural-qc-and-development-r3\requirement_credit_regression.py", line 25, in test_dispositions_exactly_partition_original_333_rows_without_extra_credit
+    result = json.loads((E/'REQUIREMENT_RESULTS.json').read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1059, in read_text
+    return f.read()
+           ^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 668: character maps to <undefined>
+
+======================================================================
+ERROR: test_full_M2_deliverables_receive_no_completion_credit_from_partial_prefix (__main__.RequirementCreditTests.test_full_M2_deliverables_receive_no_completion_credit_from_partial_prefix)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\ops\evidence\2026-10-19\p16-m2-m5-neural-qc-and-development-r3\requirement_credit_regression.py", line 15, in test_full_M2_deliverables_receive_no_completion_credit_from_partial_prefix
+    result = json.loads((E/'REQUIREMENT_RESULTS.json').read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1059, in read_text
+    return f.read()
+           ^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 668: character maps to <undefined>
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.004s
+
+FAILED (errors=2)

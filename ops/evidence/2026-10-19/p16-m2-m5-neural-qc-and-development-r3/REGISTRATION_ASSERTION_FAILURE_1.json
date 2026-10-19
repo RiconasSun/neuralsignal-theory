@@ -1,0 +1,9 @@
+{
+  "time": "2026-10-19T17:52:58.168361+00:00",
+  "classification": "CODE_BUG",
+  "observed": "AssertionError before any output or neural access: compared provider string ecephys_session_id with registered integer.",
+  "diagnosis": "All28 provider canonical decimal strings match exact registered integers and probe names; no source identity contradiction. Frozen M0 core already uses int normalization.",
+  "repair": "Use canonical decimal type check then exact integer identity; no original data/IDs/threshold changed.",
+  "new_neural_reads": 0,
+  "model_fits": 0
+}
