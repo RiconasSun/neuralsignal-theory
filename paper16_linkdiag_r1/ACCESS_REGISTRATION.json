@@ -1,0 +1,104 @@
+{
+  "mission": "P16-M2-NATIVE-LINK-DIAGNOSTIC-R1",
+  "base": "a0065c66aaa84ad39a985903fcd77bdc1e1e711c",
+  "registered_at": "2026-10-19T05:01:47.226928+00:00",
+  "source": {
+    "mouse_id": "726162197",
+    "session_id": 750749662,
+    "probe_id": 769322806,
+    "probe_name": "probeC",
+    "role": "Development",
+    "protocol": "brain_observatory_1.1",
+    "file_id": "1026124242",
+    "size": 2818447324,
+    "etag": "\"5a68875f05100\""
+  },
+  "allowed_paths": [
+    "/processing",
+    "/processing/running",
+    "/processing/running/running_wheel_rotation",
+    "/processing/running/running_wheel_rotation/data",
+    "/processing/running/running_wheel_rotation/timestamps",
+    "/processing/running/running_speed",
+    "/processing/running/running_speed/timestamps",
+    "/processing/running/running_speed_end_times",
+    "/processing/running/running_speed_end_times/timestamps"
+  ],
+  "identity_metadata_paths": [
+    "/identifier",
+    "/session_start_time",
+    "/timestamps_reference_time"
+  ],
+  "identity_scalar_VALUES_read": false,
+  "source_identity": "ExactoriginalfileID/declaredsize/ETag andNWBrootversion/namespace metadata;noidentifier/clockscalarvaluesnecessary",
+  "expected_internal_alias": {
+    "/processing/running/running_wheel_rotation/timestamps": "/processing/running/running_speed/timestamps"
+  },
+  "allowed_attribute_names": [
+    "unit",
+    "conversion",
+    "offset",
+    "resolution",
+    "interval",
+    "namespace",
+    "neurodata_type",
+    "object_id",
+    "nwb_version"
+  ],
+  "attribute_bytes_max": 4096,
+  "root_attributes_only": [
+    "nwb_version",
+    "namespace",
+    "neurodata_type",
+    "object_id"
+  ],
+  "metadata_only": "Group.get(name,getlink=True)first;dereferenceHardLinkflatcomponentsonlyonfixedallowlist. Softliteral/normalizedcandidate recordedbeforefixedalias verification;onlysamefileauthorizedtargetmayberesolvedmetadata-only. No External dereference,no blindfile[path],no keys/whole-file scan. Relativeparent traversal remainsunresolved/deniedunlessnative semantics verifiedsynthetically;no plausible-targetequalityclaim.",
+  "budget": {
+    "new_payload_ceiling": 8388608,
+    "conservative_reserved_ceiling": 8388608,
+    "http_requests_max": 128,
+    "request_bytes_max": 131072,
+    "wall_seconds_max": 600,
+    "source_objects": 1,
+    "retries": 0,
+    "bulk_fallback": false
+  },
+  "prior_accounting_immutable": {
+    "requests": 39,
+    "payload": 81912,
+    "reserved": 81951,
+    "source_attempts": 1,
+    "unattempted_Development_sessions": 27,
+    "real_neural_model_work": 0
+  },
+  "prior_source_pins": {
+    "paper16_m1/M1_FREEZE_MANIFEST.json": "a9e787ae990fda13eb0b1899b9dd2d7e57c039c7b33f6630f3729fd27c19cab6",
+    "paper16_dev/STOP_FREEZE_MANIFEST.json": "e25405af06b877cce70892ee2770183f813fa24d5cdc329fd7b17a4a723c7140",
+    "paper16_dev/source_running.py": "fc2edbea4e0ec958e5c11d147cc57de4dec063e8ecfd2d7b1add726f887efa33",
+    "paper16_dev/m2_core.py": "f275c78f54b203d2a426ec28aadb26ad3d6cdd47ebc3365fdc5432e896a76eee",
+    "paper16_dev/test_m2.py": "c13a7c8518330c1a2ed6435c556c695b1444cdd2261b3cd64c4d1789d569c412",
+    "paper16_dev/STOP_REPORT.md": "8c9eb1264939b5072c8b32d2ad78a85063f3538b8b88e53bda4b1c810133fa94",
+    "paper16_dev/SOURCE_BEHAVIOR_REPORT.md": "3fb8166ef2289ebef5cdc41bde1698996f5d24abed0a8e04da7f142ef903e17e",
+    "paper16_dev/M2_ACCESS_REGISTRATION.json": "1cff7b690e00da657116b66055091720e8273d7bf934ac1062e1e8eb1e685842",
+    "paper16_dev/results/running/750749662.failure.json": "6b28b537677fae566ddfab3d9a079dd85a4c87d319c9e8f4f1e3e0593fb9374e",
+    "paper16_dev/results/running/750749662.attempt.json": "a4f55aa531eff805933255ee6529ad9b63d7a976de15705b55cfb18c06e05099",
+    "paper16_dev/results/M2_RUNNING_ATTEMPT.json": "c9df89b30344dfd258a043f75cc7363eefd3f849c24afa4be7e0311c26cd76ad",
+    "paper16_dev/results/M2_RUNNING_SUPERVISION.json": "a20cfc001719ed0f47cd65a09763634ee336f092d2de35fab6b4f3042fe78377",
+    "paper16_dev/DEVELOPMENT_STATUS.json": "546d2a64787103aa59ddfb79d0063fe49ba600c1a24741934ebc468519cc45fd",
+    "paper16_m0/results/ROLE_ALLOCATION.json": "463ed226d1f8c385934f1c7cda87481d5465702592c54d9e7e162fe14e50fb9a"
+  },
+  "preaccess": "Independent focusedreviewmustbindexactinspection/transport/tests/registration/report beforeoneworkeropen. Exclusiveparentandworkerattempts;externalsupervisor600s,cachesandrequestsdeadlinechecked;onlytimelycompletechildreceiptcanestablishverdict.",
+  "denials": [
+    "allDatasetvaluesincludingidentityscalars",
+    "runningnumericalarrays",
+    "neural/spiketimestamps",
+    "additional/Finalsourcefiles",
+    "datachunkinspection",
+    "M2productionreaderchanges",
+    "M2restart",
+    "fitting/scoring/QC"
+  ],
+  "scope": "Newmetadata-onlydiagnosis;notretryofM2science,noindependentthirdpartycustodyclaim",
+  "prospective_evidence_retention": "Persist each completed bounded metadata HTTP response verbatim under results/metadata_ranges. Total payloadstill<=8MiB,noextrarequests. These are opaque HDF5metadata-transferbytes fromvalue-guardedaccess,notrunning/neuralarrays. OfflineSavedRangeReadercanonlyserveverifiedsavedbytes,failsifanyrangeabsent,no networkfallback. Keepcomponentpending/resolvedsnapshotsdistinct.",
+  "compatibility_gate_clarification": "BeforeA,explicit timestampunitsmustseconds;missing/unknownessentialunitsunresolved,contradictoryscalingorrotationparentunitsfail. Samequantityrotationparentcheckonly,notvelocityvsseconds. Originalsource rowcapacity0<n<=2,000,000preserved. No numericvalidity/rowtiming/coverage claim."
+}

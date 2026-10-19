@@ -1,0 +1,487 @@
+{
+  "mission": "P16-M2-NATIVE-LINK-DIAGNOSTIC-R1",
+  "count": 60,
+  "items": [
+    {
+      "id": "AC-001",
+      "requirement": "Exact BASE and branch",
+      "evidence": "BOOTSTRAP.json; PRECHANGE_GIT_TREE.bin",
+      "oracle": "Fresh fetch origin/test exact BASE, initial clean; no origin/main invented",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-002",
+      "requirement": "Owner request losslessly retained",
+      "evidence": "OWNER_REQUEST.txt; baseline.json",
+      "oracle": "247 frozen owner/closure rows; owner request hash",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-003",
+      "requirement": "Freeze before implementation/access",
+      "evidence": "goldenstandards.md; ACCESS_REGISTRATION.json",
+      "oracle": "Prospective timestamp before sole SOURCE_OPEN_ATTEMPT",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-004",
+      "requirement": "Immutable old STOP and attempts",
+      "evidence": "UPSTREAM_HASH_AUDIT.json; verify_saved.py",
+      "oracle": "Old1failed/27unattempted; all58 M2 payload hashes unchanged",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-005",
+      "requirement": "M1 scientific state preserved",
+      "evidence": "verify_saved.py; SCIENTIFIC_CLAIM_AUDIT.md",
+      "oracle": "All334 M1 hashes unchanged; original55/28Dev/27Final",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-006",
+      "requirement": "Historical production reader untouched",
+      "evidence": "ACCESS_REGISTRATION.json prior_source_pins",
+      "oracle": "Hashfc2edbea; no production reader patch",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-007",
+      "requirement": "Offline four-component failure tree",
+      "evidence": "OFFLINE_FAILURE_ANALYSIS.md",
+      "oracle": "Missing/Hard/Soft/External/type/cycle/alias/schema distinct",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-008",
+      "requirement": "Synthetic valid internal alias",
+      "evidence": "test_diagnostic.py",
+      "oracle": "Same expected file/address, no values",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-009",
+      "requirement": "Synthetic HardLink case",
+      "evidence": "test_diagnostic.py",
+      "oracle": "Safe metadata; original failure not falsely reproduced",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-010",
+      "requirement": "Missing component cases",
+      "evidence": "test_diagnostic.py",
+      "oracle": "Each component missing fails explicitly",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-011",
+      "requirement": "Unexpected intermediate object",
+      "evidence": "test_diagnostic.py",
+      "oracle": "Dataset parent is not traversed as Group",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-012",
+      "requirement": "External target denial",
+      "evidence": "test_diagnostic.py",
+      "oracle": "No dereference/external file open",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-013",
+      "requirement": "Cyclic target denial",
+      "evidence": "test_diagnostic.py",
+      "oracle": "Cycle fails closed",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-014",
+      "requirement": "Unexpected/neural target denial",
+      "evidence": "test_diagnostic.py",
+      "oracle": "Fixed allowlist checked before lookup",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-015",
+      "requirement": "Relative literal/candidate separation",
+      "evidence": "test_diagnostic.py",
+      "oracle": "No parent-normalization semantic inference",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-016",
+      "requirement": "Shape is not identity",
+      "evidence": "test_diagnostic.py",
+      "oracle": "Independent timestamp dataset cannot establish same object",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-017",
+      "requirement": "Dataset-value API canaries",
+      "evidence": "links.py; test_diagnostic.py",
+      "oracle": "getitem/array/iter/read_direct denied",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-018",
+      "requirement": "Source exact allowlist validation",
+      "evidence": "inspect_source.py; test_diagnostic.py",
+      "oracle": "Other session/mouse/role/ETag denied before open",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-019",
+      "requirement": "Preaccess independent approval",
+      "evidence": "PREACCESS_REVIEW_2.md; PREACCESS_APPROVAL.json",
+      "oracle": "Exact5 code/registration hashes, typed0P0/P1; review before source",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-020",
+      "requirement": "Failed preaccess review preserved",
+      "evidence": "PREACCESS_REVIEW_1.md; REJECTED_PREACCESS_1_CANDIDATE.zip",
+      "oracle": "Original1P1 plus original source/archive hashes retained",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-021",
+      "requirement": "Metadata compatibility repairs prospectively registered",
+      "evidence": "PREACCESS_REPAIR_1_REGISTRATION.json",
+      "oracle": "Units/scaling/capacity tests before real source",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-022",
+      "requirement": "Single source and no retry",
+      "evidence": "results/INSPECTION_ATTEMPT.json; results/SOURCE_OPEN_ATTEMPT.json",
+      "oracle": "Exclusive claims; one completed source/duplicate regression",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-023",
+      "requirement": "Exact source response identity",
+      "evidence": "results/SOURCE_INSPECTION_RECEIPT.json",
+      "oracle": "All44HTTP206 exactContentRange/pinnedETag/size",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-024",
+      "requirement": "Fixed logical paths",
+      "evidence": "ACCESS_REGISTRATION.json; COMPONENT_AUDIT.json",
+      "oracle": "Only9 running logical paths; root metadata; no scalar dataset values",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-025",
+      "requirement": "Per-component pre-dereference audit",
+      "evidence": "COMPONENT_AUDIT.json; results/COMPONENT_JOURNAL.jsonl",
+      "oracle": "33events with path/class/literal/parent/identity",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-026",
+      "requirement": "Pending/resolved chronology",
+      "evidence": "test_diagnostic.py; verify_saved.py",
+      "oracle": "Pending objectmatchnull, resolvedtrue; exact3-way equality",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-027",
+      "requirement": "Root metadata identity",
+      "evidence": "COMPONENT_AUDIT.json",
+      "oracle": "NWB2.2.2/rootobjectID and safe attributes, no whole-file hash claim",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-028",
+      "requirement": "Original actual failed component/class",
+      "evidence": "ROOT_CAUSE.json; LINK_DIAGNOSTIC_REPORT.md Q1-Q2",
+      "oracle": "Final timestamps SoftLink, prior3HardLink",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-029",
+      "requirement": "Literal and normalized target",
+      "evidence": "ROOT_CAUSE.json; LINK_DIAGNOSTIC_REPORT.md Q3",
+      "oracle": "Exact absolute registered running_speed/timestamps",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-030",
+      "requirement": "Expected target object identity",
+      "evidence": "ROOT_CAUSE.json; LINK_DIAGNOSTIC_REPORT.md Q4-Q5",
+      "oracle": "Samefile/address19550656, independent of matching shapes",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-031",
+      "requirement": "Metadata schema incompatibility",
+      "evidence": "ROOT_CAUSE.json; test_saved_evidence.py",
+      "oracle": "Rotation<f4 vs executed all3float64; time/end<f8",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-032",
+      "requirement": "Generic path vs actual dtype offender",
+      "evidence": "LINK_DIAGNOSTIC_REPORT.md Separate failure mechanisms",
+      "oracle": "Preserve receipt aliaspath; separately identify rotation/data",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-033",
+      "requirement": "Scientific definition caveat",
+      "evidence": "LINK_DIAGNOSTIC_REPORT.md Q6",
+      "oracle": "Alias resolution alone need not change feature; precision contract unresolved",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-034",
+      "requirement": "Future resolver condition",
+      "evidence": "LINK_DIAGNOSTIC_REPORT.md Q7",
+      "oracle": "No A-only patch proposal under B; no activation",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-035",
+      "requirement": "Unvalidated numeric semantics",
+      "evidence": "LINK_DIAGNOSTIC_REPORT.md Q8",
+      "oracle": "Row/finite/order/durations/strictpast/coverage/QC still untested",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-036",
+      "requirement": "Exactly one disposition",
+      "evidence": "HANDOFF_FIELDS.json; verify_saved.py",
+      "oracle": "B SOURCE_SCHEMA_INCOMPATIBLE only; no simultaneous A",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-037",
+      "requirement": "Bounded payload",
+      "evidence": "RESOURCE_ACCOUNTING.json; RANGE_JOURNAL.jsonl",
+      "oracle": "85712payload85756reserved <=8388608",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-038",
+      "requirement": "Bounded requests",
+      "evidence": "RESOURCE_ACCOUNTING.json; RANGE_JOURNAL.jsonl",
+      "oracle": "44 <=128, chunks/requests <=registered",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-039",
+      "requirement": "External wall watchdog",
+      "evidence": "results/SUPERVISION.json; test_diagnostic.py",
+      "oracle": "5.406s <600, child0/no kill, timeout/duplicate tested",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-040",
+      "requirement": "Partial-failure accounting",
+      "evidence": "test_diagnostic.py; inspect_source.py",
+      "oracle": "Reserve before request; interrupted stream explicit, no fake exactness",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-041",
+      "requirement": "Separate old/new ledgers",
+      "evidence": "RESOURCE_ACCOUNTING.json",
+      "oracle": "Old39/81912/81951 vs new44/85712/85756",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-042",
+      "requirement": "No bulk fallback or automatic extension",
+      "evidence": "inspect_source.py; test_diagnostic.py",
+      "oracle": "Exact response rejection, budget denial; no retry",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-043",
+      "requirement": "Saved metadata bytes retained",
+      "evidence": "results/metadata_ranges; RANGE_JOURNAL.jsonl",
+      "oracle": "44 completed bodies/hash/overlap checks",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-044",
+      "requirement": "Offline HDF metadata replay",
+      "evidence": "verify_saved.py; SAVED_REPRODUCTION_3.log",
+      "oracle": "All33 events/exception/address/dtype reproduced, network denied",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-045",
+      "requirement": "Missing/corrupt saved ranges fail closed",
+      "evidence": "saved_ranges.py; test_diagnostic.py",
+      "oracle": "No download fallback; corrupt/traversal/overlap denied",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-046",
+      "requirement": "Failed saved repro retained/repaired",
+      "evidence": "REJECTED_SAVED_REPRO_1_CANDIDATE.zip; TEST_ORACLE_REPAIR_2.md",
+      "oracle": "Fixture copy only, unchanged original inspected sources/results/oracle",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-047",
+      "requirement": "Native PowerShell one-command reproduction",
+      "evidence": "reproduce.ps1; SAVED_REPRODUCTION_3.log",
+      "oracle": "WindowsPowerShell5.1 pinned runtime, no live reexecution",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-048",
+      "requirement": "Zero running/identity values",
+      "evidence": "results/SOURCE_INSPECTION_RECEIPT.json; ACTUAL_METADATA_REVIEW.md",
+      "oracle": "No dataset value/chunk API; no running velocity/extracted rows",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-049",
+      "requirement": "Zero neural values/fits/QC",
+      "evidence": "results/SOURCE_INSPECTION_RECEIPT.json; frozen prior files",
+      "oracle": "No neural path/fit/scoring/QC changes",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-050",
+      "requirement": "Zero Final C/D",
+      "evidence": "HANDOFF_FIELDS.json; source validation tests",
+      "oracle": "Only fixed Development object; no Final access",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-051",
+      "requirement": "No extra sources/search/security architecture",
+      "evidence": "ACCESS_REGISTRATION.json; diff audit",
+      "oracle": "OnefileID, no broad scan/newdataset/crypto",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-052",
+      "requirement": "No scientific claims/reclassification",
+      "evidence": "SCIENTIFIC_CLAIM_AUDIT.md",
+      "oracle": "B not M2PASS; no neural/biological/corruption/physics claims",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-053",
+      "requirement": "Actual metadata independent review",
+      "evidence": "ACTUAL_METADATA_REVIEW.md",
+      "oracle": "Reviewer offline replay, sameB,0P0/P1",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-054",
+      "requirement": "Full final content independent review",
+      "evidence": "review.md",
+      "oracle": "Exact manifesthash/reproduction/limits; no openP0/P1",
+      "status": "OPEN_CLOSURE",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-055",
+      "requirement": "Full fixed payload denominator",
+      "evidence": "DIAGNOSTIC_FREEZE_MANIFEST.json; payload_contract.py",
+      "oracle": "Nonempty independent pathset; every SHA/size match",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-056",
+      "requirement": "All BASEtracked files preserved",
+      "evidence": "PRECHANGE_GIT_TREE.bin; closure_receipt.json",
+      "oracle": "Only missionnewfiles+dailynewprefix; exactBASEsuffix",
+      "status": "OPEN_CLOSURE",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-057",
+      "requirement": "Atomic owner trace maintained",
+      "evidence": "REQUIREMENT_TRACE.json; baseline.json",
+      "oracle": "No deleted/contracted IDs; pending closure not pre-verified",
+      "status": "VERIFIED",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-058",
+      "requirement": "Terminal fields complete and honest",
+      "evidence": "HANDOFF_FIELDS.json; closure_receipt.json",
+      "oracle": "Actualcommit/readback only after executed",
+      "status": "OPEN_CLOSURE",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-059",
+      "requirement": "Exact normal origin/test archive",
+      "evidence": "closure_receipt.json",
+      "oracle": "No broadstage/main/force; every changed blob byte-readback",
+      "status": "OPEN_CLOSURE",
+      "scope": "engineering diagnostic, not scientific PASS"
+    },
+    {
+      "id": "AC-060",
+      "requirement": "Clean gate and stop",
+      "evidence": "closure_receipt.json",
+      "oracle": "Clean working tree, no next mission/M2restart",
+      "status": "OPEN_CLOSURE",
+      "scope": "engineering diagnostic, not scientific PASS"
+    }
+  ],
+  "closure_overlay": "work/closure_receipt.json, after actual review/push/readback/clean"
+}

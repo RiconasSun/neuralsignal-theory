@@ -1,0 +1,364 @@
+# CCPN / NEURALSIGNAL — P16 TARGETED NATIVE HDF5 LINK DIAGNOSIS
+
+MISSION: P16-M2-NATIVE-LINK-DIAGNOSTIC-R1
+
+BASE:
+origin/test @ a0065c66aaa84ad39a985903fcd77bdc1e1e711c
+
+MODE: SCIENCE-FIRST / MINIMAL REPAIR INVESTIGATION / METADATA-ONLY
+
+PRIORITY: HIGH
+
+## 0. EXPLICIT OWNER AUTHORIZATION
+
+I authorize ONE new, bounded, metadata-only investigation of the HDF5 link-compatibility failure that stopped P16 M2.
+
+This is a new diagnostic mission, not a retry of the original M2–M5 scientific execution.
+
+Authorized:
+- Offline review of preserved source and traceback evidence
+- Targeted synthetic HDF5 link tests
+- One new metadata-only source inspection of the previously failed Development session
+- Recording actual HDF5 link classes, literal targets and metadata structure
+- Scientific and implementation compatibility assessment
+- Independent review and Git archival
+
+NOT authorized:
+- Reading running numeric array contents
+- Reading neural arrays or spike timestamps
+- A-only physiological QC
+- Opening additional source sessions
+- B/E fitting or scoring
+- Final C/D access
+- Changing the frozen M1 scientific protocol
+- Automatically implementing and executing a repaired production reader
+- Resuming M2–M5
+
+STOP after the diagnostic assessment.
+
+## 1. ORIGINAL FAILURE
+
+Preserve the original STOP:
+
+P16-M2-M5-NATIVE-QC-AND-DEVELOPMENT
+
+FINAL_STATUS=STOP_SOURCE_OR_QC
+
+Failed Development mouse:
+726162197
+
+Session:
+750749662
+
+Failed logical path:
+
+/processing/running/running_wheel_rotation/timestamps
+
+Previous error:
+
+ValueError: External/soft/noncanonical source link denied
+
+The original reader requires every traversed HDF5 link to be a HardLink.
+
+The exact failing component, actual serialized link class and target are currently UNKNOWN.
+
+Do not presume that the link is soft, external, corrupted or harmless.
+
+Original attempt accounting remains immutable:
+- 39 range requests
+- 81,912 payload bytes
+- 81,951 reserved bytes
+- One failed source attempt
+- 27 Development sessions unattempted
+- Zero real neural/model work
+
+Never overwrite the original failed attempt or relabel it successful.
+
+## 2. AUTHORITATIVE FILES
+
+Inspect:
+
+paper16_dev/source_running.py
+paper16_dev/m2_core.py
+paper16_dev/STOP_REPORT.md
+paper16_dev/SOURCE_BEHAVIOR_REPORT.md
+paper16_dev/M2_ACCESS_REGISTRATION.json
+paper16_dev/test_m2.py
+
+Also verify the frozen M1 scientific and source contracts.
+
+Do not modify the normative M1 protocol.
+
+Do not modify the historical executed M2 source reader in this diagnostic mission.
+
+Create a separate versioned diagnostic module and evidence directory.
+
+## 3. OFFLINE FAILURE ANALYSIS
+
+Before live source access:
+
+Review `hard_object()` and identify every HDF5 traversal step at which failure is possible.
+
+Distinguish:
+
+- Missing path component
+- HardLink
+- SoftLink
+- ExternalLink
+- Unexpected group/dataset type
+- Invalid or cyclic internal target
+- Legitimate internal alias
+- Incompatible source schema
+
+Write targeted synthetic tests for each case.
+
+Use h5py's link-inspection interface without silently dereferencing unsafe links.
+
+Tests must verify that external files, unexpected targets, cycles and unauthorized neural paths remain blocked.
+
+Do not simply replace the existing HardLink requirement with unrestricted file[path] resolution.
+
+## 4. ONE SOURCE METADATA INSPECTION
+
+After focused independent preaccess review, inspect only the original failed source object.
+
+Same registered session, source file identity, size and ETag.
+
+Preserve source identity validation.
+
+Use read-only HDF5 metadata operations.
+
+Authorized inspection paths are limited to:
+
+/processing
+/processing/running
+/processing/running/running_wheel_rotation
+/processing/running/running_wheel_rotation/data
+/processing/running/running_wheel_rotation/timestamps
+/processing/running/running_speed
+/processing/running/running_speed/timestamps
+/processing/running/running_speed_end_times
+/processing/running/running_speed_end_times/timestamps
+
+And the already registered source-identity scalar metadata where necessary.
+
+At every traversed component, record:
+
+- Exact path
+- Existence
+- HDF5 link class
+- Literal link target, if applicable
+- Parent group identity
+- Whether the link points inside the same file
+- Whether the target is one of the registered expected objects
+- Object type when safely obtainable
+- Dataset shape/dtype/units metadata when safely obtainable
+- HDF5 object identity/address for safely resolved authorized objects, when meaningful
+- Any unresolved, unsafe or contradictory structure
+
+Do not read dataset values with `[:]`, `[()]`, `np.asarray(dataset)`, or an equivalent operation.
+
+Do not inspect data chunks, calculate running velocity, extract rows or save behavior arrays.
+
+Never dereference ExternalLinks.
+
+Never follow a link into an unregistered path or another file.
+
+For relative internal targets, record the literal value and normalized candidate separately. Do not automatically follow it until verified against the fixed internal allowlist.
+
+If a link's metadata cannot be inspected safely, STOP and preserve that uncertainty.
+
+## 5. EXPLICIT RESOURCE BUDGET
+
+This diagnostic authorizes only one live source-object inspection.
+
+New metadata-transfer ceiling:
+8 MiB total payload.
+
+Maximum:
+128 new HTTP range requests.
+
+Wall-time ceiling:
+10 minutes.
+
+No full NWB download.
+No bulk fallback.
+No network retry.
+No second source object.
+No automatic budget extension.
+
+Preserve exact new range/byte receipts separately from the historical M2 ledger.
+
+If any ceiling prevents completion, return INCONCLUSIVE_RESOURCE_LIMIT and STOP.
+
+Use an external deadline guard.
+
+## 6. SCIENTIFIC COMPATIBILITY QUESTIONS
+
+Answer the following using actual inspected source metadata.
+
+Q1:
+Which exact HDF5 path component caused the earlier HardLink-only check to fail?
+
+Q2:
+What is its actual link class?
+
+Q3:
+If an internal link exists, what is its literal and normalized target?
+
+Q4:
+Can the target be identified as the registered running_speed timestamp dataset without reading numerical values?
+
+Q5:
+Do the available metadata establish object identity, or merely an apparent path relationship?
+
+Q6:
+Would resolving the observed link require modifying the scientific running-feature definition?
+
+Q7:
+Could a future allowlist-restricted internal resolver preserve the M1 source semantics and original strict-past rules?
+
+Q8:
+What essential scientific assertions would still require later numerical-array validation?
+
+Do not claim same-row timing equivalence merely because two dataset shapes match.
+
+Do not claim semantic equivalence merely because a SoftLink target looks plausible.
+
+Do not replace missing native metadata with assumptions from the AllenSDK writer.
+
+## 7. POSSIBLE SCIENTIFIC DISPOSITIONS
+
+Return exactly one:
+
+A. INTERNAL_LINK_METADATA_COMPATIBLE
+
+An identified internal source link matches the registered target structurally. A prospective narrowly scoped reader repair can be proposed, but real running semantics are still unvalidated.
+
+B. SOURCE_SCHEMA_INCOMPATIBLE
+
+The observed structure contradicts the registered native source contract.
+
+C. UNSAFE_OR_UNEXPECTED_LINK
+
+External, cyclic, unexpected or unauthorized target.
+
+D. INCONCLUSIVE_METADATA
+
+The actual link structure or target remains unresolved.
+
+E. INCONCLUSIVE_RESOURCE_LIMIT
+
+The bounded inspection cannot complete.
+
+Only outcome A permits proposing a future implementation repair without immediately requiring a scientific protocol amendment.
+
+No outcome automatically restarts M2.
+
+## 8. OPTIONAL FUTURE REPAIR PROPOSAL
+
+If and only if the source structure supports outcome A:
+
+Prepare a narrowly scoped compatibility patch PROPOSAL.
+
+The proposal should specify:
+
+- Exact permitted internal alias and normalized target
+- Same-file identity requirements
+- Allowed path types
+- External/cycle/unexpected-target denial
+- Original units/row correspondence checks
+- Native binary64 preservation
+- Strict-past causal lookup
+- Regression tests for legitimate and malicious links
+- Validation needed on original Development source data
+- The separate authorization needed to resume M2
+
+Do not activate or execute this patch in the current mission.
+
+If the source metadata contradicts the original scientific running policy, clearly identify whether a scientific amendment or study STOP would be necessary.
+
+No threshold relaxation or changed behavioral estimand.
+
+## 9. PRESERVE RESEARCH STATE
+
+Keep unchanged:
+
+- 55 total metadata candidates
+- 28 Development: 5 BO / 23 FC
+- 27 reserved Final BO mice
+- Frozen flash stimulus design
+- B0–B4/C/D/S models
+- Original 12 sensitivities and four reference controls
+- M1 selection and statistical rules
+- Original attempt budgets
+- Previous STOP verdict
+- Final neural access prohibition
+
+No neural outcome, predictive model, biological finding or scientific validation may be claimed.
+
+## 10. REQUIRED DELIVERY
+
+Create:
+
+paper16_linkdiag_r1/
+
+Deliver:
+
+1. LINK_DIAGNOSTIC_REPORT.md
+2. Original failure/root-cause analysis
+3. Source identity and metadata-only access registration
+4. Per-component HDF5 link audit
+5. Actual source metadata inspection receipt
+6. Exact byte/range/deadline accounting
+7. Synthetic Hard/Soft/External/Missing/Cycle regressions
+8. Compatibility verdict and scientific limitations
+9. Proposed repair plan, only if supported
+10. Independent internal scientific and source review
+11. Saved-only reproduction
+12. Verified origin/test commit
+
+Terminal fields:
+
+MISSION_ID
+DIAGNOSTIC_STATUS
+SOURCE_SESSION_ID
+ACTUAL_FAILED_COMPONENT
+ACTUAL_LINK_CLASS
+ACTUAL_LITERAL_TARGET
+NORMALIZED_INTERNAL_TARGET
+EXPECTED_SOURCE_OBJECT_MATCH
+SOURCE_METADATA_INTEGRITY
+RUNNING_NUMERIC_VALUES_READ=0
+NEURAL_VALUES_READ=0
+ADDITIONAL_SOURCE_SESSIONS=0
+NEW_RANGE_REQUESTS
+NEW_PAYLOAD_BYTES
+SCIENTIFIC_PROTOCOL_CHANGED=false
+READER_REPAIR_EXECUTED=false
+M2_RESTARTED=false
+FINAL_C_ACCESS=false
+FINAL_D_ACCESS=false
+PROPOSED_NEXT_ACTION
+BUG_COUNT
+WARN_COUNT
+GIT_COMMIT
+REMOTE_VERIFICATION
+
+## 11. EXECUTION PRINCIPLE
+
+Diagnose before repairing.
+
+Scientific source validity must be demonstrated, not assumed.
+
+A valid metadata-only diagnosis is a successful engineering investigation, not an M2 scientific PASS.
+
+Preserve historical negative evidence.
+
+No unrelated infrastructure or cryptographic custody.
+
+No data refitting, source search or expanded project scope.
+
+STOP after one independently reviewed diagnostic and archival handoff.
+
+BEGIN P16 LINK DIAGNOSIS NOW.

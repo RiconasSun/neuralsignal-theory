@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_linkdiag_r1\verify_saved.py", line 143, in <module>
+    main()
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_linkdiag_r1\verify_saved.py", line 134, in main
+    result = checks()
+             ^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_linkdiag_r1\verify_saved.py", line 116, in checks
+    result = replay()
+             ^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_linkdiag_r1\verify_saved.py", line 56, in replay
+    assert rows == inspector.rows == receipt['component_audit']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Saved metadata reproduction failed: 1
+At C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_linkdiag_r1\reproduce.ps1:8 char:32
++ ... DE -ne 0) { throw "Saved metadata reproduction failed: $LASTEXITCODE" ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (Saved metadata reproduction failed: 1:String) [], RuntimeException
+    + FullyQualifiedErrorId : Saved metadata reproduction failed: 1
+ 

@@ -1,0 +1,43 @@
+test_HTTP_exact_ranges_identity_cache_body_accounting_no_bulk (paper16_linkdiag_r1.test_diagnostic.Tests.test_HTTP_exact_ranges_identity_cache_body_accounting_no_bulk) ... ok
+test_budget_deadline_cache_and_stream_interruption_journal (paper16_linkdiag_r1.test_diagnostic.Tests.test_budget_deadline_cache_and_stream_interruption_journal) ... ok
+test_external_neural_unexpected_and_cycles_block_before_dereference (paper16_linkdiag_r1.test_diagnostic.Tests.test_external_neural_unexpected_and_cycles_block_before_dereference) ... ERROR
+test_external_watchdog_and_duplicate_attempt_no_second_child (paper16_linkdiag_r1.test_diagnostic.Tests.test_external_watchdog_and_duplicate_attempt_no_second_child) ... ok
+test_forbidden_logical_path_denied_before_lookup_and_numeric_canaries (paper16_linkdiag_r1.test_diagnostic.Tests.test_forbidden_logical_path_denied_before_lookup_and_numeric_canaries) ... ok
+test_hard_link_metadata_safe_but_does_not_reproduce_old_failure (paper16_linkdiag_r1.test_diagnostic.Tests.test_hard_link_metadata_safe_but_does_not_reproduce_old_failure) ... ok
+test_legitimate_internal_absolute_alias_metadata_identity_without_values (paper16_linkdiag_r1.test_diagnostic.Tests.test_legitimate_internal_absolute_alias_metadata_identity_without_values) ... ok
+test_missing_each_component_and_unexpected_parent (paper16_linkdiag_r1.test_diagnostic.Tests.test_missing_each_component_and_unexpected_parent) ... ok
+test_relative_literal_and_candidate_kept_distinct_no_unproven_equivalence (paper16_linkdiag_r1.test_diagnostic.Tests.test_relative_literal_and_candidate_kept_distinct_no_unproven_equivalence) ... ok
+test_shape_match_alone_not_identity_and_schema_metadata_contradictions (paper16_linkdiag_r1.test_diagnostic.Tests.test_shape_match_alone_not_identity_and_schema_metadata_contradictions) ... ok
+test_target_source_identity_rejects_other_session_or_version (paper16_linkdiag_r1.test_diagnostic.Tests.test_target_source_identity_rejects_other_session_or_version) ... ok
+
+======================================================================
+ERROR: test_external_neural_unexpected_and_cycles_block_before_dereference (paper16_linkdiag_r1.test_diagnostic.Tests.test_external_neural_unexpected_and_cycles_block_before_dereference)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_linkdiag_r1\test_diagnostic.py", line 98, in test_external_neural_unexpected_and_cycles_block_before_dereference
+    with self.assertRaises(LinkProblem) as c:i.inspect(ALIAS)
+                                             ^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_linkdiag_r1\links.py", line 114, in inspect
+    parent_meta = self.metadata(parent)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_linkdiag_r1\links.py", line 79, in metadata
+    if name not in obj.attrs:
+                   ^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\work\runtime\Lib\site-packages\h5py\_hl\files.py", line 287, in attrs
+    return attrs.AttributeManager(self['/'])
+                                  ~~~~^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_linkdiag_r1\test_diagnostic.py", line 92, in hard_only
+    link=group.get(name,getlink=True)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\work\runtime\Lib\site-packages\h5py\_hl\group.py", line 515, in get
+    typecode = self.id.links.get_info(self._e(name), lapl=lapl).type
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5l.pyx", line 228, in h5py.h5l.LinkProxy.get_info
+RuntimeError: Unable to get link info (name doesn't exist)
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.266s
+
+FAILED (errors=1)

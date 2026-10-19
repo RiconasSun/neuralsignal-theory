@@ -1,0 +1,3 @@
+# TEST_BUG: root-object spy
+
+Synthetic11-test run1hadoneinstrumentationerror:thetestspycalledHDF5linkget_info('/')whileh5py.File.attrs internallyopensitsownrootobject. RootisnotanHDF5linkandthelinkqueryfailsbeforetheunsafealiastest. Themissionpermitscurrent-file rootmetadata. Thefixedspybypassesonlythisrootselflookup andstillassertsnoSoft/Externalgetitemdereference. No productcode/scientificoracleweakened;originaltestbytes/logpreserved. No realsourceaccess.

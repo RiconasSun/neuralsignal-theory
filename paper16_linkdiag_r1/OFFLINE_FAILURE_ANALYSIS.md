@@ -1,0 +1,7 @@
+# Offline failure tree before new source access
+
+Originalsource_running.hard_object firstrejects a logical path outsideALLOW. For the failed timestamps path,there are four components:processing,running,running_wheel_rotation,timestamps. At each iteration,an unexpected non-Group parent OR missinglink(None) OR anynon-HardLink produces the same ValueError. HardLinkaccess can separately raise an HDF5metadata/schemaexception. A Dataset encountered beforethelastcomponent is an unexpectedparenttype. Missing/Soft/External/cyclicrelative target/legitimateinternalalias therefore cannot be inferredfromtheoldgenerictraceback. The oldfunctionnever examines literalsoft/externaltargets.
+
+The preceding rotation/data call used the same three-prefix path andcompleteditsmetadata/unitchecks in the frozencontrolflow;that narrows suspicion butdoesnot replace actualper-componentinspection. Original39ranges81912payload81951reserved/onefailedattempt/27unattempted/noneuralvalues remainimmutable. Newdiagnosticis separatelyregistered andwillnotrelabellastattemptPASS.
+
+Newinspectionmust getlink=True on oneflatcomponent before anydereference;external neveropens;softliteral/normalization recordedbeforecheckingexactexpectedtarget;safeauthorizedmetadataobjectidentity canthenbecompared. Shapeequality/pathplausibility alonecannotprove same-rowsemantics. Actualduration/finite/order/nativecounts/runningcoverage/physiologyremainfutureunauthorizedtests. No productionreaderrepair executedhere.

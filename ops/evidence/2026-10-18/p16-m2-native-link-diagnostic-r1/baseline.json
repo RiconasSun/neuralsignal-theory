@@ -1,0 +1,1492 @@
+{
+  "mission": "P16-M2-NATIVE-LINK-DIAGNOSTIC-R1",
+  "base": "a0065c66aaa84ad39a985903fcd77bdc1e1e711c",
+  "frozen_at": "2026-10-19T05:01:47.226928+00:00",
+  "baseline_revision": 1,
+  "owner_sha256": "639855609c68618895eceb8dc51f25487778ea1f60543ec51a3d296933e48604",
+  "requirement_count": 247,
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "source_line": 1,
+      "requirement": "# CCPN / NEURALSIGNAL \u2014 P16 TARGETED NATIVE HDF5 LINK DIAGNOSIS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-002",
+      "source_line": 3,
+      "requirement": "MISSION: P16-M2-NATIVE-LINK-DIAGNOSTIC-R1",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-003",
+      "source_line": 5,
+      "requirement": "BASE:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-004",
+      "source_line": 6,
+      "requirement": "origin/test @ a0065c66aaa84ad39a985903fcd77bdc1e1e711c",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-005",
+      "source_line": 8,
+      "requirement": "MODE: SCIENCE-FIRST / MINIMAL REPAIR INVESTIGATION / METADATA-ONLY",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-006",
+      "source_line": 10,
+      "requirement": "PRIORITY: HIGH",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-007",
+      "source_line": 12,
+      "requirement": "## 0. EXPLICIT OWNER AUTHORIZATION",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-008",
+      "source_line": 14,
+      "requirement": "I authorize ONE new, bounded, metadata-only investigation of the HDF5 link-compatibility failure that stopped P16 M2.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-009",
+      "source_line": 16,
+      "requirement": "This is a new diagnostic mission, not a retry of the original M2\u2013M5 scientific execution.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-010",
+      "source_line": 18,
+      "requirement": "Authorized:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-011",
+      "source_line": 19,
+      "requirement": "- Offline review of preserved source and traceback evidence",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-012",
+      "source_line": 20,
+      "requirement": "- Targeted synthetic HDF5 link tests",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-013",
+      "source_line": 21,
+      "requirement": "- One new metadata-only source inspection of the previously failed Development session",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-014",
+      "source_line": 22,
+      "requirement": "- Recording actual HDF5 link classes, literal targets and metadata structure",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-015",
+      "source_line": 23,
+      "requirement": "- Scientific and implementation compatibility assessment",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-016",
+      "source_line": 24,
+      "requirement": "- Independent review and Git archival",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-017",
+      "source_line": 26,
+      "requirement": "NOT authorized:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-018",
+      "source_line": 27,
+      "requirement": "- Reading running numeric array contents",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-019",
+      "source_line": 28,
+      "requirement": "- Reading neural arrays or spike timestamps",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-020",
+      "source_line": 29,
+      "requirement": "- A-only physiological QC",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-021",
+      "source_line": 30,
+      "requirement": "- Opening additional source sessions",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-022",
+      "source_line": 31,
+      "requirement": "- B/E fitting or scoring",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-023",
+      "source_line": 32,
+      "requirement": "- Final C/D access",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-024",
+      "source_line": 33,
+      "requirement": "- Changing the frozen M1 scientific protocol",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-025",
+      "source_line": 34,
+      "requirement": "- Automatically implementing and executing a repaired production reader",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-026",
+      "source_line": 35,
+      "requirement": "- Resuming M2\u2013M5",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-027",
+      "source_line": 37,
+      "requirement": "STOP after the diagnostic assessment.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-028",
+      "source_line": 39,
+      "requirement": "## 1. ORIGINAL FAILURE",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-029",
+      "source_line": 41,
+      "requirement": "Preserve the original STOP:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-030",
+      "source_line": 43,
+      "requirement": "P16-M2-M5-NATIVE-QC-AND-DEVELOPMENT",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-031",
+      "source_line": 45,
+      "requirement": "FINAL_STATUS=STOP_SOURCE_OR_QC",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-032",
+      "source_line": 47,
+      "requirement": "Failed Development mouse:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-033",
+      "source_line": 48,
+      "requirement": "726162197",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-034",
+      "source_line": 50,
+      "requirement": "Session:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-035",
+      "source_line": 51,
+      "requirement": "750749662",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-036",
+      "source_line": 53,
+      "requirement": "Failed logical path:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-037",
+      "source_line": 55,
+      "requirement": "/processing/running/running_wheel_rotation/timestamps",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-038",
+      "source_line": 57,
+      "requirement": "Previous error:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-039",
+      "source_line": 59,
+      "requirement": "ValueError: External/soft/noncanonical source link denied",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-040",
+      "source_line": 61,
+      "requirement": "The original reader requires every traversed HDF5 link to be a HardLink.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-041",
+      "source_line": 63,
+      "requirement": "The exact failing component, actual serialized link class and target are currently UNKNOWN.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-042",
+      "source_line": 65,
+      "requirement": "Do not presume that the link is soft, external, corrupted or harmless.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-043",
+      "source_line": 67,
+      "requirement": "Original attempt accounting remains immutable:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-044",
+      "source_line": 68,
+      "requirement": "- 39 range requests",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-045",
+      "source_line": 69,
+      "requirement": "- 81,912 payload bytes",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-046",
+      "source_line": 70,
+      "requirement": "- 81,951 reserved bytes",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-047",
+      "source_line": 71,
+      "requirement": "- One failed source attempt",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-048",
+      "source_line": 72,
+      "requirement": "- 27 Development sessions unattempted",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-049",
+      "source_line": 73,
+      "requirement": "- Zero real neural/model work",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-050",
+      "source_line": 75,
+      "requirement": "Never overwrite the original failed attempt or relabel it successful.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-051",
+      "source_line": 77,
+      "requirement": "## 2. AUTHORITATIVE FILES",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-052",
+      "source_line": 79,
+      "requirement": "Inspect:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-053",
+      "source_line": 81,
+      "requirement": "paper16_dev/source_running.py",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-054",
+      "source_line": 82,
+      "requirement": "paper16_dev/m2_core.py",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-055",
+      "source_line": 83,
+      "requirement": "paper16_dev/STOP_REPORT.md",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-056",
+      "source_line": 84,
+      "requirement": "paper16_dev/SOURCE_BEHAVIOR_REPORT.md",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-057",
+      "source_line": 85,
+      "requirement": "paper16_dev/M2_ACCESS_REGISTRATION.json",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-058",
+      "source_line": 86,
+      "requirement": "paper16_dev/test_m2.py",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-059",
+      "source_line": 88,
+      "requirement": "Also verify the frozen M1 scientific and source contracts.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-060",
+      "source_line": 90,
+      "requirement": "Do not modify the normative M1 protocol.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-061",
+      "source_line": 92,
+      "requirement": "Do not modify the historical executed M2 source reader in this diagnostic mission.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-062",
+      "source_line": 94,
+      "requirement": "Create a separate versioned diagnostic module and evidence directory.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-063",
+      "source_line": 96,
+      "requirement": "## 3. OFFLINE FAILURE ANALYSIS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-064",
+      "source_line": 98,
+      "requirement": "Before live source access:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-065",
+      "source_line": 100,
+      "requirement": "Review `hard_object()` and identify every HDF5 traversal step at which failure is possible.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-066",
+      "source_line": 102,
+      "requirement": "Distinguish:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-067",
+      "source_line": 104,
+      "requirement": "- Missing path component",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-068",
+      "source_line": 105,
+      "requirement": "- HardLink",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-069",
+      "source_line": 106,
+      "requirement": "- SoftLink",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-070",
+      "source_line": 107,
+      "requirement": "- ExternalLink",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-071",
+      "source_line": 108,
+      "requirement": "- Unexpected group/dataset type",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-072",
+      "source_line": 109,
+      "requirement": "- Invalid or cyclic internal target",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-073",
+      "source_line": 110,
+      "requirement": "- Legitimate internal alias",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-074",
+      "source_line": 111,
+      "requirement": "- Incompatible source schema",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-075",
+      "source_line": 113,
+      "requirement": "Write targeted synthetic tests for each case.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-076",
+      "source_line": 115,
+      "requirement": "Use h5py's link-inspection interface without silently dereferencing unsafe links.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-077",
+      "source_line": 117,
+      "requirement": "Tests must verify that external files, unexpected targets, cycles and unauthorized neural paths remain blocked.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-078",
+      "source_line": 119,
+      "requirement": "Do not simply replace the existing HardLink requirement with unrestricted file[path] resolution.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-079",
+      "source_line": 121,
+      "requirement": "## 4. ONE SOURCE METADATA INSPECTION",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-080",
+      "source_line": 123,
+      "requirement": "After focused independent preaccess review, inspect only the original failed source object.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-081",
+      "source_line": 125,
+      "requirement": "Same registered session, source file identity, size and ETag.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-082",
+      "source_line": 127,
+      "requirement": "Preserve source identity validation.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-083",
+      "source_line": 129,
+      "requirement": "Use read-only HDF5 metadata operations.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-084",
+      "source_line": 131,
+      "requirement": "Authorized inspection paths are limited to:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-085",
+      "source_line": 133,
+      "requirement": "/processing",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-086",
+      "source_line": 134,
+      "requirement": "/processing/running",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-087",
+      "source_line": 135,
+      "requirement": "/processing/running/running_wheel_rotation",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-088",
+      "source_line": 136,
+      "requirement": "/processing/running/running_wheel_rotation/data",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-089",
+      "source_line": 137,
+      "requirement": "/processing/running/running_wheel_rotation/timestamps",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-090",
+      "source_line": 138,
+      "requirement": "/processing/running/running_speed",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-091",
+      "source_line": 139,
+      "requirement": "/processing/running/running_speed/timestamps",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-092",
+      "source_line": 140,
+      "requirement": "/processing/running/running_speed_end_times",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-093",
+      "source_line": 141,
+      "requirement": "/processing/running/running_speed_end_times/timestamps",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-094",
+      "source_line": 143,
+      "requirement": "And the already registered source-identity scalar metadata where necessary.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-095",
+      "source_line": 145,
+      "requirement": "At every traversed component, record:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-096",
+      "source_line": 147,
+      "requirement": "- Exact path",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-097",
+      "source_line": 148,
+      "requirement": "- Existence",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-098",
+      "source_line": 149,
+      "requirement": "- HDF5 link class",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-099",
+      "source_line": 150,
+      "requirement": "- Literal link target, if applicable",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-100",
+      "source_line": 151,
+      "requirement": "- Parent group identity",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-101",
+      "source_line": 152,
+      "requirement": "- Whether the link points inside the same file",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-102",
+      "source_line": 153,
+      "requirement": "- Whether the target is one of the registered expected objects",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-103",
+      "source_line": 154,
+      "requirement": "- Object type when safely obtainable",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-104",
+      "source_line": 155,
+      "requirement": "- Dataset shape/dtype/units metadata when safely obtainable",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-105",
+      "source_line": 156,
+      "requirement": "- HDF5 object identity/address for safely resolved authorized objects, when meaningful",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-106",
+      "source_line": 157,
+      "requirement": "- Any unresolved, unsafe or contradictory structure",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-107",
+      "source_line": 159,
+      "requirement": "Do not read dataset values with `[:]`, `[()]`, `np.asarray(dataset)`, or an equivalent operation.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-108",
+      "source_line": 161,
+      "requirement": "Do not inspect data chunks, calculate running velocity, extract rows or save behavior arrays.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-109",
+      "source_line": 163,
+      "requirement": "Never dereference ExternalLinks.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-110",
+      "source_line": 165,
+      "requirement": "Never follow a link into an unregistered path or another file.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-111",
+      "source_line": 167,
+      "requirement": "For relative internal targets, record the literal value and normalized candidate separately. Do not automatically follow it until verified against the fixed internal allowlist.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-112",
+      "source_line": 169,
+      "requirement": "If a link's metadata cannot be inspected safely, STOP and preserve that uncertainty.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-113",
+      "source_line": 171,
+      "requirement": "## 5. EXPLICIT RESOURCE BUDGET",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-114",
+      "source_line": 173,
+      "requirement": "This diagnostic authorizes only one live source-object inspection.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-115",
+      "source_line": 175,
+      "requirement": "New metadata-transfer ceiling:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-116",
+      "source_line": 176,
+      "requirement": "8 MiB total payload.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-117",
+      "source_line": 178,
+      "requirement": "Maximum:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-118",
+      "source_line": 179,
+      "requirement": "128 new HTTP range requests.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-119",
+      "source_line": 181,
+      "requirement": "Wall-time ceiling:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-120",
+      "source_line": 182,
+      "requirement": "10 minutes.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-121",
+      "source_line": 184,
+      "requirement": "No full NWB download.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-122",
+      "source_line": 185,
+      "requirement": "No bulk fallback.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-123",
+      "source_line": 186,
+      "requirement": "No network retry.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-124",
+      "source_line": 187,
+      "requirement": "No second source object.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-125",
+      "source_line": 188,
+      "requirement": "No automatic budget extension.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-126",
+      "source_line": 190,
+      "requirement": "Preserve exact new range/byte receipts separately from the historical M2 ledger.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-127",
+      "source_line": 192,
+      "requirement": "If any ceiling prevents completion, return INCONCLUSIVE_RESOURCE_LIMIT and STOP.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-128",
+      "source_line": 194,
+      "requirement": "Use an external deadline guard.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-129",
+      "source_line": 196,
+      "requirement": "## 6. SCIENTIFIC COMPATIBILITY QUESTIONS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-130",
+      "source_line": 198,
+      "requirement": "Answer the following using actual inspected source metadata.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-131",
+      "source_line": 200,
+      "requirement": "Q1:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-132",
+      "source_line": 201,
+      "requirement": "Which exact HDF5 path component caused the earlier HardLink-only check to fail?",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-133",
+      "source_line": 203,
+      "requirement": "Q2:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-134",
+      "source_line": 204,
+      "requirement": "What is its actual link class?",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-135",
+      "source_line": 206,
+      "requirement": "Q3:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-136",
+      "source_line": 207,
+      "requirement": "If an internal link exists, what is its literal and normalized target?",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-137",
+      "source_line": 209,
+      "requirement": "Q4:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-138",
+      "source_line": 210,
+      "requirement": "Can the target be identified as the registered running_speed timestamp dataset without reading numerical values?",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-139",
+      "source_line": 212,
+      "requirement": "Q5:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-140",
+      "source_line": 213,
+      "requirement": "Do the available metadata establish object identity, or merely an apparent path relationship?",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-141",
+      "source_line": 215,
+      "requirement": "Q6:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-142",
+      "source_line": 216,
+      "requirement": "Would resolving the observed link require modifying the scientific running-feature definition?",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-143",
+      "source_line": 218,
+      "requirement": "Q7:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-144",
+      "source_line": 219,
+      "requirement": "Could a future allowlist-restricted internal resolver preserve the M1 source semantics and original strict-past rules?",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-145",
+      "source_line": 221,
+      "requirement": "Q8:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-146",
+      "source_line": 222,
+      "requirement": "What essential scientific assertions would still require later numerical-array validation?",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-147",
+      "source_line": 224,
+      "requirement": "Do not claim same-row timing equivalence merely because two dataset shapes match.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-148",
+      "source_line": 226,
+      "requirement": "Do not claim semantic equivalence merely because a SoftLink target looks plausible.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-149",
+      "source_line": 228,
+      "requirement": "Do not replace missing native metadata with assumptions from the AllenSDK writer.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-150",
+      "source_line": 230,
+      "requirement": "## 7. POSSIBLE SCIENTIFIC DISPOSITIONS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-151",
+      "source_line": 232,
+      "requirement": "Return exactly one:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-152",
+      "source_line": 234,
+      "requirement": "A. INTERNAL_LINK_METADATA_COMPATIBLE",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-153",
+      "source_line": 236,
+      "requirement": "An identified internal source link matches the registered target structurally. A prospective narrowly scoped reader repair can be proposed, but real running semantics are still unvalidated.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-154",
+      "source_line": 238,
+      "requirement": "B. SOURCE_SCHEMA_INCOMPATIBLE",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-155",
+      "source_line": 240,
+      "requirement": "The observed structure contradicts the registered native source contract.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-156",
+      "source_line": 242,
+      "requirement": "C. UNSAFE_OR_UNEXPECTED_LINK",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-157",
+      "source_line": 244,
+      "requirement": "External, cyclic, unexpected or unauthorized target.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-158",
+      "source_line": 246,
+      "requirement": "D. INCONCLUSIVE_METADATA",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-159",
+      "source_line": 248,
+      "requirement": "The actual link structure or target remains unresolved.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-160",
+      "source_line": 250,
+      "requirement": "E. INCONCLUSIVE_RESOURCE_LIMIT",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-161",
+      "source_line": 252,
+      "requirement": "The bounded inspection cannot complete.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-162",
+      "source_line": 254,
+      "requirement": "Only outcome A permits proposing a future implementation repair without immediately requiring a scientific protocol amendment.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-163",
+      "source_line": 256,
+      "requirement": "No outcome automatically restarts M2.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-164",
+      "source_line": 258,
+      "requirement": "## 8. OPTIONAL FUTURE REPAIR PROPOSAL",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-165",
+      "source_line": 260,
+      "requirement": "If and only if the source structure supports outcome A:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-166",
+      "source_line": 262,
+      "requirement": "Prepare a narrowly scoped compatibility patch PROPOSAL.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-167",
+      "source_line": 264,
+      "requirement": "The proposal should specify:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-168",
+      "source_line": 266,
+      "requirement": "- Exact permitted internal alias and normalized target",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-169",
+      "source_line": 267,
+      "requirement": "- Same-file identity requirements",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-170",
+      "source_line": 268,
+      "requirement": "- Allowed path types",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-171",
+      "source_line": 269,
+      "requirement": "- External/cycle/unexpected-target denial",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-172",
+      "source_line": 270,
+      "requirement": "- Original units/row correspondence checks",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-173",
+      "source_line": 271,
+      "requirement": "- Native binary64 preservation",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-174",
+      "source_line": 272,
+      "requirement": "- Strict-past causal lookup",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-175",
+      "source_line": 273,
+      "requirement": "- Regression tests for legitimate and malicious links",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-176",
+      "source_line": 274,
+      "requirement": "- Validation needed on original Development source data",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-177",
+      "source_line": 275,
+      "requirement": "- The separate authorization needed to resume M2",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-178",
+      "source_line": 277,
+      "requirement": "Do not activate or execute this patch in the current mission.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-179",
+      "source_line": 279,
+      "requirement": "If the source metadata contradicts the original scientific running policy, clearly identify whether a scientific amendment or study STOP would be necessary.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-180",
+      "source_line": 281,
+      "requirement": "No threshold relaxation or changed behavioral estimand.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-181",
+      "source_line": 283,
+      "requirement": "## 9. PRESERVE RESEARCH STATE",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-182",
+      "source_line": 285,
+      "requirement": "Keep unchanged:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-183",
+      "source_line": 287,
+      "requirement": "- 55 total metadata candidates",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-184",
+      "source_line": 288,
+      "requirement": "- 28 Development: 5 BO / 23 FC",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-185",
+      "source_line": 289,
+      "requirement": "- 27 reserved Final BO mice",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-186",
+      "source_line": 290,
+      "requirement": "- Frozen flash stimulus design",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-187",
+      "source_line": 291,
+      "requirement": "- B0\u2013B4/C/D/S models",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-188",
+      "source_line": 292,
+      "requirement": "- Original 12 sensitivities and four reference controls",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-189",
+      "source_line": 293,
+      "requirement": "- M1 selection and statistical rules",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-190",
+      "source_line": 294,
+      "requirement": "- Original attempt budgets",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-191",
+      "source_line": 295,
+      "requirement": "- Previous STOP verdict",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-192",
+      "source_line": 296,
+      "requirement": "- Final neural access prohibition",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-193",
+      "source_line": 298,
+      "requirement": "No neural outcome, predictive model, biological finding or scientific validation may be claimed.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-194",
+      "source_line": 300,
+      "requirement": "## 10. REQUIRED DELIVERY",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-195",
+      "source_line": 302,
+      "requirement": "Create:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-196",
+      "source_line": 304,
+      "requirement": "paper16_linkdiag_r1/",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-197",
+      "source_line": 306,
+      "requirement": "Deliver:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-198",
+      "source_line": 308,
+      "requirement": "1. LINK_DIAGNOSTIC_REPORT.md",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-199",
+      "source_line": 309,
+      "requirement": "2. Original failure/root-cause analysis",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-200",
+      "source_line": 310,
+      "requirement": "3. Source identity and metadata-only access registration",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-201",
+      "source_line": 311,
+      "requirement": "4. Per-component HDF5 link audit",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-202",
+      "source_line": 312,
+      "requirement": "5. Actual source metadata inspection receipt",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-203",
+      "source_line": 313,
+      "requirement": "6. Exact byte/range/deadline accounting",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-204",
+      "source_line": 314,
+      "requirement": "7. Synthetic Hard/Soft/External/Missing/Cycle regressions",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-205",
+      "source_line": 315,
+      "requirement": "8. Compatibility verdict and scientific limitations",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-206",
+      "source_line": 316,
+      "requirement": "9. Proposed repair plan, only if supported",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-207",
+      "source_line": 317,
+      "requirement": "10. Independent internal scientific and source review",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-208",
+      "source_line": 318,
+      "requirement": "11. Saved-only reproduction",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-209",
+      "source_line": 319,
+      "requirement": "12. Verified origin/test commit",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-210",
+      "source_line": 321,
+      "requirement": "Terminal fields:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-211",
+      "source_line": 323,
+      "requirement": "MISSION_ID",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-212",
+      "source_line": 324,
+      "requirement": "DIAGNOSTIC_STATUS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-213",
+      "source_line": 325,
+      "requirement": "SOURCE_SESSION_ID",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-214",
+      "source_line": 326,
+      "requirement": "ACTUAL_FAILED_COMPONENT",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-215",
+      "source_line": 327,
+      "requirement": "ACTUAL_LINK_CLASS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-216",
+      "source_line": 328,
+      "requirement": "ACTUAL_LITERAL_TARGET",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-217",
+      "source_line": 329,
+      "requirement": "NORMALIZED_INTERNAL_TARGET",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-218",
+      "source_line": 330,
+      "requirement": "EXPECTED_SOURCE_OBJECT_MATCH",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-219",
+      "source_line": 331,
+      "requirement": "SOURCE_METADATA_INTEGRITY",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-220",
+      "source_line": 332,
+      "requirement": "RUNNING_NUMERIC_VALUES_READ=0",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-221",
+      "source_line": 333,
+      "requirement": "NEURAL_VALUES_READ=0",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-222",
+      "source_line": 334,
+      "requirement": "ADDITIONAL_SOURCE_SESSIONS=0",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-223",
+      "source_line": 335,
+      "requirement": "NEW_RANGE_REQUESTS",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-224",
+      "source_line": 336,
+      "requirement": "NEW_PAYLOAD_BYTES",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-225",
+      "source_line": 337,
+      "requirement": "SCIENTIFIC_PROTOCOL_CHANGED=false",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-226",
+      "source_line": 338,
+      "requirement": "READER_REPAIR_EXECUTED=false",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-227",
+      "source_line": 339,
+      "requirement": "M2_RESTARTED=false",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-228",
+      "source_line": 340,
+      "requirement": "FINAL_C_ACCESS=false",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-229",
+      "source_line": 341,
+      "requirement": "FINAL_D_ACCESS=false",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-230",
+      "source_line": 342,
+      "requirement": "PROPOSED_NEXT_ACTION",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-231",
+      "source_line": 343,
+      "requirement": "BUG_COUNT",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-232",
+      "source_line": 344,
+      "requirement": "WARN_COUNT",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-233",
+      "source_line": 345,
+      "requirement": "GIT_COMMIT",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-234",
+      "source_line": 346,
+      "requirement": "REMOTE_VERIFICATION",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-235",
+      "source_line": 348,
+      "requirement": "## 11. EXECUTION PRINCIPLE",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-236",
+      "source_line": 350,
+      "requirement": "Diagnose before repairing.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-237",
+      "source_line": 352,
+      "requirement": "Scientific source validity must be demonstrated, not assumed.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-238",
+      "source_line": 354,
+      "requirement": "A valid metadata-only diagnosis is a successful engineering investigation, not an M2 scientific PASS.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-239",
+      "source_line": 356,
+      "requirement": "Preserve historical negative evidence.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-240",
+      "source_line": 358,
+      "requirement": "No unrelated infrastructure or cryptographic custody.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-241",
+      "source_line": 360,
+      "requirement": "No data refitting, source search or expanded project scope.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-242",
+      "source_line": 362,
+      "requirement": "STOP after one independently reviewed diagnostic and archival handoff.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-243",
+      "source_line": 364,
+      "requirement": "BEGIN P16 LINK DIAGNOSIS NOW.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-244",
+      "source_line": null,
+      "requirement": "All BASEtracked files preserved exceptbyte-exact daily suffix",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-245",
+      "source_line": null,
+      "requirement": "Independent focusedpreaccess and completefinal scientific/source review",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-246",
+      "source_line": null,
+      "requirement": "Exact mission-only stage/normal origin-test push/allblob readback/clean",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-247",
+      "source_line": null,
+      "requirement": "STOPafterdiagnosis;noautomaticproductionrepairorM2restart",
+      "status": "OPEN"
+    }
+  ]
+}
