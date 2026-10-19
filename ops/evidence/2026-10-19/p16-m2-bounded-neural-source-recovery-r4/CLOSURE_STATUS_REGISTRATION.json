@@ -1,0 +1,18 @@
+{
+  "mission": "P16-M2-BOUNDED-NEURAL-SOURCE-RECOVERY-R4",
+  "registered_at_UTC": "2026-10-19T21:24:31.184101+00:00",
+  "before_amended_archive_helper_edit": true,
+  "old_helper_sha256": "3b4ce31f8ddcdcfcf21d813aa6217c3f3351201e5f42f5daa503c32410642091",
+  "old_helper_snapshot": "PRE_CLOSURE_STATUS_archive_handoff.py",
+  "old_auxiliary_review_sha256": "3774fe7ac6a0931d9c96a95a375ef24b22c694dd48a92c1b433f6a513111d227",
+  "reason": "Prevent a precommit terminal-fields payload from saying mission PASS before final review, remote readback and clean gate. Scientific source verdict is separate.",
+  "exact_change": "Precommit FINAL_STATUS=CONTINUE_EXECUTION; finish resolves PASS only after already required remote/blob/clean checks and 120 verified requirements/zero bugs/warnings. Scientific gate failure resolves NEED_ENV, never PASS.",
+  "scope": "Saved-only reporting/archive status; no source/transport/QC/model/scientific threshold change",
+  "tests": [
+    "119 verified requirements denies PASS",
+    "120 verified with zero bugs/warnings resolves PASS",
+    "warn_count>0 denies PASS",
+    "scientific source stop remains NEED_ENV"
+  ],
+  "independent_rereview_required_before_archive": true
+}

@@ -1,3 +1,7 @@
+# P16 R4 source-only handoff candidate: M2_SOURCE_AND_PHYSIOLOGY_PASS;28complete/27admitted(5BO/22FC). Final independent review/archive pending;0models/B-Escience/Final. STOP after verified handoff; no auto M3. Evidence: paper16_source_r4/CURRENT_HANDOFF.md.
+
+P16 current mission: P16-M2-BOUNDED-NEURAL-SOURCE-RECOVERY-R4. Exact BASE d60e913c528feecfaaab9397ba1a6157c511526d.120 atomic requirements frozen before implementation; source-only exact suffix recovery, A-only QC/M2 gate. New R4 transport/retry/48h policy awaits synthetic tests and independent preaccess review. No live R4 request/model/B-E/Final access. R3 STOP and complete prior daily bytes preserved below. Evidence:ops/evidence/2026-10-19/p16-m2-bounded-neural-source-recovery-r4/.
+
 P16 R3 current mission: NEED_ENV / STOP_SOURCE. Fourth Development source763673393 range28 ReadTimeoutError;4attempts/3complete/1partial/24unattempted,228savedA states; no retry. Full M2 gate FALSE; M3-M5 and Final C/D NOT_EXECUTED. Historical baseline and registration entries below retained. Reviewed source-stop closeout/Git archive in progress; no new science authorized.
 Evidence: paper16_dev_r3/CURRENT_STOP_REPORT.md and ops/evidence/2026-10-19/p16-m2-m5-neural-qc-and-development-r3/.
 

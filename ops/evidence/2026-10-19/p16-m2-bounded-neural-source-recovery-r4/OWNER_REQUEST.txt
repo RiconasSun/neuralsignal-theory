@@ -1,0 +1,361 @@
+# CCPN — P16 BOUNDED SOURCE RECOVERY R4
+
+MISSION: P16-M2-BOUNDED-NEURAL-SOURCE-RECOVERY-R4
+
+BASE:
+origin/test @ d60e913c528feecfaaab9397ba1a6157c511526d
+
+MODE: SCIENCE-FIRST / EXACT-SOURCE RECOVERY / BOUNDED
+
+## 0. EXPLICIT NEW AUTHORIZATION
+
+I authorize ONE separately versioned, bounded recovery attempt for the P16 M2 neural-source transport failure.
+
+This authorization is limited to source recovery, A-only physiological QC and M2 scientific admission.
+
+The previous R3 source STOP remains immutable.
+
+The original R3 no-retry contract was correctly enforced. R4 introduces separately authorized prospective recovery semantics; do not retroactively classify R3 as successful.
+
+No M3–M5 real model fitting, Development B/E neural evaluation or Final C/D access is authorized by this mission.
+
+## 1. VERIFY THE FROZEN SCIENTIFIC CONTRACT
+
+Use the authoritative files in:
+
+paper16_m1/
+paper16_running_r2/
+paper16_dev_r3/
+
+Preserve:
+- Original 55 mouse identities
+- 28 Development mice: 5 BO / 23 FC
+- 27 Final BO mice
+- Original session/probe/unit IDs
+- Allen Visual Coding Neuropixels source
+- Stimulus and running rules
+- Source and physiological thresholds
+- A/B/E and C/D partitions
+- B0–B4/C/D/S equations
+- Statistics, nulls and sensitivities
+
+Do not substitute another source, dataset version, probe, mouse, unit or stimulus condition.
+
+Verify all source IDs, sizes, ETags, immutable registration files and existing stopped evidence before any live access.
+
+## 2. PRESERVE THE R3 STOP
+
+Retain exactly:
+
+- Three fully completed source reads
+- One partially failed fourth source
+- Twenty-four unattempted sources
+- Original 228 saved A candidate states
+- Nineteen completed fourth-source candidate captures
+- The incomplete HTTP range and its saved partial bytes
+- Original source request and byte ledgers
+- All R3 scientific and independent-review verdicts
+
+Existing valid completed A records may be reused only after integrity verification against their frozen source identities and saved evidence.
+
+Do not rerun successfully completed sources merely for convenience.
+
+No partial mouse may be marked physiologically admitted.
+
+No R3 attempt, cache or journal may be erased, overwritten or represented as newly successful.
+
+## 3. EXACT FAILED SOURCE
+
+The original failed source is:
+
+Mouse: 742602892
+
+Session: 763673393
+
+Probe: 773463017 / probeC
+
+File ID: 1026124500
+
+Original file size: 2537645144 bytes
+
+Original ETag:
+"5a68875b34800"
+
+Failed HTTP Range:
+
+447741952–448790527 inclusive
+
+Expected bytes:
+1048576
+
+Previously received/persisted:
+540672
+
+Missing suffix:
+
+448282624–448790527 inclusive
+
+Missing bytes:
+507904
+
+The fourth source failed during its twentieth candidate spike-time row.
+
+The preceding nineteen candidate captures are frozen historical results.
+
+## 4. TRANSPORT RECOVERY POLICY
+
+Before live recovery, register the complete R4 transport and acceptance policy.
+
+First perform a non-neural connectivity and source-identity preflight.
+
+Check that the exact authoritative file remains accessible and its identity, size and ETag agree with the original freeze.
+
+Preserve the existing partial payload and its recorded hash.
+
+Use a new R4-private recovery artifact; do not modify the R3 historical partial file.
+
+Preferred recovery method:
+
+Request ONLY the missing suffix range.
+
+Validate:
+- HTTP 206 status
+- Exact Content-Range
+- Exact returned byte length
+- Original source file identity
+- Original ETag
+- Exact offset continuity
+- Saved-prefix byte identity
+- Concatenated full-range length and cryptographic digest
+
+The reconstructed complete range must be supplied to the original scientific reader with exactly the same bytes and logical offsets as an ordinary successful range.
+
+An ETag and response header alone do not certify an incomplete payload.
+
+Permit at most TWO new requests for this specific missing suffix, with a bounded delay between attempts.
+
+For future newly encountered transport timeouts, permit at most two requests for the exact required range, subject to:
+- At most two recovered transport failures per source
+- At most six recovered transport failures across R4
+- The original byte/request/wall limits
+
+No unbounded retry loop.
+
+No replacement URL/provider/dataset object, full-file download, whole-source fallback or silent alternate processing version.
+
+If source identity differs, required bytes remain unavailable or the recovery budget is exhausted, STOP_SOURCE.
+
+Do not skip the mouse and silently proceed to later data.
+
+## 5. NEW EXPLICIT RESOURCE BUDGET
+
+Keep R3's actual resource usage permanently in its historical ledger.
+
+Authorize a separate R4 recovery budget:
+
+- Maximum 8 GiB newly transferred source payload
+- Maximum 512 MiB newly transferred per source
+- Maximum 1 MiB per HTTP range request
+- Maximum 8192 HTTP requests per source
+- At most four concurrent workers, with sequential recovery preferred
+- One new maximum 48-hour R4 source-stage wall deadline
+
+The 48-hour R4 deadline is a new prospective authorization, not a rewriting of the elapsed or stopped R3 clock.
+
+Within R4, the deadline may never reset between phases, sources or worker restarts.
+
+Retain independent historical, R3 and R4 usage totals.
+
+No new optimizer budget is activated.
+
+## 6. RECOVER THE FOURTH SOURCE FIRST
+
+Before touching any of the remaining twenty-four sources:
+
+1. Verify the preserved nineteen completed candidate captures.
+2. Recover and authenticate the exact missing range.
+3. Complete the interrupted twentieth candidate under the frozen reader rules.
+4. Continue only the previously unexecuted candidate rows for the original fourth source.
+5. Perform all original source integrity and A-only physiological checks.
+6. Independently review the complete fourth-source result.
+
+Do not admit the mouse until its complete mandatory source and physiological conditions pass.
+
+If this recovery fails, end R4 immediately with a truthful STOP report.
+
+Do not switch to an easier FC source or another BO mouse.
+
+## 7. COMPLETE THE ORIGINAL DEVELOPMENT M2
+
+Only after the fourth source passes its required source-integrity review, continue the twenty-four originally unattempted sources in their frozen sequence.
+
+Apply the unchanged physiological QC:
+
+- A-only observations
+- Original source-curated support and known invalid masks
+- Exact native timestamp semantics
+- Original minimum spike counts
+- Original occupancy requirements
+- Original firing-rate bounds
+- Original within-presentation refractory rules
+- Exactly eight qualified units selected by the frozen numeric-ID policy
+- Verified selected-unit common support
+- Original per-role and per-color coverage
+
+Do not perform new physiological ranking with B or E observations.
+
+Keep all valid zero-spike bins.
+
+Do not concatenate ISI intervals across presentation gaps.
+
+Do not turn absent optional source annotations into proof of artifact-free neural recording.
+
+Provider whole-session unit curation remains an upstream sampling frame.
+
+Only A neural arrays may be exported for the currently authorized scientific preparation.
+
+Do not use B/E outcomes for source, unit or hyperparameter selection.
+
+No Final neural source may be opened.
+
+## 8. M2 SCIENTIFIC ADMISSION GATE
+
+The frozen Development minimum is:
+
+At least 14 admitted independent mice overall.
+
+At least 3 admitted BO mice.
+
+At least 10 admitted FC mice.
+
+All counted mice must have eight qualified local VISp units and all required A/B/E metadata coverage.
+
+The following are NOT acceptable:
+
+- Counting partially read mice
+- Treating candidate units as admitted animals
+- Relaxing source or physiological thresholds
+- Combining probes or sessions
+- Replacing failed mice
+- Dropping a mandatory source-integrity failure as ordinary biological attrition
+
+If a fully verified original source yields genuine physiological exclusion, retain that exclusion and its evidence.
+
+Every original Development source must have a complete, defensible terminal disposition before the cohort-level decision.
+
+If the final cohort misses 14/3/10, return DATA_INSUFFICIENT under the frozen design.
+
+If an essential source failure persists, return STOP_SOURCE.
+
+No model fitting follows either result.
+
+## 9. SOURCE-ONLY COMPLETION
+
+If M2 is fully successful:
+
+Freeze:
+- Complete 28-mouse source ledger
+- Actual physiological admissions
+- BO and FC denominators
+- Exact selected unit identities
+- A-only observation/scaling inputs
+- All exclusions and known limitations
+- Source/version/clock identity
+- All original A/B/E metadata partitions
+- All resource and transport receipts
+
+Prepare a compact M3–M5 handoff.
+
+The handoff may reference the frozen numerical policies and production requirements.
+
+It must NOT implement real models, activate optimizer attempts, perform B selection or access E neural outcomes.
+
+Model fitting requires a subsequent separately authorized mission.
+
+## 10. REPRODUCIBILITY AND REVIEW
+
+Run meaningful focused transport and source regressions, including:
+
+- Saved partial-prefix corruption detection
+- Wrong ETag rejection
+- Wrong Content-Range rejection
+- Offset overlap/gap rejection
+- Partial response rejection
+- Bounded-retry exhaustion
+- Resource-cap enforcement
+- Source identity mismatch
+- Candidate-row integrity
+- A-only extraction and B/E denial
+- Final mouse denial
+- True-zero versus invalid observation
+- Preservation of prior R3 results
+
+Require independent internal review of:
+- Prospective R4 recovery policy
+- Completed fourth-source recovery
+- Full M2 source/QC decision
+- New and historical ledgers
+
+Provide saved-only PowerShell reproduction of retained evidence.
+
+Do not claim saved-only replay independently reproduces unavailable private raw arrays.
+
+Commit only authorized new R4 evidence and implementation changes to origin/test.
+
+Verify actual remote SHA and changed-file identities.
+
+## 11. FINAL VERDICT
+
+Return exactly one:
+
+M2_SOURCE_AND_PHYSIOLOGY_PASS
+
+STOP_SOURCE
+
+DATA_INSUFFICIENT
+
+RESOURCE_LIMIT
+
+SCIENTIFIC_PROTOCOL_INCONCLUSIVE
+
+M2_SOURCE_AND_PHYSIOLOGY_PASS does not constitute a predictive scientific result.
+
+## 12. REQUIRED FINAL DELIVERY
+
+MISSION_ID
+FINAL_STATUS
+R3_STOP_PRESERVED
+RECOVERED_RANGE_VERIFIED
+FOURTH_SOURCE_COMPLETED
+ORIGINAL_COMPLETED_SOURCES_REUSED
+R4_SOURCE_ATTEMPTS
+R4_TRANSPORT_RETRIES
+R4_TRANSFER_BYTES
+TOTAL_DEVELOPMENT_SOURCES_COMPLETED
+DEVELOPMENT_ADMITTED_MICE
+DEVELOPMENT_ADMITTED_BO
+DEVELOPMENT_ADMITTED_FC
+A_ONLY_PHYSIOLOGY_PASS
+M2_SCIENTIFIC_GATE
+M3_READY
+MODEL_FITS_EXECUTED=0
+B_E_NEURAL_SCIENTIFIC_ACCESS=false
+FINAL_C_ACCESS=false
+FINAL_D_ACCESS=false
+BUG_COUNT
+WARN_COUNT
+INDEPENDENT_REVIEW
+SAVED_REPRODUCTION
+GIT_COMMIT
+REMOTE_VERIFICATION
+
+SCIENCE FIRST.
+
+NO MODEL RETUNING.
+NO SOURCE SUBSTITUTION.
+NO HIDDEN RETRY.
+NO FINAL ACCESS.
+
+STOP AFTER VERIFIED M2 HANDOFF OR A DOCUMENTED BLOCKER.
+
+BEGIN P16 R4 SOURCE RECOVERY.

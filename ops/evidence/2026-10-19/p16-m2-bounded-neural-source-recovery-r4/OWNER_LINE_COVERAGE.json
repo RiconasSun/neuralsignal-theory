@@ -1,0 +1,4095 @@
+{
+  "count": 237,
+  "not_an_acceptance_test_denominator": true,
+  "lines": [
+    {
+      "owner_line": 1,
+      "text": "# CCPN — P16 BOUNDED SOURCE RECOVERY R4",
+      "section": null,
+      "baseline_ids": [
+        "REQ-001",
+        "REQ-006"
+      ]
+    },
+    {
+      "owner_line": 3,
+      "text": "MISSION: P16-M2-BOUNDED-NEURAL-SOURCE-RECOVERY-R4",
+      "section": null,
+      "baseline_ids": [
+        "REQ-001",
+        "REQ-006"
+      ]
+    },
+    {
+      "owner_line": 5,
+      "text": "BASE:",
+      "section": null,
+      "baseline_ids": [
+        "REQ-001",
+        "REQ-006"
+      ]
+    },
+    {
+      "owner_line": 6,
+      "text": "origin/test @ d60e913c528feecfaaab9397ba1a6157c511526d",
+      "section": null,
+      "baseline_ids": [
+        "REQ-001",
+        "REQ-006"
+      ]
+    },
+    {
+      "owner_line": 8,
+      "text": "MODE: SCIENCE-FIRST / EXACT-SOURCE RECOVERY / BOUNDED",
+      "section": null,
+      "baseline_ids": [
+        "REQ-001",
+        "REQ-006"
+      ]
+    },
+    {
+      "owner_line": 10,
+      "text": "## 0. EXPLICIT NEW AUTHORIZATION",
+      "section": 0,
+      "baseline_ids": [
+        "REQ-001",
+        "REQ-002",
+        "REQ-003",
+        "REQ-004",
+        "REQ-005"
+      ]
+    },
+    {
+      "owner_line": 12,
+      "text": "I authorize ONE separately versioned, bounded recovery attempt for the P16 M2 neural-source transport failure.",
+      "section": 0,
+      "baseline_ids": [
+        "REQ-001",
+        "REQ-002",
+        "REQ-003",
+        "REQ-004",
+        "REQ-005"
+      ]
+    },
+    {
+      "owner_line": 14,
+      "text": "This authorization is limited to source recovery, A-only physiological QC and M2 scientific admission.",
+      "section": 0,
+      "baseline_ids": [
+        "REQ-001",
+        "REQ-002",
+        "REQ-003",
+        "REQ-004",
+        "REQ-005"
+      ]
+    },
+    {
+      "owner_line": 16,
+      "text": "The previous R3 source STOP remains immutable.",
+      "section": 0,
+      "baseline_ids": [
+        "REQ-001",
+        "REQ-002",
+        "REQ-003",
+        "REQ-004",
+        "REQ-005"
+      ]
+    },
+    {
+      "owner_line": 18,
+      "text": "The original R3 no-retry contract was correctly enforced. R4 introduces separately authorized prospective recovery semantics; do not retroactively classify R3 as successful.",
+      "section": 0,
+      "baseline_ids": [
+        "REQ-001",
+        "REQ-002",
+        "REQ-003",
+        "REQ-004",
+        "REQ-005"
+      ]
+    },
+    {
+      "owner_line": 20,
+      "text": "No M3–M5 real model fitting, Development B/E neural evaluation or Final C/D access is authorized by this mission.",
+      "section": 0,
+      "baseline_ids": [
+        "REQ-001",
+        "REQ-002",
+        "REQ-003",
+        "REQ-004",
+        "REQ-005"
+      ]
+    },
+    {
+      "owner_line": 22,
+      "text": "## 1. VERIFY THE FROZEN SCIENTIFIC CONTRACT",
+      "section": 1,
+      "baseline_ids": [
+        "REQ-006",
+        "REQ-007",
+        "REQ-008",
+        "REQ-009",
+        "REQ-010",
+        "REQ-011",
+        "REQ-012",
+        "REQ-013"
+      ]
+    },
+    {
+      "owner_line": 24,
+      "text": "Use the authoritative files in:",
+      "section": 1,
+      "baseline_ids": [
+        "REQ-006",
+        "REQ-007",
+        "REQ-008",
+        "REQ-009",
+        "REQ-010",
+        "REQ-011",
+        "REQ-012",
+        "REQ-013"
+      ]
+    },
+    {
+      "owner_line": 26,
+      "text": "paper16_m1/",
+      "section": 1,
+      "baseline_ids": [
+        "REQ-006",
+        "REQ-007",
+        "REQ-008",
+        "REQ-009",
+        "REQ-010",
+        "REQ-011",
+        "REQ-012",
+        "REQ-013"
+      ]
+    },
+    {
+      "owner_line": 27,
+      "text": "paper16_running_r2/",
+      "section": 1,
+      "baseline_ids": [
+        "REQ-006",
+        "REQ-007",
+        "REQ-008",
+        "REQ-009",
+        "REQ-010",
+        "REQ-011",
+        "REQ-012",
+        "REQ-013"
+      ]
+    },
+    {
+      "owner_line": 28,
+      "text": "paper16_dev_r3/",
+      "section": 1,
+      "baseline_ids": [
+        "REQ-006",
+        "REQ-007",
+        "REQ-008",
+        "REQ-009",
+        "REQ-010",
+        "REQ-011",
+        "REQ-012",
+        "REQ-013"
+      ]
+    },
+    {
+      "owner_line": 30,
+      "text": "Preserve:",
+      "section": 1,
+      "baseline_ids": [
+        "REQ-006",
+        "REQ-007",
+        "REQ-008",
+        "REQ-009",
+        "REQ-010",
+        "REQ-011",
+        "REQ-012",
+        "REQ-013"
+      ]
+    },
+    {
+      "owner_line": 31,
+      "text": "- Original 55 mouse identities",
+      "section": 1,
+      "baseline_ids": [
+        "REQ-006",
+        "REQ-007",
+        "REQ-008",
+        "REQ-009",
+        "REQ-010",
+        "REQ-011",
+        "REQ-012",
+        "REQ-013"
+      ]
+    },
+    {
+      "owner_line": 32,
+      "text": "- 28 Development mice: 5 BO / 23 FC",
+      "section": 1,
+      "baseline_ids": [
+        "REQ-006",
+        "REQ-007",
+        "REQ-008",
+        "REQ-009",
+        "REQ-010",
+        "REQ-011",
+        "REQ-012",
+        "REQ-013"
+      ]
+    },
+    {
+      "owner_line": 33,
+      "text": "- 27 Final BO mice",
+      "section": 1,
+      "baseline_ids": [
+        "REQ-006",
+        "REQ-007",
+        "REQ-008",
+        "REQ-009",
+        "REQ-010",
+        "REQ-011",
+        "REQ-012",
+        "REQ-013"
+      ]
+    },
+    {
+      "owner_line": 34,
+      "text": "- Original session/probe/unit IDs",
+      "section": 1,
+      "baseline_ids": [
+        "REQ-006",
+        "REQ-007",
+        "REQ-008",
+        "REQ-009",
+        "REQ-010",
+        "REQ-011",
+        "REQ-012",
+        "REQ-013"
+      ]
+    },
+    {
+      "owner_line": 35,
+      "text": "- Allen Visual Coding Neuropixels source",
+      "section": 1,
+      "baseline_ids": [
+        "REQ-006",
+        "REQ-007",
+        "REQ-008",
+        "REQ-009",
+        "REQ-010",
+        "REQ-011",
+        "REQ-012",
+        "REQ-013"
+      ]
+    },
+    {
+      "owner_line": 36,
+      "text": "- Stimulus and running rules",
+      "section": 1,
+      "baseline_ids": [
+        "REQ-006",
+        "REQ-007",
+        "REQ-008",
+        "REQ-009",
+        "REQ-010",
+        "REQ-011",
+        "REQ-012",
+        "REQ-013"
+      ]
+    },
+    {
+      "owner_line": 37,
+      "text": "- Source and physiological thresholds",
+      "section": 1,
+      "baseline_ids": [
+        "REQ-006",
+        "REQ-007",
+        "REQ-008",
+        "REQ-009",
+        "REQ-010",
+        "REQ-011",
+        "REQ-012",
+        "REQ-013"
+      ]
+    },
+    {
+      "owner_line": 38,
+      "text": "- A/B/E and C/D partitions",
+      "section": 1,
+      "baseline_ids": [
+        "REQ-006",
+        "REQ-007",
+        "REQ-008",
+        "REQ-009",
+        "REQ-010",
+        "REQ-011",
+        "REQ-012",
+        "REQ-013"
+      ]
+    },
+    {
+      "owner_line": 39,
+      "text": "- B0–B4/C/D/S equations",
+      "section": 1,
+      "baseline_ids": [
+        "REQ-006",
+        "REQ-007",
+        "REQ-008",
+        "REQ-009",
+        "REQ-010",
+        "REQ-011",
+        "REQ-012",
+        "REQ-013"
+      ]
+    },
+    {
+      "owner_line": 40,
+      "text": "- Statistics, nulls and sensitivities",
+      "section": 1,
+      "baseline_ids": [
+        "REQ-006",
+        "REQ-007",
+        "REQ-008",
+        "REQ-009",
+        "REQ-010",
+        "REQ-011",
+        "REQ-012",
+        "REQ-013"
+      ]
+    },
+    {
+      "owner_line": 42,
+      "text": "Do not substitute another source, dataset version, probe, mouse, unit or stimulus condition.",
+      "section": 1,
+      "baseline_ids": [
+        "REQ-006",
+        "REQ-007",
+        "REQ-008",
+        "REQ-009",
+        "REQ-010",
+        "REQ-011",
+        "REQ-012",
+        "REQ-013"
+      ]
+    },
+    {
+      "owner_line": 44,
+      "text": "Verify all source IDs, sizes, ETags, immutable registration files and existing stopped evidence before any live access.",
+      "section": 1,
+      "baseline_ids": [
+        "REQ-006",
+        "REQ-007",
+        "REQ-008",
+        "REQ-009",
+        "REQ-010",
+        "REQ-011",
+        "REQ-012",
+        "REQ-013"
+      ]
+    },
+    {
+      "owner_line": 46,
+      "text": "## 2. PRESERVE THE R3 STOP",
+      "section": 2,
+      "baseline_ids": [
+        "REQ-014",
+        "REQ-015",
+        "REQ-016",
+        "REQ-017",
+        "REQ-018",
+        "REQ-019",
+        "REQ-020"
+      ]
+    },
+    {
+      "owner_line": 48,
+      "text": "Retain exactly:",
+      "section": 2,
+      "baseline_ids": [
+        "REQ-014",
+        "REQ-015",
+        "REQ-016",
+        "REQ-017",
+        "REQ-018",
+        "REQ-019",
+        "REQ-020"
+      ]
+    },
+    {
+      "owner_line": 50,
+      "text": "- Three fully completed source reads",
+      "section": 2,
+      "baseline_ids": [
+        "REQ-014",
+        "REQ-015",
+        "REQ-016",
+        "REQ-017",
+        "REQ-018",
+        "REQ-019",
+        "REQ-020"
+      ]
+    },
+    {
+      "owner_line": 51,
+      "text": "- One partially failed fourth source",
+      "section": 2,
+      "baseline_ids": [
+        "REQ-014",
+        "REQ-015",
+        "REQ-016",
+        "REQ-017",
+        "REQ-018",
+        "REQ-019",
+        "REQ-020"
+      ]
+    },
+    {
+      "owner_line": 52,
+      "text": "- Twenty-four unattempted sources",
+      "section": 2,
+      "baseline_ids": [
+        "REQ-014",
+        "REQ-015",
+        "REQ-016",
+        "REQ-017",
+        "REQ-018",
+        "REQ-019",
+        "REQ-020"
+      ]
+    },
+    {
+      "owner_line": 53,
+      "text": "- Original 228 saved A candidate states",
+      "section": 2,
+      "baseline_ids": [
+        "REQ-014",
+        "REQ-015",
+        "REQ-016",
+        "REQ-017",
+        "REQ-018",
+        "REQ-019",
+        "REQ-020"
+      ]
+    },
+    {
+      "owner_line": 54,
+      "text": "- Nineteen completed fourth-source candidate captures",
+      "section": 2,
+      "baseline_ids": [
+        "REQ-014",
+        "REQ-015",
+        "REQ-016",
+        "REQ-017",
+        "REQ-018",
+        "REQ-019",
+        "REQ-020"
+      ]
+    },
+    {
+      "owner_line": 55,
+      "text": "- The incomplete HTTP range and its saved partial bytes",
+      "section": 2,
+      "baseline_ids": [
+        "REQ-014",
+        "REQ-015",
+        "REQ-016",
+        "REQ-017",
+        "REQ-018",
+        "REQ-019",
+        "REQ-020"
+      ]
+    },
+    {
+      "owner_line": 56,
+      "text": "- Original source request and byte ledgers",
+      "section": 2,
+      "baseline_ids": [
+        "REQ-014",
+        "REQ-015",
+        "REQ-016",
+        "REQ-017",
+        "REQ-018",
+        "REQ-019",
+        "REQ-020"
+      ]
+    },
+    {
+      "owner_line": 57,
+      "text": "- All R3 scientific and independent-review verdicts",
+      "section": 2,
+      "baseline_ids": [
+        "REQ-014",
+        "REQ-015",
+        "REQ-016",
+        "REQ-017",
+        "REQ-018",
+        "REQ-019",
+        "REQ-020"
+      ]
+    },
+    {
+      "owner_line": 59,
+      "text": "Existing valid completed A records may be reused only after integrity verification against their frozen source identities and saved evidence.",
+      "section": 2,
+      "baseline_ids": [
+        "REQ-014",
+        "REQ-015",
+        "REQ-016",
+        "REQ-017",
+        "REQ-018",
+        "REQ-019",
+        "REQ-020"
+      ]
+    },
+    {
+      "owner_line": 61,
+      "text": "Do not rerun successfully completed sources merely for convenience.",
+      "section": 2,
+      "baseline_ids": [
+        "REQ-014",
+        "REQ-015",
+        "REQ-016",
+        "REQ-017",
+        "REQ-018",
+        "REQ-019",
+        "REQ-020"
+      ]
+    },
+    {
+      "owner_line": 63,
+      "text": "No partial mouse may be marked physiologically admitted.",
+      "section": 2,
+      "baseline_ids": [
+        "REQ-014",
+        "REQ-015",
+        "REQ-016",
+        "REQ-017",
+        "REQ-018",
+        "REQ-019",
+        "REQ-020"
+      ]
+    },
+    {
+      "owner_line": 65,
+      "text": "No R3 attempt, cache or journal may be erased, overwritten or represented as newly successful.",
+      "section": 2,
+      "baseline_ids": [
+        "REQ-014",
+        "REQ-015",
+        "REQ-016",
+        "REQ-017",
+        "REQ-018",
+        "REQ-019",
+        "REQ-020"
+      ]
+    },
+    {
+      "owner_line": 67,
+      "text": "## 3. EXACT FAILED SOURCE",
+      "section": 3,
+      "baseline_ids": [
+        "REQ-021",
+        "REQ-022",
+        "REQ-023",
+        "REQ-024"
+      ]
+    },
+    {
+      "owner_line": 69,
+      "text": "The original failed source is:",
+      "section": 3,
+      "baseline_ids": [
+        "REQ-021",
+        "REQ-022",
+        "REQ-023",
+        "REQ-024"
+      ]
+    },
+    {
+      "owner_line": 71,
+      "text": "Mouse: 742602892",
+      "section": 3,
+      "baseline_ids": [
+        "REQ-021",
+        "REQ-022",
+        "REQ-023",
+        "REQ-024"
+      ]
+    },
+    {
+      "owner_line": 73,
+      "text": "Session: 763673393",
+      "section": 3,
+      "baseline_ids": [
+        "REQ-021",
+        "REQ-022",
+        "REQ-023",
+        "REQ-024"
+      ]
+    },
+    {
+      "owner_line": 75,
+      "text": "Probe: 773463017 / probeC",
+      "section": 3,
+      "baseline_ids": [
+        "REQ-021",
+        "REQ-022",
+        "REQ-023",
+        "REQ-024"
+      ]
+    },
+    {
+      "owner_line": 77,
+      "text": "File ID: 1026124500",
+      "section": 3,
+      "baseline_ids": [
+        "REQ-021",
+        "REQ-022",
+        "REQ-023",
+        "REQ-024"
+      ]
+    },
+    {
+      "owner_line": 79,
+      "text": "Original file size: 2537645144 bytes",
+      "section": 3,
+      "baseline_ids": [
+        "REQ-021",
+        "REQ-022",
+        "REQ-023",
+        "REQ-024"
+      ]
+    },
+    {
+      "owner_line": 81,
+      "text": "Original ETag:",
+      "section": 3,
+      "baseline_ids": [
+        "REQ-021",
+        "REQ-022",
+        "REQ-023",
+        "REQ-024"
+      ]
+    },
+    {
+      "owner_line": 82,
+      "text": "\"5a68875b34800\"",
+      "section": 3,
+      "baseline_ids": [
+        "REQ-021",
+        "REQ-022",
+        "REQ-023",
+        "REQ-024"
+      ]
+    },
+    {
+      "owner_line": 84,
+      "text": "Failed HTTP Range:",
+      "section": 3,
+      "baseline_ids": [
+        "REQ-021",
+        "REQ-022",
+        "REQ-023",
+        "REQ-024"
+      ]
+    },
+    {
+      "owner_line": 86,
+      "text": "447741952–448790527 inclusive",
+      "section": 3,
+      "baseline_ids": [
+        "REQ-021",
+        "REQ-022",
+        "REQ-023",
+        "REQ-024"
+      ]
+    },
+    {
+      "owner_line": 88,
+      "text": "Expected bytes:",
+      "section": 3,
+      "baseline_ids": [
+        "REQ-021",
+        "REQ-022",
+        "REQ-023",
+        "REQ-024"
+      ]
+    },
+    {
+      "owner_line": 89,
+      "text": "1048576",
+      "section": 3,
+      "baseline_ids": [
+        "REQ-021",
+        "REQ-022",
+        "REQ-023",
+        "REQ-024"
+      ]
+    },
+    {
+      "owner_line": 91,
+      "text": "Previously received/persisted:",
+      "section": 3,
+      "baseline_ids": [
+        "REQ-021",
+        "REQ-022",
+        "REQ-023",
+        "REQ-024"
+      ]
+    },
+    {
+      "owner_line": 92,
+      "text": "540672",
+      "section": 3,
+      "baseline_ids": [
+        "REQ-021",
+        "REQ-022",
+        "REQ-023",
+        "REQ-024"
+      ]
+    },
+    {
+      "owner_line": 94,
+      "text": "Missing suffix:",
+      "section": 3,
+      "baseline_ids": [
+        "REQ-021",
+        "REQ-022",
+        "REQ-023",
+        "REQ-024"
+      ]
+    },
+    {
+      "owner_line": 96,
+      "text": "448282624–448790527 inclusive",
+      "section": 3,
+      "baseline_ids": [
+        "REQ-021",
+        "REQ-022",
+        "REQ-023",
+        "REQ-024"
+      ]
+    },
+    {
+      "owner_line": 98,
+      "text": "Missing bytes:",
+      "section": 3,
+      "baseline_ids": [
+        "REQ-021",
+        "REQ-022",
+        "REQ-023",
+        "REQ-024"
+      ]
+    },
+    {
+      "owner_line": 99,
+      "text": "507904",
+      "section": 3,
+      "baseline_ids": [
+        "REQ-021",
+        "REQ-022",
+        "REQ-023",
+        "REQ-024"
+      ]
+    },
+    {
+      "owner_line": 101,
+      "text": "The fourth source failed during its twentieth candidate spike-time row.",
+      "section": 3,
+      "baseline_ids": [
+        "REQ-021",
+        "REQ-022",
+        "REQ-023",
+        "REQ-024"
+      ]
+    },
+    {
+      "owner_line": 103,
+      "text": "The preceding nineteen candidate captures are frozen historical results.",
+      "section": 3,
+      "baseline_ids": [
+        "REQ-021",
+        "REQ-022",
+        "REQ-023",
+        "REQ-024"
+      ]
+    },
+    {
+      "owner_line": 105,
+      "text": "## 4. TRANSPORT RECOVERY POLICY",
+      "section": 4,
+      "baseline_ids": [
+        "REQ-025",
+        "REQ-026",
+        "REQ-027",
+        "REQ-028",
+        "REQ-029",
+        "REQ-030",
+        "REQ-031",
+        "REQ-032",
+        "REQ-033",
+        "REQ-034",
+        "REQ-035",
+        "REQ-036",
+        "REQ-037",
+        "REQ-038",
+        "REQ-039",
+        "REQ-040",
+        "REQ-041",
+        "REQ-042",
+        "REQ-043",
+        "REQ-044",
+        "REQ-045"
+      ]
+    },
+    {
+      "owner_line": 107,
+      "text": "Before live recovery, register the complete R4 transport and acceptance policy.",
+      "section": 4,
+      "baseline_ids": [
+        "REQ-025",
+        "REQ-026",
+        "REQ-027",
+        "REQ-028",
+        "REQ-029",
+        "REQ-030",
+        "REQ-031",
+        "REQ-032",
+        "REQ-033",
+        "REQ-034",
+        "REQ-035",
+        "REQ-036",
+        "REQ-037",
+        "REQ-038",
+        "REQ-039",
+        "REQ-040",
+        "REQ-041",
+        "REQ-042",
+        "REQ-043",
+        "REQ-044",
+        "REQ-045"
+      ]
+    },
+    {
+      "owner_line": 109,
+      "text": "First perform a non-neural connectivity and source-identity preflight.",
+      "section": 4,
+      "baseline_ids": [
+        "REQ-025",
+        "REQ-026",
+        "REQ-027",
+        "REQ-028",
+        "REQ-029",
+        "REQ-030",
+        "REQ-031",
+        "REQ-032",
+        "REQ-033",
+        "REQ-034",
+        "REQ-035",
+        "REQ-036",
+        "REQ-037",
+        "REQ-038",
+        "REQ-039",
+        "REQ-040",
+        "REQ-041",
+        "REQ-042",
+        "REQ-043",
+        "REQ-044",
+        "REQ-045"
+      ]
+    },
+    {
+      "owner_line": 111,
+      "text": "Check that the exact authoritative file remains accessible and its identity, size and ETag agree with the original freeze.",
+      "section": 4,
+      "baseline_ids": [
+        "REQ-025",
+        "REQ-026",
+        "REQ-027",
+        "REQ-028",
+        "REQ-029",
+        "REQ-030",
+        "REQ-031",
+        "REQ-032",
+        "REQ-033",
+        "REQ-034",
+        "REQ-035",
+        "REQ-036",
+        "REQ-037",
+        "REQ-038",
+        "REQ-039",
+        "REQ-040",
+        "REQ-041",
+        "REQ-042",
+        "REQ-043",
+        "REQ-044",
+        "REQ-045"
+      ]
+    },
+    {
+      "owner_line": 113,
+      "text": "Preserve the existing partial payload and its recorded hash.",
+      "section": 4,
+      "baseline_ids": [
+        "REQ-025",
+        "REQ-026",
+        "REQ-027",
+        "REQ-028",
+        "REQ-029",
+        "REQ-030",
+        "REQ-031",
+        "REQ-032",
+        "REQ-033",
+        "REQ-034",
+        "REQ-035",
+        "REQ-036",
+        "REQ-037",
+        "REQ-038",
+        "REQ-039",
+        "REQ-040",
+        "REQ-041",
+        "REQ-042",
+        "REQ-043",
+        "REQ-044",
+        "REQ-045"
+      ]
+    },
+    {
+      "owner_line": 115,
+      "text": "Use a new R4-private recovery artifact; do not modify the R3 historical partial file.",
+      "section": 4,
+      "baseline_ids": [
+        "REQ-025",
+        "REQ-026",
+        "REQ-027",
+        "REQ-028",
+        "REQ-029",
+        "REQ-030",
+        "REQ-031",
+        "REQ-032",
+        "REQ-033",
+        "REQ-034",
+        "REQ-035",
+        "REQ-036",
+        "REQ-037",
+        "REQ-038",
+        "REQ-039",
+        "REQ-040",
+        "REQ-041",
+        "REQ-042",
+        "REQ-043",
+        "REQ-044",
+        "REQ-045"
+      ]
+    },
+    {
+      "owner_line": 117,
+      "text": "Preferred recovery method:",
+      "section": 4,
+      "baseline_ids": [
+        "REQ-025",
+        "REQ-026",
+        "REQ-027",
+        "REQ-028",
+        "REQ-029",
+        "REQ-030",
+        "REQ-031",
+        "REQ-032",
+        "REQ-033",
+        "REQ-034",
+        "REQ-035",
+        "REQ-036",
+        "REQ-037",
+        "REQ-038",
+        "REQ-039",
+        "REQ-040",
+        "REQ-041",
+        "REQ-042",
+        "REQ-043",
+        "REQ-044",
+        "REQ-045"
+      ]
+    },
+    {
+      "owner_line": 119,
+      "text": "Request ONLY the missing suffix range.",
+      "section": 4,
+      "baseline_ids": [
+        "REQ-025",
+        "REQ-026",
+        "REQ-027",
+        "REQ-028",
+        "REQ-029",
+        "REQ-030",
+        "REQ-031",
+        "REQ-032",
+        "REQ-033",
+        "REQ-034",
+        "REQ-035",
+        "REQ-036",
+        "REQ-037",
+        "REQ-038",
+        "REQ-039",
+        "REQ-040",
+        "REQ-041",
+        "REQ-042",
+        "REQ-043",
+        "REQ-044",
+        "REQ-045"
+      ]
+    },
+    {
+      "owner_line": 121,
+      "text": "Validate:",
+      "section": 4,
+      "baseline_ids": [
+        "REQ-025",
+        "REQ-026",
+        "REQ-027",
+        "REQ-028",
+        "REQ-029",
+        "REQ-030",
+        "REQ-031",
+        "REQ-032",
+        "REQ-033",
+        "REQ-034",
+        "REQ-035",
+        "REQ-036",
+        "REQ-037",
+        "REQ-038",
+        "REQ-039",
+        "REQ-040",
+        "REQ-041",
+        "REQ-042",
+        "REQ-043",
+        "REQ-044",
+        "REQ-045"
+      ]
+    },
+    {
+      "owner_line": 122,
+      "text": "- HTTP 206 status",
+      "section": 4,
+      "baseline_ids": [
+        "REQ-025",
+        "REQ-026",
+        "REQ-027",
+        "REQ-028",
+        "REQ-029",
+        "REQ-030",
+        "REQ-031",
+        "REQ-032",
+        "REQ-033",
+        "REQ-034",
+        "REQ-035",
+        "REQ-036",
+        "REQ-037",
+        "REQ-038",
+        "REQ-039",
+        "REQ-040",
+        "REQ-041",
+        "REQ-042",
+        "REQ-043",
+        "REQ-044",
+        "REQ-045"
+      ]
+    },
+    {
+      "owner_line": 123,
+      "text": "- Exact Content-Range",
+      "section": 4,
+      "baseline_ids": [
+        "REQ-025",
+        "REQ-026",
+        "REQ-027",
+        "REQ-028",
+        "REQ-029",
+        "REQ-030",
+        "REQ-031",
+        "REQ-032",
+        "REQ-033",
+        "REQ-034",
+        "REQ-035",
+        "REQ-036",
+        "REQ-037",
+        "REQ-038",
+        "REQ-039",
+        "REQ-040",
+        "REQ-041",
+        "REQ-042",
+        "REQ-043",
+        "REQ-044",
+        "REQ-045"
+      ]
+    },
+    {
+      "owner_line": 124,
+      "text": "- Exact returned byte length",
+      "section": 4,
+      "baseline_ids": [
+        "REQ-025",
+        "REQ-026",
+        "REQ-027",
+        "REQ-028",
+        "REQ-029",
+        "REQ-030",
+        "REQ-031",
+        "REQ-032",
+        "REQ-033",
+        "REQ-034",
+        "REQ-035",
+        "REQ-036",
+        "REQ-037",
+        "REQ-038",
+        "REQ-039",
+        "REQ-040",
+        "REQ-041",
+        "REQ-042",
+        "REQ-043",
+        "REQ-044",
+        "REQ-045"
+      ]
+    },
+    {
+      "owner_line": 125,
+      "text": "- Original source file identity",
+      "section": 4,
+      "baseline_ids": [
+        "REQ-025",
+        "REQ-026",
+        "REQ-027",
+        "REQ-028",
+        "REQ-029",
+        "REQ-030",
+        "REQ-031",
+        "REQ-032",
+        "REQ-033",
+        "REQ-034",
+        "REQ-035",
+        "REQ-036",
+        "REQ-037",
+        "REQ-038",
+        "REQ-039",
+        "REQ-040",
+        "REQ-041",
+        "REQ-042",
+        "REQ-043",
+        "REQ-044",
+        "REQ-045"
+      ]
+    },
+    {
+      "owner_line": 126,
+      "text": "- Original ETag",
+      "section": 4,
+      "baseline_ids": [
+        "REQ-025",
+        "REQ-026",
+        "REQ-027",
+        "REQ-028",
+        "REQ-029",
+        "REQ-030",
+        "REQ-031",
+        "REQ-032",
+        "REQ-033",
+        "REQ-034",
+        "REQ-035",
+        "REQ-036",
+        "REQ-037",
+        "REQ-038",
+        "REQ-039",
+        "REQ-040",
+        "REQ-041",
+        "REQ-042",
+        "REQ-043",
+        "REQ-044",
+        "REQ-045"
+      ]
+    },
+    {
+      "owner_line": 127,
+      "text": "- Exact offset continuity",
+      "section": 4,
+      "baseline_ids": [
+        "REQ-025",
+        "REQ-026",
+        "REQ-027",
+        "REQ-028",
+        "REQ-029",
+        "REQ-030",
+        "REQ-031",
+        "REQ-032",
+        "REQ-033",
+        "REQ-034",
+        "REQ-035",
+        "REQ-036",
+        "REQ-037",
+        "REQ-038",
+        "REQ-039",
+        "REQ-040",
+        "REQ-041",
+        "REQ-042",
+        "REQ-043",
+        "REQ-044",
+        "REQ-045"
+      ]
+    },
+    {
+      "owner_line": 128,
+      "text": "- Saved-prefix byte identity",
+      "section": 4,
+      "baseline_ids": [
+        "REQ-025",
+        "REQ-026",
+        "REQ-027",
+        "REQ-028",
+        "REQ-029",
+        "REQ-030",
+        "REQ-031",
+        "REQ-032",
+        "REQ-033",
+        "REQ-034",
+        "REQ-035",
+        "REQ-036",
+        "REQ-037",
+        "REQ-038",
+        "REQ-039",
+        "REQ-040",
+        "REQ-041",
+        "REQ-042",
+        "REQ-043",
+        "REQ-044",
+        "REQ-045"
+      ]
+    },
+    {
+      "owner_line": 129,
+      "text": "- Concatenated full-range length and cryptographic digest",
+      "section": 4,
+      "baseline_ids": [
+        "REQ-025",
+        "REQ-026",
+        "REQ-027",
+        "REQ-028",
+        "REQ-029",
+        "REQ-030",
+        "REQ-031",
+        "REQ-032",
+        "REQ-033",
+        "REQ-034",
+        "REQ-035",
+        "REQ-036",
+        "REQ-037",
+        "REQ-038",
+        "REQ-039",
+        "REQ-040",
+        "REQ-041",
+        "REQ-042",
+        "REQ-043",
+        "REQ-044",
+        "REQ-045"
+      ]
+    },
+    {
+      "owner_line": 131,
+      "text": "The reconstructed complete range must be supplied to the original scientific reader with exactly the same bytes and logical offsets as an ordinary successful range.",
+      "section": 4,
+      "baseline_ids": [
+        "REQ-025",
+        "REQ-026",
+        "REQ-027",
+        "REQ-028",
+        "REQ-029",
+        "REQ-030",
+        "REQ-031",
+        "REQ-032",
+        "REQ-033",
+        "REQ-034",
+        "REQ-035",
+        "REQ-036",
+        "REQ-037",
+        "REQ-038",
+        "REQ-039",
+        "REQ-040",
+        "REQ-041",
+        "REQ-042",
+        "REQ-043",
+        "REQ-044",
+        "REQ-045"
+      ]
+    },
+    {
+      "owner_line": 133,
+      "text": "An ETag and response header alone do not certify an incomplete payload.",
+      "section": 4,
+      "baseline_ids": [
+        "REQ-025",
+        "REQ-026",
+        "REQ-027",
+        "REQ-028",
+        "REQ-029",
+        "REQ-030",
+        "REQ-031",
+        "REQ-032",
+        "REQ-033",
+        "REQ-034",
+        "REQ-035",
+        "REQ-036",
+        "REQ-037",
+        "REQ-038",
+        "REQ-039",
+        "REQ-040",
+        "REQ-041",
+        "REQ-042",
+        "REQ-043",
+        "REQ-044",
+        "REQ-045"
+      ]
+    },
+    {
+      "owner_line": 135,
+      "text": "Permit at most TWO new requests for this specific missing suffix, with a bounded delay between attempts.",
+      "section": 4,
+      "baseline_ids": [
+        "REQ-025",
+        "REQ-026",
+        "REQ-027",
+        "REQ-028",
+        "REQ-029",
+        "REQ-030",
+        "REQ-031",
+        "REQ-032",
+        "REQ-033",
+        "REQ-034",
+        "REQ-035",
+        "REQ-036",
+        "REQ-037",
+        "REQ-038",
+        "REQ-039",
+        "REQ-040",
+        "REQ-041",
+        "REQ-042",
+        "REQ-043",
+        "REQ-044",
+        "REQ-045"
+      ]
+    },
+    {
+      "owner_line": 137,
+      "text": "For future newly encountered transport timeouts, permit at most two requests for the exact required range, subject to:",
+      "section": 4,
+      "baseline_ids": [
+        "REQ-025",
+        "REQ-026",
+        "REQ-027",
+        "REQ-028",
+        "REQ-029",
+        "REQ-030",
+        "REQ-031",
+        "REQ-032",
+        "REQ-033",
+        "REQ-034",
+        "REQ-035",
+        "REQ-036",
+        "REQ-037",
+        "REQ-038",
+        "REQ-039",
+        "REQ-040",
+        "REQ-041",
+        "REQ-042",
+        "REQ-043",
+        "REQ-044",
+        "REQ-045"
+      ]
+    },
+    {
+      "owner_line": 138,
+      "text": "- At most two recovered transport failures per source",
+      "section": 4,
+      "baseline_ids": [
+        "REQ-025",
+        "REQ-026",
+        "REQ-027",
+        "REQ-028",
+        "REQ-029",
+        "REQ-030",
+        "REQ-031",
+        "REQ-032",
+        "REQ-033",
+        "REQ-034",
+        "REQ-035",
+        "REQ-036",
+        "REQ-037",
+        "REQ-038",
+        "REQ-039",
+        "REQ-040",
+        "REQ-041",
+        "REQ-042",
+        "REQ-043",
+        "REQ-044",
+        "REQ-045"
+      ]
+    },
+    {
+      "owner_line": 139,
+      "text": "- At most six recovered transport failures across R4",
+      "section": 4,
+      "baseline_ids": [
+        "REQ-025",
+        "REQ-026",
+        "REQ-027",
+        "REQ-028",
+        "REQ-029",
+        "REQ-030",
+        "REQ-031",
+        "REQ-032",
+        "REQ-033",
+        "REQ-034",
+        "REQ-035",
+        "REQ-036",
+        "REQ-037",
+        "REQ-038",
+        "REQ-039",
+        "REQ-040",
+        "REQ-041",
+        "REQ-042",
+        "REQ-043",
+        "REQ-044",
+        "REQ-045"
+      ]
+    },
+    {
+      "owner_line": 140,
+      "text": "- The original byte/request/wall limits",
+      "section": 4,
+      "baseline_ids": [
+        "REQ-025",
+        "REQ-026",
+        "REQ-027",
+        "REQ-028",
+        "REQ-029",
+        "REQ-030",
+        "REQ-031",
+        "REQ-032",
+        "REQ-033",
+        "REQ-034",
+        "REQ-035",
+        "REQ-036",
+        "REQ-037",
+        "REQ-038",
+        "REQ-039",
+        "REQ-040",
+        "REQ-041",
+        "REQ-042",
+        "REQ-043",
+        "REQ-044",
+        "REQ-045"
+      ]
+    },
+    {
+      "owner_line": 142,
+      "text": "No unbounded retry loop.",
+      "section": 4,
+      "baseline_ids": [
+        "REQ-025",
+        "REQ-026",
+        "REQ-027",
+        "REQ-028",
+        "REQ-029",
+        "REQ-030",
+        "REQ-031",
+        "REQ-032",
+        "REQ-033",
+        "REQ-034",
+        "REQ-035",
+        "REQ-036",
+        "REQ-037",
+        "REQ-038",
+        "REQ-039",
+        "REQ-040",
+        "REQ-041",
+        "REQ-042",
+        "REQ-043",
+        "REQ-044",
+        "REQ-045"
+      ]
+    },
+    {
+      "owner_line": 144,
+      "text": "No replacement URL/provider/dataset object, full-file download, whole-source fallback or silent alternate processing version.",
+      "section": 4,
+      "baseline_ids": [
+        "REQ-025",
+        "REQ-026",
+        "REQ-027",
+        "REQ-028",
+        "REQ-029",
+        "REQ-030",
+        "REQ-031",
+        "REQ-032",
+        "REQ-033",
+        "REQ-034",
+        "REQ-035",
+        "REQ-036",
+        "REQ-037",
+        "REQ-038",
+        "REQ-039",
+        "REQ-040",
+        "REQ-041",
+        "REQ-042",
+        "REQ-043",
+        "REQ-044",
+        "REQ-045"
+      ]
+    },
+    {
+      "owner_line": 146,
+      "text": "If source identity differs, required bytes remain unavailable or the recovery budget is exhausted, STOP_SOURCE.",
+      "section": 4,
+      "baseline_ids": [
+        "REQ-025",
+        "REQ-026",
+        "REQ-027",
+        "REQ-028",
+        "REQ-029",
+        "REQ-030",
+        "REQ-031",
+        "REQ-032",
+        "REQ-033",
+        "REQ-034",
+        "REQ-035",
+        "REQ-036",
+        "REQ-037",
+        "REQ-038",
+        "REQ-039",
+        "REQ-040",
+        "REQ-041",
+        "REQ-042",
+        "REQ-043",
+        "REQ-044",
+        "REQ-045"
+      ]
+    },
+    {
+      "owner_line": 148,
+      "text": "Do not skip the mouse and silently proceed to later data.",
+      "section": 4,
+      "baseline_ids": [
+        "REQ-025",
+        "REQ-026",
+        "REQ-027",
+        "REQ-028",
+        "REQ-029",
+        "REQ-030",
+        "REQ-031",
+        "REQ-032",
+        "REQ-033",
+        "REQ-034",
+        "REQ-035",
+        "REQ-036",
+        "REQ-037",
+        "REQ-038",
+        "REQ-039",
+        "REQ-040",
+        "REQ-041",
+        "REQ-042",
+        "REQ-043",
+        "REQ-044",
+        "REQ-045"
+      ]
+    },
+    {
+      "owner_line": 150,
+      "text": "## 5. NEW EXPLICIT RESOURCE BUDGET",
+      "section": 5,
+      "baseline_ids": [
+        "REQ-046",
+        "REQ-047",
+        "REQ-048",
+        "REQ-049",
+        "REQ-050",
+        "REQ-051",
+        "REQ-052",
+        "REQ-053",
+        "REQ-054",
+        "REQ-055"
+      ]
+    },
+    {
+      "owner_line": 152,
+      "text": "Keep R3's actual resource usage permanently in its historical ledger.",
+      "section": 5,
+      "baseline_ids": [
+        "REQ-046",
+        "REQ-047",
+        "REQ-048",
+        "REQ-049",
+        "REQ-050",
+        "REQ-051",
+        "REQ-052",
+        "REQ-053",
+        "REQ-054",
+        "REQ-055"
+      ]
+    },
+    {
+      "owner_line": 154,
+      "text": "Authorize a separate R4 recovery budget:",
+      "section": 5,
+      "baseline_ids": [
+        "REQ-046",
+        "REQ-047",
+        "REQ-048",
+        "REQ-049",
+        "REQ-050",
+        "REQ-051",
+        "REQ-052",
+        "REQ-053",
+        "REQ-054",
+        "REQ-055"
+      ]
+    },
+    {
+      "owner_line": 156,
+      "text": "- Maximum 8 GiB newly transferred source payload",
+      "section": 5,
+      "baseline_ids": [
+        "REQ-046",
+        "REQ-047",
+        "REQ-048",
+        "REQ-049",
+        "REQ-050",
+        "REQ-051",
+        "REQ-052",
+        "REQ-053",
+        "REQ-054",
+        "REQ-055"
+      ]
+    },
+    {
+      "owner_line": 157,
+      "text": "- Maximum 512 MiB newly transferred per source",
+      "section": 5,
+      "baseline_ids": [
+        "REQ-046",
+        "REQ-047",
+        "REQ-048",
+        "REQ-049",
+        "REQ-050",
+        "REQ-051",
+        "REQ-052",
+        "REQ-053",
+        "REQ-054",
+        "REQ-055"
+      ]
+    },
+    {
+      "owner_line": 158,
+      "text": "- Maximum 1 MiB per HTTP range request",
+      "section": 5,
+      "baseline_ids": [
+        "REQ-046",
+        "REQ-047",
+        "REQ-048",
+        "REQ-049",
+        "REQ-050",
+        "REQ-051",
+        "REQ-052",
+        "REQ-053",
+        "REQ-054",
+        "REQ-055"
+      ]
+    },
+    {
+      "owner_line": 159,
+      "text": "- Maximum 8192 HTTP requests per source",
+      "section": 5,
+      "baseline_ids": [
+        "REQ-046",
+        "REQ-047",
+        "REQ-048",
+        "REQ-049",
+        "REQ-050",
+        "REQ-051",
+        "REQ-052",
+        "REQ-053",
+        "REQ-054",
+        "REQ-055"
+      ]
+    },
+    {
+      "owner_line": 160,
+      "text": "- At most four concurrent workers, with sequential recovery preferred",
+      "section": 5,
+      "baseline_ids": [
+        "REQ-046",
+        "REQ-047",
+        "REQ-048",
+        "REQ-049",
+        "REQ-050",
+        "REQ-051",
+        "REQ-052",
+        "REQ-053",
+        "REQ-054",
+        "REQ-055"
+      ]
+    },
+    {
+      "owner_line": 161,
+      "text": "- One new maximum 48-hour R4 source-stage wall deadline",
+      "section": 5,
+      "baseline_ids": [
+        "REQ-046",
+        "REQ-047",
+        "REQ-048",
+        "REQ-049",
+        "REQ-050",
+        "REQ-051",
+        "REQ-052",
+        "REQ-053",
+        "REQ-054",
+        "REQ-055"
+      ]
+    },
+    {
+      "owner_line": 163,
+      "text": "The 48-hour R4 deadline is a new prospective authorization, not a rewriting of the elapsed or stopped R3 clock.",
+      "section": 5,
+      "baseline_ids": [
+        "REQ-046",
+        "REQ-047",
+        "REQ-048",
+        "REQ-049",
+        "REQ-050",
+        "REQ-051",
+        "REQ-052",
+        "REQ-053",
+        "REQ-054",
+        "REQ-055"
+      ]
+    },
+    {
+      "owner_line": 165,
+      "text": "Within R4, the deadline may never reset between phases, sources or worker restarts.",
+      "section": 5,
+      "baseline_ids": [
+        "REQ-046",
+        "REQ-047",
+        "REQ-048",
+        "REQ-049",
+        "REQ-050",
+        "REQ-051",
+        "REQ-052",
+        "REQ-053",
+        "REQ-054",
+        "REQ-055"
+      ]
+    },
+    {
+      "owner_line": 167,
+      "text": "Retain independent historical, R3 and R4 usage totals.",
+      "section": 5,
+      "baseline_ids": [
+        "REQ-046",
+        "REQ-047",
+        "REQ-048",
+        "REQ-049",
+        "REQ-050",
+        "REQ-051",
+        "REQ-052",
+        "REQ-053",
+        "REQ-054",
+        "REQ-055"
+      ]
+    },
+    {
+      "owner_line": 169,
+      "text": "No new optimizer budget is activated.",
+      "section": 5,
+      "baseline_ids": [
+        "REQ-046",
+        "REQ-047",
+        "REQ-048",
+        "REQ-049",
+        "REQ-050",
+        "REQ-051",
+        "REQ-052",
+        "REQ-053",
+        "REQ-054",
+        "REQ-055"
+      ]
+    },
+    {
+      "owner_line": 171,
+      "text": "## 6. RECOVER THE FOURTH SOURCE FIRST",
+      "section": 6,
+      "baseline_ids": [
+        "REQ-056",
+        "REQ-057",
+        "REQ-058",
+        "REQ-059",
+        "REQ-060",
+        "REQ-061",
+        "REQ-062"
+      ]
+    },
+    {
+      "owner_line": 173,
+      "text": "Before touching any of the remaining twenty-four sources:",
+      "section": 6,
+      "baseline_ids": [
+        "REQ-056",
+        "REQ-057",
+        "REQ-058",
+        "REQ-059",
+        "REQ-060",
+        "REQ-061",
+        "REQ-062"
+      ]
+    },
+    {
+      "owner_line": 175,
+      "text": "1. Verify the preserved nineteen completed candidate captures.",
+      "section": 6,
+      "baseline_ids": [
+        "REQ-056",
+        "REQ-057",
+        "REQ-058",
+        "REQ-059",
+        "REQ-060",
+        "REQ-061",
+        "REQ-062"
+      ]
+    },
+    {
+      "owner_line": 176,
+      "text": "2. Recover and authenticate the exact missing range.",
+      "section": 6,
+      "baseline_ids": [
+        "REQ-056",
+        "REQ-057",
+        "REQ-058",
+        "REQ-059",
+        "REQ-060",
+        "REQ-061",
+        "REQ-062"
+      ]
+    },
+    {
+      "owner_line": 177,
+      "text": "3. Complete the interrupted twentieth candidate under the frozen reader rules.",
+      "section": 6,
+      "baseline_ids": [
+        "REQ-056",
+        "REQ-057",
+        "REQ-058",
+        "REQ-059",
+        "REQ-060",
+        "REQ-061",
+        "REQ-062"
+      ]
+    },
+    {
+      "owner_line": 178,
+      "text": "4. Continue only the previously unexecuted candidate rows for the original fourth source.",
+      "section": 6,
+      "baseline_ids": [
+        "REQ-056",
+        "REQ-057",
+        "REQ-058",
+        "REQ-059",
+        "REQ-060",
+        "REQ-061",
+        "REQ-062"
+      ]
+    },
+    {
+      "owner_line": 179,
+      "text": "5. Perform all original source integrity and A-only physiological checks.",
+      "section": 6,
+      "baseline_ids": [
+        "REQ-056",
+        "REQ-057",
+        "REQ-058",
+        "REQ-059",
+        "REQ-060",
+        "REQ-061",
+        "REQ-062"
+      ]
+    },
+    {
+      "owner_line": 180,
+      "text": "6. Independently review the complete fourth-source result.",
+      "section": 6,
+      "baseline_ids": [
+        "REQ-056",
+        "REQ-057",
+        "REQ-058",
+        "REQ-059",
+        "REQ-060",
+        "REQ-061",
+        "REQ-062"
+      ]
+    },
+    {
+      "owner_line": 182,
+      "text": "Do not admit the mouse until its complete mandatory source and physiological conditions pass.",
+      "section": 6,
+      "baseline_ids": [
+        "REQ-056",
+        "REQ-057",
+        "REQ-058",
+        "REQ-059",
+        "REQ-060",
+        "REQ-061",
+        "REQ-062"
+      ]
+    },
+    {
+      "owner_line": 184,
+      "text": "If this recovery fails, end R4 immediately with a truthful STOP report.",
+      "section": 6,
+      "baseline_ids": [
+        "REQ-056",
+        "REQ-057",
+        "REQ-058",
+        "REQ-059",
+        "REQ-060",
+        "REQ-061",
+        "REQ-062"
+      ]
+    },
+    {
+      "owner_line": 186,
+      "text": "Do not switch to an easier FC source or another BO mouse.",
+      "section": 6,
+      "baseline_ids": [
+        "REQ-056",
+        "REQ-057",
+        "REQ-058",
+        "REQ-059",
+        "REQ-060",
+        "REQ-061",
+        "REQ-062"
+      ]
+    },
+    {
+      "owner_line": 188,
+      "text": "## 7. COMPLETE THE ORIGINAL DEVELOPMENT M2",
+      "section": 7,
+      "baseline_ids": [
+        "REQ-063",
+        "REQ-064",
+        "REQ-065",
+        "REQ-066",
+        "REQ-067",
+        "REQ-068",
+        "REQ-069",
+        "REQ-070",
+        "REQ-071",
+        "REQ-072",
+        "REQ-073",
+        "REQ-074",
+        "REQ-075",
+        "REQ-076",
+        "REQ-077",
+        "REQ-078",
+        "REQ-079"
+      ]
+    },
+    {
+      "owner_line": 190,
+      "text": "Only after the fourth source passes its required source-integrity review, continue the twenty-four originally unattempted sources in their frozen sequence.",
+      "section": 7,
+      "baseline_ids": [
+        "REQ-063",
+        "REQ-064",
+        "REQ-065",
+        "REQ-066",
+        "REQ-067",
+        "REQ-068",
+        "REQ-069",
+        "REQ-070",
+        "REQ-071",
+        "REQ-072",
+        "REQ-073",
+        "REQ-074",
+        "REQ-075",
+        "REQ-076",
+        "REQ-077",
+        "REQ-078",
+        "REQ-079"
+      ]
+    },
+    {
+      "owner_line": 192,
+      "text": "Apply the unchanged physiological QC:",
+      "section": 7,
+      "baseline_ids": [
+        "REQ-063",
+        "REQ-064",
+        "REQ-065",
+        "REQ-066",
+        "REQ-067",
+        "REQ-068",
+        "REQ-069",
+        "REQ-070",
+        "REQ-071",
+        "REQ-072",
+        "REQ-073",
+        "REQ-074",
+        "REQ-075",
+        "REQ-076",
+        "REQ-077",
+        "REQ-078",
+        "REQ-079"
+      ]
+    },
+    {
+      "owner_line": 194,
+      "text": "- A-only observations",
+      "section": 7,
+      "baseline_ids": [
+        "REQ-063",
+        "REQ-064",
+        "REQ-065",
+        "REQ-066",
+        "REQ-067",
+        "REQ-068",
+        "REQ-069",
+        "REQ-070",
+        "REQ-071",
+        "REQ-072",
+        "REQ-073",
+        "REQ-074",
+        "REQ-075",
+        "REQ-076",
+        "REQ-077",
+        "REQ-078",
+        "REQ-079"
+      ]
+    },
+    {
+      "owner_line": 195,
+      "text": "- Original source-curated support and known invalid masks",
+      "section": 7,
+      "baseline_ids": [
+        "REQ-063",
+        "REQ-064",
+        "REQ-065",
+        "REQ-066",
+        "REQ-067",
+        "REQ-068",
+        "REQ-069",
+        "REQ-070",
+        "REQ-071",
+        "REQ-072",
+        "REQ-073",
+        "REQ-074",
+        "REQ-075",
+        "REQ-076",
+        "REQ-077",
+        "REQ-078",
+        "REQ-079"
+      ]
+    },
+    {
+      "owner_line": 196,
+      "text": "- Exact native timestamp semantics",
+      "section": 7,
+      "baseline_ids": [
+        "REQ-063",
+        "REQ-064",
+        "REQ-065",
+        "REQ-066",
+        "REQ-067",
+        "REQ-068",
+        "REQ-069",
+        "REQ-070",
+        "REQ-071",
+        "REQ-072",
+        "REQ-073",
+        "REQ-074",
+        "REQ-075",
+        "REQ-076",
+        "REQ-077",
+        "REQ-078",
+        "REQ-079"
+      ]
+    },
+    {
+      "owner_line": 197,
+      "text": "- Original minimum spike counts",
+      "section": 7,
+      "baseline_ids": [
+        "REQ-063",
+        "REQ-064",
+        "REQ-065",
+        "REQ-066",
+        "REQ-067",
+        "REQ-068",
+        "REQ-069",
+        "REQ-070",
+        "REQ-071",
+        "REQ-072",
+        "REQ-073",
+        "REQ-074",
+        "REQ-075",
+        "REQ-076",
+        "REQ-077",
+        "REQ-078",
+        "REQ-079"
+      ]
+    },
+    {
+      "owner_line": 198,
+      "text": "- Original occupancy requirements",
+      "section": 7,
+      "baseline_ids": [
+        "REQ-063",
+        "REQ-064",
+        "REQ-065",
+        "REQ-066",
+        "REQ-067",
+        "REQ-068",
+        "REQ-069",
+        "REQ-070",
+        "REQ-071",
+        "REQ-072",
+        "REQ-073",
+        "REQ-074",
+        "REQ-075",
+        "REQ-076",
+        "REQ-077",
+        "REQ-078",
+        "REQ-079"
+      ]
+    },
+    {
+      "owner_line": 199,
+      "text": "- Original firing-rate bounds",
+      "section": 7,
+      "baseline_ids": [
+        "REQ-063",
+        "REQ-064",
+        "REQ-065",
+        "REQ-066",
+        "REQ-067",
+        "REQ-068",
+        "REQ-069",
+        "REQ-070",
+        "REQ-071",
+        "REQ-072",
+        "REQ-073",
+        "REQ-074",
+        "REQ-075",
+        "REQ-076",
+        "REQ-077",
+        "REQ-078",
+        "REQ-079"
+      ]
+    },
+    {
+      "owner_line": 200,
+      "text": "- Original within-presentation refractory rules",
+      "section": 7,
+      "baseline_ids": [
+        "REQ-063",
+        "REQ-064",
+        "REQ-065",
+        "REQ-066",
+        "REQ-067",
+        "REQ-068",
+        "REQ-069",
+        "REQ-070",
+        "REQ-071",
+        "REQ-072",
+        "REQ-073",
+        "REQ-074",
+        "REQ-075",
+        "REQ-076",
+        "REQ-077",
+        "REQ-078",
+        "REQ-079"
+      ]
+    },
+    {
+      "owner_line": 201,
+      "text": "- Exactly eight qualified units selected by the frozen numeric-ID policy",
+      "section": 7,
+      "baseline_ids": [
+        "REQ-063",
+        "REQ-064",
+        "REQ-065",
+        "REQ-066",
+        "REQ-067",
+        "REQ-068",
+        "REQ-069",
+        "REQ-070",
+        "REQ-071",
+        "REQ-072",
+        "REQ-073",
+        "REQ-074",
+        "REQ-075",
+        "REQ-076",
+        "REQ-077",
+        "REQ-078",
+        "REQ-079"
+      ]
+    },
+    {
+      "owner_line": 202,
+      "text": "- Verified selected-unit common support",
+      "section": 7,
+      "baseline_ids": [
+        "REQ-063",
+        "REQ-064",
+        "REQ-065",
+        "REQ-066",
+        "REQ-067",
+        "REQ-068",
+        "REQ-069",
+        "REQ-070",
+        "REQ-071",
+        "REQ-072",
+        "REQ-073",
+        "REQ-074",
+        "REQ-075",
+        "REQ-076",
+        "REQ-077",
+        "REQ-078",
+        "REQ-079"
+      ]
+    },
+    {
+      "owner_line": 203,
+      "text": "- Original per-role and per-color coverage",
+      "section": 7,
+      "baseline_ids": [
+        "REQ-063",
+        "REQ-064",
+        "REQ-065",
+        "REQ-066",
+        "REQ-067",
+        "REQ-068",
+        "REQ-069",
+        "REQ-070",
+        "REQ-071",
+        "REQ-072",
+        "REQ-073",
+        "REQ-074",
+        "REQ-075",
+        "REQ-076",
+        "REQ-077",
+        "REQ-078",
+        "REQ-079"
+      ]
+    },
+    {
+      "owner_line": 205,
+      "text": "Do not perform new physiological ranking with B or E observations.",
+      "section": 7,
+      "baseline_ids": [
+        "REQ-063",
+        "REQ-064",
+        "REQ-065",
+        "REQ-066",
+        "REQ-067",
+        "REQ-068",
+        "REQ-069",
+        "REQ-070",
+        "REQ-071",
+        "REQ-072",
+        "REQ-073",
+        "REQ-074",
+        "REQ-075",
+        "REQ-076",
+        "REQ-077",
+        "REQ-078",
+        "REQ-079"
+      ]
+    },
+    {
+      "owner_line": 207,
+      "text": "Keep all valid zero-spike bins.",
+      "section": 7,
+      "baseline_ids": [
+        "REQ-063",
+        "REQ-064",
+        "REQ-065",
+        "REQ-066",
+        "REQ-067",
+        "REQ-068",
+        "REQ-069",
+        "REQ-070",
+        "REQ-071",
+        "REQ-072",
+        "REQ-073",
+        "REQ-074",
+        "REQ-075",
+        "REQ-076",
+        "REQ-077",
+        "REQ-078",
+        "REQ-079"
+      ]
+    },
+    {
+      "owner_line": 209,
+      "text": "Do not concatenate ISI intervals across presentation gaps.",
+      "section": 7,
+      "baseline_ids": [
+        "REQ-063",
+        "REQ-064",
+        "REQ-065",
+        "REQ-066",
+        "REQ-067",
+        "REQ-068",
+        "REQ-069",
+        "REQ-070",
+        "REQ-071",
+        "REQ-072",
+        "REQ-073",
+        "REQ-074",
+        "REQ-075",
+        "REQ-076",
+        "REQ-077",
+        "REQ-078",
+        "REQ-079"
+      ]
+    },
+    {
+      "owner_line": 211,
+      "text": "Do not turn absent optional source annotations into proof of artifact-free neural recording.",
+      "section": 7,
+      "baseline_ids": [
+        "REQ-063",
+        "REQ-064",
+        "REQ-065",
+        "REQ-066",
+        "REQ-067",
+        "REQ-068",
+        "REQ-069",
+        "REQ-070",
+        "REQ-071",
+        "REQ-072",
+        "REQ-073",
+        "REQ-074",
+        "REQ-075",
+        "REQ-076",
+        "REQ-077",
+        "REQ-078",
+        "REQ-079"
+      ]
+    },
+    {
+      "owner_line": 213,
+      "text": "Provider whole-session unit curation remains an upstream sampling frame.",
+      "section": 7,
+      "baseline_ids": [
+        "REQ-063",
+        "REQ-064",
+        "REQ-065",
+        "REQ-066",
+        "REQ-067",
+        "REQ-068",
+        "REQ-069",
+        "REQ-070",
+        "REQ-071",
+        "REQ-072",
+        "REQ-073",
+        "REQ-074",
+        "REQ-075",
+        "REQ-076",
+        "REQ-077",
+        "REQ-078",
+        "REQ-079"
+      ]
+    },
+    {
+      "owner_line": 215,
+      "text": "Only A neural arrays may be exported for the currently authorized scientific preparation.",
+      "section": 7,
+      "baseline_ids": [
+        "REQ-063",
+        "REQ-064",
+        "REQ-065",
+        "REQ-066",
+        "REQ-067",
+        "REQ-068",
+        "REQ-069",
+        "REQ-070",
+        "REQ-071",
+        "REQ-072",
+        "REQ-073",
+        "REQ-074",
+        "REQ-075",
+        "REQ-076",
+        "REQ-077",
+        "REQ-078",
+        "REQ-079"
+      ]
+    },
+    {
+      "owner_line": 217,
+      "text": "Do not use B/E outcomes for source, unit or hyperparameter selection.",
+      "section": 7,
+      "baseline_ids": [
+        "REQ-063",
+        "REQ-064",
+        "REQ-065",
+        "REQ-066",
+        "REQ-067",
+        "REQ-068",
+        "REQ-069",
+        "REQ-070",
+        "REQ-071",
+        "REQ-072",
+        "REQ-073",
+        "REQ-074",
+        "REQ-075",
+        "REQ-076",
+        "REQ-077",
+        "REQ-078",
+        "REQ-079"
+      ]
+    },
+    {
+      "owner_line": 219,
+      "text": "No Final neural source may be opened.",
+      "section": 7,
+      "baseline_ids": [
+        "REQ-063",
+        "REQ-064",
+        "REQ-065",
+        "REQ-066",
+        "REQ-067",
+        "REQ-068",
+        "REQ-069",
+        "REQ-070",
+        "REQ-071",
+        "REQ-072",
+        "REQ-073",
+        "REQ-074",
+        "REQ-075",
+        "REQ-076",
+        "REQ-077",
+        "REQ-078",
+        "REQ-079"
+      ]
+    },
+    {
+      "owner_line": 221,
+      "text": "## 8. M2 SCIENTIFIC ADMISSION GATE",
+      "section": 8,
+      "baseline_ids": [
+        "REQ-080",
+        "REQ-081",
+        "REQ-082",
+        "REQ-083",
+        "REQ-084",
+        "REQ-085",
+        "REQ-086",
+        "REQ-087",
+        "REQ-088",
+        "REQ-089"
+      ]
+    },
+    {
+      "owner_line": 223,
+      "text": "The frozen Development minimum is:",
+      "section": 8,
+      "baseline_ids": [
+        "REQ-080",
+        "REQ-081",
+        "REQ-082",
+        "REQ-083",
+        "REQ-084",
+        "REQ-085",
+        "REQ-086",
+        "REQ-087",
+        "REQ-088",
+        "REQ-089"
+      ]
+    },
+    {
+      "owner_line": 225,
+      "text": "At least 14 admitted independent mice overall.",
+      "section": 8,
+      "baseline_ids": [
+        "REQ-080",
+        "REQ-081",
+        "REQ-082",
+        "REQ-083",
+        "REQ-084",
+        "REQ-085",
+        "REQ-086",
+        "REQ-087",
+        "REQ-088",
+        "REQ-089"
+      ]
+    },
+    {
+      "owner_line": 227,
+      "text": "At least 3 admitted BO mice.",
+      "section": 8,
+      "baseline_ids": [
+        "REQ-080",
+        "REQ-081",
+        "REQ-082",
+        "REQ-083",
+        "REQ-084",
+        "REQ-085",
+        "REQ-086",
+        "REQ-087",
+        "REQ-088",
+        "REQ-089"
+      ]
+    },
+    {
+      "owner_line": 229,
+      "text": "At least 10 admitted FC mice.",
+      "section": 8,
+      "baseline_ids": [
+        "REQ-080",
+        "REQ-081",
+        "REQ-082",
+        "REQ-083",
+        "REQ-084",
+        "REQ-085",
+        "REQ-086",
+        "REQ-087",
+        "REQ-088",
+        "REQ-089"
+      ]
+    },
+    {
+      "owner_line": 231,
+      "text": "All counted mice must have eight qualified local VISp units and all required A/B/E metadata coverage.",
+      "section": 8,
+      "baseline_ids": [
+        "REQ-080",
+        "REQ-081",
+        "REQ-082",
+        "REQ-083",
+        "REQ-084",
+        "REQ-085",
+        "REQ-086",
+        "REQ-087",
+        "REQ-088",
+        "REQ-089"
+      ]
+    },
+    {
+      "owner_line": 233,
+      "text": "The following are NOT acceptable:",
+      "section": 8,
+      "baseline_ids": [
+        "REQ-080",
+        "REQ-081",
+        "REQ-082",
+        "REQ-083",
+        "REQ-084",
+        "REQ-085",
+        "REQ-086",
+        "REQ-087",
+        "REQ-088",
+        "REQ-089"
+      ]
+    },
+    {
+      "owner_line": 235,
+      "text": "- Counting partially read mice",
+      "section": 8,
+      "baseline_ids": [
+        "REQ-080",
+        "REQ-081",
+        "REQ-082",
+        "REQ-083",
+        "REQ-084",
+        "REQ-085",
+        "REQ-086",
+        "REQ-087",
+        "REQ-088",
+        "REQ-089"
+      ]
+    },
+    {
+      "owner_line": 236,
+      "text": "- Treating candidate units as admitted animals",
+      "section": 8,
+      "baseline_ids": [
+        "REQ-080",
+        "REQ-081",
+        "REQ-082",
+        "REQ-083",
+        "REQ-084",
+        "REQ-085",
+        "REQ-086",
+        "REQ-087",
+        "REQ-088",
+        "REQ-089"
+      ]
+    },
+    {
+      "owner_line": 237,
+      "text": "- Relaxing source or physiological thresholds",
+      "section": 8,
+      "baseline_ids": [
+        "REQ-080",
+        "REQ-081",
+        "REQ-082",
+        "REQ-083",
+        "REQ-084",
+        "REQ-085",
+        "REQ-086",
+        "REQ-087",
+        "REQ-088",
+        "REQ-089"
+      ]
+    },
+    {
+      "owner_line": 238,
+      "text": "- Combining probes or sessions",
+      "section": 8,
+      "baseline_ids": [
+        "REQ-080",
+        "REQ-081",
+        "REQ-082",
+        "REQ-083",
+        "REQ-084",
+        "REQ-085",
+        "REQ-086",
+        "REQ-087",
+        "REQ-088",
+        "REQ-089"
+      ]
+    },
+    {
+      "owner_line": 239,
+      "text": "- Replacing failed mice",
+      "section": 8,
+      "baseline_ids": [
+        "REQ-080",
+        "REQ-081",
+        "REQ-082",
+        "REQ-083",
+        "REQ-084",
+        "REQ-085",
+        "REQ-086",
+        "REQ-087",
+        "REQ-088",
+        "REQ-089"
+      ]
+    },
+    {
+      "owner_line": 240,
+      "text": "- Dropping a mandatory source-integrity failure as ordinary biological attrition",
+      "section": 8,
+      "baseline_ids": [
+        "REQ-080",
+        "REQ-081",
+        "REQ-082",
+        "REQ-083",
+        "REQ-084",
+        "REQ-085",
+        "REQ-086",
+        "REQ-087",
+        "REQ-088",
+        "REQ-089"
+      ]
+    },
+    {
+      "owner_line": 242,
+      "text": "If a fully verified original source yields genuine physiological exclusion, retain that exclusion and its evidence.",
+      "section": 8,
+      "baseline_ids": [
+        "REQ-080",
+        "REQ-081",
+        "REQ-082",
+        "REQ-083",
+        "REQ-084",
+        "REQ-085",
+        "REQ-086",
+        "REQ-087",
+        "REQ-088",
+        "REQ-089"
+      ]
+    },
+    {
+      "owner_line": 244,
+      "text": "Every original Development source must have a complete, defensible terminal disposition before the cohort-level decision.",
+      "section": 8,
+      "baseline_ids": [
+        "REQ-080",
+        "REQ-081",
+        "REQ-082",
+        "REQ-083",
+        "REQ-084",
+        "REQ-085",
+        "REQ-086",
+        "REQ-087",
+        "REQ-088",
+        "REQ-089"
+      ]
+    },
+    {
+      "owner_line": 246,
+      "text": "If the final cohort misses 14/3/10, return DATA_INSUFFICIENT under the frozen design.",
+      "section": 8,
+      "baseline_ids": [
+        "REQ-080",
+        "REQ-081",
+        "REQ-082",
+        "REQ-083",
+        "REQ-084",
+        "REQ-085",
+        "REQ-086",
+        "REQ-087",
+        "REQ-088",
+        "REQ-089"
+      ]
+    },
+    {
+      "owner_line": 248,
+      "text": "If an essential source failure persists, return STOP_SOURCE.",
+      "section": 8,
+      "baseline_ids": [
+        "REQ-080",
+        "REQ-081",
+        "REQ-082",
+        "REQ-083",
+        "REQ-084",
+        "REQ-085",
+        "REQ-086",
+        "REQ-087",
+        "REQ-088",
+        "REQ-089"
+      ]
+    },
+    {
+      "owner_line": 250,
+      "text": "No model fitting follows either result.",
+      "section": 8,
+      "baseline_ids": [
+        "REQ-080",
+        "REQ-081",
+        "REQ-082",
+        "REQ-083",
+        "REQ-084",
+        "REQ-085",
+        "REQ-086",
+        "REQ-087",
+        "REQ-088",
+        "REQ-089"
+      ]
+    },
+    {
+      "owner_line": 252,
+      "text": "## 9. SOURCE-ONLY COMPLETION",
+      "section": 9,
+      "baseline_ids": [
+        "REQ-090",
+        "REQ-091",
+        "REQ-092",
+        "REQ-093",
+        "REQ-094"
+      ]
+    },
+    {
+      "owner_line": 254,
+      "text": "If M2 is fully successful:",
+      "section": 9,
+      "baseline_ids": [
+        "REQ-090",
+        "REQ-091",
+        "REQ-092",
+        "REQ-093",
+        "REQ-094"
+      ]
+    },
+    {
+      "owner_line": 256,
+      "text": "Freeze:",
+      "section": 9,
+      "baseline_ids": [
+        "REQ-090",
+        "REQ-091",
+        "REQ-092",
+        "REQ-093",
+        "REQ-094"
+      ]
+    },
+    {
+      "owner_line": 257,
+      "text": "- Complete 28-mouse source ledger",
+      "section": 9,
+      "baseline_ids": [
+        "REQ-090",
+        "REQ-091",
+        "REQ-092",
+        "REQ-093",
+        "REQ-094"
+      ]
+    },
+    {
+      "owner_line": 258,
+      "text": "- Actual physiological admissions",
+      "section": 9,
+      "baseline_ids": [
+        "REQ-090",
+        "REQ-091",
+        "REQ-092",
+        "REQ-093",
+        "REQ-094"
+      ]
+    },
+    {
+      "owner_line": 259,
+      "text": "- BO and FC denominators",
+      "section": 9,
+      "baseline_ids": [
+        "REQ-090",
+        "REQ-091",
+        "REQ-092",
+        "REQ-093",
+        "REQ-094"
+      ]
+    },
+    {
+      "owner_line": 260,
+      "text": "- Exact selected unit identities",
+      "section": 9,
+      "baseline_ids": [
+        "REQ-090",
+        "REQ-091",
+        "REQ-092",
+        "REQ-093",
+        "REQ-094"
+      ]
+    },
+    {
+      "owner_line": 261,
+      "text": "- A-only observation/scaling inputs",
+      "section": 9,
+      "baseline_ids": [
+        "REQ-090",
+        "REQ-091",
+        "REQ-092",
+        "REQ-093",
+        "REQ-094"
+      ]
+    },
+    {
+      "owner_line": 262,
+      "text": "- All exclusions and known limitations",
+      "section": 9,
+      "baseline_ids": [
+        "REQ-090",
+        "REQ-091",
+        "REQ-092",
+        "REQ-093",
+        "REQ-094"
+      ]
+    },
+    {
+      "owner_line": 263,
+      "text": "- Source/version/clock identity",
+      "section": 9,
+      "baseline_ids": [
+        "REQ-090",
+        "REQ-091",
+        "REQ-092",
+        "REQ-093",
+        "REQ-094"
+      ]
+    },
+    {
+      "owner_line": 264,
+      "text": "- All original A/B/E metadata partitions",
+      "section": 9,
+      "baseline_ids": [
+        "REQ-090",
+        "REQ-091",
+        "REQ-092",
+        "REQ-093",
+        "REQ-094"
+      ]
+    },
+    {
+      "owner_line": 265,
+      "text": "- All resource and transport receipts",
+      "section": 9,
+      "baseline_ids": [
+        "REQ-090",
+        "REQ-091",
+        "REQ-092",
+        "REQ-093",
+        "REQ-094"
+      ]
+    },
+    {
+      "owner_line": 267,
+      "text": "Prepare a compact M3–M5 handoff.",
+      "section": 9,
+      "baseline_ids": [
+        "REQ-090",
+        "REQ-091",
+        "REQ-092",
+        "REQ-093",
+        "REQ-094"
+      ]
+    },
+    {
+      "owner_line": 269,
+      "text": "The handoff may reference the frozen numerical policies and production requirements.",
+      "section": 9,
+      "baseline_ids": [
+        "REQ-090",
+        "REQ-091",
+        "REQ-092",
+        "REQ-093",
+        "REQ-094"
+      ]
+    },
+    {
+      "owner_line": 271,
+      "text": "It must NOT implement real models, activate optimizer attempts, perform B selection or access E neural outcomes.",
+      "section": 9,
+      "baseline_ids": [
+        "REQ-090",
+        "REQ-091",
+        "REQ-092",
+        "REQ-093",
+        "REQ-094"
+      ]
+    },
+    {
+      "owner_line": 273,
+      "text": "Model fitting requires a subsequent separately authorized mission.",
+      "section": 9,
+      "baseline_ids": [
+        "REQ-090",
+        "REQ-091",
+        "REQ-092",
+        "REQ-093",
+        "REQ-094"
+      ]
+    },
+    {
+      "owner_line": 275,
+      "text": "## 10. REPRODUCIBILITY AND REVIEW",
+      "section": 10,
+      "baseline_ids": [
+        "REQ-095",
+        "REQ-096",
+        "REQ-097",
+        "REQ-098",
+        "REQ-099",
+        "REQ-100",
+        "REQ-101",
+        "REQ-102",
+        "REQ-103",
+        "REQ-104",
+        "REQ-105",
+        "REQ-106",
+        "REQ-107",
+        "REQ-108",
+        "REQ-109",
+        "REQ-110",
+        "REQ-111",
+        "REQ-112"
+      ]
+    },
+    {
+      "owner_line": 277,
+      "text": "Run meaningful focused transport and source regressions, including:",
+      "section": 10,
+      "baseline_ids": [
+        "REQ-095",
+        "REQ-096",
+        "REQ-097",
+        "REQ-098",
+        "REQ-099",
+        "REQ-100",
+        "REQ-101",
+        "REQ-102",
+        "REQ-103",
+        "REQ-104",
+        "REQ-105",
+        "REQ-106",
+        "REQ-107",
+        "REQ-108",
+        "REQ-109",
+        "REQ-110",
+        "REQ-111",
+        "REQ-112"
+      ]
+    },
+    {
+      "owner_line": 279,
+      "text": "- Saved partial-prefix corruption detection",
+      "section": 10,
+      "baseline_ids": [
+        "REQ-095",
+        "REQ-096",
+        "REQ-097",
+        "REQ-098",
+        "REQ-099",
+        "REQ-100",
+        "REQ-101",
+        "REQ-102",
+        "REQ-103",
+        "REQ-104",
+        "REQ-105",
+        "REQ-106",
+        "REQ-107",
+        "REQ-108",
+        "REQ-109",
+        "REQ-110",
+        "REQ-111",
+        "REQ-112"
+      ]
+    },
+    {
+      "owner_line": 280,
+      "text": "- Wrong ETag rejection",
+      "section": 10,
+      "baseline_ids": [
+        "REQ-095",
+        "REQ-096",
+        "REQ-097",
+        "REQ-098",
+        "REQ-099",
+        "REQ-100",
+        "REQ-101",
+        "REQ-102",
+        "REQ-103",
+        "REQ-104",
+        "REQ-105",
+        "REQ-106",
+        "REQ-107",
+        "REQ-108",
+        "REQ-109",
+        "REQ-110",
+        "REQ-111",
+        "REQ-112"
+      ]
+    },
+    {
+      "owner_line": 281,
+      "text": "- Wrong Content-Range rejection",
+      "section": 10,
+      "baseline_ids": [
+        "REQ-095",
+        "REQ-096",
+        "REQ-097",
+        "REQ-098",
+        "REQ-099",
+        "REQ-100",
+        "REQ-101",
+        "REQ-102",
+        "REQ-103",
+        "REQ-104",
+        "REQ-105",
+        "REQ-106",
+        "REQ-107",
+        "REQ-108",
+        "REQ-109",
+        "REQ-110",
+        "REQ-111",
+        "REQ-112"
+      ]
+    },
+    {
+      "owner_line": 282,
+      "text": "- Offset overlap/gap rejection",
+      "section": 10,
+      "baseline_ids": [
+        "REQ-095",
+        "REQ-096",
+        "REQ-097",
+        "REQ-098",
+        "REQ-099",
+        "REQ-100",
+        "REQ-101",
+        "REQ-102",
+        "REQ-103",
+        "REQ-104",
+        "REQ-105",
+        "REQ-106",
+        "REQ-107",
+        "REQ-108",
+        "REQ-109",
+        "REQ-110",
+        "REQ-111",
+        "REQ-112"
+      ]
+    },
+    {
+      "owner_line": 283,
+      "text": "- Partial response rejection",
+      "section": 10,
+      "baseline_ids": [
+        "REQ-095",
+        "REQ-096",
+        "REQ-097",
+        "REQ-098",
+        "REQ-099",
+        "REQ-100",
+        "REQ-101",
+        "REQ-102",
+        "REQ-103",
+        "REQ-104",
+        "REQ-105",
+        "REQ-106",
+        "REQ-107",
+        "REQ-108",
+        "REQ-109",
+        "REQ-110",
+        "REQ-111",
+        "REQ-112"
+      ]
+    },
+    {
+      "owner_line": 284,
+      "text": "- Bounded-retry exhaustion",
+      "section": 10,
+      "baseline_ids": [
+        "REQ-095",
+        "REQ-096",
+        "REQ-097",
+        "REQ-098",
+        "REQ-099",
+        "REQ-100",
+        "REQ-101",
+        "REQ-102",
+        "REQ-103",
+        "REQ-104",
+        "REQ-105",
+        "REQ-106",
+        "REQ-107",
+        "REQ-108",
+        "REQ-109",
+        "REQ-110",
+        "REQ-111",
+        "REQ-112"
+      ]
+    },
+    {
+      "owner_line": 285,
+      "text": "- Resource-cap enforcement",
+      "section": 10,
+      "baseline_ids": [
+        "REQ-095",
+        "REQ-096",
+        "REQ-097",
+        "REQ-098",
+        "REQ-099",
+        "REQ-100",
+        "REQ-101",
+        "REQ-102",
+        "REQ-103",
+        "REQ-104",
+        "REQ-105",
+        "REQ-106",
+        "REQ-107",
+        "REQ-108",
+        "REQ-109",
+        "REQ-110",
+        "REQ-111",
+        "REQ-112"
+      ]
+    },
+    {
+      "owner_line": 286,
+      "text": "- Source identity mismatch",
+      "section": 10,
+      "baseline_ids": [
+        "REQ-095",
+        "REQ-096",
+        "REQ-097",
+        "REQ-098",
+        "REQ-099",
+        "REQ-100",
+        "REQ-101",
+        "REQ-102",
+        "REQ-103",
+        "REQ-104",
+        "REQ-105",
+        "REQ-106",
+        "REQ-107",
+        "REQ-108",
+        "REQ-109",
+        "REQ-110",
+        "REQ-111",
+        "REQ-112"
+      ]
+    },
+    {
+      "owner_line": 287,
+      "text": "- Candidate-row integrity",
+      "section": 10,
+      "baseline_ids": [
+        "REQ-095",
+        "REQ-096",
+        "REQ-097",
+        "REQ-098",
+        "REQ-099",
+        "REQ-100",
+        "REQ-101",
+        "REQ-102",
+        "REQ-103",
+        "REQ-104",
+        "REQ-105",
+        "REQ-106",
+        "REQ-107",
+        "REQ-108",
+        "REQ-109",
+        "REQ-110",
+        "REQ-111",
+        "REQ-112"
+      ]
+    },
+    {
+      "owner_line": 288,
+      "text": "- A-only extraction and B/E denial",
+      "section": 10,
+      "baseline_ids": [
+        "REQ-095",
+        "REQ-096",
+        "REQ-097",
+        "REQ-098",
+        "REQ-099",
+        "REQ-100",
+        "REQ-101",
+        "REQ-102",
+        "REQ-103",
+        "REQ-104",
+        "REQ-105",
+        "REQ-106",
+        "REQ-107",
+        "REQ-108",
+        "REQ-109",
+        "REQ-110",
+        "REQ-111",
+        "REQ-112"
+      ]
+    },
+    {
+      "owner_line": 289,
+      "text": "- Final mouse denial",
+      "section": 10,
+      "baseline_ids": [
+        "REQ-095",
+        "REQ-096",
+        "REQ-097",
+        "REQ-098",
+        "REQ-099",
+        "REQ-100",
+        "REQ-101",
+        "REQ-102",
+        "REQ-103",
+        "REQ-104",
+        "REQ-105",
+        "REQ-106",
+        "REQ-107",
+        "REQ-108",
+        "REQ-109",
+        "REQ-110",
+        "REQ-111",
+        "REQ-112"
+      ]
+    },
+    {
+      "owner_line": 290,
+      "text": "- True-zero versus invalid observation",
+      "section": 10,
+      "baseline_ids": [
+        "REQ-095",
+        "REQ-096",
+        "REQ-097",
+        "REQ-098",
+        "REQ-099",
+        "REQ-100",
+        "REQ-101",
+        "REQ-102",
+        "REQ-103",
+        "REQ-104",
+        "REQ-105",
+        "REQ-106",
+        "REQ-107",
+        "REQ-108",
+        "REQ-109",
+        "REQ-110",
+        "REQ-111",
+        "REQ-112"
+      ]
+    },
+    {
+      "owner_line": 291,
+      "text": "- Preservation of prior R3 results",
+      "section": 10,
+      "baseline_ids": [
+        "REQ-095",
+        "REQ-096",
+        "REQ-097",
+        "REQ-098",
+        "REQ-099",
+        "REQ-100",
+        "REQ-101",
+        "REQ-102",
+        "REQ-103",
+        "REQ-104",
+        "REQ-105",
+        "REQ-106",
+        "REQ-107",
+        "REQ-108",
+        "REQ-109",
+        "REQ-110",
+        "REQ-111",
+        "REQ-112"
+      ]
+    },
+    {
+      "owner_line": 293,
+      "text": "Require independent internal review of:",
+      "section": 10,
+      "baseline_ids": [
+        "REQ-095",
+        "REQ-096",
+        "REQ-097",
+        "REQ-098",
+        "REQ-099",
+        "REQ-100",
+        "REQ-101",
+        "REQ-102",
+        "REQ-103",
+        "REQ-104",
+        "REQ-105",
+        "REQ-106",
+        "REQ-107",
+        "REQ-108",
+        "REQ-109",
+        "REQ-110",
+        "REQ-111",
+        "REQ-112"
+      ]
+    },
+    {
+      "owner_line": 294,
+      "text": "- Prospective R4 recovery policy",
+      "section": 10,
+      "baseline_ids": [
+        "REQ-095",
+        "REQ-096",
+        "REQ-097",
+        "REQ-098",
+        "REQ-099",
+        "REQ-100",
+        "REQ-101",
+        "REQ-102",
+        "REQ-103",
+        "REQ-104",
+        "REQ-105",
+        "REQ-106",
+        "REQ-107",
+        "REQ-108",
+        "REQ-109",
+        "REQ-110",
+        "REQ-111",
+        "REQ-112"
+      ]
+    },
+    {
+      "owner_line": 295,
+      "text": "- Completed fourth-source recovery",
+      "section": 10,
+      "baseline_ids": [
+        "REQ-095",
+        "REQ-096",
+        "REQ-097",
+        "REQ-098",
+        "REQ-099",
+        "REQ-100",
+        "REQ-101",
+        "REQ-102",
+        "REQ-103",
+        "REQ-104",
+        "REQ-105",
+        "REQ-106",
+        "REQ-107",
+        "REQ-108",
+        "REQ-109",
+        "REQ-110",
+        "REQ-111",
+        "REQ-112"
+      ]
+    },
+    {
+      "owner_line": 296,
+      "text": "- Full M2 source/QC decision",
+      "section": 10,
+      "baseline_ids": [
+        "REQ-095",
+        "REQ-096",
+        "REQ-097",
+        "REQ-098",
+        "REQ-099",
+        "REQ-100",
+        "REQ-101",
+        "REQ-102",
+        "REQ-103",
+        "REQ-104",
+        "REQ-105",
+        "REQ-106",
+        "REQ-107",
+        "REQ-108",
+        "REQ-109",
+        "REQ-110",
+        "REQ-111",
+        "REQ-112"
+      ]
+    },
+    {
+      "owner_line": 297,
+      "text": "- New and historical ledgers",
+      "section": 10,
+      "baseline_ids": [
+        "REQ-095",
+        "REQ-096",
+        "REQ-097",
+        "REQ-098",
+        "REQ-099",
+        "REQ-100",
+        "REQ-101",
+        "REQ-102",
+        "REQ-103",
+        "REQ-104",
+        "REQ-105",
+        "REQ-106",
+        "REQ-107",
+        "REQ-108",
+        "REQ-109",
+        "REQ-110",
+        "REQ-111",
+        "REQ-112"
+      ]
+    },
+    {
+      "owner_line": 299,
+      "text": "Provide saved-only PowerShell reproduction of retained evidence.",
+      "section": 10,
+      "baseline_ids": [
+        "REQ-095",
+        "REQ-096",
+        "REQ-097",
+        "REQ-098",
+        "REQ-099",
+        "REQ-100",
+        "REQ-101",
+        "REQ-102",
+        "REQ-103",
+        "REQ-104",
+        "REQ-105",
+        "REQ-106",
+        "REQ-107",
+        "REQ-108",
+        "REQ-109",
+        "REQ-110",
+        "REQ-111",
+        "REQ-112"
+      ]
+    },
+    {
+      "owner_line": 301,
+      "text": "Do not claim saved-only replay independently reproduces unavailable private raw arrays.",
+      "section": 10,
+      "baseline_ids": [
+        "REQ-095",
+        "REQ-096",
+        "REQ-097",
+        "REQ-098",
+        "REQ-099",
+        "REQ-100",
+        "REQ-101",
+        "REQ-102",
+        "REQ-103",
+        "REQ-104",
+        "REQ-105",
+        "REQ-106",
+        "REQ-107",
+        "REQ-108",
+        "REQ-109",
+        "REQ-110",
+        "REQ-111",
+        "REQ-112"
+      ]
+    },
+    {
+      "owner_line": 303,
+      "text": "Commit only authorized new R4 evidence and implementation changes to origin/test.",
+      "section": 10,
+      "baseline_ids": [
+        "REQ-095",
+        "REQ-096",
+        "REQ-097",
+        "REQ-098",
+        "REQ-099",
+        "REQ-100",
+        "REQ-101",
+        "REQ-102",
+        "REQ-103",
+        "REQ-104",
+        "REQ-105",
+        "REQ-106",
+        "REQ-107",
+        "REQ-108",
+        "REQ-109",
+        "REQ-110",
+        "REQ-111",
+        "REQ-112"
+      ]
+    },
+    {
+      "owner_line": 305,
+      "text": "Verify actual remote SHA and changed-file identities.",
+      "section": 10,
+      "baseline_ids": [
+        "REQ-095",
+        "REQ-096",
+        "REQ-097",
+        "REQ-098",
+        "REQ-099",
+        "REQ-100",
+        "REQ-101",
+        "REQ-102",
+        "REQ-103",
+        "REQ-104",
+        "REQ-105",
+        "REQ-106",
+        "REQ-107",
+        "REQ-108",
+        "REQ-109",
+        "REQ-110",
+        "REQ-111",
+        "REQ-112"
+      ]
+    },
+    {
+      "owner_line": 307,
+      "text": "## 11. FINAL VERDICT",
+      "section": 11,
+      "baseline_ids": [
+        "REQ-113",
+        "REQ-114"
+      ]
+    },
+    {
+      "owner_line": 309,
+      "text": "Return exactly one:",
+      "section": 11,
+      "baseline_ids": [
+        "REQ-113",
+        "REQ-114"
+      ]
+    },
+    {
+      "owner_line": 311,
+      "text": "M2_SOURCE_AND_PHYSIOLOGY_PASS",
+      "section": 11,
+      "baseline_ids": [
+        "REQ-113",
+        "REQ-114"
+      ]
+    },
+    {
+      "owner_line": 313,
+      "text": "STOP_SOURCE",
+      "section": 11,
+      "baseline_ids": [
+        "REQ-113",
+        "REQ-114"
+      ]
+    },
+    {
+      "owner_line": 315,
+      "text": "DATA_INSUFFICIENT",
+      "section": 11,
+      "baseline_ids": [
+        "REQ-113",
+        "REQ-114"
+      ]
+    },
+    {
+      "owner_line": 317,
+      "text": "RESOURCE_LIMIT",
+      "section": 11,
+      "baseline_ids": [
+        "REQ-113",
+        "REQ-114"
+      ]
+    },
+    {
+      "owner_line": 319,
+      "text": "SCIENTIFIC_PROTOCOL_INCONCLUSIVE",
+      "section": 11,
+      "baseline_ids": [
+        "REQ-113",
+        "REQ-114"
+      ]
+    },
+    {
+      "owner_line": 321,
+      "text": "M2_SOURCE_AND_PHYSIOLOGY_PASS does not constitute a predictive scientific result.",
+      "section": 11,
+      "baseline_ids": [
+        "REQ-113",
+        "REQ-114"
+      ]
+    },
+    {
+      "owner_line": 323,
+      "text": "## 12. REQUIRED FINAL DELIVERY",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    },
+    {
+      "owner_line": 325,
+      "text": "MISSION_ID",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    },
+    {
+      "owner_line": 326,
+      "text": "FINAL_STATUS",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    },
+    {
+      "owner_line": 327,
+      "text": "R3_STOP_PRESERVED",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    },
+    {
+      "owner_line": 328,
+      "text": "RECOVERED_RANGE_VERIFIED",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    },
+    {
+      "owner_line": 329,
+      "text": "FOURTH_SOURCE_COMPLETED",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    },
+    {
+      "owner_line": 330,
+      "text": "ORIGINAL_COMPLETED_SOURCES_REUSED",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    },
+    {
+      "owner_line": 331,
+      "text": "R4_SOURCE_ATTEMPTS",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    },
+    {
+      "owner_line": 332,
+      "text": "R4_TRANSPORT_RETRIES",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    },
+    {
+      "owner_line": 333,
+      "text": "R4_TRANSFER_BYTES",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    },
+    {
+      "owner_line": 334,
+      "text": "TOTAL_DEVELOPMENT_SOURCES_COMPLETED",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    },
+    {
+      "owner_line": 335,
+      "text": "DEVELOPMENT_ADMITTED_MICE",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    },
+    {
+      "owner_line": 336,
+      "text": "DEVELOPMENT_ADMITTED_BO",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    },
+    {
+      "owner_line": 337,
+      "text": "DEVELOPMENT_ADMITTED_FC",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    },
+    {
+      "owner_line": 338,
+      "text": "A_ONLY_PHYSIOLOGY_PASS",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    },
+    {
+      "owner_line": 339,
+      "text": "M2_SCIENTIFIC_GATE",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    },
+    {
+      "owner_line": 340,
+      "text": "M3_READY",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    },
+    {
+      "owner_line": 341,
+      "text": "MODEL_FITS_EXECUTED=0",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    },
+    {
+      "owner_line": 342,
+      "text": "B_E_NEURAL_SCIENTIFIC_ACCESS=false",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    },
+    {
+      "owner_line": 343,
+      "text": "FINAL_C_ACCESS=false",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    },
+    {
+      "owner_line": 344,
+      "text": "FINAL_D_ACCESS=false",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    },
+    {
+      "owner_line": 345,
+      "text": "BUG_COUNT",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    },
+    {
+      "owner_line": 346,
+      "text": "WARN_COUNT",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    },
+    {
+      "owner_line": 347,
+      "text": "INDEPENDENT_REVIEW",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    },
+    {
+      "owner_line": 348,
+      "text": "SAVED_REPRODUCTION",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    },
+    {
+      "owner_line": 349,
+      "text": "GIT_COMMIT",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    },
+    {
+      "owner_line": 350,
+      "text": "REMOTE_VERIFICATION",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    },
+    {
+      "owner_line": 352,
+      "text": "SCIENCE FIRST.",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    },
+    {
+      "owner_line": 354,
+      "text": "NO MODEL RETUNING.",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    },
+    {
+      "owner_line": 355,
+      "text": "NO SOURCE SUBSTITUTION.",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    },
+    {
+      "owner_line": 356,
+      "text": "NO HIDDEN RETRY.",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    },
+    {
+      "owner_line": 357,
+      "text": "NO FINAL ACCESS.",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    },
+    {
+      "owner_line": 359,
+      "text": "STOP AFTER VERIFIED M2 HANDOFF OR A DOCUMENTED BLOCKER.",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    },
+    {
+      "owner_line": 361,
+      "text": "BEGIN P16 R4 SOURCE RECOVERY.",
+      "section": 12,
+      "baseline_ids": [
+        "REQ-115",
+        "REQ-116",
+        "REQ-117",
+        "REQ-118",
+        "REQ-119",
+        "REQ-120"
+      ]
+    }
+  ]
+}
