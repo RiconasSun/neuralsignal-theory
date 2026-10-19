@@ -1,0 +1,99 @@
+"""Synthetic mathematical D/S/C likelihood and derivative oracles; no real-data worker."""
+import math
+import numpy as np
+from scipy.special import expit,gammaln,logsumexp
+from .spec import Dual,grid,scored_log_rate
+
+def unpack(theta,u,f):
+ return theta[:u*f].reshape(u,f),theta[u*f:u*f+u],theta[-3:]
+
+def constraints(u,f,psth=12):
+ high=np.r_[np.tile(np.r_[np.full(psth,6.),np.ones(f-psth)],u),np.ones(u),np.full(3,3.)]
+ return -high,high
+
+def initial(y,dt,f,seed,mode,psth=12):
+ u=y.shape[-1];beta=np.zeros((u,f))
+ for i in range(u):beta[i,:psth]=scored_log_rate(y[:,:,i],np.full(y.shape[:2],dt))
+ rng=np.random.Generator(np.random.PCG64(seed));delta=rng.uniform(-.05,.05,u);gamma=rng.uniform(-.05,.05,3)
+ if mode=='D':gamma+=np.array([math.log(.3/.7),math.log(.7/.3),0])
+ elif mode!='S':raise ValueError('Unregistered model')
+ return np.r_[beta.ravel(),delta,gamma]
+
+def objective(theta,X,y,dt,lam,mode,gates,psth=12,return_prediction=False):
+ j,t,u,f=X.shape;beta,delta,gamma=unpack(np.asarray(theta),u,f);den=j*t*u
+ eta=np.einsum('jtuf,uf->jtu',X,beta)[:,:,:,None]+delta[None,None,:,None]*np.arange(2)
+ mu=dt*np.exp(eta);emission=(y[:,:,:,None]*(math.log(dt)+eta)-mu-gammaln(y[:,:,:,None]+1)).sum(axis=2)
+ if mode=='D':
+  p=expit(gamma[:2]);A=np.c_[1-p,p];la=np.log(A);pi=np.array([1-expit(gamma[2]),expit(gamma[2])]);lp=np.log(pi)
+  alpha=np.zeros((j,t,2));alpha[:,0]=lp+emission[:,0]
+  prior=lp[None,:]+np.zeros((j,2));predictions=[]
+  for k in range(t):
+   predictions.append(logsumexp(prior+emission[:,k],axis=1))
+   posterior=prior+emission[:,k];posterior-=logsumexp(posterior,axis=1)[:,None]
+   prior=logsumexp(posterior[:,:,None]+la[None,:,:],axis=1)
+   if k:alpha[:,k]=logsumexp(alpha[:,k-1,:,None]+la[None,:,:],axis=1)+emission[:,k]
+  ll=logsumexp(alpha[:,-1],axis=1);back=np.zeros_like(alpha)
+  for k in range(t-2,-1,-1):back[:,k]=logsumexp(la[None,:,:]+emission[:,k+1,None,:]+back[:,k+1,None,:],axis=2)
+  weight=np.exp(alpha+back-ll[:,None,None]);transition=np.zeros((2,2))
+  for k in range(t-1):transition+=np.exp(alpha[:,k,:,None]+la[None,:,:]+emission[:,k+1,None,:]+back[:,k+1,None,:]-ll[:,None,None]).sum(axis=0)
+  gl=np.r_[transition[:,1]-transition.sum(axis=1)*p,weight[:,0,1].sum()-j*pi[1]]
+ elif mode=='S':
+  p=expit(gates@gamma);lp=np.log(np.c_[1-p,p]);trial=lp+emission.sum(axis=1);ll=logsumexp(trial,axis=1)
+  w=np.exp(trial-ll[:,None]);weight=np.repeat(w[:,None,:],t,axis=1);gl=gates.T@(w[:,1]-p)
+  prior=lp.copy();predictions=[]
+  for k in range(t):
+   value=logsumexp(prior+emission[:,k],axis=1);predictions.append(value)
+   prior+=emission[:,k]-value[:,None]
+ else:raise ValueError('Unregistered model')
+ residual=y[:,:,:,None]-mu
+ gb=np.einsum('jtz,jtuz,jtuf->uf',weight,residual,X)
+ gd=np.einsum('jt,jtu->u',weight[:,:,1],residual[:,:,:,1])
+ penalty=.5*lam*np.sum(beta[:,psth:]**2)+.05*np.sum(delta**2)+.005*np.sum(gamma**2)
+ gradient=np.r_[-gb.ravel()/den,-gd/den,-gl/den]
+ penbeta=np.zeros_like(beta);penbeta[:,psth:]=lam*beta[:,psth:]
+ gradient+=np.r_[penbeta.ravel(),.1*delta,.01*gamma]
+ value=-float(ll.sum())/den+penalty
+ if return_prediction:return value,gradient,np.asarray(predictions).T
+ return value,gradient
+
+def dual_lse(values):
+ peak=max(x.v for x in values);return sum((x-peak).exp() for x in values).log()+peak
+
+def independent_AD(theta,X,y,dt,lam,mode,gates,psth=12):
+ j,t,u,f=X.shape;basis=np.eye(len(theta));v=[Dual(x,basis[i]) for i,x in enumerate(theta)]
+ b=[v[i*f:(i+1)*f] for i in range(u)];delta=v[u*f:u*f+u];g=v[-3:]
+ sigmoid=lambda a:1/(1+(-a).exp())
+ total=Dual(0,np.zeros(len(theta)))
+ for r in range(j):
+  if mode=='D':
+   p=[sigmoid(g[k]) for k in range(2)];A=[[1-p[0],p[0]],[1-p[1],p[1]]];q=sigmoid(g[2]);alpha=[(1-q).log(),q.log()]
+  else:
+   q=sigmoid(sum(float(x)*a for x,a in zip(gates[r],g)));alpha=[(1-q).log(),q.log()]
+  for k in range(t):
+   if k and mode=='D':alpha=[dual_lse([alpha[z]+A[z][w].log() for z in range(2)]) for w in range(2)]
+   for z in range(2):
+    emission=Dual(0,np.zeros(len(theta)))
+    for unit in range(u):
+     eta=sum(float(x)*a for x,a in zip(X[r,k,unit],b[unit]))+z*delta[unit]
+     emission+=float(y[r,k,unit])*(eta+math.log(dt))-dt*eta.exp()-math.lgamma(float(y[r,k,unit])+1)
+    alpha[z]+=emission
+  total-=dual_lse(alpha)
+ total=total/(j*t*u)
+ for unit in range(u):
+  for a in b[unit][psth:]:total+=lam/2*a*a
+ for a in delta:total+=.05*a*a
+ for a in g:total+=.005*a*a
+ return total.v,total.d
+
+def continuous_features(spikes,onset,k,width=.02):
+ edges=grid(onset,width);t=edges[k];horizon=round(.1/width)
+ if k<horizon or len(spikes)<2:raise ValueError('Complete warmup/population required')
+ rates=[]
+ for train in spikes:
+  train=np.asarray(train,dtype=float)
+  if not np.isfinite(train).all() or np.any(np.diff(train)<0):raise ValueError('Source timestamp integrity')
+  past=train[(train>=edges[k-horizon])&(train<t)]
+  rates.append([float(np.exp(-(t-past)/tau).sum()/(tau*(-math.expm1(-.1/tau)))) for tau in [.04,.1]])
+ rates=np.asarray(rates);other=(rates.sum(axis=0)[None,:]-rates)/(len(rates)-1)
+ transform=lambda x:np.log1p(x)/(1+np.log1p(x))
+ return np.c_[transform(rates),transform(other)]

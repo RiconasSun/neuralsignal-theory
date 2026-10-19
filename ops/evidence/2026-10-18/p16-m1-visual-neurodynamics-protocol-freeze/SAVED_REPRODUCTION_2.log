@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\code\verify.py", line 53, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\code\verify.py", line 48, in main
+    checks()
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\code\verify.py", line 34, in checks
+    assert all(0<=float(x['hypothetical_two_sided_power_alpha_05'])<=1 for x in rows)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

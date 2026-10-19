@@ -1,0 +1,64 @@
+import unittest,math
+import numpy as np
+from scipy.optimize import minimize
+from .spec import *
+class SpecTests(unittest.TestCase):
+ def test_chronological_original_cuts(self):
+  self.assertEqual(cuts(150),{'A':(0,90),'B':(90,120),'E':(120,150),'C':(0,90),'D':(90,150)})
+  self.assertEqual(set(range(*cuts(150)['A']))&set(range(*cuts(150)['B'])),set())
+ def test_equality_nextafter_availability(self):
+  self.assertFalse(event_available(1.,1.));self.assertTrue(event_available(np.nextafter(1.,0),1.));self.assertFalse(event_available(np.nextafter(1.,2),1.))
+ def test_halfopen_zero_missing_native_ids(self):
+  self.assertEqual(count_bins(np.array([1.,1.,2.]),np.array([0.,1.,2.,3.]),[True,True,False]),[0,2,None])
+  a=np.array([.1,np.nextafter(.1,1.),float('nan')]);b=np.frombuffer(a.tobytes(),dtype=a.dtype);np.testing.assert_array_equal(a.view('u8'),b.view('u8'))
+ def test_strict_history_future_invariance_and_reset(self):
+  edges=grid(10.);t=edges[5];past=np.array([10.,edges[4],np.nextafter(t,-np.inf)]);x=histories([past,past],10.,5)
+  y=histories([np.r_[past,t,t+.00001],np.r_[past,t+.01]],10.,5);np.testing.assert_array_equal(x,y)
+  np.testing.assert_array_equal(histories([np.r_[0.,past],np.r_[1.,past]],10.,5),x)
+  with self.assertRaises(ValueError):histories([past,past],10.,4)
+ def test_running_parent_end_and_missing(self):
+  self.assertEqual(past_rotation([0.],[1.],[1.],1.),(0.,1.))
+  r,m=past_rotation([.9],[.95],[.1],1.);self.assertEqual(m,0.);self.assertAlmostEqual(r,math.tanh(.2))
+  self.assertEqual(past_rotation([.9],[.95],[.1],1.,[[.91,.92]]),(0.,1.));self.assertEqual(past_rotation([.1],[.15],[.1],1.),(0.,1.))
+ def test_psth_and_parameter_counts(self):
+  for color in [-1,1]:
+   for k in range(5,11):
+    x=nuisance(color,k,None,0,0,0,1.,1.,0,1);self.assertEqual(x.shape,(24,));self.assertEqual(x[:12].sum(),1)
+  self.assertEqual({k:v*8 for k,v in MODEL_SLOTS.items()},{'B0':8,'B1':192,'B2':216,'B3':216,'B4':240})
+  self.assertEqual(8*24+8+2+1,203);self.assertEqual(8*24+8+1,201);self.assertEqual(8*(24+3),216)
+ def test_scaling_train_only_active_and_future(self):
+  X=np.zeros((20,24));X[:,:12]=np.eye(12)[np.arange(20)%12];X[:,12]=np.linspace(-1,1,20)
+  mean,scale,active=scaler(X);self.assertTrue(active[:12].all());self.assertFalse(active[13]);self.assertTrue((scale>=.25).all());self.assertLessEqual(np.abs((X-mean)/scale).max(),8)
+ def fixture(self):
+  X=np.array([[1,.1,-.3],[1,-.2,.4],[1,.4,.2],[1,.3,-.1]]);y=np.array([0.,1.,2.,0.]);dt=np.array([.02,.02,.01,.02]);b=np.array([1.,.1,-.2]);return X,y,dt,b
+ def test_poisson_exposure_AD_FD_scan(self):
+  X,y,dt,b=self.fixture();f,g=glm(b,X,y,dt,.1,1);ad,h=independent_AD(b,X,y,dt,.1,1);self.assertAlmostEqual(f,ad,places=12);np.testing.assert_allclose(g,h,atol=1e-12)
+  for step in [1e-3,1e-4,1e-5,1e-6]:
+   fd=np.array([(glm(b+np.eye(3)[j]*step,X,y,dt,.1,1)[0]-glm(b-np.eye(3)[j]*step,X,y,dt,.1,1)[0])/(2*step) for j in range(3)])
+   self.assertLess(np.max(np.abs(fd-g)/np.maximum(1,np.abs(g))),2e-5)
+ def test_nesting_objective_regularization(self):
+  X,y,dt,b=self.fixture();new=np.c_[X,np.array([.2,.3,.4,.5])]
+  a,g=glm(b,X,y,dt,.1,1);c,h=glm(np.r_[b,0],new,y,dt,.1,1);self.assertAlmostEqual(a,c,places=14);np.testing.assert_allclose(g,h[:3],atol=1e-14,rtol=1e-14)
+ def test_projected_gradient_bounds(self):
+  np.testing.assert_array_equal(projected_gradient(np.array([-1.,1.,0]),np.array([2.,-3.,.1]),-1,1),[0,0,.1])
+ def test_synthetic_convex_optimizer_gate(self):
+  X,y,dt,b=self.fixture();r=minimize(lambda v:glm(v,X,y,dt,.1,1),b,jac=True,method='L-BFGS-B',bounds=[(-10,10),(-1,1),(-1,1)],options={'maxiter':1500,'maxfun':6000,'maxls':40,'maxcor':10,'ftol':1e-12,'gtol':2e-6})
+  lo=np.array([-10,-1,-1]);hi=-lo;self.assertLessEqual(np.abs(projected_gradient(r.x,r.jac,lo,hi)).max(),1e-5)
+  _,ad=independent_AD(r.x,X,y,dt,.1,1);np.testing.assert_allclose(ad,r.jac,atol=1e-8)
+ def test_exact_D_and_S_identity(self):
+  y=np.array([[0,1],[2,0],[1,1]]);mu=np.array([[[.2,.3],[.6,.7]]]*3);A=np.array([[.8,.2],[.3,.7]]);pi=np.array([.4,.6])
+  self.assertAlmostEqual(forward(y,mu,A,pi),enumerate_hmm(y,mu,A,pi),places=12)
+  self.assertAlmostEqual(forward(y,mu,np.tile(pi,(2,1)),pi),iid_mixture(y,mu,pi),places=12)
+ def test_C_is_finite_past_and_reset(self):
+  a=finite_history([1,2,3,4],[.5,.8],[True,False,True,False]);self.assertTrue(np.isfinite(a).all());np.testing.assert_array_equal(a[2],[0,0])
+  b=finite_history([1,2,99,9],[.5,.8],[True,False,True,False]);np.testing.assert_array_equal(a[:3],b[:3])
+ def test_score_denominator_and_Holm(self):
+  a=np.array([[2.,4.],[6.,8.]]);mask=np.array([[True,False],[False,True]]);self.assertEqual(gain(a,np.zeros_like(a),mask),5)
+  with self.assertRaises(ValueError):gain(a,a,np.zeros_like(mask))
+  np.testing.assert_allclose(holm([.01,.04,.2]),[.03,.08,.2])
+ def test_jitter_count_invariance_derangements(self):
+  edges=grid(1.);spikes=np.array([edges[0],edges[1],edges[1],np.nextafter(edges[-1],0)])
+  y=jitter_within_bins(spikes,edges,np.random.default_rng(16052));np.testing.assert_array_equal(np.diff(np.searchsorted(spikes,edges,'left')),np.diff(np.searchsorted(y,edges,'left')))
+  perm=derangement(np.arange(8),np.random.default_rng(16051));self.assertTrue(np.all(perm!=np.arange(8)))
+  with self.assertRaises(ValueError):derangement(np.arange(5),np.random.default_rng(1))
+if __name__=='__main__':unittest.main()

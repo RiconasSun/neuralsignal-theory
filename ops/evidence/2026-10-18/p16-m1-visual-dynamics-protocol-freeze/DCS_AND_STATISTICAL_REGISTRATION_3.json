@@ -1,0 +1,122 @@
+{
+  "mission": "P16-M1-VISUAL-DYNAMICS-PROTOCOL-FREEZE",
+  "registered_at": "2026-10-19T01:39:14.058675+00:00",
+  "before_new_DCS_math_tests": true,
+  "before_any_real_fit": true,
+  "B0_B4": "Retain proposed20ms/100..220ms/100ms causal history/8originalcandidateunits/24B1slots+3own+3other;all-sixcompletepresentation;A/Cscored-rowB0/init;sharedA/Cscaler/penalty;no current neural data",
+  "C": {
+    "definition": "B4+4fixedcontinuousfinite100ms kernels:own and meanother rates for tau.04 and.1 seconds;sum exp(-(t-s)/tau) over anchored100ms strictpast spikes divided by tau*(1-exp(-.1/tau));same boundedlog1pratetransform/A-Cscale;no learned recurrence",
+    "max_parameters_8units": 272,
+    "tau_grid": "Single fixed pair [.04,.1],not selected",
+    "initial": "Same A/C scored-row bounded rate,allnonPSTH0",
+    "seeds": "None deterministic",
+    "state": "Reset each presentation/gap;no off-presentation/preonset history"
+  },
+  "D": {
+    "definition": "K2 conditional Poisson HMM using full B4features,unit beta and reference state0,unit delta added in state1;3logits for two transition rows+initial;forward prediction filters past counts only,not smoothed future",
+    "max_parameters": 251,
+    "K_grid": [
+      2
+    ],
+    "beta_slots": 240,
+    "delta_slots": 8,
+    "state_logit_slots": 3,
+    "initial_logits": "[logit(.3),logit(.7),0]+PCG64Uniform[-.05,.05]",
+    "delta_initial": "PCG64Uniform[-.05,.05],afterdrawing8deltasdraw3logitjitters",
+    "posterior_reset": "Initial distribution per presentation atfirst scorebin,no warmup filtering beyond B4 covariates"
+  },
+  "S": {
+    "definition": "K2 presentation-static latent Poisson mixture with identical B4beta/delta emissions;one fixed state throughoutpresentation. Prior logit gamma0+gamma1*color+gamma2*original_ordinal/179. Three gatingparameters match Dtotal251. Proper causal withinpresentation posterior update;not perbin IIDmixture. Capturesstatictrialgain,not physicalpersistentstates",
+    "max_parameters": 251,
+    "K_grid": [
+      2
+    ],
+    "beta_slots": 240,
+    "delta_slots": 8,
+    "state_logit_slots": 3,
+    "initial_logits": "PCG64Uniform[-.05,.05] after8delta draws",
+    "oracle": "Equals HMMtransitionI with matching pertrialprior;separate IIDmixtureidentity oracle retained;D/S matched parametercount not identical functionclass"
+  },
+  "DS_shared": {
+    "likelihood": "Joint population conditional count likelihood per presentation,normalized by actualT*U unitbins;B4productPoisson uses same jointtarget. D gains may include modeled instantaneous correlation,not proof of additional past neural information",
+    "penalty": "lambda/(2U) sum beta_nonPSTH^2 +.1/(2U) sum delta^2 +.01/2 sum logits^2; equal average B4 unit objectives when delta=gamma=0. No data/result-driven tuning.",
+    "bounds": "PSTH/B0[-10,10],otherbeta[-1,1],delta[-1,1],logits[-3,3]",
+    "initial_beta": "Same perunit A/C registered score-row stationary boundedrates,PSTHconstant,others0;no developmentCweights",
+    "seeds": [
+      11,
+      23,
+      37
+    ],
+    "seed_selection": "All3 must pass every mandatory numerical gate;choose lowest A/C penalized objective,tie<=1e-12lowestseed;no coefficientmean andno B/E/D seedselection",
+    "gradients": "Analytic forward-backward forD/posteriorstaticmixture forS;independentgenericdualnumberAD +fixedFDscaninitial/intermediate/endpoint",
+    "real_failure_policy": "Oneattemptperseed/model/panel;any mandatory numericalfailSTOP,no retry/replacement/optimizerrescue"
+  },
+  "solver": {
+    "algorithm": "L-BFGS-B",
+    "dtype": "float64",
+    "maxiter": 1500,
+    "maxfun": 6000,
+    "maxls": 40,
+    "maxcor": 10,
+    "ftol": 1e-12,
+    "gtol": 2e-06,
+    "PG_max": 1e-05,
+    "AD_scaled_coordinate_error_max": 1e-08,
+    "FD_steps": [
+      0.001,
+      0.0001,
+      1e-05,
+      1e-06
+    ],
+    "FD_frozen_acceptance_step": 1e-05,
+    "FD_scaled_coordinate_error_max": 2e-05,
+    "bounds_precision": 1e-12,
+    "success_flag_insufficient": true
+  },
+  "selection": {
+    "lambda_grid": [
+      0.01,
+      0.1,
+      1
+    ],
+    "B_selection": "B1absoluteBscore only,equalmousewithinBO/FC then.5/.5;tielargestlambda,winnerB1reused",
+    "DCS_hyperparameters": "No additionalgrid,K2/fixedtaus/fixedpenalties/3seedsfrozen",
+    "all_models_reported": "No realfamilywinnerselection/no postresultfamilyremoval"
+  },
+  "statistics": {
+    "primary": "B4-B1 two-sidedpairedsignflip p<=.05,positive directionalinterpretation",
+    "secondary_family": [
+      "B4-B2",
+      "B4-B3",
+      "D-B4",
+      "C-B4",
+      "D-S"
+    ],
+    "secondary_correction": "Holm5,two-sided;allpvaluesreported evenifprimaryfails;any positive secondarycategoryrequiresprimarypositivegate toavoidseparate opportunisticfamilies",
+    "minimum_effect_primary": 0.002,
+    "minimum_effect_each_secondary": 0.001,
+    "precision": "No arbitraryfixedCIwidthPASS;own95%CI lower must exceed own registered minimum effect for narrow positivecategory;reportwidth and hypotheticalprecision/power regardless",
+    "track": "Wholly prospective descriptive/exploratory;neverVALIDATED/physicalstate/mechanism",
+    "coverage": "14Dev with3BO10FC;12Finalmain;6..11preauthorizeddescriptivefallback retains maincoverageFAIL andno positivecategory;<6STOPbeforeD"
+  },
+  "compute": {
+    "baseline_B0_B4_unit_optimizer_attempts": 2208,
+    "C_unit_optimizer_attempts": 440,
+    "DS_joint_seed_attempts": 330,
+    "8refit_panels_all5models_unit_attempts": 10560,
+    "8refit_panels_DS_joint_seed_attempts": 2640,
+    "total_optimizer_attempts_max": 16178,
+    "B0_analytic_states": 440,
+    "max_calls_each": 6000,
+    "max_concurrent": 4,
+    "wall_hours_each_Dev_or_Final_stage": 48,
+    "budget_failure": "STOP without extension;synthetic timing not proof fullrealruntime"
+  },
+  "sensitivity_model_scope": "EightrefitpanelsS01,S02,S05,S06,S07,S09,S10,S11 refitB1,B4,C,D,S atselectedlambda;S04evaluateallfixedmodels onrunningcompletecases;BOonlyEreportallmodels;N2countjitter invariantB0-B4/D/S,C continuouskernelneednotinvariant andmustbeexplicitlyreported;no recursivePoissoncontrol",
+  "physiology_addition": "Before further spikes require>=20occupiedA/Cvalidpresentations perunit in0..220msQCwindow,inaddition>=30spikes/rate/refractory/provider/sameprobe/support;no E/Doccupancyadmission.",
+  "revision": 3,
+  "previous_registration_sha256": "9a61f6e6aae3dc34fc347441cc66bed31618adfcc2302ec4e4e2f3fb10cfb353",
+  "revision_reason": "Before any real neural outcome: strong B1 should not be artificially capped near403Hz in short stimulus bins when A/CQC bounds only the220ms mean. Expand shared unpenalizedPSTH/B0 box to[-10,10] for allfamilies,prevent history terms merely compensating a low nuisance-ratecap. This is a prospective source/QC-based design refinement,not gradientgate relaxation/optimizerrescue/result tuning. Original325-file candidate+mathresults archived.",
+  "new_eta_proof": "PrimaryB4<=154,C<=186,D/S<=155;largestS02C<=218,D/S<=187<float64exp~709. No clipping. Shared strongbaselinecapacity widened before any real fit.",
+  "previous_candidate_zip_sha256": "41ec012cf22fd1951f226414778eaa04e4dc8b22a355f77b90075d9aedfdcc5b"
+}

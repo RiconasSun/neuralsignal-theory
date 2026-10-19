@@ -1,0 +1,256 @@
+{
+  "sensitivities": [
+    {
+      "id": "S01",
+      "question": "Residualsub-bin visualPSTH confounding",
+      "operator": "10ms bins[100,220),12timebins/color;24PSTH+B1nuisance12;own/poplagwindowsunchanged",
+      "preserved": "Samephysicalwindow/conditions/units,targetmasks splitexactly",
+      "destroyed": "20mswithinbinhomogeneity assumption",
+      "assumptions_and_limits": "Rate-normalized gainsreportnats/actual10msbin separately andnats/s;not interchangeablewithprimary20msunits",
+      "coverage": ">=12Finalmice,8units,originalpercolorrolemin",
+      "RNG_replicates": "NoRNG",
+      "claim_consequence_and_failure": "Mandatoryrobustness:validpanel andmean>0 forrobustdescriptivepositive;negative/missing ->MIXED,do not retune",
+      "refits_B1_B4": true,
+      "refit_models": [
+        "B1",
+        "B4",
+        "C",
+        "D",
+        "S"
+      ]
+    },
+    {
+      "id": "S02",
+      "question": "Adaptation/priorstimulus confounding",
+      "operator": "Add4rawboundedterms:color*repeat,previouscolor*repeat,order^2,color*order;B1slots28/B4slots34",
+      "preserved": "Originalroles,units,time/masks",
+      "destroyed": "Restrictedadaptationbasis",
+      "assumptions_and_limits": "Metadatahistoryonly;unmeasuredtrialgainremains",
+      "coverage": ">=12Finalmice,8units",
+      "RNG_replicates": "NoRNG",
+      "claim_consequence_and_failure": "Mandatorydirectionguard;allnegativepreserved",
+      "refits_B1_B4": true,
+      "refit_models": [
+        "B1",
+        "B4",
+        "C",
+        "D",
+        "S"
+      ]
+    },
+    {
+      "id": "S03",
+      "question": "BO/FC transportheterogeneity",
+      "operator": "BOonlyEandFConlyE reportall7models,all6effects,mean/CI/exposure/sourcecomposition withfrozenmainlambda. BOsubsetoriginal5,>=3admitted;FC>=10. B1Bscorecurvesareillustrativeonly,no alternateBOlambdaselection.",
+      "preserved": "Frozenroles,models,no rearrangement",
+      "destroyed": "IIDpooledprotocolinterpretation",
+      "assumptions_and_limits": "Protocolsnotrandomized;singlelaboratory",
+      "coverage": "DevBO>=3,FC>=10;Finalmain>=12BO",
+      "RNG_replicates": "Bootstrap10000,BO PCG64seed16043,FC PCG64seed16044; sorted numeric mouse IDs",
+      "claim_consequence_and_failure": "No causalprotocoltest;unavailablegroupmarked,neverindependentlabreplication",
+      "refits_B1_B4": false
+    },
+    {
+      "id": "S04",
+      "question": "Running availability/missingness",
+      "operator": "Evaluateallfixedmodelsonverifiedpastrunningcompletecasebins;D/Sfilteringmayuseearlierobservedcountswithmissingbehavior,neverfuturecounts;reportmissing/availablepanels. Samewithinpairtargets.",
+      "preserved": "Fittedstates,units,sourceclock",
+      "destroyed": "Primarymixedmissingnessscorepopulation",
+      "assumptions_and_limits": "Completecasesmayselectmovement;notcausaladjustmentforallbehavior",
+      "coverage": ">=12Finalmice;>=8distinctpresentations/color/rolewithcompletecasebins",
+      "RNG_replicates": "NoRNG",
+      "claim_consequence_and_failure": "Mandatorydirectionguard;primaryallowsmissingflagbutbroadbehavior-robustclaimwithheldifcoveragefails",
+      "refits_B1_B4": false
+    },
+    {
+      "id": "S05",
+      "question": "Pupil completecase",
+      "operator": "Add2features:tanh(log((width*height)/A-Cmedianpositive(width*height))),pupilmissing;onlyverifiedexposureend<t(age<=.1),completecaseevaluation. Sourceellipseproductproxy,notunverifiedphysicalarea;commonconstantaxis/unitfactorcancelsinratio.",
+      "preserved": "Mainunits/rolecuts",
+      "destroyed": "Unmodeledmeasuredpupilvariationwhereavailable",
+      "assumptions_and_limits": "No universalpupilcriterion;nozeroarousalimputation;unknownframeavailability ->UNAVAILABLE",
+      "coverage": ">=12Finalmice;>=70%validpupilbinsperrole/colorandoriginalrolecoverage",
+      "RNG_replicates": "NoRNG",
+      "claim_consequence_and_failure": "Optionalarousal-measurementsensitivity;unavailablecannotPASSorinvalidatebasicnominalhistoryestimand,withholdpupilrobustclaim",
+      "refits_B1_B4": true,
+      "refit_models": [
+        "B1",
+        "B4",
+        "C",
+        "D",
+        "S"
+      ]
+    },
+    {
+      "id": "S06",
+      "question": "Unitcount dependence",
+      "operator": "Usefirst4mainselectedunitIDs;recomputeothermeanexcludingtarget(divisor3)",
+      "preserved": "Sourceidentity/QC/chronologicalroles",
+      "destroyed": "8unitpopulationcoverage",
+      "assumptions_and_limits": "Fourunitsnotpopulationcomplete",
+      "coverage": ">=12Finalmicewith4mainunits",
+      "RNG_replicates": "NoRNG",
+      "claim_consequence_and_failure": "Mandatorydirectionguard;reportdenominators",
+      "refits_B1_B4": true,
+      "refit_models": [
+        "B1",
+        "B4",
+        "C",
+        "D",
+        "S"
+      ]
+    },
+    {
+      "id": "S07",
+      "question": "Rate leverage",
+      "operator": "UseA/Crate-rankedmain8middle4(positions2..5,tieunitID);recomputeothermean",
+      "preserved": "NoE/Dratematching/selection",
+      "destroyed": "Extremerateunitinfluence",
+      "assumptions_and_limits": "Changesobservedunitpopulation;notcelltypematch",
+      "coverage": ">=12Finalmice,4middlemainunits",
+      "RNG_replicates": "NoRNG",
+      "claim_consequence_and_failure": "Mandatorydirectionguard",
+      "refits_B1_B4": true,
+      "refit_models": [
+        "B1",
+        "B4",
+        "C",
+        "D",
+        "S"
+      ]
+    },
+    {
+      "id": "S08",
+      "question": "Ownversuspopulationhistory attribution",
+      "operator": "UsefixedB4-B3andB4-B2mainmodels,masks",
+      "preserved": "Fullmainstates/units",
+      "destroyed": "Noadditionaltransform",
+      "assumptions_and_limits": "Predictiveconditionalattribution,notconnectivity",
+      "coverage": "Same>=12primaryFinalmice",
+      "RNG_replicates": "MainHolm5/pairedsignflips",
+      "claim_consequence_and_failure": "Secondaryeffectsallreported;negative ornon-significantneverabsenceproof",
+      "refits_B1_B4": false
+    },
+    {
+      "id": "S09",
+      "question": "Session drift misspecification",
+      "operator": "Addtau^4,tau^5;B1slots26/B4slots32",
+      "preserved": "Originaltime/roles/units",
+      "destroyed": "Cubicdriftrestriction",
+      "assumptions_and_limits": "Short~300sflashblock;driftandadaptationcorrelated",
+      "coverage": ">=12Finalmice",
+      "RNG_replicates": "NoRNG",
+      "claim_consequence_and_failure": "Mandatorydirectionguard",
+      "refits_B1_B4": true,
+      "refit_models": [
+        "B1",
+        "B4",
+        "C",
+        "D",
+        "S"
+      ]
+    },
+    {
+      "id": "S10",
+      "question": "ObservationandproviderQC sensitivity",
+      "operator": "Requireentireoriginalflashinterval valid(notonly0..220ms);retainmainunitsmeetingamplitude<=.05,presence>=.98,ISI<=.1;>=4remaining;refit",
+      "preserved": "Nooutcome-basedunitreplacement;providerQCwhole-sessiondisclosed",
+      "destroyed": "Looserscreen/partialintervalcoverage",
+      "assumptions_and_limits": "StillnotAPpacketcertification",
+      "coverage": ">=12Finalmice,>=4mainsubsetunits,alloriginalrolemin",
+      "RNG_replicates": "NoRNG",
+      "claim_consequence_and_failure": "Quality-robustclaimonlyifavailable/directionconsistent;unavailablepreserved,notforcedpositive",
+      "refits_B1_B4": true,
+      "refit_models": [
+        "B1",
+        "B4",
+        "C",
+        "D",
+        "S"
+      ]
+    },
+    {
+      "id": "S11",
+      "question": "Atlas boundary/layer composition",
+      "operator": "Mainunitpeakchannelandadjacentlocalindex\u00b11channelsmustallbeVISpallowlistonsameprobe;>=4remaining;reportlayers/parentVISpunknown; inherit exact seven M0 acronyms and original main candidate IDs only",
+      "preserved": "Frozenprobe,mainunitssubsetonly",
+      "destroyed": "Onechannel-labelboundaryambiguity",
+      "assumptions_and_limits": "Proxycoherence,notmeasuredhistologicaldistance;missingneighbor failsproxy",
+      "coverage": ">=12Finalmice,>=4remaining",
+      "RNG_replicates": "NoRNG",
+      "claim_consequence_and_failure": "Anatomy-robustclaimrequiresavailability;layermechanismneverclaimed",
+      "refits_B1_B4": true,
+      "refit_models": [
+        "B1",
+        "B4",
+        "C",
+        "D",
+        "S"
+      ]
+    },
+    {
+      "id": "S12",
+      "question": "Model complexity and persistent versus static latent heterogeneity",
+      "operator": "MandatoryK2DandpresentationstaticSboth251maxparameters,B4framework,3registeredseeds,A/Conlyselection;Cfixed2taus4newfeatures. Reportjointlikelihood/capacity/seedvariation andD-S,N2,N3",
+      "preserved": "Originalunits/roles/source/strongB4features/exposure;staticSsameemissions",
+      "destroyed": "Sremoveswithin-presentationstatechanges;Cchangesfixedhistoryrepresentation",
+      "assumptions_and_limits": "Matchedcountnotmatchedfunctionclass;Dgaincanreflectinstantaneouscorrelation/unmeasuredtrialgain,no physicalstateproof",
+      "coverage": ">=12Finalfornarrowpositive,allregisteredseedsnumericalPASS",
+      "RNG_replicates": "PCG64seeds11/23/37,noneforC;noextraK/taugrid",
+      "claim_consequence_and_failure": "MandatorymodelfailureSTOP;no postresultremoval.D/S/Csuperioritynotassumed.NoVALIDATEDorphysicalpersistentstatesclaim",
+      "refits_B1_B4": false
+    }
+  ],
+  "operators": [
+    {
+      "id": "N1",
+      "question": "Withinpresentationcouplingbeyondnominalcondition/time",
+      "operator": "Permuteentirejointunit-history trajectories amongdifferentpresentationswithsamecolor,samerole,originalordinalblockfloor(i/30);uniformrejection-sampledderangements,neverchangedonorsafteroutcomes",
+      "preserved": "Targets/PSTH-time/color/units/roles/counts/donorjointpopulationcorrelation",
+      "destroyed": "Targettrial-historycoupling",
+      "exchangeability": "Exactconditionalnullonlyunderwithinstratumtrialexchangeabilitygivenallconfounders,notestablished;running/adaptation/trialgainmaydiffer. Descriptivereference,notexactconditionalp",
+      "coverage_min": ">=6presentationspercolor/role/block;>=12Finalmice;otherwiseUNAVAILABLE",
+      "RNG_replicates": "999draws,PCG64seed16051+stablemouseID-derivedSHA32",
+      "consequence": "Reportreference-tailfractionandHolm2N1/N3descriptively;correctingdoesnotmakeapproximatefractionsvalidp. Robustnarrowlabelrequiresvalidcoverage+observedgainexceeds95threferencemean;failureMIXED,neverM6orconditionalnullPASS"
+    },
+    {
+      "id": "N2",
+      "question": "Resolution/within20msorderingidentifiability",
+      "operator": "Uniformlyjittereachspikewithinitsownonset-anchored20msbininside[0,220);nativecountbinmembershipunchanged",
+      "preserved": "Every20msprimarycount/historyboundary;B0-B4andD/Soutputs invariant. Ccontinuouskernelsmaychangebecauseexactwithinbinspiketimeschange.",
+      "destroyed": "Sub20msordering",
+      "exchangeability": "Aproperty/invariancecheck,notstatisticalnull;noinferenceofsub20msdynamics",
+      "coverage_min": "Allprimaryadmittedmice/binmasks",
+      "RNG_replicates": "16draws,PCG64seed16052+mouseSHA32",
+      "consequence": "B0-B4,D/Sfeatures/causalpredictionsagree<=1e-12,elseimplementationSTOP;Cvariationreported,notforcedinvariant.No sub20msmechanismclaim."
+    },
+    {
+      "id": "N3",
+      "question": "Stimulus-lockedtemporalstructurestress",
+      "operator": "Forunit/presentationindependentlycircularlyshiftspikesinfullnativeflashsupportbyuniformcontinuousoffset,wrapwithinteventduration;preserveunittotal",
+      "preserved": "Presentationcounts/nativeIDs/boundaries/roles",
+      "destroyed": "PSTHandcrossunitphase/withintrialcausalalignment",
+      "exchangeability": "Destroysstimulusalignment,NOTconditionalhistorynull;no mechanism inference",
+      "coverage_min": ">=12Finalmice,allvalidnativepresentationwindows",
+      "RNG_replicates": "999draws,PCG64seed16053+mouseSHA32",
+      "consequence": "Reportall7modelreferencesandall6gains;forD-Sdescriptivepositive requireobservedD-Smean>95threferencequantile with>=12mice;notexactconditionalnullorphysicalstatevalidation.No forceddegradation."
+    },
+    {
+      "id": "N4",
+      "question": "Nuisancecodingcalibration",
+      "operator": "11fixedwrongfeaturemaps:(colorflip0/1,cyclictimestateshift0..5)exceptidentity;fittedB1unchanged,targetmasksunchanged",
+      "preserved": "Targets/units/masks/fittedstate",
+      "destroyed": "Correctcueorperi-onsettimeassignment",
+      "exchangeability": "Deterministicstress,nopermutationp/exchangeabilityclaim",
+      "coverage_min": "Alladmittedmice,sourceconditionsand6bins",
+      "RNG_replicates": "11operators,noRNG",
+      "consequence": "Reporttrue-vs-wrongB1scores;noautomaticPASSifwrongcodesnotworse,nostimulus-drivenneuralhypothesisselection"
+    }
+  ],
+  "no_recursive_Poisson_generator": true,
+  "no_resample_until_success": true,
+  "D_batch": "OnefutureseparatelyauthorizedDassessment,all7models/6effects/allfixedpanels+references;no secondD",
+  "numerical_failure_precedence": "Any mandatory attempted fit/feature/gradient/scorer failure STOP. Optional panel coverage/source availability may be UNAVAILABLE only before that panel fit,never recategorize numerical failure.",
+  "mission": "P16-M1-VISUAL-DYNAMICS-PROTOCOL-FREEZE",
+  "future_controls_compute": "999N1+999N3+16N2+11N4,allapplicablefixedmodels;separateoneDscoringwallcap48hours,max4workers,STOPnoretry/nobudgetextension;failedcontrolsneverreplaced."
+}

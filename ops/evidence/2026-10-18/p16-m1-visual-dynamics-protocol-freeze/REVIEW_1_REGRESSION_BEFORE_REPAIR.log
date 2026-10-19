@@ -1,0 +1,114 @@
+FFFFFFFFFFFFF
+======================================================================
+FAIL: test_selection_rejects_every_invalid_row_and_protocol_switch (paper16_m1.code.test_analysis.AnalysisTests.test_selection_rejects_every_invalid_row_and_protocol_switch) (rows=[{'lambda': 0.01, 'mouse_id': 0, 'protocol': 'BO', 'logscore': -1.0}])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\code\test_analysis.py", line 16, in test_selection_rejects_every_invalid_row_and_protocol_switch
+    with self.subTest(rows=rows[:1]),self.assertRaises(ValueError):select_lambda(rows)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_selection_rejects_every_invalid_row_and_protocol_switch (paper16_m1.code.test_analysis.AnalysisTests.test_selection_rejects_every_invalid_row_and_protocol_switch) (rows=[{'lambda': 0.01, 'mouse_id': 0, 'protocol': 'BO', 'logscore': -1.0}])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\code\test_analysis.py", line 16, in test_selection_rejects_every_invalid_row_and_protocol_switch
+    with self.subTest(rows=rows[:1]),self.assertRaises(ValueError):select_lambda(rows)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_selection_rejects_every_invalid_row_and_protocol_switch (paper16_m1.code.test_analysis.AnalysisTests.test_selection_rejects_every_invalid_row_and_protocol_switch) (rows=[{'lambda': 0.01, 'mouse_id': 0, 'protocol': 'BO', 'logscore': -1.0}])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\code\test_analysis.py", line 16, in test_selection_rejects_every_invalid_row_and_protocol_switch
+    with self.subTest(rows=rows[:1]),self.assertRaises(ValueError):select_lambda(rows)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_selection_rejects_every_invalid_row_and_protocol_switch (paper16_m1.code.test_analysis.AnalysisTests.test_selection_rejects_every_invalid_row_and_protocol_switch) (rows=[{'lambda': 0.01, 'mouse_id': 0, 'protocol': 'BO', 'logscore': -1.0}])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\code\test_analysis.py", line 16, in test_selection_rejects_every_invalid_row_and_protocol_switch
+    with self.subTest(rows=rows[:1]),self.assertRaises(ValueError):select_lambda(rows)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_selection_rejects_every_invalid_row_and_protocol_switch (paper16_m1.code.test_analysis.AnalysisTests.test_selection_rejects_every_invalid_row_and_protocol_switch) (rows=[{'lambda': 0.01, 'mouse_id': 0, 'protocol': 'UNKNOWN', 'logscore': -1.0}])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\code\test_analysis.py", line 16, in test_selection_rejects_every_invalid_row_and_protocol_switch
+    with self.subTest(rows=rows[:1]),self.assertRaises(ValueError):select_lambda(rows)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_controls_secondary_family_consistency (paper16_m1.code.test_analysis.AnalysisTests.test_controls_secondary_family_consistency)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\code\test_analysis.py", line 23, in test_controls_secondary_family_consistency
+    self.assertEqual(next(x for x in controls['sensitivities'] if x['id']=='S08')['RNG_replicates'],'MainHolm5/pairedsignflips')
+AssertionError: 'MainHolm3/pairedsignflips' != 'MainHolm5/pairedsignflips'
+- MainHolm3/pairedsignflips
+?         ^
++ MainHolm5/pairedsignflips
+?         ^
+
+
+======================================================================
+FAIL: test_invalid_tuple_order_identity_and_ragged_index_failclosed (paper16_m1.code.test_roster_metadata.MetadataTests.test_invalid_tuple_order_identity_and_ragged_index_failclosed) (tags=['EcephysProbe', '7'])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\code\test_roster_metadata.py", line 21, in test_invalid_tuple_order_identity_and_ragged_index_failclosed
+    with self.subTest(tags=tags),self.assertRaises(ValueError):invalid_rows([0],[1],tags,[len(tags)],item,probes)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_tuple_order_identity_and_ragged_index_failclosed (paper16_m1.code.test_roster_metadata.MetadataTests.test_invalid_tuple_order_identity_and_ragged_index_failclosed) (tags=['EcephysProbe', 'probeA'])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\code\test_roster_metadata.py", line 21, in test_invalid_tuple_order_identity_and_ragged_index_failclosed
+    with self.subTest(tags=tags),self.assertRaises(ValueError):invalid_rows([0],[1],tags,[len(tags)],item,probes)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_tuple_order_identity_and_ragged_index_failclosed (paper16_m1.code.test_roster_metadata.MetadataTests.test_invalid_tuple_order_identity_and_ragged_index_failclosed) (tags=['EcephysProbe', 'probeA', '7'])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\code\test_roster_metadata.py", line 21, in test_invalid_tuple_order_identity_and_ragged_index_failclosed
+    with self.subTest(tags=tags),self.assertRaises(ValueError):invalid_rows([0],[1],tags,[len(tags)],item,probes)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_tuple_order_identity_and_ragged_index_failclosed (paper16_m1.code.test_roster_metadata.MetadataTests.test_invalid_tuple_order_identity_and_ragged_index_failclosed) (tags=['7', 'EcephysProbe', 'probeA'])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\code\test_roster_metadata.py", line 21, in test_invalid_tuple_order_identity_and_ragged_index_failclosed
+    with self.subTest(tags=tags),self.assertRaises(ValueError):invalid_rows([0],[1],tags,[len(tags)],item,probes)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_tuple_order_identity_and_ragged_index_failclosed (paper16_m1.code.test_roster_metadata.MetadataTests.test_invalid_tuple_order_identity_and_ragged_index_failclosed) (tags=['EcephysProbe', '7', '7'])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\code\test_roster_metadata.py", line 21, in test_invalid_tuple_order_identity_and_ragged_index_failclosed
+    with self.subTest(tags=tags),self.assertRaises(ValueError):invalid_rows([0],[1],tags,[len(tags)],item,probes)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_tuple_order_identity_and_ragged_index_failclosed (paper16_m1.code.test_roster_metadata.MetadataTests.test_invalid_tuple_order_identity_and_ragged_index_failclosed) (tags=['EcephysSession', 'all_probes', '123'])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\code\test_roster_metadata.py", line 21, in test_invalid_tuple_order_identity_and_ragged_index_failclosed
+    with self.subTest(tags=tags),self.assertRaises(ValueError):invalid_rows([0],[1],tags,[len(tags)],item,probes)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_tuple_order_identity_and_ragged_index_failclosed (paper16_m1.code.test_roster_metadata.MetadataTests.test_invalid_tuple_order_identity_and_ragged_index_failclosed) (tags=['123', 'EcephysSession', 'all_probes'])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\code\test_roster_metadata.py", line 21, in test_invalid_tuple_order_identity_and_ragged_index_failclosed
+    with self.subTest(tags=tags),self.assertRaises(ValueError):invalid_rows([0],[1],tags,[len(tags)],item,probes)
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.005s
+
+FAILED (failures=13)

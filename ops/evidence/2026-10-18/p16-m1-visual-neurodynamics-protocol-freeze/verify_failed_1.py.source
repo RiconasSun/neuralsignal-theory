@@ -1,0 +1,51 @@
+"""Offline saved evidence and hypothetical specifications only; never load NWB."""
+from pathlib import Path
+import csv,hashlib,json,subprocess,sys,unittest,io
+import numpy as np,scipy
+from .planning import table
+P=Path(__file__).resolve().parents[1];R=P.parent
+E=R/'ops/evidence/2026-10-18/p16-m1-visual-neurodynamics-protocol-freeze'
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def checks():
+ assert sys.version.split()[0]=='3.11.15' and np.__version__=='2.4.6' and scipy.__version__=='1.16.3','Pinned runtime mismatch'
+ m=json.loads((P/'M1_FREEZE_MANIFEST.json').read_text())
+ for row in m['files']:
+  p=R/row['path'];assert p.is_file() and sha(p)==row['sha256'],'Frozen file mismatch:'+row['path']
+ cohort=list(csv.DictReader((P/'FROZEN_COHORT.csv').open(newline='')))
+ old=json.loads((R/'paper16_m0/results/ROLE_ALLOCATION.json').read_text());assert len(cohort)==len(old)==55
+ lookup={str(x['mouse_id']):x for x in old}
+ for row in cohort:
+  o=lookup[row['mouse_id']]
+  assert row['session_id']==str(o['session_id']) and row['probe_id']==str(o['probe_id']) and row['role']==o['group']
+ assert len({x['mouse_id'] for x in cohort})==55
+ assert sum(x['role']=='Development' for x in cohort)==28
+ assert sum(x['role']=='Final_candidate' for x in cohort)==27
+ assert sum(x['flash_family_present']=='True' for x in cohort)==55
+ for sid in [760345702,829720705]:
+  meta=json.loads((P/'metadata'/f'FLASH_NATIVE_{sid}.json').read_text())
+  assert meta['neural_datasets_read']==0 and meta['native_npz_sha256']==sha(P/'metadata'/f'FLASH_NATIVE_{sid}.npz')
+  with np.load(P/'metadata'/f'FLASH_NATIVE_{sid}.npz',allow_pickle=False) as a,np.load(R/'paper16_m0/results'/f'NATIVE_EVENTS_{sid}.npz',allow_pickle=False) as b:
+   for key in ['start','stop','id']:assert a[key].tobytes()==b['flashes_presentations_'+key].tobytes()
+   assert len(a['id'])==150 and len(set(a['id']))==150
+ assert (P/'PRECISION_POWER_SCENARIOS.csv').read_text()==table()
+ rows=list(csv.DictReader(io.StringIO(table())));assert len(rows)==400
+ assert all(0<=float(x['hypothetical_two_sided_power_alpha_05'])<=1 for x in rows)
+ cfg=json.loads((P/'protocol.json').read_text());ctl=json.loads((P/'controls.json').read_text());num=json.loads((P/'NUMERICAL_POLICY.json').read_text())
+ assert cfg['primary_contrast']=='B4-B1' and cfg['Prompt3_ready'] is False
+ assert len(ctl['sensitivities'])==12 and len(ctl['operators'])==4
+ assert sum(x['refits_B1_B4'] for x in ctl['sensitivities'])==8
+ assert num['fit_budget']['total_optimizer_attempts_max']==28*8*6+27*8*4+8*2*8*55==9248
+ base=m['base'];names=subprocess.check_output(['git','ls-tree','-r','--name-only',base],cwd=R).decode().splitlines()
+ changed=subprocess.check_output(['git','diff','--name-only',base],cwd=R).decode().splitlines()
+ assert not(set(names)&set(changed)-{'ops/daily-operations.md'}),'Historical tracked source changed'
+ daily=subprocess.check_output(['git','show',base+':ops/daily-operations.md'],cwd=R)
+ assert (R/'ops/daily-operations.md').read_bytes().endswith(daily),'Historical daily suffix changed'
+ print(json.dumps({'saved_hashes':len(m['files']),'cohort':55,'native_metadata_pilots':2,'planning_scenarios':400,'historical_paths_preserved':len(names),'new_neural_arrays':0,'real_fits':0,'Final_C_D_access':False,'scientific_status':cfg['scientific_status']}))
+
+def main():
+ checks()
+ suite=unittest.TestSuite(unittest.defaultTestLoader.loadTestsFromName(x) for x in ['paper16_m1.code.test_spec','paper16_m1.code.extra_tests'])
+ result=unittest.TextTestRunner(verbosity=2).run(suite)
+ if not result.wasSuccessful():raise SystemExit(1)
+
+if __name__=='__main__':main()

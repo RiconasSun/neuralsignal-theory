@@ -1,0 +1,3 @@
+# Prospective revision 2 register
+
+Before any neural fit/outcome, after rejected review1 writers COMPLETE: preserve the entire reviewed scientific payload and exact manifest/receipt; correct five P1 specification/completeness/documentation defects. No model architecture, primary family, coefficients, data/roles, numerical or scientific threshold was changed after results: no results exist. All six-bin support and secondary per-contrast rules are now explicit, rather than leaving future worker choices ambiguous. Inherited seven-region/qualified-ID boundary is copied from authoritative M0 without expansion. Bootstrap stream details are fixed prospectively. Rejected review and all previous failures remain archived. Separate full rereview required.

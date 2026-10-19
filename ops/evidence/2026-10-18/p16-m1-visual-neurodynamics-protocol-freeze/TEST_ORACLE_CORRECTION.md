@@ -1,0 +1,3 @@
+# Preserved test-oracle correction
+
+Original test_spec_failed_1.py.source and SYNTHETIC_SPEC_1.log retain one failed bitwise gradient nesting assertion (difference2.7755575615628914e−17). Mathematical nesting does not imply BLAS bitwise identity when matrix shape changes. TEST_BUG: replace exact gradient/objective bits with atol=rtol=1e−14 / objective14decimalplaces; shared gradient is independently verified against dual-number AD. This is a float64 arithmetic comparison, not a scientific gradient/convergence threshold change. All frozen AD1e−8,FD2e−5 and PG1e−5 gates unchanged. No production/real fit was run.

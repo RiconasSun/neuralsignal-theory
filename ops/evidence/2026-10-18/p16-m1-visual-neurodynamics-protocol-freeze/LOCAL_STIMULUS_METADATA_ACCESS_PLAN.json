@@ -1,0 +1,33 @@
+{
+  "mission": "P16-M1-VISUAL-NEURODYNAMICS-PROTOCOL-FREEZE",
+  "scope": "Existing two M0 Development NWB containers,stimulus metadata only;not a neural pilot replay",
+  "sessions": [
+    760345702,
+    829720705
+  ],
+  "allowed_dataset_paths": [
+    "/identifier",
+    "/intervals/flashes_presentations/id",
+    "/intervals/flashes_presentations/start_time",
+    "/intervals/flashes_presentations/stop_time",
+    "/intervals/flashes_presentations/color",
+    "/intervals/flashes_presentations/contrast",
+    "/intervals/flashes_presentations/phase",
+    "/intervals/flashes_presentations/spatial_frequency",
+    "/intervals/flashes_presentations/size",
+    "/intervals/flashes_presentations/opacity",
+    "/intervals/flashes_presentations/mask"
+  ],
+  "forbidden": [
+    "/units",
+    "spike_times",
+    "running neural arrays",
+    "all prospective Final NWB",
+    "all external NWBdownloads"
+  ],
+  "identity": "Verify full sourcefile SHA256 equals original M0 complete transfer receipt before permitted dataset reads",
+  "array_neural_payloads_permitted": 0,
+  "rows_expected_per_source": 150,
+  "output": "Lossless NPZ native id/start/stop/color plus small scalar metadata/partition count report;all IDs/chronological ordinal retained",
+  "no_new_scientific_predictive_outcomes": true
+}

@@ -1,0 +1,705 @@
+# CCPN / NEURALSIGNAL — PAPER 16 MASTER PROMPT 2/5
+
+MISSION: P16-M1-VISUAL-NEURODYNAMICS-PROTOCOL-FREEZE
+
+BASE:
+origin/test @ 2adb11a9fcd05cf1ea3cb4e120b5102400d6bb84
+
+PRIORITY: HIGH
+
+MODE: SCIENCE-FIRST / DATA-FIRST / PROSPECTIVE PROTOCOL FREEZE
+
+## 0. OBJECTIVE AND AUTHORIZATION
+
+I authorize Paper 16 M1: complete scientific protocol design and freezing.
+
+The proposed research area is Mouse Primary Visual Cortex (VISp) Predictive Neurodynamics.
+
+The completed M0 established:
+
+- Allen Visual Coding Neuropixels is the selected source.
+- Fifty-five independent metadata-candidate mice.
+- Twenty-eight Development / twenty-seven prospective Final.
+- Two real VISp spike pilots completed successfully.
+- Real spike/stimulus alignment demonstrated for the two pilots.
+- Noncommercial research rights established under applicable Allen Institute terms.
+
+These are feasibility results, not model outcomes or physiological admission.
+
+This M1 must resolve the scientific design before any further neural modeling.
+
+Authorize:
+- Bounded metadata-only source and stimulus-contract verification.
+- Scientific design and quantitative planning.
+- Exact source/cohort/protocol registration.
+- Model equations and numerical specifications.
+- Synthetic mathematical tests.
+- Independent internal scientific review.
+- Versioned Git archive.
+
+Do not authorize:
+- Additional real neural-array access.
+- Development model fitting.
+- Model selection using neural likelihoods.
+- Final neural access.
+- Final C calibration.
+- Final D assessment.
+- New hypothesis testing on actual spike outcomes.
+
+STOP after M1.
+
+## 1. AUTHORITATIVE M0 EVIDENCE
+
+Read:
+
+paper16_m0/P16_M0_REPORT.md
+paper16_m0/M1_SCIENTIFIC_HANDOFF.md
+paper16_m0/FEASIBILITY_REGISTRATION.json
+paper16_m0/SOURCE_COMPATIBILITY.md
+paper16_m0/SPIKE_STIMULUS_BEHAVIOR_ALIGNMENT.md
+paper16_m0/results/ROLE_ALLOCATION.json
+paper16_m0/results/COMMON_GRATING_PARAMETER_SUPPORT.json
+
+Also review the exact saved source, stimulus, pilot and allocation tables.
+
+Preserve all original M0 identities, failed attempts and source limitations.
+
+Do not overwrite historical P16 Transcriptomic/Gene Mapping or Closed-Loop Discovery roadmap documents.
+
+The newly authorized P16 VISp study is a distinct prospective research track.
+
+Preserve P1–P15 scientific outcomes and previously consumed held-out assessments.
+
+## 2. PRIMARY SCIENTIFIC QUESTION
+
+Working title:
+
+"Predictive Contributions of Local Spike History in Mouse Primary Visual Cortex"
+
+Primary question:
+
+Does strictly past local VISp spike history improve prediction of future VISp population spike counts beyond a strong visual stimulus, firing-rate, presentation-time, session-drift and measured-behavior baseline?
+
+Primary comparison:
+
+B4 − B1
+
+Where:
+
+B1 is the strongest registered non-neural-history stimulus/behavior nuisance baseline.
+
+B4 adds strictly past own-unit and other-unit spike history.
+
+Primary effect:
+
+Equal-mouse mean incremental held-out Poisson predictive log likelihood per actual valid scored unit-bin.
+
+This is an observational predictive estimand.
+
+It does not establish:
+- Causal neural connectivity
+- Biological cognitive primitives
+- Physical discrete neural states
+- Stimulus-independent neural mechanisms
+- Consciousness mechanisms
+- BCI performance
+
+Do not assume a positive result.
+
+## 3. CRITICAL ISSUE — BO / FC PROTOCOL IMBALANCE
+
+The M0 allocation is prospectively frozen:
+
+Development:
+5 Brain Observatory mice.
+23 Functional Connectivity mice.
+
+Final:
+27 Brain Observatory mice.
+
+This imbalance is scientifically important.
+
+The Final study will test independent-animal prediction under a shifted experimental-protocol distribution.
+
+It is not an IID random split from one identical experimental protocol.
+
+Do not describe it as such.
+
+Freeze:
+- Protocol identity for every mouse.
+- Original source/session/probe identity.
+- Separate Development BO and FC coverage.
+- The intended scope of cross-protocol predictive transport.
+- Laboratory/source provenance and possible dependence.
+- Protocol-specific nuisance and exposure limitations.
+- Sensitivity analyses for protocol heterogeneity.
+
+Do not reroll the allocation.
+
+Do not move historically exposed Development animals into Final.
+
+Do not use Final neural outcomes to determine protocol compatibility.
+
+Development model selection must have one prospectively defined animal-weighting and protocol-weighting policy.
+
+Do not optimize that policy after obtaining predictive scores.
+
+Report Development BO-only and FC-only results separately as descriptive diagnostics where feasible.
+
+Do not infer independent-laboratory replication from this single Allen source.
+
+## 4. PRIMARY STIMULUS FAMILY DECISION
+
+This is the most important M1 scientific decision.
+
+M0 verified that both actual pilot sessions contain:
+
+flashes_presentations
+
+150 presentations per pilot.
+
+Two nominal conditions:
+color = -1 and +1.
+
+Seventy-five repetitions per condition.
+
+Presentation durations approximately 0.25 seconds.
+
+These are verified pilot facts, not full-cohort guarantees.
+
+### Preferred candidate: Shared Flashes
+
+First evaluate whether flash presentations can serve as the primary common stimulus family across BO and FC.
+
+Verify, using documented source semantics and authorized metadata:
+
+- Actual presentation identities.
+- Nominal black/white stimulus semantics.
+- Source-defined color, intensity, monitor and timing conventions.
+- Original onset/offset timestamps.
+- Stimulus presentation duration and gap distributions.
+- Repetition counts per condition.
+- Presentation order and prior-condition history.
+- Native BO/FC equivalence and limitations.
+- Source-defined invalid epochs.
+- Per-mouse protocol presence across the candidate cohort.
+
+Do not claim identical physical luminance across rigs without evidence.
+
+If nominal condition identity is established but physical display equivalence is not, restrict the estimand to source-defined nominal flash categories, with protocol differences explicitly disclosed.
+
+### Alternative candidate: Shared Drifting Gratings
+
+M0 identified four shared nominal grating parameter tuples:
+
+Orientations 0, 45, 90 and 135 degrees.
+
+Temporal frequency 2 Hz.
+
+Spatial frequency 0.04 cycles/degree.
+
+Contrast 0.8.
+
+However, phase-at-onset equivalence is NOT established.
+
+Do not silently assume matching stimulus phase or temporal waveform.
+
+Only consider gratings as the primary family if documented source semantics establish a scientifically defensible common stimulus conditional model.
+
+If phase remains unresolved, do not manufacture a phase correction or treat the four nominal tuples as complete physical equivalence.
+
+### Decision rule
+
+Prefer the flash-based primary analysis if:
+- It has defensible common source semantics.
+- Both protocols offer sufficient usable repetitions.
+- Available recording support permits causal observation windows.
+- The planned nuisance model can adequately represent flash-evoked responses.
+- A credible Development/Final design is feasible.
+
+Otherwise, evaluate the registered grating alternative based on independent source evidence, not neural likelihood results.
+
+Select and freeze exactly ONE primary stimulus estimand.
+
+Do not select it based on favorable spike responses or model gains.
+
+If neither can support a valid primary analysis, STOP with STIMULUS_CONTRACT_INCONCLUSIVE.
+
+Do not launch an unlimited third stimulus-rescue program.
+
+## 5. DATA COHORT AND ROLE FREEZE
+
+Preserve the original 55 metadata candidates and 28/27 reservation.
+
+One selected VISp probe/session per mouse.
+
+No cross-probe pooling.
+
+No VISp-to-higher-visual-cortex expansion.
+
+No replacement based on neural outcomes.
+
+The two pilot mice remain Development.
+
+All historically exposed mice remain Development.
+
+Prospective Final identities remain protected.
+
+M1 may use source metadata to calculate stimulus-family feasibility, but must not inspect Final neural arrays or model outcomes.
+
+Register all cohort stages separately:
+
+1. Original 55 metadata candidates.
+2. Source-compatible stimulus candidates.
+3. Recording/timing candidates.
+4. Future Development physiological admissions.
+5. Future Final C physiological admissions.
+6. Actual later Final D evaluated animals.
+
+Do not call the 55 mice physiologically qualified.
+
+Preserve exact exclusions and denominator changes.
+
+The M1 protocol must specify future Development and Final minimum cohort/coverage rules, with scientifically justified sample-size and precision planning.
+
+Do not automatically reuse P15's eight-mouse floor or 0.01 nats/unit-bin confidence-interval-width target.
+
+Assess plausible effect/variance scenarios without using P16 neural predictive outcomes.
+
+If confirmatory sample size or assumptions cannot be defended, define an explicitly descriptive or exploratory scientific claim boundary before any real fitting.
+
+## 6. PROSPECTIVE TEMPORAL PARTITIONS
+
+Define future roles:
+
+Development:
+A — Training and train-only physiological QC.
+B — Global hyperparameter/model selection.
+E — Disjoint exploratory Development reporting.
+
+Final:
+C — Calibration-only physiological QC and fitting.
+D — Exactly one reserved evaluation.
+
+Choose exact chronological presentation cuts before neural evaluation.
+
+Cuts must be defined using original native presentation IDs and order, before exclusions.
+
+No random mixing of adjacent bins across data roles.
+
+Preserve presentation identities, stimulus conditions and repetition indices.
+
+Define prospective boundary guards and history resets.
+
+Confirm that both nominal flash conditions, if selected, have sufficient expected coverage in each A/B/E/C/D partition.
+
+Do not guarantee this from the two M0 pilots alone.
+
+Future exact per-animal native coverage must be revalidated before admission.
+
+No Final C/D neural access in M1.
+
+## 7. OBSERVATION AND TIMESTAMP CONTRACT
+
+Use the Allen curated NWB 2.2.2 source and verified reader/source conventions established in M0.
+
+Distinguish:
+- AllenSDK 2.16.2 source definitions
+- Actual PyNWB 3.1.3 pilot reading
+- Actual NWB object identity
+- Source-defined observation support
+
+Do not falsely claim the AllenSDK package itself was executed in M0.
+
+Use curated recording support with known invalid intervals.
+
+Do not infer perfect raw AP continuity or zero artifacts from missing annotations.
+
+Do not infer recording support only from the first or last spike.
+
+All finite native timestamps must survive exact binary64 roundtrip.
+
+Never use lossy decimal JSON conversion for event times.
+
+Strict causality:
+
+event_time < prediction_bin_start
+
+An event occurring exactly at the bin boundary is not a past event.
+
+Register tests for:
+- Equality at onset and bin boundaries.
+- Adjacent float64 values.
+- Half-open spike-count bins.
+- Native presentation IDs.
+- Stimulus-onset and offset availability.
+- Missing observation support.
+- Genuine zero-spike counts.
+- Interpresentation gaps.
+- Known invalid intervals.
+- Causal history resets.
+
+If source event clocks cannot support the intended estimand, STOP rather than repairing timestamps based on observed results.
+
+## 8. PRIMARY SCORING WINDOW AND HISTORY
+
+Choose:
+- Exact bin width.
+- Exact post-stimulus scoring interval.
+- Exact pre-stimulus warm-up.
+- Neural history horizon.
+- Trial/presentation reset convention.
+- Minimum valid source support.
+- Minimum repetitions per condition per role.
+
+For shared flashes, explicitly evaluate a post-onset scoring interval compatible with the verified approximately 250-ms presentations.
+
+Do not assume a 500-ms score window fits inside a 250-ms presentation.
+
+For every proposed scored bin:
+- Preserve valid observed exposure.
+- Retain genuine zero counts.
+- Exclude unsupported/missing exposure.
+- Avoid using future stimulus/behavior information.
+- Use identical target units and score masks for each compared model.
+
+Freeze the likelihood normalization as nats per actual scored nominal curated-release unit-bin.
+
+Check whether a pre-onset history window overlaps another presentation or an invalid gap.
+
+Define prospective treatment rather than silently using an invalid warm-up.
+
+Choose timing based on VISp stimulus biology, source resolution and metadata feasibility, not favorable prediction scores.
+
+## 9. STRONG VISUAL NUISANCE BASELINE
+
+The baseline is central to P16.
+
+Define B1 with sufficient representational capacity to model stimulus-evoked responses.
+
+For flash presentations, consider:
+
+- Nominal color/flash condition.
+- Strictly observed onset indicator.
+- Elapsed time since flash onset.
+- Flexible stimulus-by-time response terms.
+- Stimulus offset, only after observed or genuinely scheduled.
+- Prior presentation identity/color.
+- Interpresentation interval.
+- Repetition/adaptation history.
+- Original presentation order.
+- Session time and nonlinear drift.
+- Measured strictly past running behavior.
+- Prespecified bounded missingness indicators where scientifically defensible.
+
+The precise feature basis and number of columns must be frozen.
+
+Do not copy P15's 37 movement/task features without source-specific justification.
+
+A purely stationary B1 is unacceptable.
+
+B1 must not deliberately underfit visually evoked peri-stimulus structure to inflate the neural-history increment.
+
+No future running, eye movement or pupil sample may enter a real-time causal feature.
+
+Primary behavior policy:
+
+Use measured running only under verified causal time support, with frozen bounded coverage and missingness rules.
+
+Pupil may be evaluated as a secondary sensitivity where coverage supports it.
+
+Do not require complete pupil measurements as a universal primary admission criterion when source eye-tracking is missing.
+
+Never impute failed pupil tracking as zero arousal.
+
+Do not claim control of whisker, face, body movement or all arousal.
+
+## 10. MODEL FAMILIES
+
+Register exact mathematical models.
+
+B0:
+Stationary Poisson per-unit rate.
+
+B1:
+Strong stimulus/session/behavior nuisance Poisson model.
+
+B2:
+B1 plus strictly past own-unit spike history.
+
+B3:
+B1 plus strictly past other-unit population history.
+
+B4:
+B1 plus both own- and other-unit history.
+
+Primary:
+B4−B1.
+
+Secondary historical-attribution contrasts:
+B4−B3 and B4−B2.
+
+Optional registered compact models:
+
+D:
+Small causal conditional Poisson HMM.
+
+C:
+Small causal continuous/finite-history representation.
+
+S:
+Static mixture matched as an interpretive capacity guard where a temporal-state claim is contemplated.
+
+Retain the exact source-valid primary nuisance features in every dynamic comparison.
+
+Do not assume HMM superiority.
+
+If the source sample or compute budget cannot support a defensible D/C/S comparison, record this before fitting, withhold that secondary claim, and prioritize a complete strong-baseline P16 study.
+
+No post-result addition or removal of model families.
+
+No P13 unstable recursive Poisson generative null.
+
+## 11. NUMERICAL AND COMPUTE CONTRACT
+
+Freeze:
+- Parameter counts and active-feature rules.
+- Initializations.
+- Regularization grids.
+- Optimization algorithms.
+- Gradient implementations.
+- Independent AD/finite-difference tests.
+- Convergence and projected-gradient thresholds.
+- Numeric precision.
+- Bounded fitting budgets.
+- Failure and retry policy.
+- Global model-selection rules.
+
+Do not inherit P15's numerical constants automatically.
+
+Use P15 source and model code only where mathematical and scientific equivalence is independently demonstrated.
+
+Require synthetic tests for:
+- Poisson likelihood and exposure.
+- Exact nesting.
+- Strict causal features.
+- Future perturbation invariance.
+- Correct presentation resets.
+- Gradient agreement.
+- D exact forward/enumeration.
+- S IID-mixture comparator identity.
+- C finite-history behavior.
+- Frozen model-parameter counts.
+- Valid scorer denominators.
+- Finite numerical outputs.
+
+M1 tests are specification evidence only.
+
+They do not automatically certify a future real-data production worker.
+
+No real neural fitting in M1.
+
+## 12. STATISTICAL INFERENCE
+
+Mouse is the independent statistical unit.
+
+Never treat units, presentations, bins or probes as independent animals.
+
+Define before neural results:
+- Primary directional hypothesis.
+- Equal-mouse effect.
+- All secondary hypotheses.
+- Multiple-comparison family.
+- Confidence interval construction.
+- Statistical test and assumptions.
+- Laboratory/protocol dependence diagnostics.
+- Leave-one-mouse-out sensitivity.
+- BO/FC coverage and transport diagnostics.
+- Minimum meaningful effect and precision requirements.
+- Positive/mixed/negative/inconclusive claim rules.
+
+A 27-mouse candidate Final cohort does not automatically establish adequate statistical power.
+
+Provide a prospective precision/power sensitivity analysis over explicitly hypothetical effect and between-mouse variance scenarios.
+
+Do not estimate P16 effect size from pilot spike outcomes.
+
+Do not use sign-flip or permutation tests without articulating their exchangeability/symmetry assumptions.
+
+If Final animal attrition makes registered confirmation impossible, preserve an explicitly preauthorized descriptive fallback only if scientifically defensible.
+
+Nonsignificance does not prove equivalence.
+
+## 13. FALSIFICATION AND SENSITIVITY
+
+Register finite bounded controls for:
+
+1. Visual stimulus identity and peri-onset timing.
+2. Stimulus repetition and adaptation.
+3. BO/FC protocol shift.
+4. Running covariates and missingness.
+5. Pupil complete-case availability.
+6. Firing-rate and unit-count effects.
+7. Own versus population-history attribution.
+8. Within-presentation spike temporal ordering.
+9. Session drift and nonstationarity.
+10. Observation invalidity and source QC.
+11. VISp atlas boundary/layer composition.
+12. D/C/S versus strong baseline and static mixture, if registered.
+
+Each control must specify:
+- Exact scientific question.
+- Transformation/operator.
+- Preserved properties.
+- Destroyed properties.
+- Exchangeability assumptions.
+- Coverage minimum.
+- RNG and replicate policy.
+- Statistical/claim consequences.
+- Failure/unavailability treatment.
+
+A surrogate that destroys stimulus alignment is not automatically an exact conditional null for neural-history effects.
+
+Do not require a control to produce a positive result.
+
+Do not use failed controls or unavailable coverage as PASS.
+
+## 14. FINAL EVALUATION BOUNDARY
+
+Freeze the intended Final C/D protocol but do not execute it.
+
+Only a future separate mission may authorize Final C neural extraction, source-specific physiological QC and calibration.
+
+Only after:
+- Complete Development results and frozen selection.
+- Verified Final C admission.
+- Certified numerical production worker.
+- Frozen source/units/masks/features.
+- Complete pre-D scientific review.
+- One-shot D code and controls certified.
+- Explicit additional owner authorization.
+
+may a later Final D batch execute once.
+
+No cryptographic multi-party custody infrastructure.
+
+Ordinary, truthful access separation and reproducible review are sufficient.
+
+No post-D retuning or repeated final assessment.
+
+## 15. M1 STOP AND SUCCESS CRITERIA
+
+Return exactly one:
+
+M1_FROZEN_READY_FOR_M2
+
+M1_FROZEN_PENDING_NATIVE_STIMULUS_QC
+
+SCIENTIFIC_PROTOCOL_INCONCLUSIVE
+
+STIMULUS_CONTRACT_INCONCLUSIVE
+
+DATA_OR_SOURCE_INSUFFICIENT
+
+A full M1 freeze requires:
+
+- One definitive scientifically valid primary stimulus estimand.
+- Exact preserved 28/27 cohort allocation.
+- BO/FC comparability and transport interpretation.
+- Frozen model equations and strong nuisance baseline.
+- Frozen trial/presentation partitions.
+- Explicit source and biological QC rules.
+- A credible animal-level statistical plan.
+- Complete numerical/implementation specifications.
+- Fixed sensitivities, falsification and reporting rules.
+- An independent internal scientific review.
+- No real model fits or Final neural access.
+
+If definitive per-session compatibility remains to be checked only through future authorized native metadata/QC, clearly label that as pending and freeze the exact conditional verification rule.
+
+Do not mark M2 science ready merely because the source has 55 metadata candidates.
+
+If the primary scientific question itself cannot be defended, STOP.
+
+Do not create an endless metadata/source-rescue chain.
+
+## 16. REQUIRED DELIVERABLES
+
+Create:
+
+paper16_m1/
+
+Provide:
+
+1. M1_SCIENTIFIC_PROTOCOL.md
+2. STIMULUS_CONTRACT.md
+3. FROZEN_COHORT.csv
+4. BO_FC_TRANSPORT_PLAN.md
+5. SOURCE_OBSERVATION_QC.md
+6. FEATURE_AND_MODEL_EQUATIONS.md
+7. NUMERICAL_POLICY.json
+8. STATISTICAL_ANALYSIS_PLAN.md
+9. FALSIFICATION_AND_SENSITIVITY_PLAN.md
+10. EVALUATION_BOUNDARY.md
+11. M1_FREEZE_MANIFEST.json
+12. A1_A10_PROSPECTIVE_CLAIM_AUDIT.md
+13. Meaningful synthetic specification tests
+14. Saved-only PowerShell reproduction
+15. Independent internal scientific review
+16. Verified origin/test archival commit
+
+Final response fields:
+
+MISSION_ID
+M1_STATUS
+PRIMARY_STIMULUS_FAMILY
+PRIMARY_SCIENTIFIC_ESTIMAND
+BO_FC_COMPATIBILITY
+DEVELOPMENT_CANDIDATES
+FINAL_CANDIDATES
+EXPECTED_STIMULUS_COVERAGE
+OBSERVATION_CONTRACT
+PHYSIOLOGICAL_QC_POLICY
+MODEL_FAMILIES
+PRIMARY_AND_SECONDARY_HYPOTHESES
+STATISTICAL_PLAN
+PRECISION_AND_POWER_PLANNING
+FALSIFICATION_PLAN
+NUMERICAL_GATES
+FROZEN_SCIENTIFIC_PROTOCOL
+REMAINING_NATIVE_QC
+PROMPT_3_READY
+BUG_COUNT
+WARN_COUNT
+GIT_COMMIT
+REMOTE_VERIFICATION
+
+## 17. EXECUTION RULES
+
+SCIENCE FIRST.
+
+Use existing M0 evidence and authorized public metadata.
+
+No new dataset search.
+
+No new neural-array access.
+
+No prediction-model fitting.
+
+No Final C/D decoding.
+
+No post-result stimulus selection.
+
+No unnecessary security architecture.
+
+No invented source compatibility.
+
+No external emails.
+
+No P15 rerun or alteration.
+
+Preserve every failed scientific gate and historical result.
+
+Complete the bounded protocol and independent review, push to origin/test, verify remote file contents and clean working tree, then STOP.
+
+BEGIN P16 M1 NOW.

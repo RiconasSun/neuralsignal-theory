@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\code\stimulus_metadata.py", line 43, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\code\stimulus_metadata.py", line 28, in main
+    assert str(decoded(get('/identifier')))==str(sid)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\code\stimulus_metadata.py", line 16, in decoded
+    if isinstance(x,np.ndarray):return [decoded(v) for v in x]
+                                       ^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: iteration over a 0-d array

@@ -1,0 +1,20 @@
+{
+  "mission": "P16-M1-VISUAL-DYNAMICS-PROTOCOL-FREEZE",
+  "registered_at": "2026-10-19T01:09:06.040787+00:00",
+  "kind": "Evidence-grounded metadata parser/packaging repair before any neural outcome;not a scientific retry",
+  "failed_original_sessions": [
+    719161530,
+    737581020,
+    739448407,
+    754312389,
+    793224716,
+    840012044,
+    847657808
+  ],
+  "source_evidence": "Pinned AllenSDK ecephys_session.get_invalid_times docs lines577..600 define [scope,scope_id,label],EcephysSession global;labels all_probes saturation and stimulus longframe. Existing parser falsely rejected legitimate matching session_id companion. Official _mask_invalid_stimulus_presentations excludes whole source presentation on any stimulus-invalid overlap. Original7 failures retained,not recastPASS.",
+  "source_sha256": "403840767a08dc6194d55c604e9eebbac4512acd61ae3b17b536271302a5c6eb",
+  "semantics": "Accept only canonical EcephysSession,current registeredsessionID,knownlabel;wrongIDs/unknownlabels stilldeny. Apply all global/selectedprobe masks;stimulus invalidity removes full overlapping source presentations,not justlate220ms prefix. No count/score mask weakened.",
+  "recovery_bound": "Exactly one reread for these7 parser-failed metadata objects,exclusive newappendonlydirectory. No other source/object/animal replacement. Cumulative per-objectreservedbytesincludingfirstattempt remain<=4194304;globaloriginal55*4194304ceiling unchanged. One original object attempt policy amended prospectively only for this demonstrated parser exception;no unlimited retries. No neural data or model fitting.",
+  "reason_saved_only_insufficient": "Original range reader retained hashes not payload bytes;all metadata arrays were decoded before parser exception but not serialized. Old sourceheaders contain invalidtags but notfullflashtables. Cannot fabricate missingarrays;minimalmetadata reread required.",
+  "before_repair_rereads": true
+}

@@ -1,0 +1,42 @@
+test_C_is_finite_past_and_reset (paper16_m1.code.test_spec.SpecTests.test_C_is_finite_past_and_reset) ... ok
+test_chronological_original_cuts (paper16_m1.code.test_spec.SpecTests.test_chronological_original_cuts) ... ok
+test_equality_nextafter_availability (paper16_m1.code.test_spec.SpecTests.test_equality_nextafter_availability) ... ok
+test_exact_D_and_S_identity (paper16_m1.code.test_spec.SpecTests.test_exact_D_and_S_identity) ... ok
+test_halfopen_zero_missing_native_ids (paper16_m1.code.test_spec.SpecTests.test_halfopen_zero_missing_native_ids) ... ok
+test_jitter_count_invariance_derangements (paper16_m1.code.test_spec.SpecTests.test_jitter_count_invariance_derangements) ... ok
+test_nesting_objective_regularization (paper16_m1.code.test_spec.SpecTests.test_nesting_objective_regularization) ... FAIL
+test_poisson_exposure_AD_FD_scan (paper16_m1.code.test_spec.SpecTests.test_poisson_exposure_AD_FD_scan) ... ok
+test_projected_gradient_bounds (paper16_m1.code.test_spec.SpecTests.test_projected_gradient_bounds) ... ok
+test_psth_and_parameter_counts (paper16_m1.code.test_spec.SpecTests.test_psth_and_parameter_counts) ... ok
+test_running_parent_end_and_missing (paper16_m1.code.test_spec.SpecTests.test_running_parent_end_and_missing) ... ok
+test_scaling_train_only_active_and_future (paper16_m1.code.test_spec.SpecTests.test_scaling_train_only_active_and_future) ... ok
+test_score_denominator_and_Holm (paper16_m1.code.test_spec.SpecTests.test_score_denominator_and_Holm) ... ok
+test_strict_history_future_invariance_and_reset (paper16_m1.code.test_spec.SpecTests.test_strict_history_future_invariance_and_reset) ... ok
+test_synthetic_convex_optimizer_gate (paper16_m1.code.test_spec.SpecTests.test_synthetic_convex_optimizer_gate) ... ok
+
+======================================================================
+FAIL: test_nesting_objective_regularization (paper16_m1.code.test_spec.SpecTests.test_nesting_objective_regularization)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\code\test_spec.py", line 41, in test_nesting_objective_regularization
+    a,g=glm(b,X,y,dt,.1,1);c,h=glm(np.r_[b,0],new,y,dt,.1,1);self.assertEqual(a,c);np.testing.assert_array_equal(g,h[:3])
+                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\work\runtime\Lib\site-packages\numpy\testing\_private\utils.py", line 1121, in assert_array_equal
+    assert_array_compare(operator.__eq__, actual, desired, err_msg=err_msg,
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\work\runtime\Lib\site-packages\numpy\testing\_private\utils.py", line 983, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Arrays are not equal
+
+Mismatched elements: 1 / 3 (33.3%)
+Mismatch at index:
+ [1]: -0.13399715485561464 (ACTUAL), -0.13399715485561467 (DESIRED)
+Max absolute difference among violations: 2.77555756e-17
+Max relative difference among violations: 2.07135559e-16
+ ACTUAL: array([-0.702041, -0.133997, -0.219524])
+ DESIRED: array([-0.702041, -0.133997, -0.219524])
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.008s
+
+FAILED (failures=1)

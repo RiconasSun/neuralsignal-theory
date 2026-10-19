@@ -1,0 +1,14 @@
+test_normative_bounds_and_initializer_match (paper16_m1.code.extra_tests.AdditionalTests.test_normative_bounds_and_initializer_match) ... FAIL
+
+======================================================================
+FAIL: test_normative_bounds_and_initializer_match (paper16_m1.code.extra_tests.AdditionalTests.test_normative_bounds_and_initializer_match)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\code\extra_tests.py", line 16, in test_normative_bounds_and_initializer_match
+    self.assertIn('clip(log R_u,-10,10)',text)
+AssertionError: 'clip(log R_u,-10,10)' not found in 'For unit u,use only complete main A (Development) or C (Final) registered scored rows k5..10: R_u=sum(y_u)/sum(actual full-bin exposure .02s). Never QC early0..100ms counts. B0 eta=clip(log R_u,-6,6), R=0 -> -10. Every B1/B2/B3/B4 PSTH initializes to that same unit value; other coefficients0. Sensitivity initializers use that panel A/C scored rows/exposures, never a QC window.'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (failures=1)

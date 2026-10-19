@@ -1,0 +1,3 @@
+# Closure review1 repair
+
+The original prospective baseline is unchanged. Closure review correctly found owner rows306/325/326 prematurely VERIFIED while only added Git rows344/345 were pending. All five are now PENDING_ACTUAL_GIT;preclosure verified341/346. ACC37 remains pending;37/38groups verified. Reviewed science manifest unchanged. Failed closure report plus exact rejected trace/docs/daily/helper snapshot are preserved. The actual ignored receipt must resolve all five IDs andACC37 from real commit/push/readback/clean;no terminalPASS before it succeeds. No scientific/code/source change or new permission.

@@ -1,0 +1,75 @@
+test_C_is_finite_past_and_reset (paper16_m1.code.test_spec.SpecTests.test_C_is_finite_past_and_reset) ... ok
+test_chronological_original_cuts (paper16_m1.code.test_spec.SpecTests.test_chronological_original_cuts) ... ok
+test_equality_nextafter_availability (paper16_m1.code.test_spec.SpecTests.test_equality_nextafter_availability) ... ok
+test_exact_D_and_S_identity (paper16_m1.code.test_spec.SpecTests.test_exact_D_and_S_identity) ... ok
+test_halfopen_zero_missing_native_ids (paper16_m1.code.test_spec.SpecTests.test_halfopen_zero_missing_native_ids) ... ok
+test_jitter_count_invariance_derangements (paper16_m1.code.test_spec.SpecTests.test_jitter_count_invariance_derangements) ... ok
+test_nesting_objective_regularization (paper16_m1.code.test_spec.SpecTests.test_nesting_objective_regularization) ... ok
+test_poisson_exposure_AD_FD_scan (paper16_m1.code.test_spec.SpecTests.test_poisson_exposure_AD_FD_scan) ... ok
+test_projected_gradient_bounds (paper16_m1.code.test_spec.SpecTests.test_projected_gradient_bounds) ... ok
+test_psth_and_parameter_counts (paper16_m1.code.test_spec.SpecTests.test_psth_and_parameter_counts) ... ok
+test_running_parent_end_and_missing (paper16_m1.code.test_spec.SpecTests.test_running_parent_end_and_missing) ... ok
+test_scaling_train_only_active_and_future (paper16_m1.code.test_spec.SpecTests.test_scaling_train_only_active_and_future) ... ok
+test_score_denominator_and_Holm (paper16_m1.code.test_spec.SpecTests.test_score_denominator_and_Holm) ... ok
+test_strict_history_future_invariance_and_reset (paper16_m1.code.test_spec.SpecTests.test_strict_history_future_invariance_and_reset) ... ok
+test_synthetic_convex_optimizer_gate (paper16_m1.code.test_spec.SpecTests.test_synthetic_convex_optimizer_gate) ... ok
+test_bounds_gradient_never_blanket_zero (paper16_m1.code.extra_tests.AdditionalTests.test_bounds_gradient_never_blanket_zero) ... ok
+test_eta_finiteness_and_bounded_feature_domain (paper16_m1.code.extra_tests.AdditionalTests.test_eta_finiteness_and_bounded_feature_domain) ... ok
+test_hypothetical_power_integral (paper16_m1.code.extra_tests.AdditionalTests.test_hypothetical_power_integral) ... ok
+test_no_future_scaler_refit_or_neural_count_use (paper16_m1.code.extra_tests.AdditionalTests.test_no_future_scaler_refit_or_neural_count_use) ... ok
+test_observation_invalid_gaps_zero_offset (paper16_m1.code.extra_tests.AdditionalTests.test_observation_invalid_gaps_zero_offset) ... ok
+test_saved_manifest_tamper_missing_denied (paper16_m1.code.extra_tests.AdditionalTests.test_saved_manifest_tamper_missing_denied) ... ERROR
+test_scalar_metadata_decoder_regression_and_allowlist (paper16_m1.code.extra_tests.AdditionalTests.test_scalar_metadata_decoder_regression_and_allowlist) ... ok
+test_source_nonfinite_denied (paper16_m1.code.extra_tests.AdditionalTests.test_source_nonfinite_denied) ... ok
+
+======================================================================
+ERROR: test_saved_manifest_tamper_missing_denied (paper16_m1.code.extra_tests.AdditionalTests.test_saved_manifest_tamper_missing_denied)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\code\extra_tests.py", line 23, in test_saved_manifest_tamper_missing_denied
+    root=Path(d);p=root/'fixture';p.write_bytes(b'original')
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1067, in write_bytes
+    with self.open(mode='wb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{9e5623f5-905e-4bbf-ba71-e2dbb8d65814}\\AC\\Temp\\tmpos3ax90i\\fixture'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{9e5623f5-905e-4bbf-ba71-e2dbb8d65814}\\AC\\Temp\\tmpos3ax90i'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\code\extra_tests.py", line 22, in test_saved_manifest_tamper_missing_denied
+    with tempfile.TemporaryDirectory() as d:
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 943, in __exit__
+    self.cleanup()
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+{"saved_hashes": 44, "cohort": 55, "native_metadata_pilots": 2, "planning_scenarios": 100, "historical_paths_preserved": 36252, "new_neural_arrays": 0, "real_fits": 0, "Final_C_D_access": false, "scientific_status": "M1_FROZEN_PENDING_NATIVE_STIMULUS_QC"}
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{9e5623f5-905e-4bbf-ba71-e2dbb8d65814}\\AC\\Temp\\tmpos3ax90i'
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.097s
+
+FAILED (errors=1)

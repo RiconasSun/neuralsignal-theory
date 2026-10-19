@@ -1,0 +1,43 @@
+"""Explicit allowlist metadata-only extraction from the two existing M0 pilot containers."""
+from pathlib import Path
+import hashlib,json
+import h5py,numpy as np
+P=Path(__file__).resolve().parents[1];R=P.parent
+FIELDS=['id','start_time','stop_time','color','contrast','phase','spatial_frequency','size','opacity','mask']
+ALLOWED={'/identifier'}|{'/intervals/flashes_presentations/'+k for k in FIELDS}
+def checksum(path):
+ h=hashlib.sha256()
+ with path.open('rb') as f:
+  for data in iter(lambda:f.read(4*1024*1024),b''):h.update(data)
+ return h.hexdigest()
+def decoded(x):
+ if isinstance(x,bytes):return x.decode()
+ if isinstance(x,np.generic):return decoded(x.item())
+ if isinstance(x,np.ndarray):return decoded(x.item()) if x.ndim==0 else [decoded(v) for v in x]
+ return x
+
+def main():
+ audit=[]
+ for sid in [760345702,829720705]:
+  path=R/'paper16_m0/work'/f'session_{sid}.nwb';receipt=json.loads((R/'paper16_m0/results'/f'TRANSFER_{sid}.json').read_text());assert checksum(path)==receipt['sha256']
+  data={};reads=[]
+  with h5py.File(path,'r') as f:
+   def get(name):
+    if name not in ALLOWED:raise ValueError('Nonmetadata dataset denied: '+name)
+    reads.append(name);return np.asarray(f[name][()])
+   assert str(decoded(get('/identifier')))==str(sid)
+   for key in FIELDS:data[key]=get('/intervals/flashes_presentations/'+key)
+  a=np.asarray(data['start_time']);b=np.asarray(data['stop_time']);ids=np.asarray(data['id']);colors=np.array([float(decoded(x)) for x in data['color']],dtype=np.float64)
+  assert a.dtype==b.dtype==np.dtype('float64') and len(a)==150 and set(colors)=={-1.,1.}
+  with np.load(R/'paper16_m0/results'/f'NATIVE_EVENTS_{sid}.npz',allow_pickle=False) as old:
+   for key,arr in [('start',a),('stop',b),('id',ids)]:assert old['flashes_presentations_'+key].tobytes()==arr.tobytes()
+  target=P/'metadata'/f'FLASH_NATIVE_{sid}.npz'
+  if target.exists():raise FileExistsError('Preserve original metadata extraction,no silent overwrite')
+  np.savez_compressed(target,start=a,stop=b,id=ids,color=colors,ordinal=np.arange(len(ids),dtype=np.int64))
+  spans={};n=len(ids)
+  for role,left,right in [('A',0,int(.6*n)),('B',int(.6*n),int(.8*n)),('E',int(.8*n),n),('C',0,int(.6*n)),('D',int(.6*n),n)]:
+   spans[role]={'first_ordinal':left,'exclusive_stop_ordinal':right,'original_ids':[int(x) for x in ids[left:right]],'color_counts':{str(c):int((colors[left:right]==c).sum()) for c in [-1.,1.]}}
+  summary={'session_id':sid,'source_sha256':receipt['sha256'],'reader_sha256':checksum(Path(__file__)),'dataset_paths_read':reads,'neural_datasets_read':0,'N':n,'original_condition_counts':{str(c):int((colors==c).sum()) for c in [-1.,1.]},'duration_range':[float(np.min(b-a)),float(np.max(b-a))],'gap_range':[float(np.min(a[1:]-b[:-1])),float(np.max(a[1:]-b[:-1]))],'parameters':{k:sorted({str(decoded(x)) for x in data[k]}) for k in FIELDS if k not in ['id','start_time','stop_time','color']},'partitions_both_possible_designs_metadata_only':spans,'native_npz_sha256':checksum(target),'timestamp_bits_unchanged_from_M0':True,'future_Final_C_D_neural_authorized':False}
+  (P/'metadata'/f'FLASH_NATIVE_{sid}.json').write_text(json.dumps(summary,indent=2)+'\n',encoding='utf8',newline='\n');audit.append(summary)
+ print(json.dumps([{'session_id':x['session_id'],'partitions':{k:v['color_counts'] for k,v in x['partitions_both_possible_designs_metadata_only'].items()},'neural_datasets_read':0} for x in audit],indent=2))
+if __name__=='__main__':main()

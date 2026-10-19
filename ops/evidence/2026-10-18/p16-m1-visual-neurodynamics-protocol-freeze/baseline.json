@@ -1,0 +1,2823 @@
+{
+  "mission": "P16-M1-VISUAL-NEURODYNAMICS-PROTOCOL-FREEZE",
+  "base": "2adb11a9fcd05cf1ea3cb4e120b5102400d6bb84",
+  "frozen_at": "2026-10-19T00:18:50.896524+00:00",
+  "owner_sha256": "456c687231a27dc8f8cd450c11f586e9e4c21262bd427eee69c20d55c30cd050",
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "requirement": "# CCPN / NEURALSIGNAL — PAPER 16 MASTER PROMPT 2/5",
+      "source_line": 1,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-002",
+      "requirement": "MISSION: P16-M1-VISUAL-NEURODYNAMICS-PROTOCOL-FREEZE",
+      "source_line": 3,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-003",
+      "requirement": "BASE:",
+      "source_line": 5,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-004",
+      "requirement": "origin/test @ 2adb11a9fcd05cf1ea3cb4e120b5102400d6bb84",
+      "source_line": 6,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-005",
+      "requirement": "PRIORITY: HIGH",
+      "source_line": 8,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-006",
+      "requirement": "MODE: SCIENCE-FIRST / DATA-FIRST / PROSPECTIVE PROTOCOL FREEZE",
+      "source_line": 10,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-007",
+      "requirement": "## 0. OBJECTIVE AND AUTHORIZATION",
+      "source_line": 12,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-008",
+      "requirement": "I authorize Paper 16 M1: complete scientific protocol design and freezing.",
+      "source_line": 14,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-009",
+      "requirement": "The proposed research area is Mouse Primary Visual Cortex (VISp) Predictive Neurodynamics.",
+      "source_line": 16,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-010",
+      "requirement": "The completed M0 established:",
+      "source_line": 18,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-011",
+      "requirement": "- Allen Visual Coding Neuropixels is the selected source.",
+      "source_line": 20,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-012",
+      "requirement": "- Fifty-five independent metadata-candidate mice.",
+      "source_line": 21,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-013",
+      "requirement": "- Twenty-eight Development / twenty-seven prospective Final.",
+      "source_line": 22,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-014",
+      "requirement": "- Two real VISp spike pilots completed successfully.",
+      "source_line": 23,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-015",
+      "requirement": "- Real spike/stimulus alignment demonstrated for the two pilots.",
+      "source_line": 24,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-016",
+      "requirement": "- Noncommercial research rights established under applicable Allen Institute terms.",
+      "source_line": 25,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-017",
+      "requirement": "These are feasibility results, not model outcomes or physiological admission.",
+      "source_line": 27,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-018",
+      "requirement": "This M1 must resolve the scientific design before any further neural modeling.",
+      "source_line": 29,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-019",
+      "requirement": "Authorize:",
+      "source_line": 31,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-020",
+      "requirement": "- Bounded metadata-only source and stimulus-contract verification.",
+      "source_line": 32,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-021",
+      "requirement": "- Scientific design and quantitative planning.",
+      "source_line": 33,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-022",
+      "requirement": "- Exact source/cohort/protocol registration.",
+      "source_line": 34,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-023",
+      "requirement": "- Model equations and numerical specifications.",
+      "source_line": 35,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-024",
+      "requirement": "- Synthetic mathematical tests.",
+      "source_line": 36,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-025",
+      "requirement": "- Independent internal scientific review.",
+      "source_line": 37,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-026",
+      "requirement": "- Versioned Git archive.",
+      "source_line": 38,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-027",
+      "requirement": "Do not authorize:",
+      "source_line": 40,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-028",
+      "requirement": "- Additional real neural-array access.",
+      "source_line": 41,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-029",
+      "requirement": "- Development model fitting.",
+      "source_line": 42,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-030",
+      "requirement": "- Model selection using neural likelihoods.",
+      "source_line": 43,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-031",
+      "requirement": "- Final neural access.",
+      "source_line": 44,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-032",
+      "requirement": "- Final C calibration.",
+      "source_line": 45,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-033",
+      "requirement": "- Final D assessment.",
+      "source_line": 46,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-034",
+      "requirement": "- New hypothesis testing on actual spike outcomes.",
+      "source_line": 47,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-035",
+      "requirement": "STOP after M1.",
+      "source_line": 49,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-036",
+      "requirement": "## 1. AUTHORITATIVE M0 EVIDENCE",
+      "source_line": 51,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-037",
+      "requirement": "Read:",
+      "source_line": 53,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-038",
+      "requirement": "paper16_m0/P16_M0_REPORT.md",
+      "source_line": 55,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-039",
+      "requirement": "paper16_m0/M1_SCIENTIFIC_HANDOFF.md",
+      "source_line": 56,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-040",
+      "requirement": "paper16_m0/FEASIBILITY_REGISTRATION.json",
+      "source_line": 57,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-041",
+      "requirement": "paper16_m0/SOURCE_COMPATIBILITY.md",
+      "source_line": 58,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-042",
+      "requirement": "paper16_m0/SPIKE_STIMULUS_BEHAVIOR_ALIGNMENT.md",
+      "source_line": 59,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-043",
+      "requirement": "paper16_m0/results/ROLE_ALLOCATION.json",
+      "source_line": 60,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-044",
+      "requirement": "paper16_m0/results/COMMON_GRATING_PARAMETER_SUPPORT.json",
+      "source_line": 61,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-045",
+      "requirement": "Also review the exact saved source, stimulus, pilot and allocation tables.",
+      "source_line": 63,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-046",
+      "requirement": "Preserve all original M0 identities, failed attempts and source limitations.",
+      "source_line": 65,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-047",
+      "requirement": "Do not overwrite historical P16 Transcriptomic/Gene Mapping or Closed-Loop Discovery roadmap documents.",
+      "source_line": 67,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-048",
+      "requirement": "The newly authorized P16 VISp study is a distinct prospective research track.",
+      "source_line": 69,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-049",
+      "requirement": "Preserve P1–P15 scientific outcomes and previously consumed held-out assessments.",
+      "source_line": 71,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-050",
+      "requirement": "## 2. PRIMARY SCIENTIFIC QUESTION",
+      "source_line": 73,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-051",
+      "requirement": "Working title:",
+      "source_line": 75,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-052",
+      "requirement": "\"Predictive Contributions of Local Spike History in Mouse Primary Visual Cortex\"",
+      "source_line": 77,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-053",
+      "requirement": "Primary question:",
+      "source_line": 79,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-054",
+      "requirement": "Does strictly past local VISp spike history improve prediction of future VISp population spike counts beyond a strong visual stimulus, firing-rate, presentation-time, session-drift and measured-behavior baseline?",
+      "source_line": 81,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-055",
+      "requirement": "Primary comparison:",
+      "source_line": 83,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-056",
+      "requirement": "B4 − B1",
+      "source_line": 85,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-057",
+      "requirement": "Where:",
+      "source_line": 87,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-058",
+      "requirement": "B1 is the strongest registered non-neural-history stimulus/behavior nuisance baseline.",
+      "source_line": 89,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-059",
+      "requirement": "B4 adds strictly past own-unit and other-unit spike history.",
+      "source_line": 91,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-060",
+      "requirement": "Primary effect:",
+      "source_line": 93,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-061",
+      "requirement": "Equal-mouse mean incremental held-out Poisson predictive log likelihood per actual valid scored unit-bin.",
+      "source_line": 95,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-062",
+      "requirement": "This is an observational predictive estimand.",
+      "source_line": 97,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-063",
+      "requirement": "It does not establish:",
+      "source_line": 99,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-064",
+      "requirement": "- Causal neural connectivity",
+      "source_line": 100,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-065",
+      "requirement": "- Biological cognitive primitives",
+      "source_line": 101,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-066",
+      "requirement": "- Physical discrete neural states",
+      "source_line": 102,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-067",
+      "requirement": "- Stimulus-independent neural mechanisms",
+      "source_line": 103,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-068",
+      "requirement": "- Consciousness mechanisms",
+      "source_line": 104,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-069",
+      "requirement": "- BCI performance",
+      "source_line": 105,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-070",
+      "requirement": "Do not assume a positive result.",
+      "source_line": 107,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-071",
+      "requirement": "## 3. CRITICAL ISSUE — BO / FC PROTOCOL IMBALANCE",
+      "source_line": 109,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-072",
+      "requirement": "The M0 allocation is prospectively frozen:",
+      "source_line": 111,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-073",
+      "requirement": "Development:",
+      "source_line": 113,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-074",
+      "requirement": "5 Brain Observatory mice.",
+      "source_line": 114,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-075",
+      "requirement": "23 Functional Connectivity mice.",
+      "source_line": 115,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-076",
+      "requirement": "Final:",
+      "source_line": 117,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-077",
+      "requirement": "27 Brain Observatory mice.",
+      "source_line": 118,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-078",
+      "requirement": "This imbalance is scientifically important.",
+      "source_line": 120,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-079",
+      "requirement": "The Final study will test independent-animal prediction under a shifted experimental-protocol distribution.",
+      "source_line": 122,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-080",
+      "requirement": "It is not an IID random split from one identical experimental protocol.",
+      "source_line": 124,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-081",
+      "requirement": "Do not describe it as such.",
+      "source_line": 126,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-082",
+      "requirement": "Freeze:",
+      "source_line": 128,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-083",
+      "requirement": "- Protocol identity for every mouse.",
+      "source_line": 129,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-084",
+      "requirement": "- Original source/session/probe identity.",
+      "source_line": 130,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-085",
+      "requirement": "- Separate Development BO and FC coverage.",
+      "source_line": 131,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-086",
+      "requirement": "- The intended scope of cross-protocol predictive transport.",
+      "source_line": 132,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-087",
+      "requirement": "- Laboratory/source provenance and possible dependence.",
+      "source_line": 133,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-088",
+      "requirement": "- Protocol-specific nuisance and exposure limitations.",
+      "source_line": 134,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-089",
+      "requirement": "- Sensitivity analyses for protocol heterogeneity.",
+      "source_line": 135,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-090",
+      "requirement": "Do not reroll the allocation.",
+      "source_line": 137,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-091",
+      "requirement": "Do not move historically exposed Development animals into Final.",
+      "source_line": 139,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-092",
+      "requirement": "Do not use Final neural outcomes to determine protocol compatibility.",
+      "source_line": 141,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-093",
+      "requirement": "Development model selection must have one prospectively defined animal-weighting and protocol-weighting policy.",
+      "source_line": 143,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-094",
+      "requirement": "Do not optimize that policy after obtaining predictive scores.",
+      "source_line": 145,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-095",
+      "requirement": "Report Development BO-only and FC-only results separately as descriptive diagnostics where feasible.",
+      "source_line": 147,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-096",
+      "requirement": "Do not infer independent-laboratory replication from this single Allen source.",
+      "source_line": 149,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-097",
+      "requirement": "## 4. PRIMARY STIMULUS FAMILY DECISION",
+      "source_line": 151,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-098",
+      "requirement": "This is the most important M1 scientific decision.",
+      "source_line": 153,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-099",
+      "requirement": "M0 verified that both actual pilot sessions contain:",
+      "source_line": 155,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-100",
+      "requirement": "flashes_presentations",
+      "source_line": 157,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-101",
+      "requirement": "150 presentations per pilot.",
+      "source_line": 159,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-102",
+      "requirement": "Two nominal conditions:",
+      "source_line": 161,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-103",
+      "requirement": "color = -1 and +1.",
+      "source_line": 162,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-104",
+      "requirement": "Seventy-five repetitions per condition.",
+      "source_line": 164,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-105",
+      "requirement": "Presentation durations approximately 0.25 seconds.",
+      "source_line": 166,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-106",
+      "requirement": "These are verified pilot facts, not full-cohort guarantees.",
+      "source_line": 168,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-107",
+      "requirement": "### Preferred candidate: Shared Flashes",
+      "source_line": 170,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-108",
+      "requirement": "First evaluate whether flash presentations can serve as the primary common stimulus family across BO and FC.",
+      "source_line": 172,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-109",
+      "requirement": "Verify, using documented source semantics and authorized metadata:",
+      "source_line": 174,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-110",
+      "requirement": "- Actual presentation identities.",
+      "source_line": 176,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-111",
+      "requirement": "- Nominal black/white stimulus semantics.",
+      "source_line": 177,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-112",
+      "requirement": "- Source-defined color, intensity, monitor and timing conventions.",
+      "source_line": 178,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-113",
+      "requirement": "- Original onset/offset timestamps.",
+      "source_line": 179,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-114",
+      "requirement": "- Stimulus presentation duration and gap distributions.",
+      "source_line": 180,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-115",
+      "requirement": "- Repetition counts per condition.",
+      "source_line": 181,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-116",
+      "requirement": "- Presentation order and prior-condition history.",
+      "source_line": 182,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-117",
+      "requirement": "- Native BO/FC equivalence and limitations.",
+      "source_line": 183,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-118",
+      "requirement": "- Source-defined invalid epochs.",
+      "source_line": 184,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-119",
+      "requirement": "- Per-mouse protocol presence across the candidate cohort.",
+      "source_line": 185,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-120",
+      "requirement": "Do not claim identical physical luminance across rigs without evidence.",
+      "source_line": 187,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-121",
+      "requirement": "If nominal condition identity is established but physical display equivalence is not, restrict the estimand to source-defined nominal flash categories, with protocol differences explicitly disclosed.",
+      "source_line": 189,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-122",
+      "requirement": "### Alternative candidate: Shared Drifting Gratings",
+      "source_line": 191,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-123",
+      "requirement": "M0 identified four shared nominal grating parameter tuples:",
+      "source_line": 193,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-124",
+      "requirement": "Orientations 0, 45, 90 and 135 degrees.",
+      "source_line": 195,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-125",
+      "requirement": "Temporal frequency 2 Hz.",
+      "source_line": 197,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-126",
+      "requirement": "Spatial frequency 0.04 cycles/degree.",
+      "source_line": 199,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-127",
+      "requirement": "Contrast 0.8.",
+      "source_line": 201,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-128",
+      "requirement": "However, phase-at-onset equivalence is NOT established.",
+      "source_line": 203,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-129",
+      "requirement": "Do not silently assume matching stimulus phase or temporal waveform.",
+      "source_line": 205,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-130",
+      "requirement": "Only consider gratings as the primary family if documented source semantics establish a scientifically defensible common stimulus conditional model.",
+      "source_line": 207,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-131",
+      "requirement": "If phase remains unresolved, do not manufacture a phase correction or treat the four nominal tuples as complete physical equivalence.",
+      "source_line": 209,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-132",
+      "requirement": "### Decision rule",
+      "source_line": 211,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-133",
+      "requirement": "Prefer the flash-based primary analysis if:",
+      "source_line": 213,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-134",
+      "requirement": "- It has defensible common source semantics.",
+      "source_line": 214,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-135",
+      "requirement": "- Both protocols offer sufficient usable repetitions.",
+      "source_line": 215,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-136",
+      "requirement": "- Available recording support permits causal observation windows.",
+      "source_line": 216,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-137",
+      "requirement": "- The planned nuisance model can adequately represent flash-evoked responses.",
+      "source_line": 217,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-138",
+      "requirement": "- A credible Development/Final design is feasible.",
+      "source_line": 218,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-139",
+      "requirement": "Otherwise, evaluate the registered grating alternative based on independent source evidence, not neural likelihood results.",
+      "source_line": 220,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-140",
+      "requirement": "Select and freeze exactly ONE primary stimulus estimand.",
+      "source_line": 222,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-141",
+      "requirement": "Do not select it based on favorable spike responses or model gains.",
+      "source_line": 224,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-142",
+      "requirement": "If neither can support a valid primary analysis, STOP with STIMULUS_CONTRACT_INCONCLUSIVE.",
+      "source_line": 226,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-143",
+      "requirement": "Do not launch an unlimited third stimulus-rescue program.",
+      "source_line": 228,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-144",
+      "requirement": "## 5. DATA COHORT AND ROLE FREEZE",
+      "source_line": 230,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-145",
+      "requirement": "Preserve the original 55 metadata candidates and 28/27 reservation.",
+      "source_line": 232,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-146",
+      "requirement": "One selected VISp probe/session per mouse.",
+      "source_line": 234,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-147",
+      "requirement": "No cross-probe pooling.",
+      "source_line": 236,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-148",
+      "requirement": "No VISp-to-higher-visual-cortex expansion.",
+      "source_line": 238,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-149",
+      "requirement": "No replacement based on neural outcomes.",
+      "source_line": 240,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-150",
+      "requirement": "The two pilot mice remain Development.",
+      "source_line": 242,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-151",
+      "requirement": "All historically exposed mice remain Development.",
+      "source_line": 244,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-152",
+      "requirement": "Prospective Final identities remain protected.",
+      "source_line": 246,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-153",
+      "requirement": "M1 may use source metadata to calculate stimulus-family feasibility, but must not inspect Final neural arrays or model outcomes.",
+      "source_line": 248,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-154",
+      "requirement": "Register all cohort stages separately:",
+      "source_line": 250,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-155",
+      "requirement": "1. Original 55 metadata candidates.",
+      "source_line": 252,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-156",
+      "requirement": "2. Source-compatible stimulus candidates.",
+      "source_line": 253,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-157",
+      "requirement": "3. Recording/timing candidates.",
+      "source_line": 254,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-158",
+      "requirement": "4. Future Development physiological admissions.",
+      "source_line": 255,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-159",
+      "requirement": "5. Future Final C physiological admissions.",
+      "source_line": 256,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-160",
+      "requirement": "6. Actual later Final D evaluated animals.",
+      "source_line": 257,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-161",
+      "requirement": "Do not call the 55 mice physiologically qualified.",
+      "source_line": 259,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-162",
+      "requirement": "Preserve exact exclusions and denominator changes.",
+      "source_line": 261,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-163",
+      "requirement": "The M1 protocol must specify future Development and Final minimum cohort/coverage rules, with scientifically justified sample-size and precision planning.",
+      "source_line": 263,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-164",
+      "requirement": "Do not automatically reuse P15's eight-mouse floor or 0.01 nats/unit-bin confidence-interval-width target.",
+      "source_line": 265,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-165",
+      "requirement": "Assess plausible effect/variance scenarios without using P16 neural predictive outcomes.",
+      "source_line": 267,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-166",
+      "requirement": "If confirmatory sample size or assumptions cannot be defended, define an explicitly descriptive or exploratory scientific claim boundary before any real fitting.",
+      "source_line": 269,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-167",
+      "requirement": "## 6. PROSPECTIVE TEMPORAL PARTITIONS",
+      "source_line": 271,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-168",
+      "requirement": "Define future roles:",
+      "source_line": 273,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-169",
+      "requirement": "Development:",
+      "source_line": 275,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-170",
+      "requirement": "A — Training and train-only physiological QC.",
+      "source_line": 276,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-171",
+      "requirement": "B — Global hyperparameter/model selection.",
+      "source_line": 277,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-172",
+      "requirement": "E — Disjoint exploratory Development reporting.",
+      "source_line": 278,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-173",
+      "requirement": "Final:",
+      "source_line": 280,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-174",
+      "requirement": "C — Calibration-only physiological QC and fitting.",
+      "source_line": 281,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-175",
+      "requirement": "D — Exactly one reserved evaluation.",
+      "source_line": 282,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-176",
+      "requirement": "Choose exact chronological presentation cuts before neural evaluation.",
+      "source_line": 284,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-177",
+      "requirement": "Cuts must be defined using original native presentation IDs and order, before exclusions.",
+      "source_line": 286,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-178",
+      "requirement": "No random mixing of adjacent bins across data roles.",
+      "source_line": 288,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-179",
+      "requirement": "Preserve presentation identities, stimulus conditions and repetition indices.",
+      "source_line": 290,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-180",
+      "requirement": "Define prospective boundary guards and history resets.",
+      "source_line": 292,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-181",
+      "requirement": "Confirm that both nominal flash conditions, if selected, have sufficient expected coverage in each A/B/E/C/D partition.",
+      "source_line": 294,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-182",
+      "requirement": "Do not guarantee this from the two M0 pilots alone.",
+      "source_line": 296,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-183",
+      "requirement": "Future exact per-animal native coverage must be revalidated before admission.",
+      "source_line": 298,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-184",
+      "requirement": "No Final C/D neural access in M1.",
+      "source_line": 300,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-185",
+      "requirement": "## 7. OBSERVATION AND TIMESTAMP CONTRACT",
+      "source_line": 302,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-186",
+      "requirement": "Use the Allen curated NWB 2.2.2 source and verified reader/source conventions established in M0.",
+      "source_line": 304,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-187",
+      "requirement": "Distinguish:",
+      "source_line": 306,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-188",
+      "requirement": "- AllenSDK 2.16.2 source definitions",
+      "source_line": 307,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-189",
+      "requirement": "- Actual PyNWB 3.1.3 pilot reading",
+      "source_line": 308,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-190",
+      "requirement": "- Actual NWB object identity",
+      "source_line": 309,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-191",
+      "requirement": "- Source-defined observation support",
+      "source_line": 310,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-192",
+      "requirement": "Do not falsely claim the AllenSDK package itself was executed in M0.",
+      "source_line": 312,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-193",
+      "requirement": "Use curated recording support with known invalid intervals.",
+      "source_line": 314,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-194",
+      "requirement": "Do not infer perfect raw AP continuity or zero artifacts from missing annotations.",
+      "source_line": 316,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-195",
+      "requirement": "Do not infer recording support only from the first or last spike.",
+      "source_line": 318,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-196",
+      "requirement": "All finite native timestamps must survive exact binary64 roundtrip.",
+      "source_line": 320,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-197",
+      "requirement": "Never use lossy decimal JSON conversion for event times.",
+      "source_line": 322,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-198",
+      "requirement": "Strict causality:",
+      "source_line": 324,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-199",
+      "requirement": "event_time < prediction_bin_start",
+      "source_line": 326,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-200",
+      "requirement": "An event occurring exactly at the bin boundary is not a past event.",
+      "source_line": 328,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-201",
+      "requirement": "Register tests for:",
+      "source_line": 330,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-202",
+      "requirement": "- Equality at onset and bin boundaries.",
+      "source_line": 331,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-203",
+      "requirement": "- Adjacent float64 values.",
+      "source_line": 332,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-204",
+      "requirement": "- Half-open spike-count bins.",
+      "source_line": 333,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-205",
+      "requirement": "- Native presentation IDs.",
+      "source_line": 334,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-206",
+      "requirement": "- Stimulus-onset and offset availability.",
+      "source_line": 335,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-207",
+      "requirement": "- Missing observation support.",
+      "source_line": 336,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-208",
+      "requirement": "- Genuine zero-spike counts.",
+      "source_line": 337,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-209",
+      "requirement": "- Interpresentation gaps.",
+      "source_line": 338,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-210",
+      "requirement": "- Known invalid intervals.",
+      "source_line": 339,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-211",
+      "requirement": "- Causal history resets.",
+      "source_line": 340,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-212",
+      "requirement": "If source event clocks cannot support the intended estimand, STOP rather than repairing timestamps based on observed results.",
+      "source_line": 342,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-213",
+      "requirement": "## 8. PRIMARY SCORING WINDOW AND HISTORY",
+      "source_line": 344,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-214",
+      "requirement": "Choose:",
+      "source_line": 346,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-215",
+      "requirement": "- Exact bin width.",
+      "source_line": 347,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-216",
+      "requirement": "- Exact post-stimulus scoring interval.",
+      "source_line": 348,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-217",
+      "requirement": "- Exact pre-stimulus warm-up.",
+      "source_line": 349,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-218",
+      "requirement": "- Neural history horizon.",
+      "source_line": 350,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-219",
+      "requirement": "- Trial/presentation reset convention.",
+      "source_line": 351,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-220",
+      "requirement": "- Minimum valid source support.",
+      "source_line": 352,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-221",
+      "requirement": "- Minimum repetitions per condition per role.",
+      "source_line": 353,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-222",
+      "requirement": "For shared flashes, explicitly evaluate a post-onset scoring interval compatible with the verified approximately 250-ms presentations.",
+      "source_line": 355,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-223",
+      "requirement": "Do not assume a 500-ms score window fits inside a 250-ms presentation.",
+      "source_line": 357,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-224",
+      "requirement": "For every proposed scored bin:",
+      "source_line": 359,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-225",
+      "requirement": "- Preserve valid observed exposure.",
+      "source_line": 360,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-226",
+      "requirement": "- Retain genuine zero counts.",
+      "source_line": 361,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-227",
+      "requirement": "- Exclude unsupported/missing exposure.",
+      "source_line": 362,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-228",
+      "requirement": "- Avoid using future stimulus/behavior information.",
+      "source_line": 363,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-229",
+      "requirement": "- Use identical target units and score masks for each compared model.",
+      "source_line": 364,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-230",
+      "requirement": "Freeze the likelihood normalization as nats per actual scored nominal curated-release unit-bin.",
+      "source_line": 366,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-231",
+      "requirement": "Check whether a pre-onset history window overlaps another presentation or an invalid gap.",
+      "source_line": 368,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-232",
+      "requirement": "Define prospective treatment rather than silently using an invalid warm-up.",
+      "source_line": 370,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-233",
+      "requirement": "Choose timing based on VISp stimulus biology, source resolution and metadata feasibility, not favorable prediction scores.",
+      "source_line": 372,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-234",
+      "requirement": "## 9. STRONG VISUAL NUISANCE BASELINE",
+      "source_line": 374,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-235",
+      "requirement": "The baseline is central to P16.",
+      "source_line": 376,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-236",
+      "requirement": "Define B1 with sufficient representational capacity to model stimulus-evoked responses.",
+      "source_line": 378,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-237",
+      "requirement": "For flash presentations, consider:",
+      "source_line": 380,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-238",
+      "requirement": "- Nominal color/flash condition.",
+      "source_line": 382,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-239",
+      "requirement": "- Strictly observed onset indicator.",
+      "source_line": 383,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-240",
+      "requirement": "- Elapsed time since flash onset.",
+      "source_line": 384,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-241",
+      "requirement": "- Flexible stimulus-by-time response terms.",
+      "source_line": 385,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-242",
+      "requirement": "- Stimulus offset, only after observed or genuinely scheduled.",
+      "source_line": 386,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-243",
+      "requirement": "- Prior presentation identity/color.",
+      "source_line": 387,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-244",
+      "requirement": "- Interpresentation interval.",
+      "source_line": 388,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-245",
+      "requirement": "- Repetition/adaptation history.",
+      "source_line": 389,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-246",
+      "requirement": "- Original presentation order.",
+      "source_line": 390,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-247",
+      "requirement": "- Session time and nonlinear drift.",
+      "source_line": 391,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-248",
+      "requirement": "- Measured strictly past running behavior.",
+      "source_line": 392,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-249",
+      "requirement": "- Prespecified bounded missingness indicators where scientifically defensible.",
+      "source_line": 393,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-250",
+      "requirement": "The precise feature basis and number of columns must be frozen.",
+      "source_line": 395,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-251",
+      "requirement": "Do not copy P15's 37 movement/task features without source-specific justification.",
+      "source_line": 397,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-252",
+      "requirement": "A purely stationary B1 is unacceptable.",
+      "source_line": 399,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-253",
+      "requirement": "B1 must not deliberately underfit visually evoked peri-stimulus structure to inflate the neural-history increment.",
+      "source_line": 401,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-254",
+      "requirement": "No future running, eye movement or pupil sample may enter a real-time causal feature.",
+      "source_line": 403,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-255",
+      "requirement": "Primary behavior policy:",
+      "source_line": 405,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-256",
+      "requirement": "Use measured running only under verified causal time support, with frozen bounded coverage and missingness rules.",
+      "source_line": 407,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-257",
+      "requirement": "Pupil may be evaluated as a secondary sensitivity where coverage supports it.",
+      "source_line": 409,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-258",
+      "requirement": "Do not require complete pupil measurements as a universal primary admission criterion when source eye-tracking is missing.",
+      "source_line": 411,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-259",
+      "requirement": "Never impute failed pupil tracking as zero arousal.",
+      "source_line": 413,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-260",
+      "requirement": "Do not claim control of whisker, face, body movement or all arousal.",
+      "source_line": 415,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-261",
+      "requirement": "## 10. MODEL FAMILIES",
+      "source_line": 417,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-262",
+      "requirement": "Register exact mathematical models.",
+      "source_line": 419,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-263",
+      "requirement": "B0:",
+      "source_line": 421,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-264",
+      "requirement": "Stationary Poisson per-unit rate.",
+      "source_line": 422,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-265",
+      "requirement": "B1:",
+      "source_line": 424,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-266",
+      "requirement": "Strong stimulus/session/behavior nuisance Poisson model.",
+      "source_line": 425,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-267",
+      "requirement": "B2:",
+      "source_line": 427,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-268",
+      "requirement": "B1 plus strictly past own-unit spike history.",
+      "source_line": 428,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-269",
+      "requirement": "B3:",
+      "source_line": 430,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-270",
+      "requirement": "B1 plus strictly past other-unit population history.",
+      "source_line": 431,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-271",
+      "requirement": "B4:",
+      "source_line": 433,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-272",
+      "requirement": "B1 plus both own- and other-unit history.",
+      "source_line": 434,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-273",
+      "requirement": "Primary:",
+      "source_line": 436,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-274",
+      "requirement": "B4−B1.",
+      "source_line": 437,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-275",
+      "requirement": "Secondary historical-attribution contrasts:",
+      "source_line": 439,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-276",
+      "requirement": "B4−B3 and B4−B2.",
+      "source_line": 440,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-277",
+      "requirement": "Optional registered compact models:",
+      "source_line": 442,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-278",
+      "requirement": "D:",
+      "source_line": 444,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-279",
+      "requirement": "Small causal conditional Poisson HMM.",
+      "source_line": 445,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-280",
+      "requirement": "C:",
+      "source_line": 447,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-281",
+      "requirement": "Small causal continuous/finite-history representation.",
+      "source_line": 448,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-282",
+      "requirement": "S:",
+      "source_line": 450,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-283",
+      "requirement": "Static mixture matched as an interpretive capacity guard where a temporal-state claim is contemplated.",
+      "source_line": 451,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-284",
+      "requirement": "Retain the exact source-valid primary nuisance features in every dynamic comparison.",
+      "source_line": 453,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-285",
+      "requirement": "Do not assume HMM superiority.",
+      "source_line": 455,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-286",
+      "requirement": "If the source sample or compute budget cannot support a defensible D/C/S comparison, record this before fitting, withhold that secondary claim, and prioritize a complete strong-baseline P16 study.",
+      "source_line": 457,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-287",
+      "requirement": "No post-result addition or removal of model families.",
+      "source_line": 459,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-288",
+      "requirement": "No P13 unstable recursive Poisson generative null.",
+      "source_line": 461,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-289",
+      "requirement": "## 11. NUMERICAL AND COMPUTE CONTRACT",
+      "source_line": 463,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-290",
+      "requirement": "Freeze:",
+      "source_line": 465,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-291",
+      "requirement": "- Parameter counts and active-feature rules.",
+      "source_line": 466,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-292",
+      "requirement": "- Initializations.",
+      "source_line": 467,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-293",
+      "requirement": "- Regularization grids.",
+      "source_line": 468,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-294",
+      "requirement": "- Optimization algorithms.",
+      "source_line": 469,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-295",
+      "requirement": "- Gradient implementations.",
+      "source_line": 470,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-296",
+      "requirement": "- Independent AD/finite-difference tests.",
+      "source_line": 471,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-297",
+      "requirement": "- Convergence and projected-gradient thresholds.",
+      "source_line": 472,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-298",
+      "requirement": "- Numeric precision.",
+      "source_line": 473,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-299",
+      "requirement": "- Bounded fitting budgets.",
+      "source_line": 474,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-300",
+      "requirement": "- Failure and retry policy.",
+      "source_line": 475,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-301",
+      "requirement": "- Global model-selection rules.",
+      "source_line": 476,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-302",
+      "requirement": "Do not inherit P15's numerical constants automatically.",
+      "source_line": 478,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-303",
+      "requirement": "Use P15 source and model code only where mathematical and scientific equivalence is independently demonstrated.",
+      "source_line": 480,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-304",
+      "requirement": "Require synthetic tests for:",
+      "source_line": 482,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-305",
+      "requirement": "- Poisson likelihood and exposure.",
+      "source_line": 483,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-306",
+      "requirement": "- Exact nesting.",
+      "source_line": 484,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-307",
+      "requirement": "- Strict causal features.",
+      "source_line": 485,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-308",
+      "requirement": "- Future perturbation invariance.",
+      "source_line": 486,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-309",
+      "requirement": "- Correct presentation resets.",
+      "source_line": 487,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-310",
+      "requirement": "- Gradient agreement.",
+      "source_line": 488,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-311",
+      "requirement": "- D exact forward/enumeration.",
+      "source_line": 489,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-312",
+      "requirement": "- S IID-mixture comparator identity.",
+      "source_line": 490,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-313",
+      "requirement": "- C finite-history behavior.",
+      "source_line": 491,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-314",
+      "requirement": "- Frozen model-parameter counts.",
+      "source_line": 492,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-315",
+      "requirement": "- Valid scorer denominators.",
+      "source_line": 493,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-316",
+      "requirement": "- Finite numerical outputs.",
+      "source_line": 494,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-317",
+      "requirement": "M1 tests are specification evidence only.",
+      "source_line": 496,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-318",
+      "requirement": "They do not automatically certify a future real-data production worker.",
+      "source_line": 498,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-319",
+      "requirement": "No real neural fitting in M1.",
+      "source_line": 500,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-320",
+      "requirement": "## 12. STATISTICAL INFERENCE",
+      "source_line": 502,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-321",
+      "requirement": "Mouse is the independent statistical unit.",
+      "source_line": 504,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-322",
+      "requirement": "Never treat units, presentations, bins or probes as independent animals.",
+      "source_line": 506,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-323",
+      "requirement": "Define before neural results:",
+      "source_line": 508,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-324",
+      "requirement": "- Primary directional hypothesis.",
+      "source_line": 509,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-325",
+      "requirement": "- Equal-mouse effect.",
+      "source_line": 510,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-326",
+      "requirement": "- All secondary hypotheses.",
+      "source_line": 511,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-327",
+      "requirement": "- Multiple-comparison family.",
+      "source_line": 512,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-328",
+      "requirement": "- Confidence interval construction.",
+      "source_line": 513,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-329",
+      "requirement": "- Statistical test and assumptions.",
+      "source_line": 514,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-330",
+      "requirement": "- Laboratory/protocol dependence diagnostics.",
+      "source_line": 515,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-331",
+      "requirement": "- Leave-one-mouse-out sensitivity.",
+      "source_line": 516,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-332",
+      "requirement": "- BO/FC coverage and transport diagnostics.",
+      "source_line": 517,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-333",
+      "requirement": "- Minimum meaningful effect and precision requirements.",
+      "source_line": 518,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-334",
+      "requirement": "- Positive/mixed/negative/inconclusive claim rules.",
+      "source_line": 519,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-335",
+      "requirement": "A 27-mouse candidate Final cohort does not automatically establish adequate statistical power.",
+      "source_line": 521,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-336",
+      "requirement": "Provide a prospective precision/power sensitivity analysis over explicitly hypothetical effect and between-mouse variance scenarios.",
+      "source_line": 523,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-337",
+      "requirement": "Do not estimate P16 effect size from pilot spike outcomes.",
+      "source_line": 525,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-338",
+      "requirement": "Do not use sign-flip or permutation tests without articulating their exchangeability/symmetry assumptions.",
+      "source_line": 527,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-339",
+      "requirement": "If Final animal attrition makes registered confirmation impossible, preserve an explicitly preauthorized descriptive fallback only if scientifically defensible.",
+      "source_line": 529,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-340",
+      "requirement": "Nonsignificance does not prove equivalence.",
+      "source_line": 531,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-341",
+      "requirement": "## 13. FALSIFICATION AND SENSITIVITY",
+      "source_line": 533,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-342",
+      "requirement": "Register finite bounded controls for:",
+      "source_line": 535,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-343",
+      "requirement": "1. Visual stimulus identity and peri-onset timing.",
+      "source_line": 537,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-344",
+      "requirement": "2. Stimulus repetition and adaptation.",
+      "source_line": 538,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-345",
+      "requirement": "3. BO/FC protocol shift.",
+      "source_line": 539,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-346",
+      "requirement": "4. Running covariates and missingness.",
+      "source_line": 540,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-347",
+      "requirement": "5. Pupil complete-case availability.",
+      "source_line": 541,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-348",
+      "requirement": "6. Firing-rate and unit-count effects.",
+      "source_line": 542,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-349",
+      "requirement": "7. Own versus population-history attribution.",
+      "source_line": 543,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-350",
+      "requirement": "8. Within-presentation spike temporal ordering.",
+      "source_line": 544,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-351",
+      "requirement": "9. Session drift and nonstationarity.",
+      "source_line": 545,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-352",
+      "requirement": "10. Observation invalidity and source QC.",
+      "source_line": 546,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-353",
+      "requirement": "11. VISp atlas boundary/layer composition.",
+      "source_line": 547,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-354",
+      "requirement": "12. D/C/S versus strong baseline and static mixture, if registered.",
+      "source_line": 548,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-355",
+      "requirement": "Each control must specify:",
+      "source_line": 550,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-356",
+      "requirement": "- Exact scientific question.",
+      "source_line": 551,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-357",
+      "requirement": "- Transformation/operator.",
+      "source_line": 552,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-358",
+      "requirement": "- Preserved properties.",
+      "source_line": 553,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-359",
+      "requirement": "- Destroyed properties.",
+      "source_line": 554,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-360",
+      "requirement": "- Exchangeability assumptions.",
+      "source_line": 555,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-361",
+      "requirement": "- Coverage minimum.",
+      "source_line": 556,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-362",
+      "requirement": "- RNG and replicate policy.",
+      "source_line": 557,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-363",
+      "requirement": "- Statistical/claim consequences.",
+      "source_line": 558,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-364",
+      "requirement": "- Failure/unavailability treatment.",
+      "source_line": 559,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-365",
+      "requirement": "A surrogate that destroys stimulus alignment is not automatically an exact conditional null for neural-history effects.",
+      "source_line": 561,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-366",
+      "requirement": "Do not require a control to produce a positive result.",
+      "source_line": 563,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-367",
+      "requirement": "Do not use failed controls or unavailable coverage as PASS.",
+      "source_line": 565,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-368",
+      "requirement": "## 14. FINAL EVALUATION BOUNDARY",
+      "source_line": 567,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-369",
+      "requirement": "Freeze the intended Final C/D protocol but do not execute it.",
+      "source_line": 569,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-370",
+      "requirement": "Only a future separate mission may authorize Final C neural extraction, source-specific physiological QC and calibration.",
+      "source_line": 571,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-371",
+      "requirement": "Only after:",
+      "source_line": 573,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-372",
+      "requirement": "- Complete Development results and frozen selection.",
+      "source_line": 574,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-373",
+      "requirement": "- Verified Final C admission.",
+      "source_line": 575,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-374",
+      "requirement": "- Certified numerical production worker.",
+      "source_line": 576,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-375",
+      "requirement": "- Frozen source/units/masks/features.",
+      "source_line": 577,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-376",
+      "requirement": "- Complete pre-D scientific review.",
+      "source_line": 578,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-377",
+      "requirement": "- One-shot D code and controls certified.",
+      "source_line": 579,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-378",
+      "requirement": "- Explicit additional owner authorization.",
+      "source_line": 580,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-379",
+      "requirement": "may a later Final D batch execute once.",
+      "source_line": 582,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-380",
+      "requirement": "No cryptographic multi-party custody infrastructure.",
+      "source_line": 584,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-381",
+      "requirement": "Ordinary, truthful access separation and reproducible review are sufficient.",
+      "source_line": 586,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-382",
+      "requirement": "No post-D retuning or repeated final assessment.",
+      "source_line": 588,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-383",
+      "requirement": "## 15. M1 STOP AND SUCCESS CRITERIA",
+      "source_line": 590,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-384",
+      "requirement": "Return exactly one:",
+      "source_line": 592,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-385",
+      "requirement": "M1_FROZEN_READY_FOR_M2",
+      "source_line": 594,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-386",
+      "requirement": "M1_FROZEN_PENDING_NATIVE_STIMULUS_QC",
+      "source_line": 596,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-387",
+      "requirement": "SCIENTIFIC_PROTOCOL_INCONCLUSIVE",
+      "source_line": 598,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-388",
+      "requirement": "STIMULUS_CONTRACT_INCONCLUSIVE",
+      "source_line": 600,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-389",
+      "requirement": "DATA_OR_SOURCE_INSUFFICIENT",
+      "source_line": 602,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-390",
+      "requirement": "A full M1 freeze requires:",
+      "source_line": 604,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-391",
+      "requirement": "- One definitive scientifically valid primary stimulus estimand.",
+      "source_line": 606,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-392",
+      "requirement": "- Exact preserved 28/27 cohort allocation.",
+      "source_line": 607,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-393",
+      "requirement": "- BO/FC comparability and transport interpretation.",
+      "source_line": 608,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-394",
+      "requirement": "- Frozen model equations and strong nuisance baseline.",
+      "source_line": 609,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-395",
+      "requirement": "- Frozen trial/presentation partitions.",
+      "source_line": 610,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-396",
+      "requirement": "- Explicit source and biological QC rules.",
+      "source_line": 611,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-397",
+      "requirement": "- A credible animal-level statistical plan.",
+      "source_line": 612,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-398",
+      "requirement": "- Complete numerical/implementation specifications.",
+      "source_line": 613,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-399",
+      "requirement": "- Fixed sensitivities, falsification and reporting rules.",
+      "source_line": 614,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-400",
+      "requirement": "- An independent internal scientific review.",
+      "source_line": 615,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-401",
+      "requirement": "- No real model fits or Final neural access.",
+      "source_line": 616,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-402",
+      "requirement": "If definitive per-session compatibility remains to be checked only through future authorized native metadata/QC, clearly label that as pending and freeze the exact conditional verification rule.",
+      "source_line": 618,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-403",
+      "requirement": "Do not mark M2 science ready merely because the source has 55 metadata candidates.",
+      "source_line": 620,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-404",
+      "requirement": "If the primary scientific question itself cannot be defended, STOP.",
+      "source_line": 622,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-405",
+      "requirement": "Do not create an endless metadata/source-rescue chain.",
+      "source_line": 624,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-406",
+      "requirement": "## 16. REQUIRED DELIVERABLES",
+      "source_line": 626,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-407",
+      "requirement": "Create:",
+      "source_line": 628,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-408",
+      "requirement": "paper16_m1/",
+      "source_line": 630,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-409",
+      "requirement": "Provide:",
+      "source_line": 632,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-410",
+      "requirement": "1. M1_SCIENTIFIC_PROTOCOL.md",
+      "source_line": 634,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-411",
+      "requirement": "2. STIMULUS_CONTRACT.md",
+      "source_line": 635,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-412",
+      "requirement": "3. FROZEN_COHORT.csv",
+      "source_line": 636,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-413",
+      "requirement": "4. BO_FC_TRANSPORT_PLAN.md",
+      "source_line": 637,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-414",
+      "requirement": "5. SOURCE_OBSERVATION_QC.md",
+      "source_line": 638,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-415",
+      "requirement": "6. FEATURE_AND_MODEL_EQUATIONS.md",
+      "source_line": 639,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-416",
+      "requirement": "7. NUMERICAL_POLICY.json",
+      "source_line": 640,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-417",
+      "requirement": "8. STATISTICAL_ANALYSIS_PLAN.md",
+      "source_line": 641,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-418",
+      "requirement": "9. FALSIFICATION_AND_SENSITIVITY_PLAN.md",
+      "source_line": 642,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-419",
+      "requirement": "10. EVALUATION_BOUNDARY.md",
+      "source_line": 643,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-420",
+      "requirement": "11. M1_FREEZE_MANIFEST.json",
+      "source_line": 644,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-421",
+      "requirement": "12. A1_A10_PROSPECTIVE_CLAIM_AUDIT.md",
+      "source_line": 645,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-422",
+      "requirement": "13. Meaningful synthetic specification tests",
+      "source_line": 646,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-423",
+      "requirement": "14. Saved-only PowerShell reproduction",
+      "source_line": 647,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-424",
+      "requirement": "15. Independent internal scientific review",
+      "source_line": 648,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-425",
+      "requirement": "16. Verified origin/test archival commit",
+      "source_line": 649,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-426",
+      "requirement": "Final response fields:",
+      "source_line": 651,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-427",
+      "requirement": "MISSION_ID",
+      "source_line": 653,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-428",
+      "requirement": "M1_STATUS",
+      "source_line": 654,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-429",
+      "requirement": "PRIMARY_STIMULUS_FAMILY",
+      "source_line": 655,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-430",
+      "requirement": "PRIMARY_SCIENTIFIC_ESTIMAND",
+      "source_line": 656,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-431",
+      "requirement": "BO_FC_COMPATIBILITY",
+      "source_line": 657,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-432",
+      "requirement": "DEVELOPMENT_CANDIDATES",
+      "source_line": 658,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-433",
+      "requirement": "FINAL_CANDIDATES",
+      "source_line": 659,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-434",
+      "requirement": "EXPECTED_STIMULUS_COVERAGE",
+      "source_line": 660,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-435",
+      "requirement": "OBSERVATION_CONTRACT",
+      "source_line": 661,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-436",
+      "requirement": "PHYSIOLOGICAL_QC_POLICY",
+      "source_line": 662,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-437",
+      "requirement": "MODEL_FAMILIES",
+      "source_line": 663,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-438",
+      "requirement": "PRIMARY_AND_SECONDARY_HYPOTHESES",
+      "source_line": 664,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-439",
+      "requirement": "STATISTICAL_PLAN",
+      "source_line": 665,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-440",
+      "requirement": "PRECISION_AND_POWER_PLANNING",
+      "source_line": 666,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-441",
+      "requirement": "FALSIFICATION_PLAN",
+      "source_line": 667,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-442",
+      "requirement": "NUMERICAL_GATES",
+      "source_line": 668,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-443",
+      "requirement": "FROZEN_SCIENTIFIC_PROTOCOL",
+      "source_line": 669,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-444",
+      "requirement": "REMAINING_NATIVE_QC",
+      "source_line": 670,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-445",
+      "requirement": "PROMPT_3_READY",
+      "source_line": 671,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-446",
+      "requirement": "BUG_COUNT",
+      "source_line": 672,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-447",
+      "requirement": "WARN_COUNT",
+      "source_line": 673,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-448",
+      "requirement": "GIT_COMMIT",
+      "source_line": 674,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-449",
+      "requirement": "REMOTE_VERIFICATION",
+      "source_line": 675,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-450",
+      "requirement": "## 17. EXECUTION RULES",
+      "source_line": 677,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-451",
+      "requirement": "SCIENCE FIRST.",
+      "source_line": 679,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-452",
+      "requirement": "Use existing M0 evidence and authorized public metadata.",
+      "source_line": 681,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-453",
+      "requirement": "No new dataset search.",
+      "source_line": 683,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-454",
+      "requirement": "No new neural-array access.",
+      "source_line": 685,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-455",
+      "requirement": "No prediction-model fitting.",
+      "source_line": 687,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-456",
+      "requirement": "No Final C/D decoding.",
+      "source_line": 689,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-457",
+      "requirement": "No post-result stimulus selection.",
+      "source_line": 691,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-458",
+      "requirement": "No unnecessary security architecture.",
+      "source_line": 693,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-459",
+      "requirement": "No invented source compatibility.",
+      "source_line": 695,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-460",
+      "requirement": "No external emails.",
+      "source_line": 697,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-461",
+      "requirement": "No P15 rerun or alteration.",
+      "source_line": 699,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-462",
+      "requirement": "Preserve every failed scientific gate and historical result.",
+      "source_line": 701,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-463",
+      "requirement": "Complete the bounded protocol and independent review, push to origin/test, verify remote file contents and clean working tree, then STOP.",
+      "source_line": 703,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-464",
+      "requirement": "BEGIN P16 M1 NOW.",
+      "source_line": 705,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-465",
+      "requirement": "All original BASE tracked blobs preserved except exact original daily suffix with new prefix",
+      "source_line": null,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-466",
+      "requirement": "Complete independent scientific review including unsuccessful-review retention",
+      "source_line": null,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-467",
+      "requirement": "Exact mission-only staging and normal origin/test push",
+      "source_line": null,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-468",
+      "requirement": "Actual remote fullSHA and allchangedblob readback,cleanbefore/after terminalreceipts",
+      "source_line": null,
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-469",
+      "requirement": "STOP after M1,no autonomousM2/Prompt3",
+      "source_line": null,
+      "status": "OPEN"
+    }
+  ],
+  "note": "Lossless owner-line traceability plus explicit closure obligations;semantic conjunctive subconditions expanded in acceptance matrix,not counted as independent numericaltests."
+}

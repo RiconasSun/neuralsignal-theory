@@ -1,0 +1,390 @@
+{
+  "mission": "P16-M1-VISUAL-DYNAMICS-PROTOCOL-FREEZE",
+  "base": "2adb11a9fcd05cf1ea3cb4e120b5102400d6bb84",
+  "primary_family": "flashes_presentations",
+  "scientific_status": "M1_FROZEN_WITH_SOURCE_LIMITATIONS",
+  "Prompt3_ready": true,
+  "scientific_track": "Prospective heldout descriptive/exploratory prediction;no confirmatory VALIDATED label even if significant",
+  "primary_contrast": "B4-B1",
+  "secondary_contrasts": [
+    "B4-B2",
+    "B4-B3",
+    "D-B4",
+    "C-B4",
+    "D-S"
+  ],
+  "effect_units": "nats per actual valid scored nominal curated-release unit-bin",
+  "cohort": {
+    "original": 55,
+    "Development": 28,
+    "Final_reserved": 27,
+    "Dev_BO": 5,
+    "Dev_FC": 23,
+    "Final_BO": 27,
+    "reroll": false,
+    "target_units": 8,
+    "unit_selection": "Lowest numeric source unit IDs passing frozen A/C-only QC on the frozen selected probe",
+    "Dev_min": 14,
+    "Dev_BO_min": 3,
+    "Dev_FC_min": 10,
+    "Final_main_min": 12,
+    "Final_descriptive_fallback_min": 6,
+    "Final_6_to_11": "Coverage failure retained;single descriptive D only if source/numerical gates and separately required future owner authorization pass;no positive evidence category",
+    "Final_below6": "STOP before D",
+    "region_acronyms": [
+      "VISp",
+      "VISp1",
+      "VISp2/3",
+      "VISp4",
+      "VISp5",
+      "VISp6a",
+      "VISp6b"
+    ],
+    "candidate_unit_ids": "Only matching M0 ROLE_ALLOCATION qualified_unit_ids on original mouse/session/probe; reverify same seven exact peak-channel acronyms and source QC. No new probe-wide unit admission."
+  },
+  "native_stimulus_gate": {
+    "family_presence": 55,
+    "complete_tables_verified": 55,
+    "original_presentation_count_min": 120,
+    "original_presentation_count_max": 180,
+    "colors": [
+      -1,
+      1
+    ],
+    "required_parameters": {
+      "contrast": 0.8,
+      "opacity": 1.0,
+      "size_degrees": [
+        300.0,
+        300.0
+      ],
+      "phase": [
+        0.0,
+        0.0
+      ],
+      "spatial_frequency": [
+        0.0,
+        0.0
+      ],
+      "mask": "None"
+    },
+    "finite_increasing_original_starts": true,
+    "duration_seconds": [
+      0.23,
+      0.28
+    ],
+    "gap_seconds": [
+      1.5,
+      2.0
+    ],
+    "max_span_seconds": 400,
+    "physical_luminance_equivalence_claim": false,
+    "unexpected_parameters_or_source_clock": "Fail source compatibility,no neural access or fallback to gratings",
+    "grating_primary": false,
+    "known_invalid_presentations_removed": 7
+  },
+  "partitions": {
+    "cut_domain": "Entire original native flashes table stable chronological order before invalidity/QC;retain original IDs and ordinals",
+    "Development": [
+      "A:[0,floor(.6N))",
+      "B:[floor(.6N),floor(.8N))",
+      "E:[floor(.8N),N)"
+    ],
+    "Final": [
+      "C:[0,floor(.6N))",
+      "D:[floor(.6N),N)"
+    ],
+    "min_valid_presentations_per_color": {
+      "A": 30,
+      "B": 8,
+      "E": 8,
+      "C": 30,
+      "D": 15
+    },
+    "bin_roles_never_random_mixed": true,
+    "boundary_guard": "No neural-history crossing presentations/roles;reset at each original onset;metadata prior-color/repetition may use already observed earlier stimulus records,never neural outcomes from another role",
+    "valid_presentation_definition": "A main valid presentation requires every selected unit to support the entire original onset through anchored edge11=onset+.22s, all six scored bins and100ms withinflash history, with no known-invalid overlap. Otherwise exclude entire presentation for all main models. Count only these complete presentations for each role/color floor; each color/time PSTH cell must independently meet that same role/color minimum."
+  },
+  "timing": {
+    "bin_seconds": 0.02,
+    "score_start_seconds": 0.1,
+    "score_stop_seconds": 0.22,
+    "score_bins": 6,
+    "pre_onset_neural_warmup_seconds": 0,
+    "within_flash_warmup_seconds": 0.1,
+    "history_seconds": 0.1,
+    "history_lag_edges_seconds": [
+      0,
+      0.02,
+      0.06,
+      0.1
+    ],
+    "strict_past": "event_time < bin_start;outcome bins [start,end)",
+    "support": "Full [onset,bin_end) plus100ms history in same source-curated presentation;subtract known selected-probe/global invalid intervals;no inferred raw AP continuity",
+    "derived_grid": "All edges anchored as native_onset + integer_index*.02,not subtractive floating reconstruction;history edge indices lag[0,1,3,5]bins. Atbinindex5..10,usefullsourcehistory[onset,binstart) bounded100ms.",
+    "common_mask": "A main valid presentation requires every selected unit to support the entire original onset through anchored edge11=onset+.22s, all six scored bins and100ms withinflash history, with no known-invalid overlap. Otherwise exclude entire presentation for all main models. Count only these complete presentations for each role/color floor; each color/time PSTH cell must independently meet that same role/color minimum.",
+    "source_stimulus_invalid": "Any source stimulus-invalid overlap with full original flash excludes that presentation,including invalidity after220ms;all_probes/selectedprobe/optotagging intervals conservatively excluded if overlappingrequired support."
+  },
+  "behavior": {
+    "primary": "running_wheel_rotation net_rotation rad/(native same-row end-start);never use processed velocity,its whole-session median normalization or raw dx unit-label ambiguity",
+    "series": "processing/running/running_wheel_rotation.data;running_speed.timestamps start;running_speed_end_times.timestamps end",
+    "availability": "All parent end<t,0<duration<=0.1s;choose most recent valid interval with0<t-end<=0.1s,no interval spanning invalidity",
+    "source_unit": "radians andsource same-row increment mapping must be verified before real QC;no raw/processed fallback",
+    "source_zero_removal": "np.isclose(net_rotation,0) deleted source rows remain missing;do not reconstruct zero stationarity or fill gaps",
+    "raw_transform": "r=tanh(angular_velocity/10);r^2;color*r;missing flag. Missing r=0 with flag1,explicit encoding not physiological zero",
+    "minimum_available_fraction_per_role_and_color": 0.5,
+    "pupil": "Secondary only;raw ellipse proxy area with verified all-parent exposure end<t andage<=.1;otherwiseUNAVAILABLE,not zero arousal"
+  },
+  "physiological_QC": {
+    "role": "A forDevelopment,C forFinal only;providerwhole-sessionQC remains disclosed metadata screen",
+    "source_screen": {
+      "quality": "good",
+      "amplitude_cutoff_max": 0.1,
+      "presence_ratio_min": 0.95,
+      "isi_violations_max": 0.5
+    },
+    "count_window": "Union of fully valid original[onset,onset+.22)training/calibration windows,notB/E/D",
+    "finite_ordered_spikes": true,
+    "min_training_calibration_spikes": 30,
+    "mean_rate_Hz": [
+      0.5,
+      150
+    ],
+    "within_window_ISI_seconds": 0.0015,
+    "max_within_window_short_ISI_fraction": 0.02,
+    "min_within_window_adjacent_pairs": 20,
+    "source_candidate_id_order_fixed": true,
+    "nonfinite_neural_timestamp": "Source-integrity STOP;do not partition nonfinite timestamps or infer role",
+    "min_occupied_training_calibration_presentations": 20,
+    "active_observation_coverage": "Each candidate must meet role/color complete-presentation floors on explicit unit/probe curated support;after selecting8IDs reverify their common intersection once,no replacement or threshold changes if floor fails."
+  },
+  "features": {
+    "B1_PSTH_columns": 12,
+    "B1_nuisance_columns": 12,
+    "B1_total_slots": 24,
+    "history_own_columns": 3,
+    "history_other_columns": 3,
+    "B0_slots": 1,
+    "B2_slots": 27,
+    "B3_slots": 27,
+    "B4_slots": 30,
+    "intercept": "PSTH12onehots,no extra intercept;B0oneintercept",
+    "nuisance_order": [
+      "previous_color",
+      "previous_missing",
+      "previous_gap/(previous_gap+2)",
+      "log1p(prior_same_color_count)/log(181)",
+      "original_ordinal/179",
+      "tau",
+      "tau^2",
+      "tau^3",
+      "r",
+      "r^2",
+      "color*r",
+      "running_missing"
+    ],
+    "tau": "(current bin start-first originalflash onset)/400;current elapsed time,not future last-onset normalizer",
+    "history_transform": "log1p(rate)/(1+log1p(rate)),rate=count/lag_duration;other is mean of other selected units before transform",
+    "scalers": "A/C mean andpopulationSD only,scale=max(.25,SD);unscaled PSTH. Record all means/scales/active flags. Same common scaler in every model",
+    "active_rule": "Mandatory12PSTH neverdrop;nonPSTH A/C variance<=1e-12 drop for all nested models using shared name mapping;neverB/E/D activation",
+    "parameter_counts_primary_max_per_mouse": {
+      "B0": 8,
+      "B1": 192,
+      "B2": 216,
+      "B3": 216,
+      "B4": 240
+    },
+    "B0_and_initialization_rate_domain": "For unit u,use only complete main A (Development) or C (Final) registered scored rows k5..10: R_u=sum(y_u)/sum(actual full-bin exposure .02s). Never QC early0..100ms counts. B0 eta=clip(log R_u,-10,10), R=0 -> -10. Every B1/B2/B3/B4 PSTH initializes to that same unit value; other coefficients0. Sensitivity initializers use that panel A/C scored rows/exposures, never a QC window.",
+    "B1_protocol_control": "Mouse-local nuisance coefficients/PSTH are fit independently for each mouse/protocol;protocol is constant within mouse and indicator is redundant withsumPSTH. No pooled sharedbeta or causalprotocolcontrast.",
+    "C_primary_slots": 34,
+    "D_S_primary_joint_max": 251
+  },
+  "selection": {
+    "lambda_grid": [
+      0.01,
+      0.1,
+      1.0
+    ],
+    "single_lambda_all_nested_models": true,
+    "criterion": "Maximize B1 mean B logscore per actual valid unit-bin;equal-mouse within protocol and0.5BO+0.5FC;no B4-gain-driven selection",
+    "tie_tolerance": 1e-12,
+    "tie_rule": "Largest lambda",
+    "E": "One fixed descriptive E batch after selectionfreeze,no E retuning",
+    "Final": "Reuse selected lambda andspec only,fit C independently from new initialization/scalers,neverdevelopmentcoefficients",
+    "training_order": "Fit B1 on A for3lambdas,select onlyB1Bscore;reuse winner,no refit. FitB2-B4 on A once atselectedlambda. No unselectedhistorymodels.",
+    "protocol_mapping": {
+      "brain_observatory_1.1": "BO",
+      "functional_connectivity": "FC",
+      "other": "Sourcecompatibilityfailure"
+    }
+  },
+  "access": {
+    "new_neural_arrays": false,
+    "real_model_fits": false,
+    "Final_C": false,
+    "Final_D": false,
+    "next_mission_auto": false,
+    "future_C_reader_boundary": "No new authority here. FutureConlymission needs verifiedrole-scoped extraction. IfNWBunindexed raggedtimestamps require transientfullrecordDdecode,the owner must explicitly authorize trustedsource-reader exception before that occurs;otherwiseSTOP. No implicitC/Dsimultaneousloading.",
+    "current_DCS_real_fits": false,
+    "future_registered_DCS": true
+  },
+  "revision": "1,current owner contract;prior incompatible candidate preserved as historical evidence",
+  "title": "Predictive Temporal Structure of Neural Population Activity in Mouse Primary Visual Cortex",
+  "Prompt3_ready_meaning": "Protocol handoff ready for separately authorized native A/C-QC and production-worker engineering;not present realfitting/Final permission or automatic nextmission",
+  "target": "Heldout BO mice under development-selected lambda/model policy and independently C-fitted mouse-local states;cross-protocol transport,notIID",
+  "models": {
+    "C": {
+      "definition": "B4+4fixedcontinuousfinite100ms kernels:own and meanother rates for tau.04 and.1 seconds;sum exp(-(t-s)/tau) over anchored100ms strictpast spikes divided by tau*(1-exp(-.1/tau));same boundedlog1pratetransform/A-Cscale;no learned recurrence",
+      "max_parameters_8units": 272,
+      "tau_grid": "Single fixed pair [.04,.1],not selected",
+      "initial": "Same A/C scored-row bounded rate,allnonPSTH0",
+      "seeds": "None deterministic",
+      "state": "Reset each presentation/gap;no off-presentation/preonset history"
+    },
+    "D": {
+      "definition": "K2 conditional Poisson HMM using full B4features,unit beta and reference state0,unit delta added in state1;3logits for two transition rows+initial;forward prediction filters past counts only,not smoothed future",
+      "max_parameters": 251,
+      "K_grid": [
+        2
+      ],
+      "beta_slots": 240,
+      "delta_slots": 8,
+      "state_logit_slots": 3,
+      "initial_logits": "[logit(.3),logit(.7),0]+PCG64Uniform[-.05,.05]",
+      "delta_initial": "PCG64Uniform[-.05,.05],afterdrawing8deltasdraw3logitjitters",
+      "posterior_reset": "Initial distribution per presentation atfirst scorebin,no warmup filtering beyond B4 covariates"
+    },
+    "S": {
+      "definition": "K2 presentation-static latent Poisson mixture with identical B4beta/delta emissions;one fixed state throughoutpresentation. Prior logit gamma0+gamma1*color+gamma2*original_ordinal/179. Three gatingparameters match Dtotal251. Proper causal withinpresentation posterior update;not perbin IIDmixture. Capturesstatictrialgain,not physicalpersistentstates",
+      "max_parameters": 251,
+      "K_grid": [
+        2
+      ],
+      "beta_slots": 240,
+      "delta_slots": 8,
+      "state_logit_slots": 3,
+      "initial_logits": "PCG64Uniform[-.05,.05] after8delta draws",
+      "oracle": "Equals HMMtransitionI with matching pertrialprior;separate IIDmixtureidentity oracle retained;D/S matched parametercount not identical functionclass"
+    },
+    "DS_shared": {
+      "likelihood": "Joint population conditional count likelihood per presentation,normalized by actualT*U unitbins;B4productPoisson uses same jointtarget. D gains may include modeled instantaneous correlation,not proof of additional past neural information",
+      "penalty": "lambda/(2U) sum beta_nonPSTH^2 +.1/(2U) sum delta^2 +.01/2 sum logits^2; equal average B4 unit objectives when delta=gamma=0. No data/result-driven tuning.",
+      "bounds": "PSTH[-10,10],otherbeta[-1,1],delta[-1,1],logits[-3,3]",
+      "initial_beta": "Same perunit A/C registered score-row stationary boundedrates,PSTHconstant,others0;no developmentCweights",
+      "seeds": [
+        11,
+        23,
+        37
+      ],
+      "seed_selection": "All3 must pass every mandatory numerical gate;choose lowest A/C penalized objective,tie<=1e-12lowestseed;no coefficientmean andno B/E/D seedselection",
+      "gradients": "Analytic forward-backward forD/posteriorstaticmixture forS;independentgenericdualnumberAD +fixedFDscaninitial/intermediate/endpoint",
+      "real_failure_policy": "Oneattemptperseed/model/panel;any mandatory numericalfailSTOP,no retry/replacement/optimizerrescue"
+    }
+  },
+  "statistics": {
+    "primary": {
+      "contrast": "B4-B1",
+      "test": "Two-sidedpairedmouse signflip,positive directionalinterpretation",
+      "alpha": 0.05,
+      "minimum_effect": 0.002
+    },
+    "secondary_family": [
+      "B4-B2",
+      "B4-B3",
+      "D-B4",
+      "C-B4",
+      "D-S"
+    ],
+    "secondary_multiplicity": "Holm5,two-sided;positivecategory gatekeptbyprimarypositive;reportallresultsregardless",
+    "signflip_exact_n_max": 16,
+    "signflip_MC_replicates": 99999,
+    "signflip_seed": 16041,
+    "bootstrap_mouse_replicates": 10000,
+    "bootstrap_seed": 16042,
+    "CI": "95%percentile wholemouse mean,methodlinear,equalmouse;sortnumericIDs,share same indices across6effects",
+    "assumptions": "Independent null-symmetric mouse differences forsignflips;exchangeable BOsource/admission target forbootstrap;notrandomizedprotocols,populationrandomsample orindependentlab",
+    "classification_precedence": [
+      "INCONCLUSIVE_REQUIRED_GATE for mandatory source/implementation/numericalfailure;STOP",
+      "FALLBACK_DESCRIPTIVE_COVERAGE_FAIL for6..11Final;below6STOPbeforeD",
+      "NEGATIVE_DIRECTION if ownmean<=0",
+      "HELDOUT_DESCRIPTIVE_POSITIVE if allown andjointprerequisites;neverVALIDATED",
+      "MIXED_UNSUPPORTED otherwise"
+    ],
+    "precision": "No arbitrary fixed width acceptance;reportintervalwidthandplanningtargets;positivecategory requiresown95%CI lower>registeredminimumeffect",
+    "contrast_rules": [
+      {
+        "contrast": "B4-B1",
+        "n_Final_min": 12,
+        "own_mean_min": 0.002,
+        "own_CI_lower_exclusive_min": 0.002,
+        "own_all_LOMO_means_exclusive_min": 0,
+        "own_p_max": 0.05,
+        "p_family": "Primarytwo-sided",
+        "primary_positive_required": false,
+        "joint_prerequisites": ">=12Final,allmandatorymainhistoryS01/S02/S04/S06/S07/S09meanB4-B1>0withcoverage;N1>=12andmainobservedgain>95threferencequantile;allmandatorynumericsPASS",
+        "additional_guard": "Conditionalattributiononly,nocausalclaim"
+      },
+      {
+        "contrast": "B4-B2",
+        "n_Final_min": 12,
+        "own_mean_min": 0.001,
+        "own_CI_lower_exclusive_min": 0.001,
+        "own_all_LOMO_means_exclusive_min": 0,
+        "own_p_max": 0.05,
+        "p_family": "Holm5secondary",
+        "primary_positive_required": true,
+        "joint_prerequisites": ">=12Final,allmandatorymainhistoryS01/S02/S04/S06/S07/S09meanB4-B1>0withcoverage;N1>=12andmainobservedgain>95threferencequantile;allmandatorynumericsPASS",
+        "additional_guard": "Conditionalattributiononly,nocausalclaim"
+      },
+      {
+        "contrast": "B4-B3",
+        "n_Final_min": 12,
+        "own_mean_min": 0.001,
+        "own_CI_lower_exclusive_min": 0.001,
+        "own_all_LOMO_means_exclusive_min": 0,
+        "own_p_max": 0.05,
+        "p_family": "Holm5secondary",
+        "primary_positive_required": true,
+        "joint_prerequisites": ">=12Final,allmandatorymainhistoryS01/S02/S04/S06/S07/S09meanB4-B1>0withcoverage;N1>=12andmainobservedgain>95threferencequantile;allmandatorynumericsPASS",
+        "additional_guard": "Conditionalattributiononly,nocausalclaim"
+      },
+      {
+        "contrast": "D-B4",
+        "n_Final_min": 12,
+        "own_mean_min": 0.001,
+        "own_CI_lower_exclusive_min": 0.001,
+        "own_all_LOMO_means_exclusive_min": 0,
+        "own_p_max": 0.05,
+        "p_family": "Holm5secondary",
+        "primary_positive_required": true,
+        "joint_prerequisites": ">=12Final,allmandatorymainhistoryS01/S02/S04/S06/S07/S09meanB4-B1>0withcoverage;N1>=12andmainobservedgain>95threferencequantile;allmandatorynumericsPASS",
+        "additional_guard": "ForD/Ceffects,theirownmean>0inmandatoryS01/S02/S04/S06/S07/S09panels;forD-SalsoN3observedD-Smean>95threferencequantile. Referencesapproximate/descriptiveonly."
+      },
+      {
+        "contrast": "C-B4",
+        "n_Final_min": 12,
+        "own_mean_min": 0.001,
+        "own_CI_lower_exclusive_min": 0.001,
+        "own_all_LOMO_means_exclusive_min": 0,
+        "own_p_max": 0.05,
+        "p_family": "Holm5secondary",
+        "primary_positive_required": true,
+        "joint_prerequisites": ">=12Final,allmandatorymainhistoryS01/S02/S04/S06/S07/S09meanB4-B1>0withcoverage;N1>=12andmainobservedgain>95threferencequantile;allmandatorynumericsPASS",
+        "additional_guard": "ForD/Ceffects,theirownmean>0inmandatoryS01/S02/S04/S06/S07/S09panels;forD-SalsoN3observedD-Smean>95threferencequantile. Referencesapproximate/descriptiveonly."
+      },
+      {
+        "contrast": "D-S",
+        "n_Final_min": 12,
+        "own_mean_min": 0.001,
+        "own_CI_lower_exclusive_min": 0.001,
+        "own_all_LOMO_means_exclusive_min": 0,
+        "own_p_max": 0.05,
+        "p_family": "Holm5secondary",
+        "primary_positive_required": true,
+        "joint_prerequisites": ">=12Final,allmandatorymainhistoryS01/S02/S04/S06/S07/S09meanB4-B1>0withcoverage;N1>=12andmainobservedgain>95threferencequantile;allmandatorynumericsPASS",
+        "additional_guard": "ForD/Ceffects,theirownmean>0inmandatoryS01/S02/S04/S06/S07/S09panels;forD-SalsoN3observedD-Smean>95threferencequantile. Referencesapproximate/descriptiveonly."
+      }
+    ],
+    "positive_claim_limits": "All6contrastsdescriptive/exploratory;D/Ccomparisonsjointproperprediction,notcausalorphysicalstates;D-Smatchedcapacitystatictrialguard notproofpersistentneuralatoms"
+  }
+}

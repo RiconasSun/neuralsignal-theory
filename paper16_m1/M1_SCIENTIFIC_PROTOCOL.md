@@ -1,0 +1,22 @@
+# P16 M1 — predictive temporal structure in VISp
+
+MISSION: P16-M1-VISUAL-DYNAMICS-PROTOCOL-FREEZE. BASE:2adb11a9fcd05cf1ea3cb4e120b5102400d6bb84.
+Working title: Predictive Temporal Structure of Neural Population Activity in Mouse Primary Visual Cortex.
+
+Scientific protocol status: **M1_FROZEN_WITH_SOURCE_LIMITATIONS**, subject to complete current-candidate independent review and actual archival gates. Protocol handoff is ready for consideration of separately authorized M2 native QC/production engineering. This is not present permission to fit real models or access Final C/D, and does not automatically start Prompt3.
+
+Primary estimand: equal-mouse B4−B1 heldout Poisson logscore gain, nats per actually valid scored nominal VISp unit-bin, targeting BO animals under the Development-selected model/λ/calibration policy. It is observational incremental prediction conditional on the specified baseline, not connectivity, a movement/arousal-independent mechanism, physical neural atoms, universal cortical dynamics, ontology/CWP/NAP, human or BCI applicability.
+
+One source and family: Allen Visual Coding Neuropixels, original source-bound curated NWB2.2.2, nominal±1 flashes. Native metadata now verified on the actual55-mouse roster:150 presentations each,75/color;27reservedFinalBO,5DevBO+23DevFC. Seven known-invalid presentations are excluded. This supersedes the older never-finalized two-table/optional-DCS candidate; all original drafts/rejected/interrupted reviews and source/parser failures remain historical evidence, not retrospective PASS. No P1–P15/M0 source or scientific verdict changes.
+
+Score20ms bins in[100,220)ms, six bins, after100ms strictly within-flash neural history; no pre-onset history. A/B/E chronological60/20/20% of all original IDs before exclusions; C/D60/40%. Complete original presentations preserve original order; no bin mixing or role-crossing history. Every main comparison uses the same eight A/C-qualified original-probe units and complete target/support masks.
+
+B0 stationary;B1 saturated condition×time plus12 visual/adaptation/session/causal-running nuisances;B2 own;B3 other;B4 both. C adds four fixed100ms continuous-history kernels. D is a causal2-state conditional Poisson HMM on full B4 features. S is a capacity-matched2-state presentation-static latent mixture capturing static trial heterogeneity, with the same B4 emissions. All are mandatory future registered classes; no presumed D/C superiority or post-result removal. D/S joint-population logscore can reflect instantaneous correlation as well as temporal filtering; it is not an extra-history or physical-state proof.
+
+Primary hypothesis B4−B1;five secondaries B4−B2,B4−B3,D−B4,C−B4,D−S, Holm5 behind a primary gate. Equal mouse only, explicit sign-symmetry/bootstrap assumptions,10k whole-mouse percentile CIs,LOMO and protocol/source diagnostics. Because no P16 neural variance/power estimate exists and BO/FC shift is substantial, all science is prospectively descriptive/exploratory even if p is small. No VALIDATED category. Interval uncertainty is assessed against prospective meaningful-effect targets, not an arbitrary fixed-width PASS cutoff.
+
+All12 sensitivities/four finite reference operators are frozen, including source invalidity,saturation,stimulus/PSTH/adaptation,behavior missingness,BO-only5Dev,unit/rate and static-vs-persistent representation. References have explicit assumptions;N1 approximate donors andN3 stimulus-destroying shifts are not exact conditional nulls. No recursive self-exciting Poisson generator or favorable redraw.
+
+Progression requires separate authorization, native source/behavior/unit/QC gates and independently tested production code;A fits/B-only selection/one E;freeze all selections before C;C-only isolation/QC/scalers/fits/all states;independent pre-D review;separate owner D authority for exactly one fixed assessment. Mandatory numerical/implementation/source failure STOP;no retries,model substitution or budget increase. M1 executes only metadata and synthetic mathematics. No new real neural array,fit,neural likelihood or Final C/D was accessed.
+
+Normative machine-readable files:protocol.json,NUMERICAL_POLICY.json,controls.json. Exact equations,source/QC/statistics/null/holdout documents below are co-normative and bound by M1_FREEZE_MANIFEST.json. Conflicts require repair before neural execution, never a favorable interpretation after results.

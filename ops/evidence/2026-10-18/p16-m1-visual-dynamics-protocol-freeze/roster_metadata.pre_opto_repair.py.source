@@ -1,0 +1,107 @@
+"""Bounded native FLASH/clock/invalid metadata; explicit deny of all neural paths."""
+from pathlib import Path
+import ast,concurrent.futures,datetime,gzip,hashlib,json,math,os
+import h5py,numpy as np
+from .source_ranges import RangeReader,hard_object
+P=Path(__file__).resolve().parents[1];R=P.parent
+E=R/'ops/evidence/2026-10-18/p16-m1-visual-dynamics-protocol-freeze'
+FIELDS=['id','start_time','stop_time','color','contrast','phase','spatial_frequency','size','opacity','mask']
+ALLOWED={'/identifier','/session_start_time','/timestamps_reference_time'}|{'/intervals/flashes_presentations/'+x for x in FIELDS}|{'/intervals/invalid_times/'+x for x in ['start_time','stop_time','tags','tags_index']}
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def decoded(x):
+ if isinstance(x,bytes):return x.decode('utf8')
+ if isinstance(x,np.generic):return decoded(x.item())
+ if isinstance(x,np.ndarray):return decoded(x.item()) if x.ndim==0 else [decoded(v) for v in x]
+ return x
+def read_meta(file,path,audit):
+ if path not in ALLOWED:raise ValueError('NEURAL/nonmetadata path denied BEFORE lookup')
+ data=hard_object(file,path)
+ if not isinstance(data,h5py.Dataset) or data.ndim>2 or data.size>2000:raise ValueError('Metadata shape bound')
+ if data.dtype.kind not in 'fiuSO' or h5py.check_dtype(ref=data.dtype) is not None:raise ValueError('Metadata type denied')
+ if data.dtype.kind=='O' and h5py.check_string_dtype(data.dtype) is None:raise ValueError('Nontext object denied')
+ audit.append(path);return np.asarray(data[()])
+def write_json(p,obj):p.write_text(json.dumps(obj,indent=2,allow_nan=False)+'\n',encoding='utf8',newline='\n')
+def invalid_rows(starts,stops,tags,index,item,probes,return_labels=False):
+ out=[];stimulus=[];prior=0
+ if not(len(starts)==len(stops)==len(index)):raise ValueError('Invalid interval shape')
+ for a,b,right in zip(starts,stops,index):
+  right=int(right);group=set(map(str,tags[prior:right]));prior=right
+  if not group or not(math.isfinite(float(a)) and math.isfinite(float(b))) or b<=a:raise ValueError('Invalid interval integrity')
+  if 'EcephysSession' in group:
+   labels=group-{'EcephysSession',str(item['session_id'])}
+   if str(item['session_id']) not in group or len(group)!=3 or labels not in [{'all_probes'},{'stimulus'}]:raise ValueError('Unknown global invalid tags')
+   applies=True
+   if labels=={'stimulus'}:stimulus.append([float(a),float(b)])
+  elif 'EcephysProbe' in group:
+   ids=group-{'EcephysProbe'};matches=[x for x in probes if ids and ids<={str(x['id']),x['name']}]
+   if len(matches)!=1:raise ValueError('Unknown/ambiguous invalid probe')
+   applies=int(matches[0]['id'])==item['probe_id']
+  else:raise ValueError('Unknown invalid scope')
+  if applies:out.append([float(a),float(b)])
+ if prior!=len(tags):raise ValueError('Unused invalid tags')
+ return (out,stimulus) if return_labels else out
+def evaluate(arrays,parameters,invalid,stimulus_invalid=()):
+ a,b,ids,c=(arrays[x] for x in ['start','stop','id','color']);n=len(a)
+ if a.dtype!=np.dtype('float64') or b.dtype!=np.dtype('float64') or ids.dtype.kind not in 'iu':raise ValueError('Native dtype mismatch')
+ if not(len(b)==len(ids)==len(c)==n) or len(set(ids))!=n or not(np.isfinite(a).all() and np.isfinite(b).all()) or not(np.diff(a)>0).all():raise ValueError('Event identity/time integrity')
+ facts={'n':n,'color_counts':{str(x):int((c==x).sum()) for x in [-1.,1.]},'duration_range':[float((b-a).min()),float((b-a).max())],'gap_range':[float((a[1:]-b[:-1]).min()),float((a[1:]-b[:-1]).max())],'span_seconds':float(b[-1]-a[0])}
+ scalar={'contrast':.8,'opacity':1.,'phase':[0.,0.],'spatial_frequency':[0.,0.],'size':[300.,300.],'mask':None}
+ param_ok=True
+ for key,expected in scalar.items():
+  for value in parameters[key]:
+   value=decoded(value)
+   if isinstance(value,str):
+    try:value=ast.literal_eval(value)
+    except (ValueError,SyntaxError):pass
+   if value!=expected:param_ok=False
+ valid=(b>=a+.22)&np.array([not any(l<t+.22 and t<r for l,r in invalid) and not any(l<end and t<r for l,r in stimulus_invalid) for t,end in zip(a,b)])
+ cuts={'A':(0,3*n//5),'B':(3*n//5,4*n//5),'E':(4*n//5,n),'C':(0,3*n//5),'D':(3*n//5,n)}
+ counts={role:{str(x):int(((c[l:r]==x)&valid[l:r]).sum()) for x in [-1.,1.]} for role,(l,r) in cuts.items()}
+ facts.update({'parameters_pass':param_ok,'complete_presentations':int(valid.sum()),'per_role_color_valid':counts,'source_stimulus_compatible':bool(120<=n<=180 and set(c)=={-1.,1.} and param_ok and np.all((.23<=b-a)&(b-a<=.28)) and np.all((1.5<=a[1:]-b[:-1])&(a[1:]-b[:-1]<=2.)) and b[-1]-a[0]<=400)})
+ return facts,valid
+def inspect(item,registration,directory=None,prior_reserved=0):
+ directory=directory or P/'metadata/roster_flashes';directory.mkdir(parents=True,exist_ok=True)
+ target=directory/(str(item['session_id'])+'.json');claim=directory/(str(item['session_id'])+'.attempt.json')
+ fd=os.open(claim,os.O_CREAT|os.O_EXCL|os.O_WRONLY)
+ with os.fdopen(fd,'w',encoding='utf8') as f:json.dump({'status':'STARTED','session_id':item['session_id'],'time':datetime.datetime.now(datetime.timezone.utc).isoformat(),'registration_sha256':sha(E/'SOURCE_METADATA_REGISTRATION.json'),'reader_sha256':sha(Path(__file__)),'repair_registration_sha256':registration.get('repair_registration_sha256')},f)
+ sid=item['session_id'];reader=None;audit=[]
+ try:
+  oldpath=R/'paper12_native_support1/metadata/native_headers'/f'{sid}.json.gz';old=json.loads(gzip.decompress(oldpath.read_bytes()))
+  probe_body=json.loads((R/'paper16_m0/metadata/probes.body').read_text(encoding='utf8'));probes=[x for x in probe_body['msg'] if int(x['ecephys_session_id'])==sid]
+  if sid in [760345702,829720705]:
+   with np.load(P/'metadata'/f'FLASH_NATIVE_{sid}.npz',allow_pickle=False) as q:arrays={k:q[k].copy() for k in q.files}
+   meta=json.loads((P/'metadata'/f'FLASH_NATIVE_{sid}.json').read_text(encoding='utf8'));parameters=meta['parameters']
+   inv=old['tables'].get('invalid_times',{});bad,stim_bad=invalid_rows(inv.get('start_time',[]),inv.get('stop_time',[]),inv.get('tags',[]),inv.get('tags_index',[]),item,probes,True)
+   version=old['root_attributes']['nwb_version'];clock_match=True;origin='Saved two-pilot byte-identical native metadata,not a new container read'
+  else:
+   reader=RangeReader('https://api.brain-map.org/api/v2/well_known_file_download/'+str(item['file_id']),item['size'],max_bytes=4194304-prior_reserved,etag=item['etag'])
+   with h5py.File(reader,'r') as f:
+    version=str(f.attrs.get('nwb_version',''));assert str(decoded(read_meta(f,'/identifier',audit)))==str(sid)
+    clocks={x:str(decoded(read_meta(f,x,audit))) for x in ['/session_start_time','/timestamps_reference_time']}
+    clock_match=all(clocks[x]==old.get(x) for x in clocks)
+    data={x:read_meta(f,'/intervals/flashes_presentations/'+x,audit) for x in FIELDS}
+    arrays={'start':data['start_time'],'stop':data['stop_time'],'id':data['id'],'color':np.asarray([float(decoded(v)) for v in data['color']],dtype=float),'ordinal':np.arange(len(data['id']),dtype='int64')}
+    parameters={x:decoded(data[x]) for x in ['contrast','opacity','phase','spatial_frequency','size','mask']}
+    if '/intervals/invalid_times' in f:
+     inv={x:read_meta(f,'/intervals/invalid_times/'+x,audit) for x in ['start_time','stop_time','tags','tags_index']}
+     bad,stim_bad=invalid_rows(inv['start_time'],inv['stop_time'],decoded(inv['tags']),inv['tags_index'],item,probes,True)
+    else:bad=[];stim_bad=[]
+   origin='New bounded metadata-only ranged HDF5 decoding'
+  facts,valid=evaluate(arrays,parameters,bad,stim_bad)
+  if version!='2.2.2' or not clock_match:raise ValueError('NWB generation or preserved relative-clock source identity changed')
+  npz=directory/f'{sid}.npz';assert not npz.exists();np.savez_compressed(npz,**arrays,main_valid=valid,invalid_intervals=np.asarray(bad,dtype=float).reshape(-1,2),stimulus_invalid_intervals=np.asarray(stim_bad,dtype=float).reshape(-1,2))
+  required={'A':30,'B':8,'E':8} if item['role']=='Development' else {'C':30,'D':15}
+  role_pass=all(all(v>=floor for v in facts['per_role_color_valid'][role].values()) for role,floor in required.items())
+  result={**item,**facts,'status':'COMPLETE','metadata_origin':origin,'source_nwb_version':version,'clock_matches_original_source_metadata':clock_match,'required_role_coverage_pass':role_pass,'metadata_candidate_admitted':facts['source_stimulus_compatible'] and role_pass,'observed_parameters':parameters,'dataset_paths_read':audit,'neural_datasets_read':0,'raw_Final_neural_access':False,'npz_sha256':sha(npz),'source_header_sha256':sha(oldpath),'known_invalid_intervals_applied':bad,'new_ranges':reader.ranges if reader else [],'transport_bytes':reader.used if reader else 0,'reserved_bytes':reader.reserved if reader else 0,'request_count':reader.calls if reader else 0}
+ except Exception as exc:result={**item,'status':'SOURCE_METADATA_UNRESOLVED','error':type(exc).__name__+': '+str(exc)[:250],'dataset_paths_read':audit,'neural_datasets_read':0,'raw_Final_neural_access':False,'new_ranges':reader.ranges if reader else [],'transport_bytes':reader.used if reader else 0,'reserved_bytes':reader.reserved if reader else 0,'request_count':reader.calls if reader else 0}
+ finally:
+  if reader:reader.http.close()
+ write_json(target,result);print(json.dumps({'session':sid,'status':result['status'],'bytes':result['transport_bytes'],'admitted':result.get('metadata_candidate_admitted'),'error':result.get('error')}),flush=True)
+ return result
+def main():
+ reg=json.loads((E/'SOURCE_METADATA_REGISTRATION.json').read_text(encoding='utf8'))
+ assert reg['helper_sha256']==sha(P/'code/source_ranges.py')
+ assert set(reg['allowlist'])==ALLOWED and len(reg['objects'])==55
+ with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:results=list(pool.map(lambda x:inspect(x,reg),sorted(reg['objects'],key=lambda x:x['session_id'])))
+ write_json(E/'ROSTER_METADATA_EXECUTION.json',{'objects_attempted':len(results),'complete':sum(x['status']=='COMPLETE' for x in results),'unresolved':sum(x['status']!='COMPLETE' for x in results),'transport_bytes':sum(x['transport_bytes'] for x in results),'reserved_bytes':sum(x['reserved_bytes'] for x in results),'neural_arrays':0,'real_model_fits':0,'Final_neural_access':0,'sessions':[{'session_id':x['session_id'],'status':x['status'],'admitted':x.get('metadata_candidate_admitted')} for x in results]})
+if __name__=='__main__':main()

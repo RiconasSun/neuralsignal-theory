@@ -1,0 +1,113 @@
+{
+  "mission": "P16-M1-VISUAL-DYNAMICS-PROTOCOL-FREEZE",
+  "dtype": "float64",
+  "software": {
+    "Python": "3.11.15",
+    "numpy": "2.4.6",
+    "scipy": "1.16.3",
+    "h5py": "3.16.0",
+    "requests": "2.32.5"
+  },
+  "objective": "Mean rows Poisson NLL incl logfactorial,mu=exposure*exp(Xbeta);lambda/2 sum beta_nonPSTH^2. B0boundedanalytic MLE. Sharedpenalty/scalers guarantee exact nesting at new coefficients0.",
+  "bounds": {
+    "PSTH_and_B0": [
+      -10,
+      10
+    ],
+    "nonPSTH": [
+      -1,
+      1
+    ]
+  },
+  "initialization": "For unit u,use only complete main A (Development) or C (Final) registered scored rows k5..10: R_u=sum(y_u)/sum(actual full-bin exposure .02s). Never QC early0..100ms counts. B0 eta=clip(log R_u,-10,10), R=0 -> -10. Every B1/B2/B3/B4 PSTH initializes to that same unit value; other coefficients0. Sensitivity initializers use that panel A/C scored rows/exposures, never a QC window.",
+  "algorithm": "scipy.optimize.minimize L-BFGS-B",
+  "options": {
+    "maxiter": 1500,
+    "maxfun": 6000,
+    "maxls": 40,
+    "maxcor": 10,
+    "ftol": 1e-12,
+    "gtol": 2e-06
+  },
+  "projected_gradient": "Outward-gradient zero only when beta atlower within1e-12 andg>0,orupper within1e-12 andg<0;otherwise g;full infinity norm<=1e-5. Optimizer success flag insufficient.",
+  "AD_scaled_coordinate_error_max": 1e-08,
+  "AD_definition": "abs(analytic-AD)/max(1,abs(analytic),abs(AD)) per coordinate,allcheckpoints",
+  "FD_steps": [
+    0.001,
+    0.0001,
+    1e-05,
+    1e-06
+  ],
+  "FD_frozen_acceptance_step": 1e-05,
+  "FD_scaled_coordinate_error_max": 2e-05,
+  "FD_bounds": "Differentiate identical smooth objective at same beta,central extension allowed outsideoptimizerbounds forderivativeoracle;nofeasiblefitoutsidebounds",
+  "checkpoints": [
+    "initial",
+    "first accepted iterate >=halfcompletediterations",
+    "endpoint"
+  ],
+  "future_required_certificates": [
+    "finite objective/gradient/scores",
+    "full projectedgradient",
+    "bounds",
+    "independentAD",
+    "frozenFD scan",
+    "parameter/feature/role/scaler/sourceidentities",
+    "allfailedattempts"
+  ],
+  "eta_bound_proof": "PrimaryB4<=154,C<=186,D/S<=155;largestS02C<=218,D/S<=187<float64exp~709. No clipping. Shared strongbaselinecapacity widened before any real fit.",
+  "attempt_policy": "One per registered unit/model/lambda/panel. Any required numericalfail STOP,no retry/optimizerrescue/replacement;retain attempts/unattemptedtasks. No threshold relaxation.",
+  "fit_budget": {
+    "baseline_B0_B4_unit_optimizer_attempts": 2208,
+    "C_unit_optimizer_attempts": 440,
+    "DS_joint_seed_attempts": 330,
+    "8refit_panels_all5models_unit_attempts": 10560,
+    "8refit_panels_DS_joint_seed_attempts": 2640,
+    "total_optimizer_attempts_max": 16178,
+    "B0_analytic_states": 440,
+    "max_calls_each": 6000,
+    "max_concurrent": 4,
+    "wall_hours_each_Dev_or_Final_stage": 48,
+    "budget_failure": "STOP without extension;synthetic timing not proof fullrealruntime"
+  },
+  "DCS_real_fits_authorized": false,
+  "synthetic_oracles_only": true,
+  "synthetic_test_scope": "Small synthetic convexoptimizer fixture plus exact math/gradient/scoring/state-oracles only;no realdatafitness or productionworker certification",
+  "B0_rate_domain": "For unit u,use only complete main A (Development) or C (Final) registered scored rows k5..10: R_u=sum(y_u)/sum(actual full-bin exposure .02s). Never QC early0..100ms counts. B0 eta=clip(log R_u,-10,10), R=0 -> -10. Every B1/B2/B3/B4 PSTH initializes to that same unit value; other coefficients0. Sensitivity initializers use that panel A/C scored rows/exposures, never a QC window.",
+  "DCS_registered_for_future": true,
+  "D_S_joint_penalty": "lambda/(2U) sum beta_nonPSTH^2 +.1/(2U) sum delta^2 +.01/2 sum logits^2; equal average B4 unit objectives when delta=gamma=0. No data/result-driven tuning.",
+  "DS_seeds": [
+    11,
+    23,
+    37
+  ],
+  "DS_bounds": "PSTH[-10,10],otherbeta[-1,1],delta[-1,1],logits[-3,3]",
+  "DS_selection": "All3 must pass every mandatory numerical gate;choose lowest A/C penalized objective,tie<=1e-12lowestseed;no coefficientmean andno B/E/D seedselection",
+  "C_fixed_kernels_seconds": [
+    0.04,
+    0.1
+  ],
+  "maximum_parameters": {
+    "main_B0_B1_B2_B3_B4": [
+      8,
+      192,
+      216,
+      216,
+      240
+    ],
+    "main_C": 272,
+    "main_D": 251,
+    "main_S": 251,
+    "max_sensitivity_C": 368,
+    "max_sensitivity_D_S": 347
+  },
+  "all_families_numerical_policy": "Same outwardPG<=1e-5,AD<=1e-8,frozenFDh1e-5<=2e-5 atinitial/halfiter/endpoint;finitebounds andfulltermination/callhistory. AnyrequirednumericalfailSTOP;all3DSseedsrequired.No optionalcoverageexcusefornumericalfailure.",
+  "dynamic_initialization": "[logit(.3),logit(.7),0]+PCG64Uniform[-.05,.05]",
+  "max_forward_states": 2,
+  "call_accounting": {
+    "optimizer": "At most6000objective+analyticgradient pairs perattempt;futureworker must count anddeny BEFORE evaluation6001,not rely onSciPymaxfunwhichcanovershoot",
+    "diagnostic_budget_separate": "ForPfreecoordinates and3checkpoints,centralFDfourfixedscales costsatmost24Pobjectiveevaluations;plus3independentADand3analyticcheckpointcalls. These are derivativecertificates,notadditionaloptimizerattempts. Allcountedseparately inreceipt andincludedin48hstagewallcap.",
+    "iteration_guard": "At most1500acceptediterations,externaliteration/wall guards;preserveallvectors/statuses. BudgetexhaustionSTOP,noretry orbackfill",
+    "synthetic_scope": "Smallfixtures donotcertify futureworker externalcounterimplementation;that is required before realfits"
+  }
+}

@@ -1,0 +1,519 @@
+# CCPN / NEURALSIGNAL — PAPER 16 MASTER PROMPT 2/5
+
+MISSION: `P16-M1-VISUAL-DYNAMICS-PROTOCOL-FREEZE`
+
+BASE:
+origin/test @ 2adb11a9fcd05cf1ea3cb4e120b5102400d6bb84
+
+PRIORITY: HIGH
+MODE: SCIENCE-FIRST / DATA-FIRST / BOUNDED
+
+## OBJECTIVE
+
+Complete Paper 16 M1 scientific protocol registration.
+
+Research target:
+
+"Predictive Temporal Structure of Neural Population Activity in Mouse Primary Visual Cortex"
+
+Primary question:
+
+Does strictly past local VISp neural population history improve held-out spike-count prediction beyond a strong stimulus-conditioned, session/time, firing-rate and measured-behavior baseline?
+
+This is a predictive observational study.
+
+Do not claim physical neural primitives, causal mechanisms or universal cognitive ontology.
+
+This mission authorizes protocol design, source-compatible metadata inspection, synthetic mathematical testing and independent review.
+
+It does NOT authorize new real neural fitting, Final neural access or Final evaluation.
+
+## 1. AUTHORITATIVE M0 EVIDENCE
+
+Read and verify:
+
+paper16_m0/P16_M0_REPORT.md
+paper16_m0/M1_SCIENTIFIC_HANDOFF.md
+paper16_m0/PROPOSED_EVALUATION_STRATEGY.md
+paper16_m0/PROPOSED_PRIMARY_QUESTION.md
+paper16_m0/OBSERVATION_AND_ARTIFACT_LIMITATIONS.md
+paper16_m0/SOURCE_COMPATIBILITY.md
+paper16_m0/results/ROLE_ALLOCATION.json
+paper16_m0/results/COMMON_GRATING_PARAMETER_SUPPORT.json
+
+Preserve all previous M0 source and evaluation-access records.
+
+Freeze the official Allen Visual Coding Neuropixels source, its exact source manifests and validated reader conventions.
+
+Do not incorrectly label the Allen data license as CC BY 4.0.
+
+Preserve its verified noncommercial academic-use rights and required attribution.
+
+## 2. FIXED COHORT
+
+Preserve all 55 original candidate mouse identities:
+
+Development: 28 mice
+Prospective Final: 27 mice
+
+Use one registered VISp probe population per mouse.
+
+Include only provider-supported VISp and its registered laminar descendants.
+
+Do not pool other visual regions to increase population size.
+
+The two already accessed pilot mice remain Development.
+
+The historical Allen/P12 mouse overlaps remain Development.
+
+Do not expose Final neural outcomes.
+
+No animal reshuffling, replacement or outcome-dependent selection.
+
+Crucial frozen source imbalance:
+
+Development = 5 BO + 23 FC
+Final = 27 BO
+
+BO = Brain Observatory
+FC = Functional Connectivity
+
+This is a cross-protocol development-to-final design.
+
+Do not claim same-protocol IID animal replication.
+
+Define the primary estimand explicitly as predictive performance on held-out BO animals under a development-selected model and calibration policy.
+
+Register BO-only Development sensitivity using the five originally assigned BO Development mice where numerically and statistically defensible.
+
+Keep FC and BO Development results separately reported.
+
+Do not hide domain shift, laboratory/source imbalance or protocol composition.
+
+## 3. SELECT PRIMARY STIMULUS FAMILY
+
+Use outcome-blind source metadata only.
+
+Priority A — Uniform flashes.
+
+M0 demonstrated that both pilot protocols contain:
+- Two stimulus colors
+- 75 repetitions per color
+- Native stimulus presentation timestamps
+
+Flashes are preferred because they can reduce the unverified grating-phase problem.
+
+Before finalizing, verify across the actual 55-mouse candidate roster:
+
+- Flash family availability
+- Stimulus polarity/intensity semantics
+- Presentation duration
+- Repetition counts
+- Timebase equivalence
+- Valid observation windows
+- BO/FC protocol compatibility
+- Minimum train/selection/evaluation exposure
+
+Do not assume the two pilot sessions establish all-mouse compatibility.
+
+Priority B — Matched gratings.
+
+Consider only if flashes cannot support a scientifically adequate study and grating source semantics can be verified.
+
+Existing metadata support four shared orientation/frequency/contrast tuples, but phase-at-onset is not verified.
+
+Do not treat a common parameter tuple as proof of identical physical stimulus presentation.
+
+Freeze a complete phase/PSTH control or explicitly restrict the scientific interpretation.
+
+Choose exactly ONE primary stimulus design based on source evidence and scientific interpretability, never on neural prediction scores.
+
+Preserve unsuccessful candidate stimulus feasibility findings.
+
+No unlimited stimulus switching.
+
+## 4. REGISTER PRIMARY ESTIMAND
+
+Primary contrast:
+
+Gain_history = LL(B4) - LL(B1)
+
+Units:
+
+nats per actually scored valid nominal VISp unit-bin.
+
+B1 must be a strong nuisance-only predictor.
+
+B4 includes B1 plus strictly past local spike-history information.
+
+Both must use identical:
+- Selected units
+- Observation windows
+- Scoring bins
+- Validity masks
+- Source exposure
+- Stimulus conditions
+- Evaluation denominators
+
+The scientific question concerns incremental predictive information, not direct causal influence between neurons.
+
+## 5. DEFINE CAUSAL FEATURES
+
+Freeze the exact bin width and history horizon based on VISp temporal physiology and the verified stimulus schedule.
+
+Do not automatically inherit P15's binning or lag rules.
+
+All predictors must be available by prediction-bin start.
+
+Neural history may use past observed spikes only.
+
+The target bin must never predict itself.
+
+Stimulus features must account for:
+- True stimulus identity
+- Onset and offset
+- Elapsed stimulus time
+- Condition-specific temporal responses/PSTHs
+- Repetition and adaptation history
+- Presentation order
+- Session drift
+- Protocol-specific stimulus differences
+
+A stimulus feature known only retrospectively must be explicitly labeled offline conditional information.
+
+Freeze running and pupil covariate timing and missingness rules.
+
+M0 found nonfinite pupil-fit values in both pilots. Missing values must not be converted into valid measurements or imputed using future data.
+
+Do not use future-smoothed running, pupil, response or neural observations.
+
+Reset neural-history state at original stimulus boundaries, invalid observation gaps and registered trial resets.
+
+Preserve binary64 native source timestamps without lossy JSON decimal round-tripping.
+
+Strict past means:
+
+event_time < prediction_bin_start
+
+Equality must be excluded.
+
+## 6. FREEZE PHYSIOLOGICAL QC
+
+Specify operational training/calibration-only QC before accessing additional spikes.
+
+Include:
+- VISp atlas/peak-channel membership
+- Provider-good sampling frame
+- Training-only mean firing rate
+- Refractory/ISI violations
+- Active observation coverage
+- Minimum spikes and occupied presentations
+- Valid source support
+- Selected simultaneous unit count
+- Frozen deterministic unit ranking
+- Missing and saturated interval exclusions
+
+The provider's original whole-session curation is an upstream source limitation, not newly performed training-only QC.
+
+M0 metadata-qualified units are NOT physiologically admitted units.
+
+Define the necessary minimum Development and Final animal populations from the intended precision and inferential design.
+
+Report physiological attrition transparently.
+
+Do not set arbitrary universal thresholds merely to copy P15.
+
+Specify an outcome-blind descriptive fallback for smaller valid cohorts where scientifically defensible.
+
+Do not change the cohort after neural QC.
+
+## 7. STRONG BASELINE MODELS
+
+Freeze exact Poisson model definitions.
+
+B0:
+Stationary firing-rate baseline.
+
+B1:
+Strong visual-stimulus, stimulus-locked temporal response, repetition, session/time, protocol and available causal behavioral-nuisance baseline.
+
+B2:
+B1 plus own-unit neural history.
+
+B3:
+B1 plus other-unit neural population history.
+
+B4:
+B1 plus own and other-unit neural histories.
+
+Define all nested identities and identical scoring conventions.
+
+Use training-only fitted preprocessing, scaling and regularization.
+
+B1 must be strong enough that a B4 advantage cannot simply be attributed to omitted deterministic visual-stimulus timing.
+
+Provide parameter counts and training budgets.
+
+## 8. SECONDARY DYNAMICAL REPRESENTATIONS
+
+Register bounded, tractable models only.
+
+D:
+Small causal discrete-state Poisson HMM.
+
+C:
+Low-dimensional causal continuous-history representation.
+
+S:
+Capacity-controlled static mixture comparator.
+
+All use the same strong B4 nuisance framework where mathematically appropriate.
+
+Define:
+- Exact likelihood functions
+- Model capacity and parameter accounting
+- State initializations
+- History updates and resets
+- Numerical oracles
+- Fixed hyperparameter grids
+- Seeds and selection rules
+- Convergence and failure thresholds
+- Bounded computational budgets
+
+D/C superiority is not presumed.
+
+A D model advantage over B4 alone does not prove persistent discrete neural states.
+
+Temporal-state claims require appropriate comparison against S and temporal disruption controls.
+
+Do not reuse P13's unstable recursively generated Poisson null.
+
+No real model fitting in M1.
+
+## 9. PRIMARY AND SECONDARY STATISTICS
+
+Mouse is the independent statistical unit.
+
+Primary hypothesis:
+
+Positive held-out B4-B1 predictive gain on the registered target Final population.
+
+Secondary comparisons:
+
+- B4-B2
+- B4-B3
+- D-B4
+- C-B4
+- D-S
+
+Freeze:
+- Equal-mouse averaging
+- Mouse-level confidence intervals
+- Primary test direction and assumptions
+- Secondary multiplicity correction
+- Leave-one-mouse-out sensitivity
+- Protocol-stratified Development results
+- BO-only Development sensitivity
+- Subject/source heterogeneity
+- Minimum scientifically relevant effect
+- Precision and coverage requirements
+- Positive, mixed, unsupported and inconclusive verdicts
+
+Do not use arbitrary narrow CI-width thresholds without statistical justification.
+
+Do not treat spike bins, units, presentations or probes as independent mice.
+
+Report both absolute log likelihoods and baseline-relative gains.
+
+No independent-laboratory replication claim.
+
+## 10. FALSIFICATION AND SENSITIVITY
+
+Register scientifically defensible controls for:
+
+1. Visual stimulus condition and temporal response.
+2. Neural-history temporal disruption.
+3. Own versus population history.
+4. Stimulus repetition/adaptation.
+5. Running and pupil nuisance dependence.
+6. BO/FC protocol differences.
+7. Unit number and firing rate.
+8. VISp laminar/probe composition.
+9. Recording support and saturation masks.
+10. Trial order and session drift.
+11. Model complexity.
+12. Static versus persistent state interpretation.
+
+Every null must have an explicit target hypothesis and documented conditional assumptions.
+
+Do not replace failed nulls with favorable draws.
+
+Do not force unstable self-exciting Poisson generation into mandatory controls.
+
+Freeze null counts, seeds, numerical gates and required interpretation conditions before scientific outcomes.
+
+## 11. DEVELOPMENT AND FINAL SPLITS
+
+Preserve the original 28/27 mouse allocation.
+
+Define the Development A/B/E partition using valid original whole presentations, blocked where temporal dependence requires it.
+
+A:
+Training, physiological QC, fitting and scaling.
+
+B:
+Model/hyperparameter selection.
+
+E:
+One exploratory Development assessment after selections freeze.
+
+Final C:
+Calibration, training-only QC and mouse-local fitting under selected global policies.
+
+Final D:
+One reserved evaluation.
+
+Freeze all original presentation IDs, temporal guard rules and C/D masks before future Final neural access.
+
+No Final D scores may affect model development or C calibration.
+
+The existing BO-only Final population makes source/protocol interpretation particularly important.
+
+Register Final results as within-source held-out animal evidence with a development-to-final protocol shift, not generic cross-dataset replication.
+
+## 12. NUMERICAL TEST CONTRACT
+
+Before future real fitting, require independent synthetic checks of:
+
+- Poisson log likelihood and factorial terms
+- Matched exposure denominators
+- Native binary64 timestamp preservation
+- Strictly past neural/behavior indexing
+- Future-count perturbation invariance
+- Reset and invalid-gap behavior
+- B0-B4 nesting
+- HMM forward likelihood versus exhaustive enumeration
+- Static mixture identity
+- Independent gradient/AD agreement
+- Parameter bounds and convergence
+- Reproducible selection and random seeds
+
+Specify the solver policies and finite computational budgets prospectively.
+
+Engineering validity and scientific validation are separate.
+
+## 13. CLAIM BOUNDARIES
+
+The study may ultimately identify predictive information carried by VISp neural history.
+
+It may NOT automatically establish:
+
+- Causal neural connectivity
+- Movement- or arousal-independent mechanisms
+- Discrete neural atoms
+- A universal cortical dynamics regime
+- CWP/NAP ontology validation
+- Human or BCI applicability
+- Independent-laboratory replication
+
+Incomplete pupil/behavior coverage and curated-source limitations must remain visible.
+
+Do not infer absent artifacts from missing artifact annotations.
+
+## 14. M1 GATE
+
+Complete a frozen experimental protocol and source-contract audit.
+
+Return exactly one:
+
+M1_FROZEN_READY_FOR_M2
+
+M1_FROZEN_WITH_SOURCE_LIMITATIONS
+
+SCIENTIFIC_DESIGN_INCONCLUSIVE
+
+DATA_INSUFFICIENT_FOR_SELECTED_ESTIMAND
+
+PASS requires:
+- A supported common stimulus design
+- Complete frozen cohort and source identities
+- Defensible observation and timing rules
+- Training/calibration-only QC contract
+- Strong baseline and model definitions
+- Numerical and statistical gates
+- Registered controls and sensitivities
+- One final assessment policy
+- Independent internal scientific review
+
+M0 feasibility is not proof of M1 activation.
+
+If the full protocol cannot be scientifically defended, STOP.
+
+Do not begin neural fitting merely to finish the project.
+
+## 15. DELIVERABLES
+
+Create:
+
+paper16_m1/
+
+Deliver:
+- Frozen scientific protocol
+- Final stimulus selection rationale
+- BO/FC compatibility and transport analysis
+- Exact mouse/session/probe roster
+- Source and observation validity matrix
+- Physiological QC contract
+- Full mathematical model specification
+- Numerical tests and computational budgets
+- Statistical analysis plan
+- Falsification and sensitivity registration
+- Final C/D holdout specification
+- A1-A10 preliminary claim-boundary audit
+- Saved-only reproduction
+- Independent internal review
+- Verified Git archival commit
+
+Required final status:
+
+M1_STATUS
+SCIENTIFIC_PROTOCOL_FROZEN
+PRIMARY_STIMULUS_FAMILY
+COMMON_STIMULUS_VERIFIED
+BO_FC_TRANSPORT_PLAN
+DEVELOPMENT_FINAL_ALLOCATION
+SOURCE_VALIDITY_STATUS
+PRIMARY_ESTIMAND
+MODEL_FAMILIES
+PHYSIOLOGICAL_QC_POLICY
+STATISTICAL_PLAN
+NUMERICAL_GATES
+FALSIFICATION_PLAN
+FINAL_HOLDOUT_POLICY
+PROMPT_3_READY
+BUG_COUNT
+WARN_COUNT
+GIT_COMMIT
+REMOTE_VERIFICATION
+
+## EXECUTION RULES
+
+SCIENCE FIRST.
+
+Use the existing M0 evidence and previously verified components.
+
+No new dataset search.
+No raw Final neural access.
+No real predictive-model fitting.
+No Final C or D execution.
+No result-driven mouse reroll.
+No unnecessary cryptographic custody framework.
+No giant unrelated engineering project.
+
+Complete ordinary documentation, source checks and synthetic tests autonomously.
+
+Preserve every historical failure.
+
+STOP AFTER REVIEWED M1 PROTOCOL FREEZE.
+
+BEGIN P16 M1 NOW.
