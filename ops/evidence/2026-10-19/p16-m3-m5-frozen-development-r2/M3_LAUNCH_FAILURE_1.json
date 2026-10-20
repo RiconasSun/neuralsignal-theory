@@ -1,0 +1,14 @@
+{
+  "scope": "Synthetic M3 suite launcher before worker launch; no scientific attempt",
+  "command": "python -B -m paper16_development_r2.certify supervise",
+  "exit_code": 1,
+  "observed_exception": "paper16_dev_r3.core.ResourceStop: Windows boot epoch unavailable; no source access",
+  "underlying_command": "powershell.exe -NoProfile -NonInteractive -Command (Get-CimInstance Win32_OperatingSystem -ErrorAction Stop).LastBootUpTime.ToUniversalTime().ToString('o')",
+  "underlying_exit_code": 1,
+  "interpretation": "Native boot-epoch capability unavailable in default tool context; detailed native stderr still to be checked, no corruption inferred",
+  "clock_source_modified": false,
+  "synthetic_worker_started": false,
+  "real_scientific_clock_started": false,
+  "real_optimizer_attempts": 0,
+  "next_diagnostic": "Check actual native CIM response and run the same bounded synthetic launcher in authorized native execution context; no clock substitution or threshold change"
+}

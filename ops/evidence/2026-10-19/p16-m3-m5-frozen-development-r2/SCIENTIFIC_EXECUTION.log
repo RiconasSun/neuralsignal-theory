@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r2\controller.py", line 309, in <module>
+    if __name__=='__main__':{'supervise':supervise,'worker':worker}[sys.argv[1]]()
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r2\controller.py", line 130, in worker
+    guard(stage);mouse=record['source']['mouse_id'];inputs=source.saved_A(record);inputs_by[mouse]=inputs
+                                                           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r2\source.py", line 68, in saved_A
+    sid=record['source']['session_id'];_,flashes,running,pins=metadata(record)
+                                                              ^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r2\source.py", line 45, in metadata
+    flashes['stimulus_valid']=stimulus_validity(saved['start'],saved['stop'],saved['color'],saved['stimulus_invalid_intervals'])
+                                                                                            ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_m1\work\runtime\Lib\site-packages\numpy\lib\_npyio_impl.py", line 243, in __getitem__
+    raise KeyError(f"{key} is not a file in the archive") from None
+KeyError: 'stimulus_invalid_intervals is not a file in the archive'
