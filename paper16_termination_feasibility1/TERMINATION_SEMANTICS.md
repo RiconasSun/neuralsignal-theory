@@ -1,0 +1,13 @@
+# Exact candidate semantics
+
+One diagnostic-only candidate: options.ftol=0.0. All other fields of the original NUMERICAL_POLICY are byte-value identical. verify_policy rejects any other change. This is not an amendment of historical M1 or adoption for all Development tasks.
+
+Installed SciPy1.16.3 wrapper converts ftol to factr=ftol/float64epsilon. The matching official v1.16.3 C implementation sets tol=factr*epsmach, tests projected-gradient convergence first, then tests whether fold-f<=tol*max(abs(fold),abs(f),1). Thus zero ftol suppresses a positive tolerance but does not disable the objective-stop branch. Zero or negative recorded improvement may still stop it. The fixed rounded-plateau negative fixture demonstrates that such success cannot create a scientific PASS.
+
+Source: [SciPy v1.16.3 __lbfgsb.c](https://raw.githubusercontent.com/scipy/scipy/v1.16.3/scipy/optimize/__lbfgsb.c), lines691 and933–945. Installed Python control source, compiled solver module, NumPy core and runtime versions are hash-bound in RUNTIME_IDENTITY.json; native synthetic tests exercise this exact installed binary. No claim of an independently rebuilt binary is made.
+
+The new broker is adapted from pinned R3 optimizer.py; objective and AD implementations are reused by explicit package imports, unchanged. Changes are namespace/import routing, separate mission journals, logging full FG vectors/gradients, reservations before diagnostic calls, and verification that accepted x equals the last brokered FG x. The client imports the new frozen options rather than modifying R3 globals. External guards still deny call6001 and iteration1501. No sys.path/sys.modules workaround or source monkeypatch.
+
+Mandatory mathematical acceptance remains finite objective/gradient, exact bounds, outward PG<=1e-5 and all three original AD/fixed-FD checkpoints. The worker additionally verifies a completed normal solver convergence receipt and completion before external deadline, as the owner requires correct numerical termination/resource completion. Solver success alone remains insufficient.
+
+The new process loader opens only the exact registered A/S02 prepared state and original initializer after independent prefit approval. It uses unchanged A scalers/active columns; it never imports the development controller or source reader and never calls score. The Python audit hook rejects other historical work caches and network access; it is ordinary reviewed-process containment, not protection against a malicious machine administrator. Windows Job supervision supplies an external process-tree deadline and kill-on-parent-close, not a new data-custody architecture.

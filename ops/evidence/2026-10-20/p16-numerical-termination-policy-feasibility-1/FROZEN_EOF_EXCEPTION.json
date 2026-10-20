@@ -1,0 +1,98 @@
+{
+  "mission": "P16-NUMERICAL-TERMINATION-POLICY-FEASIBILITY-1",
+  "finding": "Three prospectively approved/executed immutable worker files have extra blank line atEOF. Preserve their exact scientific source bytes.",
+  "original_check": {
+    "argv": [
+      "git",
+      "-c",
+      "core.longpaths=true",
+      "-c",
+      "core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol",
+      "diff",
+      "--cached",
+      "--check"
+    ],
+    "exit_code": 2,
+    "stdout": "paper16_termination_feasibility1/common.py:72: new blank line at EOF.\npaper16_termination_feasibility1/fixtures.py:23: new blank line at EOF.\npaper16_termination_feasibility1/tests.py:94: new blank line at EOF.\n",
+    "stderr": ""
+  },
+  "all_other_files_full_check": {
+    "argv": [
+      "git",
+      "-c",
+      "core.longpaths=true",
+      "-c",
+      "core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol",
+      "diff",
+      "--cached",
+      "--check",
+      "--",
+      ".",
+      ":!paper16_termination_feasibility1/common.py",
+      ":!paper16_termination_feasibility1/fixtures.py",
+      ":!paper16_termination_feasibility1/tests.py"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "git_default_retains_EOF_when_option_omitted_probe": {
+    "argv": [
+      "git",
+      "-c",
+      "core.longpaths=true",
+      "-c",
+      "core.whitespace=blank-at-eol,space-before-tab,cr-at-eol",
+      "diff",
+      "--cached",
+      "--check",
+      "--",
+      "paper16_termination_feasibility1/common.py",
+      "paper16_termination_feasibility1/fixtures.py",
+      "paper16_termination_feasibility1/tests.py"
+    ],
+    "exit_code": 2,
+    "stdout": "paper16_termination_feasibility1/common.py:72: new blank line at EOF.\npaper16_termination_feasibility1/fixtures.py:23: new blank line at EOF.\npaper16_termination_feasibility1/tests.py:94: new blank line at EOF.\n",
+    "stderr": ""
+  },
+  "only_frozen_files_explicit_EOF_exception_all_other_checks_retained": {
+    "argv": [
+      "git",
+      "-c",
+      "core.longpaths=true",
+      "-c",
+      "core.whitespace=blank-at-eol,space-before-tab,cr-at-eol,-blank-at-eof",
+      "diff",
+      "--cached",
+      "--check",
+      "--",
+      "paper16_termination_feasibility1/common.py",
+      "paper16_termination_feasibility1/fixtures.py",
+      "paper16_termination_feasibility1/tests.py"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "exception_scope": [
+    {
+      "path": "paper16_termination_feasibility1/common.py",
+      "sha256": "6d1085bbbefb22810d4ed4f6aa9caa22749a581727cdd474f22e7dca353ac160",
+      "bytes": 4469
+    },
+    {
+      "path": "paper16_termination_feasibility1/fixtures.py",
+      "sha256": "4e696bd477290d9022c6dc49425a83f250c94b4ef7b973a55d87dceb86064fb7",
+      "bytes": 1213
+    },
+    {
+      "path": "paper16_termination_feasibility1/tests.py",
+      "sha256": "d4c08b11e0ebb88332b0c094c506b4147b1879083f7cb2991249da37f0aa334f",
+      "bytes": 7383
+    }
+  ],
+  "worker_bytes_unchanged": true,
+  "scientific_thresholds_tests_unchanged": true,
+  "no_persistent_git_configuration_change": true,
+  "review": "Independent FROZEN_EOF_REVIEW.json required before archive acceptance"
+}

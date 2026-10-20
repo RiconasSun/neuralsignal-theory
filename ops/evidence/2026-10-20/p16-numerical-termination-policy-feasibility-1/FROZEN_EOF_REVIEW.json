@@ -1,0 +1,86 @@
+{
+  "mission": "P16-NUMERICAL-TERMINATION-POLICY-FEASIBILITY-1",
+  "reviewer": "independent /root/r4_policy_review",
+  "time_UTC": "2026-10-20T16:32:28.982118+00:00",
+  "decision": "ACCEPTED_EXACT_FROZEN_EOF_ONLY_EXCEPTION",
+  "open_P0": 0,
+  "open_P1": 0,
+  "unresolved_warning_count": 0,
+  "scope": "Exactly these3 path+SHA staged blobs; blank-at-eof only. Not a scientific or implementation defect. No general whitespace exemption.",
+  "reason": "Preserve prospectively frozen and actually executed worker identities. EOF empty-line formatting has no AST/behavior/math effect; all other whitespace checks remain enforced.",
+  "frozen_files": [
+    {
+      "path": "paper16_termination_feasibility1/common.py",
+      "bytes": 4469,
+      "sha256": "6d1085bbbefb22810d4ed4f6aa9caa22749a581727cdd474f22e7dca353ac160",
+      "staged_equals_frozen_executed_bytes": true,
+      "only_EOF_blank_line_exception": true,
+      "AST_unchanged_by_hypothetical_EOF_strip": true
+    },
+    {
+      "path": "paper16_termination_feasibility1/fixtures.py",
+      "bytes": 1213,
+      "sha256": "4e696bd477290d9022c6dc49425a83f250c94b4ef7b973a55d87dceb86064fb7",
+      "staged_equals_frozen_executed_bytes": true,
+      "only_EOF_blank_line_exception": true,
+      "AST_unchanged_by_hypothetical_EOF_strip": true
+    },
+    {
+      "path": "paper16_termination_feasibility1/tests.py",
+      "bytes": 7383,
+      "sha256": "d4c08b11e0ebb88332b0c094c506b4147b1879083f7cb2991249da37f0aa334f",
+      "staged_equals_frozen_executed_bytes": true,
+      "only_EOF_blank_line_exception": true,
+      "AST_unchanged_by_hypothetical_EOF_strip": true
+    }
+  ],
+  "CODE_FREEZE_sha256": "9f43af1408f83f7f888159857b59c9acbe11e25b084b0cc8ac0f6ed6ec51d006",
+  "PREFIT_MANIFEST_sha256": "9daa3c0a91414c8c99677c77576be07feabac6148de4f1627be4d4fbf6b14c6b",
+  "original_full_check": {
+    "command": [
+      "git",
+      "-c",
+      "core.longpaths=true",
+      "-c",
+      "core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol",
+      "diff",
+      "--cached",
+      "--check"
+    ],
+    "exit_code": 2,
+    "stdout_utf8": "paper16_termination_feasibility1/common.py:72: new blank line at EOF.\npaper16_termination_feasibility1/fixtures.py:23: new blank line at EOF.\npaper16_termination_feasibility1/tests.py:94: new blank line at EOF.\n",
+    "stderr_utf8": ""
+  },
+  "other_staged_paths_full_check": {
+    "file_count": 121,
+    "exit_code": 0,
+    "stdout_bytes": 0,
+    "stderr_bytes": 0
+  },
+  "exact3path_check_retaining_all_other_rules": {
+    "command": [
+      "git",
+      "-c",
+      "core.longpaths=true",
+      "-c",
+      "core.whitespace=blank-at-eol,-blank-at-eof,space-before-tab,cr-at-eol",
+      "diff",
+      "--cached",
+      "--check",
+      "--",
+      "paper16_termination_feasibility1/common.py",
+      "paper16_termination_feasibility1/fixtures.py",
+      "paper16_termination_feasibility1/tests.py"
+    ],
+    "exit_code": 0,
+    "stdout_bytes": 0,
+    "stderr_bytes": 0
+  },
+  "reviewer_scratch_note": "Initial restricted command omitted blank-at-eof rather than explicitly disabling it; Git kept default EOF checking and returned the same3 notices. Correct command uses -blank-at-eof only for exact3 blobs. No file or index edits occurred.",
+  "staged_file_count_at_review": 124,
+  "source_files_modified": 0,
+  "new_scientific_experiments": 0,
+  "original_single_trial_remains_consumed": true,
+  "scientific_threshold_or_acceptance_changed": false,
+  "archive_readback_and_clean_still_required": true
+}

@@ -1,0 +1,162 @@
+{
+  "mission": "P16-NUMERICAL-TERMINATION-POLICY-FEASIBILITY-1",
+  "registered_at_UTC": "2026-10-20T16:00:10.833362+00:00",
+  "BASE": "682b0ac37fc6a0bc211acc388134058ec3c071aa",
+  "candidate_count": 1,
+  "only_candidate_difference": {
+    "options.ftol": {
+      "old": 1e-12,
+      "new": 0.0
+    }
+  },
+  "candidate_policy_sha256": "581c38a3db6ba69005bcc85651968271e8fc5ed8a075cb7fd75d7c2986ecf90a",
+  "initialization": "Exact original A S02 unit951800892 initializer/bounds; never endpoint/accepted250",
+  "resources": {
+    "optimizer_attempts": 1,
+    "accepted_iterations": 1500,
+    "FG_pairs": 6000,
+    "FD_objective_calls": 888,
+    "independent_AD_calls": 3,
+    "analytic_checkpoint_calls": 3,
+    "workers": 1,
+    "wall_seconds": 7200,
+    "retries": 0
+  },
+  "synthetic_fixtures": [
+    {
+      "name": "poisson",
+      "X": "12x3: ones,linspace(-1,1,12),alternating+1/-1",
+      "y": [
+        0,
+        1,
+        0,
+        2,
+        1,
+        0,
+        0,
+        1,
+        0,
+        3,
+        0,
+        1
+      ],
+      "dt": 0.02,
+      "lambda": 0.1,
+      "psth": 1,
+      "x0": [
+        1,
+        0,
+        0
+      ],
+      "bounds": [
+        [
+          -10,
+          -1,
+          -1
+        ],
+        [
+          10,
+          1,
+          1
+        ]
+      ],
+      "expected": "PG/AD/FD pass"
+    },
+    {
+      "name": "slow_quadratic",
+      "diagonal": [
+        1,
+        0.0001,
+        1e-07
+      ],
+      "center": [
+        0.2,
+        -0.4,
+        0.6
+      ],
+      "x0": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "bounds": [
+        [
+          -1,
+          -1,
+          -1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": "PG/AD/FD pass"
+    },
+    {
+      "name": "bound_quadratic",
+      "diagonal": [
+        1,
+        1,
+        1
+      ],
+      "center": [
+        2,
+        -2,
+        0.2
+      ],
+      "x0": [
+        0,
+        0,
+        0
+      ],
+      "bounds": [
+        [
+          -1,
+          -1,
+          -1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": "PG/AD/FD pass with outward-active bounds"
+    },
+    {
+      "name": "rounded_plateau",
+      "objective": "1e20+0.1*x[0]",
+      "gradient": [
+        0.1
+      ],
+      "x0": [
+        0
+      ],
+      "bounds": [
+        [
+          -1
+        ],
+        [
+          1
+        ]
+      ],
+      "expected": "Negative control; objective may stop at ftol0 with PG/FD failure; no false scientific PASS"
+    }
+  ],
+  "synthetic_execution": "One per fixture per code candidate; preserve negative outcomes, no candidate-policy tuning",
+  "tests": [
+    "PG signs/epsilon/interior",
+    "broker limit denials before excess FG/iterations",
+    "finite/bounds/vector integrity",
+    "3checkpoints/4FDscales/24P+3+3 diagnostics",
+    "independent AD and Poisson closed-form reference",
+    "expected plateau failure retained",
+    "one-shot and concurrent claim denial",
+    "exact A allowlist/hash/partition/unit/scaler/mask",
+    "native Job assign-before-resume and7200s external wall kill",
+    "source/runtime/approval tamper denial"
+  ],
+  "prefit_gate": "Exact independently accepted code/runtime/input/budget plus mandatory synthetic PASS before protected A neural values",
+  "boundaries": "No B/E/Final/source acquisition/scoring/selection/M6/P17 or old record edits. Single-unit support never clears original R3 STOP or promotes a uniform Development policy."
+}

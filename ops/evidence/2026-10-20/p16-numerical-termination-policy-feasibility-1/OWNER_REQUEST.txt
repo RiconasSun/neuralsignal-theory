@@ -1,0 +1,317 @@
+# CCPN — CODEX MASTER PROMPT
+## P16-NUMERICAL-TERMINATION-POLICY-FEASIBILITY-1
+
+### 0. MISSION
+
+**MISSION_ID:** `P16-NUMERICAL-TERMINATION-POLICY-FEASIBILITY-1`
+
+**Repository:** `RiconasSun/neuralsignal-theory`
+
+**Branch:** `origin/test`
+
+**Required BASE SHA:**
+`682b0ac37fc6a0bc211acc388134058ec3c071aa`
+
+**OBJECTIVE:**
+
+Prospectively evaluate whether a modified L-BFGS-B termination policy can prevent premature objective-tolerance termination while preserving every original scientific numerical acceptance criterion.
+
+This mission authorizes:
+
+1. A prospective diagnostic-only termination-policy registration.
+2. Synthetic feasibility testing.
+3. Independent pre-execution review.
+4. At most ONE newly authorized A-only diagnostic optimization, conditional on all previous gates.
+5. Independent assessment, reproducibility and Git archival.
+
+This is a new numerical feasibility experiment, NOT a retry of the consumed R3 mission.
+
+The old `STOP_NUMERICAL_REQUIRED_GATE` remains immutable.
+
+No B/E evaluation, Final C/D, model selection, M6 or P17.
+
+---
+
+### 1. FREEZE HISTORICAL EVIDENCE
+
+Verify the exact BASE and clean worktree.
+
+Read and bind:
+
+- `paper16_m1/NUMERICAL_POLICY.json`
+- `paper16_m1/FEATURE_AND_MODEL_EQUATIONS.md`
+- `paper16_development_r3/NUMERICAL_FAILURE_SUMMARY.json`
+- `paper16_development_r3/SCIENTIFIC_CLOSEOUT.md`
+- `paper16_development_r3/PROTECTED_STATE_MANIFEST.json`
+- `paper16_pg_forensics_r1/FINAL_REPORT.md`
+- `paper16_pg_forensics_r1/ROOT_CAUSE_ASSESSMENT.md`
+- `paper16_pg_forensics_r1/PROSPECTIVE_OPTIONS.md`
+- `paper16_pg_forensics_r1/ACCEPTED_FIT_COMPARISON.json`
+
+Verify the protected saved states and historical hashes.
+
+Historical facts:
+
+- 953 optimizer endpoints.
+- 952 numerically accepted.
+- One failed S02/C endpoint.
+- 216 independent B0 analytic certificates.
+- Original R3 STOP preserved.
+- E never evaluated.
+- Final C/D untouched.
+
+No historical result may be rewritten, deleted or promoted to PASS.
+
+---
+
+### 2. PROSPECTIVE TERMINATION POLICY
+
+Register exactly ONE candidate numerical policy before conducting any diagnostic optimization.
+
+**Candidate change:**
+
+```text
+Algorithm: L-BFGS-B
+ftol: 0.0  [PROSPECTIVE CANDIDATE]
+gtol: 2e-6 [UNCHANGED]
+maxiter: 1500 [UNCHANGED]
+maxfun: 6000 [UNCHANGED]
+maxls: 40 [UNCHANGED]
+maxcor: 10 [UNCHANGED]
+
+Scientific PG threshold: 1e-5 [UNCHANGED]
+AD threshold: 1e-8 [UNCHANGED]
+Frozen FD step: 1e-5 [UNCHANGED]
+FD error threshold: 2e-5 [UNCHANGED]
+```
+
+All original model equations, bounds, initialization, penalties, feature definitions and source identities remain unchanged.
+
+**Rationale:** Setting `ftol=0.0` is a candidate way to suppress positive-tolerance relative-objective termination. It does not guarantee gradient convergence; zero objective improvement can still trigger an objective-based stop.
+
+Verify the exact SciPy 1.16.3 implementation semantics before approval.
+
+This is a diagnostic numerical-policy change, not automatic adoption into the original M1 contract.
+
+Do NOT:
+
+- Relax PG to 2e-5.
+- Change the scientific gradient criterion.
+- Drop S02/C.
+- Change objective normalization or ridge.
+- Select a different stopping tolerance after seeing experimental results.
+- Add alternative optimizers or a tuning grid.
+- Continue optimization from the consumed R3 endpoint.
+- Select historical accepted iteration 250 as a substitute endpoint.
+
+If the single candidate is not technically defensible, STOP and report why. Do not automatically substitute another candidate.
+
+---
+
+### 3. SYNTHETIC FEASIBILITY CERTIFICATION
+
+Before real A-only optimization:
+
+1. Verify the proposed policy is supported by the pinned SciPy runtime.
+2. Test the candidate on deterministic synthetic optimization fixtures, including objective plateaus and slowly converging gradients.
+3. Independently check objective/gradient correctness and bounds.
+4. Confirm original projected-gradient computation.
+5. Confirm objective-based early termination does not produce a false scientific PASS.
+6. Confirm external limits prevent evaluation beyond authorized calls and iterations.
+7. Confirm original diagnostic checkpoints and AD/FD requirements remain enforceable.
+8. Confirm access isolation and no Final data dependencies.
+
+Use one predetermined candidate policy only.
+
+Record negative synthetic results rather than tuning the policy to pass.
+
+Require independent pre-execution acceptance of the exact code, numerical contract, original data identity, and resource budget.
+
+No real optimization may begin before all mandatory checks pass.
+
+---
+
+### 4. ONE NEW A-ONLY DIAGNOSTIC OPTIMIZATION
+
+If the prospective policy is independently accepted, authorize exactly one new A-only numerical experiment.
+
+**Frozen diagnostic task:**
+
+```text
+Mouse: 733457989
+Panel: S02
+Model: C
+Unit: 951800892
+Lambda: 1.0
+```
+
+Use the original frozen R3 A-only input, features, scalers, model, bounds, penalty and original initialization.
+
+The prior selected lambda 1.0 is a fixed historical input to this feasibility study, not a new B-selection result.
+
+Use a fresh mission identity, directory, optimizer journal and attempt counter.
+
+Do not warm-start from the failed R3 endpoint or any previously accepted iterate.
+
+**Strict resource budget:**
+
+```text
+New optimizer attempts: 1 maximum
+Accepted iterations: <=1500
+Optimizer FG pairs: <=6000
+FD objective evaluations: <=888
+Independent AD calls: <=3
+Analytic checkpoint calls: <=3
+Workers: 1
+Wall time: <=2 hours
+Retries: 0
+```
+
+Do not extend budgets for timeouts, process errors or incomplete convergence.
+
+Freeze the exact new worker hashes and authority before accessing the protected A inputs.
+
+The trial must be scored strictly by the original numerical requirements:
+
+- Finite objective and gradient.
+- Valid frozen parameter bounds.
+- PG ≤1e-5.
+- All registered independent AD checks PASS.
+- All registered fixed-FD checks PASS.
+- Exact source/feature/scaler identity.
+- Complete call and iteration journals.
+- Correct numerical termination.
+- No unauthorized data access.
+
+If the optimizer reports success but PG fails, the new numerical trial also FAILS.
+
+No result-driven second attempt.
+
+---
+
+### 5. INTERPRETATION AND SCIENTIFIC BOUNDARY
+
+Distinguish three possible outcomes:
+
+**A. NUMERICAL_FEASIBILITY_SUPPORTED**
+
+The new prospectively registered trial satisfies the unchanged PG/AD/FD and all numerical requirements.
+
+This supports only feasibility of the proposed termination policy for this diagnostic case.
+
+It does NOT retroactively repair R3 or prove reliability across all models, mice or panels.
+
+**B. NUMERICAL_FEASIBILITY_NOT_SUPPORTED**
+
+The new trial runs correctly but fails a mandatory numerical condition.
+
+Archive the genuine failure without trying another policy.
+
+**C. INCONCLUSIVE / STOP**
+
+Evidence, access, implementation, source or resource requirements prevent an interpretable trial.
+
+Preserve the exact reason and do not manufacture a numerical result.
+
+The future full Development policy remains a separate scientific decision.
+
+If feasibility is supported, prepare a prospective numerical amendment proposal explaining how a uniform policy could be applied to all mandatory Development fits.
+
+Explicitly address whether the 952 previously accepted R3 fits can be reused under an independently audited compatibility rule or whether a future uniformly amended experiment requires fresh fits.
+
+Do not silently combine incompatible old and new numerical policies.
+
+The old B selection and all R3 optimizer attempts remain consumed historical evidence.
+
+---
+
+### 6. DELIVERABLES
+
+Use a new isolated namespace:
+
+`paper16_termination_feasibility1/`
+
+Deliver:
+
+- Prospective termination-policy registration.
+- Exact source/code/runtime identity manifest.
+- Synthetic feasibility tests and numerical audit.
+- Independent pre-execution review.
+- One A-only diagnostic attempt and complete journals, if authorized and executed.
+- PG/AD/FD certificates.
+- Resource and access ledger.
+- Historical R3 preservation audit.
+- Scientific interpretation and limitations.
+- Recommendation for a future full Development numerical amendment.
+- Saved-only reproduction.
+- Independent final review.
+- Verified normal `origin/test` archival receipt.
+
+Do not modify historical M1, R3 or forensic files.
+
+Do not commit protected neural arrays.
+
+Do not claim a synthetic or single-unit result validates all 6,471 originally planned optimization tasks.
+
+No unrelated management, custody or cryptographic infrastructure.
+
+---
+
+### 7. TERMINAL OUTPUT
+
+Report actual values:
+
+```text
+MISSION_ID=
+BASE_SHA=
+FINAL_STATUS=
+DIAGNOSTIC_VERDICT=
+
+POLICY_FROZEN=
+NEW_FTOL=
+ORIGINAL_PG_THRESHOLD_PRESERVED=
+SYNTHETIC_TESTS_PASS=
+INDEPENDENT_PREFIT_REVIEW=
+
+REAL_A_DIAGNOSTIC_ATTEMPTS=
+REAL_A_NUMERICAL_PASS=
+OPTIMIZER_TERMINATION_REASON=
+ACCEPTED_ITERATIONS=
+FG_CALLS=
+ENDPOINT_OBJECTIVE=
+ENDPOINT_PG=
+AD_PASS=
+FD_PASS=
+
+ORIGINAL_R3_STOP_PRESERVED=true
+OLD_952_FITS_UNCHANGED=true
+
+B_E_SCIENTIFIC_ACCESS=false
+FINAL_C_ACCESS=false
+FINAL_D_ACCESS=false
+
+BUG_COUNT=
+WARN_COUNT=
+INDEPENDENT_FINAL_REVIEW=
+GIT_COMMIT=
+REMOTE_VERIFICATION=
+WORKTREE_CLEAN=
+
+FUTURE_FULL_DEVELOPMENT_READY=
+SCIENTIFIC_AMENDMENT_REQUIRED=
+STOP_REASON=
+```
+
+End with a concise Chinese summary:
+
+1. Did the candidate termination policy prevent the original premature-stop mechanism?
+2. Did the new A-only trial pass the unchanged PG/AD/FD criteria?
+3. What remains unproven?
+4. Is a prospectively amended full Development experiment scientifically justified?
+5. What exact safeguards and treatment of previously consumed fits would that require?
+
+**STOP after the reviewed and verified feasibility archive.**
+
+Do not automatically continue M3–M5 or access Final.
+
+# END MASTER PROMPT

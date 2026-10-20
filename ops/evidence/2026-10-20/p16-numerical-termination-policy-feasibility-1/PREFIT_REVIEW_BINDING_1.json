@@ -1,0 +1,84 @@
+{
+  "mission": "P16-NUMERICAL-TERMINATION-POLICY-FEASIBILITY-1",
+  "BASE": "682b0ac37fc6a0bc211acc388134058ec3c071aa",
+  "reviewer": "/root/r4_policy_review",
+  "time_UTC": "2026-10-20T16:10:57.388665+00:00",
+  "decision": "REQUEST_CHANGES",
+  "open_P0": 0,
+  "open_P1": 1,
+  "findings": [
+    {
+      "id": "P1-01",
+      "path": "paper16_termination_feasibility1/reproduce.py",
+      "lines": [
+        14,
+        43,
+        58,
+        73,
+        76
+      ],
+      "description": "Saved-only reproduction assumes a complete endpoint for every consumed attempt and cannot verify a legitimate incomplete STOP."
+    }
+  ],
+  "manifest_sha256": "3239c506735518d57169c1b9e89b1bea2a0863e392f95b8781f75406ad09d103",
+  "review_path": "ops/evidence/2026-10-20/p16-numerical-termination-policy-feasibility-1/PREFIT_REVIEW_1.md",
+  "review_sha256": "20eaabff29451fd9bfb72c6b5176d0299fc82ba3bed4df1bea1c2abd3f9d87c0",
+  "bindings": [
+    {
+      "path": "paper16_termination_feasibility1/PREFIT_MANIFEST.json",
+      "bytes": 7348,
+      "sha256": "3239c506735518d57169c1b9e89b1bea2a0863e392f95b8781f75406ad09d103"
+    },
+    {
+      "path": "paper16_termination_feasibility1/CODE_FREEZE.json",
+      "bytes": 3816,
+      "sha256": "9f43af1408f83f7f888159857b59c9acbe11e25b084b0cc8ac0f6ed6ec51d006"
+    },
+    {
+      "path": "paper16_termination_feasibility1/reproduce.py",
+      "bytes": 7573,
+      "sha256": "fd3a5f79d60340cab102cd774089df8919e35cb1007c4cad088a28af993ab355"
+    },
+    {
+      "path": "paper16_termination_feasibility1/SYNTHETIC_CERTIFICATION.json",
+      "bytes": 821,
+      "sha256": "0ce0695099f641732c57cbfbd5b95f195953eee5188e879a2ee01ed68c40c6a4"
+    },
+    {
+      "path": "paper16_termination_feasibility1/SYNTHETIC_OUTCOMES.json",
+      "bytes": 43174,
+      "sha256": "89edb37d30bddad7b50b3af1b60333c92918cdc48c08e62e79b5b06dcbfbc3f6"
+    },
+    {
+      "path": "ops/evidence/2026-10-20/p16-numerical-termination-policy-feasibility-1/SYNTHETIC_TESTS_1.log",
+      "bytes": 1911,
+      "sha256": "bf053ce920661ab623851a1b1265714c254ce3cf86e70b5638d6d52e31a99b23"
+    },
+    {
+      "path": "ops/evidence/2026-10-20/p16-numerical-termination-policy-feasibility-1/SYNTHETIC_SUPERVISION.json",
+      "bytes": 253,
+      "sha256": "cd62d6f1364201560bb185e19909d9a0175b582597c668d37c14a376a00d739a"
+    },
+    {
+      "path": "ops/evidence/2026-10-20/p16-numerical-termination-policy-feasibility-1/PRE_A_ACCESS_ACCOUNT.json",
+      "bytes": 171,
+      "sha256": "e01c634efb3767dd87cf57e2cdf16e3483567da01f71292a1aeb0729d99fcf30"
+    },
+    {
+      "path": "ops/evidence/2026-10-20/p16-numerical-termination-policy-feasibility-1/REQUIREMENT_BASELINE.json",
+      "bytes": 38603,
+      "sha256": "9b408cf2cfec14682680dcb8360b6e41b6ae56f3a819211d3acf4b37069d3555"
+    }
+  ],
+  "independent_checks": {
+    "prefit_payloads": 34,
+    "code_entries": 19,
+    "source_pins": 626,
+    "protected_hashes": 10717,
+    "saved_synthetic_fixtures": 4,
+    "synthetic_reoptimization": 0,
+    "real_A_values_read": false,
+    "new_real_optimization": 0
+  },
+  "real_A_authorized_by_review": false
+}

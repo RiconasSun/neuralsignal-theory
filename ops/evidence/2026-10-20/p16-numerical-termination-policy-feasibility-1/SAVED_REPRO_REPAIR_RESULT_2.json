@@ -1,0 +1,30 @@
+{
+  "prefit_P1": "P1-01 fully addressed: typed actual STOP or abnormal supervision, claim/stage identity, strict FG and diagnostic prefixes, mandatory consumed1/null incomplete result",
+  "original_19_code_unchanged": true,
+  "code_freeze_sha256": "9f43af1408f83f7f888159857b59c9acbe11e25b084b0cc8ac0f6ed6ec51d006",
+  "saved_stop_regressions_pass": 15,
+  "saved_synthetic_certificates_rechecked_without_new_evaluations": [
+    {
+      "fixture": "poisson",
+      "saved_numerical_pass": true
+    },
+    {
+      "fixture": "slow_quadratic",
+      "saved_numerical_pass": true
+    },
+    {
+      "fixture": "bound_quadratic",
+      "saved_numerical_pass": true
+    },
+    {
+      "fixture": "rounded_plateau",
+      "saved_numerical_pass": false
+    }
+  ],
+  "new_optimizer_attempts": 0,
+  "policy_candidates": 1,
+  "real_A_claim_exists": false,
+  "reproducer_sha256": "5bf07eb29fe4a4acb6f06357f2910cbc0f67aab8002fde4209a597d53513e039",
+  "test_saved_sha256": "0b12157c784775d4d41abdf88d1d53b4ed3ea229882846a36146bf2d86fa2919",
+  "test_change_reason": "Original toy STOP used reason-only JSON, not frozen worker type/message/no_retry schema; corrected fixture and expanded negative coverage, preserving all previous tests/snapshots"
+}
