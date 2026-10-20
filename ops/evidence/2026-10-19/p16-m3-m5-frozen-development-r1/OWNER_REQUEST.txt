@@ -1,0 +1,712 @@
+# CODEX MASTER PROMPT
+## P16-M3-M5-FROZEN-DEVELOPMENT-R1
+
+### 0. MISSION / AUTHORIZATION
+
+You are Codex, acting as the scientific engineering and reproducibility executor for NEURALSIGNAL INSTITUTE — Computational Cognitive Primitive Neurodynamics (CCPN).
+
+**MISSION_ID:** `P16-M3-M5-FROZEN-DEVELOPMENT-R1`
+
+**Repository:** `RiconasSun/neuralsignal-theory`
+
+**Branch:** `test`
+
+**Required BASE SHA:**
+`ed2b52f5ba7a21ed870911e135c194c253b473ab`
+
+**Predecessor:** `P16-M2-BOUNDED-NEURAL-SOURCE-RECOVERY-R4`
+
+**Authorized scope:** M3 production numerical verification → M4 frozen A/B fitting and model selection → M5 one Development E evaluation → independent review → archive.
+
+This prompt grants prospective authorization for this new Development mission only, conditional on all frozen prerequisites.
+
+Do not request confirmation between successful internal stages. Continue automatically only when the previous stage satisfies every mandatory gate.
+
+If a gate fails, stop scientifically, preserve evidence, archive the actual failure when safe, and report it. Never manufacture PASS.
+
+**NOT AUTHORIZED:**
+
+- Final C or Final D neural access, fitting or scoring.
+- Repeating any consumed Final assessment.
+- Changing M1 hypotheses, scientific thresholds, frozen models, partitions or statistical procedures.
+- Replacing mice, probes, units or source identities.
+- Re-running R3/R4 source recovery.
+- Retuning models using Development E outcomes.
+- Automatically starting P17 or any subsequent mission.
+- External submission, main-branch promotion or new scientific hypotheses.
+
+The goal is genuine Development scientific evidence, not merely passing engineering tests.
+
+---
+
+### 1. BASE AND EVIDENCE VERIFICATION
+
+Before modifying or executing anything:
+
+1. Confirm local branch is `test`.
+2. Fetch and compare `origin/test` to the exact BASE SHA.
+3. Verify the local worktree is clean. Do not overwrite unrelated user changes.
+4. If BASE differs, stop with `STOP_BASE_MISMATCH`. Never silently rebase onto a newer scientific state.
+5. Verify the actual R4 final archive and local postcommit receipt when available.
+6. Verify original M1 and R4 frozen-file identities against their manifest hashes.
+7. Check that the required protected R3/R4 private saved A arrays, native metadata and pinned runtime are available and hash-consistent.
+8. Execute the existing saved-only R4 reproduction before production development.
+
+Required R4 scientific starting point:
+
+```text
+R4 FINAL_STATUS = PASS
+M2_SOURCE_AND_PHYSIOLOGY_PASS = true
+SOURCES_COMPLETE = 28/28
+ADMITTED_MICE = 27
+ADMITTED_BO = 5
+ADMITTED_FC = 22
+RETAINED_A_STATES = 1983
+A_QUALIFIED_CANDIDATES = 742
+R3_STOP_PRESERVED = true
+MODEL_FITS_EXECUTED = 0
+FINAL_C_ACCESS = false
+FINAL_D_ACCESS = false
+```
+
+Read and preserve:
+
+- `paper16_source_r4/CURRENT_HANDOFF.md`
+- `paper16_source_r4/M3_M5_HANDOFF.md`
+- `paper16_source_r4/SOURCE_AND_PHYSIOLOGY_ACCOUNT.json`
+- `paper16_source_r4/A_ONLY_STATE_MANIFEST.json`
+- `paper16_source_r4/PRIVATE_STATE_INVENTORY.json`
+- `paper16_source_r4/RESOURCE_LEDGER.json`
+- `paper16_source_r4/SOURCE_ONLY_LIMITATIONS.md`
+- `paper16_source_r4/FINAL_FREEZE_MANIFEST.json`
+
+The public archive alone is insufficient for reconstructing private A states. If required private evidence is missing, report `NEED_ENV` and stop rather than reconstructing or inventing it.
+
+Historical R3 remains an immutable STOP, despite R4's independently authorized recovery.
+
+---
+
+### 2. FROZEN SCIENTIFIC CONTRACT
+
+The following M1 documents are normative, not suggestions:
+
+```text
+paper16_m1/M1_SCIENTIFIC_PROTOCOL.md
+paper16_m1/protocol.json
+paper16_m1/FEATURE_AND_MODEL_EQUATIONS.md
+paper16_m1/NUMERICAL_POLICY.json
+paper16_m1/SOURCE_OBSERVATION_QC.md
+paper16_m1/STIMULUS_CONTRACT.md
+paper16_m1/STATISTICAL_ANALYSIS_PLAN.md
+paper16_m1/BO_FC_TRANSPORT_PLAN.md
+paper16_m1/FALSIFICATION_AND_SENSITIVITY_PLAN.md
+paper16_m1/controls.json
+paper16_m1/EVALUATION_BOUNDARY.md
+paper16_m1/FROZEN_COHORT.csv
+paper16_m1/M1_FREEZE_MANIFEST.json
+```
+
+Read all applicable documents and register their actual hashes before implementing the worker.
+
+If the narrative and machine-readable frozen contracts conflict materially, stop before neural execution and report the conflict. Do not choose the interpretation producing better results.
+
+**Primary research question:**
+
+Does strictly past local VISp neural history add predictive value beyond a strong visual-stimulus, time and measured-behavior baseline?
+
+**Primary contrast:** `B4−B1`.
+
+**Five secondary contrasts:**
+
+- `B4−B2`
+- `B4−B3`
+- `D−B4`
+- `C−B4`
+- `D−S`
+
+The registered model family is:
+
+| Model | Required meaning |
+|---|---|
+| B0 | Stationary unit-rate baseline |
+| B1 | Strong stimulus/time/behavior baseline |
+| B2 | B1 + own neural history |
+| B3 | B1 + other-unit history |
+| B4 | B1 + both histories |
+| C | B4 + fixed continuous-history kernels |
+| D | Causal two-state conditional Poisson HMM |
+| S | Presentation-static two-state mixture |
+
+All seven model levels are mandatory.
+
+No model may be removed because of numerical difficulty, disappointing performance or an inconvenient result.
+
+D/S use population-joint conditional likelihood. Their gains can reflect instantaneous population dependence or trial heterogeneity and cannot automatically be interpreted as extra strictly-past information or physical neural states.
+
+---
+
+### 3. M3 — PRODUCTION NUMERICAL CERTIFICATION
+
+**First complete production implementation and verification. No real optimization before this gate passes.**
+
+Reuse existing M1 mathematical code and independently accepted R4 source/QC components wherever valid. Do not rebuild the data ingestion architecture without necessity.
+
+Implement and certify:
+
+1. Exact B0–B4, C, D and S equations.
+2. Strictly causal feature construction and scoring.
+3. Production fitting, objective and gradient workers.
+4. Bounds and optimizer counters.
+5. A/B/E role separation and leakage prevention.
+6. Frozen source/feature/scaler identities.
+7. Frozen panel/refit configuration handling.
+8. Controlled numerical failure and saved-state recovery without unauthorized reruns.
+
+**Frozen temporal rules:**
+
+- 20 ms score bins.
+- Six bins in `[100,220)` ms.
+- Strictly past spike features only.
+- History resets at every presentation, invalidity and role boundary.
+- The 100 ms warmup is within the same flash.
+- No future behavior frame, neural count or source timestamp used as a predictor.
+- Original chronological roles and presentation IDs must remain fixed.
+- All nested main models use the same eight selected units, common support and valid targets.
+
+**Production numerical policy:**
+
+```text
+float64
+Python 3.11.15
+NumPy 2.4.6
+SciPy 1.16.3
+h5py 3.16.0
+requests 2.32.5
+
+Optimizer: L-BFGS-B
+Max iterations: 1500
+Max value/gradient pairs: 6000 per attempt
+maxls: 40
+maxcor: 10
+ftol: 1e-12
+gtol: 2e-6
+
+Projected gradient infinity norm <= 1e-5
+Independent AD scaled error <= 1e-8
+Frozen FD step = 1e-5
+FD scaled error <= 2e-5
+
+Checkpoints:
+- Initial
+- First accepted iterate at/after halfway
+- Endpoint
+```
+
+Respect the exact registered coefficient bounds, penalties, initialization rules and objective normalization.
+
+Implement independent derivative checks, including the frozen AD and FD methods. Comparing two paths sharing the same incorrect derivative code is insufficient.
+
+For every real optimizer attempt, enforce the external hard ceilings before unauthorized calls. SciPy's success flag is not itself a convergence certificate.
+
+Diagnostic FD/AD calls must be accounted for separately as specified by `NUMERICAL_POLICY.json`.
+
+For D and S:
+
+```text
+K = 2
+Seeds = 11, 23, 37
+All three attempts mandatory
+Select lowest A penalized objective
+Tie <= 1e-12 → lowest seed
+No B/E seed selection
+```
+
+For C:
+
+```text
+Fixed tau = 0.04 seconds
+Fixed tau = 0.1 seconds
+No additional tau search
+```
+
+Certify the causal D/S forward prediction, training-only smoothing, static-mixture equivalence oracles, nested B-family likelihood/objective, masks, role resets and no future leakage.
+
+Before the first real fit, use independent internal review to check production numerical implementation, access restrictions, source reuse and budgets.
+
+**M3 PASS requires:**
+
+- All mandatory mathematical and numerical synthetic tests passed.
+- Production worker and external optimizer budget guards verified.
+- Source/feature/role leakage tests passed.
+- Frozen M1/R4 identities preserved.
+- Independent prefit review accepted.
+- No Final C/D access.
+- No unresolved mandatory numerical or source defect.
+
+If these conditions are not met, stop before M4.
+
+Do not claim that synthetic numerical tests alone establish real-data convergence.
+
+---
+
+### 4. M4 — FROZEN A FITTING AND B SELECTION
+
+After M3 PASS, use the 27 admitted Development mice only.
+
+Maintain the original source allocation:
+
+```text
+Development:
+5 BO
+22 FC
+
+Final:
+27 BO — LOCKED
+```
+
+The original 28th Development mouse remains excluded. Do not replace it.
+
+Use the exact original A/B/E role cuts:
+
+```text
+A = original presentations 0–89
+B = original presentations 90–119
+E = original presentations 120–149
+```
+
+Cuts apply before exclusions. Preserve original presentation IDs and ordinal positions.
+
+#### 4.1 A-only preprocessing and fitting
+
+Reuse R4's already admitted and verified A states.
+
+Do not reacquire or recalculate A physiology using B/E outcomes.
+
+Fit all registered training components according to their frozen order.
+
+- Fit B1 on A under all three registered ridge values.
+- Fit A/C training-only scalers from the proper A training rows and exposure.
+- Use registered strictly-past features and shared masks.
+- Apply the original coefficient bounds, penalties, parameter initialization and numerical tests.
+
+**Ridge grid:**
+
+`λ ∈ {0.01, 0.1, 1.0}`
+
+#### 4.2 B-only model selection
+
+Only after the required A B1 candidates have passed numerical gates may the worker access B neural outcomes for B1 selection scoring.
+
+Select one global ridge using B1's unpenalized B predictive logscore:
+
+1. Equal mouse averages within BO.
+2. Equal mouse averages within FC.
+3. Weight BO and FC protocol means 0.5/0.5.
+4. Select the highest frozen aggregate B1 score.
+5. Ties within 1e-12 select the larger λ.
+
+Preserve complete B1 score curves and original mouse contributions.
+
+**Forbidden selection information:**
+
+- B4−B1 improvements.
+- Any C/D/S gain.
+- E outcomes.
+- Final C/D outcomes.
+- Favorable sensitivity or null results.
+
+No BO-only ridge retuning.
+
+#### 4.3 Remaining A fits
+
+Once the global λ is selected and frozen, reuse the winning B1 state and fit all remaining registered B/C/D/S models on A.
+
+All mandatory initializations, required seeds, numerical audits and source identities must pass.
+
+No optimizer retry, result-driven seed replacement, model substitution or favorable redraw.
+
+For any required numerical failure:
+
+`STOP_NUMERICAL_REQUIRED_GATE`
+
+Preserve the failed attempt, call counts, model state, diagnostic results and unattempted tasks. Do not continue to E.
+
+#### 4.4 B/E source acquisition authorization
+
+This new mission authorizes only the required Development B/E native outcome reads, under the same frozen source, mouse, probe, unit and observation identities.
+
+Use role-scoped extraction whenever possible.
+
+A trusted reader may perform the narrowly necessary transient full registered candidate-row integrity decoding on the **28 Development sources only**, with original role masking and access logging. This does not authorize Final animal reads or persistent redistribution of irrelevant raw rows.
+
+Do not access B/E outcomes before their respective stage gates.
+
+Use local verified source caches first. No alternative source, source-version swap, population replacement or unrestricted full-file fallback.
+
+The bounded new Development B/E transport ceiling is:
+
+```text
+Aggregate new network payload <= 8 GiB
+Per-source new payload <= 512 MiB
+Individual HTTP Range <= 1 MiB
+No unregistered retry
+No cumulative-budget reset
+```
+
+These are new prospective limits for this mission, not unused R3/R4 entitlements. Track actual payload bytes, reserved bytes, requests and elapsed time.
+
+If they cannot support the exact registered execution, stop `STOP_SOURCE_OR_RESOURCE` and report the required additional resource estimate without extending authority.
+
+**M4 PASS requires:**
+
+- All required A fits completed and numerically certified.
+- One globally selected ridge, from B1 alone.
+- All registered model families fitted.
+- No selection leakage.
+- Every source, unit, scaler and fitting state frozen.
+- No unauthorized retries.
+- No Final C/D access.
+
+Freeze the executable model/configuration identities before entering M5.
+
+---
+
+### 5. M5 — ONE DEVELOPMENT E EVALUATION
+
+Only after M4 PASS:
+
+Execute the single registered exploratory Development E evaluation batch.
+
+E must use frozen A-fitted models, globally selected λ, selected D/S seeds, A scalers, masks, unit identities and predeclared score procedures.
+
+**E may evaluate. E may not select or improve the models.**
+
+Evaluate all seven models:
+
+`B0 / B1 / B2 / B3 / B4 / C / D / S`
+
+Note that B0–B4 plus C/D/S consists of eight model labels. Preserve all eight registered absolute score outputs; do not omit B0 or any required model. Follow the frozen protocol's actual model-count terminology if it differs.
+
+Report six registered contrasts:
+
+```text
+B4-B1
+B4-B2
+B4-B3
+D-B4
+C-B4
+D-S
+```
+
+For each:
+
+- Per-mouse effect.
+- Equal-mouse effect.
+- BO and FC group descriptive results.
+- Actual valid unit-bin denominator.
+- Exposure and observation coverage.
+- Mouse-level variability and intervals where registered.
+- Failed or unavailable evaluations.
+- Source/protocol and sampling limitations.
+
+Do not count bins, neurons or trials as independent mice.
+
+Apply the prospective descriptive BO/FC diagnostics from `BO_FC_TRANSPORT_PLAN.md`, including 10,000 whole-mouse bootstrap samples and seeds 16043/16044 where required.
+
+Do not assert independent-laboratory validation or causal BO/FC effects.
+
+#### 5.1 Twelve frozen sensitivities
+
+Implement and evaluate every applicable registered panel:
+
+```text
+S01 — 10 ms PSTH saturation
+S02 — Adaptation history
+S03 — BO/FC transport
+S04 — Running complete-case
+S05 — Pupil availability
+S06 — Four-unit population
+S07 — Middle-rate units
+S08 — Own vs population history
+S09 — Higher-order drift
+S10 — Strict source/QC
+S11 — Adjacent-channel anatomy
+S12 — Static vs dynamic complexity
+```
+
+Keep each panel's exact frozen refit requirements, thresholds, masks and model families.
+
+Optional coverage failures may be `UNAVAILABLE` only if objectively established before that panel's fit and permitted by the frozen contract.
+
+An attempted mandatory fitting or numerical failure is never converted into `UNAVAILABLE`.
+
+#### 5.2 Four frozen reference operators
+
+Implement all registered control operators, preserving their definitions and random streams:
+
+```text
+N1 — Joint-history derangement: 999
+N2 — Within-bin jitter: 16
+N3 — Full-flash circular shift: 999
+N4 — Wrong nuisance mappings: 11
+```
+
+Use their exact M1 PCG64 seeds and mouse-ID derivation.
+
+Execute Development-applicable evaluations only where authorized by the frozen protocol. Final-specific gate status must remain `NOT_EXECUTED_FINAL_BOUNDARY`.
+
+Do not silently waive required Development tests, nor claim that future Final control requirements have already passed.
+
+In particular:
+
+- N1 is an approximate descriptive reference, not an established exact conditional null.
+- N2 must preserve the registered 20 ms B/D/S invariance; C continuous-kernel changes are reported.
+- N3 destroys stimulus alignment and cannot be called a valid conditional history null.
+- N4 is a deterministic nuisance stress test, not a permutation p-value.
+
+Do not use null outcomes to refit, select or repair models.
+
+#### 5.3 Development scientific interpretation
+
+Distinguish:
+
+- Predictive effects.
+- Numerical validity.
+- Robustness under controls.
+- BO/FC source transport.
+- Unmeasured behavior and arousal.
+- Static population dependence.
+- Proposed biological mechanisms.
+
+The registered future Final statistical rules remain frozen: mouse-level sign-flips, Holm-5 secondaries, prospective meaningful-effect targets, full sensitivity requirements and no `VALIDATED` category.
+
+Development E results cannot be relabeled as independent Final confirmation.
+
+A negative or mixed E result is an acceptable scientific outcome.
+
+No model selection, scientific threshold changes or additional E batch after observing E results.
+
+---
+
+### 6. RESOURCE AND FAILURE POLICY
+
+Use the unchanged frozen model/optimizer budget in `NUMERICAL_POLICY.json`.
+
+The maximum registered full-study optimizer-attempt ceiling is 16,178; this is not a fresh discretionary Development allowance. Calculate and enforce the exact applicable Development allocation from the frozen per-model/panel rules, preserving future Final reservations.
+
+Other required limits:
+
+```text
+Maximum concurrency: 4 workers
+Development scientific execution wall ceiling: 48 hours
+Optimizer value/gradient-pair cap: 6000 per attempt
+Accepted iteration cap: 1500 per attempt
+D/S seeds: exactly 3 registered attempts
+No optimizer rescue
+No model substitution
+No budget increase
+No scientific retry
+```
+
+Enforce actual wall-clock and process-child limits externally, not only by cooperative Python timers.
+
+The 48-hour Development ceiling is one bounded stage budget, not a fresh clock for every source, model or failed attempt.
+
+A process crash or source timeout does not authorize another scientific attempt. Safe saved-state verification and non-experimental archive repair are distinguishable from fresh fitting or rescoring.
+
+Record every attempted, completed, failed and never-started unit/model/panel.
+
+**Stop conditions:**
+
+- `STOP_BASE_MISMATCH`
+- `NEED_ENV`
+- `STOP_SOURCE_OR_RESOURCE`
+- `STOP_IMPLEMENTATION_REQUIRED_GATE`
+- `STOP_NUMERICAL_REQUIRED_GATE`
+- `STOP_ACCESS_OR_LEAKAGE`
+- `STOP_BUDGET`
+- `STOP_INDEPENDENT_REVIEW`
+
+Use the actual applicable status, not a fabricated success category.
+
+Permitted software fixes before first real scientific execution must preserve the frozen mathematical contract and pass new independent numerical review.
+
+After a mandatory real execution fails, preserve its failure; do not silently repair and replay that attempt in the same authorization.
+
+---
+
+### 7. REQUIRED DELIVERABLES
+
+Create a clearly isolated new R1 workspace without modifying historical scientific results.
+
+Suggested:
+
+```text
+paper16_development_r1/
+```
+
+Required scientific and engineering records:
+
+1. `MISSION_SPEC.json`
+2. `BASE_AND_FREEZE_AUDIT.json`
+3. `SOURCE_AND_ROLE_ACCESS_LEDGER.json`
+4. `PRODUCTION_NUMERICAL_CERTIFICATION.json`
+5. `MODEL_AND_FEATURE_IDENTITY_MANIFEST.json`
+6. `A_FITTING_RESULTS.json`
+7. `B_SELECTION_RESULTS.json`
+8. `FROZEN_SELECTION_MANIFEST.json`
+9. `E_DEVELOPMENT_RESULTS.json` when authorized and executed
+10. `SENSITIVITY_RESULTS.json`
+11. `REFERENCE_CONTROL_RESULTS.json`
+12. `RESOURCE_LEDGER.json`
+13. `SCIENTIFIC_VERDICT.md`
+14. `A1_A10_CLAIM_AUDIT.md`
+15. `LIMITATIONS_AND_FAILURES.md`
+16. `INDEPENDENT_REVIEW.md`
+17. `FINAL_DELIVERY.json`
+18. Native Windows PowerShell one-command saved-state reproduction.
+
+Exact output filenames may be adapted to existing repository conventions, but every evidence category must remain present and traceable.
+
+The reproduction path must verify saved inputs, hashes, masks, selection decisions, numerical evidence and scientific reporting without consuming Final, acquiring new sources or repeating scientific optimization.
+
+A clean public clone cannot reproduce private-source QC without the protected data; disclose this limitation explicitly.
+
+No raw neural arrays, personal credentials, private caches or unauthorized licensed data in Git.
+
+If the mission stops early, create truthful STOP records and mark all later stages `NOT_EXECUTED`.
+
+Do not generate a manuscript claiming completed Final experiments.
+
+---
+
+### 8. INDEPENDENT REVIEW AND GIT ARCHIVE
+
+After execution or mandatory STOP:
+
+Run independent internal scientific and engineering review.
+
+Review:
+
+- Frozen M1 compliance.
+- Actual R4 source inheritance.
+- A/B/E isolation.
+- Real numerical certificates.
+- Source/read coverage.
+- Data leakage.
+- Model/contrast completeness.
+- Failed and unavailable controls.
+- Mouse-level denominators.
+- True numerical and source resource usage.
+- Negative and mixed result preservation.
+- Claim boundaries.
+- Saved reproducibility.
+- Final C/D nonaccess.
+- Preservation of all prior Git evidence.
+
+Independence must reflect actual separate review activity; do not simply relabel the implementer's own report as independent.
+
+Retain failed initial reviews and corrective review evidence. Do not fabricate review acceptance.
+
+Archive the actual terminal state on `origin/test` using normal Git commit/push and verify the remote commit, changed-file identities and clean worktree.
+
+Do not force-push, rewrite history or modify unrelated research.
+
+A successful archive of a failed scientific mission must still be labeled STOP, not scientific PASS.
+
+If transport or archival closure fails, report its actual unverified state separately from the science verdict.
+
+---
+
+### 9. FINAL TERMINAL REPORT
+
+Return the following exact categories using real values:
+
+```text
+MISSION_ID=
+BASE_SHA=
+FINAL_STATUS=
+SCIENTIFIC_DEVELOPMENT_VERDICT=
+
+M3_PRODUCTION_NUMERICAL_PASS=
+M4_A_FITS_COMPLETE=
+M4_GLOBAL_B1_LAMBDA_SELECTED=
+M5_E_EXECUTED=
+
+DEVELOPMENT_SOURCES_COMPLETE=
+DEVELOPMENT_MICE_ADMITTED=
+DEVELOPMENT_BO=
+DEVELOPMENT_FC=
+
+MODELS_FITTED=
+OPTIMIZER_ATTEMPTS=
+NUMERICAL_FAILURES=
+B_SELECTION_LAMBDA=
+
+E_PRIMARY_B4_MINUS_B1=
+E_SECONDARY_EFFECTS=
+SENSITIVITIES_COMPLETED=
+SENSITIVITIES_UNAVAILABLE=
+CONTROLS_COMPLETED=
+CONTROLS_UNAVAILABLE=
+
+BUG_COUNT=
+WARN_COUNT=
+
+FINAL_C_ACCESS=false
+FINAL_D_ACCESS=false
+FINAL_MODEL_FITS=0
+FINAL_ASSESSMENTS=0
+
+INDEPENDENT_REVIEW=
+SAVED_REPRODUCTION=
+GIT_COMMIT=
+REMOTE_VERIFICATION=
+WORKTREE_CLEAN=
+
+NEXT_STAGE_READY=
+STOP_REASON=
+```
+
+Use `NOT_EXECUTED`, `UNAVAILABLE` or `UNKNOWN` where necessary. Do not invent missing values.
+
+Provide a concise Chinese scientific summary answering:
+
+1. What was actually executed?
+2. Did all required numerical gates pass?
+3. What did Development E show about B4−B1 and secondary comparisons?
+4. Which sensitivity or falsification gates failed or were unavailable?
+5. What can scientifically be claimed?
+6. What remains unproven?
+7. Is it appropriate to request a **separate Final M6 authorization**, or must P16 stop?
+
+**Final C/D must remain untouched regardless of M3–M5 success.**
+
+---
+
+### 10. TERMINAL PRINCIPLE
+
+```text
+Engineering PASS ≠ Scientific Hypothesis Supported.
+
+M2 physiological admission ≠ predictive validation.
+
+Development E ≠ independent Final holdout.
+
+Prediction ≠ causation.
+
+Discrete latent-state advantage ≠ neural primitive.
+
+A negative, mixed, inconclusive or stopped experiment
+must remain part of the permanent CCPN scientific record.
+```
+
+Execute the full authorized M3–M5 Development workflow only while all frozen gates remain satisfied.
+
+Prioritize existing production components, real observations, exact mathematics, resource discipline and independently reviewable results.
+
+Do not create unnecessary cryptographic custody infrastructure, duplicate management systems or unrelated engineering layers.
+
+**STOP after the reviewed and verified Development handoff. Do not automatically execute M6 or initiate P17.**
+
+# END MASTER PROMPT

@@ -1,0 +1,13 @@
+{
+  "phase": "Saved-only archive metadata update, not scientific execution",
+  "command": "python -B -m paper16_development_r1.work.update_observed_closure",
+  "exit_code": 1,
+  "exception": "UnicodeDecodeError: 'utf-16-le' codec can't decode byte 0x0a in position 1824: truncated data",
+  "cause": "Helper assumed PowerShell log UTF-16; the current command host emitted UTF-8",
+  "side_effects_before_failure": "Five exact original candidate/log snapshots copied; no report update or manifest removal had happened",
+  "original_helper": "FAILED_CLOSURE_HELPER_1.py.txt",
+  "repair": "Strict BOM-aware UTF-16 or UTF-8-sig decoding, no lossy fallback; existing snapshots must byte-match before continuation",
+  "regression": "test_native_powershell_utf8_and_utf16_logs with UTF-8, UTF-8 BOM, UTF-16 BOM and invalid-byte rejection",
+  "new_fits_or_source_access": false,
+  "scientific_STOP_unchanged": true
+}

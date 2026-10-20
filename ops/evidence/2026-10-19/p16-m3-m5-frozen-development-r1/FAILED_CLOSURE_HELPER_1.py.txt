@@ -1,0 +1,52 @@
+"""Preserve initial candidate and update only observed saved-replay metadata."""
+import json
+from datetime import datetime, timezone
+from paper16_development_r1.audit_base import P, E, sha
+
+for source, target in [
+    (P/'FINAL_DELIVERY.json', E/'CANDIDATE_1_FINAL_DELIVERY.json'),
+    (P/'INDEPENDENT_REVIEW.md', E/'CANDIDATE_1_REVIEW_INDEX.md'),
+    (P/'FINAL_FREEZE_MANIFEST.json', E/'CANDIDATE_1_FREEZE_MANIFEST.json'),
+    (E/'SAVED_REPRODUCTION.log', E/'INITIAL_SAVED_REPRODUCTION.log'),
+    (E/'FOCUSED_REGRESSIONS.log', E/'INITIAL_FOCUSED_REGRESSIONS.log'),
+]:
+    with target.open('xb') as out: out.write(source.read_bytes())
+log = (E/'SAVED_REPRODUCTION.log').read_text(encoding='utf-16')
+result = json.loads(log.splitlines()[-1])
+assert result['saved_only_integrity_reproduction']=='PASS'
+assert not result['scientific_mission_PASS']
+delivery = json.loads((P/'FINAL_DELIVERY.json').read_bytes())
+delivery['SAVED_REPRODUCTION'] = 'PASS_NATIVE_SAVED_ONLY_CANDIDATE_1; final-state replay required after updated freeze'
+delivery['INDEPENDENT_REVIEW'] = 'STATIC_CONTRACT_GATE_2_P1; actual final STOP-archive decision is COMPLETE_STOP_REVIEW_1.md'
+delivery['record_semantics'] = 'Scientific STOP is final. Git/remote/clean facts cannot be known inside their own commit; actual postcommit receipt is authoritative and required.'
+with (P/'FINAL_DELIVERY.json').open('w', encoding='utf8', newline='\n') as out:
+    json.dump(delivery,out,indent=2);out.write('\n')
+review_index = '''# Independent internal review index
+
+Static complete-contract audit:
+ops/evidence/2026-10-19/p16-m3-m5-frozen-development-r1/STATIC_CONTRACT_REVIEW_1.md
+by the separate internal reviewer /root/r4_policy_review. Actual decision:
+CONTRACT_CLARIFICATION_REQUIRED_BEFORE_COMPLETE_PRODUCTION_FREEZE; 0P0/2P1.
+Both findings remain OPEN. The original report/hash and failed gate are retained.
+
+Final saved-STOP preservation/reproduction review:
+ops/evidence/2026-10-19/p16-m3-m5-frozen-development-r1/COMPLETE_STOP_REVIEW_1.md.
+Read that separate report for its actual decision; this index does not certify a
+future review, numerical PASS or resolution of the two scientific definitions.
+Only acceptance of truthful STOP preservation can permit the normal archive.
+
+No independent-laboratory or third-party custody claim is made. Final Git/remote
+readback/clean verification is a subsequent actual receipt outside its own commit.
+'''
+(P/'INDEPENDENT_REVIEW.md').write_text(review_index,encoding='utf8',newline='\n')
+revision = {'time_UTC':datetime.now(timezone.utc).isoformat(),
+    'reason':'Actual candidate1 saved-only replay passed. Preserve original pending reports and initial freeze; update observed replay and review-link semantics only.',
+    'scientific_change':False,'new_scientific_execution':False,
+    'initial_saved_replay_sha256':sha(E/'INITIAL_SAVED_REPRODUCTION.log'),
+    'initial_regression_sha256':sha(E/'INITIAL_FOCUSED_REGRESSIONS.log'),
+    'initial_manifest_sha256':sha(E/'CANDIDATE_1_FREEZE_MANIFEST.json')}
+with (E/'CANDIDATE_REVISION_2.json').open('x',encoding='utf8') as out: json.dump(revision,out,indent=2)
+# The original manifest bytes remain in the immutable candidate1 copy above;
+# replacing this explicitly recorded draft is not a historical source mutation.
+(P/'FINAL_FREEZE_MANIFEST.json').unlink()
+print(json.dumps(revision))

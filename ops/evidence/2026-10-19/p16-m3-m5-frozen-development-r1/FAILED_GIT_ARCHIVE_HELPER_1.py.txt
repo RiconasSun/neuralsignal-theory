@@ -1,0 +1,105 @@
+"""Exact-path archive checks; never runs a fit, source read or scientific replay."""
+import hashlib
+import json
+import subprocess
+import sys
+from datetime import datetime, timezone
+from pathlib import Path
+from paper16_development_r1.audit_base import R, P, E, BASE, load, sha
+from paper16_development_r1.verify_saved import validate_manifest
+
+W = P/'work'
+
+
+def git(*args):
+    return subprocess.check_output(['git', *args], cwd=R)
+
+
+def put(path, value):
+    with path.open('x',encoding='utf8',newline='\n') as out:
+        json.dump(value,out,indent=2,allow_nan=False);out.write('\n')
+
+
+def prepare():
+    assert git('rev-parse','HEAD').decode().strip() == BASE
+    assert git('rev-parse','origin/test').decode().strip() == BASE
+    assert git('branch','--show-current').decode().strip() == 'test'
+    assert not git('diff','--cached','--name-only').strip(), 'Unrelated staged files'
+    approval = load(E/'FINAL_APPROVAL.json')
+    assert approval['permits_archive_of_STOP_only'] is True
+    assert approval['permits_scientific_execution'] is False
+    assert sha(E/'COMPLETE_STOP_REVIEW_1.md') == approval['complete_STOP_review_sha256']
+    assert sha(P/'FINAL_FREEZE_MANIFEST.json') == approval['candidate_manifest_sha256']
+    validate_manifest(load(P/'FINAL_FREEZE_MANIFEST.json'))
+    paths = git('ls-files','--others','--exclude-standard','-z','--',
+        'paper16_development_r1','ops/evidence/2026-10-19/p16-m3-m5-frozen-development-r1').decode().split('\0')
+    paths = sorted({x for x in paths if x} | {'ops/daily-operations.md'})
+    assert paths and all(x=='ops/daily-operations.md' or x.startswith(('paper16_development_r1/',
+        'ops/evidence/2026-10-19/p16-m3-m5-frozen-development-r1/')) for x in paths)
+    assert not any('/work/' in x or '__pycache__' in x for x in paths)
+    rows = [{'path':x,'bytes':(R/x).stat().st_size,'sha256':sha(R/x)} for x in paths]
+    put(W/'STAGING_CANDIDATE.json', {'BASE':BASE,'paths':rows,'count':len(rows)})
+    with (W/'stage_paths.nul').open('xb') as out:
+        out.write(b'\0'.join(x.encode('utf8') for x in paths)+b'\0')
+    print(json.dumps({'exact_paths_prepared':len(paths),'scientific_STOP_preserved':True}))
+
+
+def index():
+    expected = load(W/'STAGING_CANDIDATE.json')['paths']
+    staged = git('diff','--cached','--name-only','-z').decode().split('\0')
+    assert sorted(x for x in staged if x) == sorted(x['path'] for x in expected)
+    for row in expected:
+        data = git('show',':'+row['path'])
+        assert len(data)==row['bytes'] and hashlib.sha256(data).hexdigest()==row['sha256']
+        assert sha(R/row['path'])==row['sha256']
+    print(json.dumps({'index_paths_and_bytes_verified':len(expected),'unrelated_staged_files':0}))
+
+
+def readback():
+    expected = load(W/'STAGING_CANDIDATE.json')['paths']
+    commit = git('rev-parse','HEAD').decode().strip()
+    assert commit != BASE and git('rev-parse','HEAD^').decode().strip()==BASE
+    assert git('rev-parse','origin/test').decode().strip()==commit
+    remote = git('ls-remote','--heads','origin','refs/heads/main','refs/heads/test').decode().strip()
+    assert remote == commit+'\trefs/heads/test', remote
+    changed = git('diff-tree','--no-commit-id','--name-only','-r','-z',commit).decode().split('\0')
+    assert sorted(x for x in changed if x)==sorted(row['path'] for row in expected)
+    result=[]
+    for row in expected:
+        data=git('show','origin/test:'+row['path'])
+        digest=hashlib.sha256(data).hexdigest()
+        assert digest==row['sha256'] and len(data)==row['bytes'] and sha(R/row['path'])==digest
+        result.append({**row,'remote_sha256':digest,
+            'remote_git_blob':git('rev-parse','origin/test:'+row['path']).decode().strip(),
+            'byte_readback_match':True})
+    assert not git('status','--porcelain=v1','--untracked-files=all').strip(), 'Working tree not clean'
+    approval=load(E/'FINAL_APPROVAL.json')
+    receipt={
+        'mission':'P16-M3-M5-FROZEN-DEVELOPMENT-R1','BASE':BASE,'commit':commit,'branch':'test',
+        'verified_at_UTC':datetime.now(timezone.utc).isoformat(),
+        'final_status':'WAIT_FOR_HUMAN_INPUT','scientific_development_verdict':'STOP_IMPLEMENTATION_REQUIRED_GATE',
+        'archive_status':'VERIFIED_ORIGIN_TEST_ARCHIVE_OF_SCIENTIFIC_STOP',
+        'normal_push':True,'force_push':False,'origin_test':remote,
+        'origin_main':'ABSENT_VERIFIED_NOT_INVENTED',
+        'changed_file_count':len(result),'changed_file_manifest':result,
+        'candidate_manifest_sha256':sha(P/'FINAL_FREEZE_MANIFEST.json'),
+        'complete_STOP_review_sha256':sha(E/'COMPLETE_STOP_REVIEW_1.md'),
+        'final_approval_sha256':sha(E/'FINAL_APPROVAL.json'),
+        'independent_review_decision':approval['review_decision'],
+        'saved_reproduction':'PASS_NATIVE_SAVED_ONLY',
+        'saved_reproduction_log_sha256':sha(E/'POSTFREEZE_SAVED_REPRODUCTION.log'),
+        'focused_tests':7,'focused_test_log_sha256':sha(E/'FOCUSED_REGRESSIONS.log'),
+        'M3_PRODUCTION_NUMERICAL_PASS':False,'M4_A_FITS_COMPLETE':False,'M5_E_EXECUTED':False,
+        'real_optimizer_attempts':0,'numerical_fit_failures':0,'bug_count':0,'warn_count':2,
+        'Final_C_access':False,'Final_D_access':False,'Final_model_fits':0,'Final_assessments':0,
+        'WORKTREE_CLEAN':True,'next_stage_ready':False,
+        'stop_reason':'S07 rate window/support and N4 raw-column map require prospective owner definitions',
+        'note':'Postcommit facts resolve the necessarily pending Git fields inside FINAL_DELIVERY.json; no science gate is cleared',
+    }
+    put(W/'FINAL_HANDOFF_RECEIPT.json',receipt)
+    assert not git('status','--porcelain=v1','--untracked-files=all').strip()
+    print(json.dumps({k:v for k,v in receipt.items() if k!='changed_file_manifest'}))
+
+
+if __name__=='__main__':
+    {'prepare':prepare,'index':index,'readback':readback}[sys.argv[1]]()

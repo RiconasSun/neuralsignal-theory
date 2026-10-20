@@ -1,0 +1,2870 @@
+{
+  "all_nonempty_lines": 493,
+  "baseline_requirement_count": 399,
+  "items": [
+    {
+      "owner_line": 1,
+      "kind": "context",
+      "text": "# CODEX MASTER PROMPT"
+    },
+    {
+      "owner_line": 2,
+      "kind": "context",
+      "text": "## P16-M3-M5-FROZEN-DEVELOPMENT-R1"
+    },
+    {
+      "owner_line": 4,
+      "kind": "section",
+      "text": "### 0. MISSION / AUTHORIZATION"
+    },
+    {
+      "owner_line": 6,
+      "kind": "requirement",
+      "id": "REQ-001",
+      "text": "You are Codex, acting as the scientific engineering and reproducibility executor for NEURALSIGNAL INSTITUTE \u2014 Computational Cognitive Primitive Neurodynamics (CCPN)."
+    },
+    {
+      "owner_line": 8,
+      "kind": "requirement",
+      "id": "REQ-002",
+      "text": "**MISSION_ID:** `P16-M3-M5-FROZEN-DEVELOPMENT-R1`"
+    },
+    {
+      "owner_line": 10,
+      "kind": "requirement",
+      "id": "REQ-003",
+      "text": "**Repository:** `RiconasSun/neuralsignal-theory`"
+    },
+    {
+      "owner_line": 12,
+      "kind": "requirement",
+      "id": "REQ-004",
+      "text": "**Branch:** `test`"
+    },
+    {
+      "owner_line": 14,
+      "kind": "requirement",
+      "id": "REQ-005",
+      "text": "**Required BASE SHA:**"
+    },
+    {
+      "owner_line": 15,
+      "kind": "requirement",
+      "id": "REQ-006",
+      "text": "`ed2b52f5ba7a21ed870911e135c194c253b473ab`"
+    },
+    {
+      "owner_line": 17,
+      "kind": "requirement",
+      "id": "REQ-007",
+      "text": "**Predecessor:** `P16-M2-BOUNDED-NEURAL-SOURCE-RECOVERY-R4`"
+    },
+    {
+      "owner_line": 19,
+      "kind": "requirement",
+      "id": "REQ-008",
+      "text": "**Authorized scope:** M3 production numerical verification \u2192 M4 frozen A/B fitting and model selection \u2192 M5 one Development E evaluation \u2192 independent review \u2192 archive."
+    },
+    {
+      "owner_line": 21,
+      "kind": "requirement",
+      "id": "REQ-009",
+      "text": "This prompt grants prospective authorization for this new Development mission only, conditional on all frozen prerequisites."
+    },
+    {
+      "owner_line": 23,
+      "kind": "requirement",
+      "id": "REQ-010",
+      "text": "Do not request confirmation between successful internal stages. Continue automatically only when the previous stage satisfies every mandatory gate."
+    },
+    {
+      "owner_line": 25,
+      "kind": "requirement",
+      "id": "REQ-011",
+      "text": "If a gate fails, stop scientifically, preserve evidence, archive the actual failure when safe, and report it. Never manufacture PASS."
+    },
+    {
+      "owner_line": 27,
+      "kind": "requirement",
+      "id": "REQ-012",
+      "text": "**NOT AUTHORIZED:**"
+    },
+    {
+      "owner_line": 29,
+      "kind": "requirement",
+      "id": "REQ-013",
+      "text": "- Final C or Final D neural access, fitting or scoring."
+    },
+    {
+      "owner_line": 30,
+      "kind": "requirement",
+      "id": "REQ-014",
+      "text": "- Repeating any consumed Final assessment."
+    },
+    {
+      "owner_line": 31,
+      "kind": "requirement",
+      "id": "REQ-015",
+      "text": "- Changing M1 hypotheses, scientific thresholds, frozen models, partitions or statistical procedures."
+    },
+    {
+      "owner_line": 32,
+      "kind": "requirement",
+      "id": "REQ-016",
+      "text": "- Replacing mice, probes, units or source identities."
+    },
+    {
+      "owner_line": 33,
+      "kind": "requirement",
+      "id": "REQ-017",
+      "text": "- Re-running R3/R4 source recovery."
+    },
+    {
+      "owner_line": 34,
+      "kind": "requirement",
+      "id": "REQ-018",
+      "text": "- Retuning models using Development E outcomes."
+    },
+    {
+      "owner_line": 35,
+      "kind": "requirement",
+      "id": "REQ-019",
+      "text": "- Automatically starting P17 or any subsequent mission."
+    },
+    {
+      "owner_line": 36,
+      "kind": "requirement",
+      "id": "REQ-020",
+      "text": "- External submission, main-branch promotion or new scientific hypotheses."
+    },
+    {
+      "owner_line": 38,
+      "kind": "requirement",
+      "id": "REQ-021",
+      "text": "The goal is genuine Development scientific evidence, not merely passing engineering tests."
+    },
+    {
+      "owner_line": 40,
+      "kind": "context",
+      "text": "---"
+    },
+    {
+      "owner_line": 42,
+      "kind": "section",
+      "text": "### 1. BASE AND EVIDENCE VERIFICATION"
+    },
+    {
+      "owner_line": 44,
+      "kind": "context",
+      "text": "Before modifying or executing anything:"
+    },
+    {
+      "owner_line": 46,
+      "kind": "requirement",
+      "id": "REQ-022",
+      "text": "1. Confirm local branch is `test`."
+    },
+    {
+      "owner_line": 47,
+      "kind": "requirement",
+      "id": "REQ-023",
+      "text": "2. Fetch and compare `origin/test` to the exact BASE SHA."
+    },
+    {
+      "owner_line": 48,
+      "kind": "requirement",
+      "id": "REQ-024",
+      "text": "3. Verify the local worktree is clean. Do not overwrite unrelated user changes."
+    },
+    {
+      "owner_line": 49,
+      "kind": "requirement",
+      "id": "REQ-025",
+      "text": "4. If BASE differs, stop with `STOP_BASE_MISMATCH`. Never silently rebase onto a newer scientific state."
+    },
+    {
+      "owner_line": 50,
+      "kind": "requirement",
+      "id": "REQ-026",
+      "text": "5. Verify the actual R4 final archive and local postcommit receipt when available."
+    },
+    {
+      "owner_line": 51,
+      "kind": "requirement",
+      "id": "REQ-027",
+      "text": "6. Verify original M1 and R4 frozen-file identities against their manifest hashes."
+    },
+    {
+      "owner_line": 52,
+      "kind": "requirement",
+      "id": "REQ-028",
+      "text": "7. Check that the required protected R3/R4 private saved A arrays, native metadata and pinned runtime are available and hash-consistent."
+    },
+    {
+      "owner_line": 53,
+      "kind": "requirement",
+      "id": "REQ-029",
+      "text": "8. Execute the existing saved-only R4 reproduction before production development."
+    },
+    {
+      "owner_line": 55,
+      "kind": "context",
+      "text": "Required R4 scientific starting point:"
+    },
+    {
+      "owner_line": 57,
+      "kind": "code_delimiter",
+      "text": "```text"
+    },
+    {
+      "owner_line": 58,
+      "kind": "requirement",
+      "id": "REQ-030",
+      "text": "R4 FINAL_STATUS = PASS"
+    },
+    {
+      "owner_line": 59,
+      "kind": "requirement",
+      "id": "REQ-031",
+      "text": "M2_SOURCE_AND_PHYSIOLOGY_PASS = true"
+    },
+    {
+      "owner_line": 60,
+      "kind": "requirement",
+      "id": "REQ-032",
+      "text": "SOURCES_COMPLETE = 28/28"
+    },
+    {
+      "owner_line": 61,
+      "kind": "requirement",
+      "id": "REQ-033",
+      "text": "ADMITTED_MICE = 27"
+    },
+    {
+      "owner_line": 62,
+      "kind": "requirement",
+      "id": "REQ-034",
+      "text": "ADMITTED_BO = 5"
+    },
+    {
+      "owner_line": 63,
+      "kind": "requirement",
+      "id": "REQ-035",
+      "text": "ADMITTED_FC = 22"
+    },
+    {
+      "owner_line": 64,
+      "kind": "requirement",
+      "id": "REQ-036",
+      "text": "RETAINED_A_STATES = 1983"
+    },
+    {
+      "owner_line": 65,
+      "kind": "requirement",
+      "id": "REQ-037",
+      "text": "A_QUALIFIED_CANDIDATES = 742"
+    },
+    {
+      "owner_line": 66,
+      "kind": "requirement",
+      "id": "REQ-038",
+      "text": "R3_STOP_PRESERVED = true"
+    },
+    {
+      "owner_line": 67,
+      "kind": "requirement",
+      "id": "REQ-039",
+      "text": "MODEL_FITS_EXECUTED = 0"
+    },
+    {
+      "owner_line": 68,
+      "kind": "requirement",
+      "id": "REQ-040",
+      "text": "FINAL_C_ACCESS = false"
+    },
+    {
+      "owner_line": 69,
+      "kind": "requirement",
+      "id": "REQ-041",
+      "text": "FINAL_D_ACCESS = false"
+    },
+    {
+      "owner_line": 70,
+      "kind": "code_delimiter",
+      "text": "```"
+    },
+    {
+      "owner_line": 72,
+      "kind": "context",
+      "text": "Read and preserve:"
+    },
+    {
+      "owner_line": 74,
+      "kind": "requirement",
+      "id": "REQ-042",
+      "text": "- `paper16_source_r4/CURRENT_HANDOFF.md`"
+    },
+    {
+      "owner_line": 75,
+      "kind": "requirement",
+      "id": "REQ-043",
+      "text": "- `paper16_source_r4/M3_M5_HANDOFF.md`"
+    },
+    {
+      "owner_line": 76,
+      "kind": "requirement",
+      "id": "REQ-044",
+      "text": "- `paper16_source_r4/SOURCE_AND_PHYSIOLOGY_ACCOUNT.json`"
+    },
+    {
+      "owner_line": 77,
+      "kind": "requirement",
+      "id": "REQ-045",
+      "text": "- `paper16_source_r4/A_ONLY_STATE_MANIFEST.json`"
+    },
+    {
+      "owner_line": 78,
+      "kind": "requirement",
+      "id": "REQ-046",
+      "text": "- `paper16_source_r4/PRIVATE_STATE_INVENTORY.json`"
+    },
+    {
+      "owner_line": 79,
+      "kind": "requirement",
+      "id": "REQ-047",
+      "text": "- `paper16_source_r4/RESOURCE_LEDGER.json`"
+    },
+    {
+      "owner_line": 80,
+      "kind": "requirement",
+      "id": "REQ-048",
+      "text": "- `paper16_source_r4/SOURCE_ONLY_LIMITATIONS.md`"
+    },
+    {
+      "owner_line": 81,
+      "kind": "requirement",
+      "id": "REQ-049",
+      "text": "- `paper16_source_r4/FINAL_FREEZE_MANIFEST.json`"
+    },
+    {
+      "owner_line": 83,
+      "kind": "requirement",
+      "id": "REQ-050",
+      "text": "The public archive alone is insufficient for reconstructing private A states. If required private evidence is missing, report `NEED_ENV` and stop rather than reconstructing or inventing it."
+    },
+    {
+      "owner_line": 85,
+      "kind": "requirement",
+      "id": "REQ-051",
+      "text": "Historical R3 remains an immutable STOP, despite R4's independently authorized recovery."
+    },
+    {
+      "owner_line": 87,
+      "kind": "context",
+      "text": "---"
+    },
+    {
+      "owner_line": 89,
+      "kind": "section",
+      "text": "### 2. FROZEN SCIENTIFIC CONTRACT"
+    },
+    {
+      "owner_line": 91,
+      "kind": "context",
+      "text": "The following M1 documents are normative, not suggestions:"
+    },
+    {
+      "owner_line": 93,
+      "kind": "code_delimiter",
+      "text": "```text"
+    },
+    {
+      "owner_line": 94,
+      "kind": "requirement",
+      "id": "REQ-052",
+      "text": "paper16_m1/M1_SCIENTIFIC_PROTOCOL.md"
+    },
+    {
+      "owner_line": 95,
+      "kind": "requirement",
+      "id": "REQ-053",
+      "text": "paper16_m1/protocol.json"
+    },
+    {
+      "owner_line": 96,
+      "kind": "requirement",
+      "id": "REQ-054",
+      "text": "paper16_m1/FEATURE_AND_MODEL_EQUATIONS.md"
+    },
+    {
+      "owner_line": 97,
+      "kind": "requirement",
+      "id": "REQ-055",
+      "text": "paper16_m1/NUMERICAL_POLICY.json"
+    },
+    {
+      "owner_line": 98,
+      "kind": "requirement",
+      "id": "REQ-056",
+      "text": "paper16_m1/SOURCE_OBSERVATION_QC.md"
+    },
+    {
+      "owner_line": 99,
+      "kind": "requirement",
+      "id": "REQ-057",
+      "text": "paper16_m1/STIMULUS_CONTRACT.md"
+    },
+    {
+      "owner_line": 100,
+      "kind": "requirement",
+      "id": "REQ-058",
+      "text": "paper16_m1/STATISTICAL_ANALYSIS_PLAN.md"
+    },
+    {
+      "owner_line": 101,
+      "kind": "requirement",
+      "id": "REQ-059",
+      "text": "paper16_m1/BO_FC_TRANSPORT_PLAN.md"
+    },
+    {
+      "owner_line": 102,
+      "kind": "requirement",
+      "id": "REQ-060",
+      "text": "paper16_m1/FALSIFICATION_AND_SENSITIVITY_PLAN.md"
+    },
+    {
+      "owner_line": 103,
+      "kind": "requirement",
+      "id": "REQ-061",
+      "text": "paper16_m1/controls.json"
+    },
+    {
+      "owner_line": 104,
+      "kind": "requirement",
+      "id": "REQ-062",
+      "text": "paper16_m1/EVALUATION_BOUNDARY.md"
+    },
+    {
+      "owner_line": 105,
+      "kind": "requirement",
+      "id": "REQ-063",
+      "text": "paper16_m1/FROZEN_COHORT.csv"
+    },
+    {
+      "owner_line": 106,
+      "kind": "requirement",
+      "id": "REQ-064",
+      "text": "paper16_m1/M1_FREEZE_MANIFEST.json"
+    },
+    {
+      "owner_line": 107,
+      "kind": "code_delimiter",
+      "text": "```"
+    },
+    {
+      "owner_line": 109,
+      "kind": "requirement",
+      "id": "REQ-065",
+      "text": "Read all applicable documents and register their actual hashes before implementing the worker."
+    },
+    {
+      "owner_line": 111,
+      "kind": "requirement",
+      "id": "REQ-066",
+      "text": "If the narrative and machine-readable frozen contracts conflict materially, stop before neural execution and report the conflict. Do not choose the interpretation producing better results."
+    },
+    {
+      "owner_line": 113,
+      "kind": "requirement",
+      "id": "REQ-067",
+      "text": "**Primary research question:**"
+    },
+    {
+      "owner_line": 115,
+      "kind": "requirement",
+      "id": "REQ-068",
+      "text": "Does strictly past local VISp neural history add predictive value beyond a strong visual-stimulus, time and measured-behavior baseline?"
+    },
+    {
+      "owner_line": 117,
+      "kind": "requirement",
+      "id": "REQ-069",
+      "text": "**Primary contrast:** `B4\u2212B1`."
+    },
+    {
+      "owner_line": 119,
+      "kind": "requirement",
+      "id": "REQ-070",
+      "text": "**Five secondary contrasts:**"
+    },
+    {
+      "owner_line": 121,
+      "kind": "requirement",
+      "id": "REQ-071",
+      "text": "- `B4\u2212B2`"
+    },
+    {
+      "owner_line": 122,
+      "kind": "requirement",
+      "id": "REQ-072",
+      "text": "- `B4\u2212B3`"
+    },
+    {
+      "owner_line": 123,
+      "kind": "requirement",
+      "id": "REQ-073",
+      "text": "- `D\u2212B4`"
+    },
+    {
+      "owner_line": 124,
+      "kind": "requirement",
+      "id": "REQ-074",
+      "text": "- `C\u2212B4`"
+    },
+    {
+      "owner_line": 125,
+      "kind": "requirement",
+      "id": "REQ-075",
+      "text": "- `D\u2212S`"
+    },
+    {
+      "owner_line": 127,
+      "kind": "context",
+      "text": "The registered model family is:"
+    },
+    {
+      "owner_line": 129,
+      "kind": "context",
+      "text": "| Model | Required meaning |"
+    },
+    {
+      "owner_line": 130,
+      "kind": "context",
+      "text": "|---|---|"
+    },
+    {
+      "owner_line": 131,
+      "kind": "requirement",
+      "id": "REQ-076",
+      "text": "| B0 | Stationary unit-rate baseline |"
+    },
+    {
+      "owner_line": 132,
+      "kind": "requirement",
+      "id": "REQ-077",
+      "text": "| B1 | Strong stimulus/time/behavior baseline |"
+    },
+    {
+      "owner_line": 133,
+      "kind": "requirement",
+      "id": "REQ-078",
+      "text": "| B2 | B1 + own neural history |"
+    },
+    {
+      "owner_line": 134,
+      "kind": "requirement",
+      "id": "REQ-079",
+      "text": "| B3 | B1 + other-unit history |"
+    },
+    {
+      "owner_line": 135,
+      "kind": "requirement",
+      "id": "REQ-080",
+      "text": "| B4 | B1 + both histories |"
+    },
+    {
+      "owner_line": 136,
+      "kind": "requirement",
+      "id": "REQ-081",
+      "text": "| C | B4 + fixed continuous-history kernels |"
+    },
+    {
+      "owner_line": 137,
+      "kind": "requirement",
+      "id": "REQ-082",
+      "text": "| D | Causal two-state conditional Poisson HMM |"
+    },
+    {
+      "owner_line": 138,
+      "kind": "requirement",
+      "id": "REQ-083",
+      "text": "| S | Presentation-static two-state mixture |"
+    },
+    {
+      "owner_line": 140,
+      "kind": "requirement",
+      "id": "REQ-084",
+      "text": "All seven model levels are mandatory."
+    },
+    {
+      "owner_line": 142,
+      "kind": "requirement",
+      "id": "REQ-085",
+      "text": "No model may be removed because of numerical difficulty, disappointing performance or an inconvenient result."
+    },
+    {
+      "owner_line": 144,
+      "kind": "requirement",
+      "id": "REQ-086",
+      "text": "D/S use population-joint conditional likelihood. Their gains can reflect instantaneous population dependence or trial heterogeneity and cannot automatically be interpreted as extra strictly-past information or physical neural states."
+    },
+    {
+      "owner_line": 146,
+      "kind": "context",
+      "text": "---"
+    },
+    {
+      "owner_line": 148,
+      "kind": "section",
+      "text": "### 3. M3 \u2014 PRODUCTION NUMERICAL CERTIFICATION"
+    },
+    {
+      "owner_line": 150,
+      "kind": "requirement",
+      "id": "REQ-087",
+      "text": "**First complete production implementation and verification. No real optimization before this gate passes.**"
+    },
+    {
+      "owner_line": 152,
+      "kind": "requirement",
+      "id": "REQ-088",
+      "text": "Reuse existing M1 mathematical code and independently accepted R4 source/QC components wherever valid. Do not rebuild the data ingestion architecture without necessity."
+    },
+    {
+      "owner_line": 154,
+      "kind": "context",
+      "text": "Implement and certify:"
+    },
+    {
+      "owner_line": 156,
+      "kind": "requirement",
+      "id": "REQ-089",
+      "text": "1. Exact B0\u2013B4, C, D and S equations."
+    },
+    {
+      "owner_line": 157,
+      "kind": "requirement",
+      "id": "REQ-090",
+      "text": "2. Strictly causal feature construction and scoring."
+    },
+    {
+      "owner_line": 158,
+      "kind": "requirement",
+      "id": "REQ-091",
+      "text": "3. Production fitting, objective and gradient workers."
+    },
+    {
+      "owner_line": 159,
+      "kind": "requirement",
+      "id": "REQ-092",
+      "text": "4. Bounds and optimizer counters."
+    },
+    {
+      "owner_line": 160,
+      "kind": "requirement",
+      "id": "REQ-093",
+      "text": "5. A/B/E role separation and leakage prevention."
+    },
+    {
+      "owner_line": 161,
+      "kind": "requirement",
+      "id": "REQ-094",
+      "text": "6. Frozen source/feature/scaler identities."
+    },
+    {
+      "owner_line": 162,
+      "kind": "requirement",
+      "id": "REQ-095",
+      "text": "7. Frozen panel/refit configuration handling."
+    },
+    {
+      "owner_line": 163,
+      "kind": "requirement",
+      "id": "REQ-096",
+      "text": "8. Controlled numerical failure and saved-state recovery without unauthorized reruns."
+    },
+    {
+      "owner_line": 165,
+      "kind": "requirement",
+      "id": "REQ-097",
+      "text": "**Frozen temporal rules:**"
+    },
+    {
+      "owner_line": 167,
+      "kind": "requirement",
+      "id": "REQ-098",
+      "text": "- 20 ms score bins."
+    },
+    {
+      "owner_line": 168,
+      "kind": "requirement",
+      "id": "REQ-099",
+      "text": "- Six bins in `[100,220)` ms."
+    },
+    {
+      "owner_line": 169,
+      "kind": "requirement",
+      "id": "REQ-100",
+      "text": "- Strictly past spike features only."
+    },
+    {
+      "owner_line": 170,
+      "kind": "requirement",
+      "id": "REQ-101",
+      "text": "- History resets at every presentation, invalidity and role boundary."
+    },
+    {
+      "owner_line": 171,
+      "kind": "requirement",
+      "id": "REQ-102",
+      "text": "- The 100 ms warmup is within the same flash."
+    },
+    {
+      "owner_line": 172,
+      "kind": "requirement",
+      "id": "REQ-103",
+      "text": "- No future behavior frame, neural count or source timestamp used as a predictor."
+    },
+    {
+      "owner_line": 173,
+      "kind": "requirement",
+      "id": "REQ-104",
+      "text": "- Original chronological roles and presentation IDs must remain fixed."
+    },
+    {
+      "owner_line": 174,
+      "kind": "requirement",
+      "id": "REQ-105",
+      "text": "- All nested main models use the same eight selected units, common support and valid targets."
+    },
+    {
+      "owner_line": 176,
+      "kind": "requirement",
+      "id": "REQ-106",
+      "text": "**Production numerical policy:**"
+    },
+    {
+      "owner_line": 178,
+      "kind": "code_delimiter",
+      "text": "```text"
+    },
+    {
+      "owner_line": 179,
+      "kind": "requirement",
+      "id": "REQ-107",
+      "text": "float64"
+    },
+    {
+      "owner_line": 180,
+      "kind": "requirement",
+      "id": "REQ-108",
+      "text": "Python 3.11.15"
+    },
+    {
+      "owner_line": 181,
+      "kind": "requirement",
+      "id": "REQ-109",
+      "text": "NumPy 2.4.6"
+    },
+    {
+      "owner_line": 182,
+      "kind": "requirement",
+      "id": "REQ-110",
+      "text": "SciPy 1.16.3"
+    },
+    {
+      "owner_line": 183,
+      "kind": "requirement",
+      "id": "REQ-111",
+      "text": "h5py 3.16.0"
+    },
+    {
+      "owner_line": 184,
+      "kind": "requirement",
+      "id": "REQ-112",
+      "text": "requests 2.32.5"
+    },
+    {
+      "owner_line": 186,
+      "kind": "requirement",
+      "id": "REQ-113",
+      "text": "Optimizer: L-BFGS-B"
+    },
+    {
+      "owner_line": 187,
+      "kind": "requirement",
+      "id": "REQ-114",
+      "text": "Max iterations: 1500"
+    },
+    {
+      "owner_line": 188,
+      "kind": "requirement",
+      "id": "REQ-115",
+      "text": "Max value/gradient pairs: 6000 per attempt"
+    },
+    {
+      "owner_line": 189,
+      "kind": "requirement",
+      "id": "REQ-116",
+      "text": "maxls: 40"
+    },
+    {
+      "owner_line": 190,
+      "kind": "requirement",
+      "id": "REQ-117",
+      "text": "maxcor: 10"
+    },
+    {
+      "owner_line": 191,
+      "kind": "requirement",
+      "id": "REQ-118",
+      "text": "ftol: 1e-12"
+    },
+    {
+      "owner_line": 192,
+      "kind": "requirement",
+      "id": "REQ-119",
+      "text": "gtol: 2e-6"
+    },
+    {
+      "owner_line": 194,
+      "kind": "requirement",
+      "id": "REQ-120",
+      "text": "Projected gradient infinity norm <= 1e-5"
+    },
+    {
+      "owner_line": 195,
+      "kind": "requirement",
+      "id": "REQ-121",
+      "text": "Independent AD scaled error <= 1e-8"
+    },
+    {
+      "owner_line": 196,
+      "kind": "requirement",
+      "id": "REQ-122",
+      "text": "Frozen FD step = 1e-5"
+    },
+    {
+      "owner_line": 197,
+      "kind": "requirement",
+      "id": "REQ-123",
+      "text": "FD scaled error <= 2e-5"
+    },
+    {
+      "owner_line": 199,
+      "kind": "context",
+      "text": "Checkpoints:"
+    },
+    {
+      "owner_line": 200,
+      "kind": "requirement",
+      "id": "REQ-124",
+      "text": "- Initial"
+    },
+    {
+      "owner_line": 201,
+      "kind": "requirement",
+      "id": "REQ-125",
+      "text": "- First accepted iterate at/after halfway"
+    },
+    {
+      "owner_line": 202,
+      "kind": "requirement",
+      "id": "REQ-126",
+      "text": "- Endpoint"
+    },
+    {
+      "owner_line": 203,
+      "kind": "code_delimiter",
+      "text": "```"
+    },
+    {
+      "owner_line": 205,
+      "kind": "requirement",
+      "id": "REQ-127",
+      "text": "Respect the exact registered coefficient bounds, penalties, initialization rules and objective normalization."
+    },
+    {
+      "owner_line": 207,
+      "kind": "requirement",
+      "id": "REQ-128",
+      "text": "Implement independent derivative checks, including the frozen AD and FD methods. Comparing two paths sharing the same incorrect derivative code is insufficient."
+    },
+    {
+      "owner_line": 209,
+      "kind": "requirement",
+      "id": "REQ-129",
+      "text": "For every real optimizer attempt, enforce the external hard ceilings before unauthorized calls. SciPy's success flag is not itself a convergence certificate."
+    },
+    {
+      "owner_line": 211,
+      "kind": "requirement",
+      "id": "REQ-130",
+      "text": "Diagnostic FD/AD calls must be accounted for separately as specified by `NUMERICAL_POLICY.json`."
+    },
+    {
+      "owner_line": 213,
+      "kind": "context",
+      "text": "For D and S:"
+    },
+    {
+      "owner_line": 215,
+      "kind": "code_delimiter",
+      "text": "```text"
+    },
+    {
+      "owner_line": 216,
+      "kind": "requirement",
+      "id": "REQ-131",
+      "text": "K = 2"
+    },
+    {
+      "owner_line": 217,
+      "kind": "requirement",
+      "id": "REQ-132",
+      "text": "Seeds = 11, 23, 37"
+    },
+    {
+      "owner_line": 218,
+      "kind": "requirement",
+      "id": "REQ-133",
+      "text": "All three attempts mandatory"
+    },
+    {
+      "owner_line": 219,
+      "kind": "requirement",
+      "id": "REQ-134",
+      "text": "Select lowest A penalized objective"
+    },
+    {
+      "owner_line": 220,
+      "kind": "requirement",
+      "id": "REQ-135",
+      "text": "Tie <= 1e-12 \u2192 lowest seed"
+    },
+    {
+      "owner_line": 221,
+      "kind": "requirement",
+      "id": "REQ-136",
+      "text": "No B/E seed selection"
+    },
+    {
+      "owner_line": 222,
+      "kind": "code_delimiter",
+      "text": "```"
+    },
+    {
+      "owner_line": 224,
+      "kind": "context",
+      "text": "For C:"
+    },
+    {
+      "owner_line": 226,
+      "kind": "code_delimiter",
+      "text": "```text"
+    },
+    {
+      "owner_line": 227,
+      "kind": "requirement",
+      "id": "REQ-137",
+      "text": "Fixed tau = 0.04 seconds"
+    },
+    {
+      "owner_line": 228,
+      "kind": "requirement",
+      "id": "REQ-138",
+      "text": "Fixed tau = 0.1 seconds"
+    },
+    {
+      "owner_line": 229,
+      "kind": "requirement",
+      "id": "REQ-139",
+      "text": "No additional tau search"
+    },
+    {
+      "owner_line": 230,
+      "kind": "code_delimiter",
+      "text": "```"
+    },
+    {
+      "owner_line": 232,
+      "kind": "requirement",
+      "id": "REQ-140",
+      "text": "Certify the causal D/S forward prediction, training-only smoothing, static-mixture equivalence oracles, nested B-family likelihood/objective, masks, role resets and no future leakage."
+    },
+    {
+      "owner_line": 234,
+      "kind": "requirement",
+      "id": "REQ-141",
+      "text": "Before the first real fit, use independent internal review to check production numerical implementation, access restrictions, source reuse and budgets."
+    },
+    {
+      "owner_line": 236,
+      "kind": "requirement",
+      "id": "REQ-142",
+      "text": "**M3 PASS requires:**"
+    },
+    {
+      "owner_line": 238,
+      "kind": "requirement",
+      "id": "REQ-143",
+      "text": "- All mandatory mathematical and numerical synthetic tests passed."
+    },
+    {
+      "owner_line": 239,
+      "kind": "requirement",
+      "id": "REQ-144",
+      "text": "- Production worker and external optimizer budget guards verified."
+    },
+    {
+      "owner_line": 240,
+      "kind": "requirement",
+      "id": "REQ-145",
+      "text": "- Source/feature/role leakage tests passed."
+    },
+    {
+      "owner_line": 241,
+      "kind": "requirement",
+      "id": "REQ-146",
+      "text": "- Frozen M1/R4 identities preserved."
+    },
+    {
+      "owner_line": 242,
+      "kind": "requirement",
+      "id": "REQ-147",
+      "text": "- Independent prefit review accepted."
+    },
+    {
+      "owner_line": 243,
+      "kind": "requirement",
+      "id": "REQ-148",
+      "text": "- No Final C/D access."
+    },
+    {
+      "owner_line": 244,
+      "kind": "requirement",
+      "id": "REQ-149",
+      "text": "- No unresolved mandatory numerical or source defect."
+    },
+    {
+      "owner_line": 246,
+      "kind": "requirement",
+      "id": "REQ-150",
+      "text": "If these conditions are not met, stop before M4."
+    },
+    {
+      "owner_line": 248,
+      "kind": "requirement",
+      "id": "REQ-151",
+      "text": "Do not claim that synthetic numerical tests alone establish real-data convergence."
+    },
+    {
+      "owner_line": 250,
+      "kind": "context",
+      "text": "---"
+    },
+    {
+      "owner_line": 252,
+      "kind": "section",
+      "text": "### 4. M4 \u2014 FROZEN A FITTING AND B SELECTION"
+    },
+    {
+      "owner_line": 254,
+      "kind": "requirement",
+      "id": "REQ-152",
+      "text": "After M3 PASS, use the 27 admitted Development mice only."
+    },
+    {
+      "owner_line": 256,
+      "kind": "context",
+      "text": "Maintain the original source allocation:"
+    },
+    {
+      "owner_line": 258,
+      "kind": "code_delimiter",
+      "text": "```text"
+    },
+    {
+      "owner_line": 259,
+      "kind": "context",
+      "text": "Development:"
+    },
+    {
+      "owner_line": 260,
+      "kind": "requirement",
+      "id": "REQ-153",
+      "text": "5 BO"
+    },
+    {
+      "owner_line": 261,
+      "kind": "requirement",
+      "id": "REQ-154",
+      "text": "22 FC"
+    },
+    {
+      "owner_line": 263,
+      "kind": "context",
+      "text": "Final:"
+    },
+    {
+      "owner_line": 264,
+      "kind": "requirement",
+      "id": "REQ-155",
+      "text": "27 BO \u2014 LOCKED"
+    },
+    {
+      "owner_line": 265,
+      "kind": "code_delimiter",
+      "text": "```"
+    },
+    {
+      "owner_line": 267,
+      "kind": "requirement",
+      "id": "REQ-156",
+      "text": "The original 28th Development mouse remains excluded. Do not replace it."
+    },
+    {
+      "owner_line": 269,
+      "kind": "context",
+      "text": "Use the exact original A/B/E role cuts:"
+    },
+    {
+      "owner_line": 271,
+      "kind": "code_delimiter",
+      "text": "```text"
+    },
+    {
+      "owner_line": 272,
+      "kind": "requirement",
+      "id": "REQ-157",
+      "text": "A = original presentations 0\u201389"
+    },
+    {
+      "owner_line": 273,
+      "kind": "requirement",
+      "id": "REQ-158",
+      "text": "B = original presentations 90\u2013119"
+    },
+    {
+      "owner_line": 274,
+      "kind": "requirement",
+      "id": "REQ-159",
+      "text": "E = original presentations 120\u2013149"
+    },
+    {
+      "owner_line": 275,
+      "kind": "code_delimiter",
+      "text": "```"
+    },
+    {
+      "owner_line": 277,
+      "kind": "requirement",
+      "id": "REQ-160",
+      "text": "Cuts apply before exclusions. Preserve original presentation IDs and ordinal positions."
+    },
+    {
+      "owner_line": 279,
+      "kind": "context",
+      "text": "#### 4.1 A-only preprocessing and fitting"
+    },
+    {
+      "owner_line": 281,
+      "kind": "requirement",
+      "id": "REQ-161",
+      "text": "Reuse R4's already admitted and verified A states."
+    },
+    {
+      "owner_line": 283,
+      "kind": "requirement",
+      "id": "REQ-162",
+      "text": "Do not reacquire or recalculate A physiology using B/E outcomes."
+    },
+    {
+      "owner_line": 285,
+      "kind": "requirement",
+      "id": "REQ-163",
+      "text": "Fit all registered training components according to their frozen order."
+    },
+    {
+      "owner_line": 287,
+      "kind": "requirement",
+      "id": "REQ-164",
+      "text": "- Fit B1 on A under all three registered ridge values."
+    },
+    {
+      "owner_line": 288,
+      "kind": "requirement",
+      "id": "REQ-165",
+      "text": "- Fit A/C training-only scalers from the proper A training rows and exposure."
+    },
+    {
+      "owner_line": 289,
+      "kind": "requirement",
+      "id": "REQ-166",
+      "text": "- Use registered strictly-past features and shared masks."
+    },
+    {
+      "owner_line": 290,
+      "kind": "requirement",
+      "id": "REQ-167",
+      "text": "- Apply the original coefficient bounds, penalties, parameter initialization and numerical tests."
+    },
+    {
+      "owner_line": 292,
+      "kind": "requirement",
+      "id": "REQ-168",
+      "text": "**Ridge grid:**"
+    },
+    {
+      "owner_line": 294,
+      "kind": "requirement",
+      "id": "REQ-169",
+      "text": "`\u03bb \u2208 {0.01, 0.1, 1.0}`"
+    },
+    {
+      "owner_line": 296,
+      "kind": "context",
+      "text": "#### 4.2 B-only model selection"
+    },
+    {
+      "owner_line": 298,
+      "kind": "requirement",
+      "id": "REQ-170",
+      "text": "Only after the required A B1 candidates have passed numerical gates may the worker access B neural outcomes for B1 selection scoring."
+    },
+    {
+      "owner_line": 300,
+      "kind": "context",
+      "text": "Select one global ridge using B1's unpenalized B predictive logscore:"
+    },
+    {
+      "owner_line": 302,
+      "kind": "requirement",
+      "id": "REQ-171",
+      "text": "1. Equal mouse averages within BO."
+    },
+    {
+      "owner_line": 303,
+      "kind": "requirement",
+      "id": "REQ-172",
+      "text": "2. Equal mouse averages within FC."
+    },
+    {
+      "owner_line": 304,
+      "kind": "requirement",
+      "id": "REQ-173",
+      "text": "3. Weight BO and FC protocol means 0.5/0.5."
+    },
+    {
+      "owner_line": 305,
+      "kind": "requirement",
+      "id": "REQ-174",
+      "text": "4. Select the highest frozen aggregate B1 score."
+    },
+    {
+      "owner_line": 306,
+      "kind": "requirement",
+      "id": "REQ-175",
+      "text": "5. Ties within 1e-12 select the larger \u03bb."
+    },
+    {
+      "owner_line": 308,
+      "kind": "requirement",
+      "id": "REQ-176",
+      "text": "Preserve complete B1 score curves and original mouse contributions."
+    },
+    {
+      "owner_line": 310,
+      "kind": "requirement",
+      "id": "REQ-177",
+      "text": "**Forbidden selection information:**"
+    },
+    {
+      "owner_line": 312,
+      "kind": "requirement",
+      "id": "REQ-178",
+      "text": "- B4\u2212B1 improvements."
+    },
+    {
+      "owner_line": 313,
+      "kind": "requirement",
+      "id": "REQ-179",
+      "text": "- Any C/D/S gain."
+    },
+    {
+      "owner_line": 314,
+      "kind": "requirement",
+      "id": "REQ-180",
+      "text": "- E outcomes."
+    },
+    {
+      "owner_line": 315,
+      "kind": "requirement",
+      "id": "REQ-181",
+      "text": "- Final C/D outcomes."
+    },
+    {
+      "owner_line": 316,
+      "kind": "requirement",
+      "id": "REQ-182",
+      "text": "- Favorable sensitivity or null results."
+    },
+    {
+      "owner_line": 318,
+      "kind": "requirement",
+      "id": "REQ-183",
+      "text": "No BO-only ridge retuning."
+    },
+    {
+      "owner_line": 320,
+      "kind": "context",
+      "text": "#### 4.3 Remaining A fits"
+    },
+    {
+      "owner_line": 322,
+      "kind": "requirement",
+      "id": "REQ-184",
+      "text": "Once the global \u03bb is selected and frozen, reuse the winning B1 state and fit all remaining registered B/C/D/S models on A."
+    },
+    {
+      "owner_line": 324,
+      "kind": "requirement",
+      "id": "REQ-185",
+      "text": "All mandatory initializations, required seeds, numerical audits and source identities must pass."
+    },
+    {
+      "owner_line": 326,
+      "kind": "requirement",
+      "id": "REQ-186",
+      "text": "No optimizer retry, result-driven seed replacement, model substitution or favorable redraw."
+    },
+    {
+      "owner_line": 328,
+      "kind": "context",
+      "text": "For any required numerical failure:"
+    },
+    {
+      "owner_line": 330,
+      "kind": "requirement",
+      "id": "REQ-187",
+      "text": "`STOP_NUMERICAL_REQUIRED_GATE`"
+    },
+    {
+      "owner_line": 332,
+      "kind": "requirement",
+      "id": "REQ-188",
+      "text": "Preserve the failed attempt, call counts, model state, diagnostic results and unattempted tasks. Do not continue to E."
+    },
+    {
+      "owner_line": 334,
+      "kind": "context",
+      "text": "#### 4.4 B/E source acquisition authorization"
+    },
+    {
+      "owner_line": 336,
+      "kind": "requirement",
+      "id": "REQ-189",
+      "text": "This new mission authorizes only the required Development B/E native outcome reads, under the same frozen source, mouse, probe, unit and observation identities."
+    },
+    {
+      "owner_line": 338,
+      "kind": "requirement",
+      "id": "REQ-190",
+      "text": "Use role-scoped extraction whenever possible."
+    },
+    {
+      "owner_line": 340,
+      "kind": "requirement",
+      "id": "REQ-191",
+      "text": "A trusted reader may perform the narrowly necessary transient full registered candidate-row integrity decoding on the **28 Development sources only**, with original role masking and access logging. This does not authorize Final animal reads or persistent redistribution of irrelevant raw rows."
+    },
+    {
+      "owner_line": 342,
+      "kind": "requirement",
+      "id": "REQ-192",
+      "text": "Do not access B/E outcomes before their respective stage gates."
+    },
+    {
+      "owner_line": 344,
+      "kind": "requirement",
+      "id": "REQ-193",
+      "text": "Use local verified source caches first. No alternative source, source-version swap, population replacement or unrestricted full-file fallback."
+    },
+    {
+      "owner_line": 346,
+      "kind": "context",
+      "text": "The bounded new Development B/E transport ceiling is:"
+    },
+    {
+      "owner_line": 348,
+      "kind": "code_delimiter",
+      "text": "```text"
+    },
+    {
+      "owner_line": 349,
+      "kind": "requirement",
+      "id": "REQ-194",
+      "text": "Aggregate new network payload <= 8 GiB"
+    },
+    {
+      "owner_line": 350,
+      "kind": "requirement",
+      "id": "REQ-195",
+      "text": "Per-source new payload <= 512 MiB"
+    },
+    {
+      "owner_line": 351,
+      "kind": "requirement",
+      "id": "REQ-196",
+      "text": "Individual HTTP Range <= 1 MiB"
+    },
+    {
+      "owner_line": 352,
+      "kind": "requirement",
+      "id": "REQ-197",
+      "text": "No unregistered retry"
+    },
+    {
+      "owner_line": 353,
+      "kind": "requirement",
+      "id": "REQ-198",
+      "text": "No cumulative-budget reset"
+    },
+    {
+      "owner_line": 354,
+      "kind": "code_delimiter",
+      "text": "```"
+    },
+    {
+      "owner_line": 356,
+      "kind": "requirement",
+      "id": "REQ-199",
+      "text": "These are new prospective limits for this mission, not unused R3/R4 entitlements. Track actual payload bytes, reserved bytes, requests and elapsed time."
+    },
+    {
+      "owner_line": 358,
+      "kind": "requirement",
+      "id": "REQ-200",
+      "text": "If they cannot support the exact registered execution, stop `STOP_SOURCE_OR_RESOURCE` and report the required additional resource estimate without extending authority."
+    },
+    {
+      "owner_line": 360,
+      "kind": "requirement",
+      "id": "REQ-201",
+      "text": "**M4 PASS requires:**"
+    },
+    {
+      "owner_line": 362,
+      "kind": "requirement",
+      "id": "REQ-202",
+      "text": "- All required A fits completed and numerically certified."
+    },
+    {
+      "owner_line": 363,
+      "kind": "requirement",
+      "id": "REQ-203",
+      "text": "- One globally selected ridge, from B1 alone."
+    },
+    {
+      "owner_line": 364,
+      "kind": "requirement",
+      "id": "REQ-204",
+      "text": "- All registered model families fitted."
+    },
+    {
+      "owner_line": 365,
+      "kind": "requirement",
+      "id": "REQ-205",
+      "text": "- No selection leakage."
+    },
+    {
+      "owner_line": 366,
+      "kind": "requirement",
+      "id": "REQ-206",
+      "text": "- Every source, unit, scaler and fitting state frozen."
+    },
+    {
+      "owner_line": 367,
+      "kind": "requirement",
+      "id": "REQ-207",
+      "text": "- No unauthorized retries."
+    },
+    {
+      "owner_line": 368,
+      "kind": "requirement",
+      "id": "REQ-208",
+      "text": "- No Final C/D access."
+    },
+    {
+      "owner_line": 370,
+      "kind": "requirement",
+      "id": "REQ-209",
+      "text": "Freeze the executable model/configuration identities before entering M5."
+    },
+    {
+      "owner_line": 372,
+      "kind": "context",
+      "text": "---"
+    },
+    {
+      "owner_line": 374,
+      "kind": "section",
+      "text": "### 5. M5 \u2014 ONE DEVELOPMENT E EVALUATION"
+    },
+    {
+      "owner_line": 376,
+      "kind": "context",
+      "text": "Only after M4 PASS:"
+    },
+    {
+      "owner_line": 378,
+      "kind": "requirement",
+      "id": "REQ-210",
+      "text": "Execute the single registered exploratory Development E evaluation batch."
+    },
+    {
+      "owner_line": 380,
+      "kind": "requirement",
+      "id": "REQ-211",
+      "text": "E must use frozen A-fitted models, globally selected \u03bb, selected D/S seeds, A scalers, masks, unit identities and predeclared score procedures."
+    },
+    {
+      "owner_line": 382,
+      "kind": "requirement",
+      "id": "REQ-212",
+      "text": "**E may evaluate. E may not select or improve the models.**"
+    },
+    {
+      "owner_line": 384,
+      "kind": "context",
+      "text": "Evaluate all seven models:"
+    },
+    {
+      "owner_line": 386,
+      "kind": "requirement",
+      "id": "REQ-213",
+      "text": "`B0 / B1 / B2 / B3 / B4 / C / D / S`"
+    },
+    {
+      "owner_line": 388,
+      "kind": "requirement",
+      "id": "REQ-214",
+      "text": "Note that B0\u2013B4 plus C/D/S consists of eight model labels. Preserve all eight registered absolute score outputs; do not omit B0 or any required model. Follow the frozen protocol's actual model-count terminology if it differs."
+    },
+    {
+      "owner_line": 390,
+      "kind": "context",
+      "text": "Report six registered contrasts:"
+    },
+    {
+      "owner_line": 392,
+      "kind": "code_delimiter",
+      "text": "```text"
+    },
+    {
+      "owner_line": 393,
+      "kind": "requirement",
+      "id": "REQ-215",
+      "text": "B4-B1"
+    },
+    {
+      "owner_line": 394,
+      "kind": "requirement",
+      "id": "REQ-216",
+      "text": "B4-B2"
+    },
+    {
+      "owner_line": 395,
+      "kind": "requirement",
+      "id": "REQ-217",
+      "text": "B4-B3"
+    },
+    {
+      "owner_line": 396,
+      "kind": "requirement",
+      "id": "REQ-218",
+      "text": "D-B4"
+    },
+    {
+      "owner_line": 397,
+      "kind": "requirement",
+      "id": "REQ-219",
+      "text": "C-B4"
+    },
+    {
+      "owner_line": 398,
+      "kind": "requirement",
+      "id": "REQ-220",
+      "text": "D-S"
+    },
+    {
+      "owner_line": 399,
+      "kind": "code_delimiter",
+      "text": "```"
+    },
+    {
+      "owner_line": 401,
+      "kind": "context",
+      "text": "For each:"
+    },
+    {
+      "owner_line": 403,
+      "kind": "requirement",
+      "id": "REQ-221",
+      "text": "- Per-mouse effect."
+    },
+    {
+      "owner_line": 404,
+      "kind": "requirement",
+      "id": "REQ-222",
+      "text": "- Equal-mouse effect."
+    },
+    {
+      "owner_line": 405,
+      "kind": "requirement",
+      "id": "REQ-223",
+      "text": "- BO and FC group descriptive results."
+    },
+    {
+      "owner_line": 406,
+      "kind": "requirement",
+      "id": "REQ-224",
+      "text": "- Actual valid unit-bin denominator."
+    },
+    {
+      "owner_line": 407,
+      "kind": "requirement",
+      "id": "REQ-225",
+      "text": "- Exposure and observation coverage."
+    },
+    {
+      "owner_line": 408,
+      "kind": "requirement",
+      "id": "REQ-226",
+      "text": "- Mouse-level variability and intervals where registered."
+    },
+    {
+      "owner_line": 409,
+      "kind": "requirement",
+      "id": "REQ-227",
+      "text": "- Failed or unavailable evaluations."
+    },
+    {
+      "owner_line": 410,
+      "kind": "requirement",
+      "id": "REQ-228",
+      "text": "- Source/protocol and sampling limitations."
+    },
+    {
+      "owner_line": 412,
+      "kind": "requirement",
+      "id": "REQ-229",
+      "text": "Do not count bins, neurons or trials as independent mice."
+    },
+    {
+      "owner_line": 414,
+      "kind": "requirement",
+      "id": "REQ-230",
+      "text": "Apply the prospective descriptive BO/FC diagnostics from `BO_FC_TRANSPORT_PLAN.md`, including 10,000 whole-mouse bootstrap samples and seeds 16043/16044 where required."
+    },
+    {
+      "owner_line": 416,
+      "kind": "requirement",
+      "id": "REQ-231",
+      "text": "Do not assert independent-laboratory validation or causal BO/FC effects."
+    },
+    {
+      "owner_line": 418,
+      "kind": "context",
+      "text": "#### 5.1 Twelve frozen sensitivities"
+    },
+    {
+      "owner_line": 420,
+      "kind": "context",
+      "text": "Implement and evaluate every applicable registered panel:"
+    },
+    {
+      "owner_line": 422,
+      "kind": "code_delimiter",
+      "text": "```text"
+    },
+    {
+      "owner_line": 423,
+      "kind": "requirement",
+      "id": "REQ-232",
+      "text": "S01 \u2014 10 ms PSTH saturation"
+    },
+    {
+      "owner_line": 424,
+      "kind": "requirement",
+      "id": "REQ-233",
+      "text": "S02 \u2014 Adaptation history"
+    },
+    {
+      "owner_line": 425,
+      "kind": "requirement",
+      "id": "REQ-234",
+      "text": "S03 \u2014 BO/FC transport"
+    },
+    {
+      "owner_line": 426,
+      "kind": "requirement",
+      "id": "REQ-235",
+      "text": "S04 \u2014 Running complete-case"
+    },
+    {
+      "owner_line": 427,
+      "kind": "requirement",
+      "id": "REQ-236",
+      "text": "S05 \u2014 Pupil availability"
+    },
+    {
+      "owner_line": 428,
+      "kind": "requirement",
+      "id": "REQ-237",
+      "text": "S06 \u2014 Four-unit population"
+    },
+    {
+      "owner_line": 429,
+      "kind": "requirement",
+      "id": "REQ-238",
+      "text": "S07 \u2014 Middle-rate units"
+    },
+    {
+      "owner_line": 430,
+      "kind": "requirement",
+      "id": "REQ-239",
+      "text": "S08 \u2014 Own vs population history"
+    },
+    {
+      "owner_line": 431,
+      "kind": "requirement",
+      "id": "REQ-240",
+      "text": "S09 \u2014 Higher-order drift"
+    },
+    {
+      "owner_line": 432,
+      "kind": "requirement",
+      "id": "REQ-241",
+      "text": "S10 \u2014 Strict source/QC"
+    },
+    {
+      "owner_line": 433,
+      "kind": "requirement",
+      "id": "REQ-242",
+      "text": "S11 \u2014 Adjacent-channel anatomy"
+    },
+    {
+      "owner_line": 434,
+      "kind": "requirement",
+      "id": "REQ-243",
+      "text": "S12 \u2014 Static vs dynamic complexity"
+    },
+    {
+      "owner_line": 435,
+      "kind": "code_delimiter",
+      "text": "```"
+    },
+    {
+      "owner_line": 437,
+      "kind": "requirement",
+      "id": "REQ-244",
+      "text": "Keep each panel's exact frozen refit requirements, thresholds, masks and model families."
+    },
+    {
+      "owner_line": 439,
+      "kind": "requirement",
+      "id": "REQ-245",
+      "text": "Optional coverage failures may be `UNAVAILABLE` only if objectively established before that panel's fit and permitted by the frozen contract."
+    },
+    {
+      "owner_line": 441,
+      "kind": "requirement",
+      "id": "REQ-246",
+      "text": "An attempted mandatory fitting or numerical failure is never converted into `UNAVAILABLE`."
+    },
+    {
+      "owner_line": 443,
+      "kind": "context",
+      "text": "#### 5.2 Four frozen reference operators"
+    },
+    {
+      "owner_line": 445,
+      "kind": "context",
+      "text": "Implement all registered control operators, preserving their definitions and random streams:"
+    },
+    {
+      "owner_line": 447,
+      "kind": "code_delimiter",
+      "text": "```text"
+    },
+    {
+      "owner_line": 448,
+      "kind": "requirement",
+      "id": "REQ-247",
+      "text": "N1 \u2014 Joint-history derangement: 999"
+    },
+    {
+      "owner_line": 449,
+      "kind": "requirement",
+      "id": "REQ-248",
+      "text": "N2 \u2014 Within-bin jitter: 16"
+    },
+    {
+      "owner_line": 450,
+      "kind": "requirement",
+      "id": "REQ-249",
+      "text": "N3 \u2014 Full-flash circular shift: 999"
+    },
+    {
+      "owner_line": 451,
+      "kind": "requirement",
+      "id": "REQ-250",
+      "text": "N4 \u2014 Wrong nuisance mappings: 11"
+    },
+    {
+      "owner_line": 452,
+      "kind": "code_delimiter",
+      "text": "```"
+    },
+    {
+      "owner_line": 454,
+      "kind": "requirement",
+      "id": "REQ-251",
+      "text": "Use their exact M1 PCG64 seeds and mouse-ID derivation."
+    },
+    {
+      "owner_line": 456,
+      "kind": "requirement",
+      "id": "REQ-252",
+      "text": "Execute Development-applicable evaluations only where authorized by the frozen protocol. Final-specific gate status must remain `NOT_EXECUTED_FINAL_BOUNDARY`."
+    },
+    {
+      "owner_line": 458,
+      "kind": "requirement",
+      "id": "REQ-253",
+      "text": "Do not silently waive required Development tests, nor claim that future Final control requirements have already passed."
+    },
+    {
+      "owner_line": 460,
+      "kind": "context",
+      "text": "In particular:"
+    },
+    {
+      "owner_line": 462,
+      "kind": "requirement",
+      "id": "REQ-254",
+      "text": "- N1 is an approximate descriptive reference, not an established exact conditional null."
+    },
+    {
+      "owner_line": 463,
+      "kind": "requirement",
+      "id": "REQ-255",
+      "text": "- N2 must preserve the registered 20 ms B/D/S invariance; C continuous-kernel changes are reported."
+    },
+    {
+      "owner_line": 464,
+      "kind": "requirement",
+      "id": "REQ-256",
+      "text": "- N3 destroys stimulus alignment and cannot be called a valid conditional history null."
+    },
+    {
+      "owner_line": 465,
+      "kind": "requirement",
+      "id": "REQ-257",
+      "text": "- N4 is a deterministic nuisance stress test, not a permutation p-value."
+    },
+    {
+      "owner_line": 467,
+      "kind": "requirement",
+      "id": "REQ-258",
+      "text": "Do not use null outcomes to refit, select or repair models."
+    },
+    {
+      "owner_line": 469,
+      "kind": "context",
+      "text": "#### 5.3 Development scientific interpretation"
+    },
+    {
+      "owner_line": 471,
+      "kind": "context",
+      "text": "Distinguish:"
+    },
+    {
+      "owner_line": 473,
+      "kind": "requirement",
+      "id": "REQ-259",
+      "text": "- Predictive effects."
+    },
+    {
+      "owner_line": 474,
+      "kind": "requirement",
+      "id": "REQ-260",
+      "text": "- Numerical validity."
+    },
+    {
+      "owner_line": 475,
+      "kind": "requirement",
+      "id": "REQ-261",
+      "text": "- Robustness under controls."
+    },
+    {
+      "owner_line": 476,
+      "kind": "requirement",
+      "id": "REQ-262",
+      "text": "- BO/FC source transport."
+    },
+    {
+      "owner_line": 477,
+      "kind": "requirement",
+      "id": "REQ-263",
+      "text": "- Unmeasured behavior and arousal."
+    },
+    {
+      "owner_line": 478,
+      "kind": "requirement",
+      "id": "REQ-264",
+      "text": "- Static population dependence."
+    },
+    {
+      "owner_line": 479,
+      "kind": "requirement",
+      "id": "REQ-265",
+      "text": "- Proposed biological mechanisms."
+    },
+    {
+      "owner_line": 481,
+      "kind": "requirement",
+      "id": "REQ-266",
+      "text": "The registered future Final statistical rules remain frozen: mouse-level sign-flips, Holm-5 secondaries, prospective meaningful-effect targets, full sensitivity requirements and no `VALIDATED` category."
+    },
+    {
+      "owner_line": 483,
+      "kind": "requirement",
+      "id": "REQ-267",
+      "text": "Development E results cannot be relabeled as independent Final confirmation."
+    },
+    {
+      "owner_line": 485,
+      "kind": "requirement",
+      "id": "REQ-268",
+      "text": "A negative or mixed E result is an acceptable scientific outcome."
+    },
+    {
+      "owner_line": 487,
+      "kind": "requirement",
+      "id": "REQ-269",
+      "text": "No model selection, scientific threshold changes or additional E batch after observing E results."
+    },
+    {
+      "owner_line": 489,
+      "kind": "context",
+      "text": "---"
+    },
+    {
+      "owner_line": 491,
+      "kind": "section",
+      "text": "### 6. RESOURCE AND FAILURE POLICY"
+    },
+    {
+      "owner_line": 493,
+      "kind": "requirement",
+      "id": "REQ-270",
+      "text": "Use the unchanged frozen model/optimizer budget in `NUMERICAL_POLICY.json`."
+    },
+    {
+      "owner_line": 495,
+      "kind": "requirement",
+      "id": "REQ-271",
+      "text": "The maximum registered full-study optimizer-attempt ceiling is 16,178; this is not a fresh discretionary Development allowance. Calculate and enforce the exact applicable Development allocation from the frozen per-model/panel rules, preserving future Final reservations."
+    },
+    {
+      "owner_line": 497,
+      "kind": "context",
+      "text": "Other required limits:"
+    },
+    {
+      "owner_line": 499,
+      "kind": "code_delimiter",
+      "text": "```text"
+    },
+    {
+      "owner_line": 500,
+      "kind": "requirement",
+      "id": "REQ-272",
+      "text": "Maximum concurrency: 4 workers"
+    },
+    {
+      "owner_line": 501,
+      "kind": "requirement",
+      "id": "REQ-273",
+      "text": "Development scientific execution wall ceiling: 48 hours"
+    },
+    {
+      "owner_line": 502,
+      "kind": "requirement",
+      "id": "REQ-274",
+      "text": "Optimizer value/gradient-pair cap: 6000 per attempt"
+    },
+    {
+      "owner_line": 503,
+      "kind": "requirement",
+      "id": "REQ-275",
+      "text": "Accepted iteration cap: 1500 per attempt"
+    },
+    {
+      "owner_line": 504,
+      "kind": "requirement",
+      "id": "REQ-276",
+      "text": "D/S seeds: exactly 3 registered attempts"
+    },
+    {
+      "owner_line": 505,
+      "kind": "requirement",
+      "id": "REQ-277",
+      "text": "No optimizer rescue"
+    },
+    {
+      "owner_line": 506,
+      "kind": "requirement",
+      "id": "REQ-278",
+      "text": "No model substitution"
+    },
+    {
+      "owner_line": 507,
+      "kind": "requirement",
+      "id": "REQ-279",
+      "text": "No budget increase"
+    },
+    {
+      "owner_line": 508,
+      "kind": "requirement",
+      "id": "REQ-280",
+      "text": "No scientific retry"
+    },
+    {
+      "owner_line": 509,
+      "kind": "code_delimiter",
+      "text": "```"
+    },
+    {
+      "owner_line": 511,
+      "kind": "requirement",
+      "id": "REQ-281",
+      "text": "Enforce actual wall-clock and process-child limits externally, not only by cooperative Python timers."
+    },
+    {
+      "owner_line": 513,
+      "kind": "requirement",
+      "id": "REQ-282",
+      "text": "The 48-hour Development ceiling is one bounded stage budget, not a fresh clock for every source, model or failed attempt."
+    },
+    {
+      "owner_line": 515,
+      "kind": "requirement",
+      "id": "REQ-283",
+      "text": "A process crash or source timeout does not authorize another scientific attempt. Safe saved-state verification and non-experimental archive repair are distinguishable from fresh fitting or rescoring."
+    },
+    {
+      "owner_line": 517,
+      "kind": "requirement",
+      "id": "REQ-284",
+      "text": "Record every attempted, completed, failed and never-started unit/model/panel."
+    },
+    {
+      "owner_line": 519,
+      "kind": "requirement",
+      "id": "REQ-285",
+      "text": "**Stop conditions:**"
+    },
+    {
+      "owner_line": 521,
+      "kind": "requirement",
+      "id": "REQ-286",
+      "text": "- `STOP_BASE_MISMATCH`"
+    },
+    {
+      "owner_line": 522,
+      "kind": "requirement",
+      "id": "REQ-287",
+      "text": "- `NEED_ENV`"
+    },
+    {
+      "owner_line": 523,
+      "kind": "requirement",
+      "id": "REQ-288",
+      "text": "- `STOP_SOURCE_OR_RESOURCE`"
+    },
+    {
+      "owner_line": 524,
+      "kind": "requirement",
+      "id": "REQ-289",
+      "text": "- `STOP_IMPLEMENTATION_REQUIRED_GATE`"
+    },
+    {
+      "owner_line": 525,
+      "kind": "requirement",
+      "id": "REQ-290",
+      "text": "- `STOP_NUMERICAL_REQUIRED_GATE`"
+    },
+    {
+      "owner_line": 526,
+      "kind": "requirement",
+      "id": "REQ-291",
+      "text": "- `STOP_ACCESS_OR_LEAKAGE`"
+    },
+    {
+      "owner_line": 527,
+      "kind": "requirement",
+      "id": "REQ-292",
+      "text": "- `STOP_BUDGET`"
+    },
+    {
+      "owner_line": 528,
+      "kind": "requirement",
+      "id": "REQ-293",
+      "text": "- `STOP_INDEPENDENT_REVIEW`"
+    },
+    {
+      "owner_line": 530,
+      "kind": "requirement",
+      "id": "REQ-294",
+      "text": "Use the actual applicable status, not a fabricated success category."
+    },
+    {
+      "owner_line": 532,
+      "kind": "requirement",
+      "id": "REQ-295",
+      "text": "Permitted software fixes before first real scientific execution must preserve the frozen mathematical contract and pass new independent numerical review."
+    },
+    {
+      "owner_line": 534,
+      "kind": "requirement",
+      "id": "REQ-296",
+      "text": "After a mandatory real execution fails, preserve its failure; do not silently repair and replay that attempt in the same authorization."
+    },
+    {
+      "owner_line": 536,
+      "kind": "context",
+      "text": "---"
+    },
+    {
+      "owner_line": 538,
+      "kind": "section",
+      "text": "### 7. REQUIRED DELIVERABLES"
+    },
+    {
+      "owner_line": 540,
+      "kind": "requirement",
+      "id": "REQ-297",
+      "text": "Create a clearly isolated new R1 workspace without modifying historical scientific results."
+    },
+    {
+      "owner_line": 542,
+      "kind": "context",
+      "text": "Suggested:"
+    },
+    {
+      "owner_line": 544,
+      "kind": "code_delimiter",
+      "text": "```text"
+    },
+    {
+      "owner_line": 545,
+      "kind": "requirement",
+      "id": "REQ-298",
+      "text": "paper16_development_r1/"
+    },
+    {
+      "owner_line": 546,
+      "kind": "code_delimiter",
+      "text": "```"
+    },
+    {
+      "owner_line": 548,
+      "kind": "context",
+      "text": "Required scientific and engineering records:"
+    },
+    {
+      "owner_line": 550,
+      "kind": "requirement",
+      "id": "REQ-299",
+      "text": "1. `MISSION_SPEC.json`"
+    },
+    {
+      "owner_line": 551,
+      "kind": "requirement",
+      "id": "REQ-300",
+      "text": "2. `BASE_AND_FREEZE_AUDIT.json`"
+    },
+    {
+      "owner_line": 552,
+      "kind": "requirement",
+      "id": "REQ-301",
+      "text": "3. `SOURCE_AND_ROLE_ACCESS_LEDGER.json`"
+    },
+    {
+      "owner_line": 553,
+      "kind": "requirement",
+      "id": "REQ-302",
+      "text": "4. `PRODUCTION_NUMERICAL_CERTIFICATION.json`"
+    },
+    {
+      "owner_line": 554,
+      "kind": "requirement",
+      "id": "REQ-303",
+      "text": "5. `MODEL_AND_FEATURE_IDENTITY_MANIFEST.json`"
+    },
+    {
+      "owner_line": 555,
+      "kind": "requirement",
+      "id": "REQ-304",
+      "text": "6. `A_FITTING_RESULTS.json`"
+    },
+    {
+      "owner_line": 556,
+      "kind": "requirement",
+      "id": "REQ-305",
+      "text": "7. `B_SELECTION_RESULTS.json`"
+    },
+    {
+      "owner_line": 557,
+      "kind": "requirement",
+      "id": "REQ-306",
+      "text": "8. `FROZEN_SELECTION_MANIFEST.json`"
+    },
+    {
+      "owner_line": 558,
+      "kind": "requirement",
+      "id": "REQ-307",
+      "text": "9. `E_DEVELOPMENT_RESULTS.json` when authorized and executed"
+    },
+    {
+      "owner_line": 559,
+      "kind": "requirement",
+      "id": "REQ-308",
+      "text": "10. `SENSITIVITY_RESULTS.json`"
+    },
+    {
+      "owner_line": 560,
+      "kind": "requirement",
+      "id": "REQ-309",
+      "text": "11. `REFERENCE_CONTROL_RESULTS.json`"
+    },
+    {
+      "owner_line": 561,
+      "kind": "requirement",
+      "id": "REQ-310",
+      "text": "12. `RESOURCE_LEDGER.json`"
+    },
+    {
+      "owner_line": 562,
+      "kind": "requirement",
+      "id": "REQ-311",
+      "text": "13. `SCIENTIFIC_VERDICT.md`"
+    },
+    {
+      "owner_line": 563,
+      "kind": "requirement",
+      "id": "REQ-312",
+      "text": "14. `A1_A10_CLAIM_AUDIT.md`"
+    },
+    {
+      "owner_line": 564,
+      "kind": "requirement",
+      "id": "REQ-313",
+      "text": "15. `LIMITATIONS_AND_FAILURES.md`"
+    },
+    {
+      "owner_line": 565,
+      "kind": "requirement",
+      "id": "REQ-314",
+      "text": "16. `INDEPENDENT_REVIEW.md`"
+    },
+    {
+      "owner_line": 566,
+      "kind": "requirement",
+      "id": "REQ-315",
+      "text": "17. `FINAL_DELIVERY.json`"
+    },
+    {
+      "owner_line": 567,
+      "kind": "requirement",
+      "id": "REQ-316",
+      "text": "18. Native Windows PowerShell one-command saved-state reproduction."
+    },
+    {
+      "owner_line": 569,
+      "kind": "requirement",
+      "id": "REQ-317",
+      "text": "Exact output filenames may be adapted to existing repository conventions, but every evidence category must remain present and traceable."
+    },
+    {
+      "owner_line": 571,
+      "kind": "requirement",
+      "id": "REQ-318",
+      "text": "The reproduction path must verify saved inputs, hashes, masks, selection decisions, numerical evidence and scientific reporting without consuming Final, acquiring new sources or repeating scientific optimization."
+    },
+    {
+      "owner_line": 573,
+      "kind": "requirement",
+      "id": "REQ-319",
+      "text": "A clean public clone cannot reproduce private-source QC without the protected data; disclose this limitation explicitly."
+    },
+    {
+      "owner_line": 575,
+      "kind": "requirement",
+      "id": "REQ-320",
+      "text": "No raw neural arrays, personal credentials, private caches or unauthorized licensed data in Git."
+    },
+    {
+      "owner_line": 577,
+      "kind": "requirement",
+      "id": "REQ-321",
+      "text": "If the mission stops early, create truthful STOP records and mark all later stages `NOT_EXECUTED`."
+    },
+    {
+      "owner_line": 579,
+      "kind": "requirement",
+      "id": "REQ-322",
+      "text": "Do not generate a manuscript claiming completed Final experiments."
+    },
+    {
+      "owner_line": 581,
+      "kind": "context",
+      "text": "---"
+    },
+    {
+      "owner_line": 583,
+      "kind": "section",
+      "text": "### 8. INDEPENDENT REVIEW AND GIT ARCHIVE"
+    },
+    {
+      "owner_line": 585,
+      "kind": "context",
+      "text": "After execution or mandatory STOP:"
+    },
+    {
+      "owner_line": 587,
+      "kind": "requirement",
+      "id": "REQ-323",
+      "text": "Run independent internal scientific and engineering review."
+    },
+    {
+      "owner_line": 589,
+      "kind": "context",
+      "text": "Review:"
+    },
+    {
+      "owner_line": 591,
+      "kind": "requirement",
+      "id": "REQ-324",
+      "text": "- Frozen M1 compliance."
+    },
+    {
+      "owner_line": 592,
+      "kind": "requirement",
+      "id": "REQ-325",
+      "text": "- Actual R4 source inheritance."
+    },
+    {
+      "owner_line": 593,
+      "kind": "requirement",
+      "id": "REQ-326",
+      "text": "- A/B/E isolation."
+    },
+    {
+      "owner_line": 594,
+      "kind": "requirement",
+      "id": "REQ-327",
+      "text": "- Real numerical certificates."
+    },
+    {
+      "owner_line": 595,
+      "kind": "requirement",
+      "id": "REQ-328",
+      "text": "- Source/read coverage."
+    },
+    {
+      "owner_line": 596,
+      "kind": "requirement",
+      "id": "REQ-329",
+      "text": "- Data leakage."
+    },
+    {
+      "owner_line": 597,
+      "kind": "requirement",
+      "id": "REQ-330",
+      "text": "- Model/contrast completeness."
+    },
+    {
+      "owner_line": 598,
+      "kind": "requirement",
+      "id": "REQ-331",
+      "text": "- Failed and unavailable controls."
+    },
+    {
+      "owner_line": 599,
+      "kind": "requirement",
+      "id": "REQ-332",
+      "text": "- Mouse-level denominators."
+    },
+    {
+      "owner_line": 600,
+      "kind": "requirement",
+      "id": "REQ-333",
+      "text": "- True numerical and source resource usage."
+    },
+    {
+      "owner_line": 601,
+      "kind": "requirement",
+      "id": "REQ-334",
+      "text": "- Negative and mixed result preservation."
+    },
+    {
+      "owner_line": 602,
+      "kind": "requirement",
+      "id": "REQ-335",
+      "text": "- Claim boundaries."
+    },
+    {
+      "owner_line": 603,
+      "kind": "requirement",
+      "id": "REQ-336",
+      "text": "- Saved reproducibility."
+    },
+    {
+      "owner_line": 604,
+      "kind": "requirement",
+      "id": "REQ-337",
+      "text": "- Final C/D nonaccess."
+    },
+    {
+      "owner_line": 605,
+      "kind": "requirement",
+      "id": "REQ-338",
+      "text": "- Preservation of all prior Git evidence."
+    },
+    {
+      "owner_line": 607,
+      "kind": "requirement",
+      "id": "REQ-339",
+      "text": "Independence must reflect actual separate review activity; do not simply relabel the implementer's own report as independent."
+    },
+    {
+      "owner_line": 609,
+      "kind": "requirement",
+      "id": "REQ-340",
+      "text": "Retain failed initial reviews and corrective review evidence. Do not fabricate review acceptance."
+    },
+    {
+      "owner_line": 611,
+      "kind": "requirement",
+      "id": "REQ-341",
+      "text": "Archive the actual terminal state on `origin/test` using normal Git commit/push and verify the remote commit, changed-file identities and clean worktree."
+    },
+    {
+      "owner_line": 613,
+      "kind": "requirement",
+      "id": "REQ-342",
+      "text": "Do not force-push, rewrite history or modify unrelated research."
+    },
+    {
+      "owner_line": 615,
+      "kind": "requirement",
+      "id": "REQ-343",
+      "text": "A successful archive of a failed scientific mission must still be labeled STOP, not scientific PASS."
+    },
+    {
+      "owner_line": 617,
+      "kind": "requirement",
+      "id": "REQ-344",
+      "text": "If transport or archival closure fails, report its actual unverified state separately from the science verdict."
+    },
+    {
+      "owner_line": 619,
+      "kind": "context",
+      "text": "---"
+    },
+    {
+      "owner_line": 621,
+      "kind": "section",
+      "text": "### 9. FINAL TERMINAL REPORT"
+    },
+    {
+      "owner_line": 623,
+      "kind": "context",
+      "text": "Return the following exact categories using real values:"
+    },
+    {
+      "owner_line": 625,
+      "kind": "code_delimiter",
+      "text": "```text"
+    },
+    {
+      "owner_line": 626,
+      "kind": "requirement",
+      "id": "REQ-345",
+      "text": "MISSION_ID="
+    },
+    {
+      "owner_line": 627,
+      "kind": "requirement",
+      "id": "REQ-346",
+      "text": "BASE_SHA="
+    },
+    {
+      "owner_line": 628,
+      "kind": "requirement",
+      "id": "REQ-347",
+      "text": "FINAL_STATUS="
+    },
+    {
+      "owner_line": 629,
+      "kind": "requirement",
+      "id": "REQ-348",
+      "text": "SCIENTIFIC_DEVELOPMENT_VERDICT="
+    },
+    {
+      "owner_line": 631,
+      "kind": "requirement",
+      "id": "REQ-349",
+      "text": "M3_PRODUCTION_NUMERICAL_PASS="
+    },
+    {
+      "owner_line": 632,
+      "kind": "requirement",
+      "id": "REQ-350",
+      "text": "M4_A_FITS_COMPLETE="
+    },
+    {
+      "owner_line": 633,
+      "kind": "requirement",
+      "id": "REQ-351",
+      "text": "M4_GLOBAL_B1_LAMBDA_SELECTED="
+    },
+    {
+      "owner_line": 634,
+      "kind": "requirement",
+      "id": "REQ-352",
+      "text": "M5_E_EXECUTED="
+    },
+    {
+      "owner_line": 636,
+      "kind": "requirement",
+      "id": "REQ-353",
+      "text": "DEVELOPMENT_SOURCES_COMPLETE="
+    },
+    {
+      "owner_line": 637,
+      "kind": "requirement",
+      "id": "REQ-354",
+      "text": "DEVELOPMENT_MICE_ADMITTED="
+    },
+    {
+      "owner_line": 638,
+      "kind": "requirement",
+      "id": "REQ-355",
+      "text": "DEVELOPMENT_BO="
+    },
+    {
+      "owner_line": 639,
+      "kind": "requirement",
+      "id": "REQ-356",
+      "text": "DEVELOPMENT_FC="
+    },
+    {
+      "owner_line": 641,
+      "kind": "requirement",
+      "id": "REQ-357",
+      "text": "MODELS_FITTED="
+    },
+    {
+      "owner_line": 642,
+      "kind": "requirement",
+      "id": "REQ-358",
+      "text": "OPTIMIZER_ATTEMPTS="
+    },
+    {
+      "owner_line": 643,
+      "kind": "requirement",
+      "id": "REQ-359",
+      "text": "NUMERICAL_FAILURES="
+    },
+    {
+      "owner_line": 644,
+      "kind": "requirement",
+      "id": "REQ-360",
+      "text": "B_SELECTION_LAMBDA="
+    },
+    {
+      "owner_line": 646,
+      "kind": "requirement",
+      "id": "REQ-361",
+      "text": "E_PRIMARY_B4_MINUS_B1="
+    },
+    {
+      "owner_line": 647,
+      "kind": "requirement",
+      "id": "REQ-362",
+      "text": "E_SECONDARY_EFFECTS="
+    },
+    {
+      "owner_line": 648,
+      "kind": "requirement",
+      "id": "REQ-363",
+      "text": "SENSITIVITIES_COMPLETED="
+    },
+    {
+      "owner_line": 649,
+      "kind": "requirement",
+      "id": "REQ-364",
+      "text": "SENSITIVITIES_UNAVAILABLE="
+    },
+    {
+      "owner_line": 650,
+      "kind": "requirement",
+      "id": "REQ-365",
+      "text": "CONTROLS_COMPLETED="
+    },
+    {
+      "owner_line": 651,
+      "kind": "requirement",
+      "id": "REQ-366",
+      "text": "CONTROLS_UNAVAILABLE="
+    },
+    {
+      "owner_line": 653,
+      "kind": "requirement",
+      "id": "REQ-367",
+      "text": "BUG_COUNT="
+    },
+    {
+      "owner_line": 654,
+      "kind": "requirement",
+      "id": "REQ-368",
+      "text": "WARN_COUNT="
+    },
+    {
+      "owner_line": 656,
+      "kind": "requirement",
+      "id": "REQ-369",
+      "text": "FINAL_C_ACCESS=false"
+    },
+    {
+      "owner_line": 657,
+      "kind": "requirement",
+      "id": "REQ-370",
+      "text": "FINAL_D_ACCESS=false"
+    },
+    {
+      "owner_line": 658,
+      "kind": "requirement",
+      "id": "REQ-371",
+      "text": "FINAL_MODEL_FITS=0"
+    },
+    {
+      "owner_line": 659,
+      "kind": "requirement",
+      "id": "REQ-372",
+      "text": "FINAL_ASSESSMENTS=0"
+    },
+    {
+      "owner_line": 661,
+      "kind": "requirement",
+      "id": "REQ-373",
+      "text": "INDEPENDENT_REVIEW="
+    },
+    {
+      "owner_line": 662,
+      "kind": "requirement",
+      "id": "REQ-374",
+      "text": "SAVED_REPRODUCTION="
+    },
+    {
+      "owner_line": 663,
+      "kind": "requirement",
+      "id": "REQ-375",
+      "text": "GIT_COMMIT="
+    },
+    {
+      "owner_line": 664,
+      "kind": "requirement",
+      "id": "REQ-376",
+      "text": "REMOTE_VERIFICATION="
+    },
+    {
+      "owner_line": 665,
+      "kind": "requirement",
+      "id": "REQ-377",
+      "text": "WORKTREE_CLEAN="
+    },
+    {
+      "owner_line": 667,
+      "kind": "requirement",
+      "id": "REQ-378",
+      "text": "NEXT_STAGE_READY="
+    },
+    {
+      "owner_line": 668,
+      "kind": "requirement",
+      "id": "REQ-379",
+      "text": "STOP_REASON="
+    },
+    {
+      "owner_line": 669,
+      "kind": "code_delimiter",
+      "text": "```"
+    },
+    {
+      "owner_line": 671,
+      "kind": "requirement",
+      "id": "REQ-380",
+      "text": "Use `NOT_EXECUTED`, `UNAVAILABLE` or `UNKNOWN` where necessary. Do not invent missing values."
+    },
+    {
+      "owner_line": 673,
+      "kind": "context",
+      "text": "Provide a concise Chinese scientific summary answering:"
+    },
+    {
+      "owner_line": 675,
+      "kind": "requirement",
+      "id": "REQ-381",
+      "text": "1. What was actually executed?"
+    },
+    {
+      "owner_line": 676,
+      "kind": "requirement",
+      "id": "REQ-382",
+      "text": "2. Did all required numerical gates pass?"
+    },
+    {
+      "owner_line": 677,
+      "kind": "requirement",
+      "id": "REQ-383",
+      "text": "3. What did Development E show about B4\u2212B1 and secondary comparisons?"
+    },
+    {
+      "owner_line": 678,
+      "kind": "requirement",
+      "id": "REQ-384",
+      "text": "4. Which sensitivity or falsification gates failed or were unavailable?"
+    },
+    {
+      "owner_line": 679,
+      "kind": "requirement",
+      "id": "REQ-385",
+      "text": "5. What can scientifically be claimed?"
+    },
+    {
+      "owner_line": 680,
+      "kind": "requirement",
+      "id": "REQ-386",
+      "text": "6. What remains unproven?"
+    },
+    {
+      "owner_line": 681,
+      "kind": "requirement",
+      "id": "REQ-387",
+      "text": "7. Is it appropriate to request a **separate Final M6 authorization**, or must P16 stop?"
+    },
+    {
+      "owner_line": 683,
+      "kind": "requirement",
+      "id": "REQ-388",
+      "text": "**Final C/D must remain untouched regardless of M3\u2013M5 success.**"
+    },
+    {
+      "owner_line": 685,
+      "kind": "context",
+      "text": "---"
+    },
+    {
+      "owner_line": 687,
+      "kind": "section",
+      "text": "### 10. TERMINAL PRINCIPLE"
+    },
+    {
+      "owner_line": 689,
+      "kind": "code_delimiter",
+      "text": "```text"
+    },
+    {
+      "owner_line": 690,
+      "kind": "requirement",
+      "id": "REQ-389",
+      "text": "Engineering PASS \u2260 Scientific Hypothesis Supported."
+    },
+    {
+      "owner_line": 692,
+      "kind": "requirement",
+      "id": "REQ-390",
+      "text": "M2 physiological admission \u2260 predictive validation."
+    },
+    {
+      "owner_line": 694,
+      "kind": "requirement",
+      "id": "REQ-391",
+      "text": "Development E \u2260 independent Final holdout."
+    },
+    {
+      "owner_line": 696,
+      "kind": "requirement",
+      "id": "REQ-392",
+      "text": "Prediction \u2260 causation."
+    },
+    {
+      "owner_line": 698,
+      "kind": "requirement",
+      "id": "REQ-393",
+      "text": "Discrete latent-state advantage \u2260 neural primitive."
+    },
+    {
+      "owner_line": 700,
+      "kind": "requirement",
+      "id": "REQ-394",
+      "text": "A negative, mixed, inconclusive or stopped experiment"
+    },
+    {
+      "owner_line": 701,
+      "kind": "requirement",
+      "id": "REQ-395",
+      "text": "must remain part of the permanent CCPN scientific record."
+    },
+    {
+      "owner_line": 702,
+      "kind": "code_delimiter",
+      "text": "```"
+    },
+    {
+      "owner_line": 704,
+      "kind": "requirement",
+      "id": "REQ-396",
+      "text": "Execute the full authorized M3\u2013M5 Development workflow only while all frozen gates remain satisfied."
+    },
+    {
+      "owner_line": 706,
+      "kind": "requirement",
+      "id": "REQ-397",
+      "text": "Prioritize existing production components, real observations, exact mathematics, resource discipline and independently reviewable results."
+    },
+    {
+      "owner_line": 708,
+      "kind": "requirement",
+      "id": "REQ-398",
+      "text": "Do not create unnecessary cryptographic custody infrastructure, duplicate management systems or unrelated engineering layers."
+    },
+    {
+      "owner_line": 710,
+      "kind": "requirement",
+      "id": "REQ-399",
+      "text": "**STOP after the reviewed and verified Development handoff. Do not automatically execute M6 or initiate P17.**"
+    },
+    {
+      "owner_line": 712,
+      "kind": "context",
+      "text": "# END MASTER PROMPT"
+    }
+  ]
+}

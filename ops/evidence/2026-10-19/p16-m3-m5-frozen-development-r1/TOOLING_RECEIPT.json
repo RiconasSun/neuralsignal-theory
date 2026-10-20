@@ -1,0 +1,16 @@
+{
+  "skills": ["codex-code-wrapper", "nsi-paper-builder"],
+  "mission_spec": "paper16_development_r1/MISSION_SPEC.json",
+  "initial_wrapper_dryrun_exit": 1,
+  "initial_wrapper_reason": "Generic production substring requires risk review; exact owner authorization covers production engineering, not Final access.",
+  "explicitly_reviewed_wrapper_dryrun_exit": 0,
+  "reviewed_dryrun_log": "WRAPPER_REVIEWED_DRY_RUN.log",
+  "installed_CLI_compatibility_probe_exit": 2,
+  "compatibility_log": "WRAPPER_CLI_COMPATIBILITY.log",
+  "observed_incompatibility": "Bundled wrapper emits codex exec --ask-for-approval; installed CLI rejects that option before execution.",
+  "staging_observation": "Wrapper DEFAULT_EXCLUDE_DIRS contains .git/node_modules/dist/build only; full workspace staging would include protected unrelated scientific caches.",
+  "execution_decision": "Do not launch incompatible nested CLI or copy protected shared caches. Perform exact-path local mission edits and saved-only tests within explicit owner authority; retain failure and do not edit external skill.",
+  "OpenRouter_enabled": false,
+  "nested_execution_started": false,
+  "this_is_not_scientific_or_production_certification": true
+}

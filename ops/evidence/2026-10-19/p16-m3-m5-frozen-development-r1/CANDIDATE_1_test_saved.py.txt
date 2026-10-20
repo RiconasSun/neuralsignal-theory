@@ -1,0 +1,69 @@
+"""Regression of saved STOP truthfulness; not production model tests."""
+import copy
+import unittest
+from .audit_base import E, P, load
+from .contract_witnesses import witnesses
+from .verify_saved import validate_manifest, validate_stop, verify_records
+
+
+class SavedStopTests(unittest.TestCase):
+    def records(self):
+        return [load(P/name) for name in ['STOP_RECORD.json', 'PRODUCTION_NUMERICAL_CERTIFICATION.json',
+            'A_FITTING_RESULTS.json', 'FINAL_DELIVERY.json', 'RESOURCE_LEDGER.json']]
+
+    def test_actual_stop_records_and_all_399_trace_ids(self):
+        result = verify_records()
+        self.assertFalse(result['M3_PASS'])
+        self.assertFalse(result['full_mission_contract_satisfied'])
+        self.assertEqual(result['trace_entries'], 399)
+
+    def test_synthetic_mapping_difference_not_a_production_certificate(self):
+        w = witnesses()
+        self.assertFalse(w['real_data'])
+        self.assertNotEqual(set(w['S07']['full_window_middle_four']), set(w['S07']['scored_window_middle_four']))
+        self.assertNotEqual(w['N4']['PSTH_only_flip_eta'], w['N4']['current_color_covariate_flip_eta'])
+
+    def test_scientific_pass_and_unauthorized_access_claims_rejected(self):
+        for key, value in [('FINAL_STATUS','PASS'), ('SCIENTIFIC_DEVELOPMENT_VERDICT','PASS'),
+                           ('M3_PRODUCTION_NUMERICAL_PASS',True), ('M4_A_FITS_COMPLETE',True),
+                           ('M4_GLOBAL_B1_LAMBDA_SELECTED',True), ('M5_E_EXECUTED',True),
+                           ('FINAL_C_ACCESS',True), ('FINAL_D_ACCESS',True), ('NEXT_STAGE_READY',True),
+                           ('OPTIMIZER_ATTEMPTS',1), ('MODELS_FITTED',1), ('FINAL_ASSESSMENTS',1),
+                           ('NUMERICAL_FAILURES',1), ('SENSITIVITIES_UNAVAILABLE',1), ('CONTROLS_COMPLETED',1),
+                           ('WARN_COUNT',0), ('E_PRIMARY_B4_MINUS_B1',.1)]:
+            with self.subTest(key=key):
+                values = self.records(); values[3][key] = value
+                with self.assertRaises(AssertionError): validate_stop(*values)
+
+    def test_source_budget_reset_or_final_reserve_reallocation_rejected(self):
+        for key in ['new_transport_requests','new_payload_bytes','real_AD_calls','optimizer_value_gradient_pairs']:
+            with self.subTest(key=key):
+                values = self.records(); values[4][key] = 1
+                with self.assertRaises(AssertionError): validate_stop(*values)
+        values = self.records()
+        values[4]['budget_derivation_only_not_permission_to_execute']['Final_reserved_reallocated'] = 1
+        with self.assertRaises(AssertionError): validate_stop(*values)
+
+    def test_missing_or_redefined_manifest_denied(self):
+        bad = {'files': [], 'payload_count': 0, 'scientific_status': 'STOP_IMPLEMENTATION_REQUIRED_GATE',
+               'not_a_scientific_or_numerical_PASS': True}
+        with self.assertRaises(AssertionError): validate_manifest(bad)
+
+    def test_frozen_manifest_tamper_denied(self):
+        manifest = P/'FINAL_FREEZE_MANIFEST.json'
+        if not manifest.exists(): self.fail('Frozen candidate required before regression')
+        actual = load(manifest)
+        self.assertGreater(validate_manifest(actual), 0)
+        for mutation in ['hash','missing','duplicate','traversal','false_PASS']:
+            with self.subTest(mutation=mutation):
+                value = copy.deepcopy(actual)
+                if mutation=='hash': value['files'][0]['sha256']='0'*64
+                elif mutation=='missing': value['files'].pop()
+                elif mutation=='duplicate': value['files'].append(value['files'][0])
+                elif mutation=='traversal': value['files'][0]['path']='../outside'
+                else: value['scientific_status']='PASS'
+                with self.assertRaises(AssertionError): validate_manifest(value)
+
+
+if __name__ == '__main__':
+    unittest.main(verbosity=2)

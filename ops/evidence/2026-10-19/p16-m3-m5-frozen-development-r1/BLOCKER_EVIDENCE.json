@@ -1,0 +1,48 @@
+{
+  "candidate_exit": "WAIT_FOR_HUMAN_INPUT",
+  "path": "MATERIAL_AMBIGUITY",
+  "blocked_requirement": "Complete uniquely frozen production operators and independent prefit acceptance before M4",
+  "observed_blocker": [
+    {
+      "id": "P1-01",
+      "operator": "S07",
+      "missing_definition": "Rate numerator/exposure window and A-only support mask for middle-four ranking",
+      "alternatives": [
+        "Frozen R4 physiology rate on supported [0,220)ms QC windows",
+        "Rate on main common A scored [100,220)ms rows"
+      ]
+    },
+    {
+      "id": "P1-02",
+      "operator": "N4",
+      "missing_definition": "Exact raw B1 column set affected by color/time wrong-feature mappings",
+      "alternatives": [
+        "Remap only twelve color*time PSTH columns",
+        "Remap PSTH and current-color-dependent color*r; other nuisances unchanged"
+      ]
+    }
+  ],
+  "authoritative_evidence": "STATIC_CONTRACT_REVIEW_1.md exact normative citations plus synthetic difference witnesses",
+  "autonomous_alternatives": [
+    {
+      "action": "Inspect all13 frozen normative files and M1 source/review",
+      "result": "No unique linkage of S07 rate or N4 raw-column map"
+    },
+    {
+      "action": "Independent static scientific review",
+      "result": "0P0/2P1; both alternatives scientifically distinct"
+    },
+    {
+      "action": "Pure synthetic algebraic witnesses",
+      "result": "Different middle-unit subsets and fixed-model predictions; no real outcomes used"
+    },
+    {
+      "action": "Complete saved-only source/runtime/hash verification",
+      "result": "Passed; cannot establish owner intent"
+    }
+  ],
+  "why_cannot_continue_autonomously": "Choosing a rate domain or feature perturbation would invent a scientific operator. Dropping S07/N4 would shrink the mandatory contract. Historical text/review does not resolve the choice.",
+  "minimal_human_action": "Specify S07 A rate window/support and N4 exact raw columns in a prospective separate continuation record; no credential, neural source, Final access or threshold change needed.",
+  "safe_work_completed_before_exit": "Prerequisite verification, witnesses, full truthful STOP deliverable categories, saved-only reproduction, independent archive review and origin/test readback as actual closure receipts",
+  "next_step_after_unblock": "New registered production freeze/certification and independent prefit review from exact archived STOP commit; no automatic Final or source recovery restart"
+}

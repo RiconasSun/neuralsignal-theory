@@ -1,0 +1,50 @@
+"""Synthetic exact-file archive admission checks; no Git mutation or neural data."""
+import copy
+import unittest
+from .git_archive import CLOSURE_PATHS, EP, reviewed_paths
+
+
+class ExactArchiveTests(unittest.TestCase):
+    def fixture(self):
+        manifest={'files':[{'path':'paper16_development_r1/STOP_RECORD.json'},{'path':'ops/daily-operations.md'}]}
+        approval={'reviewed_closure_files':[{'path':p,'sha256':'0'*64,'bytes':1}
+            for p in sorted(CLOSURE_PATHS-{EP+'FINAL_APPROVAL.json'})]}
+        paths=sorted(({r['path'] for r in manifest['files']}|CLOSURE_PATHS)-{'ops/daily-operations.md'})
+        return manifest,approval,paths
+
+    def test_exact_frozen_and_explicit_closure_paths_only(self):
+        manifest,approval,paths=self.fixture()
+        self.assertEqual(set(reviewed_paths(manifest,approval,paths)),set(paths)|{'ops/daily-operations.md'})
+
+    def test_unreviewed_raw_or_text_file_denied(self):
+        for path in ['paper16_development_r1/extra.npy',EP+'extra.nwb',EP+'extra.txt',
+                     'paper16_development_r1/work/extra.json']:
+            with self.subTest(path=path):
+                m,a,p=self.fixture()
+                with self.assertRaises(AssertionError): reviewed_paths(m,a,p+[path])
+
+    def test_raw_payload_denied_even_if_manifest_lists_it(self):
+        for suffix in ['.npz','.NPY','.nwb','.h5','.hdf5','.parquet','.arrow']:
+            with self.subTest(suffix=suffix):
+                m,a,p=self.fixture();path=EP+'extra'+suffix;m['files'].append({'path':path})
+                with self.assertRaises(AssertionError):reviewed_paths(m,a,p+[path])
+
+    def test_missing_path_and_extra_or_duplicate_closure_binding_denied(self):
+        m,a,p=self.fixture()
+        with self.assertRaises(AssertionError):reviewed_paths(m,a,p[:-1])
+        for key in ['missing','extra','duplicate']:
+            with self.subTest(key=key):
+                m,a,p=self.fixture()
+                if key=='missing':a['reviewed_closure_files'].pop()
+                elif key=='extra':a['reviewed_closure_files'].append({'path':EP+'not_reviewed.txt'})
+                else:a['reviewed_closure_files'].append(a['reviewed_closure_files'][0])
+                with self.assertRaises(AssertionError):reviewed_paths(m,a,p)
+
+    def test_traversal_outside_scope_or_work_payload_denied(self):
+        for path in ['../outside','C:/outside','other/extra.txt','paper16_development_r1/work/state.json']:
+            with self.subTest(path=path):
+                m,a,p=self.fixture();m['files'].append({'path':path})
+                with self.assertRaises(AssertionError):reviewed_paths(m,a,p+[path])
+
+
+if __name__=='__main__':unittest.main(verbosity=2)
