@@ -1,0 +1,127 @@
+{
+  "mission": "P16-S07-N4-PROSPECTIVE-PRECISION-CONTRACT-1",
+  "registration_scope": "PROSPECTIVE_DEFINITION_REGISTRATION_ONLY",
+  "BASE": "1870ec5f6ee0ca87afc87aae5f5bf89c5ee20431",
+  "registered_at_UTC": "2026-10-20T03:14:30.691264+00:00",
+  "owner_decisions_path": "paper16_precision_contract_r1/OWNER_DECISIONS.md",
+  "owner_decisions_sha256": "3153e6c14711842fcfb86d4811950e45f138ffb889ff796e35c6b1c726d4e65d",
+  "S07": {
+    "source_population": "The immutable original eight main selected units within each mouse",
+    "window_ms": {
+      "start_inclusive": 100,
+      "stop_exclusive": 220
+    },
+    "presentation_mask": "Same mouse main-model common-valid A presentations",
+    "observation_mask": "Identical main-model observation mask",
+    "rate_numerator": "Total spike count in valid scored window",
+    "rate_denominator": "Actual valid scored exposure in seconds",
+    "sort_keys": [
+      "rate_ascending",
+      "numeric_Unit_ID_ascending"
+    ],
+    "selected_zero_based_positions": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "Development_ranking_role": "A",
+    "future_Final_ranking_role": "C",
+    "forbidden_ranking_roles": [
+      "B",
+      "E",
+      "D"
+    ],
+    "original_main_eight_selection_changes": false
+  },
+  "N4": {
+    "operators": [
+      {
+        "color_flip": 0,
+        "time_rotation": 1
+      },
+      {
+        "color_flip": 0,
+        "time_rotation": 2
+      },
+      {
+        "color_flip": 0,
+        "time_rotation": 3
+      },
+      {
+        "color_flip": 0,
+        "time_rotation": 4
+      },
+      {
+        "color_flip": 0,
+        "time_rotation": 5
+      },
+      {
+        "color_flip": 1,
+        "time_rotation": 0
+      },
+      {
+        "color_flip": 1,
+        "time_rotation": 1
+      },
+      {
+        "color_flip": 1,
+        "time_rotation": 2
+      },
+      {
+        "color_flip": 1,
+        "time_rotation": 3
+      },
+      {
+        "color_flip": 1,
+        "time_rotation": 4
+      },
+      {
+        "color_flip": 1,
+        "time_rotation": 5
+      }
+    ],
+    "operator_count": 11,
+    "identity_excluded": true,
+    "color_flip_raw_columns": [
+      "12 color×time PSTH one-hot columns",
+      "color*r"
+    ],
+    "time_rotation_columns": "PSTH six time indices only",
+    "canonical_time_index_map": "(k+s) mod 6",
+    "unchanged_raw_features": [
+      "previous_color",
+      "historical repetition counts",
+      "raw running r",
+      "all other nuisance features"
+    ],
+    "frozen_states": [
+      "B1 fitted coefficients",
+      "training-only scaler and active-column map",
+      "target",
+      "mask"
+    ],
+    "preprocessing_order": "Perturb only specified raw columns, then apply identical frozen preprocessing without refit or recentering",
+    "refit_allowed": false,
+    "RNG": "NONE",
+    "p_value": "NOT_APPLICABLE_DETERMINISTIC_STRESS_TEST"
+  },
+  "preservation": {
+    "original_M1_edited": false,
+    "historical_R1_STOP_cleared": false,
+    "historical_R1_scientific_status": "STOP_IMPLEMENTATION_REQUIRED_GATE",
+    "historical_R1_warning_count": 2,
+    "historical_reviews_unchanged": true,
+    "scientific_models_seeds_thresholds_allocation_changed": false
+  },
+  "current_authorization": {
+    "registration_only": true,
+    "production_implementation": false,
+    "real_feature_or_scaler_construction": false,
+    "real_fitting": false,
+    "B_E_access": false,
+    "Final_C_access": false,
+    "Final_D_access": false
+  },
+  "future_gate": "Separately registered execution mission with complete production implementation and independent numerical/access/prefit gates. No automatic scientific continuation."
+}
