@@ -1,0 +1,118 @@
+{
+  "files": [
+    {
+      "old_path": "paper16_development_r2/core.py",
+      "old_sha256": "172be1154dab513259f8a51cb7fb65a9c070529a203051fad3cc0d6373e262e9",
+      "new_path": "paper16_development_r3/core.py",
+      "new_sha256": "08221b490c27ddddd32a14ab2d7be3e5ecfe21ed932667568e3d1f00764e707a",
+      "namespace_only": true,
+      "additional_diff": ""
+    },
+    {
+      "old_path": "paper16_development_r2/source.py",
+      "old_sha256": "e1a24d21b3862158c049b337d6521e55c47a708f985bbdc1513c5db618548f91",
+      "new_path": "paper16_development_r3/source.py",
+      "new_sha256": "d0c02fe8872ac117219d24a63b2ac61b5b28f2deb4d0668fa5beb22981315ba5",
+      "namespace_only": false,
+      "additional_diff": "--- R2 mechanical namespace normalized\n+++ R3 candidate\n@@ -6,6 +6,7 @@\n from paper16_dev_r3.run_m2 import source_inputs\n from paper16_source_r4.neural_reader import resolve,verify_index,verify_probe_metadata,value_scope,REQUIRED,SCALARS,metadata as native_metadata\n from paper16_dev_r3.core import finite_native\n+from .phase_gate import compatibility\n \n def account():return load(R/'paper16_source_r4/SOURCE_AND_PHYSIOLOGY_ACCOUNT.json')['sources']\n def admitted():return sorted([x for x in account() if x['selection']['admitted']],key=lambda x:int(x['source']['mouse_id']))\n@@ -32,6 +33,7 @@\n def metadata(record):\n     validate(record['source'])\n     verify_pins()\n+    compatible=compatibility(record)\n     frozen=checked_reference(record['result']);checked_reference(record['QC'])\n     expected=frozen['source_metadata_pins'];path=R/expected['metadata_path']\n     check_file(path,expected['metadata_sha256']);check_file(path.with_suffix('.npz'),expected['flash_array_sha256'])\n@@ -42,7 +44,9 @@\n     with np.load(path.with_suffix('.npz'),allow_pickle=False) as saved:\n         for name in ['start','stop','color','main_valid']:\n             if not np.array_equal(flashes[name],saved[name],equal_nan=True):raise AccessStop('Frozen metadata adapter arrays changed')\n-        flashes['stimulus_valid']=stimulus_validity(saved['start'],saved['stop'],saved['color'],saved['stimulus_invalid_intervals'])\n+        if compatible['frozen_metadata_npz']['sha256']!=expected['flash_array_sha256'] or not np.array_equal(saved['main_valid'],compatible['original_main_valid']):raise AccessStop('Reviewed compatibility archive or main mask changed')\n+        flashes['stimulus_valid']=stimulus_validity(saved['start'],saved['stop'],saved['color'],compatible['stimulus_invalid_intervals'])\n+        if not np.array_equal(flashes['stimulus_valid'],compatible['stimulus_valid']):raise AccessStop('Reviewed stimulus validity changed')\n     if set(running)!=set(bundle['arrays']):raise AccessStop('Frozen running array set')\n     for name,identity in bundle['arrays'].items():\n         actual=array_id(running[name]);expected_array={'shape':identity['shape'],'dtype':identity['dtype'],'sha256':identity['raw_bytes_sha256']}\n"
+    },
+    {
+      "old_path": "paper16_development_r2/features.py",
+      "old_sha256": "da7d655dc5a2c00f95ed1da1566153277334bd7f403e033ae0265b498c5c016b",
+      "new_path": "paper16_development_r3/features.py",
+      "new_sha256": "da7d655dc5a2c00f95ed1da1566153277334bd7f403e033ae0265b498c5c016b",
+      "namespace_only": true,
+      "additional_diff": ""
+    },
+    {
+      "old_path": "paper16_development_r2/models.py",
+      "old_sha256": "e13e5feff0b4101ddc27cb5dd0177760b8a6b787a8abf6f026b2bacfc9dd7869",
+      "new_path": "paper16_development_r3/models.py",
+      "new_sha256": "e13e5feff0b4101ddc27cb5dd0177760b8a6b787a8abf6f026b2bacfc9dd7869",
+      "namespace_only": true,
+      "additional_diff": ""
+    },
+    {
+      "old_path": "paper16_development_r2/optimizer.py",
+      "old_sha256": "5441398d633159d613c608d5d8656267ce6b43e3fe5983a4cd4ca61e1fd3228c",
+      "new_path": "paper16_development_r3/optimizer.py",
+      "new_sha256": "0219392eec78fdba8aadc6f6fc1497abe55bad02e12ba0ab25e7d0a2df62b89b",
+      "namespace_only": true,
+      "additional_diff": ""
+    },
+    {
+      "old_path": "paper16_development_r2/optim_child.py",
+      "old_sha256": "e6993643323d224391b54fda3a686068ba160457ad651ecb05e25cea74e0ba24",
+      "new_path": "paper16_development_r3/optim_child.py",
+      "new_sha256": "eaae9ae62b0290b65cf4c9e7e0c7486e8ecbb0e228243cbcda4fdfe58d2e3e0a",
+      "namespace_only": true,
+      "additional_diff": ""
+    },
+    {
+      "old_path": "paper16_development_r2/controller.py",
+      "old_sha256": "9a77471f8242d51eeec1300518234f82d4c95128f7a9492b1af818fbc4c085f2",
+      "new_path": "paper16_development_r3/controller.py",
+      "new_sha256": "92421b4924ff086f4cfdcf7fab47b90a1c9e1a9ce87d7fdb083e3e0a972ad681",
+      "namespace_only": false,
+      "additional_diff": "--- R2 mechanical namespace normalized\n+++ R3 candidate\n@@ -9,6 +9,8 @@\n def task_folder(task):return P/'work/fits'/hashlib.sha256(task['id'].encode()).hexdigest()\n \n def verify_prefit():\n+    from .phase_gate import verify_phase_a\n+    verify_phase_a()\n     verify_pins();approval=load(E/'PREFIT_APPROVAL.json');manifest=load(P/'PREFIT_FREEZE_MANIFEST.json')\n     if approval.get('decision')!='ACCEPTED_R3_PRODUCTION_PREFIT' or approval.get('open_P0')!=0 or approval.get('open_P1')!=0:raise AccessStop('Actual independent production prefit acceptance required')\n     review=R/approval['review_path']\n"
+    },
+    {
+      "old_path": "paper16_development_r2/panels.py",
+      "old_sha256": "dc91d666f18435a751d6a3d4ce7a8a9719c5d90e52bf59b3a105e2062883dada",
+      "new_path": "paper16_development_r3/panels.py",
+      "new_sha256": "dc91d666f18435a751d6a3d4ce7a8a9719c5d90e52bf59b3a105e2062883dada",
+      "namespace_only": true,
+      "additional_diff": ""
+    },
+    {
+      "old_path": "paper16_development_r2/controls.py",
+      "old_sha256": "982a21b69d0c6f5dbfdc6028b82e90556e2579f8d3ec58b5e89eae0c7351406b",
+      "new_path": "paper16_development_r3/controls.py",
+      "new_sha256": "982a21b69d0c6f5dbfdc6028b82e90556e2579f8d3ec58b5e89eae0c7351406b",
+      "namespace_only": true,
+      "additional_diff": ""
+    },
+    {
+      "old_path": "paper16_development_r2/test_production.py",
+      "old_sha256": "caa8064b8cce840e7761f7ebb0591c094723f2d8814dba60832e5392d09674ef",
+      "new_path": "paper16_development_r3/test_production.py",
+      "new_sha256": "94ecc55fff9b51c7f8ba35c45c0872269f35e76e56856f399b928ff2840370b0",
+      "namespace_only": false,
+      "additional_diff": "--- R2 mechanical namespace normalized\n+++ R3 candidate\n@@ -182,7 +182,8 @@\n         once(running_path.with_name('RESULT.json'),{'derived_bundle':{'path':running_path.relative_to(root).as_posix(),'sha256':sha(running_path),'arrays':identities},'frozen_flash_metadata':pins})\n         once(root/'source.json',{'source_metadata_pins':pins});(root/'QC.jsonl').write_text('{}\\n',encoding='utf8')\n         record={'source':{'session_id':sid},'QC':{'path':'QC.jsonl','sha256':sha(root/'QC.jsonl')},'result':{'path':'source.json','sha256':sha(root/'source.json')}}\n-        with patch.object(source,'R',root),patch.object(source,'verify_pins'),patch.object(source,'validate'),patch.object(source,'source_inputs',return_value=({},copy.deepcopy(flashes),running,pins)) as adapter:\n+        compatible={'frozen_metadata_npz':{'sha256':pins['flash_array_sha256']},'original_main_valid':flashes['main_valid'].tolist(),'stimulus_invalid_intervals':[[2.1,2.2]],'stimulus_valid':source.stimulus_validity(starts,starts+.25,flashes['color'],[[2.1,2.2]]).tolist()}\n+        with patch.object(source,'R',root),patch.object(source,'verify_pins'),patch.object(source,'validate'),patch.object(source,'compatibility',return_value=compatible),patch.object(source,'source_inputs',return_value=({},copy.deepcopy(flashes),running,pins)) as adapter:\n             _,actual,_,_=source.metadata(record)\n             self.assertTrue(actual['stimulus_valid'][0]);self.assertFalse(actual['main_valid'][0]);self.assertFalse(actual['stimulus_valid'][1])\n             for target in [root/'QC.jsonl',root/'source.json',metadata_path,metadata_path.with_suffix('.npz'),running_path]:\n@@ -206,6 +207,32 @@\n                     return real_sha(path)\n                 with patch.object(core,'sha',side_effect=bad),patch.object(source,'source_inputs',side_effect=AssertionError('No decode before pins')):\n                     with self.assertRaises((ImplementationStop,FileNotFoundError)):source.metadata(source.admitted()[0])\n+\n+    def test_actual27_production_metadata_adapter_without_neural_features(self):\n+        from .phase_gate import compatibility\n+        rows=source.admitted();self.assertEqual(len(rows),27);present=0\n+        with patch.object(source,'saved_A',side_effect=AssertionError('No A neural read')),patch.object(source,'native_role',side_effect=AssertionError('No B/E neural read')),patch.object(features,'build',side_effect=AssertionError('No real neural features')):\n+            for row in rows:\n+                state=compatibility(row);header,flashes,running,pins=source.metadata(row)\n+                np.testing.assert_array_equal(flashes['stimulus_valid'],state['stimulus_valid'])\n+                np.testing.assert_array_equal(flashes['main_valid'],state['original_main_valid'])\n+                self.assertEqual(pins['flash_array_sha256'],state['frozen_metadata_npz']['sha256'])\n+                present+=state['stimulus_field_already_present']\n+        self.assertEqual(present,3)\n+\n+    def test_compatibility_hash_missing_state_and_wrong_source_fail_before_adapter(self):\n+        from . import identity,phase_gate\n+        row=source.admitted()[0];target=R/load(P/'PHASE_A_RESULTS.json')['files'][0]['path'];real_sha=identity.sha\n+        for missing in [False,True]:\n+            def changed(path):\n+                if Path(path)==target:\n+                    if missing:raise FileNotFoundError('synthetic missing compatibility')\n+                    return '0'*64\n+                return real_sha(path)\n+            with patch.object(identity,'sha',side_effect=changed),patch.object(source,'source_inputs',side_effect=AssertionError('No metadata decode')):\n+                with self.assertRaises((identity.ProvenanceStop,FileNotFoundError)):source.metadata(row)\n+        bad=copy.deepcopy(row);bad['source']['session_id']+=1\n+        with self.assertRaises(identity.ProvenanceStop):phase_gate.compatibility(bad)\n \n     def test_saved_statistics_bootstrap_BO_FC_tamper_missing_and_unexecuted(self):\n         from . import reproduce\n"
+    },
+    {
+      "old_path": "paper16_development_r2/certify.py",
+      "old_sha256": "11084a909993b04e7eb322e44baab0bfe7272a9ed24bf6f7c5409e311c3af62c",
+      "new_path": "paper16_development_r3/certify.py",
+      "new_sha256": "380d829c094d547501a7eac2ab0f55e837b807f737974e8e2ac56e4cb874a526",
+      "namespace_only": true,
+      "additional_diff": ""
+    },
+    {
+      "old_path": "paper16_development_r2/reproduce.py",
+      "old_sha256": "4eef770e5d217ae6b9b73635ab194f35602bbb08acf20515da50661a815af58d",
+      "new_path": "paper16_development_r3/reproduce.py",
+      "new_sha256": "8ffd4f8f081df2c5954ecc01c44dbc77fb429c79f589ab23865805693453c23a",
+      "namespace_only": true,
+      "additional_diff": ""
+    },
+    {
+      "old_path": "paper16_development_r2/REPRODUCE_SAVED.ps1",
+      "old_sha256": "2e57cca7323005b9ec57c6ac385d31c358e55060b2db01d9e5014585bc73347c",
+      "new_path": "paper16_development_r3/REPRODUCE_SAVED.ps1",
+      "new_sha256": "6fbbc579d19eb6690064c64e641a73bd01d1200eef0c67a29c4e388a31c7f38c",
+      "namespace_only": true,
+      "additional_diff": ""
+    },
+    {
+      "old_path": "paper16_development_r2/IMPLEMENTATION_POLICY.md",
+      "old_sha256": "7f2b918f52b727cdce34dcc53258c1ae56ceaf463901c01849d2f5ea66e3f80a",
+      "new_path": "paper16_development_r3/IMPLEMENTATION_POLICY.md",
+      "new_sha256": "7f2b918f52b727cdce34dcc53258c1ae56ceaf463901c01849d2f5ea66e3f80a",
+      "namespace_only": true,
+      "additional_diff": ""
+    }
+  ],
+  "scientific_mathematics_changed": false,
+  "actual27_schema_integration_required": true
+}

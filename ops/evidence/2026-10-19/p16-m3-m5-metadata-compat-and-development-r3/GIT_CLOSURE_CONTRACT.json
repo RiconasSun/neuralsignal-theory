@@ -1,0 +1,79 @@
+{
+  "registered_at": "2026-10-20T07:51:45.009383+00:00",
+  "mode": "CLOSURE_MODE; no science or implementation changes",
+  "BASE": "e740f6ac80ad1348a393c889fcf20778e9d24523",
+  "branch": "test",
+  "origin_main": "ABSENT_VERIFIED_BY_LS_REMOTE",
+  "preflight_HEAD_and_origin_test": "e740f6ac80ad1348a393c889fcf20778e9d24523",
+  "archive_manifest_sha256": "76ee68d520146f3128f1815956d4bff4b311feaabb543ce4e5d3add0902b8901",
+  "final_review": {
+    "review_path": "ops/evidence/2026-10-19/p16-m3-m5-metadata-compat-and-development-r3/FINAL_REVIEW_2.md",
+    "review_sha256": "91c72e46a564bae7aba71dd475de535835738451c610af8a75f09b0d7ab6f105",
+    "decision": "ACCEPTED_R3_REQUIRED_STOP_ARCHIVE_ONLY",
+    "open_P0": 0,
+    "open_P1": 0
+  },
+  "finite_closure_files": [
+    {
+      "path": "paper16_development_r3/ARCHIVE_MANIFEST.json",
+      "sha256": "76ee68d520146f3128f1815956d4bff4b311feaabb543ce4e5d3add0902b8901",
+      "bytes": 117828
+    },
+    {
+      "path": "paper16_development_r3/CURRENT_HANDOFF.md",
+      "sha256": "667620e1527001002438fb78073e6edb8bf628546cb616b4aa2aecea1fb0d647",
+      "bytes": 2203
+    },
+    {
+      "path": "paper16_development_r3/TERMINAL_RECEIPT.json",
+      "sha256": "b34095fcfde94ae7cf9e74f2cb935dd143b10ab159480d48d60b2597a1b059f8",
+      "bytes": 2489
+    },
+    {
+      "path": "ops/evidence/2026-10-19/p16-m3-m5-metadata-compat-and-development-r3/SAVED_REPRODUCTION.log",
+      "sha256": "0d7ff3c9bf79e32aa5efb908c82a09eaab77b610ebb9b3c3faa783715b455e7b",
+      "bytes": 1011
+    },
+    {
+      "path": "ops/evidence/2026-10-19/p16-m3-m5-metadata-compat-and-development-r3/review.md",
+      "sha256": "04ef23940d9e3692586bc81ccc71e2c61c9a23bf9d96cc1e3f64c943a0108c65",
+      "bytes": 498
+    },
+    {
+      "path": "ops/evidence/2026-10-19/p16-m3-m5-metadata-compat-and-development-r3/verdict.md",
+      "sha256": "d7f7691b09964d23016500b600dffdb857de6e740141733f7e7411bcd6669608",
+      "bytes": 2284
+    },
+    {
+      "path": "ops/evidence/2026-10-19/p16-m3-m5-metadata-compat-and-development-r3/FINAL_REQUIREMENT_COVERAGE.json",
+      "sha256": "a2f756ddade6225152149fe8a1a1203b588277d1cb2355d10bc9ff2e73bc6082",
+      "bytes": 119460
+    },
+    {
+      "path": "ops/evidence/2026-10-19/p16-m3-m5-metadata-compat-and-development-r3/FINAL_REVIEW_2.md",
+      "sha256": "91c72e46a564bae7aba71dd475de535835738451c610af8a75f09b0d7ab6f105",
+      "bytes": 7907
+    },
+    {
+      "path": "ops/evidence/2026-10-19/p16-m3-m5-metadata-compat-and-development-r3/SAVED_REPRODUCTION_2.log",
+      "sha256": "e61502c1ccdbf158713439e2e1cee77b32ce6cab9317a9d02cdae37a8aa01d65",
+      "bytes": 1011
+    }
+  ],
+  "readback_helper": {
+    "path": "paper16_development_r3/work/git_gate.py",
+    "sha256": "b9106cbb64a320367732a251956d7b84ab61090e937a3675f48a1fec8dc305a7"
+  },
+  "actions": [
+    "Exact P/E file list; exclude all work/__pycache__/pyc",
+    "Only new mission files staged; verify every staged blob SHA256",
+    "No old tracked modification/deletion; normal commit with exact BASE parent",
+    "Normal origin/test push; no force/main/PR",
+    "Fetch/read remote ref; verify remote test SHA equals local commit",
+    "Enumerate every changed file from exact BASE; read fetched origin/test blobs by object OID and compare SHA256 to staged/local bytes",
+    "Verify all388 original pins, finite closure files and empty git status --porcelain -uall",
+    "Only then write ignored work/FINAL_REMOTE_RECEIPT.json with exact SHA and all readback hashes; report actual values to user"
+  ],
+  "remote_and_clean_gate": "NOT_PRECERTIFIED; must actually execute",
+  "scientific_STOP_unchanged": true
+}

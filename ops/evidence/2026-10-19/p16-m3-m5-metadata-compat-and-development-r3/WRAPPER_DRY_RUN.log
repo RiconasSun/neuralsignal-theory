@@ -1,0 +1,61 @@
+$ codex exec - --cd C:\Users\85993\Desktop\codebase\neuralsignal institute --sandbox workspace-write --ask-for-approval on-request
+
+--- mission prompt ---
+
+You are Codex CLI running as a coding agent.
+Execute the following JSON Mission Spec against the target repository.
+Treat the Mission Spec JSON as the development task contract.
+Keep edits scoped, follow existing project style, and run relevant validation when practical.
+## Mission Spec JSON
+```json
+{
+  "version": "1.0",
+  "mission": {
+    "id": "P16-M3-M5-METADATA-COMPAT-AND-DEVELOPMENT-R3",
+    "objective": "Metadata-only provenance compatibility repair/review, fresh production certification/review, then conditional one bounded Development stage and archive mandatory STOP or full results"
+  },
+  "target": {
+    "workdir": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute",
+    "files": [
+      "paper16_development_r3/**",
+      "ops/evidence/2026-10-19/p16-m3-m5-metadata-compat-and-development-r3/**"
+    ]
+  },
+  "instructions": {
+    "constraints": [
+      "No old file changes",
+      "No scientific stage/A predictive features/fits in Phase A",
+      "No B/E/Final neural outcomes before their gates; Final always denied",
+      "No scientific retries or threshold/model/mask/cohort changes",
+      "Independent acceptance between phases"
+    ]
+  },
+  "acceptance": {},
+  "codex": {
+    "sandbox": "workspace-write",
+    "approval": "on-request"
+  },
+  "openrouter": {
+    "enabled": false
+  }
+}
+```
+## Mission
+- Version: 1.0
+- ID: P16-M3-M5-METADATA-COMPAT-AND-DEVELOPMENT-R3
+- Objective: Metadata-only provenance compatibility repair/review, fresh production certification/review, then conditional one bounded Development stage and archive mandatory STOP or full results
+
+## Target Files
+- paper16_development_r3/**
+- ops/evidence/2026-10-19/p16-m3-m5-metadata-compat-and-development-r3/**
+
+
+## Constraints
+- No old file changes
+- No scientific stage/A predictive features/fits in Phase A
+- No B/E/Final neural outcomes before their gates; Final always denied
+- No scientific retries or threshold/model/mask/cohort changes
+- Independent acceptance between phases
+
+## Final Response
+Summarize changed files, validation performed, and any follow-up needed.

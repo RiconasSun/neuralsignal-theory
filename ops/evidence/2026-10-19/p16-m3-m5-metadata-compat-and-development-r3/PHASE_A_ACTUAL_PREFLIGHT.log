@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r3\metadata_compat.py", line 138, in <module>
+    with patch.object(socket.socket,'connect',side_effect=RuntimeError('Phase A metadata-only forbids network')):run()
+                                                                                                                 ^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r3\metadata_compat.py", line 130, in run
+    result=derive(header,item,probes,arrays,common);path=P/'metadata_compat'/f"{item['session_id']}.json"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r3\metadata_compat.py", line 70, in derive
+    app,stim,labels=labeled_invalidity(header,item,probes)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r3\metadata_compat.py", line 22, in labeled_invalidity
+    if header.get('error') or header.get('session_id')!=item['session_id'] or header.get('decoded_neural_values') is not False:raise ProvenanceStop('Incomplete/wrong frozen native header')
+                                                                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+paper16_development_r3.identity.ProvenanceStop: Incomplete/wrong frozen native header

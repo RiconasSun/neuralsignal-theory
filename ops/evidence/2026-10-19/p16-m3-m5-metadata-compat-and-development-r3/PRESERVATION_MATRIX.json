@@ -1,0 +1,3576 @@
+{
+  "baseline_revision": 1,
+  "baseline_requirement_count": 232,
+  "items": [
+    {
+      "id": "R3-001",
+      "owner_line": 6,
+      "section": "0",
+      "requirement": "**MISSION_ID:** `P16-M3-M5-METADATA-COMPAT-AND-DEVELOPMENT-R3`",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "MISSION_SPEC.json",
+        "HISTORICAL_R2_MANIFEST.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-002",
+      "owner_line": 8,
+      "section": "0",
+      "requirement": "**Repository:** `RiconasSun/neuralsignal-theory`",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "MISSION_SPEC.json",
+        "HISTORICAL_R2_MANIFEST.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-003",
+      "owner_line": 10,
+      "section": "0",
+      "requirement": "**Branch:** `test`",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "MISSION_SPEC.json",
+        "HISTORICAL_R2_MANIFEST.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-004",
+      "owner_line": 12,
+      "section": "0",
+      "requirement": "**REQUIRED BASE SHA:**",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "MISSION_SPEC.json",
+        "HISTORICAL_R2_MANIFEST.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-005",
+      "owner_line": 13,
+      "section": "0",
+      "requirement": "`e740f6ac80ad1348a393c889fcf20778e9d24523`",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "MISSION_SPEC.json",
+        "HISTORICAL_R2_MANIFEST.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-006",
+      "owner_line": 15,
+      "section": "0",
+      "requirement": "**Predecessor:** `P16-M3-M5-FROZEN-DEVELOPMENT-R2`",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "MISSION_SPEC.json",
+        "HISTORICAL_R2_MANIFEST.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-007",
+      "owner_line": 17,
+      "section": "0",
+      "requirement": "**Objective:** Prospectively repair the verified saved-metadata schema incompatibility, fully certify the repaired production worker against the actual admitted Development metadata, and conditionally execute a new bounded M3\u2013M5 Development scientific run.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "MISSION_SPEC.json",
+        "HISTORICAL_R2_MANIFEST.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-008",
+      "owner_line": 19,
+      "section": "0",
+      "requirement": "This is a new owner authorization, not an R2 retry. It does not modify the consumed R2 scientific attempt.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "MISSION_SPEC.json",
+        "HISTORICAL_R2_MANIFEST.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-009",
+      "owner_line": 21,
+      "section": "0",
+      "requirement": "Proceed automatically between phases only when every mandatory prerequisite is independently accepted. STOP on mandatory failure.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "MISSION_SPEC.json",
+        "HISTORICAL_R2_MANIFEST.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-010",
+      "owner_line": 23,
+      "section": "0",
+      "requirement": "**No Final C/D access, no M6, no P17, no scientific threshold amendments.**",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "MISSION_SPEC.json",
+        "HISTORICAL_R2_MANIFEST.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-011",
+      "owner_line": 29,
+      "section": "1",
+      "requirement": "Before any modification:",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "HISTORICAL_R2_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-012",
+      "owner_line": 31,
+      "section": "1",
+      "requirement": "1. Verify `origin/test` equals the required BASE and the worktree is clean.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "HISTORICAL_R2_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-013",
+      "owner_line": 32,
+      "section": "1",
+      "requirement": "2. Bind all original M1 frozen documents and their manifest identities.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "HISTORICAL_R2_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-014",
+      "owner_line": 33,
+      "section": "1",
+      "requirement": "3. Verify R4 `M2_SOURCE_AND_PHYSIOLOGY_PASS`.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "HISTORICAL_R2_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-015",
+      "owner_line": 34,
+      "section": "1",
+      "requirement": "4. Preserve R1 `STOP_IMPLEMENTATION_REQUIRED_GATE`, including its two historical warnings.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "HISTORICAL_R2_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-016",
+      "owner_line": 35,
+      "section": "1",
+      "requirement": "5. Verify the prospective S07/N4 precision contract and accepted registration.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "HISTORICAL_R2_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-017",
+      "owner_line": 36,
+      "section": "1",
+      "requirement": "6. Preserve the complete R2 failed attempt, its worker hashes, traceback, original 48-hour stage consumption, failed reviews and archive evidence.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "HISTORICAL_R2_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-018",
+      "owner_line": 38,
+      "section": "1",
+      "requirement": "The inherited source cohort is unchanged:",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "HISTORICAL_R2_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-019",
+      "owner_line": 41,
+      "section": "1",
+      "requirement": "Original Development = 28",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "HISTORICAL_R2_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-020",
+      "owner_line": 42,
+      "section": "1",
+      "requirement": "Admitted Development = 27",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "HISTORICAL_R2_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-021",
+      "owner_line": 43,
+      "section": "1",
+      "requirement": "BO = 5",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "HISTORICAL_R2_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-022",
+      "owner_line": 44,
+      "section": "1",
+      "requirement": "FC = 22",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "HISTORICAL_R2_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-023",
+      "owner_line": 45,
+      "section": "1",
+      "requirement": "Final reserved = 27 BO",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "HISTORICAL_R2_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-024",
+      "owner_line": 48,
+      "section": "1",
+      "requirement": "The recorded R2 failure is:",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "HISTORICAL_R2_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-025",
+      "owner_line": 51,
+      "section": "1",
+      "requirement": "Mouse: 726162197",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "HISTORICAL_R2_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-026",
+      "owner_line": 52,
+      "section": "1",
+      "requirement": "Session: 750749662",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "HISTORICAL_R2_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-027",
+      "owner_line": 53,
+      "section": "1",
+      "requirement": "KeyError: stimulus_invalid_intervals",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "HISTORICAL_R2_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-028",
+      "owner_line": 56,
+      "section": "1",
+      "requirement": "R2 production findings:",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "HISTORICAL_R2_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-029",
+      "owner_line": 59,
+      "section": "1",
+      "requirement": "Synthetic tests: 31/31 PASS",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "HISTORICAL_R2_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-030",
+      "owner_line": 60,
+      "section": "1",
+      "requirement": "Actual schema compatibility: FAIL",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "HISTORICAL_R2_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-031",
+      "owner_line": 61,
+      "section": "1",
+      "requirement": "Real model fits: 0",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "HISTORICAL_R2_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-032",
+      "owner_line": 62,
+      "section": "1",
+      "requirement": "B/E scientific evaluation: 0",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "HISTORICAL_R2_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-033",
+      "owner_line": 63,
+      "section": "1",
+      "requirement": "Final C/D: untouched",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "HISTORICAL_R2_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-034",
+      "owner_line": 64,
+      "section": "1",
+      "requirement": "Current R2 bug_count: 1",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "HISTORICAL_R2_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-035",
+      "owner_line": 65,
+      "section": "1",
+      "requirement": "Current R2 warn_count: 1",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "HISTORICAL_R2_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-036",
+      "owner_line": 68,
+      "section": "1",
+      "requirement": "All these historical results remain immutable.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "HISTORICAL_R2_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-037",
+      "owner_line": 74,
+      "section": "2",
+      "requirement": "**This phase is strictly metadata/engineering-only.**",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-038",
+      "owner_line": 76,
+      "section": "2",
+      "requirement": "Do not start the scientific 48-hour stage, fit models, construct real neural predictive features, or access B/E/Final neural outcomes.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-039",
+      "owner_line": 78,
+      "section": "2",
+      "requirement": "First inspect all 27 admitted Development saved-metadata archives.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-040",
+      "owner_line": 80,
+      "section": "2",
+      "requirement": "Previously observed:",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-041",
+      "owner_line": 82,
+      "section": "2",
+      "requirement": "- 24 archives lack `stimulus_invalid_intervals`.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-042",
+      "owner_line": 83,
+      "section": "2",
+      "requirement": "- 3 archives contain it.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-043",
+      "owner_line": 84,
+      "section": "2",
+      "requirement": "- All original saved metadata hashes were correct.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-044",
+      "owner_line": 86,
+      "section": "2",
+      "requirement": "Reconfirm these facts using the actual archived files, not assumptions based on a current writer.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-045",
+      "owner_line": 90,
+      "section": "2",
+      "requirement": "Inspect the pinned original:",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-046",
+      "owner_line": 93,
+      "section": "2",
+      "requirement": "paper16_m1/code/roster_metadata.py",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-047",
+      "owner_line": 94,
+      "section": "2",
+      "requirement": "paper16_running_r2/run_sources.py",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-048",
+      "owner_line": 95,
+      "section": "2",
+      "requirement": "paper16_dev_r3/run_m2.py",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-049",
+      "owner_line": 96,
+      "section": "2",
+      "requirement": "paper16_development_r2/source.py",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-050",
+      "owner_line": 99,
+      "section": "2",
+      "requirement": "And the registered saved source evidence:",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-051",
+      "owner_line": 102,
+      "section": "2",
+      "requirement": "paper12_native_support1/metadata/native_headers/",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-052",
+      "owner_line": 103,
+      "section": "2",
+      "requirement": "paper16_m0/metadata/probes.body",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-053",
+      "owner_line": 104,
+      "section": "2",
+      "requirement": "paper16_m1/metadata/roster_flashes/",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-054",
+      "owner_line": 105,
+      "section": "2",
+      "requirement": "paper16_m1/metadata/roster_flashes_repair1/",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-055",
+      "owner_line": 106,
+      "section": "2",
+      "requirement": "paper16_development_r2/SAVED_METADATA_SCHEMA_AUDIT.json",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-056",
+      "owner_line": 109,
+      "section": "2",
+      "requirement": "Investigate the existing frozen `invalid_rows(..., return_labels=True)` implementation.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-057",
+      "owner_line": 111,
+      "section": "2",
+      "requirement": "The intended compatibility route is to reconstruct stimulus-only invalidity from the frozen native invalid-times tables and their original scope/label information, not from neural outcomes.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-058",
+      "owner_line": 113,
+      "section": "2",
+      "requirement": "For each admitted Development source:",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-059",
+      "owner_line": 115,
+      "section": "2",
+      "requirement": "1. Verify source/header/probe/session and metadata hashes.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-060",
+      "owner_line": 116,
+      "section": "2",
+      "requirement": "2. Decode existing saved native invalid-time labels and boundaries.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-061",
+      "owner_line": 117,
+      "section": "2",
+      "requirement": "3. Enforce the original M1 scope, tag, probe and interval integrity rules.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-062",
+      "owner_line": 118,
+      "section": "2",
+      "requirement": "4. Obtain the original applicable invalid intervals and separately labeled stimulus-invalid intervals.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-063",
+      "owner_line": 119,
+      "section": "2",
+      "requirement": "5. For the three archives already containing `stimulus_invalid_intervals`, verify the independently reconstructed result agrees with the saved field.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-064",
+      "owner_line": 120,
+      "section": "2",
+      "requirement": "6. For the other 24, construct only an additive, source-backed compatibility representation.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-065",
+      "owner_line": 121,
+      "section": "2",
+      "requirement": "7. Compare the derived complete invalidity against the frozen `invalid_intervals` evidence.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-066",
+      "owner_line": 122,
+      "section": "2",
+      "requirement": "8. Verify consistency with `main_valid`, while keeping the original distinction between stimulus invalidity and neural/probe support.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-067",
+      "owner_line": 123,
+      "section": "2",
+      "requirement": "9. Record all source identities, tag provenance, interval values, array dtypes and resulting masks.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-068",
+      "owner_line": 125,
+      "section": "2",
+      "requirement": "**Critical prohibition:**",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-069",
+      "owner_line": 127,
+      "section": "2",
+      "requirement": "Never use `main_valid` directly as a substitute for `stimulus_invalid_intervals`.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-070",
+      "owner_line": 129,
+      "section": "2",
+      "requirement": "Never infer an absent field means there were no invalid stimulus intervals.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-071",
+      "owner_line": 131,
+      "section": "2",
+      "requirement": "Never treat unlabeled, unknown or inconsistent invalidity as valid exposure.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-072",
+      "owner_line": 133,
+      "section": "2",
+      "requirement": "Never reconstruct missing intervals using neural spikes, model outcomes or E statistics.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-073",
+      "owner_line": 135,
+      "section": "2",
+      "requirement": "If an original trustworthy source cannot establish the correct label semantics, stop with `STOP_METADATA_PROVENANCE_UNRESOLVED`.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-074",
+      "owner_line": 137,
+      "section": "2",
+      "requirement": "If reconstructed masks or interval evidence disagree with the frozen source, stop with `STOP_METADATA_CONTRACT_MISMATCH`.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-075",
+      "owner_line": 139,
+      "section": "2",
+      "requirement": "Do not overwrite original NPZ files. Store compatibility outputs separately with exact provenance and hashes.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-076",
+      "owner_line": 143,
+      "section": "2",
+      "requirement": "Test the actual saved metadata from **every one of the 27 admitted mice**.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-077",
+      "owner_line": 145,
+      "section": "2",
+      "requirement": "Verify:",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-078",
+      "owner_line": 147,
+      "section": "2",
+      "requirement": "- Both historical archive schema variants.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-079",
+      "owner_line": 148,
+      "section": "2",
+      "requirement": "- Exact source-bound hash identities.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-080",
+      "owner_line": 149,
+      "section": "2",
+      "requirement": "- Native timestamp/interval dtypes.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-081",
+      "owner_line": 150,
+      "section": "2",
+      "requirement": "- Valid interval and tag structure.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-082",
+      "owner_line": 151,
+      "section": "2",
+      "requirement": "- Correct global/session/probe scope interpretation.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-083",
+      "owner_line": 152,
+      "section": "2",
+      "requirement": "- Stimulus-only versus probe/neural invalidity distinction.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-084",
+      "owner_line": 153,
+      "section": "2",
+      "requirement": "- Original presentation validity and role boundaries.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-085",
+      "owner_line": 154,
+      "section": "2",
+      "requirement": "- The absence of B/E/Final neural outcome access.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-086",
+      "owner_line": 155,
+      "section": "2",
+      "requirement": "- No change to source-defined or previously admitted main masks.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-087",
+      "owner_line": 157,
+      "section": "2",
+      "requirement": "Include negative tests for malformed tags, missing provenance, conflicting masks, unknown scope, corrupt archives and incorrect source identities.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-088",
+      "owner_line": 159,
+      "section": "2",
+      "requirement": "All 27 sources must have an auditable compatible metadata representation.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-089",
+      "owner_line": 161,
+      "section": "2",
+      "requirement": "A passing synthetic fixture alone is insufficient.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-090",
+      "owner_line": 163,
+      "section": "2",
+      "requirement": "**PHASE A PASS requires:**",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-091",
+      "owner_line": 166,
+      "section": "2",
+      "requirement": "27/27 actual saved metadata schemas audited",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-092",
+      "owner_line": 167,
+      "section": "2",
+      "requirement": "27/27 source/provenance identities verified",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-093",
+      "owner_line": 168,
+      "section": "2",
+      "requirement": "27/27 valid compatible metadata representations",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-094",
+      "owner_line": 169,
+      "section": "2",
+      "requirement": "No frozen mask redefinition",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-095",
+      "owner_line": 170,
+      "section": "2",
+      "requirement": "No neural feature/scaler construction",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-096",
+      "owner_line": 171,
+      "section": "2",
+      "requirement": "No model fits",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-097",
+      "owner_line": 172,
+      "section": "2",
+      "requirement": "No scientific-stage clock consumed",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-098",
+      "owner_line": 173,
+      "section": "2",
+      "requirement": "Independent compatibility review accepted",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-099",
+      "owner_line": 176,
+      "section": "2",
+      "requirement": "No favorable exclusion or replacement is allowed to force this result.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-100",
+      "owner_line": 178,
+      "section": "2",
+      "requirement": "If Phase A fails, archive the actual incompatibility and STOP.",
+      "status": "VERIFIED",
+      "implementation_location": "metadata_compat.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PHASE_A_RESULTS.json",
+        "SCHEMA_AUDIT_2.json",
+        "metadata_compat/",
+        "E/PHASE_A_REVIEW_2.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-101",
+      "owner_line": 184,
+      "section": "3",
+      "requirement": "Only after Phase A PASS.",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-102",
+      "owner_line": 186,
+      "section": "3",
+      "requirement": "Reuse the frozen R2 mathematical worker and independently accepted components as far as compatible.",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-103",
+      "owner_line": 188,
+      "section": "3",
+      "requirement": "Perform a minimal, isolated adapter repair in the new R3 workspace.",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-104",
+      "owner_line": 190,
+      "section": "3",
+      "requirement": "Do not modify historical R2 code or scientific evidence.",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-105",
+      "owner_line": 192,
+      "section": "3",
+      "requirement": "Bind the complete previous R2 production implementation, frozen M1 equations and S07/N4 precision contract.",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-106",
+      "owner_line": 194,
+      "section": "3",
+      "requirement": "Rerun all inherited production synthetic tests, plus new schema-specific integration tests against the actual 27 metadata inputs.",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-107",
+      "owner_line": 196,
+      "section": "3",
+      "requirement": "Independently certify:",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-108",
+      "owner_line": 198,
+      "section": "3",
+      "requirement": "- All eight models: B0/B1/B2/B3/B4/C/D/S.",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-109",
+      "owner_line": 199,
+      "section": "3",
+      "requirement": "- Feature and scaler isolation.",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-110",
+      "owner_line": 200,
+      "section": "3",
+      "requirement": "- Strict past-only causal indexing.",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-111",
+      "owner_line": 201,
+      "section": "3",
+      "requirement": "- M1 objective and parameter bounds.",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-112",
+      "owner_line": 202,
+      "section": "3",
+      "requirement": "- Independent AD and fixed FD numerical checks.",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-113",
+      "owner_line": 203,
+      "section": "3",
+      "requirement": "- Projected-gradient and termination controls.",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-114",
+      "owner_line": 204,
+      "section": "3",
+      "requirement": "- Actual-input metadata compatibility.",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-115",
+      "owner_line": 205,
+      "section": "3",
+      "requirement": "- Exact A/B/E access separation.",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-116",
+      "owner_line": 206,
+      "section": "3",
+      "requirement": "- All registered sensitivities and reference operators.",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-117",
+      "owner_line": 207,
+      "section": "3",
+      "requirement": "- Worker concurrency and wall-time guards.",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-118",
+      "owner_line": 208,
+      "section": "3",
+      "requirement": "- Production source/metadata compatibility before the first fit.",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-119",
+      "owner_line": 210,
+      "section": "3",
+      "requirement": "The original M1 numerical limits remain unchanged:",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-120",
+      "owner_line": 213,
+      "section": "3",
+      "requirement": "L-BFGS-B",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-121",
+      "owner_line": 214,
+      "section": "3",
+      "requirement": "maxiter = 1500",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-122",
+      "owner_line": 215,
+      "section": "3",
+      "requirement": "maxfun = 6000",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-123",
+      "owner_line": 216,
+      "section": "3",
+      "requirement": "maxls = 40",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-124",
+      "owner_line": 217,
+      "section": "3",
+      "requirement": "maxcor = 10",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-125",
+      "owner_line": 219,
+      "section": "3",
+      "requirement": "Projected gradient <= 1e-5",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-126",
+      "owner_line": 220,
+      "section": "3",
+      "requirement": "Independent AD error <= 1e-8",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-127",
+      "owner_line": 221,
+      "section": "3",
+      "requirement": "FD step = 1e-5",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-128",
+      "owner_line": 222,
+      "section": "3",
+      "requirement": "FD error <= 2e-5",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-129",
+      "owner_line": 224,
+      "section": "3",
+      "requirement": "D/S seeds = 11, 23, 37",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-130",
+      "owner_line": 225,
+      "section": "3",
+      "requirement": "C fixed taus = 0.04, 0.1 seconds",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-131",
+      "owner_line": 228,
+      "section": "3",
+      "requirement": "Do not interpret the R2 synthetic 31/31 PASS as automatic R3 production readiness.",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-132",
+      "owner_line": 230,
+      "section": "3",
+      "requirement": "Require a fresh independent prefit review of the exact repaired candidate and all real metadata schema preflight results.",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-133",
+      "owner_line": 232,
+      "section": "3",
+      "requirement": "No real scientific execution before the review is accepted.",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-134",
+      "owner_line": 234,
+      "section": "3",
+      "requirement": "**PHASE B PASS = repaired production worker fully frozen and independently accepted.**",
+      "status": "VERIFIED",
+      "implementation_location": "source.py;phase_gate.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "PREFIT_FREEZE_MANIFEST.json",
+        "PRODUCTION_NUMERICAL_CERTIFICATION.json",
+        "PRODUCTION_METADATA_PREFLIGHT.json",
+        "E/PREFIT_REVIEW_1.md"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-135",
+      "owner_line": 240,
+      "section": "4",
+      "requirement": "Only after Phase A and Phase B both PASS.",
+      "status": "VERIFIED",
+      "implementation_location": "controller.py;optimizer.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "EXECUTION_FACTS.json",
+        "RESOURCE_RECEIPT.json",
+        "TASK_OUTCOMES.json",
+        "results/B_SELECTION.json",
+        "results/SCIENTIFIC_STOP.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-136",
+      "owner_line": 242,
+      "section": "4",
+      "requirement": "This prompt prospectively authorizes **one new R3 scientific Development stage** under the unchanged M1 contract.",
+      "status": "VERIFIED",
+      "implementation_location": "controller.py;optimizer.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "EXECUTION_FACTS.json",
+        "RESOURCE_RECEIPT.json",
+        "TASK_OUTCOMES.json",
+        "results/B_SELECTION.json",
+        "results/SCIENTIFIC_STOP.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-137",
+      "owner_line": 244,
+      "section": "4",
+      "requirement": "The R2 consumed stage remains closed forever; do not reset, amend or replay it.",
+      "status": "VERIFIED",
+      "implementation_location": "controller.py;optimizer.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "EXECUTION_FACTS.json",
+        "RESOURCE_RECEIPT.json",
+        "TASK_OUTCOMES.json",
+        "results/B_SELECTION.json",
+        "results/SCIENTIFIC_STOP.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-138",
+      "owner_line": 246,
+      "section": "4",
+      "requirement": "Use one newly registered stage identity and independent resource ledger.",
+      "status": "VERIFIED",
+      "implementation_location": "controller.py;optimizer.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "EXECUTION_FACTS.json",
+        "RESOURCE_RECEIPT.json",
+        "TASK_OUTCOMES.json",
+        "results/B_SELECTION.json",
+        "results/SCIENTIFIC_STOP.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-139",
+      "owner_line": 248,
+      "section": "4",
+      "requirement": "Frozen resource ceilings:",
+      "status": "VERIFIED",
+      "implementation_location": "controller.py;optimizer.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "EXECUTION_FACTS.json",
+        "RESOURCE_RECEIPT.json",
+        "TASK_OUTCOMES.json",
+        "results/B_SELECTION.json",
+        "results/SCIENTIFIC_STOP.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-140",
+      "owner_line": 251,
+      "section": "4",
+      "requirement": "Development stage: 48 hours maximum",
+      "status": "VERIFIED",
+      "implementation_location": "controller.py;optimizer.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "EXECUTION_FACTS.json",
+        "RESOURCE_RECEIPT.json",
+        "TASK_OUTCOMES.json",
+        "results/B_SELECTION.json",
+        "results/SCIENTIFIC_STOP.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-141",
+      "owner_line": 252,
+      "section": "4",
+      "requirement": "Max concurrent workers: 4",
+      "status": "VERIFIED",
+      "implementation_location": "controller.py;optimizer.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "EXECUTION_FACTS.json",
+        "RESOURCE_RECEIPT.json",
+        "TASK_OUTCOMES.json",
+        "results/B_SELECTION.json",
+        "results/SCIENTIFIC_STOP.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-142",
+      "owner_line": 253,
+      "section": "4",
+      "requirement": "Original M1 optimizer/call ceilings unchanged",
+      "status": "VERIFIED",
+      "implementation_location": "controller.py;optimizer.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "EXECUTION_FACTS.json",
+        "RESOURCE_RECEIPT.json",
+        "TASK_OUTCOMES.json",
+        "results/B_SELECTION.json",
+        "results/SCIENTIFIC_STOP.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-143",
+      "owner_line": 254,
+      "section": "4",
+      "requirement": "Final optimizer reserve: protected",
+      "status": "VERIFIED",
+      "implementation_location": "controller.py;optimizer.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "EXECUTION_FACTS.json",
+        "RESOURCE_RECEIPT.json",
+        "TASK_OUTCOMES.json",
+        "results/B_SELECTION.json",
+        "results/SCIENTIFIC_STOP.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-144",
+      "owner_line": 255,
+      "section": "4",
+      "requirement": "New transport: <= 8 GiB aggregate",
+      "status": "VERIFIED",
+      "implementation_location": "controller.py;optimizer.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "EXECUTION_FACTS.json",
+        "RESOURCE_RECEIPT.json",
+        "TASK_OUTCOMES.json",
+        "results/B_SELECTION.json",
+        "results/SCIENTIFIC_STOP.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-145",
+      "owner_line": 256,
+      "section": "4",
+      "requirement": "New transport: <= 512 MiB per source",
+      "status": "VERIFIED",
+      "implementation_location": "controller.py;optimizer.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "EXECUTION_FACTS.json",
+        "RESOURCE_RECEIPT.json",
+        "TASK_OUTCOMES.json",
+        "results/B_SELECTION.json",
+        "results/SCIENTIFIC_STOP.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-146",
+      "owner_line": 257,
+      "section": "4",
+      "requirement": "HTTP Range: <= 1 MiB",
+      "status": "VERIFIED",
+      "implementation_location": "controller.py;optimizer.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "EXECUTION_FACTS.json",
+        "RESOURCE_RECEIPT.json",
+        "TASK_OUTCOMES.json",
+        "results/B_SELECTION.json",
+        "results/SCIENTIFIC_STOP.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-147",
+      "owner_line": 258,
+      "section": "4",
+      "requirement": "No unregistered retries",
+      "status": "VERIFIED",
+      "implementation_location": "controller.py;optimizer.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "EXECUTION_FACTS.json",
+        "RESOURCE_RECEIPT.json",
+        "TASK_OUTCOMES.json",
+        "results/B_SELECTION.json",
+        "results/SCIENTIFIC_STOP.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-148",
+      "owner_line": 261,
+      "section": "4",
+      "requirement": "Prefer verified existing R3/R4 caches and saved A captures. No source substitution.",
+      "status": "VERIFIED",
+      "implementation_location": "controller.py;optimizer.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "EXECUTION_FACTS.json",
+        "RESOURCE_RECEIPT.json",
+        "TASK_OUTCOMES.json",
+        "results/B_SELECTION.json",
+        "results/SCIENTIFIC_STOP.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-149",
+      "owner_line": 265,
+      "section": "4",
+      "requirement": "Use only the 27 admitted Development mice.",
+      "status": "VERIFIED",
+      "implementation_location": "controller.py;optimizer.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "EXECUTION_FACTS.json",
+        "RESOURCE_RECEIPT.json",
+        "TASK_OUTCOMES.json",
+        "results/B_SELECTION.json",
+        "results/SCIENTIFIC_STOP.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-150",
+      "owner_line": 267,
+      "section": "4",
+      "requirement": "Fit frozen B1 at ridge grid `{0.01, 0.1, 1.0}` using A.",
+      "status": "VERIFIED",
+      "implementation_location": "controller.py;optimizer.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "EXECUTION_FACTS.json",
+        "RESOURCE_RECEIPT.json",
+        "TASK_OUTCOMES.json",
+        "results/B_SELECTION.json",
+        "results/SCIENTIFIC_STOP.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-151",
+      "owner_line": 269,
+      "section": "4",
+      "requirement": "All fits must pass the full registered numerical gates.",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "implementation_location": "controller.py;optimizer.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "EXECUTION_FACTS.json",
+        "RESOURCE_RECEIPT.json",
+        "TASK_OUTCOMES.json",
+        "results/B_SELECTION.json",
+        "results/SCIENTIFIC_STOP.json"
+      ],
+      "remaining_gap": "Required numerical STOP forbids completion or retry; new prospective owner mission required"
+    },
+    {
+      "id": "R3-152",
+      "owner_line": 273,
+      "section": "4",
+      "requirement": "After the required A B1 fits pass, allow B neural outcome access for B1 selection only.",
+      "status": "VERIFIED",
+      "implementation_location": "controller.py;optimizer.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "EXECUTION_FACTS.json",
+        "RESOURCE_RECEIPT.json",
+        "TASK_OUTCOMES.json",
+        "results/B_SELECTION.json",
+        "results/SCIENTIFIC_STOP.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-153",
+      "owner_line": 275,
+      "section": "4",
+      "requirement": "Select one global \u03bb using original BO/FC 0.5/0.5 weighted B1 predictive logscore.",
+      "status": "VERIFIED",
+      "implementation_location": "controller.py;optimizer.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "EXECUTION_FACTS.json",
+        "RESOURCE_RECEIPT.json",
+        "TASK_OUTCOMES.json",
+        "results/B_SELECTION.json",
+        "results/SCIENTIFIC_STOP.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-154",
+      "owner_line": 277,
+      "section": "4",
+      "requirement": "Freeze the tie rule and selection evidence.",
+      "status": "VERIFIED",
+      "implementation_location": "controller.py;optimizer.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "EXECUTION_FACTS.json",
+        "RESOURCE_RECEIPT.json",
+        "TASK_OUTCOMES.json",
+        "results/B_SELECTION.json",
+        "results/SCIENTIFIC_STOP.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-155",
+      "owner_line": 279,
+      "section": "4",
+      "requirement": "Do not use B4 improvement or any E outcome to choose \u03bb.",
+      "status": "VERIFIED",
+      "implementation_location": "controller.py;optimizer.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "EXECUTION_FACTS.json",
+        "RESOURCE_RECEIPT.json",
+        "TASK_OUTCOMES.json",
+        "results/B_SELECTION.json",
+        "results/SCIENTIFIC_STOP.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-156",
+      "owner_line": 283,
+      "section": "4",
+      "requirement": "Complete the required B2/B3/B4/C/D/S A fits at the selected \u03bb with all original seeds, penalties, bounds and convergence gates.",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "implementation_location": "controller.py;optimizer.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "EXECUTION_FACTS.json",
+        "RESOURCE_RECEIPT.json",
+        "TASK_OUTCOMES.json",
+        "results/B_SELECTION.json",
+        "results/SCIENTIFIC_STOP.json"
+      ],
+      "remaining_gap": "Required numerical STOP forbids completion or retry; new prospective owner mission required"
+    },
+    {
+      "id": "R3-157",
+      "owner_line": 285,
+      "section": "4",
+      "requirement": "Freeze all models, scalers, features, source identities and optimizer journals.",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "implementation_location": "controller.py;optimizer.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "EXECUTION_FACTS.json",
+        "RESOURCE_RECEIPT.json",
+        "TASK_OUTCOMES.json",
+        "results/B_SELECTION.json",
+        "results/SCIENTIFIC_STOP.json"
+      ],
+      "remaining_gap": "Required numerical STOP forbids completion or retry; new prospective owner mission required"
+    },
+    {
+      "id": "R3-158",
+      "owner_line": 289,
+      "section": "4",
+      "requirement": "After a complete M4 freeze, execute exactly one Development E evaluation.",
+      "status": "VERIFIED",
+      "implementation_location": "controller.py;optimizer.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "EXECUTION_FACTS.json",
+        "RESOURCE_RECEIPT.json",
+        "TASK_OUTCOMES.json",
+        "results/B_SELECTION.json",
+        "results/SCIENTIFIC_STOP.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-159",
+      "owner_line": 291,
+      "section": "4",
+      "requirement": "Report eight absolute model scores and six registered comparisons.",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "implementation_location": "controller.py;optimizer.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "EXECUTION_FACTS.json",
+        "RESOURCE_RECEIPT.json",
+        "TASK_OUTCOMES.json",
+        "results/B_SELECTION.json",
+        "results/SCIENTIFIC_STOP.json"
+      ],
+      "remaining_gap": "Required numerical STOP forbids completion or retry; new prospective owner mission required"
+    },
+    {
+      "id": "R3-160",
+      "owner_line": 293,
+      "section": "4",
+      "requirement": "Execute all Development-applicable S01\u2013S12 and N1\u2013N4 controls under the unchanged definitions.",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "implementation_location": "controller.py;optimizer.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "EXECUTION_FACTS.json",
+        "RESOURCE_RECEIPT.json",
+        "TASK_OUTCOMES.json",
+        "results/B_SELECTION.json",
+        "results/SCIENTIFIC_STOP.json"
+      ],
+      "remaining_gap": "Required numerical STOP forbids completion or retry; new prospective owner mission required"
+    },
+    {
+      "id": "R3-161",
+      "owner_line": 295,
+      "section": "4",
+      "requirement": "Retain all negative, mixed, failed and unavailable results.",
+      "status": "VERIFIED",
+      "implementation_location": "controller.py;optimizer.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "EXECUTION_FACTS.json",
+        "RESOURCE_RECEIPT.json",
+        "TASK_OUTCOMES.json",
+        "results/B_SELECTION.json",
+        "results/SCIENTIFIC_STOP.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-162",
+      "owner_line": 297,
+      "section": "4",
+      "requirement": "No E-driven model tuning, extra E assessment or rerun after failure.",
+      "status": "VERIFIED",
+      "implementation_location": "controller.py;optimizer.py",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "EXECUTION_FACTS.json",
+        "RESOURCE_RECEIPT.json",
+        "TASK_OUTCOMES.json",
+        "results/B_SELECTION.json",
+        "results/SCIENTIFIC_STOP.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-163",
+      "owner_line": 303,
+      "section": "5",
+      "requirement": "Immediately STOP upon any mandatory source, metadata, access, implementation or numerical failure.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "results/SCIENTIFIC_STOP.json",
+        "PREFIT_FREEZE_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-164",
+      "owner_line": 305,
+      "section": "5",
+      "requirement": "Do not retry failed R3 scientific attempts or extend the original resource envelope.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "results/SCIENTIFIC_STOP.json",
+        "PREFIT_FREEZE_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-165",
+      "owner_line": 307,
+      "section": "5",
+      "requirement": "Do not change:",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "results/SCIENTIFIC_STOP.json",
+        "PREFIT_FREEZE_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-166",
+      "owner_line": 309,
+      "section": "5",
+      "requirement": "- Scientific hypotheses.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "results/SCIENTIFIC_STOP.json",
+        "PREFIT_FREEZE_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-167",
+      "owner_line": 310,
+      "section": "5",
+      "requirement": "- Original cohorts or unit IDs.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "results/SCIENTIFIC_STOP.json",
+        "PREFIT_FREEZE_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-168",
+      "owner_line": 311,
+      "section": "5",
+      "requirement": "- Original masks, observation definitions or temporal windows.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "results/SCIENTIFIC_STOP.json",
+        "PREFIT_FREEZE_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-169",
+      "owner_line": 312,
+      "section": "5",
+      "requirement": "- Frozen numerical thresholds.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "results/SCIENTIFIC_STOP.json",
+        "PREFIT_FREEZE_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-170",
+      "owner_line": 313,
+      "section": "5",
+      "requirement": "- Model equations or families.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "results/SCIENTIFIC_STOP.json",
+        "PREFIT_FREEZE_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-171",
+      "owner_line": 314,
+      "section": "5",
+      "requirement": "- Seeds or parameter grids.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "results/SCIENTIFIC_STOP.json",
+        "PREFIT_FREEZE_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-172",
+      "owner_line": 315,
+      "section": "5",
+      "requirement": "- Statistical or falsification rules.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "results/SCIENTIFIC_STOP.json",
+        "PREFIT_FREEZE_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-173",
+      "owner_line": 316,
+      "section": "5",
+      "requirement": "- S07/N4 prospective definitions.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "results/SCIENTIFIC_STOP.json",
+        "PREFIT_FREEZE_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-174",
+      "owner_line": 318,
+      "section": "5",
+      "requirement": "Ordinary pre-execution software corrections may be made only before the new real scientific stage, with independent re-review and preserved unsuccessful evidence.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "results/SCIENTIFIC_STOP.json",
+        "PREFIT_FREEZE_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-175",
+      "owner_line": 320,
+      "section": "5",
+      "requirement": "Once real execution has begun, a mandatory failure consumes that scientific attempt.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "results/SCIENTIFIC_STOP.json",
+        "PREFIT_FREEZE_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-176",
+      "owner_line": 322,
+      "section": "5",
+      "requirement": "No Final C/D access under any circumstance.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "results/SCIENTIFIC_STOP.json",
+        "PREFIT_FREEZE_MANIFEST.json",
+        "SOURCE_PINS.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-177",
+      "owner_line": 328,
+      "section": "6",
+      "requirement": "Use a fresh namespace:",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "SCIENTIFIC_CLOSEOUT.md",
+        "A1_A10_CLAIM_AUDIT.md",
+        "TASK_OUTCOMES.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-178",
+      "owner_line": 331,
+      "section": "6",
+      "requirement": "paper16_development_r3/",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "SCIENTIFIC_CLOSEOUT.md",
+        "A1_A10_CLAIM_AUDIT.md",
+        "TASK_OUTCOMES.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-179",
+      "owner_line": 334,
+      "section": "6",
+      "requirement": "Preserve all prior namespaces byte-identically.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "SCIENTIFIC_CLOSEOUT.md",
+        "A1_A10_CLAIM_AUDIT.md",
+        "TASK_OUTCOMES.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-180",
+      "owner_line": 336,
+      "section": "6",
+      "requirement": "Required records:",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "SCIENTIFIC_CLOSEOUT.md",
+        "A1_A10_CLAIM_AUDIT.md",
+        "TASK_OUTCOMES.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-181",
+      "owner_line": 338,
+      "section": "6",
+      "requirement": "1. Full 27-source metadata-schema audit.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "SCIENTIFIC_CLOSEOUT.md",
+        "A1_A10_CLAIM_AUDIT.md",
+        "TASK_OUTCOMES.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-182",
+      "owner_line": 339,
+      "section": "6",
+      "requirement": "2. Per-source reconstructed invalidity provenance.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "SCIENTIFIC_CLOSEOUT.md",
+        "A1_A10_CLAIM_AUDIT.md",
+        "TASK_OUTCOMES.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-183",
+      "owner_line": 340,
+      "section": "6",
+      "requirement": "3. Compatibility tests and actual-input preflight results.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "SCIENTIFIC_CLOSEOUT.md",
+        "A1_A10_CLAIM_AUDIT.md",
+        "TASK_OUTCOMES.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-184",
+      "owner_line": 341,
+      "section": "6",
+      "requirement": "4. Repaired adapter and code identity manifest.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "SCIENTIFIC_CLOSEOUT.md",
+        "A1_A10_CLAIM_AUDIT.md",
+        "TASK_OUTCOMES.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-185",
+      "owner_line": 342,
+      "section": "6",
+      "requirement": "5. Independent Phase A review.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "SCIENTIFIC_CLOSEOUT.md",
+        "A1_A10_CLAIM_AUDIT.md",
+        "TASK_OUTCOMES.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-186",
+      "owner_line": 343,
+      "section": "6",
+      "requirement": "6. R3 production numerical and access certificates.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "SCIENTIFIC_CLOSEOUT.md",
+        "A1_A10_CLAIM_AUDIT.md",
+        "TASK_OUTCOMES.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-187",
+      "owner_line": 344,
+      "section": "6",
+      "requirement": "7. Independent Phase B prefit review.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "SCIENTIFIC_CLOSEOUT.md",
+        "A1_A10_CLAIM_AUDIT.md",
+        "TASK_OUTCOMES.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-188",
+      "owner_line": 345,
+      "section": "6",
+      "requirement": "8. One-stage resource and access ledger.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "SCIENTIFIC_CLOSEOUT.md",
+        "A1_A10_CLAIM_AUDIT.md",
+        "TASK_OUTCOMES.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-189",
+      "owner_line": 346,
+      "section": "6",
+      "requirement": "9. A-fitting, B-selection and E results if actually executed.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "SCIENTIFIC_CLOSEOUT.md",
+        "A1_A10_CLAIM_AUDIT.md",
+        "TASK_OUTCOMES.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-190",
+      "owner_line": 347,
+      "section": "6",
+      "requirement": "10. Full sensitivity and reference-control results.",
+      "status": "BLOCKED_HUMAN_INPUT",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "SCIENTIFIC_CLOSEOUT.md",
+        "A1_A10_CLAIM_AUDIT.md",
+        "TASK_OUTCOMES.json"
+      ],
+      "remaining_gap": "Required numerical STOP forbids completion or retry; new prospective owner mission required"
+    },
+    {
+      "id": "R3-191",
+      "owner_line": 348,
+      "section": "6",
+      "requirement": "11. Complete task-attempt and failure register.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "SCIENTIFIC_CLOSEOUT.md",
+        "A1_A10_CLAIM_AUDIT.md",
+        "TASK_OUTCOMES.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-192",
+      "owner_line": 349,
+      "section": "6",
+      "requirement": "12. Scientific verdict and A1\u2013A10 claim audit.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "SCIENTIFIC_CLOSEOUT.md",
+        "A1_A10_CLAIM_AUDIT.md",
+        "TASK_OUTCOMES.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-193",
+      "owner_line": 350,
+      "section": "6",
+      "requirement": "13. Native saved-only reproduction.",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "SCIENTIFIC_CLOSEOUT.md",
+        "A1_A10_CLAIM_AUDIT.md",
+        "TASK_OUTCOMES.json"
+      ],
+      "remaining_gap": "Final saved reproduction/review/Git closure receipts pending"
+    },
+    {
+      "id": "R3-194",
+      "owner_line": 351,
+      "section": "6",
+      "requirement": "14. Independent final review.",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "SCIENTIFIC_CLOSEOUT.md",
+        "A1_A10_CLAIM_AUDIT.md",
+        "TASK_OUTCOMES.json"
+      ],
+      "remaining_gap": "Final saved reproduction/review/Git closure receipts pending"
+    },
+    {
+      "id": "R3-195",
+      "owner_line": 352,
+      "section": "6",
+      "requirement": "15. Verified Git archive and terminal report.",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "SCIENTIFIC_CLOSEOUT.md",
+        "A1_A10_CLAIM_AUDIT.md",
+        "TASK_OUTCOMES.json"
+      ],
+      "remaining_gap": "Final saved reproduction/review/Git closure receipts pending"
+    },
+    {
+      "id": "R3-196",
+      "owner_line": 354,
+      "section": "6",
+      "requirement": "If execution stops before fitting, report later outputs as `NOT_EXECUTED`, not zero scientific effects.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "SCIENTIFIC_CLOSEOUT.md",
+        "A1_A10_CLAIM_AUDIT.md",
+        "TASK_OUTCOMES.json"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-197",
+      "owner_line": 356,
+      "section": "6",
+      "requirement": "Archive using normal `origin/test` commit/push and remote changed-file hash verification. No main promotion, force push, PR or external submission.",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "SCIENTIFIC_CLOSEOUT.md",
+        "A1_A10_CLAIM_AUDIT.md",
+        "TASK_OUTCOMES.json"
+      ],
+      "remaining_gap": "Final saved reproduction/review/Git closure receipts pending"
+    },
+    {
+      "id": "R3-198",
+      "owner_line": 362,
+      "section": "7",
+      "requirement": "Report in Chinese:",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-199",
+      "owner_line": 365,
+      "section": "7",
+      "requirement": "MISSION_ID=",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-200",
+      "owner_line": 366,
+      "section": "7",
+      "requirement": "BASE_SHA=",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-201",
+      "owner_line": 367,
+      "section": "7",
+      "requirement": "FINAL_STATUS=",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-202",
+      "owner_line": 368,
+      "section": "7",
+      "requirement": "SCIENTIFIC_VERDICT=",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-203",
+      "owner_line": 370,
+      "section": "7",
+      "requirement": "METADATA_SCHEMAS_AUDITED=",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-204",
+      "owner_line": 371,
+      "section": "7",
+      "requirement": "STIMULUS_INVALIDITY_RECOVERED=",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-205",
+      "owner_line": 372,
+      "section": "7",
+      "requirement": "COMPATIBILITY_PREFLIGHT_PASS=",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-206",
+      "owner_line": 373,
+      "section": "7",
+      "requirement": "PRODUCTION_NUMERICAL_PASS=",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-207",
+      "owner_line": 374,
+      "section": "7",
+      "requirement": "INDEPENDENT_PREFIT_REVIEW=",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-208",
+      "owner_line": 376,
+      "section": "7",
+      "requirement": "DEVELOPMENT_MICE=27",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-209",
+      "owner_line": 377,
+      "section": "7",
+      "requirement": "BO=5",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-210",
+      "owner_line": 378,
+      "section": "7",
+      "requirement": "FC=22",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-211",
+      "owner_line": 380,
+      "section": "7",
+      "requirement": "MODEL_FITS_EXECUTED=",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-212",
+      "owner_line": 381,
+      "section": "7",
+      "requirement": "OPTIMIZER_ATTEMPTS=",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-213",
+      "owner_line": 382,
+      "section": "7",
+      "requirement": "GLOBAL_B1_LAMBDA=",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-214",
+      "owner_line": 383,
+      "section": "7",
+      "requirement": "E_EXECUTED=",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-215",
+      "owner_line": 384,
+      "section": "7",
+      "requirement": "E_B4_MINUS_B1=",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-216",
+      "owner_line": 385,
+      "section": "7",
+      "requirement": "SECONDARY_EFFECTS=",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-217",
+      "owner_line": 386,
+      "section": "7",
+      "requirement": "SENSITIVITIES_COMPLETED=",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-218",
+      "owner_line": 387,
+      "section": "7",
+      "requirement": "CONTROLS_COMPLETED=",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-219",
+      "owner_line": 389,
+      "section": "7",
+      "requirement": "BUG_COUNT=",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-220",
+      "owner_line": 390,
+      "section": "7",
+      "requirement": "WARN_COUNT=",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-221",
+      "owner_line": 391,
+      "section": "7",
+      "requirement": "R2_HISTORICAL_STOP_PRESERVED=true",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-222",
+      "owner_line": 392,
+      "section": "7",
+      "requirement": "R1_HISTORICAL_WARN_COUNT=2",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-223",
+      "owner_line": 394,
+      "section": "7",
+      "requirement": "FINAL_C_ACCESS=false",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-224",
+      "owner_line": 395,
+      "section": "7",
+      "requirement": "FINAL_D_ACCESS=false",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-225",
+      "owner_line": 397,
+      "section": "7",
+      "requirement": "GIT_COMMIT=",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": "Final saved reproduction/review/Git closure receipts pending"
+    },
+    {
+      "id": "R3-226",
+      "owner_line": 398,
+      "section": "7",
+      "requirement": "REMOTE_VERIFICATION=",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": "Final saved reproduction/review/Git closure receipts pending"
+    },
+    {
+      "id": "R3-227",
+      "owner_line": 399,
+      "section": "7",
+      "requirement": "WORKTREE_CLEAN=",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": "Final saved reproduction/review/Git closure receipts pending"
+    },
+    {
+      "id": "R3-228",
+      "owner_line": 400,
+      "section": "7",
+      "requirement": "NEXT_STAGE_READY=",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-229",
+      "owner_line": 401,
+      "section": "7",
+      "requirement": "STOP_REASON=",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-230",
+      "owner_line": 404,
+      "section": "7",
+      "requirement": "Distinguish metadata recovery PASS, numerical implementation PASS and actual scientific findings. None implies another automatically.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-231",
+      "owner_line": 406,
+      "section": "7",
+      "requirement": "Do not claim CWP/NAP validation, causal dynamics, independent replication or Final evidence.",
+      "status": "VERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": null
+    },
+    {
+      "id": "R3-232",
+      "owner_line": 408,
+      "section": "7",
+      "requirement": "**STOP after the independently reviewed and archived R3 result. Do not execute M6 or P17 automatically.**",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "implementation_location": "mission records and frozen policy",
+      "verification_method": "Exact source/evidence hash and gate/receipt audit",
+      "evidence": [
+        "REPORT_FIELDS.json",
+        "work/FINAL_REMOTE_RECEIPT.json (post-commit closure receipt)"
+      ],
+      "remaining_gap": "Final saved reproduction/review/Git closure receipts pending"
+    }
+  ],
+  "counts": {
+    "VERIFIED": 218,
+    "BLOCKED_HUMAN_INPUT": 6,
+    "IMPLEMENTED_UNVERIFIED": 8
+  },
+  "no_requirement_removed": true,
+  "closure_transitions_are_append_only": true
+}

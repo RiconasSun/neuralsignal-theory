@@ -1,0 +1,32 @@
+{
+  "registered_at": "2026-10-20T06:07:07.492826+00:00",
+  "scope": "Pre-scientific engineering correction only under owner section 5",
+  "prior_review": {
+    "path": "ops/evidence/2026-10-19/p16-m3-m5-metadata-compat-and-development-r3/PHASE_A_ENGINEERING_REVIEW_1.md",
+    "sha256": "d942015daa586ea226eef0d940c4740632e33f65e3e70028241798dc68345d40",
+    "decision": "REQUEST_CHANGES",
+    "P1": 1
+  },
+  "prior_failed_attempt_preserved": "PHASE_A_ATTEMPT_1/payload",
+  "scientific_stage_consumed": false,
+  "defect": "Canonical decimal native header string compared directly with registered integer; all 27 exact decimal identities verified",
+  "correction": "Accept only positive built-in integer or canonical ASCII decimal string with identical digits; reject bool,float,spaces,sign,leading zeros,nonASCII,mismatch. Check before metadata NPZ decoding and within labeled invalidity. No ID/data mutation.",
+  "tests": [
+    "integer/string equivalent",
+    "bool/float/leadingzero/sign/whitespace/nonASCII/incorrectdigits reject",
+    "all27 actual header encoding preflight",
+    "all existing metadata negative tests retained"
+  ],
+  "append_only_attempt": 2,
+  "unchanged": [
+    "source IDs",
+    "masks",
+    "source hash pins",
+    "original numeric conversion",
+    "invalidity scope semantics",
+    "models",
+    "scientific clock",
+    "old evidence"
+  ],
+  "required_next_gate": "Full Phase A independent re-review; no Phase B until accepted"
+}
