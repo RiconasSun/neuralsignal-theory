@@ -1,0 +1,39 @@
+{
+  "registered_at_UTC": "2026-10-20T15:03:43.666649+00:00",
+  "scope": "Read-only forensic arithmetic on saved values and static source audit; zero new scientific computation",
+  "source_pins_sha256": "e9d9695bf599254a2b83277c1c7393a670cb263e864c888b3c3a41365bef6f53",
+  "allowed_npz_members": {
+    "failed_fit": [
+      "initial x/lo/hi",
+      "three saved x/analytic/AD/FD/error checkpoints",
+      "endpoint x/gradient"
+    ],
+    "A_S02_state": [
+      "unit_ids",
+      "active",
+      "mean",
+      "scale"
+    ]
+  },
+  "forbidden_npz_members": [
+    "raw",
+    "y",
+    "timestamps",
+    "spike_times",
+    "B/E/Final count arrays"
+  ],
+  "comparisons": "All952 passed optimizer endpoints, inclusive descriptive strata, no independent hypothesis test",
+  "trajectory_alignment": "Direct saved FG sequence and accepted-vector series; accepted objective association requires explicit static protocol qualification because FG journals omit vectors",
+  "conditioning_limits": "No Hessian/design matrix/new gradients. Any secants only from saved checkpoints and explicitly not local Hessian spectrum",
+  "decision_categories": [
+    "CONFIRMED_IMPLEMENTATION_DEFECT",
+    "SOLVER_TERMINATION_POLICY_LIMITATION",
+    "NUMERICAL_CONDITIONING_CONCERN",
+    "INSUFFICIENT_EVIDENCE",
+    "MIXED_CAUSES"
+  ],
+  "stop_if_evidence_unavailable": true,
+  "new_model_fits": 0,
+  "new_optimizer_calls": 0,
+  "new_scientific_scores": 0
+}

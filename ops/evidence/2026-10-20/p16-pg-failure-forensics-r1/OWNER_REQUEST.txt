@@ -1,0 +1,249 @@
+# CCPN — P16 NUMERICAL FAILURE FORENSICS
+
+## MISSION
+`P16-PG-FAILURE-FORENSICS-R1`
+
+**Repository:** RiconasSun/neuralsignal-theory
+
+**Branch:** origin/test
+
+**Required BASE SHA:**
+`1ab5a7b2077f9f8526bf5d5028b042da199f6bc6`
+
+### 1. OBJECTIVE
+
+Perform a bounded, saved-evidence-only numerical forensic investigation of the mandatory projected-gradient failure in P16 R3.
+
+Determine what the existing evidence establishes about the failure, whether an implementation defect is present, and which prospective options are scientifically defensible.
+
+**This is a new diagnostic mission, not permission to resume, retry, or repair the consumed R3 scientific attempt.**
+
+Preserve the original `STOP_NUMERICAL_REQUIRED_GATE` verdict.
+
+No real refitting, optimizer restart, objective/gradient reevaluation, model scoring, source reacquisition, or B/E/Final neural access.
+
+### 2. HISTORICAL FAILURE
+
+Investigate the frozen task:
+
+```text
+Mouse: 733457989
+Panel: S02
+Model: C
+Unit: 951800892
+Lambda: 1.0
+
+Objective: 0.35200449304009157
+PG: 1.9827644454692775e-5
+Required PG: <= 1e-5
+
+Iterations: 254
+FG calls: 275
+Optimizer success: true
+Termination: RELATIVE REDUCTION OF F
+
+AD: PASS
+FD: PASS
+Numerical gate: FAIL
+```
+
+R3 recorded 953 optimizer endpoints, 952 passes, 1 required failure, 216 B0 analytic certificates, and 5,518 unattempted tasks.
+
+All historical evidence and model outputs remain unchanged.
+
+### 3. SOURCE INTEGRITY
+
+Before diagnostics:
+
+- Verify exact Git BASE and clean worktree.
+- Verify the M1 frozen numerical policy and all applicable hashes.
+- Verify R3 scientific STOP, independent review, failed attempt identity, and saved certificates.
+- Verify protected local files against `PROTECTED_STATE_MANIFEST.json`.
+- Reuse existing saved-only reproduction.
+
+If the protected original evidence is unavailable or inconsistent, STOP with an explicit evidence-insufficiency verdict.
+
+Do not reconstruct missing values from guesses.
+
+### 4. READ-ONLY NUMERICAL FORENSICS
+
+Use only saved optimization results, checkpoint coordinates, gradients, bounds, call journals and previously calculated objective values.
+
+#### A. Failed endpoint
+
+For all 37 packed coordinates, report:
+
+- Parameter index and original feature identity, if recoverable.
+- Exact endpoint coefficient.
+- Lower and upper bounds.
+- Saved analytic/AD/FD gradients.
+- Saved projected-gradient component.
+- Bound-active versus interior classification.
+- Largest residual gradient coordinates.
+
+Verify the original PG calculation independently from saved arrays.
+
+Do not relax the threshold or recategorize the failure.
+
+#### B. Optimization trajectory
+
+Using saved journals only, examine:
+
+- Initial, intermediate and final objective history.
+- Accepted iteration history.
+- Last recorded objective reductions.
+- Gradient trajectory where saved.
+- Bound activity.
+- L-BFGS-B termination condition.
+- Evidence consistent with plateau, poor scaling or ill-conditioning.
+
+Distinguish direct observations from hypotheses.
+
+No new objective, derivative or likelihood evaluation is authorized.
+
+#### C. Comparison with previously accepted fits
+
+Analyze saved certificates from the 952 accepted R3 optimization endpoints.
+
+Describe:
+
+- PG distribution and proximity to the original threshold.
+- Optimization iteration/call distributions.
+- Recorded termination categories.
+- Whether similar behavior occurs in other C, S02 or model-family fits.
+- Whether the failed task is exceptional or part of a broader convergence pattern.
+
+Do not recalculate predictive scores, change model selection, or treat this diagnostic comparison as a new independent scientific test.
+
+#### D. Implementation audit
+
+Statically inspect the existing:
+
+```text
+paper16_development_r3/optimizer.py
+paper16_development_r3/optim_child.py
+paper16_development_r3/models.py
+paper16_development_r3/core.py
+paper16_m1/NUMERICAL_POLICY.json
+```
+
+Check:
+
+- Termination handling.
+- Frozen `ftol`, `gtol`, PG and bounds.
+- Brokered FG and iteration accounting.
+- Gradient/vector identity.
+- Projected-gradient calculation.
+- Checkpoint certificate handling.
+- Whether SciPy success is correctly distinguished from the mandatory scientific gate.
+
+A coding defect must be supported by concrete reproducible evidence, not inferred merely from a failed endpoint.
+
+### 5. DIAGNOSTIC CLASSIFICATION
+
+Report the most defensible classification:
+
+- `CONFIRMED_IMPLEMENTATION_DEFECT`
+- `SOLVER_TERMINATION_POLICY_LIMITATION`
+- `NUMERICAL_CONDITIONING_CONCERN`
+- `INSUFFICIENT_EVIDENCE`
+- `MIXED_CAUSES`
+
+These are diagnostic categories, not new scientific pass/fail categories.
+
+For every proposed explanation, identify supporting evidence, contradictory evidence and what remains unknown.
+
+Do not claim causal certainty when multiple explanations remain viable.
+
+### 6. PROSPECTIVE NEXT-ACTION DESIGN
+
+Based on the diagnosis, prepare a recommendation for a future **separately authorized** numerical mission.
+
+Consider whether:
+
+1. A genuine implementation bug needs repair.
+2. The optimizer's termination handling needs an explicitly registered prospective change.
+3. Numerical scaling or conditioning requires a new protocol amendment.
+4. The frozen method should simply retain this failure as a scientific feasibility limitation.
+
+For each option, explain:
+
+- Whether it changes the frozen M1 numerical contract.
+- Whether new independent review and prospective registration are required.
+- Which historical results remain consumed.
+- What can be safely reused by exact identity.
+- What scientific claims would remain unavailable.
+- Expected computation and resource requirements.
+
+**Never recommend simply relaxing PG from 1e-5 or deleting the S02/C obligation to obtain PASS.**
+
+Do not execute any proposed repair, continuation or new scientific experiment in this mission.
+
+### 7. DELIVERABLES
+
+Create a new isolated workspace:
+
+`paper16_pg_forensics_r1/`
+
+Deliver:
+
+- `SOURCE_AND_EVIDENCE_AUDIT.json`
+- `FAILED_COORDINATE_ANALYSIS.csv`
+- `SAVED_TRAJECTORY_ANALYSIS.json`
+- `ACCEPTED_FIT_COMPARISON.json`
+- `IMPLEMENTATION_AUDIT.md`
+- `ROOT_CAUSE_ASSESSMENT.md`
+- `PROSPECTIVE_OPTIONS.md`
+- `A1_A10_CLAIM_AUDIT.md`
+- `FINAL_REPORT.md`
+- Saved-only reproduction command
+- Independent internal review
+
+Record all unavailable evidence explicitly.
+
+Keep raw/private arrays out of Git.
+
+Archive through normal `origin/test` commit/push with exact remote readback and clean verification.
+
+### 8. REQUIRED TERMINAL REPORT
+
+Return:
+
+```text
+MISSION_ID=
+BASE_SHA=
+FINAL_STATUS=
+DIAGNOSTIC_VERDICT=
+
+FAILED_PG_RECONFIRMED=
+ORIGINAL_R3_STOP_PRESERVED=
+SAVED_COORDINATES_VERIFIED=
+SAVED_TRAJECTORY_VERIFIED=
+
+IMPLEMENTATION_BUG_CONFIRMED=
+TERMINATION_BEHAVIOR=
+CONDITIONING_EVIDENCE=
+ROOT_CAUSE_CONFIDENCE=
+
+NEW_MODEL_FITS=0
+NEW_OPTIMIZER_CALLS=0
+NEW_SCIENTIFIC_SCORES=0
+B_E_NEURAL_ACCESS=false
+FINAL_C_ACCESS=false
+FINAL_D_ACCESS=false
+
+RECOMMENDED_NEXT_MISSION=
+SCIENTIFIC_AMENDMENT_REQUIRED=
+INDEPENDENT_REVIEW=
+GIT_COMMIT=
+REMOTE_VERIFICATION=
+WORKTREE_CLEAN=
+```
+
+End with a concise Chinese explanation:
+
+**What most plausibly caused the PG failure, what is actually proven, and what the safest next authorized step should be.**
+
+Maintain original R3 STOP. No automatic scientific restart, Final evaluation or P17 activation.
+
+# END MASTER PROMPT

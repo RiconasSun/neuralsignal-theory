@@ -1,0 +1,63 @@
+$ codex exec - --cd C:\Users\85993\Desktop\codebase\neuralsignal institute --sandbox workspace-write --ask-for-approval on-request
+
+--- mission prompt ---
+
+You are Codex CLI running as a coding agent.
+Execute the following JSON Mission Spec against the target repository.
+Treat the Mission Spec JSON as the development task contract.
+Keep edits scoped, follow existing project style, and run relevant validation when practical.
+## Mission Spec JSON
+```json
+{
+  "version": "1.0",
+  "mission": {
+    "id": "P16-PG-FAILURE-FORENSICS-R1",
+    "objective": "Saved-evidence-only failure endpoint/trajectory/952-comparison/static implementation audit, prospective options, independent review and verified archive; preserve R3 STOP"
+  },
+  "target": {
+    "workdir": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute",
+    "files": [
+      "paper16_pg_forensics_r1/**",
+      "ops/evidence/2026-10-20/p16-pg-failure-forensics-r1/**"
+    ]
+  },
+  "instructions": {
+    "constraints": [
+      "No real refits or optimizer restart",
+      "No objective/gradient/likelihood/scoring evaluation",
+      "No source reacquisition or raw B/E/Final arrays",
+      "Only saved coordinates/gradients/bounds/previously computed objectives and necessary saved scaler metadata for feature identity",
+      "Hash all protected files without decoding neural values",
+      "Never modify prior source, evidence, math, thresholds or outcomes"
+    ]
+  },
+  "acceptance": {},
+  "codex": {
+    "sandbox": "workspace-write",
+    "approval": "on-request"
+  },
+  "openrouter": {
+    "enabled": false
+  }
+}
+```
+## Mission
+- Version: 1.0
+- ID: P16-PG-FAILURE-FORENSICS-R1
+- Objective: Saved-evidence-only failure endpoint/trajectory/952-comparison/static implementation audit, prospective options, independent review and verified archive; preserve R3 STOP
+
+## Target Files
+- paper16_pg_forensics_r1/**
+- ops/evidence/2026-10-20/p16-pg-failure-forensics-r1/**
+
+
+## Constraints
+- No real refits or optimizer restart
+- No objective/gradient/likelihood/scoring evaluation
+- No source reacquisition or raw B/E/Final arrays
+- Only saved coordinates/gradients/bounds/previously computed objectives and necessary saved scaler metadata for feature identity
+- Hash all protected files without decoding neural values
+- Never modify prior source, evidence, math, thresholds or outcomes
+
+## Final Response
+Summarize changed files, validation performed, and any follow-up needed.

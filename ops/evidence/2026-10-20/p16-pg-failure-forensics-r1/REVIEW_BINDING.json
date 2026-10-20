@@ -1,0 +1,115 @@
+{
+  "mission": "P16-PG-FAILURE-FORENSICS-R1",
+  "BASE": "1ab5a7b2077f9f8526bf5d5028b042da199f6bc6",
+  "reviewer": "independent /root/r4_policy_review",
+  "reviewed_at_UTC": "2026-10-20T15:21:00.180069+00:00",
+  "decision": "ACCEPTED_FORENSIC_ARCHIVE_ONLY",
+  "open_P0": 0,
+  "open_P1": 0,
+  "review": {
+    "path": "ops/evidence/2026-10-20/p16-pg-failure-forensics-r1/review.md",
+    "bytes": 6994,
+    "sha256": "322502d3dcfb10bc875d3887e8119c03fdaba69e499eda5d3447042889b30f48"
+  },
+  "bindings": [
+    {
+      "path": "paper16_pg_forensics_r1/ARCHIVE_MANIFEST.json",
+      "bytes": 6616,
+      "sha256": "8f126862b24728da29488126ed6e6603c09e9e80ff7963bbdbccf5e8838f5239"
+    },
+    {
+      "path": "ops/evidence/2026-10-20/p16-pg-failure-forensics-r1/FORENSIC_REPRODUCTION_FINAL.log",
+      "bytes": 1982,
+      "sha256": "9cfa04601c4965ca261ca05f6125ab7a8864fc3e96ac5927be12e9a22f08ad4e"
+    },
+    {
+      "path": "ops/evidence/2026-10-20/p16-pg-failure-forensics-r1/INHERITED_REPRODUCTION.log",
+      "bytes": 1011,
+      "sha256": "a320667293e72c9325b00f78fcd3ac1aa8130926b3239e03ca1d078006ab79b5"
+    },
+    {
+      "path": "paper16_pg_forensics_r1/audit.py",
+      "bytes": 21458,
+      "sha256": "de2d4a78c1a0676bf4011552d3ec5d675133a0183b26aea57d8dd0bbdbd0fa7d"
+    },
+    {
+      "path": "paper16_pg_forensics_r1/tests.py",
+      "bytes": 7050,
+      "sha256": "f26b97d3b54d67ac75f8e4d861de58ecaed9f6022c24ddae6bd4a588fa292e01"
+    },
+    {
+      "path": "paper16_pg_forensics_r1/RUNTIME_SOURCE_PIN.json",
+      "bytes": 447,
+      "sha256": "6b3d5bac41db4e0150a30ae65c4df385d508c0823d25666e389379d3dd072fe0"
+    },
+    {
+      "path": "ops/evidence/2026-10-20/p16-pg-failure-forensics-r1/REQUIREMENT_BASELINE.json",
+      "bytes": 25776,
+      "sha256": "ed7d4d8e313a8b5ed908d8ff705dcd4e986890dc8b194c0672843a8af70c22f4"
+    },
+    {
+      "path": "ops/evidence/2026-10-20/p16-pg-failure-forensics-r1/REQUIREMENT_COVERAGE_CANDIDATE.json",
+      "bytes": 69061,
+      "sha256": "10eef5bfd98a5a3943821cb597c99ffcc98c893ec81f630b02fcca1f1f36fea7"
+    },
+    {
+      "path": "ops/evidence/2026-10-20/p16-pg-failure-forensics-r1/GIT_CLOSURE_PREFLIGHT.json",
+      "bytes": 802,
+      "sha256": "354a8261fe1d1410e17e490150792268f93d739747532989cd68056718e995b1"
+    }
+  ],
+  "independent_identity_checks": {
+    "payloads": 33,
+    "inherited_source_evidence_pins": 581,
+    "protected_files": 10717,
+    "protected_bytes": 325603327,
+    "all_match": true
+  },
+  "independent_saved_checks": {
+    "endpoints": 953,
+    "accepted": 952,
+    "failed": 1,
+    "failed_coordinates": 37,
+    "checkpoints": 3,
+    "FG_calls": 275,
+    "accepted_vectors": 254,
+    "failed_PG": 1.9827644454692775e-05,
+    "last_relative_reduction": 5.4511950509095186e-14,
+    "tests_passed": 14,
+    "tests_exit_code": 0,
+    "new_objective_gradient_likelihood_optimizer_model_score_evaluations": 0,
+    "neural_members_decoded": 0
+  },
+  "coverage": {
+    "frozen_verified": 140,
+    "total": 148,
+    "newly_substantiated": [
+      "F-116",
+      "F-117",
+      "F-142"
+    ],
+    "pending_actual_archive": [
+      "F-120",
+      "F-124",
+      "F-143",
+      "F-144",
+      "F-145"
+    ]
+  },
+  "original_R3_scientific_STOP_preserved": true,
+  "scientific_PASS": false,
+  "MERGE_ALLOWED": false,
+  "future_scientific_execution_authorized": false,
+  "Git_commit_remote_clean_gate": "PENDING_ACTUAL_NORMAL_ARCHIVE",
+  "formatting_only_revision": 2,
+  "formatting_history": {
+    "path": "ops/evidence/2026-10-20/p16-pg-failure-forensics-r1/REVIEW_FORMAT_HISTORY.json",
+    "bytes": 486695,
+    "sha256": "1946ddc360963dc519fe4059e7f02716cd7a46e81da7b52eb6924451ab5d8325"
+  },
+  "prior_binding": {
+    "path": "ops/evidence/2026-10-20/p16-pg-failure-forensics-r1/REVIEW_BINDING_V1.json",
+    "bytes": 3405,
+    "sha256": "4046872d12f5a27a61e0c16de85266fd8f2529f470a6da21da7f52a7b2d9eef8"
+  }
+}

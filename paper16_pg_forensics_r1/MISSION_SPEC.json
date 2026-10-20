@@ -1,0 +1,30 @@
+{
+  "mission": {
+    "id": "P16-PG-FAILURE-FORENSICS-R1",
+    "objective": "Saved-evidence-only failure endpoint/trajectory/952-comparison/static implementation audit, prospective options, independent review and verified archive; preserve R3 STOP"
+  },
+  "target": {
+    "workdir": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute",
+    "files": [
+      "paper16_pg_forensics_r1/**",
+      "ops/evidence/2026-10-20/p16-pg-failure-forensics-r1/**"
+    ]
+  },
+  "instructions": {
+    "constraints": [
+      "No real refits or optimizer restart",
+      "No objective/gradient/likelihood/scoring evaluation",
+      "No source reacquisition or raw B/E/Final arrays",
+      "Only saved coordinates/gradients/bounds/previously computed objectives and necessary saved scaler metadata for feature identity",
+      "Hash all protected files without decoding neural values",
+      "Never modify prior source, evidence, math, thresholds or outcomes"
+    ]
+  },
+  "openrouter": {
+    "enabled": false
+  },
+  "codex": {
+    "sandbox": "workspace-write",
+    "approval": "on-request"
+  }
+}

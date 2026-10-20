@@ -1,0 +1,1947 @@
+{
+  "mission": "P16-PG-FAILURE-FORENSICS-R1",
+  "baseline_sha256": "ed7d4d8e313a8b5ed908d8ff705dcd4e986890dc8b194c0672843a8af70c22f4",
+  "baseline_requirement_count": 148,
+  "verified_baseline_count": 140,
+  "remaining_count": 8,
+  "items": [
+    {
+      "id": "F-001",
+      "owner_line": 4,
+      "section": "0",
+      "requirement": "`P16-PG-FAILURE-FORENSICS-R1`",
+      "status": "VERIFIED",
+      "evidence": [
+        "BOOTSTRAP.json",
+        "paper16_pg_forensics_r1/SOURCE_PINS.json"
+      ],
+      "verification_method": "Git BASE/branch/initial-clean preflight",
+      "pending_reason": null
+    },
+    {
+      "id": "F-002",
+      "owner_line": 6,
+      "section": "0",
+      "requirement": "**Repository:** RiconasSun/neuralsignal-theory",
+      "status": "VERIFIED",
+      "evidence": [
+        "BOOTSTRAP.json",
+        "paper16_pg_forensics_r1/SOURCE_PINS.json"
+      ],
+      "verification_method": "Git BASE/branch/initial-clean preflight",
+      "pending_reason": null
+    },
+    {
+      "id": "F-003",
+      "owner_line": 8,
+      "section": "0",
+      "requirement": "**Branch:** origin/test",
+      "status": "VERIFIED",
+      "evidence": [
+        "BOOTSTRAP.json",
+        "paper16_pg_forensics_r1/SOURCE_PINS.json"
+      ],
+      "verification_method": "Git BASE/branch/initial-clean preflight",
+      "pending_reason": null
+    },
+    {
+      "id": "F-004",
+      "owner_line": 10,
+      "section": "0",
+      "requirement": "**Required BASE SHA:**",
+      "status": "VERIFIED",
+      "evidence": [
+        "BOOTSTRAP.json",
+        "paper16_pg_forensics_r1/SOURCE_PINS.json"
+      ],
+      "verification_method": "Git BASE/branch/initial-clean preflight",
+      "pending_reason": null
+    },
+    {
+      "id": "F-005",
+      "owner_line": 11,
+      "section": "0",
+      "requirement": "`1ab5a7b2077f9f8526bf5d5028b042da199f6bc6`",
+      "status": "VERIFIED",
+      "evidence": [
+        "BOOTSTRAP.json",
+        "paper16_pg_forensics_r1/SOURCE_PINS.json"
+      ],
+      "verification_method": "Git BASE/branch/initial-clean preflight",
+      "pending_reason": null
+    },
+    {
+      "id": "F-006",
+      "owner_line": 15,
+      "section": "1",
+      "requirement": "Perform a bounded, saved-evidence-only numerical forensic investigation of the mandatory projected-gradient failure in P16 R3.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json",
+        "paper16_pg_forensics_r1/ROOT_CAUSE_ASSESSMENT.md"
+      ],
+      "verification_method": "Source/protected hashes, no production imports, saved arithmetic",
+      "pending_reason": null
+    },
+    {
+      "id": "F-007",
+      "owner_line": 17,
+      "section": "1",
+      "requirement": "Determine what the existing evidence establishes about the failure, whether an implementation defect is present, and which prospective options are scientifically defensible.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json",
+        "paper16_pg_forensics_r1/ROOT_CAUSE_ASSESSMENT.md"
+      ],
+      "verification_method": "Source/protected hashes, no production imports, saved arithmetic",
+      "pending_reason": null
+    },
+    {
+      "id": "F-008",
+      "owner_line": 19,
+      "section": "1",
+      "requirement": "**This is a new diagnostic mission, not permission to resume, retry, or repair the consumed R3 scientific attempt.**",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json",
+        "paper16_pg_forensics_r1/ROOT_CAUSE_ASSESSMENT.md"
+      ],
+      "verification_method": "Source/protected hashes, no production imports, saved arithmetic",
+      "pending_reason": null
+    },
+    {
+      "id": "F-009",
+      "owner_line": 21,
+      "section": "1",
+      "requirement": "Preserve the original `STOP_NUMERICAL_REQUIRED_GATE` verdict.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json",
+        "paper16_pg_forensics_r1/ROOT_CAUSE_ASSESSMENT.md"
+      ],
+      "verification_method": "Source/protected hashes, no production imports, saved arithmetic",
+      "pending_reason": null
+    },
+    {
+      "id": "F-010",
+      "owner_line": 23,
+      "section": "1",
+      "requirement": "No real refitting, optimizer restart, objective/gradient reevaluation, model scoring, source reacquisition, or B/E/Final neural access.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json",
+        "paper16_pg_forensics_r1/ROOT_CAUSE_ASSESSMENT.md"
+      ],
+      "verification_method": "Source/protected hashes, no production imports, saved arithmetic",
+      "pending_reason": null
+    },
+    {
+      "id": "F-011",
+      "owner_line": 27,
+      "section": "2",
+      "requirement": "Investigate the frozen task:",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json",
+        "paper16_pg_forensics_r1/FAILED_COORDINATE_ANALYSIS.csv",
+        "INHERITED_REPRODUCTION.log"
+      ],
+      "verification_method": "Exact task/certificate identity and inherited saved-only reproduction",
+      "pending_reason": null
+    },
+    {
+      "id": "F-012",
+      "owner_line": 30,
+      "section": "2",
+      "requirement": "Mouse: 733457989",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json",
+        "paper16_pg_forensics_r1/FAILED_COORDINATE_ANALYSIS.csv",
+        "INHERITED_REPRODUCTION.log"
+      ],
+      "verification_method": "Exact task/certificate identity and inherited saved-only reproduction",
+      "pending_reason": null
+    },
+    {
+      "id": "F-013",
+      "owner_line": 31,
+      "section": "2",
+      "requirement": "Panel: S02",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json",
+        "paper16_pg_forensics_r1/FAILED_COORDINATE_ANALYSIS.csv",
+        "INHERITED_REPRODUCTION.log"
+      ],
+      "verification_method": "Exact task/certificate identity and inherited saved-only reproduction",
+      "pending_reason": null
+    },
+    {
+      "id": "F-014",
+      "owner_line": 32,
+      "section": "2",
+      "requirement": "Model: C",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json",
+        "paper16_pg_forensics_r1/FAILED_COORDINATE_ANALYSIS.csv",
+        "INHERITED_REPRODUCTION.log"
+      ],
+      "verification_method": "Exact task/certificate identity and inherited saved-only reproduction",
+      "pending_reason": null
+    },
+    {
+      "id": "F-015",
+      "owner_line": 33,
+      "section": "2",
+      "requirement": "Unit: 951800892",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json",
+        "paper16_pg_forensics_r1/FAILED_COORDINATE_ANALYSIS.csv",
+        "INHERITED_REPRODUCTION.log"
+      ],
+      "verification_method": "Exact task/certificate identity and inherited saved-only reproduction",
+      "pending_reason": null
+    },
+    {
+      "id": "F-016",
+      "owner_line": 34,
+      "section": "2",
+      "requirement": "Lambda: 1.0",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json",
+        "paper16_pg_forensics_r1/FAILED_COORDINATE_ANALYSIS.csv",
+        "INHERITED_REPRODUCTION.log"
+      ],
+      "verification_method": "Exact task/certificate identity and inherited saved-only reproduction",
+      "pending_reason": null
+    },
+    {
+      "id": "F-017",
+      "owner_line": 36,
+      "section": "2",
+      "requirement": "Objective: 0.35200449304009157",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json",
+        "paper16_pg_forensics_r1/FAILED_COORDINATE_ANALYSIS.csv",
+        "INHERITED_REPRODUCTION.log"
+      ],
+      "verification_method": "Exact task/certificate identity and inherited saved-only reproduction",
+      "pending_reason": null
+    },
+    {
+      "id": "F-018",
+      "owner_line": 37,
+      "section": "2",
+      "requirement": "PG: 1.9827644454692775e-5",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json",
+        "paper16_pg_forensics_r1/FAILED_COORDINATE_ANALYSIS.csv",
+        "INHERITED_REPRODUCTION.log"
+      ],
+      "verification_method": "Exact task/certificate identity and inherited saved-only reproduction",
+      "pending_reason": null
+    },
+    {
+      "id": "F-019",
+      "owner_line": 38,
+      "section": "2",
+      "requirement": "Required PG: <= 1e-5",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json",
+        "paper16_pg_forensics_r1/FAILED_COORDINATE_ANALYSIS.csv",
+        "INHERITED_REPRODUCTION.log"
+      ],
+      "verification_method": "Exact task/certificate identity and inherited saved-only reproduction",
+      "pending_reason": null
+    },
+    {
+      "id": "F-020",
+      "owner_line": 40,
+      "section": "2",
+      "requirement": "Iterations: 254",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json",
+        "paper16_pg_forensics_r1/FAILED_COORDINATE_ANALYSIS.csv",
+        "INHERITED_REPRODUCTION.log"
+      ],
+      "verification_method": "Exact task/certificate identity and inherited saved-only reproduction",
+      "pending_reason": null
+    },
+    {
+      "id": "F-021",
+      "owner_line": 41,
+      "section": "2",
+      "requirement": "FG calls: 275",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json",
+        "paper16_pg_forensics_r1/FAILED_COORDINATE_ANALYSIS.csv",
+        "INHERITED_REPRODUCTION.log"
+      ],
+      "verification_method": "Exact task/certificate identity and inherited saved-only reproduction",
+      "pending_reason": null
+    },
+    {
+      "id": "F-022",
+      "owner_line": 42,
+      "section": "2",
+      "requirement": "Optimizer success: true",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json",
+        "paper16_pg_forensics_r1/FAILED_COORDINATE_ANALYSIS.csv",
+        "INHERITED_REPRODUCTION.log"
+      ],
+      "verification_method": "Exact task/certificate identity and inherited saved-only reproduction",
+      "pending_reason": null
+    },
+    {
+      "id": "F-023",
+      "owner_line": 43,
+      "section": "2",
+      "requirement": "Termination: RELATIVE REDUCTION OF F",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json",
+        "paper16_pg_forensics_r1/FAILED_COORDINATE_ANALYSIS.csv",
+        "INHERITED_REPRODUCTION.log"
+      ],
+      "verification_method": "Exact task/certificate identity and inherited saved-only reproduction",
+      "pending_reason": null
+    },
+    {
+      "id": "F-024",
+      "owner_line": 45,
+      "section": "2",
+      "requirement": "AD: PASS",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json",
+        "paper16_pg_forensics_r1/FAILED_COORDINATE_ANALYSIS.csv",
+        "INHERITED_REPRODUCTION.log"
+      ],
+      "verification_method": "Exact task/certificate identity and inherited saved-only reproduction",
+      "pending_reason": null
+    },
+    {
+      "id": "F-025",
+      "owner_line": 46,
+      "section": "2",
+      "requirement": "FD: PASS",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json",
+        "paper16_pg_forensics_r1/FAILED_COORDINATE_ANALYSIS.csv",
+        "INHERITED_REPRODUCTION.log"
+      ],
+      "verification_method": "Exact task/certificate identity and inherited saved-only reproduction",
+      "pending_reason": null
+    },
+    {
+      "id": "F-026",
+      "owner_line": 47,
+      "section": "2",
+      "requirement": "Numerical gate: FAIL",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json",
+        "paper16_pg_forensics_r1/FAILED_COORDINATE_ANALYSIS.csv",
+        "INHERITED_REPRODUCTION.log"
+      ],
+      "verification_method": "Exact task/certificate identity and inherited saved-only reproduction",
+      "pending_reason": null
+    },
+    {
+      "id": "F-027",
+      "owner_line": 50,
+      "section": "2",
+      "requirement": "R3 recorded 953 optimizer endpoints, 952 passes, 1 required failure, 216 B0 analytic certificates, and 5,518 unattempted tasks.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json",
+        "paper16_pg_forensics_r1/FAILED_COORDINATE_ANALYSIS.csv",
+        "INHERITED_REPRODUCTION.log"
+      ],
+      "verification_method": "Exact task/certificate identity and inherited saved-only reproduction",
+      "pending_reason": null
+    },
+    {
+      "id": "F-028",
+      "owner_line": 52,
+      "section": "2",
+      "requirement": "All historical evidence and model outputs remain unchanged.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json",
+        "paper16_pg_forensics_r1/FAILED_COORDINATE_ANALYSIS.csv",
+        "INHERITED_REPRODUCTION.log"
+      ],
+      "verification_method": "Exact task/certificate identity and inherited saved-only reproduction",
+      "pending_reason": null
+    },
+    {
+      "id": "F-029",
+      "owner_line": 56,
+      "section": "3",
+      "requirement": "Before diagnostics:",
+      "status": "VERIFIED",
+      "evidence": [
+        "BOOTSTRAP.json",
+        "INHERITED_REPRODUCTION.log",
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json"
+      ],
+      "verification_method": "Verified before diagnostics; all581pins and10717protected bytes",
+      "pending_reason": null
+    },
+    {
+      "id": "F-030",
+      "owner_line": 58,
+      "section": "3",
+      "requirement": "- Verify exact Git BASE and clean worktree.",
+      "status": "VERIFIED",
+      "evidence": [
+        "BOOTSTRAP.json",
+        "INHERITED_REPRODUCTION.log",
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json"
+      ],
+      "verification_method": "Verified before diagnostics; all581pins and10717protected bytes",
+      "pending_reason": null
+    },
+    {
+      "id": "F-031",
+      "owner_line": 59,
+      "section": "3",
+      "requirement": "- Verify the M1 frozen numerical policy and all applicable hashes.",
+      "status": "VERIFIED",
+      "evidence": [
+        "BOOTSTRAP.json",
+        "INHERITED_REPRODUCTION.log",
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json"
+      ],
+      "verification_method": "Verified before diagnostics; all581pins and10717protected bytes",
+      "pending_reason": null
+    },
+    {
+      "id": "F-032",
+      "owner_line": 60,
+      "section": "3",
+      "requirement": "- Verify R3 scientific STOP, independent review, failed attempt identity, and saved certificates.",
+      "status": "VERIFIED",
+      "evidence": [
+        "BOOTSTRAP.json",
+        "INHERITED_REPRODUCTION.log",
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json"
+      ],
+      "verification_method": "Verified before diagnostics; all581pins and10717protected bytes",
+      "pending_reason": null
+    },
+    {
+      "id": "F-033",
+      "owner_line": 61,
+      "section": "3",
+      "requirement": "- Verify protected local files against `PROTECTED_STATE_MANIFEST.json`.",
+      "status": "VERIFIED",
+      "evidence": [
+        "BOOTSTRAP.json",
+        "INHERITED_REPRODUCTION.log",
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json"
+      ],
+      "verification_method": "Verified before diagnostics; all581pins and10717protected bytes",
+      "pending_reason": null
+    },
+    {
+      "id": "F-034",
+      "owner_line": 62,
+      "section": "3",
+      "requirement": "- Reuse existing saved-only reproduction.",
+      "status": "VERIFIED",
+      "evidence": [
+        "BOOTSTRAP.json",
+        "INHERITED_REPRODUCTION.log",
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json"
+      ],
+      "verification_method": "Verified before diagnostics; all581pins and10717protected bytes",
+      "pending_reason": null
+    },
+    {
+      "id": "F-035",
+      "owner_line": 64,
+      "section": "3",
+      "requirement": "If the protected original evidence is unavailable or inconsistent, STOP with an explicit evidence-insufficiency verdict.",
+      "status": "VERIFIED",
+      "evidence": [
+        "BOOTSTRAP.json",
+        "INHERITED_REPRODUCTION.log",
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json"
+      ],
+      "verification_method": "Verified before diagnostics; all581pins and10717protected bytes",
+      "pending_reason": null
+    },
+    {
+      "id": "F-036",
+      "owner_line": 66,
+      "section": "3",
+      "requirement": "Do not reconstruct missing values from guesses.",
+      "status": "VERIFIED",
+      "evidence": [
+        "BOOTSTRAP.json",
+        "INHERITED_REPRODUCTION.log",
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json"
+      ],
+      "verification_method": "Verified before diagnostics; all581pins and10717protected bytes",
+      "pending_reason": null
+    },
+    {
+      "id": "F-037",
+      "owner_line": 70,
+      "section": "4",
+      "requirement": "Use only saved optimization results, checkpoint coordinates, gradients, bounds, call journals and previously calculated objective values.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FAILED_COORDINATE_ANALYSIS.csv",
+        "paper16_pg_forensics_r1/CHECKPOINT_COORDINATE_ANALYSIS.csv",
+        "paper16_pg_forensics_r1/audit.py"
+      ],
+      "verification_method": "Independent saved outward PG and active feature packing; all37/111 rows",
+      "pending_reason": null
+    },
+    {
+      "id": "F-038",
+      "owner_line": 74,
+      "section": "4",
+      "requirement": "For all 37 packed coordinates, report:",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FAILED_COORDINATE_ANALYSIS.csv",
+        "paper16_pg_forensics_r1/CHECKPOINT_COORDINATE_ANALYSIS.csv",
+        "paper16_pg_forensics_r1/audit.py"
+      ],
+      "verification_method": "Independent saved outward PG and active feature packing; all37/111 rows",
+      "pending_reason": null
+    },
+    {
+      "id": "F-039",
+      "owner_line": 76,
+      "section": "4",
+      "requirement": "- Parameter index and original feature identity, if recoverable.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FAILED_COORDINATE_ANALYSIS.csv",
+        "paper16_pg_forensics_r1/CHECKPOINT_COORDINATE_ANALYSIS.csv",
+        "paper16_pg_forensics_r1/audit.py"
+      ],
+      "verification_method": "Independent saved outward PG and active feature packing; all37/111 rows",
+      "pending_reason": null
+    },
+    {
+      "id": "F-040",
+      "owner_line": 77,
+      "section": "4",
+      "requirement": "- Exact endpoint coefficient.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FAILED_COORDINATE_ANALYSIS.csv",
+        "paper16_pg_forensics_r1/CHECKPOINT_COORDINATE_ANALYSIS.csv",
+        "paper16_pg_forensics_r1/audit.py"
+      ],
+      "verification_method": "Independent saved outward PG and active feature packing; all37/111 rows",
+      "pending_reason": null
+    },
+    {
+      "id": "F-041",
+      "owner_line": 78,
+      "section": "4",
+      "requirement": "- Lower and upper bounds.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FAILED_COORDINATE_ANALYSIS.csv",
+        "paper16_pg_forensics_r1/CHECKPOINT_COORDINATE_ANALYSIS.csv",
+        "paper16_pg_forensics_r1/audit.py"
+      ],
+      "verification_method": "Independent saved outward PG and active feature packing; all37/111 rows",
+      "pending_reason": null
+    },
+    {
+      "id": "F-042",
+      "owner_line": 79,
+      "section": "4",
+      "requirement": "- Saved analytic/AD/FD gradients.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FAILED_COORDINATE_ANALYSIS.csv",
+        "paper16_pg_forensics_r1/CHECKPOINT_COORDINATE_ANALYSIS.csv",
+        "paper16_pg_forensics_r1/audit.py"
+      ],
+      "verification_method": "Independent saved outward PG and active feature packing; all37/111 rows",
+      "pending_reason": null
+    },
+    {
+      "id": "F-043",
+      "owner_line": 80,
+      "section": "4",
+      "requirement": "- Saved projected-gradient component.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FAILED_COORDINATE_ANALYSIS.csv",
+        "paper16_pg_forensics_r1/CHECKPOINT_COORDINATE_ANALYSIS.csv",
+        "paper16_pg_forensics_r1/audit.py"
+      ],
+      "verification_method": "Independent saved outward PG and active feature packing; all37/111 rows",
+      "pending_reason": null
+    },
+    {
+      "id": "F-044",
+      "owner_line": 81,
+      "section": "4",
+      "requirement": "- Bound-active versus interior classification.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FAILED_COORDINATE_ANALYSIS.csv",
+        "paper16_pg_forensics_r1/CHECKPOINT_COORDINATE_ANALYSIS.csv",
+        "paper16_pg_forensics_r1/audit.py"
+      ],
+      "verification_method": "Independent saved outward PG and active feature packing; all37/111 rows",
+      "pending_reason": null
+    },
+    {
+      "id": "F-045",
+      "owner_line": 82,
+      "section": "4",
+      "requirement": "- Largest residual gradient coordinates.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FAILED_COORDINATE_ANALYSIS.csv",
+        "paper16_pg_forensics_r1/CHECKPOINT_COORDINATE_ANALYSIS.csv",
+        "paper16_pg_forensics_r1/audit.py"
+      ],
+      "verification_method": "Independent saved outward PG and active feature packing; all37/111 rows",
+      "pending_reason": null
+    },
+    {
+      "id": "F-046",
+      "owner_line": 84,
+      "section": "4",
+      "requirement": "Verify the original PG calculation independently from saved arrays.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FAILED_COORDINATE_ANALYSIS.csv",
+        "paper16_pg_forensics_r1/CHECKPOINT_COORDINATE_ANALYSIS.csv",
+        "paper16_pg_forensics_r1/audit.py"
+      ],
+      "verification_method": "Independent saved outward PG and active feature packing; all37/111 rows",
+      "pending_reason": null
+    },
+    {
+      "id": "F-047",
+      "owner_line": 86,
+      "section": "4",
+      "requirement": "Do not relax the threshold or recategorize the failure.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FAILED_COORDINATE_ANALYSIS.csv",
+        "paper16_pg_forensics_r1/CHECKPOINT_COORDINATE_ANALYSIS.csv",
+        "paper16_pg_forensics_r1/audit.py"
+      ],
+      "verification_method": "Independent saved outward PG and active feature packing; all37/111 rows",
+      "pending_reason": null
+    },
+    {
+      "id": "F-048",
+      "owner_line": 90,
+      "section": "4",
+      "requirement": "Using saved journals only, examine:",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SAVED_TRAJECTORY_ANALYSIS.json",
+        "paper16_pg_forensics_r1/IMPLEMENTATION_AUDIT.md"
+      ],
+      "verification_method": "All275FG/254accepted, saved vs protocol-derived association vs hypothesis",
+      "pending_reason": null
+    },
+    {
+      "id": "F-049",
+      "owner_line": 92,
+      "section": "4",
+      "requirement": "- Initial, intermediate and final objective history.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SAVED_TRAJECTORY_ANALYSIS.json",
+        "paper16_pg_forensics_r1/IMPLEMENTATION_AUDIT.md"
+      ],
+      "verification_method": "All275FG/254accepted, saved vs protocol-derived association vs hypothesis",
+      "pending_reason": null
+    },
+    {
+      "id": "F-050",
+      "owner_line": 93,
+      "section": "4",
+      "requirement": "- Accepted iteration history.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SAVED_TRAJECTORY_ANALYSIS.json",
+        "paper16_pg_forensics_r1/IMPLEMENTATION_AUDIT.md"
+      ],
+      "verification_method": "All275FG/254accepted, saved vs protocol-derived association vs hypothesis",
+      "pending_reason": null
+    },
+    {
+      "id": "F-051",
+      "owner_line": 94,
+      "section": "4",
+      "requirement": "- Last recorded objective reductions.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SAVED_TRAJECTORY_ANALYSIS.json",
+        "paper16_pg_forensics_r1/IMPLEMENTATION_AUDIT.md"
+      ],
+      "verification_method": "All275FG/254accepted, saved vs protocol-derived association vs hypothesis",
+      "pending_reason": null
+    },
+    {
+      "id": "F-052",
+      "owner_line": 95,
+      "section": "4",
+      "requirement": "- Gradient trajectory where saved.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SAVED_TRAJECTORY_ANALYSIS.json",
+        "paper16_pg_forensics_r1/IMPLEMENTATION_AUDIT.md"
+      ],
+      "verification_method": "All275FG/254accepted, saved vs protocol-derived association vs hypothesis",
+      "pending_reason": null
+    },
+    {
+      "id": "F-053",
+      "owner_line": 96,
+      "section": "4",
+      "requirement": "- Bound activity.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SAVED_TRAJECTORY_ANALYSIS.json",
+        "paper16_pg_forensics_r1/IMPLEMENTATION_AUDIT.md"
+      ],
+      "verification_method": "All275FG/254accepted, saved vs protocol-derived association vs hypothesis",
+      "pending_reason": null
+    },
+    {
+      "id": "F-054",
+      "owner_line": 97,
+      "section": "4",
+      "requirement": "- L-BFGS-B termination condition.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SAVED_TRAJECTORY_ANALYSIS.json",
+        "paper16_pg_forensics_r1/IMPLEMENTATION_AUDIT.md"
+      ],
+      "verification_method": "All275FG/254accepted, saved vs protocol-derived association vs hypothesis",
+      "pending_reason": null
+    },
+    {
+      "id": "F-055",
+      "owner_line": 98,
+      "section": "4",
+      "requirement": "- Evidence consistent with plateau, poor scaling or ill-conditioning.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SAVED_TRAJECTORY_ANALYSIS.json",
+        "paper16_pg_forensics_r1/IMPLEMENTATION_AUDIT.md"
+      ],
+      "verification_method": "All275FG/254accepted, saved vs protocol-derived association vs hypothesis",
+      "pending_reason": null
+    },
+    {
+      "id": "F-056",
+      "owner_line": 100,
+      "section": "4",
+      "requirement": "Distinguish direct observations from hypotheses.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SAVED_TRAJECTORY_ANALYSIS.json",
+        "paper16_pg_forensics_r1/IMPLEMENTATION_AUDIT.md"
+      ],
+      "verification_method": "All275FG/254accepted, saved vs protocol-derived association vs hypothesis",
+      "pending_reason": null
+    },
+    {
+      "id": "F-057",
+      "owner_line": 102,
+      "section": "4",
+      "requirement": "No new objective, derivative or likelihood evaluation is authorized.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SAVED_TRAJECTORY_ANALYSIS.json",
+        "paper16_pg_forensics_r1/IMPLEMENTATION_AUDIT.md"
+      ],
+      "verification_method": "All275FG/254accepted, saved vs protocol-derived association vs hypothesis",
+      "pending_reason": null
+    },
+    {
+      "id": "F-058",
+      "owner_line": 106,
+      "section": "4",
+      "requirement": "Analyze saved certificates from the 952 accepted R3 optimization endpoints.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/ACCEPTED_FIT_COMPARISON.json",
+        "paper16_pg_forensics_r1/ACCEPTED_ENDPOINTS.csv"
+      ],
+      "verification_method": "All952 certificate arithmetic/strata/descriptive quantiles; no new scores",
+      "pending_reason": null
+    },
+    {
+      "id": "F-059",
+      "owner_line": 108,
+      "section": "4",
+      "requirement": "Describe:",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/ACCEPTED_FIT_COMPARISON.json",
+        "paper16_pg_forensics_r1/ACCEPTED_ENDPOINTS.csv"
+      ],
+      "verification_method": "All952 certificate arithmetic/strata/descriptive quantiles; no new scores",
+      "pending_reason": null
+    },
+    {
+      "id": "F-060",
+      "owner_line": 110,
+      "section": "4",
+      "requirement": "- PG distribution and proximity to the original threshold.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/ACCEPTED_FIT_COMPARISON.json",
+        "paper16_pg_forensics_r1/ACCEPTED_ENDPOINTS.csv"
+      ],
+      "verification_method": "All952 certificate arithmetic/strata/descriptive quantiles; no new scores",
+      "pending_reason": null
+    },
+    {
+      "id": "F-061",
+      "owner_line": 111,
+      "section": "4",
+      "requirement": "- Optimization iteration/call distributions.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/ACCEPTED_FIT_COMPARISON.json",
+        "paper16_pg_forensics_r1/ACCEPTED_ENDPOINTS.csv"
+      ],
+      "verification_method": "All952 certificate arithmetic/strata/descriptive quantiles; no new scores",
+      "pending_reason": null
+    },
+    {
+      "id": "F-062",
+      "owner_line": 112,
+      "section": "4",
+      "requirement": "- Recorded termination categories.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/ACCEPTED_FIT_COMPARISON.json",
+        "paper16_pg_forensics_r1/ACCEPTED_ENDPOINTS.csv"
+      ],
+      "verification_method": "All952 certificate arithmetic/strata/descriptive quantiles; no new scores",
+      "pending_reason": null
+    },
+    {
+      "id": "F-063",
+      "owner_line": 113,
+      "section": "4",
+      "requirement": "- Whether similar behavior occurs in other C, S02 or model-family fits.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/ACCEPTED_FIT_COMPARISON.json",
+        "paper16_pg_forensics_r1/ACCEPTED_ENDPOINTS.csv"
+      ],
+      "verification_method": "All952 certificate arithmetic/strata/descriptive quantiles; no new scores",
+      "pending_reason": null
+    },
+    {
+      "id": "F-064",
+      "owner_line": 114,
+      "section": "4",
+      "requirement": "- Whether the failed task is exceptional or part of a broader convergence pattern.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/ACCEPTED_FIT_COMPARISON.json",
+        "paper16_pg_forensics_r1/ACCEPTED_ENDPOINTS.csv"
+      ],
+      "verification_method": "All952 certificate arithmetic/strata/descriptive quantiles; no new scores",
+      "pending_reason": null
+    },
+    {
+      "id": "F-065",
+      "owner_line": 116,
+      "section": "4",
+      "requirement": "Do not recalculate predictive scores, change model selection, or treat this diagnostic comparison as a new independent scientific test.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/ACCEPTED_FIT_COMPARISON.json",
+        "paper16_pg_forensics_r1/ACCEPTED_ENDPOINTS.csv"
+      ],
+      "verification_method": "All952 certificate arithmetic/strata/descriptive quantiles; no new scores",
+      "pending_reason": null
+    },
+    {
+      "id": "F-066",
+      "owner_line": 120,
+      "section": "4",
+      "requirement": "Statically inspect the existing:",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/IMPLEMENTATION_AUDIT.md",
+        "paper16_pg_forensics_r1/RUNTIME_SOURCE_PIN.json",
+        "paper16_pg_forensics_r1/tests.py"
+      ],
+      "verification_method": "Static five requested sources, pinned SciPy callback, guards/certificates",
+      "pending_reason": null
+    },
+    {
+      "id": "F-067",
+      "owner_line": 123,
+      "section": "4",
+      "requirement": "paper16_development_r3/optimizer.py",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/IMPLEMENTATION_AUDIT.md",
+        "paper16_pg_forensics_r1/RUNTIME_SOURCE_PIN.json",
+        "paper16_pg_forensics_r1/tests.py"
+      ],
+      "verification_method": "Static five requested sources, pinned SciPy callback, guards/certificates",
+      "pending_reason": null
+    },
+    {
+      "id": "F-068",
+      "owner_line": 124,
+      "section": "4",
+      "requirement": "paper16_development_r3/optim_child.py",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/IMPLEMENTATION_AUDIT.md",
+        "paper16_pg_forensics_r1/RUNTIME_SOURCE_PIN.json",
+        "paper16_pg_forensics_r1/tests.py"
+      ],
+      "verification_method": "Static five requested sources, pinned SciPy callback, guards/certificates",
+      "pending_reason": null
+    },
+    {
+      "id": "F-069",
+      "owner_line": 125,
+      "section": "4",
+      "requirement": "paper16_development_r3/models.py",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/IMPLEMENTATION_AUDIT.md",
+        "paper16_pg_forensics_r1/RUNTIME_SOURCE_PIN.json",
+        "paper16_pg_forensics_r1/tests.py"
+      ],
+      "verification_method": "Static five requested sources, pinned SciPy callback, guards/certificates",
+      "pending_reason": null
+    },
+    {
+      "id": "F-070",
+      "owner_line": 126,
+      "section": "4",
+      "requirement": "paper16_development_r3/core.py",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/IMPLEMENTATION_AUDIT.md",
+        "paper16_pg_forensics_r1/RUNTIME_SOURCE_PIN.json",
+        "paper16_pg_forensics_r1/tests.py"
+      ],
+      "verification_method": "Static five requested sources, pinned SciPy callback, guards/certificates",
+      "pending_reason": null
+    },
+    {
+      "id": "F-071",
+      "owner_line": 127,
+      "section": "4",
+      "requirement": "paper16_m1/NUMERICAL_POLICY.json",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/IMPLEMENTATION_AUDIT.md",
+        "paper16_pg_forensics_r1/RUNTIME_SOURCE_PIN.json",
+        "paper16_pg_forensics_r1/tests.py"
+      ],
+      "verification_method": "Static five requested sources, pinned SciPy callback, guards/certificates",
+      "pending_reason": null
+    },
+    {
+      "id": "F-072",
+      "owner_line": 130,
+      "section": "4",
+      "requirement": "Check:",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/IMPLEMENTATION_AUDIT.md",
+        "paper16_pg_forensics_r1/RUNTIME_SOURCE_PIN.json",
+        "paper16_pg_forensics_r1/tests.py"
+      ],
+      "verification_method": "Static five requested sources, pinned SciPy callback, guards/certificates",
+      "pending_reason": null
+    },
+    {
+      "id": "F-073",
+      "owner_line": 132,
+      "section": "4",
+      "requirement": "- Termination handling.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/IMPLEMENTATION_AUDIT.md",
+        "paper16_pg_forensics_r1/RUNTIME_SOURCE_PIN.json",
+        "paper16_pg_forensics_r1/tests.py"
+      ],
+      "verification_method": "Static five requested sources, pinned SciPy callback, guards/certificates",
+      "pending_reason": null
+    },
+    {
+      "id": "F-074",
+      "owner_line": 133,
+      "section": "4",
+      "requirement": "- Frozen `ftol`, `gtol`, PG and bounds.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/IMPLEMENTATION_AUDIT.md",
+        "paper16_pg_forensics_r1/RUNTIME_SOURCE_PIN.json",
+        "paper16_pg_forensics_r1/tests.py"
+      ],
+      "verification_method": "Static five requested sources, pinned SciPy callback, guards/certificates",
+      "pending_reason": null
+    },
+    {
+      "id": "F-075",
+      "owner_line": 134,
+      "section": "4",
+      "requirement": "- Brokered FG and iteration accounting.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/IMPLEMENTATION_AUDIT.md",
+        "paper16_pg_forensics_r1/RUNTIME_SOURCE_PIN.json",
+        "paper16_pg_forensics_r1/tests.py"
+      ],
+      "verification_method": "Static five requested sources, pinned SciPy callback, guards/certificates",
+      "pending_reason": null
+    },
+    {
+      "id": "F-076",
+      "owner_line": 135,
+      "section": "4",
+      "requirement": "- Gradient/vector identity.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/IMPLEMENTATION_AUDIT.md",
+        "paper16_pg_forensics_r1/RUNTIME_SOURCE_PIN.json",
+        "paper16_pg_forensics_r1/tests.py"
+      ],
+      "verification_method": "Static five requested sources, pinned SciPy callback, guards/certificates",
+      "pending_reason": null
+    },
+    {
+      "id": "F-077",
+      "owner_line": 136,
+      "section": "4",
+      "requirement": "- Projected-gradient calculation.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/IMPLEMENTATION_AUDIT.md",
+        "paper16_pg_forensics_r1/RUNTIME_SOURCE_PIN.json",
+        "paper16_pg_forensics_r1/tests.py"
+      ],
+      "verification_method": "Static five requested sources, pinned SciPy callback, guards/certificates",
+      "pending_reason": null
+    },
+    {
+      "id": "F-078",
+      "owner_line": 137,
+      "section": "4",
+      "requirement": "- Checkpoint certificate handling.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/IMPLEMENTATION_AUDIT.md",
+        "paper16_pg_forensics_r1/RUNTIME_SOURCE_PIN.json",
+        "paper16_pg_forensics_r1/tests.py"
+      ],
+      "verification_method": "Static five requested sources, pinned SciPy callback, guards/certificates",
+      "pending_reason": null
+    },
+    {
+      "id": "F-079",
+      "owner_line": 138,
+      "section": "4",
+      "requirement": "- Whether SciPy success is correctly distinguished from the mandatory scientific gate.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/IMPLEMENTATION_AUDIT.md",
+        "paper16_pg_forensics_r1/RUNTIME_SOURCE_PIN.json",
+        "paper16_pg_forensics_r1/tests.py"
+      ],
+      "verification_method": "Static five requested sources, pinned SciPy callback, guards/certificates",
+      "pending_reason": null
+    },
+    {
+      "id": "F-080",
+      "owner_line": 140,
+      "section": "4",
+      "requirement": "A coding defect must be supported by concrete reproducible evidence, not inferred merely from a failed endpoint.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/IMPLEMENTATION_AUDIT.md",
+        "paper16_pg_forensics_r1/RUNTIME_SOURCE_PIN.json",
+        "paper16_pg_forensics_r1/tests.py"
+      ],
+      "verification_method": "Static five requested sources, pinned SciPy callback, guards/certificates",
+      "pending_reason": null
+    },
+    {
+      "id": "F-081",
+      "owner_line": 144,
+      "section": "5",
+      "requirement": "Report the most defensible classification:",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/ROOT_CAUSE_ASSESSMENT.md"
+      ],
+      "verification_method": "Exactly one verdict; support/contrary/unknown table for alternative causes",
+      "pending_reason": null
+    },
+    {
+      "id": "F-082",
+      "owner_line": 146,
+      "section": "5",
+      "requirement": "- `CONFIRMED_IMPLEMENTATION_DEFECT`",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/ROOT_CAUSE_ASSESSMENT.md"
+      ],
+      "verification_method": "Exactly one verdict; support/contrary/unknown table for alternative causes",
+      "pending_reason": null
+    },
+    {
+      "id": "F-083",
+      "owner_line": 147,
+      "section": "5",
+      "requirement": "- `SOLVER_TERMINATION_POLICY_LIMITATION`",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/ROOT_CAUSE_ASSESSMENT.md"
+      ],
+      "verification_method": "Exactly one verdict; support/contrary/unknown table for alternative causes",
+      "pending_reason": null
+    },
+    {
+      "id": "F-084",
+      "owner_line": 148,
+      "section": "5",
+      "requirement": "- `NUMERICAL_CONDITIONING_CONCERN`",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/ROOT_CAUSE_ASSESSMENT.md"
+      ],
+      "verification_method": "Exactly one verdict; support/contrary/unknown table for alternative causes",
+      "pending_reason": null
+    },
+    {
+      "id": "F-085",
+      "owner_line": 149,
+      "section": "5",
+      "requirement": "- `INSUFFICIENT_EVIDENCE`",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/ROOT_CAUSE_ASSESSMENT.md"
+      ],
+      "verification_method": "Exactly one verdict; support/contrary/unknown table for alternative causes",
+      "pending_reason": null
+    },
+    {
+      "id": "F-086",
+      "owner_line": 150,
+      "section": "5",
+      "requirement": "- `MIXED_CAUSES`",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/ROOT_CAUSE_ASSESSMENT.md"
+      ],
+      "verification_method": "Exactly one verdict; support/contrary/unknown table for alternative causes",
+      "pending_reason": null
+    },
+    {
+      "id": "F-087",
+      "owner_line": 152,
+      "section": "5",
+      "requirement": "These are diagnostic categories, not new scientific pass/fail categories.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/ROOT_CAUSE_ASSESSMENT.md"
+      ],
+      "verification_method": "Exactly one verdict; support/contrary/unknown table for alternative causes",
+      "pending_reason": null
+    },
+    {
+      "id": "F-088",
+      "owner_line": 154,
+      "section": "5",
+      "requirement": "For every proposed explanation, identify supporting evidence, contradictory evidence and what remains unknown.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/ROOT_CAUSE_ASSESSMENT.md"
+      ],
+      "verification_method": "Exactly one verdict; support/contrary/unknown table for alternative causes",
+      "pending_reason": null
+    },
+    {
+      "id": "F-089",
+      "owner_line": 156,
+      "section": "5",
+      "requirement": "Do not claim causal certainty when multiple explanations remain viable.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/ROOT_CAUSE_ASSESSMENT.md"
+      ],
+      "verification_method": "Exactly one verdict; support/contrary/unknown table for alternative causes",
+      "pending_reason": null
+    },
+    {
+      "id": "F-090",
+      "owner_line": 160,
+      "section": "6",
+      "requirement": "Based on the diagnosis, prepare a recommendation for a future **separately authorized** numerical mission.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/PROSPECTIVE_OPTIONS.md"
+      ],
+      "verification_method": "Allfour future paths, contract/review/reuse/consumption/claims/budget, no execution",
+      "pending_reason": null
+    },
+    {
+      "id": "F-091",
+      "owner_line": 162,
+      "section": "6",
+      "requirement": "Consider whether:",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/PROSPECTIVE_OPTIONS.md"
+      ],
+      "verification_method": "Allfour future paths, contract/review/reuse/consumption/claims/budget, no execution",
+      "pending_reason": null
+    },
+    {
+      "id": "F-092",
+      "owner_line": 164,
+      "section": "6",
+      "requirement": "1. A genuine implementation bug needs repair.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/PROSPECTIVE_OPTIONS.md"
+      ],
+      "verification_method": "Allfour future paths, contract/review/reuse/consumption/claims/budget, no execution",
+      "pending_reason": null
+    },
+    {
+      "id": "F-093",
+      "owner_line": 165,
+      "section": "6",
+      "requirement": "2. The optimizer's termination handling needs an explicitly registered prospective change.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/PROSPECTIVE_OPTIONS.md"
+      ],
+      "verification_method": "Allfour future paths, contract/review/reuse/consumption/claims/budget, no execution",
+      "pending_reason": null
+    },
+    {
+      "id": "F-094",
+      "owner_line": 166,
+      "section": "6",
+      "requirement": "3. Numerical scaling or conditioning requires a new protocol amendment.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/PROSPECTIVE_OPTIONS.md"
+      ],
+      "verification_method": "Allfour future paths, contract/review/reuse/consumption/claims/budget, no execution",
+      "pending_reason": null
+    },
+    {
+      "id": "F-095",
+      "owner_line": 167,
+      "section": "6",
+      "requirement": "4. The frozen method should simply retain this failure as a scientific feasibility limitation.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/PROSPECTIVE_OPTIONS.md"
+      ],
+      "verification_method": "Allfour future paths, contract/review/reuse/consumption/claims/budget, no execution",
+      "pending_reason": null
+    },
+    {
+      "id": "F-096",
+      "owner_line": 169,
+      "section": "6",
+      "requirement": "For each option, explain:",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/PROSPECTIVE_OPTIONS.md"
+      ],
+      "verification_method": "Allfour future paths, contract/review/reuse/consumption/claims/budget, no execution",
+      "pending_reason": null
+    },
+    {
+      "id": "F-097",
+      "owner_line": 171,
+      "section": "6",
+      "requirement": "- Whether it changes the frozen M1 numerical contract.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/PROSPECTIVE_OPTIONS.md"
+      ],
+      "verification_method": "Allfour future paths, contract/review/reuse/consumption/claims/budget, no execution",
+      "pending_reason": null
+    },
+    {
+      "id": "F-098",
+      "owner_line": 172,
+      "section": "6",
+      "requirement": "- Whether new independent review and prospective registration are required.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/PROSPECTIVE_OPTIONS.md"
+      ],
+      "verification_method": "Allfour future paths, contract/review/reuse/consumption/claims/budget, no execution",
+      "pending_reason": null
+    },
+    {
+      "id": "F-099",
+      "owner_line": 173,
+      "section": "6",
+      "requirement": "- Which historical results remain consumed.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/PROSPECTIVE_OPTIONS.md"
+      ],
+      "verification_method": "Allfour future paths, contract/review/reuse/consumption/claims/budget, no execution",
+      "pending_reason": null
+    },
+    {
+      "id": "F-100",
+      "owner_line": 174,
+      "section": "6",
+      "requirement": "- What can be safely reused by exact identity.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/PROSPECTIVE_OPTIONS.md"
+      ],
+      "verification_method": "Allfour future paths, contract/review/reuse/consumption/claims/budget, no execution",
+      "pending_reason": null
+    },
+    {
+      "id": "F-101",
+      "owner_line": 175,
+      "section": "6",
+      "requirement": "- What scientific claims would remain unavailable.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/PROSPECTIVE_OPTIONS.md"
+      ],
+      "verification_method": "Allfour future paths, contract/review/reuse/consumption/claims/budget, no execution",
+      "pending_reason": null
+    },
+    {
+      "id": "F-102",
+      "owner_line": 176,
+      "section": "6",
+      "requirement": "- Expected computation and resource requirements.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/PROSPECTIVE_OPTIONS.md"
+      ],
+      "verification_method": "Allfour future paths, contract/review/reuse/consumption/claims/budget, no execution",
+      "pending_reason": null
+    },
+    {
+      "id": "F-103",
+      "owner_line": 178,
+      "section": "6",
+      "requirement": "**Never recommend simply relaxing PG from 1e-5 or deleting the S02/C obligation to obtain PASS.**",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/PROSPECTIVE_OPTIONS.md"
+      ],
+      "verification_method": "Allfour future paths, contract/review/reuse/consumption/claims/budget, no execution",
+      "pending_reason": null
+    },
+    {
+      "id": "F-104",
+      "owner_line": 180,
+      "section": "6",
+      "requirement": "Do not execute any proposed repair, continuation or new scientific experiment in this mission.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/PROSPECTIVE_OPTIONS.md"
+      ],
+      "verification_method": "Allfour future paths, contract/review/reuse/consumption/claims/budget, no execution",
+      "pending_reason": null
+    },
+    {
+      "id": "F-105",
+      "owner_line": 184,
+      "section": "7",
+      "requirement": "Create a new isolated workspace:",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FINAL_REPORT.md",
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json"
+      ],
+      "verification_method": "Isolated namespace, missing-evidence disclosure, no raw arrays staged",
+      "pending_reason": null
+    },
+    {
+      "id": "F-106",
+      "owner_line": 188,
+      "section": "7",
+      "requirement": "Deliver:",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FINAL_REPORT.md",
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json"
+      ],
+      "verification_method": "Isolated namespace, missing-evidence disclosure, no raw arrays staged",
+      "pending_reason": null
+    },
+    {
+      "id": "F-107",
+      "owner_line": 190,
+      "section": "7",
+      "requirement": "- `SOURCE_AND_EVIDENCE_AUDIT.json`",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json"
+      ],
+      "verification_method": "Requested isolated deliverable exists, independently reviewed and hash bound",
+      "pending_reason": null
+    },
+    {
+      "id": "F-108",
+      "owner_line": 191,
+      "section": "7",
+      "requirement": "- `FAILED_COORDINATE_ANALYSIS.csv`",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FAILED_COORDINATE_ANALYSIS.csv"
+      ],
+      "verification_method": "Requested isolated deliverable exists, independently reviewed and hash bound",
+      "pending_reason": null
+    },
+    {
+      "id": "F-109",
+      "owner_line": 192,
+      "section": "7",
+      "requirement": "- `SAVED_TRAJECTORY_ANALYSIS.json`",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/SAVED_TRAJECTORY_ANALYSIS.json"
+      ],
+      "verification_method": "Requested isolated deliverable exists, independently reviewed and hash bound",
+      "pending_reason": null
+    },
+    {
+      "id": "F-110",
+      "owner_line": 193,
+      "section": "7",
+      "requirement": "- `ACCEPTED_FIT_COMPARISON.json`",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/ACCEPTED_FIT_COMPARISON.json"
+      ],
+      "verification_method": "Requested isolated deliverable exists, independently reviewed and hash bound",
+      "pending_reason": null
+    },
+    {
+      "id": "F-111",
+      "owner_line": 194,
+      "section": "7",
+      "requirement": "- `IMPLEMENTATION_AUDIT.md`",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/IMPLEMENTATION_AUDIT.md"
+      ],
+      "verification_method": "Requested isolated deliverable exists, independently reviewed and hash bound",
+      "pending_reason": null
+    },
+    {
+      "id": "F-112",
+      "owner_line": 195,
+      "section": "7",
+      "requirement": "- `ROOT_CAUSE_ASSESSMENT.md`",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/ROOT_CAUSE_ASSESSMENT.md"
+      ],
+      "verification_method": "Requested isolated deliverable exists, independently reviewed and hash bound",
+      "pending_reason": null
+    },
+    {
+      "id": "F-113",
+      "owner_line": 196,
+      "section": "7",
+      "requirement": "- `PROSPECTIVE_OPTIONS.md`",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/PROSPECTIVE_OPTIONS.md"
+      ],
+      "verification_method": "Requested isolated deliverable exists, independently reviewed and hash bound",
+      "pending_reason": null
+    },
+    {
+      "id": "F-114",
+      "owner_line": 197,
+      "section": "7",
+      "requirement": "- `A1_A10_CLAIM_AUDIT.md`",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/A1_A10_CLAIM_AUDIT.md"
+      ],
+      "verification_method": "Requested isolated deliverable exists, independently reviewed and hash bound",
+      "pending_reason": null
+    },
+    {
+      "id": "F-115",
+      "owner_line": 198,
+      "section": "7",
+      "requirement": "- `FINAL_REPORT.md`",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FINAL_REPORT.md"
+      ],
+      "verification_method": "Requested isolated deliverable exists, independently reviewed and hash bound",
+      "pending_reason": null
+    },
+    {
+      "id": "F-116",
+      "owner_line": 199,
+      "section": "7",
+      "requirement": "- Saved-only reproduction command",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/REPRODUCE_FORENSICS.ps1",
+        "FORENSIC_REPRODUCTION_FINAL.log"
+      ],
+      "verification_method": "Native saved-only execution after final code freeze",
+      "pending_reason": "Final reproduction/review or postcommit readback; not falsely complete"
+    },
+    {
+      "id": "F-117",
+      "owner_line": 200,
+      "section": "7",
+      "requirement": "- Independent internal review",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "evidence": [
+        "review.md"
+      ],
+      "verification_method": "Independent candidate review, exact hash binding",
+      "pending_reason": "Final reproduction/review or postcommit readback; not falsely complete"
+    },
+    {
+      "id": "F-118",
+      "owner_line": 202,
+      "section": "7",
+      "requirement": "Record all unavailable evidence explicitly.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FINAL_REPORT.md",
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json"
+      ],
+      "verification_method": "Isolated namespace, missing-evidence disclosure, no raw arrays staged",
+      "pending_reason": null
+    },
+    {
+      "id": "F-119",
+      "owner_line": 204,
+      "section": "7",
+      "requirement": "Keep raw/private arrays out of Git.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FINAL_REPORT.md",
+        "paper16_pg_forensics_r1/SOURCE_AND_EVIDENCE_AUDIT.json"
+      ],
+      "verification_method": "Isolated namespace, missing-evidence disclosure, no raw arrays staged",
+      "pending_reason": null
+    },
+    {
+      "id": "F-120",
+      "owner_line": 206,
+      "section": "7",
+      "requirement": "Archive through normal `origin/test` commit/push with exact remote readback and clean verification.",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/work/FINAL_REMOTE_RECEIPT.json"
+      ],
+      "verification_method": "Postcommit remote blob readback plus clean; pending until archive",
+      "pending_reason": "Final reproduction/review or postcommit readback; not falsely complete"
+    },
+    {
+      "id": "F-121",
+      "owner_line": 210,
+      "section": "8",
+      "requirement": "Return:",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FINAL_REPORT.md",
+        "paper16_pg_forensics_r1/REPORT_FIELDS.json"
+      ],
+      "verification_method": "Required terminal facts and Chinese explanation; final Git-dependent fields externally sealed after readback",
+      "pending_reason": null
+    },
+    {
+      "id": "F-122",
+      "owner_line": 213,
+      "section": "8",
+      "requirement": "MISSION_ID=",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FINAL_REPORT.md",
+        "paper16_pg_forensics_r1/REPORT_FIELDS.json"
+      ],
+      "verification_method": "Required terminal facts and Chinese explanation; final Git-dependent fields externally sealed after readback",
+      "pending_reason": null
+    },
+    {
+      "id": "F-123",
+      "owner_line": 214,
+      "section": "8",
+      "requirement": "BASE_SHA=",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FINAL_REPORT.md",
+        "paper16_pg_forensics_r1/REPORT_FIELDS.json"
+      ],
+      "verification_method": "Required terminal facts and Chinese explanation; final Git-dependent fields externally sealed after readback",
+      "pending_reason": null
+    },
+    {
+      "id": "F-124",
+      "owner_line": 215,
+      "section": "8",
+      "requirement": "FINAL_STATUS=",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FINAL_REPORT.md",
+        "paper16_pg_forensics_r1/REPORT_FIELDS.json"
+      ],
+      "verification_method": "Required terminal facts and Chinese explanation; final Git-dependent fields externally sealed after readback",
+      "pending_reason": "Final reproduction/review or postcommit readback; not falsely complete"
+    },
+    {
+      "id": "F-125",
+      "owner_line": 216,
+      "section": "8",
+      "requirement": "DIAGNOSTIC_VERDICT=",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FINAL_REPORT.md",
+        "paper16_pg_forensics_r1/REPORT_FIELDS.json"
+      ],
+      "verification_method": "Required terminal facts and Chinese explanation; final Git-dependent fields externally sealed after readback",
+      "pending_reason": null
+    },
+    {
+      "id": "F-126",
+      "owner_line": 218,
+      "section": "8",
+      "requirement": "FAILED_PG_RECONFIRMED=",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FINAL_REPORT.md",
+        "paper16_pg_forensics_r1/REPORT_FIELDS.json"
+      ],
+      "verification_method": "Required terminal facts and Chinese explanation; final Git-dependent fields externally sealed after readback",
+      "pending_reason": null
+    },
+    {
+      "id": "F-127",
+      "owner_line": 219,
+      "section": "8",
+      "requirement": "ORIGINAL_R3_STOP_PRESERVED=",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FINAL_REPORT.md",
+        "paper16_pg_forensics_r1/REPORT_FIELDS.json"
+      ],
+      "verification_method": "Required terminal facts and Chinese explanation; final Git-dependent fields externally sealed after readback",
+      "pending_reason": null
+    },
+    {
+      "id": "F-128",
+      "owner_line": 220,
+      "section": "8",
+      "requirement": "SAVED_COORDINATES_VERIFIED=",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FINAL_REPORT.md",
+        "paper16_pg_forensics_r1/REPORT_FIELDS.json"
+      ],
+      "verification_method": "Required terminal facts and Chinese explanation; final Git-dependent fields externally sealed after readback",
+      "pending_reason": null
+    },
+    {
+      "id": "F-129",
+      "owner_line": 221,
+      "section": "8",
+      "requirement": "SAVED_TRAJECTORY_VERIFIED=",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FINAL_REPORT.md",
+        "paper16_pg_forensics_r1/REPORT_FIELDS.json"
+      ],
+      "verification_method": "Required terminal facts and Chinese explanation; final Git-dependent fields externally sealed after readback",
+      "pending_reason": null
+    },
+    {
+      "id": "F-130",
+      "owner_line": 223,
+      "section": "8",
+      "requirement": "IMPLEMENTATION_BUG_CONFIRMED=",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FINAL_REPORT.md",
+        "paper16_pg_forensics_r1/REPORT_FIELDS.json"
+      ],
+      "verification_method": "Required terminal facts and Chinese explanation; final Git-dependent fields externally sealed after readback",
+      "pending_reason": null
+    },
+    {
+      "id": "F-131",
+      "owner_line": 224,
+      "section": "8",
+      "requirement": "TERMINATION_BEHAVIOR=",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FINAL_REPORT.md",
+        "paper16_pg_forensics_r1/REPORT_FIELDS.json"
+      ],
+      "verification_method": "Required terminal facts and Chinese explanation; final Git-dependent fields externally sealed after readback",
+      "pending_reason": null
+    },
+    {
+      "id": "F-132",
+      "owner_line": 225,
+      "section": "8",
+      "requirement": "CONDITIONING_EVIDENCE=",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FINAL_REPORT.md",
+        "paper16_pg_forensics_r1/REPORT_FIELDS.json"
+      ],
+      "verification_method": "Required terminal facts and Chinese explanation; final Git-dependent fields externally sealed after readback",
+      "pending_reason": null
+    },
+    {
+      "id": "F-133",
+      "owner_line": 226,
+      "section": "8",
+      "requirement": "ROOT_CAUSE_CONFIDENCE=",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FINAL_REPORT.md",
+        "paper16_pg_forensics_r1/REPORT_FIELDS.json"
+      ],
+      "verification_method": "Required terminal facts and Chinese explanation; final Git-dependent fields externally sealed after readback",
+      "pending_reason": null
+    },
+    {
+      "id": "F-134",
+      "owner_line": 228,
+      "section": "8",
+      "requirement": "NEW_MODEL_FITS=0",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FINAL_REPORT.md",
+        "paper16_pg_forensics_r1/REPORT_FIELDS.json"
+      ],
+      "verification_method": "Required terminal facts and Chinese explanation; final Git-dependent fields externally sealed after readback",
+      "pending_reason": null
+    },
+    {
+      "id": "F-135",
+      "owner_line": 229,
+      "section": "8",
+      "requirement": "NEW_OPTIMIZER_CALLS=0",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FINAL_REPORT.md",
+        "paper16_pg_forensics_r1/REPORT_FIELDS.json"
+      ],
+      "verification_method": "Required terminal facts and Chinese explanation; final Git-dependent fields externally sealed after readback",
+      "pending_reason": null
+    },
+    {
+      "id": "F-136",
+      "owner_line": 230,
+      "section": "8",
+      "requirement": "NEW_SCIENTIFIC_SCORES=0",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FINAL_REPORT.md",
+        "paper16_pg_forensics_r1/REPORT_FIELDS.json"
+      ],
+      "verification_method": "Required terminal facts and Chinese explanation; final Git-dependent fields externally sealed after readback",
+      "pending_reason": null
+    },
+    {
+      "id": "F-137",
+      "owner_line": 231,
+      "section": "8",
+      "requirement": "B_E_NEURAL_ACCESS=false",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FINAL_REPORT.md",
+        "paper16_pg_forensics_r1/REPORT_FIELDS.json"
+      ],
+      "verification_method": "Required terminal facts and Chinese explanation; final Git-dependent fields externally sealed after readback",
+      "pending_reason": null
+    },
+    {
+      "id": "F-138",
+      "owner_line": 232,
+      "section": "8",
+      "requirement": "FINAL_C_ACCESS=false",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FINAL_REPORT.md",
+        "paper16_pg_forensics_r1/REPORT_FIELDS.json"
+      ],
+      "verification_method": "Required terminal facts and Chinese explanation; final Git-dependent fields externally sealed after readback",
+      "pending_reason": null
+    },
+    {
+      "id": "F-139",
+      "owner_line": 233,
+      "section": "8",
+      "requirement": "FINAL_D_ACCESS=false",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FINAL_REPORT.md",
+        "paper16_pg_forensics_r1/REPORT_FIELDS.json"
+      ],
+      "verification_method": "Required terminal facts and Chinese explanation; final Git-dependent fields externally sealed after readback",
+      "pending_reason": null
+    },
+    {
+      "id": "F-140",
+      "owner_line": 235,
+      "section": "8",
+      "requirement": "RECOMMENDED_NEXT_MISSION=",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FINAL_REPORT.md",
+        "paper16_pg_forensics_r1/REPORT_FIELDS.json"
+      ],
+      "verification_method": "Required terminal facts and Chinese explanation; final Git-dependent fields externally sealed after readback",
+      "pending_reason": null
+    },
+    {
+      "id": "F-141",
+      "owner_line": 236,
+      "section": "8",
+      "requirement": "SCIENTIFIC_AMENDMENT_REQUIRED=",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FINAL_REPORT.md",
+        "paper16_pg_forensics_r1/REPORT_FIELDS.json"
+      ],
+      "verification_method": "Required terminal facts and Chinese explanation; final Git-dependent fields externally sealed after readback",
+      "pending_reason": null
+    },
+    {
+      "id": "F-142",
+      "owner_line": 237,
+      "section": "8",
+      "requirement": "INDEPENDENT_REVIEW=",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "evidence": [
+        "review.md"
+      ],
+      "verification_method": "Independent candidate review, exact hash binding",
+      "pending_reason": "Final reproduction/review or postcommit readback; not falsely complete"
+    },
+    {
+      "id": "F-143",
+      "owner_line": 238,
+      "section": "8",
+      "requirement": "GIT_COMMIT=",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/work/FINAL_REMOTE_RECEIPT.json"
+      ],
+      "verification_method": "Postcommit remote blob readback plus clean; pending until archive",
+      "pending_reason": "Final reproduction/review or postcommit readback; not falsely complete"
+    },
+    {
+      "id": "F-144",
+      "owner_line": 239,
+      "section": "8",
+      "requirement": "REMOTE_VERIFICATION=",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/work/FINAL_REMOTE_RECEIPT.json"
+      ],
+      "verification_method": "Postcommit remote blob readback plus clean; pending until archive",
+      "pending_reason": "Final reproduction/review or postcommit readback; not falsely complete"
+    },
+    {
+      "id": "F-145",
+      "owner_line": 240,
+      "section": "8",
+      "requirement": "WORKTREE_CLEAN=",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/work/FINAL_REMOTE_RECEIPT.json"
+      ],
+      "verification_method": "Postcommit remote blob readback plus clean; pending until archive",
+      "pending_reason": "Final reproduction/review or postcommit readback; not falsely complete"
+    },
+    {
+      "id": "F-146",
+      "owner_line": 243,
+      "section": "8",
+      "requirement": "End with a concise Chinese explanation:",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FINAL_REPORT.md",
+        "paper16_pg_forensics_r1/REPORT_FIELDS.json"
+      ],
+      "verification_method": "Required terminal facts and Chinese explanation; final Git-dependent fields externally sealed after readback",
+      "pending_reason": null
+    },
+    {
+      "id": "F-147",
+      "owner_line": 245,
+      "section": "8",
+      "requirement": "**What most plausibly caused the PG failure, what is actually proven, and what the safest next authorized step should be.**",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FINAL_REPORT.md",
+        "paper16_pg_forensics_r1/REPORT_FIELDS.json"
+      ],
+      "verification_method": "Required terminal facts and Chinese explanation; final Git-dependent fields externally sealed after readback",
+      "pending_reason": null
+    },
+    {
+      "id": "F-148",
+      "owner_line": 247,
+      "section": "8",
+      "requirement": "Maintain original R3 STOP. No automatic scientific restart, Final evaluation or P17 activation.",
+      "status": "VERIFIED",
+      "evidence": [
+        "paper16_pg_forensics_r1/FINAL_REPORT.md",
+        "paper16_pg_forensics_r1/REPORT_FIELDS.json"
+      ],
+      "verification_method": "Required terminal facts and Chinese explanation; final Git-dependent fields externally sealed after readback",
+      "pending_reason": null
+    }
+  ],
+  "postcommit_completion": "paper16_pg_forensics_r1/work/FINAL_REQUIREMENT_COVERAGE.json"
+}
