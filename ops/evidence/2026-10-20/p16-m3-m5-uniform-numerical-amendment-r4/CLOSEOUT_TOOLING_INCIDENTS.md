@@ -1,0 +1,13 @@
+# Saved-only closeout tooling incidents
+
+These incidents occurred after the scientific process was absent. None caused a model call, restart, E access, threshold change, or alteration of the original scientific journal/state.
+
+1. `EXTERNAL_INTERRUPTION_REGRESSIONS_1.log`: eight metadata fixture tests failed because the sandbox default temporary directory did not permit creating/cleaning the fixture subtree. The log is retained.
+2. `EXTERNAL_INTERRUPTION_REGRESSIONS_2.log`: the fixture moved to the evidence directory, where the deep synthetic state path exceeded the applicable Windows path limit. Seven test methods passed; the endpoint-negative fixture method errored. The log is retained. The final fixture uses the short, repository-local `.r4t` temporary root outside the protected state snapshot. Assertions and scientific criteria were unchanged.
+3. `PROTECTED_SEAL_EXECUTION_1.log`: the create-only seal wrote a complete JSON inventory, then the command failed while printing its receipt because `flush=True` was incorrectly passed to `json.dumps`. The rejected helper source is preserved as `CLOSEOUT_SEAL_REJECTED_1.py`. The original inventory is retained byte-for-byte: 33,574 files, 7,157,373,855 bytes, SHA256 `7595606db3785e00421e6cbd1961b12dd6cf837d0bb7418adbb06868c26fa47c`. A parseable file and its presence alone do not establish full integrity; final saved-only reproduction must verify every referenced byte. No real seal rerun or overwrite was used to hide the failure.
+
+The print call was corrected to pass `flush` to `print`. A synthetic metadata regression verifies the receipt, exact two-file inventory, and refusal to overwrite an existing seal. `SAVED_CLOSURE_REGRESSIONS_5.log` records all original 14 and new 9 saved-only test methods passing. Independent reproduction and final scientific review remain separate gates.
+
+The independent audit's first execution also remains preserved in its own rejected script/log. Its assumption of 3,039 prior ledger rows was corrected against the actual 3,040-row immutable ledger; the last progress message had lagged the ledger. This is an audit-harness correction, not an added or retrospectively signed optimizer acceptance.
+
+After the real PowerShell reproduction returned exit 0, the first receipt-parser command failed before any write with `LookupError: unknown encoding: utf8-sig`. Only that metadata parser was corrected to the standard `utf-8-sig` codec and re-executed. The existing successful native reproduction log was parsed; the PowerShell reproduction and scientific computation were not repeated. The original native exit code and output remain unchanged.

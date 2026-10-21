@@ -1,0 +1,461 @@
+test_access_denied_or_live_job_is_not_process_loss (paper16_development_r4.test_interruption_saved.InterruptionTests.test_access_denied_or_live_job_is_not_process_loss) ... ERROR
+test_complete_or_failed_endpoint_cannot_be_hidden_as_partial (paper16_development_r4.test_interruption_saved.InterruptionTests.test_complete_or_failed_endpoint_cannot_be_hidden_as_partial) ... ERROR
+test_hash_tampering_and_unlisted_partial_files_fail_closed (paper16_development_r4.test_interruption_saved.InterruptionTests.test_hash_tampering_and_unlisted_partial_files_fail_closed) ... ERROR
+test_interruption_cannot_replace_any_scientific_terminal_receipt (paper16_development_r4.test_interruption_saved.InterruptionTests.test_interruption_cannot_replace_any_scientific_terminal_receipt) ... ERROR
+test_missing_or_forged_independent_approval_is_rejected (paper16_development_r4.test_interruption_saved.InterruptionTests.test_missing_or_forged_independent_approval_is_rejected) ... ERROR
+test_owner_shutdown_explanation_is_bound_and_cannot_authorize_restart (paper16_development_r4.test_interruption_saved.InterruptionTests.test_owner_shutdown_explanation_is_bound_and_cannot_authorize_restart) ... ERROR
+test_unknown_native_values_cannot_be_invented (paper16_development_r4.test_interruption_saved.InterruptionTests.test_unknown_native_values_cannot_be_invented) ... ERROR
+test_valid_metadata_does_not_supply_native_exit_or_scientific_pass (paper16_development_r4.test_interruption_saved.InterruptionTests.test_valid_metadata_does_not_supply_native_exit_or_scientific_pass) ... ERROR
+
+======================================================================
+ERROR: test_access_denied_or_live_job_is_not_process_loss (paper16_development_r4.test_interruption_saved.InterruptionTests.test_access_denied_or_live_job_is_not_process_loss)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{59df29c1-609d-4218-a40d-addac2ab13d2}\\AC\\Temp\\tmpeuxp1lae\\paper16_development_r4\\results'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r4\test_interruption_saved.py", line 16, in fixture
+    root=Path(directory);p=root/'paper16_development_r4';results=p/'results';results.mkdir(parents=True)
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1120, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{59df29c1-609d-4218-a40d-addac2ab13d2}\\AC\\Temp\\tmpeuxp1lae\\paper16_development_r4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{59df29c1-609d-4218-a40d-addac2ab13d2}\\AC\\Temp\\tmpeuxp1lae'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r4\test_interruption_saved.py", line 59, in test_access_denied_or_live_job_is_not_process_loss
+    with fixture() as (receipt,p,e,write),self.subTest(change=change):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r4\test_interruption_saved.py", line 15, in fixture
+    with tempfile.TemporaryDirectory() as directory:
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 943, in __exit__
+    self.cleanup()
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{59df29c1-609d-4218-a40d-addac2ab13d2}\\AC\\Temp\\tmpeuxp1lae'
+
+======================================================================
+ERROR: test_complete_or_failed_endpoint_cannot_be_hidden_as_partial (paper16_development_r4.test_interruption_saved.InterruptionTests.test_complete_or_failed_endpoint_cannot_be_hidden_as_partial)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{59df29c1-609d-4218-a40d-addac2ab13d2}\\AC\\Temp\\tmpfhdzqcfb\\paper16_development_r4\\results'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r4\test_interruption_saved.py", line 16, in fixture
+    root=Path(directory);p=root/'paper16_development_r4';results=p/'results';results.mkdir(parents=True)
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1120, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{59df29c1-609d-4218-a40d-addac2ab13d2}\\AC\\Temp\\tmpfhdzqcfb\\paper16_development_r4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{59df29c1-609d-4218-a40d-addac2ab13d2}\\AC\\Temp\\tmpfhdzqcfb'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r4\test_interruption_saved.py", line 82, in test_complete_or_failed_endpoint_cannot_be_hidden_as_partial
+    with fixture() as (receipt,p,e,write),self.subTest(name=name):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r4\test_interruption_saved.py", line 15, in fixture
+    with tempfile.TemporaryDirectory() as directory:
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 943, in __exit__
+    self.cleanup()
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{59df29c1-609d-4218-a40d-addac2ab13d2}\\AC\\Temp\\tmpfhdzqcfb'
+
+======================================================================
+ERROR: test_hash_tampering_and_unlisted_partial_files_fail_closed (paper16_development_r4.test_interruption_saved.InterruptionTests.test_hash_tampering_and_unlisted_partial_files_fail_closed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{59df29c1-609d-4218-a40d-addac2ab13d2}\\AC\\Temp\\tmp4ni2b9ms\\paper16_development_r4\\results'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r4\test_interruption_saved.py", line 16, in fixture
+    root=Path(directory);p=root/'paper16_development_r4';results=p/'results';results.mkdir(parents=True)
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1120, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{59df29c1-609d-4218-a40d-addac2ab13d2}\\AC\\Temp\\tmp4ni2b9ms\\paper16_development_r4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{59df29c1-609d-4218-a40d-addac2ab13d2}\\AC\\Temp\\tmp4ni2b9ms'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r4\test_interruption_saved.py", line 73, in test_hash_tampering_and_unlisted_partial_files_fail_closed
+    with fixture() as (receipt,p,e,write),self.subTest(target=target):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r4\test_interruption_saved.py", line 15, in fixture
+    with tempfile.TemporaryDirectory() as directory:
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 943, in __exit__
+    self.cleanup()
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{59df29c1-609d-4218-a40d-addac2ab13d2}\\AC\\Temp\\tmp4ni2b9ms'
+
+======================================================================
+ERROR: test_interruption_cannot_replace_any_scientific_terminal_receipt (paper16_development_r4.test_interruption_saved.InterruptionTests.test_interruption_cannot_replace_any_scientific_terminal_receipt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{59df29c1-609d-4218-a40d-addac2ab13d2}\\AC\\Temp\\tmpoesdjwmq\\paper16_development_r4\\results'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r4\test_interruption_saved.py", line 16, in fixture
+    root=Path(directory);p=root/'paper16_development_r4';results=p/'results';results.mkdir(parents=True)
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1120, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{59df29c1-609d-4218-a40d-addac2ab13d2}\\AC\\Temp\\tmpoesdjwmq\\paper16_development_r4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{59df29c1-609d-4218-a40d-addac2ab13d2}\\AC\\Temp\\tmpoesdjwmq'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r4\test_interruption_saved.py", line 67, in test_interruption_cannot_replace_any_scientific_terminal_receipt
+    with fixture() as (receipt,p,e,write),self.subTest(name=name):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r4\test_interruption_saved.py", line 15, in fixture
+    with tempfile.TemporaryDirectory() as directory:
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 943, in __exit__
+    self.cleanup()
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{59df29c1-609d-4218-a40d-addac2ab13d2}\\AC\\Temp\\tmpoesdjwmq'
+
+======================================================================
+ERROR: test_missing_or_forged_independent_approval_is_rejected (paper16_development_r4.test_interruption_saved.InterruptionTests.test_missing_or_forged_independent_approval_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{59df29c1-609d-4218-a40d-addac2ab13d2}\\AC\\Temp\\tmp8bnv6rr5\\paper16_development_r4\\results'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r4\test_interruption_saved.py", line 16, in fixture
+    root=Path(directory);p=root/'paper16_development_r4';results=p/'results';results.mkdir(parents=True)
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1120, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{59df29c1-609d-4218-a40d-addac2ab13d2}\\AC\\Temp\\tmp8bnv6rr5\\paper16_development_r4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{59df29c1-609d-4218-a40d-addac2ab13d2}\\AC\\Temp\\tmp8bnv6rr5'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r4\test_interruption_saved.py", line 87, in test_missing_or_forged_independent_approval_is_rejected
+    with fixture() as (receipt,p,e,write):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r4\test_interruption_saved.py", line 15, in fixture
+    with tempfile.TemporaryDirectory() as directory:
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 943, in __exit__
+    self.cleanup()
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{59df29c1-609d-4218-a40d-addac2ab13d2}\\AC\\Temp\\tmp8bnv6rr5'
+
+======================================================================
+ERROR: test_owner_shutdown_explanation_is_bound_and_cannot_authorize_restart (paper16_development_r4.test_interruption_saved.InterruptionTests.test_owner_shutdown_explanation_is_bound_and_cannot_authorize_restart)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{59df29c1-609d-4218-a40d-addac2ab13d2}\\AC\\Temp\\tmpnga47zku\\paper16_development_r4\\results'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r4\test_interruption_saved.py", line 16, in fixture
+    root=Path(directory);p=root/'paper16_development_r4';results=p/'results';results.mkdir(parents=True)
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1120, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{59df29c1-609d-4218-a40d-addac2ab13d2}\\AC\\Temp\\tmpnga47zku\\paper16_development_r4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{59df29c1-609d-4218-a40d-addac2ab13d2}\\AC\\Temp\\tmpnga47zku'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r4\test_interruption_saved.py", line 101, in test_owner_shutdown_explanation_is_bound_and_cannot_authorize_restart
+    with fixture() as (receipt,p,e,write):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r4\test_interruption_saved.py", line 15, in fixture
+    with tempfile.TemporaryDirectory() as directory:
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 943, in __exit__
+    self.cleanup()
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{59df29c1-609d-4218-a40d-addac2ab13d2}\\AC\\Temp\\tmpnga47zku'
+
+======================================================================
+ERROR: test_unknown_native_values_cannot_be_invented (paper16_development_r4.test_interruption_saved.InterruptionTests.test_unknown_native_values_cannot_be_invented)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{59df29c1-609d-4218-a40d-addac2ab13d2}\\AC\\Temp\\tmp8uq4cg0v\\paper16_development_r4\\results'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r4\test_interruption_saved.py", line 16, in fixture
+    root=Path(directory);p=root/'paper16_development_r4';results=p/'results';results.mkdir(parents=True)
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1120, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{59df29c1-609d-4218-a40d-addac2ab13d2}\\AC\\Temp\\tmp8uq4cg0v\\paper16_development_r4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{59df29c1-609d-4218-a40d-addac2ab13d2}\\AC\\Temp\\tmp8uq4cg0v'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r4\test_interruption_saved.py", line 53, in test_unknown_native_values_cannot_be_invented
+    with fixture() as (receipt,p,e,write),self.subTest(key=key),self.assertRaises(RuntimeError):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r4\test_interruption_saved.py", line 15, in fixture
+    with tempfile.TemporaryDirectory() as directory:
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 943, in __exit__
+    self.cleanup()
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{59df29c1-609d-4218-a40d-addac2ab13d2}\\AC\\Temp\\tmp8uq4cg0v'
+
+======================================================================
+ERROR: test_valid_metadata_does_not_supply_native_exit_or_scientific_pass (paper16_development_r4.test_interruption_saved.InterruptionTests.test_valid_metadata_does_not_supply_native_exit_or_scientific_pass)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{59df29c1-609d-4218-a40d-addac2ab13d2}\\AC\\Temp\\tmp05eg60qo\\paper16_development_r4\\results'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r4\test_interruption_saved.py", line 16, in fixture
+    root=Path(directory);p=root/'paper16_development_r4';results=p/'results';results.mkdir(parents=True)
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1120, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{59df29c1-609d-4218-a40d-addac2ab13d2}\\AC\\Temp\\tmp05eg60qo\\paper16_development_r4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{59df29c1-609d-4218-a40d-addac2ab13d2}\\AC\\Temp\\tmp05eg60qo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r4\test_interruption_saved.py", line 46, in test_valid_metadata_does_not_supply_native_exit_or_scientific_pass
+    with fixture() as (receipt,p,e,write):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r4\test_interruption_saved.py", line 15, in fixture
+    with tempfile.TemporaryDirectory() as directory:
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 943, in __exit__
+    self.cleanup()
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'C:\\Users\\85993\\AppData\\Local\\Packages\\sandbox.{59df29c1-609d-4218-a40d-addac2ab13d2}\\AC\\Temp\\tmp05eg60qo'
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.084s
+
+FAILED (errors=8)

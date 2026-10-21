@@ -1,0 +1,449 @@
+# CCPN — P16 CODEX MASTER PROMPT
+## P16-M3-M5-UNIFORM-NUMERICAL-AMENDMENT-R4
+
+### 0. MISSION AUTHORIZATION
+
+Repository: `RiconasSun/neuralsignal-theory`
+
+Branch: `test`
+
+**REQUIRED_BASE_SHA:**
+`3a7fb87c879410155595ae6a640730c290e080a9`
+
+**MISSION_ID:**
+`P16-M3-M5-UNIFORM-NUMERICAL-AMENDMENT-R4`
+
+This is a NEW prospectively authorized, exploratory Development study, not a retry or retrospective repair of R3.
+
+**OBJECTIVE:**
+
+Register a uniform numerical termination-policy amendment, independently certify the eligibility of previously saved numerical states, and conditionally complete the frozen P16 M3–M5 Development pipeline.
+
+Execution sequence:
+
+**Prospective amendment → 952-state compatibility audit → independent pre-execution approval → new bounded A fitting → complete M4 freeze → single E evaluation → independent review → archive.**
+
+Every transition requires the previous mandatory gate to PASS.
+
+STOP on any mandatory failure. No automatic fallback to a different design.
+
+**Final C/D, M6 and P17 remain unauthorized.**
+
+---
+
+### 1. EVIDENCE AND HISTORICAL BOUNDARY
+
+Verify exact `origin/test` BASE and clean worktree.
+
+Read and verify the original M1 protocol, all frozen equations, numerical requirements, source/QC specifications, statistical plan, sensitivities, controls and Final boundaries.
+
+Read:
+
+- `paper16_development_r3/SCIENTIFIC_CLOSEOUT.md`
+- `paper16_development_r3/EXECUTION_FACTS.json`
+- `paper16_development_r3/PROTECTED_STATE_MANIFEST.json`
+- `paper16_pg_forensics_r1/FINAL_REPORT.md`
+- `paper16_termination_feasibility1/FINAL_REPORT.md`
+- `paper16_termination_feasibility1/FUTURE_DEVELOPMENT_AMENDMENT_PROPOSAL.md`
+- `paper16_termination_feasibility1/CANDIDATE_NUMERICAL_POLICY.json`
+
+Verify protected saved-state identities and inherited saved-only reproduction.
+
+Historical facts must remain unchanged:
+
+```text
+R3 SCIENTIFIC STOP = STOP_NUMERICAL_REQUIRED_GATE
+R3 optimizer attempts = 953
+R3 accepted numerical endpoints = 952
+R3 failed endpoints = 1
+R3 unattempted tasks = 5518
+R3 B0 analytic certificates = 216
+R3 planned optimizer tasks = 6471
+R3 global B1 lambda = 1.0
+
+Single-case ftol=0 feasibility = PASS
+Single-case diagnostic attempts = 1
+Original R3 historical STOP cleared = false
+```
+
+No old attempt, review, selection or failure may be rewritten.
+
+---
+
+### 2. PROSPECTIVE NUMERICAL AMENDMENT
+
+Prospectively register the following NEW full-Development policy:
+
+```text
+Algorithm: L-BFGS-B
+
+ftol = 0.0                NEW
+gtol = 2e-6               UNCHANGED
+maxiter = 1500            UNCHANGED
+maxfun = 6000             UNCHANGED
+maxls = 40                UNCHANGED
+maxcor = 10               UNCHANGED
+
+Scientific PG <= 1e-5    UNCHANGED
+Independent AD <= 1e-8   UNCHANGED
+Frozen FD h = 1e-5       UNCHANGED
+FD error <= 2e-5         UNCHANGED
+```
+
+Apply the new termination policy uniformly to all NEW Development optimization attempts, including B, C, D, S and all required panel refits.
+
+Preserve every original model, equation, initialization, feature, scaler, mask, seed, penalty, bound, ridge policy and numerical diagnostic rule.
+
+A zero-improvement objective stop may still occur at `ftol=0`.
+
+**Optimizer success never overrides the scientific PG/AD/FD gates.**
+
+This is an explicitly disclosed methodology revision motivated by a previously observed Development numerical failure.
+
+Do not misrepresent the revised study as an independent replication or as the unmodified original M1 experiment.
+
+Create and freeze an additive amendment. Do not edit historical M1.
+
+---
+
+### 3. PROSPECTIVE STATE-REUSE POLICY
+
+**Chosen design: certified state reuse, conditional on independent acceptance.**
+
+The goal is to preserve valid computational evidence without unnecessarily refitting 952 models.
+
+Audit ALL 952 previously accepted R3 endpoints individually.
+
+For each state verify:
+
+- Exact original task identity.
+- Mouse, session, probe, unit and panel.
+- Original A data and feature identities.
+- Observation masks and scaler identities.
+- Objective, regularization and coefficient bounds.
+- Parameter packing and initialization.
+- Registered model and selected lambda.
+- Original optimizer termination reason.
+- Final outward PG.
+- All three AD/frozen-FD checkpoints.
+- Complete saved numerical certificates.
+- Runtime and source-code provenance.
+- Absence of E/Final outcome-based selection.
+
+All 952 were reported to have terminated by the solver gradient criterion under the old policy. Independently verify this for every state.
+
+Register an explicit scientific admissibility rule:
+
+A historical state may be admitted only when its certified endpoint already satisfies every unchanged numerical acceptance criterion and its exact model/input identity matches the new study.
+
+**Important distinction:**
+
+An admitted old state remains an R3-generated state under the old `ftol=1e-12` execution policy.
+
+It must NOT be relabeled as historically fitted using `ftol=0`.
+
+The new study may prospectively admit it as an unchanged, numerically certified state, subject to a separate independent compatibility decision.
+
+Do not claim bitwise counterfactual equivalence unless it is genuinely proven.
+
+Audit all 216 B0 analytic certificates under the same identity and mathematical-equivalence standard.
+
+#### Fixed prior selection
+
+The original B1-only B selection already chose λ=1.0.
+
+Freeze λ=1.0 as an explicitly historical, previously consumed Development selection.
+
+Do not rerun B selection or choose a different λ using B4, E or future results.
+
+Disclose that the revised study reuses a previously selected hyperparameter and is not a fresh blinded selection experiment.
+
+#### Excluded states
+
+The original failed R3 S02/C endpoint is not eligible.
+
+The single-case feasibility PASS is also **diagnostic-only** and is not automatically admitted as a scientific fit.
+
+Therefore, if all 952 old optimizer states and 216 B0 certificates pass the reuse audit, the new scientific mission has:
+
+```text
+Old optimizer states admitted: 952
+Old B0 analytic states admitted: 216
+
+New optimizer tasks: 5519
+  - Previously unattempted: 5518
+  - Previously failed task under new prospective method: 1
+
+No automatic reuse of the feasibility diagnostic state.
+```
+
+The 5,519 tasks must be derived again from the actual frozen task manifest before execution. Reject mismatches.
+
+**Mandatory independent review:** approve this complete reuse policy and every state-admission result BEFORE any new optimizer call.
+
+If any mandatory state fails compatibility, STOP and report the discrepancy.
+
+Do not silently switch to full fresh execution or selectively exclude inconvenient old states.
+
+---
+
+### 4. PRODUCTION CERTIFICATION
+
+Before starting scientific computation:
+
+1. Freeze the uniform amended numerical policy.
+2. Verify actual saved inputs and all accepted historical state identities.
+3. Test all production model families and numerical oracles.
+4. Test the original gradient certificates, strict causality and role isolation.
+5. Verify the new optimizer controls and external budget guards.
+6. Verify S07/N4 prospective definitions remain unchanged.
+7. Confirm the full M4 task plan and all applicable panel availability decisions.
+8. Obtain an independent pre-execution PASS.
+
+No new scientific fitting before all these gates succeed.
+
+Reuse the existing reviewed production implementation, changing only what is necessary to implement the new termination policy and fresh mission identities.
+
+Do not introduce a new model architecture or redesign the source pipeline.
+
+---
+
+### 5. NEW DEVELOPMENT EXECUTION
+
+Only after complete pre-execution acceptance:
+
+Execute the 5,519 newly authorized optimizer tasks under one new bounded scientific stage.
+
+The previously failed task must be fitted under the prospectively amended policy from its **original frozen initializer**, not from the R3 failed endpoint or the feasibility diagnostic endpoint.
+
+Every new attempt must satisfy all original mandatory gates.
+
+No optimizer retries, favorable replacement seeds or unregistered alternate solvers.
+
+**Frozen resource limits:**
+
+```text
+One Development scientific stage
+Maximum wall time = 48 hours
+Maximum concurrent workers = 4
+
+New optimizer attempts <= 5519
+FG pairs per attempt <= 6000
+Accepted iterations per attempt <= 1500
+
+Original derivative-certificate budgets unchanged
+No Final optimizer-budget borrowing
+No deadline reset
+No budget extension after failure
+```
+
+Use only the 27 previously admitted Development mice:
+
+```text
+BO = 5
+FC = 22
+Final BO = 27, locked
+```
+
+Reuse source-verified saved A data and frozen prior B selection.
+
+Any new source access must remain within original role, source, data-license and bounded transport requirements. Prefer verified local caches.
+
+Record each actual new attempt, endpoint, numerical certificate, failure and remaining unattempted task.
+
+A mandatory numerical failure immediately ends the authorized scientific execution.
+
+---
+
+### 6. COMPLETE M4 BEFORE E
+
+Build one complete M4 state manifest that combines:
+
+- Independently admitted historical states.
+- New R4 optimizer states.
+- Compatible B0 analytic certificates.
+- Frozen λ=1.0.
+- All model/feature/scaler identities.
+- All mandatory D/S registered seed attempts.
+- All applicable panel refits.
+- Complete numerical and source certificates.
+- Transparent origin/provenance labels for every state.
+
+Do not merge results by overwriting old artifacts.
+
+Verify every registered mandatory task has a numerically acceptable state.
+
+Obtain independent complete-M4 review.
+
+**No E access or evaluation until the full M4 state is sealed and accepted.**
+
+---
+
+### 7. SINGLE DEVELOPMENT E EVALUATION
+
+Only after M4 PASS:
+
+Execute exactly one fixed Development E evaluation.
+
+Report all eight registered model levels:
+
+`B0, B1, B2, B3, B4, C, D, S`
+
+Evaluate all six original contrasts:
+
+```text
+B4-B1
+B4-B2
+B4-B3
+D-B4
+C-B4
+D-S
+```
+
+Report mouse-level effects, BO/FC descriptive differences, actual scored unit-bin denominators, intervals and source/behavior limitations.
+
+Execute all Development-applicable registered:
+
+- S01–S12 sensitivity panels.
+- N1–N4 reference/control operators.
+
+Preserve all original reference assumptions and null-test limitations.
+
+No E-driven model modification, repeated E assessment or alternate threshold.
+
+Negative and mixed outcomes are legitimate results.
+
+The historical B selection, methodological change and state reuse must be disclosed in the scientific interpretation.
+
+Do not describe E as independent-animal Final confirmation.
+
+---
+
+### 8. PRESERVATION AND CLAIM BOUNDARIES
+
+The old R3 failure must stay permanently recorded.
+
+The revised Development result cannot retroactively change:
+
+- R1 historical STOP.
+- R2 metadata schema STOP.
+- R3 numerical STOP.
+- Earlier failed reviews.
+- Existing saved optimizer attempts.
+- The single-case diagnostic provenance.
+
+Maintain original M1 scientific hypotheses and all registered sensitivity/null tests.
+
+Do not claim:
+
+- CWP/NAP validation.
+- Physical neural primitives.
+- Causal connectivity.
+- Independent laboratory replication.
+- Full biological-mechanism identification.
+- Final C/D confirmation.
+
+A numerical-method amendment after inspecting A/B evidence must be disclosed, even if future E remains unexamined.
+
+---
+
+### 9. DELIVERABLES AND INDEPENDENT REVIEW
+
+Use a new isolated workspace:
+
+`paper16_development_r4/`
+
+Deliver:
+
+1. Prospective numerical amendment and exact hashes.
+2. Full 952-state compatibility matrix and independent reuse decision.
+3. B0 state-certification matrix.
+4. Full source/feature/task identity and resource manifest.
+5. Independent pre-execution approval.
+6. New optimizer attempts and numerical certificates.
+7. Complete M4 state seal or truthful STOP evidence.
+8. One E assessment, if authorized gates pass.
+9. Full S01–S12 / N1–N4 outcomes.
+10. A1–A10 scientific claim audit.
+11. Negative findings, limitations and provenance.
+12. Native saved-only reproduction.
+13. Independent final scientific review.
+14. Truthful Git/archive/terminal receipts.
+
+Keep all protected neural arrays, credentials and private caches outside Git.
+
+**Public GitHub publication boundary:** The prior user's permission covered only the previous 127-file feasibility payload. It is not blanket permission to publish new Development-derived numerical or E results.
+
+Prepare the exact reviewed public manifest and destination, exclude protected contents, and obtain separate explicit owner authorization before pushing any new private-derived payload to the public remote.
+
+Do not silently interpret permission to run the experiment as permission for unlimited public data release.
+
+---
+
+### 10. TERMINAL REPORT
+
+Return actual values:
+
+```text
+MISSION_ID=
+BASE_SHA=
+FINAL_STATUS=
+SCIENTIFIC_VERDICT=
+
+NUMERICAL_AMENDMENT_REGISTERED=
+FTOL=0.0
+ORIGINAL_PG_AD_FD_GATES_PRESERVED=
+
+OLD_952_STATES_AUDITED=
+OLD_952_STATES_ADMITTED=
+OLD_216_B0_STATES_ADMITTED=
+INDEPENDENT_REUSE_REVIEW=
+
+GLOBAL_LAMBDA=1.0
+LAMBDA_ORIGIN=HISTORICAL_R3_B1_SELECTION
+
+NEW_OPTIMIZER_TASKS_PLANNED=
+NEW_OPTIMIZER_ATTEMPTS=
+NEW_NUMERICAL_PASSES=
+NEW_NUMERICAL_FAILURES=
+UNATTEMPTED_TASKS=
+
+M4_COMPLETE=
+M4_INDEPENDENT_REVIEW=
+E_EXECUTED=
+
+E_B4_MINUS_B1=
+E_SECONDARY_EFFECTS=
+SENSITIVITIES_COMPLETED=
+CONTROLS_COMPLETED=
+
+HISTORICAL_R3_STOP_PRESERVED=true
+BUG_COUNT=
+WARN_COUNT=
+
+FINAL_C_ACCESS=false
+FINAL_D_ACCESS=false
+
+INDEPENDENT_FINAL_REVIEW=
+GIT_COMMIT=
+REMOTE_VERIFICATION=
+WORKTREE_CLEAN=
+
+M6_REQUEST_READINESS=
+STOP_REASON=
+```
+
+Explain in Chinese:
+
+- Whether every historical state was eligible for reuse.
+- Whether the amended optimizer completed all remaining tasks.
+- Whether M4 was genuinely completed.
+- What E showed about neural-history predictive value.
+- Which scientific claims survive and which remain unsupported.
+- Whether a separately registered Final M6 study is justified.
+
+**STOP after this mission's independently reviewed result.**
+
+No automatic M6, Final C/D or P17.
+
+# END MASTER PROMPT

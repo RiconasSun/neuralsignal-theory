@@ -1,0 +1,25 @@
+test_E_only_after_review_same_deadline_and_single_exclusive_claim (paper16_development_r4.test_gates.R4GateTests.test_E_only_after_review_same_deadline_and_single_exclusive_claim) ... ok
+test_cached_lookup_is_identity_equivalent_not_state_relabeling (paper16_development_r4.test_gates.R4GateTests.test_cached_lookup_is_identity_equivalent_not_state_relabeling) ... ok
+test_complete_original_plan_minus_952_and_diagnostic_not_inserted (paper16_development_r4.test_gates.R4GateTests.test_complete_original_plan_minus_952_and_diagnostic_not_inserted) ... ok
+test_missing_M4_all_states_or_task_coverage_refused (paper16_development_r4.test_gates.R4GateTests.test_missing_M4_all_states_or_task_coverage_refused) ... ok
+test_original_statistics_exact_signs_Holm5_CI_LOMO_on_synthetic (paper16_development_r4.test_gates.R4GateTests.test_original_statistics_exact_signs_Holm5_CI_LOMO_on_synthetic) ... ok
+test_policy_only_ftol_and_frozen_all_original_gates (paper16_development_r4.test_gates.R4GateTests.test_policy_only_ftol_and_frozen_all_original_gates) ... ok
+test_prefit_tamper_and_all_roles_fail_closed_before_authority (paper16_development_r4.test_gates.R4GateTests.test_prefit_tamper_and_all_roles_fail_closed_before_authority) ... ok
+test_Final_altered_sources_and_pre_gate_roles_denied_before_data (paper16_development_r4.test_production.ProductionTests.test_Final_altered_sources_and_pre_gate_roles_denied_before_data) ... ERROR
+test_mandatory_task_budget_all_models_seeds_no_optional_failure_relabel (paper16_development_r4.test_production.ProductionTests.test_mandatory_task_budget_all_models_seeds_no_optional_failure_relabel) ... ok
+test_missing_or_incomplete_frozen_state_manifest_fail_closed (paper16_development_r4.test_production.ProductionTests.test_missing_or_incomplete_frozen_state_manifest_fail_closed) ... ok
+
+======================================================================
+ERROR: test_Final_altered_sources_and_pre_gate_roles_denied_before_data (paper16_development_r4.test_production.ProductionTests.test_Final_altered_sources_and_pre_gate_roles_denied_before_data)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r4\test_production.py", line 425, in test_Final_altered_sources_and_pre_gate_roles_denied_before_data
+    with self.assertRaises(AccessStop):source.CacheReader(bad,load(os.environ['P16_R4_TEST_STAGE']))
+                                                                   ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 679, in __getitem__
+KeyError: 'P16_R4_TEST_STAGE'
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.921s
+
+FAILED (errors=1)

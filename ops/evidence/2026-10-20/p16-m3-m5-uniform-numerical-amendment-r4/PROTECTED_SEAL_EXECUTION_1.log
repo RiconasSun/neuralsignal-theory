@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r4\closeout_saved.py", line 85, in <module>
+    {'register':register_interruption,'seal':seal,'facts':facts}[arguments.operation]()
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r4\closeout_saved.py", line 64, in seal
+    print(json.dumps({'protected_manifest':ref(P/'PROTECTED_STATE_MANIFEST.json'),'files':len(files)},flush=True))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\json\__init__.py", line 234, in dumps
+    return cls(
+           ^^^^
+TypeError: JSONEncoder.__init__() got an unexpected keyword argument 'flush'

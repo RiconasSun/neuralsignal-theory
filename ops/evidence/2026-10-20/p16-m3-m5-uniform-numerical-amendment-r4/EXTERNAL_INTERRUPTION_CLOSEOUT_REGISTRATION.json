@@ -1,0 +1,53 @@
+{
+  "mission": "P16-M3-M5-UNIFORM-NUMERICAL-AMENDMENT-R4",
+  "registered_UTC": "2026-10-21T15:03:56.9697435Z",
+  "scope": "SAVED_ONLY_EXTERNAL_INTERRUPTION_CLOSEOUT",
+  "scientific_execution_resumption_authorized": false,
+  "new_scientific_calls_authorized": 0,
+  "frozen_production_manifest_sha256": "37b40a80af9eab485ea5817b92fb77e4b3cf64e1245a6e79b9183904278183b0",
+  "existing_reproducer": [
+    {
+      "path": "paper16_development_r4/reproduce_saved.py",
+      "bytes": 26114,
+      "sha256": "c9176e1963299696d976e650e2fa407ed434005922d613bd894c27e6401be008"
+    },
+    {
+      "path": "paper16_development_r4/REPRODUCE_SAVED.ps1",
+      "bytes": 515,
+      "sha256": "31471b6e1feb0da828db04e7fa4e4453ffa3d873361b1b5edd6d4e392d6cfece"
+    },
+    {
+      "path": "paper16_development_r4/test_saved.py",
+      "bytes": 7916,
+      "sha256": "b887a92db6ee92735c42d6508cf0029bb756ddcf64ffd6d21a29eea927aec9d0"
+    }
+  ],
+  "preserved_accepted_snapshot": "ops\\evidence\\2026-10-20\\p16-m3-m5-uniform-numerical-amendment-r4\\REPRODUCTION_ACCEPTED_3_IMMUTABLE",
+  "trigger": "Original native supervisor absent, original exec session unavailable, no final native supervision receipt, journal incomplete",
+  "classification": "STOP_EXECUTION_INTERRUPTED_REQUIRED_GATE",
+  "unknown_fields": [
+    "termination_time",
+    "native_returncode",
+    "cause"
+  ],
+  "forbid": [
+    "fabricated SUPERVISION.json",
+    "production edits",
+    "journal rewriting",
+    "scientific refit or resume",
+    "E access",
+    "Final C/D access",
+    "public push without exact new authorization"
+  ],
+  "planned_checks": [
+    "fresh original PID and named Job absence",
+    "all private saved file identities",
+    "strict journal and last partial prefix",
+    "all completed numerical certificates saved-only",
+    "no M4/E/Final releases",
+    "malformed/missing/forged interruption receipt regression",
+    "native PowerShell saved-only reproduction",
+    "independent final scientific review"
+  ],
+  "exact_archive_authorization_pending": true
+}

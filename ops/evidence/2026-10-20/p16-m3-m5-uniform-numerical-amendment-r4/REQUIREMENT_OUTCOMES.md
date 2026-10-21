@@ -1,0 +1,258 @@
+# Frozen requirement outcomes
+
+All 254 original owner statements remain individually traceable. This is a traceability denominator, not 254 independent tests or 254 scientific passes. The original baseline is unchanged. Complete M4/E outputs remain OPEN; scientific stop compliance does not replace them. Post-commit identities are recorded separately without self-reference.
+
+- R-001 — VERIFIED: Base/mission identity and conditional execution boundaries; terminal scientific completion is not claimed.
+- R-002 — VERIFIED: Base/mission identity and conditional execution boundaries; terminal scientific completion is not claimed.
+- R-003 — VERIFIED: Base/mission identity and conditional execution boundaries; terminal scientific completion is not claimed.
+- R-004 — VERIFIED: Base/mission identity and conditional execution boundaries; terminal scientific completion is not claimed.
+- R-005 — VERIFIED: Base/mission identity and conditional execution boundaries; terminal scientific completion is not claimed.
+- R-006 — VERIFIED: Base/mission identity and conditional execution boundaries; terminal scientific completion is not claimed.
+- R-007 — VERIFIED: Base/mission identity and conditional execution boundaries; terminal scientific completion is not claimed.
+- R-008 — VERIFIED: Base/mission identity and conditional execution boundaries; terminal scientific completion is not claimed.
+- R-009 — OPEN: Required scientific output is incomplete/unavailable after external interruption; retained as unmet, not waived. Base/mission identity and conditional execution boundaries; terminal scientific completion is not claimed.
+- R-010 — VERIFIED: Base/mission identity and conditional execution boundaries; terminal scientific completion is not claimed.
+- R-011 — VERIFIED: Base/mission identity and conditional execution boundaries; terminal scientific completion is not claimed.
+- R-012 — VERIFIED: Base/mission identity and conditional execution boundaries; terminal scientific completion is not claimed.
+- R-013 — VERIFIED: Base/mission identity and conditional execution boundaries; terminal scientific completion is not claimed.
+- R-014 — VERIFIED: Base/mission identity and conditional execution boundaries; terminal scientific completion is not claimed.
+- R-015 — VERIFIED: Base/mission identity and conditional execution boundaries; terminal scientific completion is not claimed.
+- R-016 — VERIFIED: Historical source pins, saved-only inherited checks, immutable failures and exact historical denominators.
+- R-017 — VERIFIED: Historical source pins, saved-only inherited checks, immutable failures and exact historical denominators.
+- R-018 — VERIFIED: Historical source pins, saved-only inherited checks, immutable failures and exact historical denominators.
+- R-019 — VERIFIED: Historical source pins, saved-only inherited checks, immutable failures and exact historical denominators.
+- R-020 — VERIFIED: Historical source pins, saved-only inherited checks, immutable failures and exact historical denominators.
+- R-021 — VERIFIED: Historical source pins, saved-only inherited checks, immutable failures and exact historical denominators.
+- R-022 — VERIFIED: Historical source pins, saved-only inherited checks, immutable failures and exact historical denominators.
+- R-023 — VERIFIED: Historical source pins, saved-only inherited checks, immutable failures and exact historical denominators.
+- R-024 — VERIFIED: Historical source pins, saved-only inherited checks, immutable failures and exact historical denominators.
+- R-025 — VERIFIED: Historical source pins, saved-only inherited checks, immutable failures and exact historical denominators.
+- R-026 — VERIFIED: Historical source pins, saved-only inherited checks, immutable failures and exact historical denominators.
+- R-027 — VERIFIED: Historical source pins, saved-only inherited checks, immutable failures and exact historical denominators.
+- R-028 — VERIFIED: Historical source pins, saved-only inherited checks, immutable failures and exact historical denominators.
+- R-029 — VERIFIED: Historical source pins, saved-only inherited checks, immutable failures and exact historical denominators.
+- R-030 — VERIFIED: Historical source pins, saved-only inherited checks, immutable failures and exact historical denominators.
+- R-031 — VERIFIED: Historical source pins, saved-only inherited checks, immutable failures and exact historical denominators.
+- R-032 — VERIFIED: Historical source pins, saved-only inherited checks, immutable failures and exact historical denominators.
+- R-033 — VERIFIED: Historical source pins, saved-only inherited checks, immutable failures and exact historical denominators.
+- R-034 — VERIFIED: Historical source pins, saved-only inherited checks, immutable failures and exact historical denominators.
+- R-035 — VERIFIED: Historical source pins, saved-only inherited checks, immutable failures and exact historical denominators.
+- R-036 — VERIFIED: Historical source pins, saved-only inherited checks, immutable failures and exact historical denominators.
+- R-037 — VERIFIED: Historical source pins, saved-only inherited checks, immutable failures and exact historical denominators.
+- R-038 — VERIFIED: Historical source pins, saved-only inherited checks, immutable failures and exact historical denominators.
+- R-039 — VERIFIED: Prospective uniform policy and unchanged scientific definitions bound by the production freeze.
+- R-040 — VERIFIED: Prospective uniform policy and unchanged scientific definitions bound by the production freeze.
+- R-041 — VERIFIED: Prospective uniform policy and unchanged scientific definitions bound by the production freeze.
+- R-042 — VERIFIED: Prospective uniform policy and unchanged scientific definitions bound by the production freeze.
+- R-043 — VERIFIED: Prospective uniform policy and unchanged scientific definitions bound by the production freeze.
+- R-044 — VERIFIED: Prospective uniform policy and unchanged scientific definitions bound by the production freeze.
+- R-045 — VERIFIED: Prospective uniform policy and unchanged scientific definitions bound by the production freeze.
+- R-046 — VERIFIED: Prospective uniform policy and unchanged scientific definitions bound by the production freeze.
+- R-047 — VERIFIED: Prospective uniform policy and unchanged scientific definitions bound by the production freeze.
+- R-048 — VERIFIED: Prospective uniform policy and unchanged scientific definitions bound by the production freeze.
+- R-049 — VERIFIED: Prospective uniform policy and unchanged scientific definitions bound by the production freeze.
+- R-050 — VERIFIED: Prospective uniform policy and unchanged scientific definitions bound by the production freeze.
+- R-051 — VERIFIED: Prospective uniform policy and unchanged scientific definitions bound by the production freeze.
+- R-052 — VERIFIED: Prospective uniform policy and unchanged scientific definitions bound by the production freeze.
+- R-053 — VERIFIED: Prospective uniform policy and unchanged scientific definitions bound by the production freeze.
+- R-054 — VERIFIED: Prospective uniform policy and unchanged scientific definitions bound by the production freeze.
+- R-055 — VERIFIED: Prospective uniform policy and unchanged scientific definitions bound by the production freeze.
+- R-056 — VERIFIED: Prospective uniform policy and unchanged scientific definitions bound by the production freeze.
+- R-057 — VERIFIED: Prospective uniform policy and unchanged scientific definitions bound by the production freeze.
+- R-058 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-059 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-060 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-061 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-062 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-063 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-064 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-065 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-066 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-067 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-068 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-069 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-070 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-071 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-072 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-073 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-074 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-075 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-076 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-077 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-078 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-079 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-080 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-081 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-082 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-083 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-084 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-085 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-086 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-087 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-088 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-089 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-090 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-091 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-092 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-093 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-094 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-095 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-096 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-097 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-098 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-099 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-100 — VERIFIED: Every 952 optimizer and 216 B0 state audited; historical ftol provenance retained; actual 5519 task derivation and exclusions reviewed before fitting.
+- R-101 — VERIFIED: Production numerical/causal/role/budget tests and independent prefit acceptance preceded new A-only fits.
+- R-102 — VERIFIED: Production numerical/causal/role/budget tests and independent prefit acceptance preceded new A-only fits.
+- R-103 — VERIFIED: Production numerical/causal/role/budget tests and independent prefit acceptance preceded new A-only fits.
+- R-104 — VERIFIED: Production numerical/causal/role/budget tests and independent prefit acceptance preceded new A-only fits.
+- R-105 — VERIFIED: Production numerical/causal/role/budget tests and independent prefit acceptance preceded new A-only fits.
+- R-106 — VERIFIED: Production numerical/causal/role/budget tests and independent prefit acceptance preceded new A-only fits.
+- R-107 — VERIFIED: Production numerical/causal/role/budget tests and independent prefit acceptance preceded new A-only fits.
+- R-108 — VERIFIED: Production numerical/causal/role/budget tests and independent prefit acceptance preceded new A-only fits.
+- R-109 — VERIFIED: Production numerical/causal/role/budget tests and independent prefit acceptance preceded new A-only fits.
+- R-110 — VERIFIED: Production numerical/causal/role/budget tests and independent prefit acceptance preceded new A-only fits.
+- R-111 — VERIFIED: Production numerical/causal/role/budget tests and independent prefit acceptance preceded new A-only fits.
+- R-112 — VERIFIED: Production numerical/causal/role/budget tests and independent prefit acceptance preceded new A-only fits.
+- R-113 — VERIFIED: Production numerical/causal/role/budget tests and independent prefit acceptance preceded new A-only fits.
+- R-114 — OPEN: Required scientific output is incomplete/unavailable after external interruption; retained as unmet, not waived. One original stage; unchanged policy; actual 3040 completed states and one incomplete prefix preserved. No retry/reset/extension. Native final exit/time unavailable, not reconstructed.
+- R-115 — VERIFIED: One original stage; unchanged policy; actual 3040 completed states and one incomplete prefix preserved. No retry/reset/extension. Native final exit/time unavailable, not reconstructed.
+- R-116 — OPEN: Required scientific output is incomplete/unavailable after external interruption; retained as unmet, not waived. One original stage; unchanged policy; actual 3040 completed states and one incomplete prefix preserved. No retry/reset/extension. Native final exit/time unavailable, not reconstructed.
+- R-117 — VERIFIED: One original stage; unchanged policy; actual 3040 completed states and one incomplete prefix preserved. No retry/reset/extension. Native final exit/time unavailable, not reconstructed.
+- R-118 — VERIFIED: One original stage; unchanged policy; actual 3040 completed states and one incomplete prefix preserved. No retry/reset/extension. Native final exit/time unavailable, not reconstructed.
+- R-119 — VERIFIED: One original stage; unchanged policy; actual 3040 completed states and one incomplete prefix preserved. No retry/reset/extension. Native final exit/time unavailable, not reconstructed.
+- R-120 — VERIFIED: One original stage; unchanged policy; actual 3040 completed states and one incomplete prefix preserved. No retry/reset/extension. Native final exit/time unavailable, not reconstructed.
+- R-121 — VERIFIED: One original stage; unchanged policy; actual 3040 completed states and one incomplete prefix preserved. No retry/reset/extension. Native final exit/time unavailable, not reconstructed.
+- R-122 — VERIFIED: One original stage; unchanged policy; actual 3040 completed states and one incomplete prefix preserved. No retry/reset/extension. Native final exit/time unavailable, not reconstructed.
+- R-123 — VERIFIED: One original stage; unchanged policy; actual 3040 completed states and one incomplete prefix preserved. No retry/reset/extension. Native final exit/time unavailable, not reconstructed.
+- R-124 — VERIFIED: One original stage; unchanged policy; actual 3040 completed states and one incomplete prefix preserved. No retry/reset/extension. Native final exit/time unavailable, not reconstructed.
+- R-125 — VERIFIED: One original stage; unchanged policy; actual 3040 completed states and one incomplete prefix preserved. No retry/reset/extension. Native final exit/time unavailable, not reconstructed.
+- R-126 — VERIFIED: One original stage; unchanged policy; actual 3040 completed states and one incomplete prefix preserved. No retry/reset/extension. Native final exit/time unavailable, not reconstructed.
+- R-127 — VERIFIED: One original stage; unchanged policy; actual 3040 completed states and one incomplete prefix preserved. No retry/reset/extension. Native final exit/time unavailable, not reconstructed.
+- R-128 — VERIFIED: One original stage; unchanged policy; actual 3040 completed states and one incomplete prefix preserved. No retry/reset/extension. Native final exit/time unavailable, not reconstructed.
+- R-129 — VERIFIED: Frozen Development identities/access and exact attempt journals; no E/Final exports and no recorded numerical failure.
+- R-130 — VERIFIED: Frozen Development identities/access and exact attempt journals; no E/Final exports and no recorded numerical failure.
+- R-131 — VERIFIED: Frozen Development identities/access and exact attempt journals; no E/Final exports and no recorded numerical failure.
+- R-132 — VERIFIED: Frozen Development identities/access and exact attempt journals; no E/Final exports and no recorded numerical failure.
+- R-133 — VERIFIED: Frozen Development identities/access and exact attempt journals; no E/Final exports and no recorded numerical failure.
+- R-134 — VERIFIED: Frozen Development identities/access and exact attempt journals; no E/Final exports and no recorded numerical failure.
+- R-135 — VERIFIED: Frozen Development identities/access and exact attempt journals; no E/Final exports and no recorded numerical failure.
+- R-136 — VERIFIED: Frozen Development identities/access and exact attempt journals; no E/Final exports and no recorded numerical failure.
+- R-137 — OPEN: Required scientific output is incomplete/unavailable after external interruption; retained as unmet, not waived. Complete M4 was not reached; no complete selection manifest or independent complete-M4 acceptance exists.
+- R-138 — OPEN: Required scientific output is incomplete/unavailable after external interruption; retained as unmet, not waived. Complete M4 was not reached; no complete selection manifest or independent complete-M4 acceptance exists.
+- R-139 — OPEN: Required scientific output is incomplete/unavailable after external interruption; retained as unmet, not waived. Complete M4 was not reached; no complete selection manifest or independent complete-M4 acceptance exists.
+- R-140 — OPEN: Required scientific output is incomplete/unavailable after external interruption; retained as unmet, not waived. Complete M4 was not reached; no complete selection manifest or independent complete-M4 acceptance exists.
+- R-141 — OPEN: Required scientific output is incomplete/unavailable after external interruption; retained as unmet, not waived. Complete M4 was not reached; no complete selection manifest or independent complete-M4 acceptance exists.
+- R-142 — OPEN: Required scientific output is incomplete/unavailable after external interruption; retained as unmet, not waived. Complete M4 was not reached; no complete selection manifest or independent complete-M4 acceptance exists.
+- R-143 — OPEN: Required scientific output is incomplete/unavailable after external interruption; retained as unmet, not waived. Complete M4 was not reached; no complete selection manifest or independent complete-M4 acceptance exists.
+- R-144 — OPEN: Required scientific output is incomplete/unavailable after external interruption; retained as unmet, not waived. Complete M4 was not reached; no complete selection manifest or independent complete-M4 acceptance exists.
+- R-145 — OPEN: Required scientific output is incomplete/unavailable after external interruption; retained as unmet, not waived. Complete M4 was not reached; no complete selection manifest or independent complete-M4 acceptance exists.
+- R-146 — OPEN: Required scientific output is incomplete/unavailable after external interruption; retained as unmet, not waived. Complete M4 was not reached; no complete selection manifest or independent complete-M4 acceptance exists.
+- R-147 — VERIFIED: Complete M4 was not reached; no complete selection manifest or independent complete-M4 acceptance exists.
+- R-148 — OPEN: Required scientific output is incomplete/unavailable after external interruption; retained as unmet, not waived. Complete M4 was not reached; no complete selection manifest or independent complete-M4 acceptance exists.
+- R-149 — OPEN: Required scientific output is incomplete/unavailable after external interruption; retained as unmet, not waived. Complete M4 was not reached; no complete selection manifest or independent complete-M4 acceptance exists.
+- R-150 — VERIFIED: M4 prerequisite enforced: no E entitlement, export, scores, comparisons, sensitivity scoring or controls. Unavailable is not a negative effect.
+- R-151 — VERIFIED: M4 prerequisite enforced: no E entitlement, export, scores, comparisons, sensitivity scoring or controls. Unavailable is not a negative effect.
+- R-152 — OPEN: Required scientific output is incomplete/unavailable after external interruption; retained as unmet, not waived. M4 prerequisite enforced: no E entitlement, export, scores, comparisons, sensitivity scoring or controls. Unavailable is not a negative effect.
+- R-153 — OPEN: Required scientific output is incomplete/unavailable after external interruption; retained as unmet, not waived. M4 prerequisite enforced: no E entitlement, export, scores, comparisons, sensitivity scoring or controls. Unavailable is not a negative effect.
+- R-154 — OPEN: Required scientific output is incomplete/unavailable after external interruption; retained as unmet, not waived. M4 prerequisite enforced: no E entitlement, export, scores, comparisons, sensitivity scoring or controls. Unavailable is not a negative effect.
+- R-155 — OPEN: Required scientific output is incomplete/unavailable after external interruption; retained as unmet, not waived. M4 prerequisite enforced: no E entitlement, export, scores, comparisons, sensitivity scoring or controls. Unavailable is not a negative effect.
+- R-156 — OPEN: Required scientific output is incomplete/unavailable after external interruption; retained as unmet, not waived. M4 prerequisite enforced: no E entitlement, export, scores, comparisons, sensitivity scoring or controls. Unavailable is not a negative effect.
+- R-157 — OPEN: Required scientific output is incomplete/unavailable after external interruption; retained as unmet, not waived. M4 prerequisite enforced: no E entitlement, export, scores, comparisons, sensitivity scoring or controls. Unavailable is not a negative effect.
+- R-158 — OPEN: Required scientific output is incomplete/unavailable after external interruption; retained as unmet, not waived. M4 prerequisite enforced: no E entitlement, export, scores, comparisons, sensitivity scoring or controls. Unavailable is not a negative effect.
+- R-159 — OPEN: Required scientific output is incomplete/unavailable after external interruption; retained as unmet, not waived. M4 prerequisite enforced: no E entitlement, export, scores, comparisons, sensitivity scoring or controls. Unavailable is not a negative effect.
+- R-160 — OPEN: Required scientific output is incomplete/unavailable after external interruption; retained as unmet, not waived. M4 prerequisite enforced: no E entitlement, export, scores, comparisons, sensitivity scoring or controls. Unavailable is not a negative effect.
+- R-161 — OPEN: Required scientific output is incomplete/unavailable after external interruption; retained as unmet, not waived. M4 prerequisite enforced: no E entitlement, export, scores, comparisons, sensitivity scoring or controls. Unavailable is not a negative effect.
+- R-162 — OPEN: Required scientific output is incomplete/unavailable after external interruption; retained as unmet, not waived. M4 prerequisite enforced: no E entitlement, export, scores, comparisons, sensitivity scoring or controls. Unavailable is not a negative effect.
+- R-163 — OPEN: Required scientific output is incomplete/unavailable after external interruption; retained as unmet, not waived. M4 prerequisite enforced: no E entitlement, export, scores, comparisons, sensitivity scoring or controls. Unavailable is not a negative effect.
+- R-164 — OPEN: Required scientific output is incomplete/unavailable after external interruption; retained as unmet, not waived. M4 prerequisite enforced: no E entitlement, export, scores, comparisons, sensitivity scoring or controls. Unavailable is not a negative effect.
+- R-165 — OPEN: Required scientific output is incomplete/unavailable after external interruption; retained as unmet, not waived. M4 prerequisite enforced: no E entitlement, export, scores, comparisons, sensitivity scoring or controls. Unavailable is not a negative effect.
+- R-166 — VERIFIED: M4 prerequisite enforced: no E entitlement, export, scores, comparisons, sensitivity scoring or controls. Unavailable is not a negative effect.
+- R-167 — VERIFIED: M4 prerequisite enforced: no E entitlement, export, scores, comparisons, sensitivity scoring or controls. Unavailable is not a negative effect.
+- R-168 — VERIFIED: M4 prerequisite enforced: no E entitlement, export, scores, comparisons, sensitivity scoring or controls. Unavailable is not a negative effect.
+- R-169 — VERIFIED: M4 prerequisite enforced: no E entitlement, export, scores, comparisons, sensitivity scoring or controls. Unavailable is not a negative effect.
+- R-170 — VERIFIED: M4 prerequisite enforced: no E entitlement, export, scores, comparisons, sensitivity scoring or controls. Unavailable is not a negative effect.
+- R-171 — VERIFIED: Historical failures/attempts/reviews retained; no prohibited scientific claims or retrospective clearance.
+- R-172 — VERIFIED: Historical failures/attempts/reviews retained; no prohibited scientific claims or retrospective clearance.
+- R-173 — VERIFIED: Historical failures/attempts/reviews retained; no prohibited scientific claims or retrospective clearance.
+- R-174 — VERIFIED: Historical failures/attempts/reviews retained; no prohibited scientific claims or retrospective clearance.
+- R-175 — VERIFIED: Historical failures/attempts/reviews retained; no prohibited scientific claims or retrospective clearance.
+- R-176 — VERIFIED: Historical failures/attempts/reviews retained; no prohibited scientific claims or retrospective clearance.
+- R-177 — VERIFIED: Historical failures/attempts/reviews retained; no prohibited scientific claims or retrospective clearance.
+- R-178 — VERIFIED: Historical failures/attempts/reviews retained; no prohibited scientific claims or retrospective clearance.
+- R-179 — VERIFIED: Historical failures/attempts/reviews retained; no prohibited scientific claims or retrospective clearance.
+- R-180 — VERIFIED: Historical failures/attempts/reviews retained; no prohibited scientific claims or retrospective clearance.
+- R-181 — VERIFIED: Historical failures/attempts/reviews retained; no prohibited scientific claims or retrospective clearance.
+- R-182 — VERIFIED: Historical failures/attempts/reviews retained; no prohibited scientific claims or retrospective clearance.
+- R-183 — VERIFIED: Historical failures/attempts/reviews retained; no prohibited scientific claims or retrospective clearance.
+- R-184 — VERIFIED: Historical failures/attempts/reviews retained; no prohibited scientific claims or retrospective clearance.
+- R-185 — VERIFIED: Historical failures/attempts/reviews retained; no prohibited scientific claims or retrospective clearance.
+- R-186 — VERIFIED: Historical failures/attempts/reviews retained; no prohibited scientific claims or retrospective clearance.
+- R-187 — VERIFIED: Historical failures/attempts/reviews retained; no prohibited scientific claims or retrospective clearance.
+- R-188 — VERIFIED: Additive mission archive and explicit publication boundary; exact new payload requires separate owner approval.
+- R-189 — VERIFIED: Additive mission archive and explicit publication boundary; exact new payload requires separate owner approval.
+- R-190 — VERIFIED: Additive mission archive and explicit publication boundary; exact new payload requires separate owner approval.
+- R-191 — VERIFIED: Additive mission archive and explicit publication boundary; exact new payload requires separate owner approval.
+- R-192 — VERIFIED: Additive mission archive and explicit publication boundary; exact new payload requires separate owner approval.
+- R-193 — VERIFIED: Additive mission archive and explicit publication boundary; exact new payload requires separate owner approval.
+- R-194 — VERIFIED: Additive mission archive and explicit publication boundary; exact new payload requires separate owner approval.
+- R-195 — VERIFIED: Additive mission archive and explicit publication boundary; exact new payload requires separate owner approval.
+- R-196 — OPEN: Required scientific output is incomplete/unavailable after external interruption; retained as unmet, not waived. Additive mission archive and explicit publication boundary; exact new payload requires separate owner approval.
+- R-197 — VERIFIED: Additive mission archive and explicit publication boundary; exact new payload requires separate owner approval.
+- R-198 — VERIFIED: Additive mission archive and explicit publication boundary; exact new payload requires separate owner approval.
+- R-199 — OPEN: Required scientific output is incomplete/unavailable after external interruption; retained as unmet, not waived. Additive mission archive and explicit publication boundary; exact new payload requires separate owner approval.
+- R-200 — VERIFIED: Additive mission archive and explicit publication boundary; exact new payload requires separate owner approval.
+- R-201 — VERIFIED: Additive mission archive and explicit publication boundary; exact new payload requires separate owner approval.
+- R-202 — VERIFIED: Actual native PowerShell saved-only reproduction returned exit0 and parsed PASS; zero new science calls.
+- R-203 — VERIFIED: Actual independent final scientific/archive review accepted the truthful interrupted archive only, open P0/P1=0, technical bug_count=0/warn_count=0; no scientific PASS or publication permission.
+- R-204 — OPEN: Actual local commit and transport receipts pending; exact publication approval required.
+- R-205 — VERIFIED: Additive mission archive and explicit publication boundary; exact new payload requires separate owner approval.
+- R-206 — VERIFIED: Additive mission archive and explicit publication boundary; exact new payload requires separate owner approval.
+- R-207 — BLOCKED_HUMAN_INPUT: Exact public payload authorization has not been granted.
+- R-208 — VERIFIED: Additive mission archive and explicit publication boundary; exact new payload requires separate owner approval.
+- R-209 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-210 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-211 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-212 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-213 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-214 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-215 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-216 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-217 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-218 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-219 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-220 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-221 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-222 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-223 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-224 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-225 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-226 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-227 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-228 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-229 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-230 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-231 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-232 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-233 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-234 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-235 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-236 — VERIFIED: Actual independent final scientific/archive review accepted the truthful interrupted archive only, open P0/P1=0, technical bug_count=0/warn_count=0; no scientific PASS or publication permission.
+- R-237 — VERIFIED: Actual independent final scientific/archive review accepted the truthful interrupted archive only, open P0/P1=0, technical bug_count=0/warn_count=0; no scientific PASS or publication permission.
+- R-238 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-239 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-240 — VERIFIED: Actual independent final scientific/archive review accepted the truthful interrupted archive only, open P0/P1=0, technical bug_count=0/warn_count=0; no scientific PASS or publication permission.
+- R-241 — OPEN: Self-containing commit SHA belongs in the ignored post-commit receipt, not guessed here.
+- R-242 — BLOCKED_HUMAN_INPUT: New payload remote verification unavailable until exact owner publication approval; BASE only verified.
+- R-243 — OPEN: Post-commit clean gate belongs in ignored PUBLICATION_LOCAL receipt.
+- R-244 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-245 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-246 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-247 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-248 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-249 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-250 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-251 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-252 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-253 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.
+- R-254 — VERIFIED: Actual closeout values and unavailability reported without scientific PASS, unavailable effects or invented native receipts.

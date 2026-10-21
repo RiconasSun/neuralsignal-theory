@@ -1,0 +1,28 @@
+test_M4_review_decision_string_without_binding_does_not_pass (paper16_development_r4.test_saved.SavedTests.test_M4_review_decision_string_without_binding_does_not_pass) ... ok
+test_bound_signs_do_not_zero_inward_gradient (paper16_development_r4.test_saved.SavedTests.test_bound_signs_do_not_zero_inward_gradient) ... ok
+test_consumed_attempt_before_folder_creation_is_preserved (paper16_development_r4.test_saved.SavedTests.test_consumed_attempt_before_folder_creation_is_preserved) ... ERROR
+test_duplicate_or_wrong_terminal_events_rejected (paper16_development_r4.test_saved.SavedTests.test_duplicate_or_wrong_terminal_events_rejected) ... ok
+test_full_coordinate_diagnostic_prefix_keeps_frozen_step (paper16_development_r4.test_saved.SavedTests.test_full_coordinate_diagnostic_prefix_keeps_frozen_step) ... ok
+test_missing_and_tampered_manifest_fail_closed (paper16_development_r4.test_saved.SavedTests.test_missing_and_tampered_manifest_fail_closed) ... ok
+test_native_supervision_is_not_inferred_from_missing_files (paper16_development_r4.test_saved.SavedTests.test_native_supervision_is_not_inferred_from_missing_files) ... ok
+test_no_new_task_after_first_failed_mandatory_attempt (paper16_development_r4.test_saved.SavedTests.test_no_new_task_after_first_failed_mandatory_attempt) ... ok
+test_unknown_or_partial_call_record_never_counted_as_complete (paper16_development_r4.test_saved.SavedTests.test_unknown_or_partial_call_record_never_counted_as_complete) ... ok
+
+======================================================================
+ERROR: test_consumed_attempt_before_folder_creation_is_preserved (paper16_development_r4.test_saved.SavedTests.test_consumed_attempt_before_folder_creation_is_preserved)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r4\test_saved.py", line 79, in test_consumed_attempt_before_folder_creation_is_preserved
+    out,states=saved.facts()
+               ^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r4\reproduce_saved.py", line 164, in facts
+    require(stage['no_reset'] and stage['mission']=='P16-M3-M5-UNIFORM-NUMERICAL-AMENDMENT-R4'
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_termination_feasibility1\reproduce.py", line 11, in require
+    if not ok:raise RuntimeError(msg)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Original one48h stage
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.205s
+
+FAILED (errors=1)

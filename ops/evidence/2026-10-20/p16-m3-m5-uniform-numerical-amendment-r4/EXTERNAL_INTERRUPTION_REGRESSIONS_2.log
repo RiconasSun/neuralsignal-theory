@@ -1,0 +1,32 @@
+test_access_denied_or_live_job_is_not_process_loss (paper16_development_r4.test_interruption_saved.InterruptionTests.test_access_denied_or_live_job_is_not_process_loss) ... ok
+test_complete_or_failed_endpoint_cannot_be_hidden_as_partial (paper16_development_r4.test_interruption_saved.InterruptionTests.test_complete_or_failed_endpoint_cannot_be_hidden_as_partial) ... 
+  test_complete_or_failed_endpoint_cannot_be_hidden_as_partial (paper16_development_r4.test_interruption_saved.InterruptionTests.test_complete_or_failed_endpoint_cannot_be_hidden_as_partial) (name='coordinate_certificates.npz') ... ERROR
+test_hash_tampering_and_unlisted_partial_files_fail_closed (paper16_development_r4.test_interruption_saved.InterruptionTests.test_hash_tampering_and_unlisted_partial_files_fail_closed) ... ok
+test_interruption_cannot_replace_any_scientific_terminal_receipt (paper16_development_r4.test_interruption_saved.InterruptionTests.test_interruption_cannot_replace_any_scientific_terminal_receipt) ... ok
+test_missing_or_forged_independent_approval_is_rejected (paper16_development_r4.test_interruption_saved.InterruptionTests.test_missing_or_forged_independent_approval_is_rejected) ... ok
+test_owner_shutdown_explanation_is_bound_and_cannot_authorize_restart (paper16_development_r4.test_interruption_saved.InterruptionTests.test_owner_shutdown_explanation_is_bound_and_cannot_authorize_restart) ... ok
+test_unknown_native_values_cannot_be_invented (paper16_development_r4.test_interruption_saved.InterruptionTests.test_unknown_native_values_cannot_be_invented) ... ok
+test_valid_metadata_does_not_supply_native_exit_or_scientific_pass (paper16_development_r4.test_interruption_saved.InterruptionTests.test_valid_metadata_does_not_supply_native_exit_or_scientific_pass) ... ok
+
+======================================================================
+ERROR: test_complete_or_failed_endpoint_cannot_be_hidden_as_partial (paper16_development_r4.test_interruption_saved.InterruptionTests.test_complete_or_failed_endpoint_cannot_be_hidden_as_partial) (name='coordinate_certificates.npz')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r4\test_interruption_saved.py", line 85, in test_complete_or_failed_endpoint_cannot_be_hidden_as_partial
+    folder=next((p/'work/fits').iterdir());write(folder/name,{})
+                                           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r4\test_interruption_saved.py", line 20, in write
+    def write(path,value):path.write_text(json.dumps(value),encoding='utf8')
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1078, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\ops\\evidence\\2026-10-20\\p16-m3-m5-uniform-numerical-amendment-r4\\TEST_TEMP\\tmpq7uqglf0\\paper16_development_r4\\work\\fits\\827f4bc3ba2dbb482f1703c0389a1ab355327fa2ebc85759791a341f1a532547\\coordinate_certificates.npz'
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.160s
+
+FAILED (errors=1)
