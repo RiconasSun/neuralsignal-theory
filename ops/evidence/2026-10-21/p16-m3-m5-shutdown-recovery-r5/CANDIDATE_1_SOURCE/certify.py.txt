@@ -1,0 +1,81 @@
+"""Prospectively freeze exact test methods, then run under native Windows Job."""
+import datetime,importlib,os,sys,time,unittest,socket
+from unittest.mock import patch
+from .core import *
+from paper16_dev_r3.run_m2 import supervise_child
+
+EXTRA_ORACLES=[
+ 'paper16_m1.code.test_dynamics.DynamicsTests.test_nested_B4_at_zero_latent_offsets_and_logits',
+ 'paper16_m1.code.test_dynamics.DynamicsTests.test_D_forward_enumeration_S_presentation_static_and_IID',
+ 'paper16_m1.code.test_dynamics.DynamicsTests.test_continuous_history_strict_future_reset_and_parameter_counts',
+]
+BROKER=[
+ 'test_external_actual_client_overcall_denied_before_evaluation6001',
+ 'test_external_broker_actual_glm_and_all6_latent_seed_certificates',
+ 'test_external_actual_iteration1501_denied_before_acceptance',
+]
+
+def methods():
+    from paper16_development_r4.test_production import ProductionTests
+    from .test_recovery import RecoveryTests
+    loader=unittest.TestLoader()
+    return [f'paper16_development_r4.test_production.ProductionTests.{name}' for name in loader.getTestCaseNames(ProductionTests)]+EXTRA_ORACLES+[f'paper16_development_r5.test_recovery.RecoveryTests.{name}' for name in loader.getTestCaseNames(RecoveryTests)]+['R5_BROKER_WRAPPER::'+name for name in BROKER]
+
+def candidate_files():
+    paths=list(P.glob('*.py'))+[P/'MISSION_SPEC.json',P/'MATHEMATICAL_COPY_PROOF.json']
+    paths.extend(R/row['source'] for row in load(P/'MATHEMATICAL_COPY_PROOF.json')['files'])
+    paths.extend([R/'paper16_development_r4/test_production.py',R/'paper16_m1/code/test_dynamics.py',R/'paper16_dev_r3/windows_job.py',R/'paper16_dev_r3/clock_bound.py',R/'paper16_dev_r3/run_m2.py',E/'OWNER_REQUEST.txt',E/'REQUIREMENT_BASELINE.json',P/'PHASE_A_CLAIM.json'])
+    return [{'path':f.relative_to(R).as_posix(),'sha256':sha(f)} for f in sorted(set(paths))]
+
+def worker():
+    from . import test_recovery as new,optimizer,models,features
+    from paper16_development_r4 import test_production as original
+    stage=load(os.environ['P16_R5_TEST_STAGE']);guard(stage);require_job(os.environ['P16_R5_JOB'])
+    reg=load(os.environ['P16_R5_CERT_REG'])
+    if reg['methods']!=methods():raise AccessStop('Exact frozen method inventory')
+    for row in reg['source_files']:
+        if sha(R/row['path'])!=row['sha256']:raise AccessStop('Candidate source changed before tests')
+    original.folder=new.folder
+    loader=unittest.TestLoader();suite=unittest.TestSuite()
+    suite.addTests(loader.loadTestsFromTestCase(original.ProductionTests))
+    suite.addTests(loader.loadTestsFromNames(EXTRA_ORACLES))
+    suite.addTests(loader.loadTestsFromTestCase(new.RecoveryTests))
+    class Broker(unittest.TestCase):
+        def runTest(self):
+            name=self._testMethodName
+            with patch.object(original,'optimizer',optimizer),patch.object(original,'models',models),patch.object(original,'features',features):
+                getattr(original.ProductionTests(name),name)()
+    for name in BROKER:
+        def method(self,n=name):
+            with patch.object(original,'optimizer',optimizer),patch.object(original,'models',models),patch.object(original,'features',features):
+                getattr(original.ProductionTests(n),n)()
+        setattr(Broker,name,method);suite.addTest(Broker(name))
+    with patch.object(socket.socket,'connect',side_effect=AccessStop('Synthetic suite network denied')),patch('requests.sessions.Session.request',side_effect=AccessStop('Synthetic no raw source requests')):
+        result=unittest.TextTestRunner(verbosity=2).run(suite)
+    guard(stage)
+    for row in reg['source_files']:
+        if sha(R/row['path'])!=row['sha256']:raise AccessStop('Candidate source changed during tests')
+    out={'mission':MISSION,'tests_run':result.testsRun,'failures':len(result.failures),'errors':len(result.errors),'skipped':len(result.skipped),'mandatory_tests_pass':result.wasSuccessful() and not result.skipped,'real_fits_executed':0,'E_real_access':False,'Final_access':False,'candidate_registration_sha256':sha(os.environ['P16_R5_CERT_REG']),'source_files':reg['source_files'],'original33_assertions_unchanged':True,'fixture_write_reroute_only':True,'all_synthetic_writes_in_R5':True,'unique_registered_methods':reg['methods']}
+    once(R/reg['result_path'],out)
+    if not out['mandatory_tests_pass']:raise SystemExit(1)
+
+def supervise():
+    guard(load(P/'PHASE_A_CLAIM.json'));verify_pins()
+    n=1
+    while (P/f'CERTIFICATION_{n}_REGISTRATION.json').exists():n+=1
+    stage={'phase':'SYNTHETIC',**make_stage(1800)}
+    parent=load(P/'PHASE_A_CLAIM.json')
+    if stage['deadline_monotonic']>parent['deadline_monotonic']:raise BudgetStop('Synthetic window exceeds original PhaseA')
+    clock=P/f'CERTIFICATION_{n}_CLOCK.json';once(clock,stage)
+    registration=P/f'CERTIFICATION_{n}_REGISTRATION.json';result_path=P/f'CERTIFICATION_{n}_RESULT.json'
+    once(registration,{'mission':MISSION,'registered_UTC':datetime.datetime.now(datetime.timezone.utc).isoformat(),'phase_A_claim_sha256':sha(P/'PHASE_A_CLAIM.json'),'source_files':candidate_files(),'methods':methods(),'fixture_policy':'Only original folder() rerouted into new R5 synthetic area; original assertions unchanged','result_path':result_path.relative_to(R).as_posix(),'real_fits_authorized':False})
+    name=f'Local\\P16_R5_CERT_{os.getpid()}_{time.time_ns()}'
+    os.environ.update(P16_R5_JOB=name,P16_R4_JOB=name,P16_R5_TEST_STAGE=str(clock),P16_R4_TEST_STAGE=str(clock),P16_R5_CERT_REG=str(registration))
+    result=supervise_child([sys.executable,'-B','-m','paper16_development_r5.certify','worker'],stage['deadline_monotonic'],E/f'CERTIFICATION_{n}.log',name,stage)
+    once(P/f'CERTIFICATION_{n}_SUPERVISION.json',result)
+    if result['returncode']==0 and result['completed_before_deadline'] and result['native_job_tree_enforced'] and result_path.exists() and load(result_path)['mandatory_tests_pass']:
+        once(P/'PRODUCTION_CERTIFICATION.json',{'mandatory_tests_pass':True,'real_fits_executed':0,'test_result_path':result_path.relative_to(R).as_posix(),'test_result_sha256':sha(result_path),'registration_path':registration.relative_to(R).as_posix(),'registration_sha256':sha(registration),'supervision_sha256':sha(P/f'CERTIFICATION_{n}_SUPERVISION.json')})
+    print(result,flush=True)
+    if not (P/'PRODUCTION_CERTIFICATION.json').exists():raise SystemExit(1)
+
+if __name__=='__main__':{'supervise':supervise,'worker':worker}[sys.argv[1]]()

@@ -1,0 +1,44 @@
+"""Fresh execution namespace; immutable original scientific definitions."""
+from paper16_development_r4.core import (
+    R,ImplementationStop,NumericalStop,BudgetStop,AccessStop,load,sha,once,event,
+    array_id,arrays,spec,dynamics,analysis_oracles,MODELS,CONTRASTS,REFIT_PANELS,SEEDS,GRID,NUMERIC,
+    make_stage as original_make_stage,require_job,
+)
+from paper16_dev_r3.clock_bound import guard as original_guard,verify_stage_environment
+from paper16_dev_r3.core import ResourceStop
+P=R/'paper16_development_r5'
+E=R/'ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5'
+Q=R/'paper16_shutdown_recovery_r5_protocol'
+BASE='b7bb1227379462c2c7a1cef40ab0d0e99a6d020b'
+MISSION='P16-M3-M5-SHUTDOWN-RECOVERY-R5'
+
+class ProcessStop(ImplementationStop):pass
+
+def make_stage(seconds):
+    import math
+    stage=original_make_stage(seconds)
+    # Float addition across exponent boundaries can round the span above its cap.
+    # Only shorten by one representable tick; UTC retains its original hard limit.
+    while stage['deadline_monotonic']-stage['start_monotonic']>seconds:
+        stage['deadline_monotonic']=math.nextafter(stage['deadline_monotonic'],stage['start_monotonic'])
+    return stage
+
+def verify_pins():
+    for path,record in load(Q/'SOURCE_PINS.json')['files'].items():
+        if sha(R/path)!=record['sha256'] or (R/path).stat().st_size!=record['bytes']:raise AccessStop('Frozen R5 protocol source changed: '+path)
+    for row in load(P/'MATHEMATICAL_COPY_PROOF.json')['files']:
+        raw=(R/row['source']).read_bytes();actual=(R/row['target']).read_bytes()
+        if sha(R/row['source'])!=row['source_sha256'] or sha(R/row['target'])!=row['target_sha256']:raise AccessStop('Mathematical source identity')
+        expected=raw.replace(b'paper16_development_r4',b'paper16_development_r5').replace(b'P16_R4_JOB',b'P16_R5_JOB') if row['permitted_replacements'] else raw
+        if actual!=expected:raise AccessStop('Unregistered mathematical change')
+
+def guard(stage):
+    original_guard(stage)
+    phase=stage.get('phase')
+    if phase not in ['A_PREFLIGHT','B_A_M4','SYNTHETIC']:raise AccessStop('Explicit R5 clock phase required')
+    cap=86400 if phase=='A_PREFLIGHT' else 172800
+    span=stage['deadline_monotonic']-stage['start_monotonic']
+    if span>cap+1e-6:raise BudgetStop('R5 phase clock extension')
+    if phase=='SYNTHETIC':original_guard(load(P/'PHASE_A_CLAIM.json'))
+
+verify_pins()

@@ -1,0 +1,59 @@
+Get-CimInstance : Access to a CIM resource was not available to the client.
+At line:1 char:2
++ (Get-CimInstance Win32_OperatingSystem).LastBootUpTime.ToUniversalTim ...
++  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Get-CimInstance], CimException
+    + FullyQualifiedErrorId : Microsoft.Management.Infrastructure.CimException,Microsoft.Management.Infrastructure.Cim 
+   Cmdlets.GetCimInstanceCommand
+ 
+{
+  "mission": "P16-M3-M5-SHUTDOWN-RECOVERY-R5",
+  "stop": "STOP_REUSE_REQUIRED_GATE",
+  "UTC": "2026-10-21T16:50:06.467285+00:00",
+  "active": {
+    "kind": "BOOTSTRAP",
+    "id": null
+  },
+  "counts": {
+    "optimizer_attempted": 0,
+    "optimizer_passed": 0,
+    "B0_attempted": 0,
+    "B0_passed": 0
+  },
+  "error_type": "CalledProcessError",
+  "message": "Command '['powershell', '-NoProfile', '-Command', '(Get-CimInstance Win32_OperatingSystem).LastBootUpTime.ToUniversalTime().ToString(\"o\")']' returned non-zero exit status 1.",
+  "remaining_optimizer_unattempted": 3992,
+  "remaining_B0_unattempted": 216,
+  "later_scientific_audit_stopped": true,
+  "no_retry_or_recalculation": true
+}
+Traceback (most recent call last):
+  File "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/PRIMARY_SAVED_AUDIT.py", line 218, in <module>
+    with patch.object(socket.socket,'connect',side_effect=forbid),patch.object(socket.socket,'connect_ex',side_effect=forbid):execute()
+                                                                                                                              ^^^^^^^^^
+  File "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/PRIMARY_SAVED_AUDIT.py", line 115, in execute
+    boot = subprocess.check_output(['powershell','-NoProfile','-Command', '(Get-CimInstance Win32_OperatingSystem).LastBootUpTime.ToUniversalTime().ToString("o")'], text=True).strip()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['powershell', '-NoProfile', '-Command', '(Get-CimInstance Win32_OperatingSystem).LastBootUpTime.ToUniversalTime().ToString("o")']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "<frozen runpy>", line 291, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/PRIMARY_SAVED_AUDIT.py", line 218, in <module>
+    with patch.object(socket.socket,'connect',side_effect=forbid),patch.object(socket.socket,'connect_ex',side_effect=forbid):execute()
+                                                                                                                              ^^^^^^^^^
+  File "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/PRIMARY_SAVED_AUDIT.py", line 115, in execute
+    boot = subprocess.check_output(['powershell','-NoProfile','-Command', '(Get-CimInstance Win32_OperatingSystem).LastBootUpTime.ToUniversalTime().ToString("o")'], text=True).strip()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['powershell', '-NoProfile', '-Command', '(Get-CimInstance Win32_OperatingSystem).LastBootUpTime.ToUniversalTime().ToString("o")']' returned non-zero exit status 1.

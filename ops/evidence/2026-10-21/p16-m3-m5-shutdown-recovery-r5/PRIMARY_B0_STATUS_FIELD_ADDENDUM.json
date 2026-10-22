@@ -1,0 +1,46 @@
+{
+  "mission": "P16-M3-M5-SHUTDOWN-RECOVERY-R5",
+  "recorded_UTC": "2026-10-21T17:01:41.687767+00:00",
+  "scope": "APPEND_ONLY_METADATA_FIELD_SEMANTICS_NO_AUDIT_RERUN",
+  "original_matrix": {
+    "path": "paper16_development_r5/PRIMARY_B0_V2_MATRIX.json",
+    "sha256": "4fee6748d8ce5cc7b63dc2d743d2708ed25db49a073476aa8d7dc5c95170e62b",
+    "not_overwritten": true
+  },
+  "primary_result": {
+    "path": "paper16_development_r5/PRIMARY_AUDIT_V2_RESULT.json",
+    "sha256": "213f9573f0d808e94923248c8a0c3eaa1d2828794143c95d665b59a69fb9cfc2"
+  },
+  "native_completion_proof": {
+    "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/PRIMARY_NATIVE_COMPLETION_PROOF.json",
+    "sha256": "9699e058e4aa3496517c54c33b0c440441b2c8cf9f095476802f572432f15c85",
+    "actual_exit_code": 0
+  },
+  "inherited_target_snapshot": {
+    "source": "paper16_shutdown_recovery_r5_protocol/REUSE_TARGETS.json",
+    "R5_audit": "NOT_EXECUTED",
+    "R5_admitted": false,
+    "meaning": "These original target fields were copied into each matrix row as the prospective registration snapshot. R5_audit is not the current primary execution status."
+  },
+  "actual_primary_execution": {
+    "authoritative_matrix_field": "status",
+    "status": "PASS",
+    "B0_attempted": 216,
+    "B0_passed": 216,
+    "all_216_effective_primary_audit_status": "EXECUTED_PASS",
+    "qualification": "This clarifies the already-completed original primary pass; it creates no new numerical result."
+  },
+  "independent_qualification": {
+    "complete": true,
+    "basis": "Parent reports completed independent full-matrix comparison and requested this metadata-only clarification.",
+    "R5_admission": "SEPARATE_FINAL_GATE",
+    "no_final_admission_issued_by_this_addendum": true
+  },
+  "preservation": {
+    "original_matrix_result_native_proof_unchanged": true,
+    "audit_rerun": false,
+    "numerical_state_reads": 0,
+    "numerical_recalculations": 0,
+    "scientific_threshold_changes": false
+  }
+}

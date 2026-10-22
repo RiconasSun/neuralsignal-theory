@@ -1,0 +1,57 @@
+{
+  "mission": "P16-M3-M5-SHUTDOWN-RECOVERY-R5",
+  "stop": "STOP_REUSE_REQUIRED_GATE",
+  "UTC": "2026-10-21T16:51:16.546324+00:00",
+  "active": {
+    "kind": "OPTIMIZER",
+    "id": "726162197:MAIN:B1:951877136:None:0.01"
+  },
+  "counts": {
+    "optimizer_attempted": 1,
+    "optimizer_passed": 0,
+    "B0_attempted": 0,
+    "B0_passed": 0
+  },
+  "error_type": "RuntimeError",
+  "message": "Saved FG vector",
+  "remaining_optimizer_unattempted": 3991,
+  "remaining_B0_unattempted": 216,
+  "later_scientific_audit_stopped": true,
+  "no_retry_or_recalculation": true
+}
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\ops\evidence\2026-10-21\p16-m3-m5-shutdown-recovery-r5\PRIMARY_SAVED_AUDIT.py", line 218, in <module>
+    with patch.object(socket.socket,'connect',side_effect=forbid),patch.object(socket.socket,'connect_ex',side_effect=forbid):execute()
+                                                                                                                              ^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\ops\evidence\2026-10-21\p16-m3-m5-shutdown-recovery-r5\PRIMARY_SAVED_AUDIT.py", line 195, in execute
+    calls,nit=journal(folder,result,coord,initial,prior,audit,origin)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\ops\evidence\2026-10-21\p16-m3-m5-shutdown-recovery-r5\PRIMARY_SAVED_AUDIT.py", line 93, in journal
+    require(prior.call_prefix(calls, len(initial['x0'])) == (n, n), 'Complete saved FG vector journal')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_termination_feasibility1\reproduce.py", line 28, in call_prefix
+    require(np.asarray(row.get('x')).shape==(p,) and np.isfinite(row['x']).all(),'Saved FG vector')
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_termination_feasibility1\reproduce.py", line 11, in require
+    if not ok:raise RuntimeError(msg)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Saved FG vector
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "<frozen runpy>", line 291, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\ops\evidence\2026-10-21\p16-m3-m5-shutdown-recovery-r5\PRIMARY_SAVED_AUDIT.py", line 218, in <module>
+    with patch.object(socket.socket,'connect',side_effect=forbid),patch.object(socket.socket,'connect_ex',side_effect=forbid):execute()
+                                                                                                                              ^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\ops\evidence\2026-10-21\p16-m3-m5-shutdown-recovery-r5\PRIMARY_SAVED_AUDIT.py", line 195, in execute
+    calls,nit=journal(folder,result,coord,initial,prior,audit,origin)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\ops\evidence\2026-10-21\p16-m3-m5-shutdown-recovery-r5\PRIMARY_SAVED_AUDIT.py", line 93, in journal
+    require(prior.call_prefix(calls, len(initial['x0'])) == (n, n), 'Complete saved FG vector journal')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_termination_feasibility1\reproduce.py", line 28, in call_prefix
+    require(np.asarray(row.get('x')).shape==(p,) and np.isfinite(row['x']).all(),'Saved FG vector')
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_termination_feasibility1\reproduce.py", line 11, in require
+    if not ok:raise RuntimeError(msg)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Saved FG vector

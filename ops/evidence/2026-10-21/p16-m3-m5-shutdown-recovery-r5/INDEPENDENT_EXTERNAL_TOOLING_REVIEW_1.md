@@ -1,0 +1,21 @@
+# Independent external closure tooling review 1
+
+Mission: P16-M3-M5-SHUTDOWN-RECOVERY-R5. Reviewer: /root/r4_interruption_review, 2026-10-22.
+
+Decision: **CHANGES_REQUIRED_P1**. Open P0=0; open P1=1. No real archive/reproduction or M4 approval is authorized by this review. The independently accepted external process-loss evidence, immutable snapshot, interrupted-prefix accounting and historical evidence remain valid. This is a new closure-tool entry-path defect, not a failed numerical state, scientific resumption or reason to alter the producer.
+
+Exact reviewed preserved candidate: reproducer SHA256 `ecbaa256929c9c04b535d6b042acfcdfef2d105509497fe8744e36480bc8d18f`, builder SHA256 `f81f6c1887ab3b972869d9398dc3c1b162cfd4e55a3516ce3f560813986e84b8`. Their byte-identical review-1 snapshots are retained as reproduce_saved_external_review1_snapshot.py and build_archive_external_review1_snapshot.py. The handoff is EXTERNAL_TOOLING_HANDOFF_1.json, SHA256 `a36dabab81cdfdbcb82ba32773c1ef5b54a0bb420ab11829f346a4fce19f36b5`.
+
+The supplied 61 external synthetic checks, 46 prior parser checks and 55 prior repair checks record actual native exit 0. They overlap and must not be added as independent requirements. The external tests meaningfully exercise fixed hash barriers and semantic failures after fixture-only repinning, missing or fabricated native/M4 receipts, wrong accepted ledger joins, altered unknown fields, partial endpoint substitution and an end-to-end synthetic builder-to-reproducer flow with NPZ/reuse/coordinate routines trapped. These positive findings do not cover the new entry-path issue below.
+
+## P1 — external routing can follow a leaf before its no-follow guard
+
+Both builder.build() and reproduce_saved.validate_terminal_metadata() choose the external branch using `(E/'EXTERNAL_SCIENTIFIC_STOP.json').exists()` before passing that leaf through the existing local/no-follow path guard. The builder only checks its two root folders before this test; its inventory walk has not run yet. If the external STOP leaf is a symlink/reparse point to an external or UNC target, exists() can follow the target before the previously required rejection occurs. The ordinary reproducer run first walks its archive, but the shared terminal validator is also used directly by the builder, so archive traversal cannot repair the builder entry ordering.
+
+The external validator also checks `(P/'work/E').exists()` without first guarding that leaf. It is the same denial-order gap in a new metadata path. The expected fix is to use the existing local/no-follow guard before every new existence test, while preserving absent optional paths, original native routing and exact external pins. No new security system or scientific policy is required.
+
+The independent focused proof imports only the preserved closure modules and uses a short, verified temporary synthetic root. It traps Path.exists on the external STOP leaf and records that no guard for that leaf ran first at either route. A static AST check confirms the additional unguarded work/E existence call. No real target was followed, no network or saved-state array was accessed, and no real build or full reproduction was run. Proof source: INDEPENDENT_EXTERNAL_TOOLING_ROUTE_PROOF_1.py; result: INDEPENDENT_EXTERNAL_TOOLING_ROUTE_PROOF_RESULT_1.json; native execution log: INDEPENDENT_EXTERNAL_TOOLING_ROUTE_PROOF_EXECUTION_1.log, actual exit 0.
+
+Required regression: exercise the actual builder and shared terminal-router entry points with an external STOP leaf reparse/symlink trap, plus the actual external work/E check. Assert rejection before target exists/stat/open is reached; a helper-only path rejection is insufficient. Preserve this candidate, test outcomes and unsuccessful review. Re-review the exact repaired sources after fresh sufficient synthetic certification. Other external evidence joins, unknown values, stopped-only classification, 625/624/1/1,854 accounting, original source/hash scope and early no-NPZ return were statically consistent with the registered closure contract; no second P0/P1 was identified.
+
+The current scientific verdict remains STOP_EXECUTION_INTERRUPTED_REQUIRED_GATE. No observer or scientific process was restarted and no original scientific record, model or threshold was changed.

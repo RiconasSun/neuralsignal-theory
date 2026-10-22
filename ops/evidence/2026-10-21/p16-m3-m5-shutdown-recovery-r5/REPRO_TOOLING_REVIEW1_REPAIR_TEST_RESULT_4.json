@@ -1,0 +1,332 @@
+{
+  "mission": "P16-M3-M5-SHUTDOWN-RECOVERY-R5",
+  "scope": "SYNTHETIC_CLOSURE_REVIEW1_REPAIRS_ONLY",
+  "completed_UTC": "2026-10-22T00:55:03.984637+00:00",
+  "tests": [
+    {
+      "name": "LF_required_FG",
+      "status": "PASS",
+      "rejected": "AssertionError",
+      "message": "Nonempty closed journal requires terminal LF"
+    },
+    {
+      "name": "LF_required_TASK_TERMINAL",
+      "status": "PASS",
+      "rejected": "AssertionError",
+      "message": "Nonempty closed journal requires terminal LF"
+    },
+    {
+      "name": "LF_required_DIAGNOSTIC",
+      "status": "PASS",
+      "rejected": "AssertionError",
+      "message": "Nonempty closed journal requires terminal LF"
+    },
+    {
+      "name": "LF_required_INITIALIZER",
+      "status": "PASS",
+      "rejected": "AssertionError",
+      "message": "Nonempty closed journal requires terminal LF"
+    },
+    {
+      "name": "complete_line_partial_reservation_prefix_accepted",
+      "status": "PASS",
+      "captured_synthetic_only_stdout": ""
+    },
+    {
+      "name": "valid_JSON_torn_tail_not_atomic_completion",
+      "status": "PASS",
+      "captured_synthetic_only_stdout": ""
+    },
+    {
+      "name": "invalid_torn_tail_preserved_with_unknown_status",
+      "status": "PASS",
+      "captured_synthetic_only_stdout": ""
+    },
+    {
+      "name": "non_LF_line_separator_cannot_create_atomic_records",
+      "status": "PASS",
+      "rejected": "JSONDecodeError",
+      "message": "Extra data: line 1 column 22 (char 21)"
+    },
+    {
+      "name": "STOP_exact_atomic_worker_failure",
+      "status": "PASS",
+      "captured_synthetic_only_stdout": ""
+    },
+    {
+      "name": "STOP_denies_swapped_category",
+      "status": "PASS",
+      "rejected": "AssertionError",
+      "message": "STOP label must match frozen exception classifier"
+    },
+    {
+      "name": "STOP_denies_unmatched_FAILED_exception",
+      "status": "PASS",
+      "rejected": "AssertionError",
+      "message": "STOP has no matching actual FAILED/native/worker-bootstrap evidence"
+    },
+    {
+      "name": "STOP_denies_numerical_worker_failure_with_zero_exit",
+      "status": "PASS",
+      "rejected": "AssertionError",
+      "message": "Unhandled worker failure cannot have successful native exit"
+    },
+    {
+      "name": "STOP_native_deadline_exact",
+      "status": "PASS",
+      "captured_synthetic_only_stdout": ""
+    },
+    {
+      "name": "STOP_preserves_earlier_worker_failure_before_later_native_kill",
+      "status": "PASS",
+      "captured_synthetic_only_stdout": ""
+    },
+    {
+      "name": "STOP_native_clock_exact",
+      "status": "PASS",
+      "captured_synthetic_only_stdout": ""
+    },
+    {
+      "name": "STOP_native_boot_uses_original_classifier",
+      "status": "PASS",
+      "captured_synthetic_only_stdout": ""
+    },
+    {
+      "name": "STOP_denies_clock_label_when_native_killed_precedence_applies",
+      "status": "PASS",
+      "rejected": "AssertionError",
+      "message": "STOP has no matching actual FAILED/native/worker-bootstrap evidence"
+    },
+    {
+      "name": "STOP_native_process_exact",
+      "status": "PASS",
+      "captured_synthetic_only_stdout": ""
+    },
+    {
+      "name": "STOP_native_zero_exit_missing_completion_exact",
+      "status": "PASS",
+      "captured_synthetic_only_stdout": ""
+    },
+    {
+      "name": "STOP_worker_bootstrap_trace_and_native_corrobation",
+      "status": "PASS",
+      "captured_synthetic_only_stdout": ""
+    },
+    {
+      "name": "STOP_numerical_trace_alone_cannot_replace_FAILED_row",
+      "status": "PASS",
+      "rejected": "AssertionError",
+      "message": "STOP has no matching actual FAILED/native/worker-bootstrap evidence"
+    },
+    {
+      "name": "STOP_torn_failure_provenance_is_unknown_not_PASS",
+      "status": "PASS",
+      "captured_synthetic_only_stdout": ""
+    },
+    {
+      "name": "native_exact_typed_PID_Job_stage",
+      "status": "PASS",
+      "captured_synthetic_only_stdout": ""
+    },
+    {
+      "name": "deny_native_identity_supervisor_pid_42",
+      "status": "PASS",
+      "rejected": "AssertionError",
+      "message": "Original typed supervisor PID/exact Job/stage binding"
+    },
+    {
+      "name": "deny_native_identity_supervisor_pid_True",
+      "status": "PASS",
+      "rejected": "AssertionError",
+      "message": "Original typed supervisor PID/exact Job/stage binding"
+    },
+    {
+      "name": "deny_native_identity_supervisor_pid_-1",
+      "status": "PASS",
+      "rejected": "AssertionError",
+      "message": "Original typed supervisor PID/exact Job/stage binding"
+    },
+    {
+      "name": "deny_native_identity_job_name_INVALID_PRODUCER_JOB",
+      "status": "PASS",
+      "rejected": "AssertionError",
+      "message": "Original typed supervisor PID/exact Job/stage binding"
+    },
+    {
+      "name": "deny_native_identity_job_name_Local\\P16_R5_43_123",
+      "status": "PASS",
+      "rejected": "AssertionError",
+      "message": "Original typed supervisor PID/exact Job/stage binding"
+    },
+    {
+      "name": "deny_native_identity_job_name_Local\\P16_R5_42_notdigits",
+      "status": "PASS",
+      "rejected": "AssertionError",
+      "message": "Original typed supervisor PID/exact Job/stage binding"
+    },
+    {
+      "name": "deny_native_identity_job_name_Local\\P16_R5_42_\u0661\u0662\u0663",
+      "status": "PASS",
+      "rejected": "AssertionError",
+      "message": "Original typed supervisor PID/exact Job/stage binding"
+    },
+    {
+      "name": "deny_native_identity_stage_sha256_mismatch",
+      "status": "PASS",
+      "rejected": "AssertionError",
+      "message": "Original typed supervisor PID/exact Job/stage binding"
+    },
+    {
+      "name": "builder_lexical_denial_before_filesystem_//synthetic-host/share/data.json",
+      "status": "PASS",
+      "rejected": "ValueError",
+      "message": "Noncanonical/nonlocal path rejected before filesystem access"
+    },
+    {
+      "name": "builder_lexical_denial_before_filesystem_C:/outside/data.json",
+      "status": "PASS",
+      "rejected": "ValueError",
+      "message": "Canonical repository-local relative path required"
+    },
+    {
+      "name": "builder_lexical_denial_before_filesystem_../escape",
+      "status": "PASS",
+      "rejected": "ValueError",
+      "message": "Noncanonical/nonlocal path rejected before filesystem access"
+    },
+    {
+      "name": "builder_lexical_denial_before_filesystem_x/../y",
+      "status": "PASS",
+      "rejected": "ValueError",
+      "message": "Noncanonical/nonlocal path rejected before filesystem access"
+    },
+    {
+      "name": "builder_lexical_denial_before_filesystem_x/./y",
+      "status": "PASS",
+      "rejected": "ValueError",
+      "message": "Noncanonical/nonlocal path rejected before filesystem access"
+    },
+    {
+      "name": "builder_lexical_denial_before_filesystem_x:stream",
+      "status": "PASS",
+      "rejected": "ValueError",
+      "message": "Canonical repository-local relative path required"
+    },
+    {
+      "name": "builder_lexical_denial_before_filesystem_x\\y",
+      "status": "PASS",
+      "rejected": "ValueError",
+      "message": "Canonical repository-local relative path required"
+    },
+    {
+      "name": "builder_lexical_denial_before_filesystem_/absolute",
+      "status": "PASS",
+      "rejected": "ValueError",
+      "message": "Noncanonical/nonlocal path rejected before filesystem access"
+    },
+    {
+      "name": "builder_relative_denial_before_resolve_//synthetic-host/share/data.json",
+      "status": "PASS",
+      "rejected": "ValueError",
+      "message": "Nonlocal absolute archive path"
+    },
+    {
+      "name": "builder_relative_denial_before_resolve_C:/outside/data.json",
+      "status": "PASS",
+      "rejected": "ValueError",
+      "message": "Nonlocal absolute archive path"
+    },
+    {
+      "name": "builder_relative_denial_before_resolve_../escape",
+      "status": "PASS",
+      "rejected": "ValueError",
+      "message": "Noncanonical/nonlocal path rejected before filesystem access"
+    },
+    {
+      "name": "builder_relative_denial_before_resolve_x/../y",
+      "status": "PASS",
+      "rejected": "ValueError",
+      "message": "Noncanonical/nonlocal path rejected before filesystem access"
+    },
+    {
+      "name": "builder_symbolic_denied_before_resolve",
+      "status": "PASS",
+      "rejected": "ValueError",
+      "message": "Symbolic/junction/reparse archive path denied before traversal"
+    },
+    {
+      "name": "reproducer_symbolic_denied_before_resolve",
+      "status": "PASS",
+      "rejected": "AssertionError",
+      "message": "Symbolic/junction/reparse archive path denied"
+    },
+    {
+      "name": "builder_junction_denied_before_resolve",
+      "status": "PASS",
+      "rejected": "ValueError",
+      "message": "Symbolic/junction/reparse archive path denied before traversal"
+    },
+    {
+      "name": "reproducer_junction_denied_before_resolve",
+      "status": "PASS",
+      "rejected": "AssertionError",
+      "message": "Symbolic/junction/reparse archive path denied"
+    },
+    {
+      "name": "builder_walk_reparse_denied_before_descent",
+      "status": "PASS",
+      "rejected": "ValueError",
+      "message": "Symbolic/junction/reparse inventory entry denied before descent"
+    },
+    {
+      "name": "reproducer_walk_reparse_denied_before_descent",
+      "status": "PASS",
+      "rejected": "AssertionError",
+      "message": "Symbolic/junction/reparse inventory entry denied"
+    },
+    {
+      "name": "builder_synthetic_terminal_archive_integration",
+      "status": "PASS",
+      "captured_synthetic_only_stdout": "{\n  \"manifest\": \"paper16_development_r5/LOCAL_ARCHIVE_MANIFEST.json\",\n  \"sha256\": \"970a3ec66e7d4fbc88b479dbe50f0e40de17d5abe29f02c6e7a56c9a152993eb\",\n  \"files\": 14,\n  \"create_only\": true\n}\n"
+    },
+    {
+      "name": "builder_manifest_create_only",
+      "status": "PASS",
+      "rejected": "FileExistsError",
+      "message": "[Errno 17] File exists: 'C:\\\\Users\\\\85993\\\\Desktop\\\\codebase\\\\neuralsignal institute\\\\ops\\\\evidence\\\\2026-10-21\\\\p16-m3-m5-shutdown-recovery-r5\\\\REPRO_TOOLING_TEMP\\\\p16_closure_review1_shm42u0l\\\\paper16_development_r5\\\\LOCAL_ARCHIVE_MANIFEST.json'"
+    },
+    {
+      "name": "builder_torn_STOP_metadata_preserved_as_INCOMPLETE",
+      "status": "PASS",
+      "captured_synthetic_only_stdout": "{\n  \"manifest\": \"paper16_development_r5/LOCAL_ARCHIVE_MANIFEST.json\",\n  \"sha256\": \"30f9a3728a2dbbe8ea57309a54046c4dc816a6cd5e159052f48d1f081aca623e\",\n  \"files\": 14,\n  \"create_only\": true\n}\n"
+    },
+    {
+      "name": "builder_denies_contradictory_scientific_STOP",
+      "status": "PASS",
+      "rejected": "AssertionError",
+      "message": "STOP label must match frozen exception classifier"
+    },
+    {
+      "name": "builder_denies_string_supervisor_PID",
+      "status": "PASS",
+      "rejected": "RuntimeError",
+      "message": "Actual native Job/process/stage receipt binding failed"
+    },
+    {
+      "name": "builder_reference_loop_lexical_denial_before_resolve",
+      "status": "PASS",
+      "rejected": "ValueError",
+      "message": "Noncanonical/nonlocal path rejected before filesystem access"
+    }
+  ],
+  "passed": 55,
+  "failed": 0,
+  "reproducer_sha256": "ecbaa256929c9c04b535d6b042acfcdfef2d105509497fe8744e36480bc8d18f",
+  "builder_sha256": "f81f6c1887ab3b972869d9398dc3c1b162cfd4e55a3516ce3f560813986e84b8",
+  "test_sha256": "40847cce623cf65d8f007904c8cd17e7d4cf925bd8d81a3fe4874a25c6200cdd",
+  "real_saved_state_audits": 0,
+  "full_real_reproduction_executed": false,
+  "scientific_model_gradient_score_calls": 0,
+  "running_journal_writes": 0,
+  "M4_or_scientific_PASS_claimed": false
+}

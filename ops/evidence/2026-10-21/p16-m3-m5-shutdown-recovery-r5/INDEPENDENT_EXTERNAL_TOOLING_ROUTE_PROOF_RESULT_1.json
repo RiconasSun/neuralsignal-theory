@@ -1,0 +1,41 @@
+{
+  "mission": "P16-M3-M5-SHUTDOWN-RECOVERY-R5",
+  "reviewer": "/root/r4_interruption_review",
+  "recorded_UTC": "2026-10-22T00:57:11.902986+00:00",
+  "reviewed_preserved_source_sha256": {
+    "reproduce_saved_external_review1_snapshot.py": "ecbaa256929c9c04b535d6b042acfcdfef2d105509497fe8744e36480bc8d18f",
+    "build_archive_external_review1_snapshot.py": "f81f6c1887ab3b972869d9398dc3c1b162cfd4e55a3516ce3f560813986e84b8"
+  },
+  "finding": "P1_EXTERNAL_ROUTE_REPARSE_DENIAL_ORDER",
+  "proofs": [
+    {
+      "entry": "metadata_route",
+      "observed": "External STOP exists reached before its local/no-follow guard",
+      "actual_target_access": false,
+      "guarded_names_before_trap": []
+    },
+    {
+      "entry": "archive_builder_route",
+      "observed": "External STOP exists reached before its local/no-follow guard",
+      "actual_target_access": false,
+      "guarded_names_before_trap": [
+        "paper16_development_r5",
+        "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5"
+      ]
+    },
+    {
+      "entry": "validate_external_terminal",
+      "observed": "Additional unguarded P/work/E exists call confirmed statically",
+      "source_lines": [
+        399
+      ],
+      "actual_target_access": false
+    }
+  ],
+  "full_real_reproduction_or_archive_run": false,
+  "real_saved_state_audits": 0,
+  "NPZ_decodes": 0,
+  "scientific_model_calls": 0,
+  "network_access": false,
+  "source_modified": false
+}

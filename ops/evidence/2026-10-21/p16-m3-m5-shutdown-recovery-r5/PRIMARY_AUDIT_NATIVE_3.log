@@ -1,0 +1,45 @@
+{
+  "mission": "P16-M3-M5-SHUTDOWN-RECOVERY-R5",
+  "stop": "STOP_REUSE_REQUIRED_GATE",
+  "UTC": "2026-10-21T16:50:22.849899+00:00",
+  "active": {
+    "kind": "BOOTSTRAP",
+    "id": null
+  },
+  "counts": {
+    "optimizer_attempted": 0,
+    "optimizer_passed": 0,
+    "B0_attempted": 0,
+    "B0_passed": 0
+  },
+  "error_type": "ValueError",
+  "message": "'ops\\\\evidence\\\\2026-10-21\\\\p16-m3-m5-shutdown-recovery-r5\\\\PRIMARY_SAVED_AUDIT.py' is not in the subpath of 'C:\\\\Users\\\\85993\\\\Desktop\\\\codebase\\\\neuralsignal institute' OR one path is relative and the other is absolute.",
+  "remaining_optimizer_unattempted": 3992,
+  "remaining_B0_unattempted": 216,
+  "later_scientific_audit_stopped": true,
+  "no_retry_or_recalculation": true
+}
+Traceback (most recent call last):
+  File "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/PRIMARY_SAVED_AUDIT.py", line 218, in <module>
+    with patch.object(socket.socket,'connect',side_effect=forbid),patch.object(socket.socket,'connect_ex',side_effect=forbid):execute()
+                                                                                                                              ^^^^^^^^^
+  File "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/PRIMARY_SAVED_AUDIT.py", line 118, in execute
+    registration = {'mission':MISSION, 'role':'PRIMARY_SAVED_ONLY_FULL_REUSE_AUDIT', 'registered_UTC':dt.datetime.now(dt.timezone.utc).isoformat(), 'script_path':Path(__file__).relative_to(R).as_posix(), 'script_sha256':sha(__file__), 'phase_claim_sha256':sha(P/'PHASE_A_CLAIM.json'), 'owner_request_sha256':sha(E/'OWNER_REQUEST.txt'), 'targets_sha256':sha(Q/'REUSE_TARGETS.json'), 'helper_sources':{p:sha(R/p) for p in ['paper16_development_r4/audit_saved.py','paper16_termination_feasibility1/reproduce.py']}, 'optimizer_targets':3992, 'B0_targets':216, 'one_primary_pass':True, 'stop_first_required_failure':True, 'new_objective_derivative_optimizer_score_calls':0, 'network_denied':True, 'constructor_only_initializer_verification':True, 'windows_boot_UTC':boot}
+                                                                                                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 730, in relative_to
+    raise ValueError("{!r} is not in the subpath of {!r}"
+ValueError: 'ops\\evidence\\2026-10-21\\p16-m3-m5-shutdown-recovery-r5\\PRIMARY_SAVED_AUDIT.py' is not in the subpath of 'C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute' OR one path is relative and the other is absolute.
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "<frozen runpy>", line 291, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/PRIMARY_SAVED_AUDIT.py", line 218, in <module>
+    with patch.object(socket.socket,'connect',side_effect=forbid),patch.object(socket.socket,'connect_ex',side_effect=forbid):execute()
+                                                                                                                              ^^^^^^^^^
+  File "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/PRIMARY_SAVED_AUDIT.py", line 118, in execute
+    registration = {'mission':MISSION, 'role':'PRIMARY_SAVED_ONLY_FULL_REUSE_AUDIT', 'registered_UTC':dt.datetime.now(dt.timezone.utc).isoformat(), 'script_path':Path(__file__).relative_to(R).as_posix(), 'script_sha256':sha(__file__), 'phase_claim_sha256':sha(P/'PHASE_A_CLAIM.json'), 'owner_request_sha256':sha(E/'OWNER_REQUEST.txt'), 'targets_sha256':sha(Q/'REUSE_TARGETS.json'), 'helper_sources':{p:sha(R/p) for p in ['paper16_development_r4/audit_saved.py','paper16_termination_feasibility1/reproduce.py']}, 'optimizer_targets':3992, 'B0_targets':216, 'one_primary_pass':True, 'stop_first_required_failure':True, 'new_objective_derivative_optimizer_score_calls':0, 'network_denied':True, 'constructor_only_initializer_verification':True, 'windows_boot_UTC':boot}
+                                                                                                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 730, in relative_to
+    raise ValueError("{!r} is not in the subpath of {!r}"
+ValueError: 'ops\\evidence\\2026-10-21\\p16-m3-m5-shutdown-recovery-r5\\PRIMARY_SAVED_AUDIT.py' is not in the subpath of 'C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute' OR one path is relative and the other is absolute.

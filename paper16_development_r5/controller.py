@@ -1,0 +1,243 @@
+"""One new A-only stage. No E reader, exporter, scorer or control path."""
+import hashlib,json,math,os,sys,time,socket
+from functools import lru_cache
+from unittest.mock import patch
+from pathlib import Path
+import numpy as np
+from .core import *
+from . import features,models,optimizer,evidence_checks
+from paper16_dev_r3.run_m2 import supervise_child
+
+OLD=R/'paper16_development_r3'
+FOUR=R/'paper16_development_r4'
+PREFIT_MANIFEST=P/'PREFIT_FREEZE_MANIFEST_V3.json'
+
+def stop_category(exc):
+    if isinstance(exc,NumericalStop):return 'STOP_NUMERICAL_REQUIRED_GATE'
+    if isinstance(exc,ProcessStop):return 'STOP_EXECUTION_INTERRUPTED_REQUIRED_GATE'
+    if isinstance(exc,ResourceStop):
+        return 'STOP_EXECUTION_INTERRUPTED_REQUIRED_GATE' if 'boot' in str(exc).lower() else 'STOP_BUDGET_REQUIRED_GATE'
+    if isinstance(exc,BudgetStop):return 'STOP_BUDGET_REQUIRED_GATE'
+    return 'STOP_ACCESS_OR_IMPLEMENTATION_REQUIRED_GATE'
+
+def record_stop(exc):
+    if not (P/'results/SCIENTIFIC_STOP.json').exists():
+        once(P/'results/SCIENTIFIC_STOP.json',{'type':type(exc).__name__,'message':str(exc),'scientific_status':stop_category(exc),'all_later_tasks_not_executed':True,'no_retry':True,'E_access':False,'Final_C_access':False,'Final_D_access':False})
+
+def record_supervision(result):
+    once(P/'results/SUPERVISION.json',result)
+    if result['killed_at_deadline']:record_stop(BudgetStop('Native whole-Job stage deadline'))
+    elif result.get('clock_failure'):record_stop(ResourceStop(result['clock_failure']))
+    elif result['returncode']!=0:record_stop(ProcessStop('Native worker exit '+str(result['returncode'])+'; see actual supervision receipt'))
+    elif not (P/'results/WORKER_COMPLETE.json').exists():record_stop(ImplementationStop('Native zero exit without complete independently accepted M4 receipt'))
+
+def check_manifest(path):
+    manifest=load(path)
+    names=[r['path'] for r in manifest['files']]
+    if len(set(names))!=len(names):raise AccessStop('Duplicate frozen artifact')
+    for row in manifest['files']:
+        p=R/row['path']
+        if not p.resolve().is_relative_to(R.resolve()) or sha(p)!=row['sha256']:raise AccessStop('Frozen artifact changed: '+row['path'])
+    return manifest
+
+def approval(name,decision,manifest):
+    a=load(E/name)
+    if a['decision']!=decision or a['open_P0'] or a['open_P1']:raise AccessStop('Required independent acceptance: '+name)
+    if sha(manifest)!=a['manifest_sha256']:raise AccessStop('Approval manifest identity')
+    if not (R/a['review_path']).resolve().is_relative_to(E.resolve()) or sha(R/a['review_path'])!=a['review_sha256']:raise AccessStop('Independent review identity')
+    check_manifest(manifest)
+    return a
+
+def verify_prefit():
+    verify_pins();guard(load(P/'PHASE_A_CLAIM.json'))
+    a=approval('PREFIT_APPROVAL.json','ACCEPTED_R5_PRODUCTION_AND_COMPLETE_REUSE',PREFIT_MANIFEST)
+    admission=load(P/'REUSE_ADMISSION.json')
+    if (admission['optimizer_states_admitted'],admission['B0_certificates_admitted'])!=(3992,216) or admission['required_gate_pass'] is not True:raise AccessStop('All3992+216 mandatory')
+    if a['phase_A_claim_sha256']!=sha(P/'PHASE_A_CLAIM.json'):raise AccessStop('PhaseA approval binding')
+    tests=load(P/'PRODUCTION_CERTIFICATION_FINAL_V3.json')
+    if not tests['mandatory_tests_pass'] or tests['real_fits_executed']!=0:raise AccessStop('Exact production certification required')
+    verify_registered_state_folders(load(P/'INDEPENDENT_R5_PROTECTED_HASH_READBACK.json')['files'])
+    guard(load(P/'PHASE_A_CLAIM.json'))
+    return a
+
+@lru_cache(maxsize=1)
+def admitted_lookup():
+    admission=load(P/'REUSE_ADMISSION.json')
+    if admission['required_gate_pass'] is not True:raise AccessStop('Historical admission not complete')
+    targets=load(Q/'REUSE_TARGETS.json')['optimizer_targets']
+    if len(targets)!=3992 or len({t['task']['id'] for t in targets})!=3992:raise AccessStop('Exact reuse denominator')
+    evidence_checks.reuse(load(P/'PRIMARY_OPTIMIZER_V2_MATRIX.json')['states'],targets)
+    return {row['task']['id']:row for row in targets}
+
+def task_folder(task):
+    old=admitted_lookup()
+    return (R/old[task['id']]['result_path']).parent if task['id'] in old else P/'work/fits'/hashlib.sha256(task['id'].encode()).hexdigest()
+
+def tasks():return [r['task'] for r in load(Q/'RECOVERY_TASK_PLAN.json')['tasks']]
+
+def require_phase(role):
+    if role!='A':raise AccessStop('R5 forbids B/E/Final and every non-A role, even after complete M4')
+    if (P/'results/SCIENTIFIC_STOP.json').exists():raise AccessStop('Scientific STOP forbids continuation')
+    stage=load(P/'results/STAGE_CLAIM.json')
+    if stage['phase']!='B_A_M4':raise AccessStop('Real A stage required')
+    verify_stage_environment(stage);guard(stage)
+    job=load(P/'results/SUPERVISOR.json')['job_name']
+    try:require_job(job)
+    except (OSError,RuntimeError) as exc:raise ProcessStop('Exact native R5 Job lost or nonmember') from exc
+    if os.environ.get('P16_R5_JOB')!=job:raise AccessStop('Wrong R5 native Job')
+    approval('PREFIT_APPROVAL.json','ACCEPTED_R5_PRODUCTION_AND_COMPLETE_REUSE',PREFIT_MANIFEST)
+
+def load_prepared(role='A'):
+    require_phase(role)
+    prepared={};scalers={}
+    index=OLD/'results/A_PREPROCESSING_STATES.json'
+    protected=load(FOUR/'SOURCE_PINS.json')['files']
+    if protected.get(index.relative_to(R).as_posix())!=sha(index):raise AccessStop('Admitted A preprocessing index changed')
+    for row in load(index):
+        if row['role']!='A' or sha(R/row['path'])!=row['sha256']:raise AccessStop('Exact saved A only')
+        if not (R/row['path']).resolve().is_relative_to((OLD/'work').resolve()):raise AccessStop('Saved A location')
+        with np.load(R/row['path'],allow_pickle=False) as a:values={k:a[k].copy() for k in a.files}
+        evidence_checks.prepared(row,values,row)
+        batch=features.Batch(**{k:values[k] for k in ['raw','y','ordinals','unit_ids','colors','running_missing','score_mask']},dt=row['dt'],psth=row['psth'],b1=row['b1'],role='A',panel=row['panel'])
+        if np.any(batch.ordinals>=90) or np.any(batch.ordinals<0):raise AccessStop('A partition')
+        key=tuple(row['key'].split('/'))
+        if key in prepared:raise AccessStop('Duplicate A preparation')
+        prepared[key]=batch;scalers[key]=features.Scaling(values['mean'],values['scale'],values['active'],row['psth'])
+    if len(prepared)!=215:raise AccessStop('Full215 preparations required')
+    return prepared,scalers
+
+def journal(path):
+    try:return [json.loads(line) for line in Path(path).read_text(encoding='utf8').splitlines()] if Path(path).exists() else []
+    except json.JSONDecodeError as exc:raise AccessStop('Incomplete immutable journal; no restart') from exc
+
+def consume(task):
+    plan=tasks();history=journal(P/'results/FIT_JOURNAL.jsonl');attempts=[r['task'] for r in history if r['event']=='ATTEMPTED']
+    if len(attempts)>=min(2479,len(plan)) or attempts!=plan[:len(attempts)] or task!=plan[len(attempts)]:raise AccessStop('Consumed, reordered, duplicate or unauthorized task')
+    if any(r['event']=='FAILED' for r in history):raise AccessStop('Scientific STOP is irreversible')
+    completed=[r['task'] for r in history if r['event']=='COMPLETED']
+    if completed!=attempts:raise AccessStop('Previous attempt incomplete; no restart')
+    token=P/'results/attempt_consumption'/hashlib.sha256(task['id'].encode()).hexdigest()
+    once(token,{'task':task,'no_retry':True})
+    event(P/'results/FIT_JOURNAL.jsonl',event='ATTEMPTED',task=task,ftol=0.,initializer='ORIGINAL_FROZEN_ONLY')
+
+def original_objective(task,batch,scaler):
+    if batch.role!='A' or task['lambda'] not in ['GLOBAL',1.0]:raise AccessStop('Frozen A and lambda1 only')
+    unit=None if task['unit_id'] is None else batch.unit_ids.tolist().index(task['unit_id'])
+    obj=models.Objective(batch,scaler,task['model'],1.,unit,task['seed'])
+    if not 0<len(obj.x0)<=368:raise AccessStop('Frozen free-coordinate resource ceiling')
+    if task['id']=='763236014:S02:S:None:11:GLOBAL':
+        old=FOUR/'work/fits'/hashlib.sha256(task['id'].encode()).hexdigest()/'initial.npz'
+        with np.load(old,allow_pickle=False) as a:
+            if any(not np.array_equal(a[k],v) for k,v in [('x0',obj.x0),('lo',obj.lo),('hi',obj.hi)]):raise AccessStop('Partial task original initializer mismatch; no substitution')
+    return obj
+
+def run_fit(task,batch,scaler,stage):
+    require_phase('A');guard(stage);consume(task)
+    try:
+        obj=original_objective(task,batch,scaler)
+        event(P/'results/INITIALIZER_IDENTITIES.jsonl',task_id=task['id'],x0=array_id(obj.x0),lo=array_id(obj.lo),hi=array_id(obj.hi),origin='ORIGINAL_FROZEN_CONSTRUCTOR',no_warm_start=True)
+        _,result=optimizer.fit(obj,task_folder(task),stage,task)
+        guard(stage)
+        event(P/'results/FIT_JOURNAL.jsonl',event='COMPLETED',task=task,result_path=(task_folder(task)/'RESULT.json').relative_to(R).as_posix(),result_sha256=sha(task_folder(task)/'RESULT.json'),PG=result['projected_gradient_inf'])
+    except BaseException as exc:
+        event(P/'results/FIT_JOURNAL.jsonl',event='FAILED',task=task,type=type(exc).__name__,message=str(exc),retry=False)
+        raise
+
+def verify_completed(plan):
+    old=admitted_lookup();completed=journal(P/'results/FIT_JOURNAL.jsonl')
+    for task in plan:
+        folder=task_folder(task)
+        if task['id'] in old and sha(folder/'RESULT.json')!=old[task['id']]['result_sha256']:raise AccessStop('Canonical historical RESULT hash changed')
+        evidence_checks.fit(folder,task)
+        if task['id'] not in old:evidence_checks.terminal(task,folder,completed)
+
+def verify_historical_integrity(stage):
+    verify_pins()
+    rows=load(P/'INDEPENDENT_R5_PROTECTED_HASH_READBACK.json')['files']
+    expected=[row for row in rows if (R/row['path']).is_relative_to(FOUR)]
+    actual=[f.relative_to(R).as_posix() for base in [FOUR/'work',FOUR/'results'] for f in base.rglob('*') if f.is_file()]
+    if set(actual)!={row['path'] for row in expected}:raise AccessStop('Exact original R4 inventory; no missing or extra files')
+    groups=verify_registered_state_folders(rows)
+    evidence_checks.frozen_files(rows,stage)
+    return groups
+
+def verify_registered_state_folders(rows):
+    groups={}
+    for row in rows:groups.setdefault((R/row['path']).parent,[]).append(row)
+    folders={(R/row['result_path']).parent for row in admitted_lookup().values() if row['origin']=='R3'}
+    folders.update((R/row['result_path']).parent for row in load(Q/'REUSE_TARGETS.json')['B0_targets'])
+    for folder in folders:evidence_checks.registered_folder(folder,groups.get(folder,[]))
+    return groups
+
+def selected_seeds(plan):
+    groups={}
+    for task in plan:
+        if task['model'] in ['D','S']:
+            result=load(task_folder(task)/'RESULT.json')
+            groups.setdefault((task['mouse_id'],task['panel'],task['model']),[]).append({'seed':task['seed'],'numerical_pass':result['numerical_pass'],'objective':result['objective']})
+    expected={(r['key'].split('/')[0],r['panel'],m) for r in load(OLD/'results/A_PREPROCESSING_STATES.json') for m in ['D','S']}
+    if set(groups)!=expected:raise AccessStop('Missing D/S panel group')
+    selected=[]
+    for (mouse,panel,model),rows in sorted(groups.items()):
+        if sorted(r['seed'] for r in rows)!=[11,23,37] or not all(r['numerical_pass'] for r in rows):raise AccessStop('Every original seed required')
+        selected.append({'mouse_id':mouse,'panel':panel,'model':model,'all_seeds':rows,'seed':analysis_oracles.select_seed(rows)})
+    return selected
+
+def seal(stage):
+    guard(stage);registered=verify_historical_integrity(stage)
+    plan=load(OLD/'results/TASK_PLAN.json')['tasks'];verify_completed(plan)
+    historical=admitted_lookup();new=tasks()
+    if len(plan)!=6471 or len(new)!=2479 or set(historical)&{t['id'] for t in new} or set(historical)|{t['id'] for t in new}!={t['id'] for t in plan}:raise AccessStop('Exact6471 disjoint accountability')
+    if [r['task'] for r in journal(P/'results/FIT_JOURNAL.jsonl') if r['event']=='COMPLETED']!=new:raise AccessStop('All2479 ordered completions')
+    paths=set();origins=[]
+    for task in plan:
+        folder=task_folder(task)
+        origins.append({'task_id':task['id'],'origin':historical[task['id']]['origin'] if task['id'] in historical else 'R5','result_path':(folder/'RESULT.json').relative_to(R).as_posix(),'result_sha256':sha(folder/'RESULT.json')})
+        paths.update(evidence_checks.registered_folder(folder,registered.get(folder,[])) if task['id'] in historical else (f for f in folder.iterdir() if f.is_file()))
+    b0=load(Q/'REUSE_TARGETS.json')['B0_targets']
+    if len(b0)!=216:raise AccessStop('Every B0 required')
+    for row in b0:
+        folder=(R/row['result_path']).parent;paths.update(evidence_checks.registered_folder(folder,registered.get(folder,[])))
+    paths.update(R/row['path'] for row in load(OLD/'results/A_PREPROCESSING_STATES.json'))
+    for manifest in [PREFIT_MANIFEST,P/'REUSE_ADMISSION.json',OLD/'results/B_SELECTION.json',OLD/'results/A_PREPROCESSING_STATES.json',OLD/'results/PANEL_PREFIT_PLAN.json',P/'results/FIT_JOURNAL.jsonl',P/'results/INITIALIZER_IDENTITIES.jsonl',P/'results/STAGE_CLAIM.json',P/'results/SUPERVISOR.json']:
+        paths.add(manifest)
+    for row in load(PREFIT_MANIFEST)['files']:paths.add(R/row['path'])
+    freeze={'mission':MISSION,'selected_lambda':1.,'lambda_origin':'HISTORICAL_R3_B1_SELECTION','task_plan_sha256':sha(OLD/'results/TASK_PLAN.json'),'task_origins':origins,'B0_count':216,'selected_seeds':selected_seeds(plan),'states':[{'path':f.relative_to(R).as_posix(),'sha256':sha(f)} for f in sorted(paths)],'all_original_thresholds_unchanged':True,'E_authorized':False,'Final_authorized':False,'independent_M4_acceptance_pending':True}
+    guard(stage);once(P/'results/M4_SELECTION_FREEZE.json',freeze)
+    once(P/'M4_REVIEW_MANIFEST.json',{'files':[{'path':(P/'results/M4_SELECTION_FREEZE.json').relative_to(R).as_posix(),'sha256':sha(P/'results/M4_SELECTION_FREEZE.json')}]})
+    once(P/'results/M4_READY_FOR_INDEPENDENT_REVIEW.json',{'all_new_fits_complete':True,'E_not_accessed':True,'deadline_unchanged':True})
+
+def worker():
+    try:
+        stage=load(P/'results/STAGE_CLAIM.json');require_phase('A')
+        try:once(P/'results/WORKER_CLAIM.json',{'pid':os.getpid(),'no_restart':True,'single_worker':True})
+        except FileExistsError as exc:raise ProcessStop('Worker already consumed; no concurrent or restarted worker') from exc
+        prepared,scalers=load_prepared()
+        with patch.object(socket.socket,'connect',side_effect=AccessStop('A forbids network')),patch.object(socket.socket,'connect_ex',side_effect=AccessStop('A forbids network')):
+            for task in tasks():
+                key=(task['mouse_id'],task['panel']);run_fit(task,prepared[key],scalers[key],stage)
+            seal(stage)
+            while not (E/'M4_APPROVAL.json').exists():guard(stage);time.sleep(1.)
+            approval('M4_APPROVAL.json','ACCEPTED_R5_COMPLETE_M4',P/'M4_REVIEW_MANIFEST.json');guard(stage)
+            once(P/'results/WORKER_COMPLETE.json',{'M4':True,'E':False,'Final_C_D_access':False,'scientific_verdict':'M4_COMPLETE_INDEPENDENTLY_ACCEPTED'})
+    except BaseException as exc:
+        record_stop(exc)
+        raise
+
+def supervise():
+    verify_prefit()
+    stage={'mission':MISSION,'phase':'B_A_M4',**make_stage(172800)}
+    once(P/'results/STAGE_CLAIM.json',stage)
+    name=f'Local\\P16_R5_{os.getpid()}_{time.time_ns()}'
+    once(P/'results/SUPERVISOR.json',{'job_name':name,'supervisor_pid':os.getpid(),'stage_sha256':sha(P/'results/STAGE_CLAIM.json')})
+    os.environ['P16_R5_JOB']=name
+    try:result=supervise_child([sys.executable,'-B','-m','paper16_development_r5.controller','worker'],stage['deadline_monotonic'],E/'SCIENTIFIC_EXECUTION.log',name,stage)
+    except BaseException as exc:
+        once(P/'results/SUPERVISOR_FAILURE.json',{'type':type(exc).__name__,'message':str(exc),'native_returncode':None,'native_supervision_receipt_available':False,'no_restart':True})
+        record_stop(exc if isinstance(exc,(BudgetStop,ResourceStop)) else ProcessStop('Native supervisor failure: '+str(exc)))
+        raise
+    record_supervision(result)
+    print(json.dumps(result),flush=True)
+    if (P/'results/SCIENTIFIC_STOP.json').exists():raise SystemExit(1)
+
+if __name__=='__main__':{'supervise':supervise,'worker':worker}[sys.argv[1]]()

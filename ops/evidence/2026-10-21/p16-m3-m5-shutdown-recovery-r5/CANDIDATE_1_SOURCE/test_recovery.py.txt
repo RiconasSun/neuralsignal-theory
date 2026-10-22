@@ -1,0 +1,163 @@
+"""R5-only synthetic contracts; no real saved-array evaluation."""
+import copy,ctypes,json,os,subprocess,sys,time,unittest
+from pathlib import Path
+from unittest.mock import patch
+import numpy as np
+from . import core,controller,optimizer,models,features
+from .core import *
+from paper16_dev_r3 import clock_bound
+
+def folder(name):
+    p=P/'work/synthetic'/f'{name}_{time.time_ns()}';p.mkdir(parents=True);return p
+
+def stage():return load(os.environ['P16_R5_TEST_STAGE'])
+
+def dead(pid):
+    k=ctypes.WinDLL('kernel32',use_last_error=True)
+    k.OpenProcess.argtypes=[ctypes.c_ulong,ctypes.c_int,ctypes.c_ulong];k.OpenProcess.restype=ctypes.c_void_p
+    k.WaitForSingleObject.argtypes=[ctypes.c_void_p,ctypes.c_ulong];k.WaitForSingleObject.restype=ctypes.c_ulong
+    k.CloseHandle.argtypes=[ctypes.c_void_p]
+    h=k.OpenProcess(0x100000,False,pid)
+    if not h:return True
+    try:return k.WaitForSingleObject(h,0)==0
+    finally:k.CloseHandle(h)
+
+class RecoveryTests(unittest.TestCase):
+    def test_math_copy_and_original_policy(self):
+        core.verify_pins()
+        self.assertEqual(NUMERIC['options'],load(Q/'PROPOSED_EXECUTION_POLICY.json')['options'])
+        self.assertEqual(len(controller.tasks()),2479)
+        self.assertEqual(controller.tasks()[0]['id'],'763236014:S02:S:None:11:GLOBAL')
+
+    def test_every_non_A_role_denied_before_loading_even_with_M4(self):
+        for role in ['B','E','C','D','Final','QC','scaling','scoring','unknown']:
+            with self.subTest(role=role),patch.object(controller.np,'load',side_effect=AssertionError('No neural read')):
+                with self.assertRaises(AccessStop):controller.load_prepared(role)
+        self.assertFalse(hasattr(controller,'evaluate_E'));self.assertFalse(hasattr(controller,'run_controls'))
+
+    def test_missing_tampered_duplicate_manifest(self):
+        root=folder('manifest');a=root/'a.txt';a.write_text('original');manifest=root/'manifest.json'
+        row={'path':a.relative_to(R).as_posix(),'sha256':sha(a)};once(manifest,{'files':[row]})
+        controller.check_manifest(manifest)
+        a.write_text('tampered')
+        with self.assertRaises(AccessStop):controller.check_manifest(manifest)
+        duplicate=root/'duplicate.json';once(duplicate,{'files':[row,row]})
+        with self.assertRaises(AccessStop):controller.check_manifest(duplicate)
+        with self.assertRaises(FileNotFoundError):controller.check_manifest(root/'missing.json')
+
+    def test_task_order_consumption_and_interruption_no_retry(self):
+        root=folder('consume');plan=controller.tasks()[:2]
+        with patch.object(controller,'P',root),patch.object(controller,'tasks',return_value=plan):
+            with self.assertRaises(AccessStop):controller.consume(plan[1])
+            controller.consume(plan[0])
+            for task in plan:
+                with self.assertRaises(AccessStop):controller.consume(task)
+            event(root/'results/FIT_JOURNAL.jsonl',event='COMPLETED',task=plan[0])
+            controller.consume(plan[1])
+            with self.assertRaises(AccessStop):controller.consume(plan[1])
+
+    def test_atomic_claim_and_concurrent_task_consumption(self):
+        from concurrent.futures import ThreadPoolExecutor
+        root=folder('concurrency');p=root/'claim.json'
+        def claim(i):
+            try:once(p,{'i':i});return True
+            except FileExistsError:return False
+        with ThreadPoolExecutor(2) as pool:self.assertEqual(sum(pool.map(claim,[1,2])),1)
+        plan=controller.tasks()[:1]
+        def attempt(i):
+            try:controller.consume(plan[0]);return True
+            except (AccessStop,FileExistsError):return False
+        with patch.object(controller,'P',root),patch.object(controller,'tasks',return_value=plan),ThreadPoolExecutor(2) as pool:
+            self.assertEqual(sum(pool.map(attempt,[1,2])),1)
+
+    def test_missing_prefit_and_incomplete_M4_fail_closed(self):
+        root=folder('incomplete')
+        with patch.object(controller,'E',root):
+            with self.assertRaises(FileNotFoundError):controller.verify_prefit()
+        with patch.object(controller,'admitted_lookup',return_value={}):
+            with self.assertRaises(FileNotFoundError):controller.verify_completed(controller.tasks()[:1])
+        with patch.object(controller,'P',root):
+            with self.assertRaises(FileNotFoundError):controller.selected_seeds([])
+
+    def test_phase_extension_deadline_sleep_backward_and_boot_change(self):
+        actual=stage();core.guard(actual)
+        bad=copy.deepcopy(actual);bad['phase']='UNKNOWN'
+        with self.assertRaises(AccessStop):core.guard(bad)
+        bad=copy.deepcopy(actual);bad['no_reset']=False
+        with self.assertRaises(Exception):core.guard(bad)
+        with patch.object(clock_bound.time,'monotonic',return_value=actual['deadline_monotonic']+1):
+            with self.assertRaises(Exception):core.guard(actual)
+        with patch.object(clock_bound.time,'monotonic',return_value=actual['start_monotonic']-1):
+            with self.assertRaises(Exception):core.guard(actual)
+        with patch.object(clock_bound,'utc_now',return_value=clock_bound.parse_utc(actual['deadline_UTC'])):
+            with self.assertRaises(Exception):core.guard(actual)
+        with patch.object(clock_bound,'boot_identity',return_value='different boot'):
+            with self.assertRaises(Exception):clock_bound.verify_stage_environment(actual)
+
+    def test_original_initialization_and_partial_vector_substitution_denied(self):
+        from paper16_development_r4.test_production import batch
+        b=batch(u=2);s=features.Scaling.fit(b);task=copy.deepcopy(controller.tasks()[0]);root=folder('initializer')
+        obj=models.Objective(b,s,'S',1.,None,11)
+        import hashlib
+        path=root/'work/fits'/hashlib.sha256(task['id'].encode()).hexdigest()/'initial.npz'
+        arrays(path,x0=obj.x0+1,lo=obj.lo,hi=obj.hi)
+        with patch.object(controller,'FOUR',root):
+            with self.assertRaises(AccessStop):controller.original_objective(task,b,s)
+        for role in ['E','C','D']:
+            with self.assertRaises(AccessStop):controller.original_objective(task,__import__('dataclasses').replace(b,role=role),s)
+
+    def test_wrong_saved_role_hash_and_scaler_denied(self):
+        root=folder('prep');index=root/'results/A_PREPROCESSING_STATES.json'
+        once(index,[{'role':'E','path':'no-file','sha256':'0'*64}])
+        with patch.object(controller,'OLD',root),patch.object(controller,'require_phase'):
+            with self.assertRaises(AccessStop):controller.load_prepared()
+        from paper16_development_r4.test_production import batch
+        b=batch(u=2);s=features.Scaling.fit(b)
+        with self.assertRaises(ImplementationStop):s.transform(__import__('dataclasses').replace(b,psth=b.psth+1))
+
+    def test_original_outward_PG_and_fixed_FD_step(self):
+        np.testing.assert_array_equal(spec.projected_gradient(np.array([-1.,1.]),np.array([-2.,3.]),-1.,1.),[-2.,3.])
+        np.testing.assert_array_equal(spec.projected_gradient(np.array([-1.,1.]),np.array([2.,-3.]),-1.,1.),[0.,0.])
+        self.assertEqual(NUMERIC['FD_frozen_acceptance_step'],1e-5)
+        self.assertEqual(NUMERIC['FD_steps'],[.001,.0001,.00001,.000001])
+
+    def test_diagnostic_reservation_interruption_preserved(self):
+        class Interrupt:
+            x0=np.zeros(1)
+            def analytic(self,x):return 0.,np.zeros(1)
+            def AD(self,x):raise RuntimeError('injected interruption after reservation')
+        root=folder('reservation')
+        with self.assertRaises(RuntimeError):optimizer.certificate(Interrupt(),[np.zeros(1)]*3,root,stage())
+        rows=controller.journal(root/'DIAGNOSTIC_CALLS.jsonl')
+        self.assertEqual([r['kind'] for r in rows],['ANALYTIC_RESERVED','AD_RESERVED'])
+        self.assertFalse((root/'DIAGNOSTICS.json').exists())
+
+    def test_inclusive_6000_FG_1500_iterations_full_certificate(self):
+        class Constant:
+            x0=np.zeros(1);lo=np.full(1,-1.);hi=np.full(1,1.)
+            def analytic(self,x):return 0.,np.zeros(1)
+            def AD(self,x):return 0.,np.zeros(1)
+        root=folder('inclusive');client=root/'client.py'
+        client.write_text("import json,sys\nfor i in range(6000):\n print(json.dumps({'op':'FG','x':[0.]}),flush=True);json.loads(sys.stdin.readline())\n if i%4==3: print(json.dumps({'op':'ITER','x':[0.]}),flush=True);json.loads(sys.stdin.readline())\nprint(json.dumps({'op':'DONE','x':[0.],'fun':0.,'jac':[0.],'success':True,'message':'synthetic inclusive boundary','nit':1500,'nfev':6000}),flush=True)\n",encoding='utf8')
+        original=subprocess.Popen
+        def launch(command,**kw):return original([sys.executable,'-B',str(client)],**kw)
+        with patch.object(optimizer.subprocess,'Popen',side_effect=launch):
+            _,result=optimizer.fit(Constant(),root/'fit',stage(),{'id':'SYNTHETIC_INCLUSIVE'})
+        self.assertTrue(result['numerical_pass']);self.assertEqual(result['external_value_gradient_pairs'],6000);self.assertEqual(result['external_accepted_iterations'],1500)
+        rows=controller.journal(root/'fit/CALLS.jsonl');self.assertEqual(len(rows),12000)
+        c=optimizer.Counter();c.calls=6000
+        with self.assertRaises(BudgetStop):c.value_gradient()
+        c=optimizer.Counter();c.iterations=1500
+        with self.assertRaises(BudgetStop):c.accepted()
+
+    def test_native_parent_loss_kills_entire_job_tree(self):
+        root=folder('parent_loss');pids=root/'pids.json'
+        code="import os,sys,subprocess,time,json;from pathlib import Path;from paper16_dev_r3.windows_job import Job;\nwith Job('Local\\\\P16_R5_PARENT_'+str(os.getpid())) as job:\n p=subprocess.Popen([sys.executable,'-c','import time;time.sleep(60)']);job.assign(p);Path(sys.argv[1]).write_text(json.dumps([p.pid]));os._exit(17)\n"
+        proc=subprocess.run([sys.executable,'-B','-c',code,str(pids)],cwd=R,timeout=15,capture_output=True,text=True)
+        self.assertEqual(proc.returncode,17,proc.stderr);self.assertTrue(pids.exists())
+        for pid in load(pids):
+            until=time.monotonic()+5
+            while not dead(pid) and time.monotonic()<until:time.sleep(.05)
+            self.assertTrue(dead(pid))
+
+if __name__=='__main__':unittest.main(verbosity=2)

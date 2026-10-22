@@ -1,0 +1,43 @@
+{
+  "mission": "P16-M3-M5-SHUTDOWN-RECOVERY-R5",
+  "stop": "STOP_REUSE_REQUIRED_GATE",
+  "UTC": "2026-10-21T16:49:47.707475+00:00",
+  "active": {
+    "kind": "BOOTSTRAP",
+    "id": null
+  },
+  "counts": {
+    "optimizer_attempted": 0,
+    "optimizer_passed": 0,
+    "B0_attempted": 0,
+    "B0_passed": 0
+  },
+  "error_type": "RuntimeError",
+  "message": "Original 24 hour cap",
+  "remaining_optimizer_unattempted": 3992,
+  "remaining_B0_unattempted": 216,
+  "later_scientific_audit_stopped": true,
+  "no_retry_or_recalculation": true
+}
+Traceback (most recent call last):
+  File "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/PRIMARY_SAVED_AUDIT.py", line 218, in <module>
+    with patch.object(socket.socket,'connect',side_effect=forbid),patch.object(socket.socket,'connect_ex',side_effect=forbid):execute()
+                                                                                                                              ^^^^^^^^^
+  File "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/PRIMARY_SAVED_AUDIT.py", line 113, in execute
+    require(CLAIM['deadline_monotonic']-CLAIM['start_monotonic'] == 86400, 'Original 24 hour cap')
+  File "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/PRIMARY_SAVED_AUDIT.py", line 43, in require
+    raise RuntimeError(message)
+RuntimeError: Original 24 hour cap
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "<frozen runpy>", line 291, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/PRIMARY_SAVED_AUDIT.py", line 218, in <module>
+    with patch.object(socket.socket,'connect',side_effect=forbid),patch.object(socket.socket,'connect_ex',side_effect=forbid):execute()
+                                                                                                                              ^^^^^^^^^
+  File "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/PRIMARY_SAVED_AUDIT.py", line 113, in execute
+    require(CLAIM['deadline_monotonic']-CLAIM['start_monotonic'] == 86400, 'Original 24 hour cap')
+  File "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/PRIMARY_SAVED_AUDIT.py", line 43, in require
+    raise RuntimeError(message)
+RuntimeError: Original 24 hour cap

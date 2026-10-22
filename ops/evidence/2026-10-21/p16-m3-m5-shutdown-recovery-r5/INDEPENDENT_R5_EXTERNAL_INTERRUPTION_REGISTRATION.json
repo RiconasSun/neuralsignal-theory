@@ -1,0 +1,76 @@
+{
+  "mission": "P16-M3-M5-SHUTDOWN-RECOVERY-R5",
+  "reviewer": "/root/r4_interruption_review",
+  "registered_UTC": "2026-10-22T00:48:00.1032911Z",
+  "script_path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/INDEPENDENT_R5_EXTERNAL_INTERRUPTION_CHECK.py",
+  "script_sha256": "ab31f9583f386e1d22e5082d4aceeff1073d60c5011909a6c9944cdc200ec10c",
+  "stage_claim_sha256": "bd9516949e54d746371a9e4662ef29d63fe1997420f5dd1beafe2f8072f5315c",
+  "bound_files": [
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/ENVIRONMENT_REATTACH_PROCESS_LOSS_1.json",
+      "sha256": "037f30842aecb974053136f3f618b9633223bb7c393e2694446be0f2f11e864b"
+    },
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/HOST_REATTACH_PROCESS_PROOF_1.json",
+      "sha256": "6e7a372c660af83b3c7c93672df4fec33c90b7c83988d281aa350f4fb1f5dcec"
+    },
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/INDEPENDENT_R5_M4_REGISTRATION.json",
+      "sha256": "a207ab87cb286af4363b0f6f68ebfc109603b5b4a2e6e791182ca4873a789de7"
+    },
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/INDEPENDENT_R5_M4_OBSERVER_CLAIM.json",
+      "sha256": "95b2ea375a60ac7b0df31abdc0a7993fa4b07b4540a8b646bc22f7709b4e2737"
+    },
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/INDEPENDENT_R5_M4_MONITOR.py",
+      "sha256": "216afe11fed64896ce4e4ac80ba5bfe8cb0351835371176a839470df3db05990"
+    },
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/INDEPENDENT_R5_M4_NEW_STATE_LEDGER.jsonl",
+      "sha256": "a079e953525f84dcc6aa295dfcda91f4f3da85ee7565c7946e22af3e31e6442f"
+    },
+    {
+      "path": "paper16_development_r5/PREFIT_FREEZE_MANIFEST_V3.json",
+      "sha256": "e0a1aa9979b6e4c998fb2d12553763af7317b3e8268f60a360772543b9d86bb4"
+    },
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/PREFIT_APPROVAL.json",
+      "sha256": "37c6601bdf984eba253c2d673a54a364e50a622f5311feb2da7083d7cb778307"
+    },
+    {
+      "path": "paper16_development_r5/results/SUPERVISOR.json",
+      "sha256": "b04d59f6677bbc1a31f163b9a678fb0a08da8c1c130566ca50755d9c39b4824d"
+    },
+    {
+      "path": "paper16_development_r5/results/WORKER_CLAIM.json",
+      "sha256": "e2403f7e81da1332bed3c33d43c0b397dc92f8696ecf41c134799a7857e866be"
+    },
+    {
+      "path": "paper16_development_r5/results/FIT_JOURNAL.jsonl",
+      "sha256": "27139bdf3300df02085f6bae2bd8146614debfc5be2c928030b384c4abb0e1b0"
+    },
+    {
+      "path": "paper16_development_r5/results/INITIALIZER_IDENTITIES.jsonl",
+      "sha256": "8e023fe87e3a7ba7bc774f4f487a60a35b6f90bcc7dc2db45188d073660f07c2"
+    },
+    {
+      "path": "paper16_shutdown_recovery_r5_protocol/RECOVERY_TASK_PLAN.json",
+      "sha256": "05eae595cc98a4d8b729176676cd0f1e1e87ffbd9923367b8450ea59e4efcd03"
+    }
+  ],
+  "registration_scope": "Before complete stopped-prefix byte/hash verification, after source-only process/claim/journal schema inspection; not a new experiment or resumed numerical audit",
+  "policy": "Preserve actual interrupted625/624/partial prefix; check original624 observer attestations and current bytes only, no new certificate arithmetic or reconstruction",
+  "scientific_verdict": "STOP_EXECUTION_INTERRUPTED_REQUIRED_GATE",
+  "native_exit_code": null,
+  "exact_interruption_time": null,
+  "interruption_cause": "UNDETERMINED_FROM_SAVED_EVIDENCE",
+  "model_calls_authorized": false,
+  "NPZ_decode_authorized": false,
+  "scientific_or_observer_restart_authorized": false,
+  "later_state_audit_authorized": false,
+  "E_authorized": false,
+  "Final_C_D_authorized": false,
+  "M4_approval_authorized": false,
+  "publication_authorized": false
+}

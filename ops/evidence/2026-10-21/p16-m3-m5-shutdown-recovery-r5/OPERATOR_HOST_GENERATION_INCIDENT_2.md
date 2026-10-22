@@ -1,0 +1,7 @@
+# Operator tool-host generation interruption
+
+While observing the original scientific run, functions.wait on operator progress cell 278 returned `code-mode host timed out waiting for wait response`. A subsequent read of that same cell returned `cell 278 belongs to a stale code-mode host generation`. The operator polling cell's subsequent lifetime and last unpublished output are unknown; it is not the scientific Job, supervisor, fit worker or independent observer.
+
+A fresh tool-host saved-metadata read found 451 attempts / 450 completions / 0 FAILED rows and 450 independently qualified completed states. No SCIENTIFIC_STOP, SUPERVISION, SUPERVISOR_FAILURE or independent-audit failure artifact existed at that check. The unchanged original claims identify supervisor PID 15984, fit-worker PID 55208, Job Local\\P16_R5_15984_1792603531797695000 and Stage SHA bd9516949e54d746371a9e4662ef29d63fe1997420f5dd1beafe2f8072f5315c. Original elapsed time was 8848.656 seconds; original deadline remained 2026-10-23T17:25:31.796190+00:00.
+
+No scientific process, independent observer, task, clock, entitlement or initializer was restarted. Only operator read-only monitoring is reattached. Host-generation errors cannot substitute for, clear or alter scientific/native termination evidence. The final closeout must retain any unavailable operator-session outcome as unknown and use actual native supervision receipts for scientific process outcomes.

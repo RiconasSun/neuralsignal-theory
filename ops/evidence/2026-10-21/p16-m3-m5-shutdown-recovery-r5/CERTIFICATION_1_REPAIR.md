@@ -1,0 +1,9 @@
+# First certification: 49 tests, 3 errors, no PASS
+
+Preserved CERTIFICATION_1 registration, actual native log/result/supervision and exact custom source snapshots under CANDIDATE_1_SOURCE. No real A fit or E/Final access occurred. Same original Phase A clock; no new scientific budget.
+
+1. TEST_BUG / stale target: the original R4 pre-gate role test reached its old expired, boot-bound stage and correctly raised ResourceStop after the historical shutdown. Its old exception tuple did not include that native denial. The original frozen source and assertions remain unchanged. The new harness directs only this test's require_phase call to the new R5 controller, the affected mission target, rather than attempting to resume an old stage. All original access assertions remain. The independently added R5 role test separately denies every non-A path even after M4.
+2. TEST_BUG / wrong exception: the new empty D/S group test expected FileNotFoundError despite the manifest existing. The frozen rule requires rejection of missing groups; the implementation correctly raised AccessStop('Missing D/S panel group'). Replacement assertion requires that exact rejection and message, preserving all expected missing-group coverage.
+3. CODE_BUG / exhausted test queue: duplicate consumption at the end of a shortened synthetic plan raised IndexError before the intended AccessStop. The queue boundary now checks both the 2479 scientific cap and actual plan length before indexing. Existing failing regression is retained unchanged. An incomplete JSON journal also fails closed as AccessStop, preventing a concurrent reader from treating a partial line as eligible state.
+
+No mathematical copy, numerical policy, fit budget, source identity, hypothesis or scientific threshold changed. The complete 49-method inventory is rerun on candidate 2; failed candidate 1 is not relabeled PASS.

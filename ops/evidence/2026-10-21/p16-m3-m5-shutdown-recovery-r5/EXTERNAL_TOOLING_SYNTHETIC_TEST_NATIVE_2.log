@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\ops\evidence\2026-10-21\p16-m3-m5-shutdown-recovery-r5\test_external_closure.py", line 150, in <module>
+    test('builder_to_reproducer_external_fixture_create_only_no_numerical',synthetic_archive)
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\ops\evidence\2026-10-21\p16-m3-m5-shutdown-recovery-r5\test_external_closure.py", line 24, in test
+    with contextlib.redirect_stdout(buf):call()
+                                         ^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\ops\evidence\2026-10-21\p16-m3-m5-shutdown-recovery-r5\test_external_closure.py", line 144, in synthetic_archive
+    b.build();r=m.run(m.P/'LOCAL_ARCHIVE_MANIFEST.json')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\ops\evidence\2026-10-21\p16-m3-m5-shutdown-recovery-r5\reproduce_saved.py", line 462, in run
+    return {'mission':MISSION,'saved_only_verification':'PASS','scientific_verdict':decision['verified_scientific_status'],'terminal_validation':decision,'closure_branch':'EXTERNAL_PROCESS_LOSS','new_attempted':len(terminal_meta['attempts']),'new_journal_completed':len(terminal_meta['completed']),'new_partial_saved_attempts':1,'unattempted':2479-len(terminal_meta['attempts']),'native_worker_exit_code':None,'exact_interruption_UTC':None,'interruption_cause':'UNDETERMINED_FROM_SAVED_EVIDENCE','M4_complete':False,'partial_numerical_status':'INCOMPLETE_NOT_PASSED','partial_diagnostic_reservations':terminal_meta['partial_diagnostic_reservations'],'partial_diagnostic_completed_counts':None,'snapshot_sha256':terminal_meta['snapshot_sha256'],'external_stop_sha256':terminal_meta['external_stop_sha256'],'archive_manifest_sha256':sha(manifest),'reproducer_sha256':sha(__file__),'NPZ_decodes':0,'numerical_certificate_audits_repeated':0,'new_fits_derivatives_scores':0,'E_access':False,'Final_C_D_access':False,'publication_authorized':False}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\ops\evidence\2026-10-21\p16-m3-m5-shutdown-recovery-r5\reproduce_saved.py", line 50, in sha
+    with local(rel(path)).open('rb') as f:return hashlib.file_digest(f,'sha256').hexdigest()
+               ^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\ops\evidence\2026-10-21\p16-m3-m5-shutdown-recovery-r5\reproduce_saved.py", line 37, in rel
+    def rel(path):return Path(path).absolute().relative_to(R).as_posix()
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 730, in relative_to
+    raise ValueError("{!r} is not in the subpath of {!r}"
+ValueError: 'C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\ops\\evidence\\2026-10-21\\p16-m3-m5-shutdown-recovery-r5\\reproduce_saved.py' is not in the subpath of 'C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\_r5_closure_temp\\p16_external_e7e1j_oi\\38' OR one path is relative and the other is absolute.

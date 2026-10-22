@@ -1,0 +1,13 @@
+# Independent prefit review 2 — candidate 5 inventory correction required
+
+Mission: P16-M3-M5-SHUTDOWN-RECOVERY-R5. Reviewer: /root/r4_interruption_review, 2026-10-21.
+
+Decision: CHANGES_REQUIRED_P1. Open P0=0; open P1=1, the remaining completeness portion of prior P1-002. No production approval or new real A execution is granted. The independently accepted 3,992 optimizer and 216 B0 saved-state qualification is unchanged.
+
+The exact candidate-5 controller SHA256 is `86225cbbbd60f6416885a4c7e274da7b26a7f5ff19034b50118c178758b6837e`. Certification 5 records an actual 63-method native pass, no failures/errors/skips, and the result/source registration and actual native supervision remain preserved. The corrected stop classification, complete coordinate arithmetic checks, fixed-step rejection case, canonical reuse joins, missing-one-seed case and phase-span tests address the earlier findings. Their passing tests do not remove the remaining inventory gap below.
+
+`verify_historical_integrity` compares the current FOUR/R4 work+results file set with the R4 subset of the accepted independent protected readback, and subsequently hashes every registered R3/R4 file. It does not compare the current OLD/R3 work+results file set with the R3 subset. Later `seal` adds every file returned by each historical fit/B0 folder's `iterdir()`. A new, unregistered file in a historical R3 fit or B0 folder can therefore enter the M4 state list while all originally registered hashes still match. This is inconsistent with the previously required rejection of unregistered historical artifacts admitted into the package. It is not an observed real-state corruption and no real M4 readiness or scientific PASS has occurred.
+
+Required correction: enforce an exact current-versus-registered file-set join for both original protected roots, or ensure only independently registered historical files can enter the seal and reject extras. Retain all per-file SHA checks and the exact R4 original/supplement union. Add a bounded synthetic regression that exercises the actual `verify_historical_integrity` branch for an extra R3 historical file, with an unchanged positive inventory first. The existing helper-only extras case does not exercise this omitted R3 branch. No historical certificate, numerical value, model, scientific rule, clock or optimizer policy needs to change.
+
+Preserve candidate 5, certification 5, freeze V2 and this unsuccessful review. Complete the small wrapper correction and fresh sufficient certification in the same original Phase-A claim before presenting the next exact version for independent approval. No private saved-state audit or numerical computation was repeated in this review.

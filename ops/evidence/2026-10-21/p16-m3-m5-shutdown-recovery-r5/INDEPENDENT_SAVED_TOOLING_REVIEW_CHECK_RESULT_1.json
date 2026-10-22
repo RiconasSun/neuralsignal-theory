@@ -1,0 +1,38 @@
+{
+  "mission": "P16-M3-M5-SHUTDOWN-RECOVERY-R5",
+  "reviewer": "/root/r4_interruption_review",
+  "recorded_UTC": "2026-10-21T17:50:42.234843+00:00",
+  "source_sha256": {
+    "reproduce_saved.py": "f5d5ba1b7a31c23c59e6f0dc534ab8099b3957fde1296ac70f7bf38c2b69a761",
+    "build_archive.py": "b18d830cefcda31e18e3aa255c306914db622714d8209651862512befa813707"
+  },
+  "proofs": [
+    {
+      "finding": "P1-JOURNAL-TERMINATOR",
+      "scope": "SYNTHETIC_ONLY",
+      "observed": "Unterminated JSON journal row is accepted as a full row",
+      "original_bytes_have_terminal_LF": false,
+      "accepted_rows": 1
+    },
+    {
+      "finding": "P1-ARCHIVE-BOUNDARY-ORDER",
+      "scope": "SYNTHETIC_NO_NETWORK_TRAP",
+      "observed": "Builder relative() invokes filesystem resolution before lexical local-path rejection",
+      "actual_network_access": false,
+      "resolution_calls_trapped": 1
+    },
+    {
+      "finding": "P1-NATIVE-STOP-BINDING",
+      "scope": "SYNTHETIC_NATIVE_METADATA_ONLY",
+      "observed": "Reproducer native helper accepts producer-invalid Job naming and supervisor PID type",
+      "actual_native_process_or_scientific_state_used": false
+    }
+  ],
+  "result": "THREE_TOOLING_P1_FINDINGS_REPRODUCED_OR_STATICALLY_CONFIRMED",
+  "full_real_reproduction_executed": false,
+  "real_saved_state_arrays_read": 0,
+  "scientific_model_imports_or_calls": 0,
+  "objective_gradient_AD_FD_score_minimize_calls": 0,
+  "network_access": false,
+  "running_observer_or_producer_modified": false
+}

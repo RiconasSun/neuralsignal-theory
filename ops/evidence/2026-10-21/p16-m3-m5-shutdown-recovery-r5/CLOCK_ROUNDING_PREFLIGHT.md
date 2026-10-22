@@ -1,0 +1,7 @@
+# Conservative clock packing, before any real stage claim
+
+Candidate 2 passed all 49 synthetic tests (137.921 seconds); its source/log/result/acceptance pointer are preserved. Subsequent static float arithmetic exposed a wrapper edge before any real stage: start=500000+3*2^-34, (start+172800)-start=172800.00000000006. The frozen guard correctly rejects a span above 172800, so an unadjusted create-only stage could stop before scientific execution because of representation rounding.
+
+R5 make_stage now calls the original function and only rounds the monotonic deadline toward the start until the represented span is <= the same requested cap. Start, boot identity, no-reset flag and original UTC deadline remain unchanged. No clock is extended or restarted; no scientific threshold, model, optimizer or historical helper is modified. An eight-case synthetic regression includes both rounding directions and exact representations. The new complete certification inventory has 50 methods, rerun under the unchanged original Phase A claim. This is a pre-execution wrapper correction, not a scientific budget amendment.
+
+Certification results are now versioned append-only acceptances. The former candidate-2 PRODUCTION_CERTIFICATION.json is historical; production requires a separate create-only PRODUCTION_CERTIFICATION_FINAL.json bound to the final tested source and independent prefit freeze. No real stage has been claimed.

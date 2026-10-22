@@ -1,0 +1,154 @@
+{
+  "mission": "P16-M3-M5-SHUTDOWN-RECOVERY-R5",
+  "scope": "REGISTERED_EXTERNAL_PROCESS_LOSS_CLOSURE_TOOLING_ONLY",
+  "recorded_UTC": "2026-10-22T00:55:22.269317+00:00",
+  "external_registration": {
+    "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/EXTERNAL_CLOSEOUT_REGISTRATION_1.json",
+    "sha256": "8ad2c861fd89245b7a39295c3f096f30a2f2db10de93075e8bcb1df2baac5383",
+    "bytes": 3981
+  },
+  "external_evidence_acceptance": {
+    "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/INDEPENDENT_EXTERNAL_CLOSEOUT_ACCEPTANCE_1.json",
+    "sha256": "eae55b49b671f3127898f7281fe1b02c9a65b5b277b1f1be783c2063a479a681",
+    "bytes": 3347
+  },
+  "sources": [
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/reproduce_saved.py",
+      "sha256": "ecbaa256929c9c04b535d6b042acfcdfef2d105509497fe8744e36480bc8d18f",
+      "bytes": 56404
+    },
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/build_archive.py",
+      "sha256": "f81f6c1887ab3b972869d9398dc3c1b162cfd4e55a3516ce3f560813986e84b8",
+      "bytes": 8861
+    },
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/test_external_closure.py",
+      "sha256": "3893289801bc76d3c6854ad562f68ed9432b58f25ecbd869d21f8c8bc0ea28cd",
+      "bytes": 20651
+    },
+    {
+      "path": "paper16_development_r5/reproduce_saved.ps1",
+      "sha256": "f3d08b4e17befd4101bcab72b84675c9d4af4a0be40c7e4f5099dd0fb9fff4d9",
+      "bytes": 1649
+    }
+  ],
+  "prior_accepted_tool_snapshots": [
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/reproduce_saved_preexternal_snapshot.py",
+      "sha256": "f0a6c0c9ce29ee448f8c302f3c8aeac6a3a5fa819c4880d2c8bcc8e7d367a804",
+      "bytes": 40013
+    },
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/build_archive_preexternal_snapshot.py",
+      "sha256": "28c00fc289a8233dd19010222bc9e8f739b3b2efdf60c2e08ace94a0a39529c1",
+      "bytes": 8456
+    },
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/test_closure_preexternal_snapshot.py",
+      "sha256": "40847cce623cf65d8f007904c8cd17e7d4cf925bd8d81a3fe4874a25c6200cdd",
+      "bytes": 13187
+    }
+  ],
+  "runtime": {
+    "path": "paper16_m1/work/runtime/Scripts/python.exe",
+    "sha256": "de13d8017f63cb63b0b5bfd2f25e69245c9196433a224856ca1abde1e24d0cb7",
+    "bytes": 262144
+  },
+  "checks": [
+    {
+      "command": [
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper16_m1\\work\\runtime\\Scripts\\python.exe",
+        "-B",
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\ops\\evidence\\2026-10-21\\p16-m3-m5-shutdown-recovery-r5\\test_external_closure.py",
+        "--receipt-id",
+        "5"
+      ],
+      "actual_native_exit_code": 0,
+      "synthetic_test_count": 61,
+      "result": {
+        "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/EXTERNAL_TOOLING_SYNTHETIC_TEST_RESULT_5.json",
+        "sha256": "c2d3bf79d1980e02469e841c50379086eb44d1e4c2b7ea292430286b156f4486",
+        "bytes": 16037
+      },
+      "native_output": {
+        "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/EXTERNAL_TOOLING_SYNTHETIC_TEST_NATIVE_5.log",
+        "sha256": "11c16ffddd0b32976bd874d886d5a6bcef2db7d5e7ec0f121fd879a16c6bf996",
+        "bytes": 290
+      }
+    },
+    {
+      "command": [
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper16_m1\\work\\runtime\\Scripts\\python.exe",
+        "-B",
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\ops\\evidence\\2026-10-21\\p16-m3-m5-shutdown-recovery-r5\\test_reproduce_tooling.py",
+        "--receipt-id",
+        "8"
+      ],
+      "actual_native_exit_code": 0,
+      "synthetic_test_count": 46,
+      "result": {
+        "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/REPRO_TOOLING_SYNTHETIC_TEST_RESULT_8.json",
+        "sha256": "22ddde2b657916fdc31f03e282e92f0a5c8487cc216439bb028c1daaa341c42d",
+        "bytes": 6984
+      },
+      "native_output": {
+        "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/REPRO_TOOLING_SYNTHETIC_TEST_NATIVE_9.log",
+        "sha256": "18242472176d6c98f72b88c4da31824ed6d2ae7be4f96d677fff6c7d9a228d5a",
+        "bytes": 168
+      }
+    },
+    {
+      "command": [
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper16_m1\\work\\runtime\\Scripts\\python.exe",
+        "-B",
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\ops\\evidence\\2026-10-21\\p16-m3-m5-shutdown-recovery-r5\\test_closure_review1_repairs.py",
+        "--receipt-id",
+        "4"
+      ],
+      "actual_native_exit_code": 0,
+      "synthetic_test_count": 55,
+      "result": {
+        "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/REPRO_TOOLING_REVIEW1_REPAIR_TEST_RESULT_4.json",
+        "sha256": "88de690c88bd495ed68f438d40a1e0bd36d26f94266881021a5e096c2a1e192d",
+        "bytes": 11671
+      },
+      "native_output": {
+        "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/REPRO_TOOLING_REVIEW1_REPAIR_TEST_NATIVE_4.log",
+        "sha256": "8f90c737e8b523c2682140638cf7302a1958944106b1416dc19ddd85608404c0",
+        "bytes": 162
+      }
+    }
+  ],
+  "synthetic_test_counts_must_not_be_summed_as_independent_requirements": true,
+  "preserved_unsuccessful_fixture_attempts": [
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/EXTERNAL_TOOLING_SYNTHETIC_TEST_NATIVE_1.log",
+      "sha256": "65849e0d466d89313d3a58904021397fd7759001553ba1376b9ff51e7c1fd338",
+      "bytes": 1966
+    },
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/EXTERNAL_TOOLING_SYNTHETIC_TEST_NATIVE_2.log",
+      "sha256": "c2523e4d45a5fbfb123c4ee0f0e9c56037342ec72f0cbc26192afbde007b8326",
+      "bytes": 4024
+    },
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/test_external_closure_attempt1.py",
+      "sha256": "fdadcf433f2bd6bda1e260190a56fdf9bdcc8a6da63a5690a4d0e0720a7e782f",
+      "bytes": 16298
+    }
+  ],
+  "failure_explanation": "Attempt 1 exceeded Windows path length in the fixture temp location; attempt 2 needed fixture-local source identity after repository rebasing. Both are fixture-only failures; actual native exit 1 preserved.",
+  "normal_native_branch_retained": true,
+  "exact_annex_count": 10,
+  "real_archive_or_reproduction_executed": false,
+  "real_saved_state_audit_repeated": false,
+  "NPZ_decodes": 0,
+  "new_fits_derivatives_scores": 0,
+  "scientific_M4_PASS": false,
+  "native_exit_time_and_cause_preserved_unknown": true,
+  "E_access": false,
+  "Final_C_D_access": false,
+  "ready_for_independent_tooling_review": true
+}

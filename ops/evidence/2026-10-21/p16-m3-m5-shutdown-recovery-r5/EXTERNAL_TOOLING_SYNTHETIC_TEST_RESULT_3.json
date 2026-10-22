@@ -1,0 +1,255 @@
+{
+  "mission": "P16-M3-M5-SHUTDOWN-RECOVERY-R5",
+  "scope": "SYNTHETIC_METADATA_ONLY_EXTERNAL_CLOSURE",
+  "tests": [
+    {
+      "name": "accepted_external_metadata_only_no_NPZ_or_certificate_audit",
+      "PASS": true,
+      "synthetic_stdout": ""
+    },
+    {
+      "name": "deny_changed_pinned_registration",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "Exact registered external registration hash"
+    },
+    {
+      "name": "deny_missing_pinned_registration",
+      "PASS": true,
+      "rejected": "FileNotFoundError",
+      "message": "[Errno 2] No such file or directory: 'C:\\\\Users\\\\85993\\\\Desktop\\\\codebase\\\\neuralsignal institute\\\\_r5_closure_temp\\\\p16_external__a_d207d\\\\2\\\\ops\\\\evidence\\\\2026-10-21\\\\p16-m3-m5-shutdown-recovery-r5\\\\EXTERNAL_CLOSEOUT_REGISTRATION_1.json'"
+    },
+    {
+      "name": "deny_changed_pinned_snapshot",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "Exact registered external snapshot hash"
+    },
+    {
+      "name": "deny_missing_pinned_snapshot",
+      "PASS": true,
+      "rejected": "FileNotFoundError",
+      "message": "[Errno 2] No such file or directory: 'C:\\\\Users\\\\85993\\\\Desktop\\\\codebase\\\\neuralsignal institute\\\\_r5_closure_temp\\\\p16_external__a_d207d\\\\4\\\\paper16_development_r5\\\\EXTERNAL_INTERRUPTION_SNAPSHOT.json'"
+    },
+    {
+      "name": "deny_changed_pinned_external_stop",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "Exact registered external external_stop hash"
+    },
+    {
+      "name": "deny_missing_pinned_external_stop",
+      "PASS": true,
+      "rejected": "FileNotFoundError",
+      "message": "[Errno 2] No such file or directory: 'C:\\\\Users\\\\85993\\\\Desktop\\\\codebase\\\\neuralsignal institute\\\\_r5_closure_temp\\\\p16_external__a_d207d\\\\6\\\\ops\\\\evidence\\\\2026-10-21\\\\p16-m3-m5-shutdown-recovery-r5\\\\EXTERNAL_SCIENTIFIC_STOP.json'"
+    },
+    {
+      "name": "deny_changed_pinned_acceptance",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "Exact registered external acceptance hash"
+    },
+    {
+      "name": "deny_missing_pinned_acceptance",
+      "PASS": true,
+      "rejected": "FileNotFoundError",
+      "message": "[Errno 2] No such file or directory: 'C:\\\\Users\\\\85993\\\\Desktop\\\\codebase\\\\neuralsignal institute\\\\_r5_closure_temp\\\\p16_external__a_d207d\\\\8\\\\ops\\\\evidence\\\\2026-10-21\\\\p16-m3-m5-shutdown-recovery-r5\\\\INDEPENDENT_EXTERNAL_CLOSEOUT_ACCEPTANCE_1.json'"
+    },
+    {
+      "name": "deny_fabricated_original_or_M4_SUPERVISION.json",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "External STOP forbids fabricated original receipt or M4 freeze: paper16_development_r5/results/SUPERVISION.json"
+    },
+    {
+      "name": "deny_fabricated_original_or_M4_SCIENTIFIC_STOP.json",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "External STOP forbids fabricated original receipt or M4 freeze: paper16_development_r5/results/SCIENTIFIC_STOP.json"
+    },
+    {
+      "name": "deny_fabricated_original_or_M4_WORKER_COMPLETE.json",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "External STOP forbids fabricated original receipt or M4 freeze: paper16_development_r5/results/WORKER_COMPLETE.json"
+    },
+    {
+      "name": "deny_fabricated_original_or_M4_M4_READY_FOR_INDEPENDENT_REVIEW.json",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "External STOP forbids fabricated original receipt or M4 freeze: paper16_development_r5/results/M4_READY_FOR_INDEPENDENT_REVIEW.json"
+    },
+    {
+      "name": "deny_fabricated_original_or_M4_E_BATCH_CLAIM.json",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "External STOP forbids fabricated original receipt or M4 freeze: paper16_development_r5/results/E_BATCH_CLAIM.json"
+    },
+    {
+      "name": "deny_fabricated_original_or_M4_M4_REVIEW_MANIFEST.json",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "External STOP forbids fabricated original receipt or M4 freeze: paper16_development_r5/M4_REVIEW_MANIFEST.json"
+    },
+    {
+      "name": "deny_fabricated_original_or_M4_M4_APPROVAL.json",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "External STOP forbids fabricated original receipt or M4 freeze: ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/M4_APPROVAL.json"
+    },
+    {
+      "name": "deny_fabricated_original_or_M4_M4_SELECTION_FREEZE.json",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "External STOP forbids fabricated original receipt or M4 freeze: paper16_development_r5/results/M4_SELECTION_FREEZE.json"
+    },
+    {
+      "name": "deny_tampered_native_role_source_or_review_ENVIRONMENT_REATTACH_PROCESS_LOSS_1.json",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "Saved file identity: ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/ENVIRONMENT_REATTACH_PROCESS_LOSS_1.json"
+    },
+    {
+      "name": "deny_tampered_native_role_source_or_review_OWNED_JOB_CLOSEOUT_RECEIPT_1.json",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "Saved file identity: ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/OWNED_JOB_CLOSEOUT_RECEIPT_1.json"
+    },
+    {
+      "name": "deny_tampered_native_role_source_or_review_OWNED_JOB_CLOSEOUT_CLAIM_1.json",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "Job-closeout source/claim/native evidence"
+    },
+    {
+      "name": "deny_tampered_native_role_source_or_review_INDEPENDENT_R5_M4_OBSERVER_CLAIM.json",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "Saved file identity: ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/INDEPENDENT_R5_M4_OBSERVER_CLAIM.json"
+    },
+    {
+      "name": "deny_tampered_native_role_source_or_review_INDEPENDENT_R5_M4_REGISTRATION.json",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "Original accepted observer source/registration/stage"
+    },
+    {
+      "name": "deny_tampered_native_role_source_or_review_INDEPENDENT_EXTERNAL_CLOSEOUT_REVIEW_1.md",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "Independent external review identity"
+    },
+    {
+      "name": "deny_tampered_native_role_source_or_review_close_original_job.py",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "Job-closeout source/claim/native evidence"
+    },
+    {
+      "name": "deny_tampered_native_role_source_or_review_register_external_closeout.py",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "Original external registrar/no reset/no computation"
+    },
+    {
+      "name": "deny_partial_with_RESULT.json",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "Complete exact interrupted-state snapshot; no dropped/extra saved files"
+    },
+    {
+      "name": "deny_partial_with_DIAGNOSTICS.json",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "Complete exact interrupted-state snapshot; no dropped/extra saved files"
+    },
+    {
+      "name": "deny_partial_with_endpoint.npz",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "Complete exact interrupted-state snapshot; no dropped/extra saved files"
+    },
+    {
+      "name": "deny_partial_with_FAILURE.json",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "Complete exact interrupted-state snapshot; no dropped/extra saved files"
+    },
+    {
+      "name": "deny_snapshot_unregistered_extra_file",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "Complete exact interrupted-state snapshot; no dropped/extra saved files"
+    },
+    {
+      "name": "deny_partial_missing_CALLS.jsonl",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "Saved file identity: paper16_development_r5/work/fits/bab93a20c48a2c3610c325570e198778d9de387b50501b6c100f2ea649c2a13f/CALLS.jsonl"
+    },
+    {
+      "name": "deny_partial_missing_DIAGNOSTIC_CALLS.jsonl",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "Saved file identity: paper16_development_r5/work/fits/bab93a20c48a2c3610c325570e198778d9de387b50501b6c100f2ea649c2a13f/DIAGNOSTIC_CALLS.jsonl"
+    },
+    {
+      "name": "deny_partial_missing_initial.npz",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "Saved file identity: paper16_development_r5/work/fits/bab93a20c48a2c3610c325570e198778d9de387b50501b6c100f2ea649c2a13f/initial.npz"
+    },
+    {
+      "name": "deny_changed_accepted_observer_binding",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "Saved file identity: ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/INDEPENDENT_R5_M4_NEW_STATE_LEDGER.jsonl"
+    },
+    {
+      "name": "deny_invented_external_native_worker_exit_code",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "Exact registered external external_stop hash"
+    },
+    {
+      "name": "deny_invented_external_exact_interruption_UTC",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "Exact registered external external_stop hash"
+    },
+    {
+      "name": "deny_invented_external_interruption_cause",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "Exact registered external external_stop hash"
+    },
+    {
+      "name": "deny_invented_external_M4_complete",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "Exact registered external external_stop hash"
+    },
+    {
+      "name": "builder_to_reproducer_external_fixture_create_only_no_numerical",
+      "PASS": true,
+      "synthetic_stdout": "{\n  \"manifest\": \"paper16_development_r5/LOCAL_ARCHIVE_MANIFEST.json\",\n  \"sha256\": \"17d0a9a325a3162f7d9c3ffc329ec112d130ac99cf8d4643280eb79b62e47088\",\n  \"files\": 45,\n  \"create_only\": true\n}\n"
+    },
+    {
+      "name": "builder_denies_invalid_external_branch",
+      "PASS": true,
+      "rejected": "AssertionError",
+      "message": "Exact registered external external_stop hash"
+    }
+  ],
+  "test_count": 40,
+  "failed": 0,
+  "real_saved_bundle_reads": 0,
+  "real_archive_or_reproduction_runs": 0,
+  "new_fits_derivatives_scores": 0,
+  "NPZ_decodes": 0,
+  "source_sha256": {
+    "reproduce_saved.py": "36320465b7dee5a9b2a93aed0c3e2354bc96e2d3f9929ab4176298f52a3f4e98",
+    "build_archive.py": "f81f6c1887ab3b972869d9398dc3c1b162cfd4e55a3516ce3f560813986e84b8",
+    "test_external_closure.py": "21d03232be1404154132cb8a354b2b5b4e04f09c3240f5f4cefe97e7ecb963c3"
+  }
+}

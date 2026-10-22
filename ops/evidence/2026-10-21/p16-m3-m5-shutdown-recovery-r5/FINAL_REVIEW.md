@@ -1,0 +1,42 @@
+# Independent final stopped-scientific and local-archive review
+
+Mission: P16-M3-M5-SHUTDOWN-RECOVERY-R5. Execution BASE: b7bb1227379462c2c7a1cef40ab0d0e99a6d020b.
+Reviewer: /root/r4_interruption_review.
+
+Decision: **ACCEPTED_ARCHIVE_ONLY**. Open P0=0; open P1=0; unresolved closeout-implementation bug_count=0 and warn_count=0. These counts concern the reviewed saved-only closeout implementation and evidence handling. They do not describe completed scientific requirements. The full mission does not satisfy its PASS gate. No MERGE_ALLOWED, M4 approval, scientific recovery PASS or public-transmission permission is issued.
+
+Scientific verdict: **STOP_EXECUTION_INTERRUPTED_REQUIRED_GATE**. Study complete=false and M4 complete=false. The 92-item original baseline is unchanged: 78 verified facts, restrictions, phase gates or report fields; 11 OPEN scientific or conditional complete-M4 outcomes; three IMPLEMENTED_UNVERIFIED future Git/publication/final-terminal steps. REQUIREMENT_VERIFICATION.json retains all IDs, wording, owner lines, condition truth and gaps. Additional engineering does not compensate for missing scientific results.
+
+## Scientific scope and exact reconciliation
+
+Phase A completed under its original unextended 24-hour claim. Independent full saved-only audits admitted 3,992 historical optimizer states (952 R3, 3,040 R4) and 216 B0 analytic certificates. R3 ftol=1e-12 and R4 ftol=0 origins remain distinct. B0 has no invented optimizer trajectory. Complete primary/independent matrix comparison and exact candidate-6 production review preceded Stage B. Candidate 6 recorded 64 registered synthetic/native test invocations, no errors, failures or skips. Earlier unsuccessful harnesses, reviews, snapshots and certifications remain preserved.
+
+Exactly one Stage B claim began 2026-10-21T17:25:31.796190Z with unchanged deadline 2026-10-23T17:25:31.796190Z. No replacement clock, worker, retry or resumed stage exists. Planned=2,479; actual ordered attempts=625; completed numerical passes=624; FAILED journal entries=0; partial=1; unattempted=1,854. Zero FAILED entries does not mean zero failed required gates or completed science. The independent observer qualified exactly 624 completed states before loss. This final review reuses that existing independent evidence and verifies saved integrity; it does not repeat numerical audits.
+
+Partial task 774672366:S01:D:None:11:GLOBAL has 339 parameters, seven retained files, no RESULT.json, DIAGNOSTICS.json, endpoint.npz or complete endpoint certificate. Its 482 reserved/completed FG receipts and 460 accepted iterations do not establish numerical acceptance. FD=1,176, AD=1 and analytic=1 diagnostic reservations are not completed derivative checks; completed diagnostic counts remain unknown. No partial state is admitted or used as a warm start.
+
+The completed prefix preserves original mathematics, architecture, initializer, lambda=1, seeds, bounds, ftol=0, gtol=2e-6, PG<=1e-5, independent AD<=1e-8 and fixed h=1e-5 FD error<=2e-5. Its maxima are PG=1.9994999633375816e-6, AD=5.773159728050814e-15 and fixed-FD=4.914744457761022e-11. These describe the completed prefix only. Historical 3,992 plus new 624 gives 4,616 qualified optimizer states, leaving 1,855 required states missing from the full 6,471 target. The 216 B0 admissions are distinct. Complete M4 selection/state freeze, M4_REVIEW_MANIFEST and M4_APPROVAL do not exist.
+
+## Interruption and causal-interpretation limits
+
+Native Windows inspection established absence of the original supervisor, scientific worker and independent observer, and no matching scientific processes. The original named Job returned OpenJobObjectW error 2. Original operator/observer tool sessions became unavailable. These observations supply neither original worker native return code nor exact exit time nor cause. No original SUPERVISION.json, SCIENTIFIC_STOP.json, SUPERVISOR_FAILURE.json or WORKER_COMPLETE.json is fabricated. External registration/snapshot/STOP, native-absence proof, absent-Job receipt and independent acceptance remain separate.
+
+**Scientific wording clarification:** the frozen SCIENTIFIC_CLOSEOUT.md sentence saying this interruption “is not a numerical-gradient defect” must not be interpreted as excluding a numerical cause. **No gradient defect, other numerical cause or other root cause has been established OR ruled out.** Only native process loss and incomplete required evidence are established. Native worker exit and exact interruption time remain null; cause remains UNDETERMINED_FROM_SAVED_EVIDENCE. Latest saved-file timestamp 2026-10-21T20:24:18.401433Z is not an exact interruption timestamp. Unchanged boot identity does not identify cause. This additive final clarification governs interpretation; frozen core bytes remain unchanged.
+
+## Actual archive and saved-only reproduction
+
+LOCAL_ARCHIVE_MANIFEST.json has exactly 53,599 unique rows, SHA256 7e2ddf07c1fef9b7b43b603d254409222edb88fd6f48805d0b6ebdbe7ab35732. It covers the two registered R5 roots and exact historical source/protected reference sets. Fixed postarchive annex exclusions are explicit. Actual successful reproduction checked archived file hashes. My final read-only metadata check independently confirmed the exact current inventory, every 53,599 size, all 103 V3 prefit-file hashes, 17 critical core hashes and immutable failure/run2 pins. No new full numerical audit, NPZ decode or model evaluation was performed for closeout.
+
+First real PowerShell reproduction: native exit 1 because Get-FileHash was unavailable before Python. Original SAVED_REPRODUCTION.log and SAVED_REPRODUCTION_RECEIPT.json remain untouched and FAILED. The prospectively recorded environment correction changed only child PSModulePath to the existing Windows PowerShell system-module directory; no wrapper, Python source, global environment or scientific policy changed. This saved-only verification retry is not a scientific fit/stage retry.
+
+Second real PowerShell reproduction: native exit 0, start 2026-10-22T01:13:43.939488Z, end 01:15:47.652764Z. Complete native combined output is retained in review.md as 1,585 base64-encoded raw bytes, SHA256 156b3d542e198cb01f5107fd7e2d7c259e84bd760decaf8f73b4154577fd7720. I decoded base64, verified hash/length and exact equality with parsed JSON. Saved-only result=PASS with the same scientific STOP, counts625/624/1/1854, M4_complete=false, zero NPZ decodes, repeated numerical audits or new fits/derivatives/scores. E, Final C/D and public authorization=false. Reproducer exit0 is not the original worker exit.
+
+Exact accepted reproducer SHA=b0f5723264693184cf800309feeba89031fb13a5003567e698579cc2867fc476; builder SHA=a673f2664424e30f82f451c0db35830e79b9882d3b92e513fea4fe5bf899960e; unchanged PowerShell SHA=f3d08b4e17befd4101bcab72b84675c9d4af4a0be40c7e4f5099dd0fb9fff4d9. Independent external69 tests, prior parser46 and prior closure55 overlap and are not summed. All earlier unsuccessful engineering evidence remains. This is internal/local-machine evidence, not independent-laboratory replication or malicious-administrator protection.
+
+## Remaining work and authority
+
+No Development E loading/export/binning/scoring/comparison/null, Final C/D, M6, P17 or next scientific mission is authorized. No biological validation, independent Final confirmation or CWP/NAP proof follows. Historical R1-R4 STOPs remain unchanged. No protected neural arrays or credentials are approved for public transmission.
+
+Actual exact local Git commit, final proposed publication manifest, exclusions, readback and clean proof are not yet accepted here. Root must complete safe local preparation and record actual events in the reserved LOCAL_COMMIT_RECEIPT.json and PUBLICATION_MANIFEST.json annexes. This review cannot bind unknown future bytes or pre-verify future Git events. Remote publication=NOT_PUSHED; new private-derived numerical evidence has no public-transmission permission.
+
+After safe local preparation is actually complete, the only eligible human blocker is separate owner approval of the exact commit/file manifest/public destination. The eventual K4C candidate terminal is WAIT_FOR_HUMAN_INPUT solely for that approval. At this review instant autonomous Git preparation remains, so the full terminal gate must not yet be asserted. Any later publication permission is distinct from scientific recovery, E or Final authorization. This review grants none.

@@ -1,0 +1,65 @@
+{
+  "mission": "P16-M3-M5-SHUTDOWN-RECOVERY-R5",
+  "reviewer": "/root/r4_interruption_review",
+  "recorded_UTC": "2026-10-22T00:59:16.329259+00:00",
+  "source_sha256": {
+    "reproduce_saved.py": "b0f5723264693184cf800309feeba89031fb13a5003567e698579cc2867fc476",
+    "build_archive.py": "a673f2664424e30f82f451c0db35830e79b9882d3b92e513fea4fe5bf899960e",
+    "test_external_closure.py": "a0c60c58c1bc9328712377e00d571c021e3098f6debe14fb38db70c41f0c6c81"
+  },
+  "handoff_sha256": "6d3d81f6a8e91a6713c20c5d2f06fc59ce47d12c1ed947c9fd109f675714dfe3",
+  "primary_fresh_checks_not_summed": [
+    {
+      "tests": 69,
+      "native_exit": 0,
+      "result_sha256": "474640e59a254a1c98d7a343b9bd546794e3d608405b5347d251201db475ead2",
+      "native_log_sha256": "435615f26765ccd4ef9c4385739070b139f60b398e965ad7f45c6a4efbf3da92"
+    },
+    {
+      "tests": 46,
+      "native_exit": 0,
+      "result_sha256": "d8c142242f4890c8a64fd6465051adbd7da76969c06a68b65fcf023de83a030e",
+      "native_log_sha256": "95d1465df14e46c18b1ec65d950bb26d928e28fd5ee168376824b393af1701c3"
+    },
+    {
+      "tests": 55,
+      "native_exit": 0,
+      "result_sha256": "7c242d937f5104e4c34cbcf431f2ae51ff2cea1bf07a4498db555ecb8fa48e36",
+      "native_log_sha256": "b6c43433c6b073229adb86a59b24e7303e37c1caad12074be4ef7afc384d5a87"
+    }
+  ],
+  "independent_synthetic_tests": 69,
+  "independent_synthetic_result_sha256": "6c7929cfcb5a6180dfa35635f92bc4f2d3660bffe4906108d545ee26a0e33522",
+  "unchanged_native_helper_functions": [
+    "need",
+    "local",
+    "rel",
+    "walk_files",
+    "load",
+    "sha",
+    "integer",
+    "lines",
+    "identity",
+    "verify_rows",
+    "check_archive",
+    "receipt",
+    "projected",
+    "diagnostic_sequence",
+    "diagnostic_journal",
+    "fg_journal",
+    "coordinates",
+    "strict_tasks",
+    "approval",
+    "reuse",
+    "stop_category",
+    "native_stop",
+    "validate_stop",
+    "check_m4"
+  ],
+  "normal_native_terminal_run_and_builder_retained_by_AST": true,
+  "scientific_model_imports_or_calls": 0,
+  "NPZ_decodes": 0,
+  "real_saved_state_audits_repeated": 0,
+  "real_archive_or_reproduction_executed": false,
+  "decision": "PASS_EXACT_EXTERNAL_TOOLING_METADATA_AND_AST_BINDINGS_ONLY"
+}

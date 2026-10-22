@@ -1,0 +1,68 @@
+{
+  "mission": "P16-M3-M5-SHUTDOWN-RECOVERY-R5",
+  "recorded_UTC": "2026-10-21T17:00:19.307830+00:00",
+  "actual_native_invocation": {
+    "cwd": "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute",
+    "executable": "paper16_m1/work/runtime/Scripts/python.exe",
+    "arguments": [
+      "-u",
+      "-c",
+      "import runpy,pathlib; runpy.run_path(str(pathlib.Path('ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/PRIMARY_SAVED_AUDIT_V2.py').resolve()),run_name='__main__')"
+    ],
+    "stdout_stderr": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/PRIMARY_AUDIT_NATIVE_5_V2.log",
+    "tool_session_id": 39703,
+    "observed_actual_exit_code": 0,
+    "exit_observation": "functions.write_stdin completed session 39703 with exit_code=0",
+    "escalation_scope": "actual Windows CIM boot verification and saved-only frozen A audit"
+  },
+  "runtime": {
+    "versions": {
+      "Python": "3.11.15",
+      "numpy": "2.4.6",
+      "scipy": "1.16.3",
+      "h5py": "3.16.0",
+      "requests": "2.32.5"
+    },
+    "files": {
+      "paper16_m1/work/runtime/Lib/site-packages/scipy/optimize/_lbfgsb.cp311-win_amd64.pyd": "d1b8a982b7f80131060e3b2c93e580ccdd6c4f537d12496ca49f8424946bb8e2",
+      "paper16_m1/work/runtime/Lib/site-packages/scipy/optimize/_lbfgsb_py.py": "c4d668646f483fc043e7f158a5e5b4db729da9fa2f198e4a865e09edc676ae00",
+      "paper16_m1/work/runtime/Lib/site-packages/scipy/optimize/_minimize.py": "d4c913c0b3c3f26354c997b303f2cdcac78219b7d075b1d4b085f1f75a0b69f3",
+      "paper16_m1/work/runtime/Lib/site-packages/scipy/optimize/_optimize.py": "2d358c8c50b134e5741dc39820197c3a9468928c9f70da041c5d4df9e256a897",
+      "paper16_m1/work/runtime/Lib/site-packages/numpy/_core/_multiarray_umath.cp311-win_amd64.pyd": "4fb4c5d62a6bd766eea716350eaf5396580e33cf7dc159e305488d1b7d72dad2"
+    },
+    "runtime_executable": "paper16_m1/work/runtime/Scripts/python.exe",
+    "python_launcher_sha256": "de13d8017f63cb63b0b5bfd2f25e69245c9196433a224856ca1abde1e24d0cb7"
+  },
+  "registration_sha256": "f64870f8531d3bdd09abb8d36eaf558e209f767ac6f3cff1689524c6c2e8693a",
+  "result_sha256": "213f9573f0d808e94923248c8a0c3eaa1d2828794143c95d665b59a69fb9cfc2",
+  "result": {
+    "mission": "P16-M3-M5-SHUTDOWN-RECOVERY-R5",
+    "completed_UTC": "2026-10-21T16:59:36.569931+00:00",
+    "primary_saved_audit": "PASS",
+    "independent_review_pending": true,
+    "optimizer_attempted": 3992,
+    "optimizer_passed": 3992,
+    "B0_attempted": 216,
+    "B0_passed": 216,
+    "full_current_pass_hashed_files": 45280,
+    "R4_inventory_union_files": 33575,
+    "prepared_A_states": 215,
+    "new_optimizer_objective_derivative_score_calls": 0,
+    "new_raw_source_requests": 0,
+    "E_Final_access": false,
+    "registration_sha256": "f64870f8531d3bdd09abb8d36eaf558e209f767ac6f3cff1689524c6c2e8693a",
+    "matrix_sha256": "c729f174a4162a732a7a3795e6845ecb7371376fcb78f1982e707a97202d505e",
+    "B0_matrix_sha256": "4fee6748d8ce5cc7b63dc2d743d2708ed25db49a073476aa8d7dc5c95170e62b",
+    "ledger_sha256": "17bf02d57d1683982b1163162773ab17af69f00c7081f405dfdc9d5ce8e7ff48",
+    "old_failures_preserved": true
+  },
+  "source_sha256": "28c0a01329cdc97da844aceafbaae9eaf334e56d39db46b202f79034210e2c67",
+  "native_log_sha256": "236057efb2857e1f4ea2850133e1387bdfa5a4c439c53045216d243739df56b9",
+  "incident_review_path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/INDEPENDENT_R5_PRIMARY_HARNESS_INCIDENT_REVIEW.md",
+  "incident_review_sha256": "eb5d47901122f2403f9daab95fe4c29c935e00f36e5b0385b02089b90b6fd1d3",
+  "source_diff_sha256": "48c0174ce4eb1774bf614d859d2165151023eec017f8e88ca410163b18ff0b01",
+  "original_registration_sha256": "ce56c98dc271c1607bef15c66268dbab4db81b99a1b3596b0f47861bc84977ec",
+  "all_original_attempt_logs_preserved": true,
+  "no_scientific_state_rescan_after_complete": true,
+  "independent_complete_admission_pending": true
+}

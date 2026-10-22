@@ -1,0 +1,27 @@
+"""Append-only metadata freeze after reviewed prefit wrapper corrections."""
+import datetime
+from .core import *
+
+def run():
+    guard(load(P/'PHASE_A_CLAIM.json'));verify_pins()
+    cert=load(P/'CERTIFICATION_6_ACCEPTANCE.json')
+    result=load(R/cert['test_result_path'])
+    if not result['mandatory_tests_pass'] or result['real_fits_executed']!=0:raise AccessStop('Final wrapper certification required')
+    for row in result['source_files']:
+        if sha(R/row['path'])!=row['sha256']:raise AccessStop('Certified final wrapper changed')
+    once(P/'PRODUCTION_CERTIFICATION_FINAL_V3.json',cert)
+    paths={R/row['path'] for row in load(P/'PREFIT_FREEZE_MANIFEST.json')['files']}
+    paths.update(P.glob('*.py'));paths.update(P.glob('*.json'))
+    paths.add(E/'PRIMARY_B0_STATUS_FIELD_ADDENDUM.json')
+    paths.add(E/'INDEPENDENT_R5_COMPLETE_MATRIX_COMPARISON_1.json')
+    paths.update(E.glob('PREFIT_REVIEW*.md'))
+    paths.add(E/'PREFIT_WRAPPER_STOP_REPAIR.md')
+    paths.add(E/'INDEPENDENT_R5_PREFIT_REVIEW_1_RECEIPT.json')
+    paths.add(E/'INDEPENDENT_R5_PREFIT_REVIEW_1_ADDENDUM.md')
+    paths.add(E/'R3_INVENTORY_SCOPE_CLASSIFICATION.json')
+    paths.update(R/row['path'] for row in result['source_files'])
+    paths.update([R/cert['test_result_path'],R/cert['registration_path']])
+    once(P/'PREFIT_FREEZE_MANIFEST_V3.json',{'mission':MISSION,'frozen_UTC':datetime.datetime.now(datetime.timezone.utc).isoformat(),'supersedes_for_new_execution_only':{'path':'paper16_development_r5/PREFIT_FREEZE_MANIFEST_V2.json','sha256':sha(P/'PREFIT_FREEZE_MANIFEST_V2.json')},'historical_freeze_preserved':True,'before_new_real_fits':True,'phase_A_claim_sha256':sha(P/'PHASE_A_CLAIM.json'),'files':[{'path':p.relative_to(R).as_posix(),'sha256':sha(p)} for p in sorted(paths)]})
+    print('Version3 source freeze assembled; independent production acceptance still required.')
+
+if __name__=='__main__':run()

@@ -1,0 +1,563 @@
+{
+  "mission": "P16-M3-M5-SHUTDOWN-RECOVERY-R5",
+  "base": "b7bb1227379462c2c7a1cef40ab0d0e99a6d020b",
+  "frozen_at": "2026-10-21T16:46:26.368087+00:00",
+  "owner_sha256": "53c2f606d4fb2014d96cf1e5979a8238ab608be2cdd7d947b506d5da9a1b4d1e",
+  "requirement_count": 92,
+  "items": [
+    {
+      "id": "REQ-001",
+      "owner_line": 3,
+      "requirement": "MISSION_ID: `P16-M3-M5-SHUTDOWN-RECOVERY-R5`",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-002",
+      "owner_line": 5,
+      "requirement": "REQUIRED_EXECUTION_BASE: `b7bb1227379462c2c7a1cef40ab0d0e99a6d020b`",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-003",
+      "owner_line": 7,
+      "requirement": "REPOSITORY: `RiconasSun/neuralsignal-theory`",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-004",
+      "owner_line": 9,
+      "requirement": "BRANCH: `test`",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-005",
+      "owner_line": 13,
+      "requirement": "I prospectively authorize execution of the independently reviewed R5 shutdown-recovery protocol committed at the exact REQUIRED_EXECUTION_BASE.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-006",
+      "owner_line": 15,
+      "requirement": "Authoritative contract:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-007",
+      "owner_line": 17,
+      "requirement": "`paper16_shutdown_recovery_r5_protocol/PROSPECTIVE_MISSION.md`",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-008",
+      "owner_line": 19,
+      "requirement": "Supporting machine contracts:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-009",
+      "owner_line": 21,
+      "requirement": "`PROPOSED_EXECUTION_POLICY.json`, `REUSE_TARGETS.json`, `RECOVERY_TASK_PLAN.json`, `ROSTER_IDENTITIES.json`, and `SOURCE_PINS.json`.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-010",
+      "owner_line": 23,
+      "requirement": "The historical R4 interruption is final and must not be restarted, relabeled or retrospectively repaired.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-011",
+      "owner_line": 25,
+      "requirement": "This authorization applies only to the new R5 saved-state audit, production certification, remaining A optimization tasks and complete-M4 review.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-012",
+      "owner_line": 27,
+      "requirement": "**E is explicitly NOT AUTHORIZED. Final C/D is explicitly NOT AUTHORIZED.**",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-013",
+      "owner_line": 31,
+      "requirement": "Within one bounded 24-hour preflight window:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-014",
+      "owner_line": 33,
+      "requirement": "- Verify the exact Git BASE and every frozen source identity.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-015",
+      "owner_line": 34,
+      "requirement": "- Independently audit all 3,992 historical optimizer states: 952 R3 and 3,040 R4.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-016",
+      "owner_line": 35,
+      "requirement": "- Independently audit all 216 B0 analytic certificates.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-017",
+      "owner_line": 36,
+      "requirement": "- Preserve each historical optimizer-policy origin, including R3 `ftol=1e-12` and R4 `ftol=0`.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-018",
+      "owner_line": 37,
+      "requirement": "- Verify all task, source, unit, feature, scaler, mask, parameter, seed, objective, journal, PG/AD/FD and runtime identities.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-019",
+      "owner_line": 38,
+      "requirement": "- Complete all mandatory synthetic, source-access, Windows Job, interruption, deadline, numerical and resource-guard tests.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-020",
+      "owner_line": 39,
+      "requirement": "- Obtain independent acceptance of the complete reuse matrix and the exact new production implementation.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-021",
+      "owner_line": 41,
+      "requirement": "No new real A optimization until the complete Phase A gate passes.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-022",
+      "owner_line": 43,
+      "requirement": "If even one required reuse identity or certificate fails, STOP. Do not exclude that state, substitute a diagnostic state, recalculate its certificate or switch to full refitting.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-023",
+      "owner_line": 45,
+      "requirement": "Preserve all unsuccessful reviews and preflight attempts.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-024",
+      "owner_line": 49,
+      "requirement": "Only after Phase A PASS, authorize one new scientific stage:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-025",
+      "owner_line": 52,
+      "requirement": "Maximum wall time: 48 hours",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-026",
+      "owner_line": 53,
+      "requirement": "Optimizer workers: 1",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-027",
+      "owner_line": 54,
+      "requirement": "New optimizer attempts: 2,479 maximum",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-028",
+      "owner_line": 55,
+      "requirement": "FG pairs per attempt: 6,000 maximum",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-029",
+      "owner_line": 56,
+      "requirement": "Accepted iterations per attempt: 1,500 maximum",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-030",
+      "owner_line": 57,
+      "requirement": "No retries",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-031",
+      "owner_line": 58,
+      "requirement": "No stage restart",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-032",
+      "owner_line": 59,
+      "requirement": "No clock extension",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-033",
+      "owner_line": 62,
+      "requirement": "Use the exact previously frozen ordered 2,479-task list.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-034",
+      "owner_line": 64,
+      "requirement": "The first task must be:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-035",
+      "owner_line": 66,
+      "requirement": "`763236014:S02:S:None:11:GLOBAL`",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-036",
+      "owner_line": 68,
+      "requirement": "Start that task and every other new task from its original frozen initializer.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-037",
+      "owner_line": 70,
+      "requirement": "Do not warm-start from the incomplete R4 vector, the R3 failed vector, the feasibility diagnostic, or another seed.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-038",
+      "owner_line": 72,
+      "requirement": "Preserve `ftol=0`, `gtol=2e-6`, original PG≤1e-5, AD≤1e-8, fixed-FD h=1e-5/error≤2e-5, original models, features, penalties, bounds, λ=1.0, seeds, and all other scientific rules.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-039",
+      "owner_line": 74,
+      "requirement": "Every new fit must satisfy all numerical gates. Solver success alone is insufficient.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-040",
+      "owner_line": 76,
+      "requirement": "Any mandatory numerical, implementation, source, process, budget or integrity failure requires immediate STOP. Preserve completed, partial, failed and unattempted work without retry.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-041",
+      "owner_line": 80,
+      "requirement": "If all 2,479 new tasks pass, construct a complete append-only M4 package containing:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-042",
+      "owner_line": 82,
+      "requirement": "- 952 independently admitted R3 optimizer states.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-043",
+      "owner_line": 83,
+      "requirement": "- 3,040 independently admitted R4 optimizer states.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-044",
+      "owner_line": 84,
+      "requirement": "- 2,479 newly certified R5 optimizer states.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-045",
+      "owner_line": 85,
+      "requirement": "- 216 independently admitted B0 analytic certificates.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-046",
+      "owner_line": 87,
+      "requirement": "Verify exact coverage of the original 6,471 optimizer tasks, all mandatory models, panels and seeds.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-047",
+      "owner_line": 89,
+      "requirement": "Freeze all state, code, data, scaler, parameter, selection, numerical-certificate and provenance identities.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-048",
+      "owner_line": 91,
+      "requirement": "Require independent complete-M4 review within the authorized stage boundary.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-049",
+      "owner_line": 93,
+      "requirement": "Do not claim M4 PASS before that review accepts the complete package.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-050",
+      "owner_line": 97,
+      "requirement": "Even if complete M4 passes:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-051",
+      "owner_line": 99,
+      "requirement": "**STOP after the independently reviewed M4 handoff.**",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-052",
+      "owner_line": 101,
+      "requirement": "Do not load, export, bin, score or evaluate Development E neural outcomes.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-053",
+      "owner_line": 103,
+      "requirement": "Do not compute B4−B1, secondary E comparisons, E sensitivities or N1–N4 E references.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-054",
+      "owner_line": 105,
+      "requirement": "A future E batch requires a separate explicit owner authorization tied to the accepted M4 manifest and a new bounded E execution contract.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-055",
+      "owner_line": 107,
+      "requirement": "All Final C/D, M6 and P17 access remains denied.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-056",
+      "owner_line": 111,
+      "requirement": "Use a separate R5 execution workspace and append-only evidence.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-057",
+      "owner_line": 113,
+      "requirement": "Preserve all R1–R4 historical STOPs, the previous shutdown evidence, unsuccessful reviews and the original protocol.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-058",
+      "owner_line": 115,
+      "requirement": "Run saved-only reproduction and obtain independent final scientific review.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-059",
+      "owner_line": 117,
+      "requirement": "Create a complete local archival package, verify hashes and record the real scientific verdict.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-060",
+      "owner_line": 119,
+      "requirement": "**This execution authorization does not grant public transmission of new private-derived numerical evidence.**",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-061",
+      "owner_line": 121,
+      "requirement": "Prepare the exact proposed Git publication manifest, exclude protected neural arrays and credentials, and request my separate approval before publishing those new payloads to the public GitHub remote.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-062",
+      "owner_line": 125,
+      "requirement": "Return actual verified values:",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-063",
+      "owner_line": 128,
+      "requirement": "MISSION_ID=",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-064",
+      "owner_line": 129,
+      "requirement": "BASE_SHA=",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-065",
+      "owner_line": 130,
+      "requirement": "FINAL_STATUS=",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-066",
+      "owner_line": 131,
+      "requirement": "SCIENTIFIC_VERDICT=",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-067",
+      "owner_line": 133,
+      "requirement": "PREFLIGHT_24H_PASS=",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-068",
+      "owner_line": 134,
+      "requirement": "HISTORICAL_OPTIMIZER_STATES_AUDITED=",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-069",
+      "owner_line": 135,
+      "requirement": "HISTORICAL_OPTIMIZER_STATES_ADMITTED=",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-070",
+      "owner_line": 136,
+      "requirement": "B0_CERTIFICATES_ADMITTED=",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-071",
+      "owner_line": 137,
+      "requirement": "INDEPENDENT_REUSE_REVIEW=",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-072",
+      "owner_line": 139,
+      "requirement": "NEW_ATTEMPTS_PLANNED=2479",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-073",
+      "owner_line": 140,
+      "requirement": "NEW_ATTEMPTS_EXECUTED=",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-074",
+      "owner_line": 141,
+      "requirement": "NEW_NUMERICAL_PASSES=",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-075",
+      "owner_line": 142,
+      "requirement": "NEW_NUMERICAL_FAILURES=",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-076",
+      "owner_line": 143,
+      "requirement": "UNATTEMPTED_TASKS=",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-077",
+      "owner_line": 145,
+      "requirement": "M4_COMPLETE=",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-078",
+      "owner_line": 146,
+      "requirement": "M4_INDEPENDENT_REVIEW=",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-079",
+      "owner_line": 147,
+      "requirement": "M4_MANIFEST_SHA256=",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-080",
+      "owner_line": 149,
+      "requirement": "E_AUTHORIZED=false",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-081",
+      "owner_line": 150,
+      "requirement": "E_EXECUTED=false",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-082",
+      "owner_line": 151,
+      "requirement": "FINAL_C_ACCESS=false",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-083",
+      "owner_line": 152,
+      "requirement": "FINAL_D_ACCESS=false",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-084",
+      "owner_line": 154,
+      "requirement": "BUG_COUNT=",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-085",
+      "owner_line": 155,
+      "requirement": "WARN_COUNT=",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-086",
+      "owner_line": 156,
+      "requirement": "SAVED_REPRODUCTION=",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-087",
+      "owner_line": 157,
+      "requirement": "LOCAL_ARCHIVE=",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-088",
+      "owner_line": 158,
+      "requirement": "REMOTE_PUBLICATION_STATUS=",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-089",
+      "owner_line": 159,
+      "requirement": "STOP_REASON=",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-090",
+      "owner_line": 162,
+      "requirement": "If a mandatory gate fails, report its precise STOP category and do not call the study complete.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-091",
+      "owner_line": 164,
+      "requirement": "If complete M4 receives independent acceptance, report `M4_COMPLETE_INDEPENDENTLY_ACCEPTED` and stop without E.",
+      "status": "OPEN"
+    },
+    {
+      "id": "REQ-092",
+      "owner_line": 166,
+      "requirement": "No biological hypothesis validation, independent Final confirmation or CWP/NAP proof follows from M4 numerical completion.",
+      "status": "OPEN"
+    }
+  ],
+  "normative_protocol": "paper16_shutdown_recovery_r5_protocol/PROSPECTIVE_MISSION.md",
+  "normative_protocol_sha256": "e45285adf59a1567ac8b601f7366c75266acaa0b70ae4dd3ab03b17ff91ad992"
+}

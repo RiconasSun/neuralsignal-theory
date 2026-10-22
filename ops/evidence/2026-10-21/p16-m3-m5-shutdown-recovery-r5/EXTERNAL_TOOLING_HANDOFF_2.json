@@ -1,0 +1,128 @@
+{
+  "mission": "P16-M3-M5-SHUTDOWN-RECOVERY-R5",
+  "scope": "EXTERNAL_CLOSURE_ROUTE_P1_REPAIR_ONLY",
+  "recorded_UTC": "2026-10-22T00:57:40.771304+00:00",
+  "prior_handoff": {
+    "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/EXTERNAL_TOOLING_HANDOFF_1.json",
+    "sha256": "a36dabab81cdfdbcb82ba32773c1ef5b54a0bb420ab11829f346a4fce19f36b5",
+    "bytes": 6741
+  },
+  "preserved_candidate_sources": [
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/reproduce_saved_external_review1_snapshot.py",
+      "sha256": "ecbaa256929c9c04b535d6b042acfcdfef2d105509497fe8744e36480bc8d18f",
+      "bytes": 56404
+    },
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/build_archive_external_review1_snapshot.py",
+      "sha256": "f81f6c1887ab3b972869d9398dc3c1b162cfd4e55a3516ce3f560813986e84b8",
+      "bytes": 8861
+    },
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/test_external_closure_external_review1_snapshot.py",
+      "sha256": "3893289801bc76d3c6854ad562f68ed9432b58f25ecbd869d21f8c8bc0ea28cd",
+      "bytes": 20651
+    }
+  ],
+  "defect": "New external-STOP dispatch and work/E existence checks could follow a redirected leaf before local/no-follow validation.",
+  "repair": "Use existing lexical/lstat/reparse guard before every newly introduced external-route existence check; no policy or scope change.",
+  "sources": [
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/reproduce_saved.py",
+      "sha256": "b0f5723264693184cf800309feeba89031fb13a5003567e698579cc2867fc476",
+      "bytes": 56437
+    },
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/build_archive.py",
+      "sha256": "a673f2664424e30f82f451c0db35830e79b9882d3b92e513fea4fe5bf899960e",
+      "bytes": 8982
+    },
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/test_external_closure.py",
+      "sha256": "a0c60c58c1bc9328712377e00d571c021e3098f6debe14fb38db70c41f0c6c81",
+      "bytes": 23783
+    }
+  ],
+  "runtime": {
+    "path": "paper16_m1/work/runtime/Scripts/python.exe",
+    "sha256": "de13d8017f63cb63b0b5bfd2f25e69245c9196433a224856ca1abde1e24d0cb7",
+    "bytes": 262144
+  },
+  "checks": [
+    {
+      "command": [
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper16_m1\\work\\runtime\\Scripts\\python.exe",
+        "-B",
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\ops\\evidence\\2026-10-21\\p16-m3-m5-shutdown-recovery-r5\\test_external_closure.py",
+        "--receipt-id",
+        "7"
+      ],
+      "actual_native_exit_code": 0,
+      "synthetic_test_count": 69,
+      "result": {
+        "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/EXTERNAL_TOOLING_SYNTHETIC_TEST_RESULT_7.json",
+        "sha256": "474640e59a254a1c98d7a343b9bd546794e3d608405b5347d251201db475ead2",
+        "bytes": 17113
+      },
+      "native_output": {
+        "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/EXTERNAL_TOOLING_SYNTHETIC_TEST_NATIVE_7.log",
+        "sha256": "435615f26765ccd4ef9c4385739070b139f60b398e965ad7f45c6a4efbf3da92",
+        "bytes": 290
+      }
+    },
+    {
+      "command": [
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper16_m1\\work\\runtime\\Scripts\\python.exe",
+        "-B",
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\ops\\evidence\\2026-10-21\\p16-m3-m5-shutdown-recovery-r5\\test_reproduce_tooling.py",
+        "--receipt-id",
+        "9"
+      ],
+      "actual_native_exit_code": 0,
+      "synthetic_test_count": 46,
+      "result": {
+        "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/REPRO_TOOLING_SYNTHETIC_TEST_RESULT_9.json",
+        "sha256": "d8c142242f4890c8a64fd6465051adbd7da76969c06a68b65fcf023de83a030e",
+        "bytes": 6984
+      },
+      "native_output": {
+        "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/REPRO_TOOLING_SYNTHETIC_TEST_NATIVE_10.log",
+        "sha256": "95d1465df14e46c18b1ec65d950bb26d928e28fd5ee168376824b393af1701c3",
+        "bytes": 168
+      }
+    },
+    {
+      "command": [
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\paper16_m1\\work\\runtime\\Scripts\\python.exe",
+        "-B",
+        "C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\ops\\evidence\\2026-10-21\\p16-m3-m5-shutdown-recovery-r5\\test_closure_review1_repairs.py",
+        "--receipt-id",
+        "5"
+      ],
+      "actual_native_exit_code": 0,
+      "synthetic_test_count": 55,
+      "result": {
+        "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/REPRO_TOOLING_REVIEW1_REPAIR_TEST_RESULT_5.json",
+        "sha256": "7c242d937f5104e4c34cbcf431f2ae51ff2cea1bf07a4498db555ecb8fa48e36",
+        "bytes": 11671
+      },
+      "native_output": {
+        "path": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/REPRO_TOOLING_REVIEW1_REPAIR_TEST_NATIVE_5.log",
+        "sha256": "b6c43433c6b073229adb86a59b24e7303e37c1caad12074be4ef7afc384d5a87",
+        "bytes": 162
+      }
+    }
+  ],
+  "added_synthetic_cases": "Eight cases: symlink and reparse metadata on STOP leaf in builder/reproducer and on work/E leaf in validator/builder; exists trap asserts no leaf target access before denial.",
+  "counts_not_independent_denominators": true,
+  "normal_native_branch_retained": true,
+  "exact_annex_count": 10,
+  "real_archive_or_reproduction_executed": false,
+  "real_saved_state_audit_repeated": false,
+  "NPZ_decodes": 0,
+  "new_fits_derivatives_scores": 0,
+  "E_access": false,
+  "Final_C_D_access": false,
+  "scientific_status_unchanged": "STOP_EXECUTION_INTERRUPTED_REQUIRED_GATE",
+  "ready_for_independent_tooling_rereview": true
+}

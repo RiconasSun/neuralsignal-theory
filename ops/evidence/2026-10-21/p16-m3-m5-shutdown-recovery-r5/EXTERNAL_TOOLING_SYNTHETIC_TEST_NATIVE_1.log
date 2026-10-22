@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 206] \u6587\u4ef6\u540d\u6216\u6269\u5c55\u540d\u592a\u957f\u3002: 'C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\ops\\evidence\\2026-10-21\\p16-m3-m5-shutdown-recovery-r5\\REPRO_TOOLING_TEMP\\p16_external_nuo8f1o3\\0\\paper16_development_r5\\work\\fits\\e37ba700fccee3e6eb922c02ca3f2680e44b3ed7d7dda47d86c91ab092a2765d'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\ops\evidence\2026-10-21\p16-m3-m5-shutdown-recovery-r5\test_external_closure.py", line 103, in <module>
+    paths,folders=fixture()
+                  ^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\ops\evidence\2026-10-21\p16-m3-m5-shutdown-recovery-r5\test_external_closure.py", line 60, in fixture
+    folder=m.P/'work/fits'/hashlib.sha256(task['id'].encode()).hexdigest();folder.mkdir(parents=True);folders.append(folder)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1121, in mkdir
+    self.mkdir(mode, parents=False, exist_ok=exist_ok)
+  File "C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 206] \u6587\u4ef6\u540d\u6216\u6269\u5c55\u540d\u592a\u957f\u3002: 'C:\\Users\\85993\\Desktop\\codebase\\neuralsignal institute\\ops\\evidence\\2026-10-21\\p16-m3-m5-shutdown-recovery-r5\\REPRO_TOOLING_TEMP\\p16_external_nuo8f1o3\\0\\paper16_development_r5\\work\\fits\\e37ba700fccee3e6eb922c02ca3f2680e44b3ed7d7dda47d86c91ab092a2765d'
