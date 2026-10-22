@@ -1,0 +1,30 @@
+{
+  "mission": "P16-M3-M5-RELIABILITY-GATED-RECOVERY-R6",
+  "recorded_UTC": "2026-10-22T03:04:57.227054+00:00",
+  "scope": "Prospective storage planning bound, not observed fit usage or an admission gatePASS",
+  "source_policy_sha256": "a01eb8608ae82447c5b28655d724db7470d16aa4a97c07f09c762d3c0d2f1c4f",
+  "source_host_audit_sha256": "49f2c0b0bb9def3087fbe831b128f152c575b2e3d98b0429bc7d6b0fcb70b5ae",
+  "maximum_parameters": 368,
+  "finite_float_JSON_upper_budget_per_coordinate_bytes": 32,
+  "fixed_metadata_padding_per_line_bytes": 2048,
+  "FG_pair_line_upper_bytes": 27648,
+  "accepted_line_upper_bytes": 13824,
+  "diagnostic_reservation_line_upper_bytes": 2048,
+  "FG_log_worst_case_bytes": 307722240000,
+  "accepted_log_worst_case_bytes": 38465280000,
+  "FD_log_worst_case_bytes": 33553121280,
+  "available_disk_at_host_snapshot_bytes": 66851053568,
+  "registered_disk_free_floor_bytes": 8589934592,
+  "registered_available_memory_floor_bytes": 2147483648,
+  "all_maximum_journal_calls_fit_in_current_disk": false,
+  "no_full_stage_completion_guarantee": true,
+  "required_before_science": [
+    "Independently reviewed write reservation and free-space checks before FG/accepted/diagnostic journal writes",
+    "Stop R6 before registered8GiB free-space or2GiB available-memory margin is crossed",
+    "All original call/iteration/deadline maxima remain, not a promise that all maximally expensive trajectories can run",
+    "Do not delete or compact historical evidence to gain space; no resource borrowing or budget extension"
+  ],
+  "resource_guard_implemented_and_certified": false,
+  "real_A_optimization_authorized": false,
+  "scientific_calls": 0
+}

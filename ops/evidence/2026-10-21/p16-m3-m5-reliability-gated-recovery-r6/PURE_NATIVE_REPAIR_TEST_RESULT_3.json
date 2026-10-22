@@ -1,0 +1,187 @@
+{
+  "mission": "P16-M3-M5-RELIABILITY-GATED-RECOVERY-R6",
+  "scope": "AST_ONLY_PREDICATE_AND_IN_MEMORY_FAKE_PROCESS_TESTS",
+  "registered_test_sha256": "8c24e5eb13567a8f2a570934739204a31954808d1ef603d519e2a7057ee26106",
+  "source_files": [
+    {
+      "path": "paper16_development_r6/native_process.py",
+      "sha256": "d664ec4779ddfda6cd73d598b5f882567baa01e918d0931c59799db3322afca5",
+      "bytes": 13030
+    },
+    {
+      "path": "paper16_development_r6/test_native_lifecycle.py",
+      "sha256": "39a7436ecab854bb58b9881b73a01e8c64698a81310d83199169965f79ba6926",
+      "bytes": 20012
+    }
+  ],
+  "tests": [
+    {
+      "name": "strict_reject_bool_int",
+      "status": "PASS"
+    },
+    {
+      "name": "strict_reject_int_float",
+      "status": "PASS"
+    },
+    {
+      "name": "strict_reject_nested_bool",
+      "status": "PASS"
+    },
+    {
+      "name": "strict_reject_nested_float",
+      "status": "PASS"
+    },
+    {
+      "name": "strict_reject_nan",
+      "status": "PASS"
+    },
+    {
+      "name": "strict_reject_inf",
+      "status": "PASS"
+    },
+    {
+      "name": "strict_reject_nonstringkey",
+      "status": "PASS"
+    },
+    {
+      "name": "strict_reject_tuple",
+      "status": "PASS"
+    },
+    {
+      "name": "strict_equal_nested_accepts",
+      "status": "PASS"
+    },
+    {
+      "name": "strict_native_field_returncode_True",
+      "status": "PASS"
+    },
+    {
+      "name": "strict_native_field_returncode_1.0",
+      "status": "PASS"
+    },
+    {
+      "name": "strict_native_field_returncode_17",
+      "status": "PASS"
+    },
+    {
+      "name": "strict_native_field_assigned_before_resume_1",
+      "status": "PASS"
+    },
+    {
+      "name": "strict_native_field_native_job_tree_enforced_1",
+      "status": "PASS"
+    },
+    {
+      "name": "strict_native_field_killed_at_deadline_None",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid_expected_None",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid_expected_{}",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid_expected_[]",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid_expected_{'n': nan}",
+      "status": "PASS"
+    },
+    {
+      "name": "cancel_create_failure_still_cleans",
+      "status": "PASS"
+    },
+    {
+      "name": "cancel_write_failure_still_cleans",
+      "status": "PASS"
+    },
+    {
+      "name": "cancel_flush_failure_still_cleans",
+      "status": "PASS"
+    },
+    {
+      "name": "cancel_fsync_failure_still_cleans",
+      "status": "PASS"
+    },
+    {
+      "name": "cancel_and_cleanup_failures_both_preserved",
+      "status": "PASS"
+    },
+    {
+      "name": "silent_breakaway_0x3000_omits_explicit_flag",
+      "status": "PASS"
+    },
+    {
+      "name": "explicit_breakaway_only_if_permitted",
+      "status": "PASS"
+    },
+    {
+      "name": "outside_job_no_breakaway_flag",
+      "status": "PASS"
+    },
+    {
+      "name": "unsupported_breakaway_denied_before_Popen",
+      "status": "PASS"
+    },
+    {
+      "name": "malformed_job_flags_rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "zero_deadline_not_extended_by_minimum_wait",
+      "status": "PASS"
+    },
+    {
+      "name": "fake_kernel_mutex_state_0",
+      "status": "PASS"
+    },
+    {
+      "name": "fake_kernel_mutex_state_128",
+      "status": "PASS"
+    },
+    {
+      "name": "fake_kernel_mutex_state_258",
+      "status": "PASS"
+    },
+    {
+      "name": "fake_kernel_mutex_state_4294967295",
+      "status": "PASS"
+    },
+    {
+      "name": "publication_delay_cancel_serializes_and_forbids_late_birth",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_cancel_AST_kernel_event_precedes_disk_failure",
+      "status": "PASS"
+    },
+    {
+      "name": "only_one_Popen_site_inside_spawn_owned",
+      "status": "PASS"
+    },
+    {
+      "name": "native_supervise_has_no_direct_Popen_bypass",
+      "status": "PASS"
+    },
+    {
+      "name": "no_PID_taskkill_calls",
+      "status": "PASS"
+    },
+    {
+      "name": "candidate3_names_only",
+      "status": "PASS"
+    }
+  ],
+  "test_count": 40,
+  "failures": 0,
+  "actual_native_fixture_executed": false,
+  "actual_WinAPI_calls": 0,
+  "actual_Popen_calls": 0,
+  "protected_state_reads": 0,
+  "model_or_scientific_calls": 0,
+  "native_candidate_final_freeze_or_approval": false
+}

@@ -1,0 +1,13 @@
+# Native candidate 4 runtime-topology repair
+
+The candidate3 independent review and binding were verified before preserving both exact source files in CANDIDATE_NATIVE_3_SOURCE. CANDIDATE_NATIVE_3_PRESERVATION.json records byte identity. Prior registrations, reviews and evidence are unchanged. This is an unexecuted harness correction, not an actual Host capability failure or retry.
+
+Only test_native_lifecycle.py changes. native_process.py and the independent R6 audit implementation remain byte-identical. The fixture work, native registration and result names use suffix4. Root retains prospective native registration, final source freeze and actual exercise control.
+
+Every fixture command now uses the exact previously identified real CPython PE at `C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\python.exe`, SHA256 `28d2965d061656abbe3a46100bd3342d1152185289445d489782a21a8cfe9b57`, with `-B -S -m`. It never derives a child command from a venv redirector's sys.executable. The guard requires the registration's fixture_runtime path/hash, readonly loader-evidence hash, real PE bytes, Python3.11.15, exact current sys.executable, -S/-B flags and actual executing image. Spawn rejects a different command before Popen; the immediate stable Popen image and each role's self image must match the real PE.
+
+PID, creation FILETIME, image matching, CREATE_SUSPENDED handoff, mutex/cancellation/uncertainty Events and cleanup are not loosened. The cleanup AST is unchanged. No redirector/interpreter edge is ignored or treated as a registered child. This runtime selection applies only to the stdlib lifecycle fixture; it does not amend or certify the scientific numerical runtime.
+
+PURE_NATIVE_REPAIR_TEST_REGISTRATION_5.json prospectively binds the pure AST test and current source inputs. PURE_NATIVE_REPAIR_TESTS_5.py passed55 assertions with actual test-run exit0; result SHA256 is `e48037cd017cab31bab34b6537fd2d6c6c2e19ed5d18ba5ee7cb3451314470b7`. Added assertions use entirely fake runtime/hash/image inputs and verify the exact command, all relevant mismatch denials, unchanged cleanup AST and unchanged native handle primitives. These overlap the earlier40 assertions and must not be summed. The test never imports the actual native modules or launches fixture processes; actual WinAPI/Popen lifecycle calls=0, private/scientific calls=0.
+
+NATIVE_CANDIDATE_3_TO_4.patch records the minimal source comparison. Actual native exercise, native capability PASS, reuse qualification and production promotion remain unestablished by this repair. Independent static review and root's exact native registration are required before any actual invocation. The original PhaseA clock is unchanged.

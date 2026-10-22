@@ -1,0 +1,31 @@
+{
+  "mission": "P16-M3-M5-RELIABILITY-GATED-RECOVERY-R6",
+  "registered_UTC": "2026-10-22T03:04:46.308373+00:00",
+  "phase_claim_sha256": "e1ce9b98b8953c8ccd566333ad2bf11dc828522688a8c8bcc165435a6d61a727",
+  "test_source_sha256": "8c24e5eb13567a8f2a570934739204a31954808d1ef603d519e2a7057ee26106",
+  "source_files": [
+    {
+      "path": "paper16_development_r6/native_process.py",
+      "sha256": "d664ec4779ddfda6cd73d598b5f882567baa01e918d0931c59799db3322afca5",
+      "bytes": 13030
+    },
+    {
+      "path": "paper16_development_r6/test_native_lifecycle.py",
+      "sha256": "39a7436ecab854bb58b9881b73a01e8c64698a81310d83199169965f79ba6926",
+      "bytes": 20012
+    }
+  ],
+  "scope": "AST extraction of selected pure functions and fake-kernel ownership orchestration; no native module import/WinAPI/Popen/actual lifecycle fixture",
+  "not_native_candidate_freeze_or_execution_registration": true,
+  "tests": [
+    "Strict recursive JSON identity and malformed native/expected certificates",
+    "Cancellation create/write/flush/fsync failure cannot skip cleanup",
+    "Silent-versus-explicit breakaway precreation choice",
+    "Original deadline and abandoned/unavailable ownership fail closed",
+    "Controlled in-memory publication-delay/cancel interleaving and late birth denial",
+    "Source-only single guarded Popen and candidate3 namespace checks"
+  ],
+  "actual_native_fixture_authorized_by_this_registration": false,
+  "protected_state_reads": 0,
+  "model_or_scientific_calls": 0
+}

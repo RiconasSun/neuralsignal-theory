@@ -1,0 +1,106 @@
+--- CANDIDATE_NATIVE_3_SOURCE/test_native_lifecycle.py
++++ paper16_development_r6/test_native_lifecycle.py
+@@ -1,4 +1,4 @@
+-"""Candidate3: claim-bound atomic ownership, strict terminals, bounded cleanup."""
++"""Candidate4: real stdlib PE, exact atomic ownership, bounded cleanup."""
+ import datetime
+ import hashlib
+ import json
+@@ -12,9 +12,11 @@
+ R = Path(__file__).resolve().parents[1]
+ P = R/'paper16_development_r6'
+ E = R/'ops/evidence/2026-10-21/p16-m3-m5-reliability-gated-recovery-r6'
+-W = P/'work/native_lifecycle_3'
+-REG = E/'NATIVE_LIFECYCLE_REGISTRATION_3.json'
++W = P/'work/native_lifecycle_4'
++REG = E/'NATIVE_LIFECYCLE_REGISTRATION_4.json'
+ MODULE = 'paper16_development_r6.test_native_lifecycle'
++FIXTURE_PYTHON=Path(r'C:\Users\85993\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\python.exe')
++FIXTURE_PYTHON_SHA256='28d2965d061656abbe3a46100bd3342d1152185289445d489782a21a8cfe9b57'
+ ROLES = {'launcher','broker','supervisor','worker_normal','worker_nonzero',
+          'worker_empty_zero','worker_tree','worker_grandchild',
+          'worker_loss_tree','worker_grandchild_loss'}
+@@ -39,6 +41,19 @@
+ 
+ def claim():
+     return J(W/'EXERCISE_CLAIM.json')
++
++
++def verify_fixture_runtime(reg):
++    expected={'path':str(FIXTURE_PYTHON),'sha256':FIXTURE_PYTHON_SHA256}
++    assert reg['fixture_runtime']==expected,'Exact prospective stdlib fixture PE binding'
++    assert reg['runtime_loader_evidence_sha256']==sha(E/'RUNTIME_LOADER_READONLY_RESULT_1.json')
++    loader=J(E/'RUNTIME_LOADER_READONLY_RESULT_1.json')
++    assert loader['sys_base_executable']['path']==expected['path'] and loader['sys_base_executable']['sha256']==expected['sha256']
++    assert tuple(sys.version_info[:3])==(3,11,15) and loader['version'].startswith('3.11.15 '),'Frozen stdlib fixture version'
++    assert sha(FIXTURE_PYTHON)==expected['sha256'],'Verified real PE bytes changed'
++    assert os.path.normcase(os.path.abspath(sys.executable))==os.path.normcase(str(FIXTURE_PYTHON)),'Venv redirector is not an owned fixture runtime'
++    assert sys.flags.no_site==1 and sys.flags.dont_write_bytecode==1,'Frozen -B -S stdlib-only fixture command'
++    assert os.path.normcase(native.own_identity()['image'])==os.path.normcase(str(FIXTURE_PYTHON)),'Driver/role image differs from the registered real PE'
+ 
+ 
+ def ownership(*,create=False):
+@@ -59,6 +74,7 @@
+ 
+ def guard(allow_unstarted=False):
+     reg=J(REG)
++    verify_fixture_runtime(reg)
+     assert reg['phase_claim_sha256']==sha(P/'PHASE_A_CLAIM.json')
+     phase=J(P/'PHASE_A_CLAIM.json')
+     assert phase['start_monotonic']<=time.monotonic()<phase['deadline_monotonic']
+@@ -74,7 +90,7 @@
+ 
+ 
+ def command(role,*args):
+-    return [sys.executable,'-B','-m',MODULE,role,*args]
++    return [str(FIXTURE_PYTHON),'-B','-S','-m',MODULE,role,*args]
+ 
+ 
+ def receipt(role):
+@@ -85,6 +101,7 @@
+         value={'role':role,'identity':native.own_identity(),
+                'exercise_claim_sha256':sha(W/'EXERCISE_CLAIM.json'),
+                'registration_sha256':sha(REG)}
++        assert os.path.normcase(value['identity']['image'])==os.path.normcase(str(FIXTURE_PYTHON))
+         once(W/('IDENTITY_'+role+'.json'),value)
+     return value
+ 
+@@ -102,6 +119,7 @@
+     """The only fixture Popen site; mutex covers birth through durable handoff."""
+     gate=ownership()
+     with gate:
++        assert cmd[:5]==[str(FIXTURE_PYTHON),'-B','-S','-m',MODULE],'Only exact registered real-PE fixture children'
+         assert not gate.cancelled(),'Cancellation prohibits every later birth'
+         assert not gate.uncertain(),'Uncertain ownership prohibits every later birth'
+         guard()
+@@ -111,6 +129,7 @@
+         try:
+             identity=native.handle_identity(process._handle,process.pid)
+             LOCAL_CHILDREN[process.pid]=(process,identity)
++            assert os.path.normcase(identity['image'])==os.path.normcase(str(FIXTURE_PYTHON)),'Immediate Popen image must equal the executing real PE'
+             if job is not None:
+                 assert isinstance(job_name,str) and job_name
+                 job.assign(process)
+@@ -304,7 +323,7 @@
+          'one_exercise':True,'synthetic_only':True,'retries':0,'start_monotonic':start,
+          'deadline_monotonic':deadline,'start_UTC':wall.isoformat(),
+          'deadline_UTC':(wall+datetime.timedelta(seconds=deadline-start)).isoformat()})
+-    result={'schema':'R6_NATIVE_LIFECYCLE_RESULT_V3','mission':reg['mission'],
++    result={'schema':'R6_NATIVE_LIFECYCLE_RESULT_V4','mission':reg['mission'],
+             'registration_sha256':sha(REG),'driver_context':native.current_job(),
+             'synthetic_only':True,'real_A_calls':0,'E_Final_access':False,
+             'OS_settings_modified':False,'scientific_stage_started':False,'host_capability_pass':False}
+@@ -382,11 +401,11 @@
+         result['files']=[{'path':f.relative_to(R).as_posix(),'sha256':sha(f),'bytes':f.stat().st_size}
+                          for f in sorted(W.iterdir()) if f.is_file()]
+         result['completed_UTC']=datetime.datetime.now(datetime.timezone.utc).isoformat()
+-        once(E/'NATIVE_LIFECYCLE_RESULT_3.json',result)
++        once(E/'NATIVE_LIFECYCLE_RESULT_4.json',result)
+     print(json.dumps({'host_capability_pass':result['host_capability_pass'],
+                       'mandatory_host_gate':result['mandatory_host_gate'],
+                       'fixture_error':None if error is None else type(error).__name__,
+-                      'result_sha256':sha(E/'NATIVE_LIFECYCLE_RESULT_3.json')},indent=2))
++                      'result_sha256':sha(E/'NATIVE_LIFECYCLE_RESULT_4.json')},indent=2))
+     return 0 if result['host_capability_pass'] else 19
+ 
+ 

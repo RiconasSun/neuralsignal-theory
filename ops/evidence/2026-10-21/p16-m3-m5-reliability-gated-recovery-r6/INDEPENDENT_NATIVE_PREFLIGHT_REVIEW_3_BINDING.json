@@ -1,0 +1,136 @@
+{
+  "schema": "R6_INDEPENDENT_NATIVE_PREFLIGHT_BINDING_V3",
+  "mission": "P16-M3-M5-RELIABILITY-GATED-RECOVERY-R6",
+  "reviewer": "/root/r4_interruption_review",
+  "recorded_UTC": "2026-10-22T03:13:33.190524+00:00",
+  "decision": "REJECTED_PREFLIGHT_RUNTIME_TOPOLOGY_DEFECT",
+  "open_P0": 0,
+  "open_P1": 1,
+  "review": {
+    "path": "ops/evidence/2026-10-21/p16-m3-m5-reliability-gated-recovery-r6/INDEPENDENT_NATIVE_PREFLIGHT_REVIEW_3.md",
+    "sha256": "5cad50f74ab70db16e4e8aa1aaa9c91e2852adbd98ca43784944a882fe0b5f86",
+    "bytes": 5704
+  },
+  "bound_files": [
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-reliability-gated-recovery-r6/NATIVE_LIFECYCLE_REGISTRATION_3.json",
+      "sha256": "6793de1186db4efdc6aaee6cd20458555d65dfd4b4bd3d2a693edb09044e203b",
+      "bytes": 4605
+    },
+    {
+      "path": "paper16_development_r6/native_process.py",
+      "sha256": "a90ac375cdfb7caae07aa322baa4877bd038164a5a7ba1dce0c8712650592899",
+      "bytes": 13822
+    },
+    {
+      "path": "paper16_development_r6/test_native_lifecycle.py",
+      "sha256": "a73d5db9dfcc8a9c3e6f5c84a623855948da30256fd8d67ceb5698efe0bbb8c3",
+      "bytes": 20403
+    },
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-reliability-gated-recovery-r6/PURE_NATIVE_REPAIR_TEST_RESULT_4.json",
+      "sha256": "d2be2ec2687de53eba0b172d63dd83881337b414b3519239e092ecd454bd0d07",
+      "bytes": 4297
+    },
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-reliability-gated-recovery-r6/HOST_AUDIT_NATIVE.json",
+      "sha256": "49f2c0b0bb9def3087fbe831b128f152c575b2e3d98b0429bc7d6b0fcb70b5ae",
+      "bytes": 21615
+    },
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-reliability-gated-recovery-r6/INHERITED_JOB_LIMITS_READONLY_1.json",
+      "sha256": "af97e228750f9d78fba79f9be733c4636c28d25f917f81d65e6363e9f3580209",
+      "bytes": 692
+    },
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-reliability-gated-recovery-r6/INDEPENDENT_NATIVE_PREFLIGHT_REVIEW_2.md",
+      "sha256": "1ec4ec38f033148d6eaa0579f43c6540c778159fa431509cdfbc700cdc5f34e7",
+      "bytes": 6803
+    },
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-reliability-gated-recovery-r6/INDEPENDENT_NATIVE_PREFLIGHT_REVIEW_2_BINDING.json",
+      "sha256": "a8991d2590927bcba52953bc0eb6c969a318c0c9581a15cebdfc40fac1928ceb",
+      "bytes": 4573
+    },
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-reliability-gated-recovery-r6/CANDIDATE_NATIVE_2_PRESERVATION.json",
+      "sha256": "4f7e0cd16449a3d249a79b47a8452195312846a4d6941823dfbc7f9d4fab56cb",
+      "bytes": 885
+    },
+    {
+      "path": "paper16_development_r6/PHASE_A_CLAIM.json",
+      "sha256": "e1ce9b98b8953c8ccd566333ad2bf11dc828522688a8c8bcc165435a6d61a727",
+      "bytes": 859
+    },
+    {
+      "path": "paper16_development_r6/RELIABILITY_REQUIREMENTS.json",
+      "sha256": "9d3ce2043b20da370d7c0defb494a8e4cae89d4859b72a312cbf7bc3ff5a403e",
+      "bytes": 1149
+    },
+    {
+      "path": "paper16_dev_r3/windows_job.py",
+      "sha256": "8fbe70bb6083177ea5a57b64b77ec7902e6735d2add2010206d2e364f43058af",
+      "bytes": 4433
+    },
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-reliability-gated-recovery-r6/RUNTIME_LOADER_READONLY_REGISTRATION_1.json",
+      "sha256": "6256e64c79acf3410a345808888dbb571d2869c4c7dfd7cee08906008edf4c75",
+      "bytes": 559
+    },
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-reliability-gated-recovery-r6/RUNTIME_LOADER_READONLY_RESULT_1.json",
+      "sha256": "3e83fd7c8207209255c25f03acd6da6fda95190a7ac83848400f40d217a02ecd",
+      "bytes": 1106
+    }
+  ],
+  "pure_AST_check": {
+    "actual_exit": 0,
+    "no_native_module_import": true,
+    "previous_type_counterexamples_rejected": true,
+    "valid_nested_completion_accepted": true,
+    "cancellation_OSError_still_calls_cleanup": true,
+    "silent_explicit_flag_predicates_pass": true,
+    "redirector_registry_counterexample": {
+      "CREATED_identity": {
+        "pid": 100,
+        "creation_FILETIME": 1000,
+        "image": "venv/python.exe"
+      },
+      "IDENTITY_identity": {
+        "pid": 101,
+        "creation_FILETIME": 1001,
+        "image": "base/python.exe"
+      },
+      "actual": "AssertionError",
+      "message": "Executing role lacks durable ownership handoff"
+    },
+    "WinAPI_calls": 0,
+    "Popen_calls": 0,
+    "private_state_reads": 0,
+    "model_calls": 0
+  },
+  "native_fixture_executed": false,
+  "candidate_output_and_result_absent": true,
+  "actual_native_exercise_consumed": false,
+  "observed_actual_host_capability_failure": false,
+  "actual_host_gate_accepted": false,
+  "phase_A_accepted": false,
+  "real_A_optimization_authorized": false,
+  "E_Final_access": false,
+  "OS_settings_modified": false,
+  "phase_A_clock_reset": false,
+  "earlier_candidate_P1_repairs_statically_accepted": 3,
+  "inspection_incidents": [
+    {
+      "kind": "Windows rg literal wildcard pathname syntax123",
+      "effect": "source discovery only; exact named metadata then read; no mutations"
+    },
+    {
+      "kind": "review3 writer precheck FileNotFoundError",
+      "actual_exit": 1,
+      "cause": "assumed candidate2 sourcecopy .py.txt but preservation manifest uses .py",
+      "effect": "failed before review/binding creation; reread exact preservation manifest and hashes; no frozen file changed"
+    }
+  ],
+  "next_action": "Preserve candidate3; freeze real-base-PE fixture runtime or complete redirector ownership model; independent review before actual exercise"
+}

@@ -1,0 +1,56 @@
+{
+  "schema": "R6_INDEPENDENT_REUSE_STATIC_REVIEW_BINDING_V1",
+  "mission": "P16-M3-M5-RELIABILITY-GATED-RECOVERY-R6",
+  "reviewer": "/root/r4_interruption_review",
+  "recorded_UTC": "2026-10-22T03:17:01.054630+00:00",
+  "decision": "REJECTED_STATIC_AUDIT_IMPLEMENTATION_DEFECTS",
+  "open_P0": 0,
+  "open_P1": 4,
+  "review": {
+    "path": "ops/evidence/2026-10-21/p16-m3-m5-reliability-gated-recovery-r6/INDEPENDENT_REUSE_STATIC_REVIEW_1.md",
+    "sha256": "d4ce2b90b5e27d30c02930183fc514c17a3628f41cfb9742edd745e02ddc1698",
+    "bytes": 7403
+  },
+  "bound_sources": [
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-reliability-gated-recovery-r6/PRIMARY_REUSE_AUDIT_R6.py",
+      "sha256": "471df00bd148f0665200e6fcb4167639984700973086a81d474f5fb3703fe4b7",
+      "bytes": 26162
+    },
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-reliability-gated-recovery-r6/INDEPENDENT_REUSE_AUDIT_R6.py",
+      "sha256": "159ebe9110f671d9068b13116c803c2e358164617fefc4e7cfc589da1875ef81",
+      "bytes": 43671
+    },
+    {
+      "path": "paper16_development_r6/audit_entry.py",
+      "sha256": "898d32306fdc013abd4195fb593f0828d1adfafce7fcdd7e74458f7ee0f5e647",
+      "bytes": 1158
+    }
+  ],
+  "phase_A_claim": {
+    "path": "paper16_development_r6/PHASE_A_CLAIM.json",
+    "sha256": "e1ce9b98b8953c8ccd566333ad2bf11dc828522688a8c8bcc165435a6d61a727",
+    "bytes": 859
+  },
+  "pure_AST_fake_check": {
+    "actual_exit": 0,
+    "primary_protected_identity_callback_before_missingfreeze": true,
+    "actual_private_reads": 0,
+    "both_exact_B0_length_predicates_accept216_duplicates": true,
+    "distinct_B0_pairs_in_witness": 1,
+    "auditor_imports": 0,
+    "model_constructor_calls": 0,
+    "WinAPI_or_Popen_calls": 0
+  },
+  "source_review_only": true,
+  "host_gate_accepted": false,
+  "saved_audit_execution_approved": false,
+  "Phase_A_approved": false,
+  "real_A_authorized": false,
+  "E_Final_access": false,
+  "historical_files_changed": 0,
+  "phase_A_clock_reset": false,
+  "public_transmission_authorized": false,
+  "next_action": "Preserve sources, prospectively repair all4P1, bind exact new source/runtime/public approval and independently re-review before actual saved-state audit"
+}

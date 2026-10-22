@@ -1,0 +1,25 @@
+{
+  "mission": "P16-M3-M5-RELIABILITY-GATED-RECOVERY-R6",
+  "UTC": "2026-10-22T03:14:28.897970+00:00",
+  "entry": "paper16_development_r6/audit_entry.py",
+  "sha256": "898d32306fdc013abd4195fb593f0828d1adfafce7fcdd7e74458f7ee0f5e647",
+  "syntax_valid": true,
+  "entry_or_auditor_executed": false,
+  "purpose": "-m ensures repository package visibility without sys.path/sys.modules workarounds; exact entry source required in prospective freeze",
+  "commands_not_executed": [
+    [
+      "paper16_m1/work/runtime/Scripts/python.exe",
+      "-B",
+      "-m",
+      "paper16_development_r6.audit_entry",
+      "primary"
+    ],
+    [
+      "paper16_m1/work/runtime/Scripts/python.exe",
+      "-B",
+      "-m",
+      "paper16_development_r6.audit_entry",
+      "independent"
+    ]
+  ]
+}

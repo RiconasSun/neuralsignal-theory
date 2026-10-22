@@ -1,0 +1,70 @@
+{
+  "schema": "R6_INDEPENDENT_NATIVE_PREFLIGHT_BINDING_V1",
+  "mission": "P16-M3-M5-RELIABILITY-GATED-RECOVERY-R6",
+  "reviewer": "/root/r4_interruption_review",
+  "recorded_UTC": "2026-10-22T02:53:34.871575+00:00",
+  "decision": "REJECTED_PREFLIGHT_IMPLEMENTATION_DEFECTS",
+  "open_P0": 0,
+  "open_P1": 3,
+  "finding_ids": [
+    "P1-01",
+    "P1-02",
+    "P1-03"
+  ],
+  "review": {
+    "path": "ops/evidence/2026-10-21/p16-m3-m5-reliability-gated-recovery-r6/INDEPENDENT_NATIVE_PREFLIGHT_REVIEW_1.md",
+    "sha256": "987e14bab8e47857fa9f7e082d21780c3b41102040b39aa88ebd32f5444d7923",
+    "bytes": 7680
+  },
+  "bound_files": [
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-reliability-gated-recovery-r6/NATIVE_LIFECYCLE_REGISTRATION_1.json",
+      "sha256": "67424add95573b3da8a5a3b6347538560707be2f0555fe663cb6f28b171a5265",
+      "bytes": 2795
+    },
+    {
+      "path": "paper16_development_r6/native_process.py",
+      "sha256": "0033df17f883d09c2101e7a12074f63654488d62e75d9f7959f6a4ab4a9d6ba9",
+      "bytes": 3882
+    },
+    {
+      "path": "paper16_development_r6/test_native_lifecycle.py",
+      "sha256": "3ae9c67d69c5be99531b46f5314019597d9f9ab2dd45dadcfa41fadeeee4787c",
+      "bytes": 10448
+    },
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-reliability-gated-recovery-r6/HOST_AUDIT_NATIVE.json",
+      "sha256": "49f2c0b0bb9def3087fbe831b128f152c575b2e3d98b0429bc7d6b0fcb70b5ae",
+      "bytes": 21615
+    },
+    {
+      "path": "paper16_development_r6/PHASE_A_CLAIM.json",
+      "sha256": "e1ce9b98b8953c8ccd566333ad2bf11dc828522688a8c8bcc165435a6d61a727",
+      "bytes": 859
+    },
+    {
+      "path": "paper16_dev_r3/windows_job.py",
+      "sha256": "8fbe70bb6083177ea5a57b64b77ec7902e6735d2add2010206d2e364f43058af",
+      "bytes": 4433
+    },
+    {
+      "path": "paper16_development_r6/RELIABILITY_REQUIREMENTS.json",
+      "sha256": "9d3ce2043b20da370d7c0defb494a8e4cae89d4859b72a312cbf7bc3ff5a403e",
+      "bytes": 1149
+    }
+  ],
+  "static_metadata_and_AST_check_actual_exit": 0,
+  "candidate_fixture_and_result_absent": true,
+  "native_fixture_executed": false,
+  "observed_actual_host_capability_failure": false,
+  "host_reliability_gate_accepted": false,
+  "phase_A_accepted": false,
+  "private_state_reads": 0,
+  "synthetic_runs": 0,
+  "real_model_or_derivative_calls": 0,
+  "E_Final_access": false,
+  "OS_setting_changes": false,
+  "historical_files_changed": 0,
+  "phase_A_clock_reset": false,
+  "required_next_action": "Preserve candidate1, repair pure implementation deficiencies, bind new source/registration then independent review before actual native exercise; actual host-capability failure must STOP with no fallback/retry"
+}

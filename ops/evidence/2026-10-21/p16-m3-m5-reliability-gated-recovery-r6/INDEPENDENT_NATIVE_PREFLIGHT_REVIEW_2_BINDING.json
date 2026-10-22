@@ -1,0 +1,146 @@
+{
+  "schema": "R6_INDEPENDENT_NATIVE_PREFLIGHT_BINDING_V2",
+  "mission": "P16-M3-M5-RELIABILITY-GATED-RECOVERY-R6",
+  "reviewer": "/root/r4_interruption_review",
+  "recorded_UTC": "2026-10-22T02:59:10.696838+00:00",
+  "decision": "REJECTED_PREFLIGHT_IMPLEMENTATION_DEFECTS",
+  "open_P0": 0,
+  "open_P1": 3,
+  "review": {
+    "path": "ops/evidence/2026-10-21/p16-m3-m5-reliability-gated-recovery-r6/INDEPENDENT_NATIVE_PREFLIGHT_REVIEW_2.md",
+    "sha256": "1ec4ec38f033148d6eaa0579f43c6540c778159fa431509cdfbc700cdc5f34e7",
+    "bytes": 6803
+  },
+  "bound_files": [
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-reliability-gated-recovery-r6/NATIVE_LIFECYCLE_REGISTRATION_2.json",
+      "sha256": "e912541496e2718cd57855d9f1c53cf576abbbcdfbdc0cad7e986daa992b74f6",
+      "bytes": 3889
+    },
+    {
+      "path": "paper16_development_r6/native_process.py",
+      "sha256": "fedca80618b6bf05f5b158d566e79e5a4b0e8c1ef49bc78360d6948a80caadef",
+      "bytes": 8313
+    },
+    {
+      "path": "paper16_development_r6/test_native_lifecycle.py",
+      "sha256": "11c06153e60a05bb2d2b37c026652443d541f95d4e155cfc53ad9b9adfd15018",
+      "bytes": 16165
+    },
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-reliability-gated-recovery-r6/CANDIDATE_NATIVE_1_PRESERVATION.json",
+      "sha256": "1f1e69f5015de47e2f60efe149123d907a2eea3e34fc31865482222a6c2361f0",
+      "bytes": 973
+    },
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-reliability-gated-recovery-r6/INDEPENDENT_NATIVE_PREFLIGHT_REVIEW_1.md",
+      "sha256": "987e14bab8e47857fa9f7e082d21780c3b41102040b39aa88ebd32f5444d7923",
+      "bytes": 7680
+    },
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-reliability-gated-recovery-r6/INDEPENDENT_NATIVE_PREFLIGHT_REVIEW_1_BINDING.json",
+      "sha256": "95babd8326c5e3de4c808980b40448e1cb08b77062f28c2d6ab72e70a8ccc9ca",
+      "bytes": 2682
+    },
+    {
+      "path": "paper16_development_r6/PHASE_A_CLAIM.json",
+      "sha256": "e1ce9b98b8953c8ccd566333ad2bf11dc828522688a8c8bcc165435a6d61a727",
+      "bytes": 859
+    },
+    {
+      "path": "paper16_development_r6/RELIABILITY_REQUIREMENTS.json",
+      "sha256": "9d3ce2043b20da370d7c0defb494a8e4cae89d4859b72a312cbf7bc3ff5a403e",
+      "bytes": 1149
+    },
+    {
+      "path": "paper16_dev_r3/windows_job.py",
+      "sha256": "8fbe70bb6083177ea5a57b64b77ec7902e6735d2add2010206d2e364f43058af",
+      "bytes": 4433
+    }
+  ],
+  "pure_predicate_check": {
+    "actual_exit": 0,
+    "method": "AST extract only exact classify_terminal FunctionDef into clean namespace; no imports/WinAPI/native module execution",
+    "outcome": {
+      "returncode": 0,
+      "killed_at_deadline": false,
+      "native_job_tree_enforced": true,
+      "assigned_before_resume": true
+    },
+    "cases": [
+      {
+        "completion": {
+          "complete": 1
+        },
+        "expected": {
+          "complete": true
+        },
+        "actual_decision": "ACCEPTED_NATIVE_COMPLETION",
+        "strict_identity_should_accept": false
+      },
+      {
+        "completion": {
+          "n": 1.0
+        },
+        "expected": {
+          "n": 1
+        },
+        "actual_decision": "ACCEPTED_NATIVE_COMPLETION",
+        "strict_identity_should_accept": false
+      },
+      {
+        "completion": {
+          "state": [
+            0
+          ]
+        },
+        "expected": {
+          "state": [
+            false
+          ]
+        },
+        "actual_decision": "ACCEPTED_NATIVE_COMPLETION",
+        "strict_identity_should_accept": false
+      },
+      {
+        "completion": {
+          "claim": "frozen"
+        },
+        "expected": {
+          "claim": "frozen"
+        },
+        "actual_decision": "ACCEPTED_NATIVE_COMPLETION",
+        "strict_identity_should_accept": true
+      },
+      {
+        "completion": null,
+        "expected": {
+          "claim": "frozen"
+        },
+        "actual_decision": "STOP",
+        "strict_identity_should_accept": false
+      },
+      {
+        "completion": {
+          "claim": "altered"
+        },
+        "expected": {
+          "claim": "frozen"
+        },
+        "actual_decision": "STOP",
+        "strict_identity_should_accept": false
+      }
+    ]
+  },
+  "native_fixture_executed": false,
+  "candidate_output_and_result_absent": true,
+  "observed_actual_host_failure": false,
+  "private_state_reads": 0,
+  "real_model_or_derivative_calls": 0,
+  "E_Final_access": false,
+  "phase_A_accepted": false,
+  "host_gate_accepted": false,
+  "OS_settings_modified": false,
+  "phase_A_clock_reset": false,
+  "actual_native_exercise_consumed": false
+}

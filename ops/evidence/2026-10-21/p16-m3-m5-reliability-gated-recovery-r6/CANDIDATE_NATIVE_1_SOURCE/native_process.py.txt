@@ -1,0 +1,101 @@
+"""Native R6 process primitives; no data/model access or OS configuration writes."""
+import ctypes as c
+from ctypes import wintypes as w
+import os
+from pathlib import Path
+import subprocess
+import time
+
+from paper16_dev_r3.windows_job import Job, Extended, k, checked, resume_suspended, require_job
+
+CREATE_BREAKAWAY_FROM_JOB = 0x01000000
+DETACHED_PROCESS = 0x00000008
+CREATE_NEW_PROCESS_GROUP = 0x00000200
+
+k.QueryInformationJobObject.argtypes = [w.HANDLE, c.c_int, c.c_void_p, w.DWORD, c.POINTER(w.DWORD)]
+k.QueryInformationJobObject.restype = w.BOOL
+k.OpenProcess.argtypes = [w.DWORD, w.BOOL, w.DWORD]
+k.OpenProcess.restype = w.HANDLE
+k.WaitForSingleObject.argtypes = [w.HANDLE, w.DWORD]
+k.WaitForSingleObject.restype = w.DWORD
+k.GetExitCodeProcess.argtypes = [w.HANDLE, c.POINTER(w.DWORD)]
+k.GetExitCodeProcess.restype = w.BOOL
+
+
+def current_job():
+    member = w.BOOL()
+    checked(k.IsProcessInJob(k.GetCurrentProcess(), None, c.byref(member)))
+    result = {'in_job': bool(member.value), 'limit_flags': None}
+    if member.value:
+        limits = Extended()
+        checked(k.QueryInformationJobObject(None, 9, c.byref(limits), c.sizeof(limits), None))
+        result['limit_flags'] = int(limits.basic.flags)
+        result['explicit_breakaway_allowed'] = bool(limits.basic.flags & 0x800)
+        result['silent_breakaway_allowed'] = bool(limits.basic.flags & 0x1000)
+        result['kill_on_job_close'] = bool(limits.basic.flags & 0x2000)
+    return result
+
+
+def launch_detached(command, cwd, stdout, *, breakaway):
+    """No fallbacks: failed breakaway never retries inside the inherited Job."""
+    flags = DETACHED_PROCESS | CREATE_NEW_PROCESS_GROUP
+    if breakaway:
+        flags |= CREATE_BREAKAWAY_FROM_JOB
+    return subprocess.Popen(command, cwd=cwd, stdin=subprocess.DEVNULL, stdout=stdout,
+                            stderr=subprocess.STDOUT, close_fds=True, creationflags=flags)
+
+
+def process_alive(pid):
+    handle = k.OpenProcess(0x00100000, False, pid)
+    if not handle:
+        error = c.get_last_error()
+        if error == 87:
+            return False
+        raise c.WinError(error)
+    try:
+        state = k.WaitForSingleObject(handle, 0)
+        if state == 0:
+            return False
+        if state != 258:
+            raise RuntimeError('Native process wait status unavailable')
+        return True
+    finally:
+        k.CloseHandle(handle)
+
+
+def wait_not_alive(pid, timeout):
+    end = time.monotonic() + timeout
+    while process_alive(pid):
+        if time.monotonic() >= end:
+            raise TimeoutError('Owned synthetic process still active')
+        time.sleep(0.02)
+
+
+def supervise(command, cwd, log_path, job_name, timeout):
+    """Actual Job implementation used by the fixture and proposed R6 worker."""
+    deadline = time.monotonic() + timeout
+    killed = False
+    with Path(log_path).open('xb') as log:
+        with Job(job_name) as job:
+            child_env = os.environ.copy()
+            child_env['P16_R6_SYNTHETIC_JOB'] = job_name
+            child = subprocess.Popen(command, cwd=cwd, stdout=log, stderr=subprocess.STDOUT,
+                                     creationflags=0x4, env=child_env)
+            try:
+                job.assign(child)
+                resume_suspended(child)
+                while child.poll() is None:
+                    if time.monotonic() >= deadline:
+                        job.terminate()
+                        killed = True
+                        break
+                    time.sleep(0.01)
+                code = child.wait()
+            except BaseException:
+                if child.poll() is None:
+                    child.kill()
+                child.wait()
+                raise
+    return {'returncode': code, 'killed_at_deadline': killed,
+            'native_job_tree_enforced': True, 'assigned_before_resume': True,
+            'job_name': job_name, 'child_pid': child.pid}

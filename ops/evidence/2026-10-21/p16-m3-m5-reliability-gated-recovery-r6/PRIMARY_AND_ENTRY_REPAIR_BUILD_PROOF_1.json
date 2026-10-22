@@ -1,0 +1,25 @@
+{
+  "mission": "P16-M3-M5-RELIABILITY-GATED-RECOVERY-R6",
+  "UTC": "2026-10-22T03:18:04.152591+00:00",
+  "sources": [
+    {
+      "path": "ops/evidence/2026-10-21/p16-m3-m5-reliability-gated-recovery-r6/PRIMARY_REUSE_AUDIT_R6.py",
+      "sha256": "a9056b9dc2c4d423f387b6bfcee15e2e79ad11ca3a6cc4072bdb72d9e8e53410",
+      "bytes": 28708
+    },
+    {
+      "path": "paper16_development_r6/audit_entry.py",
+      "sha256": "2fed7ff8b4c48341fcdc06dd50ea31ac4ed634cab5e2ada68ee4fa35f76e816b",
+      "bytes": 2679
+    }
+  ],
+  "AST_syntax_valid": true,
+  "actual_audits_or_entry_executed": false,
+  "private_reads": 0,
+  "model_calls": 0,
+  "repairs": [
+    "Public-only checked load/hash paths before unique PRIVATE_ALLOWED transition",
+    "Canonical216 unique B0 identities/path/hash from frozen public source+original manifest before protected inventory and at pass end",
+    "Entry validates exact independent freeze approval and selected auditor bytes before executing verified bytes"
+  ]
+}

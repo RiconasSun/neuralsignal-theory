@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r6\reproduce_saved.py", line 89, in <module>
+    if __name__=='__main__':print(json.dumps(main(),indent=2))
+                                             ^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r6\reproduce_saved.py", line 32, in main
+    C(H(R/row['path'])==row['sha256'],'Historical public source changed: '+row['path'])
+      ^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r6\reproduce_saved.py", line 21, in H
+    with public(path).open('rb') as f:return hashlib.file_digest(f,'sha256').hexdigest()
+         ^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r6\reproduce_saved.py", line 17, in public
+    C('work' not in name.parts and 'LOCAL_ONLY' not in name.parts and path.suffix.lower() not in ['.npz','.npy','.h5','.hdf5','.nwb'],'Saved verifier denies private data: '+str(name))
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r6\reproduce_saved.py", line 13, in C
+    if not ok:raise AssertionError(message)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Saved verifier denies private data: paper16_m1\metadata\FLASH_NATIVE_760345702.npz

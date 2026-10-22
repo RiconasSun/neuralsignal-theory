@@ -1,0 +1,583 @@
+--- CANDIDATE_NATIVE_2_SOURCE/native_process.py
++++ paper16_development_r6/native_process.py
+@@ -2,6 +2,7 @@
+ import ctypes as c
+ from ctypes import wintypes as w
+ import os
++import math
+ from pathlib import Path
+ import subprocess
+ import time
+@@ -27,6 +28,15 @@
+ k.QueryFullProcessImageNameW.restype = w.BOOL
+ k.TerminateProcess.argtypes = [w.HANDLE, w.UINT]
+ k.TerminateProcess.restype = w.BOOL
++for name,args,result in [
++    ('CreateMutexW',[c.c_void_p,w.BOOL,w.LPCWSTR],w.HANDLE),
++    ('OpenMutexW',[w.DWORD,w.BOOL,w.LPCWSTR],w.HANDLE),
++    ('ReleaseMutex',[w.HANDLE],w.BOOL),
++    ('CreateEventW',[c.c_void_p,w.BOOL,w.BOOL,w.LPCWSTR],w.HANDLE),
++    ('OpenEventW',[w.DWORD,w.BOOL,w.LPCWSTR],w.HANDLE),
++    ('SetEvent',[w.HANDLE],w.BOOL),
++]:
++    fn=getattr(k,name);fn.argtypes=args;fn.restype=result
+ 
+ 
+ def current_job():
+@@ -43,13 +53,94 @@
+     return result
+ 
+ 
+-def launch_detached(command, cwd, stdout, *, breakaway):
+-    """No fallbacks: failed breakaway never retries inside the inherited Job."""
+-    flags = DETACHED_PROCESS | CREATE_NEW_PROCESS_GROUP
+-    if breakaway:
+-        flags |= CREATE_BREAKAWAY_FROM_JOB
+-    return subprocess.Popen(command, cwd=cwd, stdin=subprocess.DEVNULL, stdout=stdout,
+-                            stderr=subprocess.STDOUT, close_fds=True, creationflags=flags)
++def detached_flags(context):
++    """Select one API path before creation; never retry a denied launch."""
++    if type(context.get('in_job')) is not bool:
++        raise RuntimeError('Unknown inherited Job membership')
++    flags=DETACHED_PROCESS|CREATE_NEW_PROCESS_GROUP
++    if not context['in_job']:
++        return flags
++    limits=context.get('limit_flags')
++    if type(limits) is not int or limits<0:
++        raise RuntimeError('Unknown inherited Job flags')
++    if limits&0x1000:  # SILENT_BREAKAWAY_OK: explicit flag would be incorrect.
++        return flags
++    if limits&0x800:
++        return flags|CREATE_BREAKAWAY_FROM_JOB
++    raise RuntimeError('Inherited Job permits neither silent nor explicit breakaway')
++
++
++def bounded_wait(deadline,maximum):
++    seconds=min(maximum,deadline-time.monotonic())
++    if seconds<=0:
++        raise TimeoutError('Original ownership deadline expired')
++    return seconds
++
++
++class OwnershipGate:
++    """Claim-bound mutex and irreversible manual-reset cancellation Event.
++
++    Every birth, publication, assignment and resume holds this mutex. Cleanup
++    first sets the Event under the same mutex, so no later birth may begin.
++    Abandoned ownership is uncertain and never a cleanup or capability PASS.
++    """
++    def __init__(self,name,deadline,*,create=False):
++        self.deadline=deadline;self.mutex=None;self.cancel_event=None;self.uncertainty_event=None;self.acquired=False
++        try:
++            if create:
++                c.set_last_error(0);self.mutex=checked(k.CreateMutexW(None,False,name+'_MUTEX'))
++                if c.get_last_error()==183:raise RuntimeError('Ownership mutex already exists')
++                c.set_last_error(0);self.cancel_event=checked(k.CreateEventW(None,True,False,name+'_CANCEL'))
++                if c.get_last_error()==183:raise RuntimeError('Ownership Event already exists')
++                c.set_last_error(0);self.uncertainty_event=checked(k.CreateEventW(None,True,False,name+'_UNCERTAIN'))
++                if c.get_last_error()==183:raise RuntimeError('Ownership uncertainty Event already exists')
++            else:
++                self.mutex=checked(k.OpenMutexW(0x00100001,False,name+'_MUTEX'))
++                self.cancel_event=checked(k.OpenEventW(0x00100002,False,name+'_CANCEL'))
++                self.uncertainty_event=checked(k.OpenEventW(0x00100002,False,name+'_UNCERTAIN'))
++        except BaseException:
++            self.close();raise
++
++    def __enter__(self):
++        state=k.WaitForSingleObject(self.mutex,int(bounded_wait(self.deadline,120.)*1000))
++        if state==128:
++            # WAIT_ABANDONED grants the lock, but cannot prove creator quiescence.
++            self.acquired=True
++            try:self.mark_uncertain()
++            finally:
++                checked(k.ReleaseMutex(self.mutex));self.acquired=False
++            raise RuntimeError('Abandoned ownership mutex; all-owned cleanup is unverified')
++        if state!=0:
++            self.mark_uncertain()
++            raise RuntimeError('Ownership mutex unavailable before original deadline')
++        self.acquired=True;return self
++
++    def __exit__(self,*args):
++        if self.acquired:
++            self.acquired=False;checked(k.ReleaseMutex(self.mutex))
++
++    def cancelled(self):
++        state=k.WaitForSingleObject(self.cancel_event,0)
++        if state not in [0,258]:raise RuntimeError('Cancellation Event state unavailable')
++        return state==0
++
++    def set_cancel(self):
++        checked(k.SetEvent(self.cancel_event))
++
++    def mark_uncertain(self):
++        # Sticky across roles: releasing an abandoned mutex cannot erase doubt.
++        try:checked(k.SetEvent(self.uncertainty_event))
++        finally:self.set_cancel()
++
++    def uncertain(self):
++        state=k.WaitForSingleObject(self.uncertainty_event,0)
++        if state not in [0,258]:raise RuntimeError('Ownership uncertainty Event state unavailable')
++        return state==0
++
++    def close(self):
++        for name in ['uncertainty_event','cancel_event','mutex']:
++            handle=getattr(self,name,None)
++            if handle:k.CloseHandle(handle);setattr(self,name,None)
+ 
+ 
+ def handle_identity(handle, pid):
+@@ -146,6 +237,34 @@
+         return None
+ 
+ 
++def valid_json(value):
++    """Exact JSON types; Python bool/int coercion is never certificate identity."""
++    if value is None or type(value) in [str,bool,int]:return True
++    if type(value) is float:return math.isfinite(value)
++    if type(value) is list:return all(valid_json(item) for item in value)
++    if type(value) is dict:return all(type(key) is str and valid_json(item) for key,item in value.items())
++    return False
++
++
++def exact_json(left,right):
++    if not valid_json(left) or not valid_json(right) or type(left) is not type(right):return False
++    if type(left) is dict:return left.keys()==right.keys() and all(exact_json(left[key],right[key]) for key in left)
++    if type(left) is list:return len(left)==len(right) and all(exact_json(a,b) for a,b in zip(left,right))
++    return left==right
++
++
++def finalize_owned(cancel_action,cleanup_action):
++    """Pure orchestration: disk failure cannot bypass handle-bound cleanup."""
++    failures=[];cleanup_result=None
++    try:
++        try:cancel_action()
++        except BaseException as exc:failures.append({'phase':'cancellation','type':type(exc).__name__,'message':str(exc)})
++    finally:
++        try:cleanup_result=cleanup_action()
++        except BaseException as exc:failures.append({'phase':'cleanup','type':type(exc).__name__,'message':str(exc)})
++    return {'failures':failures,'cleanup':cleanup_result,'all_finalization_actions_succeeded':not failures}
++
++
+ def classify_terminal(outcome, completion, expected):
+     """Native integrity only: caller must provide its exact frozen completion.
+ 
+@@ -153,7 +272,7 @@
+     Missing/malformed/altered completion is fail closed even after native exit0.
+     """
+     reason = None
+-    if not isinstance(outcome, dict) or type(outcome.get('returncode')) is not int:
++    if type(outcome) is not dict or not valid_json(outcome) or type(outcome.get('returncode')) is not int:
+         reason = 'MALFORMED_NATIVE_OUTCOME'
+     elif outcome['returncode'] != 0:
+         reason = 'NONZERO_NATIVE_EXIT'
+@@ -161,42 +280,41 @@
+         reason = 'MISSING_NATIVE_CONTAINMENT'
+     elif outcome.get('killed_at_deadline') is not False:
+         reason = 'DEADLINE_OR_UNKNOWN_TERMINATION'
+-    elif not isinstance(expected, dict) or not expected:
++    elif type(expected) is not dict or not expected or not valid_json(expected):
+         reason = 'MISSING_FROZEN_EXPECTATION'
+-    elif not isinstance(completion, dict) or completion != expected:
++    elif type(completion) is not dict or not exact_json(completion,expected):
+         reason = 'MISSING_MALFORMED_OR_IDENTITY_MISMATCHED_COMPLETION'
+     return {'decision': 'STOP' if reason else 'ACCEPTED_NATIVE_COMPLETION',
+             'reason': reason, 'native_completion_accepted': reason is None,
+             'scientific_or_M4_PASS_implied': False}
+ 
+ 
+-def supervise(command, cwd, log_path, job_name, timeout, *, total_deadline, guard):
++def supervise(command, cwd, log_path, job_name, timeout, *, total_deadline, guard,spawn,ownership):
+     """Actual Job implementation used by the fixture and proposed R6 worker."""
+     guard()
+-    deadline = min(time.monotonic() + timeout, total_deadline)
++    deadline = min(time.monotonic() + timeout, total_deadline-5)
+     killed = False
+     with Path(log_path).open('xb') as log:
+         with Job(job_name) as job:
+             child_env = os.environ.copy()
+             child_env['P16_R6_SYNTHETIC_JOB'] = job_name
+-            child = subprocess.Popen(command, cwd=cwd, stdout=log, stderr=subprocess.STDOUT,
+-                                     creationflags=0x4, env=child_env)
++            child = spawn(command,cwd,log,env=child_env,job=job,job_name=job_name)
+             try:
+-                job.assign(child)
+-                resume_suspended(child)
+                 while child.poll() is None:
+                     guard()
+                     if time.monotonic() >= deadline:
+-                        job.terminate()
++                        with ownership:job.terminate()
+                         killed = True
+                         break
+                     time.sleep(0.01)
+-                code = child.wait(timeout=max(.1, deadline-time.monotonic()))
++                code = child.wait(timeout=bounded_wait(total_deadline,3.))
+             except BaseException:
+-                job.terminate()
+-                if child.poll() is None:
+-                    child.kill()
+-                child.wait(timeout=max(.1, min(3., total_deadline-time.monotonic())))
++                with ownership:
++                    ownership.set_cancel()
++                    try:job.terminate()
++                    finally:
++                        if child.poll() is None:child.kill()
++                        child.wait(timeout=bounded_wait(total_deadline,3.))
+                 raise
+     return {'returncode': code, 'killed_at_deadline': killed,
+             'native_job_tree_enforced': True, 'assigned_before_resume': True,
+--- CANDIDATE_NATIVE_2_SOURCE/test_native_lifecycle.py
++++ paper16_development_r6/test_native_lifecycle.py
+@@ -1,4 +1,4 @@
+-"""Candidate2: strict native terminals, one absolute clock, handle-bound cleanup."""
++"""Candidate3: claim-bound atomic ownership, strict terminals, bounded cleanup."""
+ import datetime
+ import hashlib
+ import json
+@@ -12,12 +12,14 @@
+ R = Path(__file__).resolve().parents[1]
+ P = R/'paper16_development_r6'
+ E = R/'ops/evidence/2026-10-21/p16-m3-m5-reliability-gated-recovery-r6'
+-W = P/'work/native_lifecycle_2'
+-REG = E/'NATIVE_LIFECYCLE_REGISTRATION_2.json'
++W = P/'work/native_lifecycle_3'
++REG = E/'NATIVE_LIFECYCLE_REGISTRATION_3.json'
+ MODULE = 'paper16_development_r6.test_native_lifecycle'
+ ROLES = {'launcher','broker','supervisor','worker_normal','worker_nonzero',
+          'worker_empty_zero','worker_tree','worker_grandchild',
+          'worker_loss_tree','worker_grandchild_loss'}
++OWNERSHIP=None
++LOCAL_CHILDREN={}
+ 
+ 
+ def sha(path):
+@@ -37,6 +39,16 @@
+ 
+ def claim():
+     return J(W/'EXERCISE_CLAIM.json')
++
++
++def ownership(*,create=False):
++    global OWNERSHIP
++    if OWNERSHIP is None:
++        OWNERSHIP=native.OwnershipGate('Local\\P16_R6_OWNERSHIP_'+sha(W/'EXERCISE_CLAIM.json'),
++                                      claim()['deadline_monotonic'],create=create)
++    elif create:
++        raise RuntimeError('Ownership gate cannot be recreated')
++    return OWNERSHIP
+ 
+ 
+ def remaining(*,cleanup=False):
+@@ -55,6 +67,8 @@
+         assert sha(R/row['path'])==row['sha256']
+     if not allow_unstarted:
+         assert remaining()>0,'Original fixture deadline; no extension'
++        assert not ownership().cancelled(),'Kernel ownership cancellation; no further work'
++        assert not ownership().uncertain(),'Prior ownership uncertainty cannot be cleared'
+         assert not (W/'CANCELLED.json').exists(),'Owned fixture cancelled; no further launch'
+     return reg
+ 
+@@ -65,26 +79,52 @@
+ 
+ def receipt(role):
+     assert role in ROLES
+-    guard()
+-    value={'role':role,'identity':native.own_identity(),
+-           'exercise_claim_sha256':sha(W/'EXERCISE_CLAIM.json'),
+-           'registration_sha256':sha(REG)}
+-    once(W/('IDENTITY_'+role+'.json'),value)
+-    return value
+-
+-
+-def created(role,process):
+-    """Publish the actual Popen handle identity before relinquishing ownership."""
+-    try:
+-        value={'role':role,'identity':native.handle_identity(process._handle,process.pid),
++    with ownership() as gate:
++        assert not gate.cancelled()
++        guard()
++        value={'role':role,'identity':native.own_identity(),
+                'exercise_claim_sha256':sha(W/'EXERCISE_CLAIM.json'),
+                'registration_sha256':sha(REG)}
+-        once(W/('CREATED_'+role+'_'+str(process.pid)+'.json'),value)
+-    except BaseException:
+-        if process.poll() is None:
+-            process.kill()
+-        process.wait(timeout=max(.1,min(2.,remaining(cleanup=True))))
+-        raise
++        once(W/('IDENTITY_'+role+'.json'),value)
++    return value
++
++
++def created(role,process,identity,job_name):
++    """Called only under the ownership mutex while the child is suspended."""
++    assert role in ROLES
++    value={'role':role,'identity':identity,'exercise_claim_sha256':sha(W/'EXERCISE_CLAIM.json'),
++           'registration_sha256':sha(REG),'created_suspended':True,
++           'durable_registration_before_resume':True,'assigned_job_before_resume':job_name}
++    once(W/('CREATED_'+role+'_'+str(process.pid)+'.json'),value)
++
++
++def spawn_owned(role,cmd,cwd,stdout,*,detached=False,env=None,job=None,job_name=None):
++    """The only fixture Popen site; mutex covers birth through durable handoff."""
++    gate=ownership()
++    with gate:
++        assert not gate.cancelled(),'Cancellation prohibits every later birth'
++        assert not gate.uncertain(),'Uncertain ownership prohibits every later birth'
++        guard()
++        flags=0x4|(native.detached_flags(native.current_job()) if detached else 0)
++        process=subprocess.Popen(cmd,cwd=cwd,stdin=subprocess.DEVNULL,stdout=stdout,
++                                 stderr=subprocess.STDOUT,env=env,close_fds=True,creationflags=flags)
++        try:
++            identity=native.handle_identity(process._handle,process.pid)
++            LOCAL_CHILDREN[process.pid]=(process,identity)
++            if job is not None:
++                assert isinstance(job_name,str) and job_name
++                job.assign(process)
++            created(role,process,identity,job_name)
++            # No child instruction or further spawn precedes stable publication.
++            native.resume_suspended(process)
++            return process
++        except BaseException:
++            try:gate.set_cancel()
++            finally:
++                try:
++                    if process.poll() is None:process.kill()
++                finally:process.wait(timeout=native.bounded_wait(claim()['deadline_monotonic'],3.))
++            raise
+ 
+ 
+ def wait_file(path,seconds=15):
+@@ -101,34 +141,59 @@
+ 
+ 
+ def cancel(reason):
+-    try:
+-        once(W/'CANCELLED.json',{'reason':reason,'no_more_launches':True})
+-    except FileExistsError:
+-        pass
++    with ownership() as gate:
++        # Kernel cancellation is authoritative even if marker IO/fsync fails.
++        gate.set_cancel()
++        try:
++            once(W/'CANCELLED.json',{'reason':reason,'no_more_launches':True,
++                 'exercise_claim_sha256':sha(W/'EXERCISE_CLAIM.json')})
++        except FileExistsError:
++            marker=J(W/'CANCELLED.json')
++            assert marker['no_more_launches'] is True and marker['exercise_claim_sha256']==sha(W/'EXERCISE_CLAIM.json')
++        if gate.uncertain():raise RuntimeError('Sticky ownership uncertainty; cancellation cannot clear it')
+ 
+ 
+ def cleanup():
+-    """Only verified own handles can be terminated; never use PID taskkill."""
+-    results={}
+-    records=sorted(set(W.glob('IDENTITY_*.json'))|set(W.glob('CREATED_*.json')))
+-    for path in records:
+-        try:
++    """One locked quiescent registry, not a timed pair of published snapshots."""
++    results={};identities={}
++    with ownership() as gate:
++        gate.set_cancel()  # Same mutex as every spawn: no in-flight or late birth.
++        records=sorted(W.glob('CREATED_*.json'))
++        for path in records:
+             row=J(path)
+             assert row['role'] in ROLES and row['exercise_claim_sha256']==sha(W/'EXERCISE_CLAIM.json')
+             assert row['registration_sha256']==sha(REG)
+             identity=row['identity']
++            assert row['created_suspended'] is True and row['durable_registration_before_resume'] is True
++            key=(identity['pid'],identity['creation_FILETIME'])
++            assert key not in identities or identities[key]==identity
++            identities[key]=identity
++        for path in W.glob('IDENTITY_*.json'):
++            row=J(path);identity=row['identity'];key=(identity['pid'],identity['creation_FILETIME'])
++            assert row['exercise_claim_sha256']==sha(W/'EXERCISE_CLAIM.json') and row['registration_sha256']==sha(REG)
++            assert key in identities and identities[key]==identity,'Executing role lacks durable ownership handoff'
++        for process,identity in LOCAL_CHILDREN.values():
++            key=(identity['pid'],identity['creation_FILETIME'])
++            assert identity==native.handle_identity(process._handle,process.pid)
++            identities[key]=identity
++        for key,identity in identities.items():
+             if identity['pid']==os.getpid():
++                results[str(key)]='CALLER_EXIT_STILL_PENDING'
+                 continue
+             try:
+                 with native.OwnedProcess(identity,allow_terminate=True) as process:
+                     process.terminate()
+-                    process.wait(min(1.,remaining(cleanup=True)))
+-                results[path.name]='VERIFIED_HANDLE_TERMINATED_OR_EXITED'
++                    process.wait(native.bounded_wait(claim()['deadline_monotonic'],1.))
++                results[str(key)]='VERIFIED_HANDLE_TERMINATED_OR_EXITED'
+             except native.OriginalProcessGone:
+-                results[path.name]='ORIGINAL_PROCESS_ALREADY_GONE_NO_PID_KILL'
+-        except Exception as exc:
+-            results[path.name]='CLEANUP_UNVERIFIED:'+type(exc).__name__
+-    return results
++                results[str(key)]='ORIGINAL_PROCESS_ALREADY_GONE_NO_PID_KILL'
++            except Exception as exc:
++                results[str(key)]='CLEANUP_UNVERIFIED:'+type(exc).__name__
++        certain=not gate.uncertain()
++        return {'ownership_quiescence_verified':certain,'kernel_cancellation_set':gate.cancelled(),
++                'ownership_uncertainty':not certain,
++                'registered_processes':len(identities),'processes':results,
++                'all_owned_processes_cleaned':certain and all(v in ['VERIFIED_HANDLE_TERMINATED_OR_EXITED','ORIGINAL_PROCESS_ALREADY_GONE_NO_PID_KILL'] for v in results.values())}
+ 
+ 
+ def expected_completion(mode,job):
+@@ -139,19 +204,13 @@
+ def launcher():
+     receipt('launcher')
+     with (W/'BROKER_STDOUT.log').open('xb') as log:
+-        guard()
+-        try:
+-            proc=native.launch_detached(command('broker'),R,log,breakaway=True)
+-        except OSError as exc:
+-            once(W/'BREAKAWAY_DENIAL.json',{'winerror':exc.winerror,'errno':exc.errno,
+-                 'message':str(exc),'child_created':False,'retry_performed':False,
+-                 'observed_host_capability_failure':True})
+-            return 19
+-        created('broker',proc)
++        proc=spawn_owned('broker',command('broker'),R,log,detached=True)
+         try:
+             code=proc.wait(timeout=min(15.,remaining()))
+         except BaseException:
+-            proc.kill();proc.wait(timeout=max(.1,min(2.,remaining(cleanup=True))))
++            with ownership() as gate:
++                gate.set_cancel();proc.kill()
++                proc.wait(timeout=native.bounded_wait(claim()['deadline_monotonic'],2.))
+             raise
+     once(W/'LAUNCHER_COMPLETE.json',{'broker_native_pid':proc.pid,'broker_actual_exit_code':code})
+     return code
+@@ -161,9 +220,7 @@
+     own=receipt('broker');context=native.current_job()
+     assert context['in_job'] is False,'Broker remains in inherited tool Job'
+     with (W/'SUPERVISOR_STDOUT.log').open('xb') as log:
+-        guard()
+-        proc=native.launch_detached(command('supervisor'),R,log,breakaway=False)
+-        created('supervisor',proc)
++        proc=spawn_owned('supervisor',command('supervisor'),R,log,detached=True)
+     once(W/'BROKER_COMPLETE.json',{'broker_identity':own['identity'],'supervisor_native_pid':proc.pid,
+                                   'outside_inherited_job':True,'broker_handle_not_retained':True})
+     return 0
+@@ -185,10 +242,7 @@
+             guard();time.sleep(.02)
+     if mode in ['tree','loss_tree']:
+         childmode='grandchild' if mode=='tree' else 'grandchild_loss'
+-        guard()
+-        proc=subprocess.Popen(command('worker',childmode),cwd=R,
+-                              stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+-        created('worker_'+childmode,proc)
++        proc=spawn_owned('worker_'+childmode,command('worker',childmode),R,subprocess.DEVNULL)
+         once(W/(mode.upper()+'.json'),{'identity':native.own_identity(),'grandchild_native_pid':proc.pid})
+         while True:
+             guard();time.sleep(.02)
+@@ -210,7 +264,9 @@
+         guard()
+         job='Local\\P16_R6_SYNTHETIC_'+str(os.getpid())+'_'+mode
+         outcomes[mode]=native.supervise(command('worker',mode),R,W/(mode+'.log'),job,
+-                     2. if mode=='tree' else 10.,total_deadline=claim()['deadline_monotonic']-5,guard=guard)
++                     2. if mode=='tree' else 10.,total_deadline=claim()['deadline_monotonic'],guard=guard,
++                     ownership=ownership(),
++                     spawn=lambda cmd,cwd,log,**kwargs:spawn_owned('worker_'+mode,cmd,cwd,log,**kwargs))
+         complete=J(W/'NORMAL_DONE.json') if mode=='normal' else None
+         decisions[mode]=native.classify_terminal(outcomes[mode],complete,expected_completion(mode,job))
+     tree=wait_file(W/'IDENTITY_worker_tree.json')
+@@ -230,7 +286,9 @@
+     wait_file(W/'INJECT_SUPERVISOR_LOSS.json')
+     native.supervise(command('worker','loss_tree'),R,W/'loss_tree.log',
+                      'Local\\P16_R6_SYNTHETIC_'+str(os.getpid())+'_loss',15.,
+-                     total_deadline=claim()['deadline_monotonic']-5,guard=guard)
++                     total_deadline=claim()['deadline_monotonic'],guard=guard,
++                     ownership=ownership(),
++                     spawn=lambda cmd,cwd,log,**kwargs:spawn_owned('worker_loss_tree',cmd,cwd,log,**kwargs))
+     raise RuntimeError('Injected owned supervisor loss did not happen')
+ 
+ 
+@@ -246,20 +304,21 @@
+          'one_exercise':True,'synthetic_only':True,'retries':0,'start_monotonic':start,
+          'deadline_monotonic':deadline,'start_UTC':wall.isoformat(),
+          'deadline_UTC':(wall+datetime.timedelta(seconds=deadline-start)).isoformat()})
+-    result={'schema':'R6_NATIVE_LIFECYCLE_RESULT_V2','mission':reg['mission'],
++    result={'schema':'R6_NATIVE_LIFECYCLE_RESULT_V3','mission':reg['mission'],
+             'registration_sha256':sha(REG),'driver_context':native.current_job(),
+             'synthetic_only':True,'real_A_calls':0,'E_Final_access':False,
+             'OS_settings_modified':False,'scientific_stage_started':False,'host_capability_pass':False}
+     error=None
+     try:
++        ownership(create=True)
+         with (W/'LAUNCHER_STDOUT.log').open('xb') as log:
+-            guard()
+-            proc=subprocess.Popen(command('launcher'),cwd=R,stdout=log,stderr=subprocess.STDOUT)
+-            created('launcher',proc)
++            proc=spawn_owned('launcher',command('launcher'),R,log)
+             try:
+                 code=proc.wait(timeout=min(30.,remaining()))
+             except BaseException:
+-                proc.kill();proc.wait(timeout=max(.1,min(2.,remaining(cleanup=True))))
++                with ownership() as gate:
++                    gate.set_cancel();proc.kill()
++                    proc.wait(timeout=native.bounded_wait(claim()['deadline_monotonic'],2.))
+                 raise
+         result['launcher_actual_exit_code']=code
+         if (W/'BREAKAWAY_DENIAL.json').exists():
+@@ -278,8 +337,10 @@
+                 once(W/'INJECT_SUPERVISOR_LOSS.json',{'owned_identity':live['identity']})
+                 child=wait_file(W/'IDENTITY_worker_loss_tree.json')
+                 grandchild=wait_file(W/'IDENTITY_worker_grandchild_loss.json')
+-                supervisor_handle.terminate()
+-                actual_exit=supervisor_handle.wait(min(5.,remaining()))
++                # Injection cannot kill a creator midway through durable handoff.
++                with ownership():
++                    supervisor_handle.terminate()
++                    actual_exit=supervisor_handle.wait(native.bounded_wait(claim()['deadline_monotonic'],5.))
+             native.wait_identity_dead(child['identity'],min(5.,remaining()))
+             native.wait_identity_dead(grandchild['identity'],min(5.,remaining()))
+             loss_outcome={'returncode':actual_exit,'killed_at_deadline':False,
+@@ -303,14 +364,14 @@
+         result.update(mandatory_host_gate='UNACCEPTED_FIXTURE_ERROR',fixture_error_type=type(exc).__name__,
+                       fixture_error=str(exc),host_capability_pass=False)
+     finally:
+-        cancel('Fixture complete or exception; close all owned process handles')
+-        result['owned_cleanup']=cleanup()
+-        # A just-created role must see cancellation before it can launch again.
+-        # Reconcile once more after allowing its atomic identity receipt to finish.
+-        time.sleep(min(.1,remaining(cleanup=True)))
+-        result['owned_cleanup'].update(cleanup())
+-        cleanup_ok=all(not v.startswith('CLEANUP_UNVERIFIED:') for v in result['owned_cleanup'].values())
+-        result['all_published_owned_processes_cleaned']=cleanup_ok
++        finalization=native.finalize_owned(lambda:cancel('Fixture complete or exception'),cleanup)
++        result['finalization']=finalization
++        clean=finalization['cleanup']
++        cleanup_ok=(finalization['all_finalization_actions_succeeded'] and type(clean) is dict
++                    and clean.get('ownership_quiescence_verified') is True
++                    and clean.get('kernel_cancellation_set') is True
++                    and clean.get('all_owned_processes_cleaned') is True)
++        result['all_owned_processes_cleaned']=cleanup_ok
+         if not cleanup_ok:
+             result['host_capability_pass']=False
+             result['mandatory_host_gate']='UNACCEPTED_CLEANUP'
+@@ -321,11 +382,11 @@
+         result['files']=[{'path':f.relative_to(R).as_posix(),'sha256':sha(f),'bytes':f.stat().st_size}
+                          for f in sorted(W.iterdir()) if f.is_file()]
+         result['completed_UTC']=datetime.datetime.now(datetime.timezone.utc).isoformat()
+-        once(E/'NATIVE_LIFECYCLE_RESULT_2.json',result)
++        once(E/'NATIVE_LIFECYCLE_RESULT_3.json',result)
+     print(json.dumps({'host_capability_pass':result['host_capability_pass'],
+                       'mandatory_host_gate':result['mandatory_host_gate'],
+                       'fixture_error':None if error is None else type(error).__name__,
+-                      'result_sha256':sha(E/'NATIVE_LIFECYCLE_RESULT_2.json')},indent=2))
++                      'result_sha256':sha(E/'NATIVE_LIFECYCLE_RESULT_3.json')},indent=2))
+     return 0 if result['host_capability_pass'] else 19
+ 
+ 
+@@ -337,9 +398,9 @@
+         try:
+             once(W/('FAILURE_'+role+'_'+str(os.getpid())+'.json'),
+                  {'type':type(exc).__name__,'message':str(exc),'identity':native.own_identity()})
+-            cancel('Abnormal owned role exit')
+         finally:
+-            cleanup()
++            finalization=native.finalize_owned(lambda:cancel('Abnormal owned role exit'),cleanup)
++            print(json.dumps({'role_primary_error':type(exc).__name__,'finalization':finalization}),file=sys.stderr,flush=True)
+         raise
+ 
+ 

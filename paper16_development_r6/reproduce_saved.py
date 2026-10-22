@@ -1,0 +1,115 @@
+"""Saved-only STOP verifier. Never imports experiment, native or audit modules."""
+import hashlib
+import json
+from pathlib import Path
+import subprocess
+import stat
+
+R=Path(__file__).resolve().parents[1]
+P=R/'paper16_development_r6'
+E=R/'ops/evidence/2026-10-21/p16-m3-m5-reliability-gated-recovery-r6'
+BASE='e1aab9622a7e63b99335a529d8ad0107f611dc8c'
+
+def C(ok,message):
+    if not ok:raise AssertionError(message)
+
+def public(path):
+    try:name=path.relative_to(R)
+    except ValueError:raise AssertionError('Nonrepository input denied')
+    C(name.parts and all(x not in ['.','..'] for x in name.parts) and ':' not in name.as_posix() and '\\' not in name.as_posix(),'Canonical repository input required')
+    C(not {'work','local_only'} & {x.casefold() for x in name.parts} and path.suffix.lower() not in ['.npz','.npy','.h5','.hdf5','.nwb'],'Saved verifier denies private data: '+str(name))
+    cursor=R
+    for part in [None,*name.parts]:
+        if part is not None:cursor=cursor/part
+        info=cursor.lstat()
+        C(not stat.S_ISLNK(info.st_mode) and not getattr(info,'st_file_attributes',0)&stat.FILE_ATTRIBUTE_REPARSE_POINT,'Redirected input denied before opening')
+    return path
+
+def H(path):
+    with public(path).open('rb') as f:return hashlib.file_digest(f,'sha256').hexdigest()
+
+def J(path):return json.loads(public(path).read_bytes())
+
+def main():
+    core=J(P/'ARCHIVE_CORE_MANIFEST_3.json')
+    for row in core['files']:
+        path=R/row['path']
+        C(path.stat().st_size==row['bytes'] and H(path)==row['sha256'],'Core hash: '+row['path'])
+    pins=J(P/'HISTORICAL_SOURCE_PINS.json')
+    tree={}
+    for record in subprocess.check_output(['git','ls-tree','-r','-z',BASE],cwd=R).split(b'\0'):
+        if record:
+            attributes,name=record.split(b'\t',1)
+            tree[name.decode('utf8')]=attributes.split()[2].decode('ascii')
+    content_checked=opaque_not_reopened=published_journal_text_hashed=0
+    for row in pins['files']:
+        path=R/row['path'];parts=path.relative_to(R).parts
+        opaque=('work' in parts or 'LOCAL_ONLY' in parts or path.suffix.lower() in ['.npz','.npy','.h5','.hdf5','.nwb'])
+        C(tree[row['path']]==row['BASE_git_blob'],'Original BASE blob identity: '+row['path'])
+        if opaque:
+            opaque_not_reopened+=1
+        else:
+            C(H(path)==row['sha256'],'Historical public source changed: '+row['path'])
+            content_checked+=1
+            if path.suffix=='.jsonl' and any(x in path.name.upper() for x in ['JOURNAL','LEDGER']):published_journal_text_hashed+=1
+    receipt=J(E/'NATIVE_LIFECYCLE_EXECUTION_RECEIPT_4.json')
+    stop=J(P/'SCIENTIFIC_STOP.json')
+    C(receipt['actual_exit_code']==1 and receipt['log_sha256']==H(E/'NATIVE_LIFECYCLE_EXECUTION_4.log'),'Actual native failure receipt')
+    C(receipt['registration_sha256']==H(E/'NATIVE_LIFECYCLE_REGISTRATION_4.json'),'Actual frozen registration')
+    C(receipt['independent_approval_sha256']==H(E/'INDEPENDENT_NATIVE_PREFLIGHT_REVIEW_4_BINDING.json'),'Exact prior execution-only approval')
+    trace=public(E/'NATIVE_LIFECYCLE_EXECUTION_4.log').read_text(encoding='utf8')
+    C('Driver/role image differs from the registered real PE' in trace and 'verify_fixture_runtime' in trace,'Original failure operation')
+    C(stop['scientific_verdict']=='STOP_HOST_RELIABILITY_REQUIRED_GATE' and stop['R6_retries']==0,'Immutable first mandatory STOP')
+    C(stop['execution_receipt_sha256']==H(E/'NATIVE_LIFECYCLE_EXECUTION_RECEIPT_4.json') and stop['phase_A_claim_sha256']==H(P/'PHASE_A_CLAIM.json'),'Stop provenance')
+    for k in ['historical_optimizer_states_audited','historical_optimizer_states_admitted','B0_certificates_admitted','R6_tasks_attempted','R6_tasks_numerically_passed','R6_tasks_failed','R6_tasks_incomplete','new_FG_calls','new_FD_calls','new_AD_calls','model_constructor_calls','private_saved_state_reads','fixture_owned_children_created','native_capability_cases_executed']:
+        C(type(stop[k]) is int and stop[k]==0,'Zero actual scientific/private/capability count: '+k)
+    C(stop['R6_tasks_unattempted']==1855 and stop['actual_native_invocations']==1 and stop['M4_manifest_sha256'] is None,'Distinct native invocation versus model attempts')
+    for k in ['M4_complete','M4_independent_acceptance','E_authorized','E_executed','Final_C_access','Final_D_access','phase_B_clock_started','OS_settings_modified','R6_public_push_executed']:
+        C(stop[k] is False,'Forbidden promotion/access: '+k)
+    for n in range(1,5):
+        C(not (P/f'work/native_lifecycle_{n}').exists(),'No created exercise claim/tree')
+        C(not (E/f'NATIVE_LIFECYCLE_RESULT_{n}.json').exists(),'No substituted native result')
+    for name in ['HOST_RELIABILITY_ACCEPTANCE.json','INDEPENDENT_REUSE_PREEXECUTION_REVIEW_BINDING.json','PRIMARY_REUSE_AUDIT_REGISTRATION.json','INDEPENDENT_REUSE_AUDIT_REGISTRATION.json','PURE_REUSE_REPAIR_TEST_RESULT_1.json']:
+        C(not (E/name).exists(),'Unexecuted/unapproved output must remain absent: '+name)
+    for name in ['PRIMARY_REUSE_AUDIT_RESULT.json','PRIMARY_OPTIMIZER_MATRIX.json','PRIMARY_B0_MATRIX.json','M4_MANIFEST.json']:
+        C(not (P/name).exists(),'No scientific/audit success artifact: '+name)
+    targets=J(P/'REUSE_CANDIDATES.json');plan=J(P/'RECOVERY_TASK_PLAN.json')
+    states=targets['optimizer_targets'];b0=targets['B0_targets']
+    C(len(states)==len({x['task']['id'] for x in states})==4616 and len(b0)==len({(x['mouse_id'],x['unit_id']) for x in b0})==216,'Candidate identities only, not admissions')
+    C({origin:sum(x['origin']==origin for x in states) for origin in ['R3','R4','R5']}=={'R3':952,'R4':3040,'R5':624},'Frozen historical origin counts')
+    C(all(x['R6_admitted'] is False and x['R6_audit']=='NOT_EXECUTED' for x in states+b0),'No inherited R6 admission')
+    original=J(R/'paper16_development_r3/results/TASK_PLAN.json')['tasks']
+    remainder=[x for x in original if x['id'] not in {y['task']['id'] for y in states}]
+    C(len(plan['tasks'])==len(remainder)==1855 and [x['task'] for x in plan['tasks']]==remainder,'Exact original ordered1855 difference')
+    C(remainder[0]['id']=='774672366:S01:D:None:11:GLOBAL','Frozen first initializer task, never executed')
+    for n in range(1,4):
+        preservation=J(E/f'CANDIDATE_NATIVE_{n}_PRESERVATION.json')
+        for row in preservation['files']:
+            C(H(R/row['preserved_path' if n==1 else 'preserved'])==row['sha256'],'Rejected candidate source retained')
+    drafts=J(E/'DRAFT_AND_INTERRUPTED_ENGINEERING_INVENTORY.json')
+    for row in drafts['drafts']:
+        C(H(R/row['path'])==row['sha256'] and row['eligible_for_execution'] is False,'Unexecuted drafts retained exactly')
+    C(J(E/'REQUIREMENT_BASELINE.json')['requirement_count']==178,'No requirement shrink')
+    C(subprocess.run(['git','merge-base','--is-ancestor',BASE,'HEAD'],cwd=R,capture_output=True).returncode==0,'Authorized BASE ancestry')
+    publication=P/'PUBLICATION_MANIFEST.json'
+    publication_files=None
+    if publication.exists():
+        proposal=J(publication)
+        C(proposal['public_push_authorized'] is False,'No new public authorization inferred')
+        for row in proposal['files']:
+            C(H(R/row['path'])==row['sha256'] and (R/row['path']).stat().st_size==row['bytes'],'Exact proposed payload')
+        publication_files=proposal['total_publication_files_including_manifest']
+    return {'mission':stop['mission'],'saved_reproduction':'PASS_SAVED_STOP_INTEGRITY_ONLY',
+            'scientific_verdict':stop['scientific_verdict'],'core_files_verified':len(core['files']),
+            'historical_public_source_contents_verified':content_checked,
+            'opaque_historical_BASE_object_pins_verified_without_reopening':opaque_not_reopened,
+            'opaque_historical_current_contents_freshly_verified':False,
+            'historical_published_journal_or_ledger_text_files_hashed':published_journal_text_hashed,
+            'candidate_optimizer_states':4616,
+            'historical_states_newly_audited':0,'historical_states_admitted':0,'B0_admitted':0,
+            'R6_model_attempts':0,'R6_unattempted':1855,'actual_native_invocations':1,'actual_native_exit':1,
+            'private_arrays_or_unpublished_fit_journals_opened_by_verifier':0,'models_or_native_or_auditors_executed_by_verifier':0,
+            'E_Final_access':False,'M4_complete':False,'publication_files_if_prepared':publication_files,
+            'engineering_or_scientific_PASS_inferred':False}
+
+if __name__=='__main__':print(json.dumps(main(),indent=2))

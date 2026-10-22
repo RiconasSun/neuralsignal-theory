@@ -1,0 +1,1 @@
+JSON Mission Spec applies codex-code-wrapper guidance. Full-workspace CLI staging would copy protected private caches and violate owner custody and exact-namespace requirements; higher-priority owner scope overrides that mechanism. Use exact local edits and explicit namespace-only writes; no nested full-workspace CLI or OpenRouter. No additional permission is inferred.

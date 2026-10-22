@@ -1,0 +1,27 @@
+{
+  "mission": "P16-M3-M5-RELIABILITY-GATED-RECOVERY-R6",
+  "registered_before_actual_host_investigation": true,
+  "root_cause_may_be_UNKNOWN": true,
+  "OS_settings_changes_authorized": false,
+  "minimum_available_memory_bytes": 2147483648,
+  "minimum_target_free_disk_bytes": 8589934592,
+  "required_tests": [
+    "native suspended-child Job assignment before resume",
+    "descendant kill at deadline",
+    "worker loss/nonzero exit STOP",
+    "zero exit without complete certificate STOP",
+    "detached broker outside inherited tool Job",
+    "detached supervisor alive after own launcher/broker exit",
+    "no silent retry after durable consumption",
+    "immutable ordered LF/fsync journal",
+    "clock rollback/boot change/deadline no extension",
+    "source-role denial E/Final",
+    "full original production numerical oracles"
+  ],
+  "failure_action": "STOP_HOST_RELIABILITY_REQUIRED_GATE before real A",
+  "untested_limits": [
+    "future machine shutdown/sleep/logout/admin actions",
+    "tool-host implementations that explicitly terminate detached unrelated processes",
+    "independent laboratory or malicious-admin protection"
+  ]
+}

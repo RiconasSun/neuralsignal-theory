@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r6\test_native_lifecycle.py", line 427, in <module>
+    raise SystemExit(exercise() if sys.argv[1]=='exercise' else run_role(sys.argv[1]))
+                     ^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r6\test_native_lifecycle.py", line 315, in exercise
+    reg=guard(allow_unstarted=True)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r6\test_native_lifecycle.py", line 77, in guard
+    verify_fixture_runtime(reg)
+  File "C:\Users\85993\Desktop\codebase\neuralsignal institute\paper16_development_r6\test_native_lifecycle.py", line 56, in verify_fixture_runtime
+    assert os.path.normcase(native.own_identity()['image'])==os.path.normcase(str(FIXTURE_PYTHON)),'Driver/role image differs from the registered real PE'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Driver/role image differs from the registered real PE

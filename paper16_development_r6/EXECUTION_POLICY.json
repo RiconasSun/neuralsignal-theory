@@ -1,0 +1,67 @@
+{
+  "mission": "P16-M3-M5-RELIABILITY-GATED-RECOVERY-R6",
+  "base": "e1aab9622a7e63b99335a529d8ad0107f611dc8c",
+  "Phase_A_seconds": 86400,
+  "Phase_B_seconds": 172800,
+  "historical_candidates": {
+    "R3": 952,
+    "R4": 3040,
+    "R5": 624,
+    "total": 4616,
+    "B0": 216
+  },
+  "new_attempts_max": 1855,
+  "max_parameters": 368,
+  "optimizer_workers": 1,
+  "FG_per_attempt_max": 6000,
+  "FG_total_max": 11130000,
+  "accepted_per_attempt_max": 1500,
+  "accepted_total_max": 2782500,
+  "FD_per_attempt_max": "24P",
+  "FD_global_conservative_max": 16383360,
+  "AD_per_attempt_max": 3,
+  "AD_total_max": 5565,
+  "analytic_per_attempt_max": 3,
+  "analytic_total_max": 5565,
+  "options": {
+    "ftol": 0.0,
+    "gtol": 2e-06,
+    "maxiter": 1500,
+    "maxfun": 6000,
+    "maxls": 40,
+    "maxcor": 10
+  },
+  "PG_max": 1e-05,
+  "AD_scaled_error_max": 1e-08,
+  "FD_acceptance_h": 1e-05,
+  "FD_scaled_error_max": 2e-05,
+  "FD_scan_steps": [
+    0.001,
+    0.0001,
+    1e-05,
+    1e-06
+  ],
+  "lambda": 1.0,
+  "lambda_origin": "HISTORICAL_R3_B1_ONLY_B_SELECTION",
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "original_initializer_only": true,
+  "first_task": "774672366:S01:D:None:11:GLOBAL",
+  "new_stage_count": 1,
+  "retries": 0,
+  "deadline_resets": 0,
+  "new_neural_sources": 0,
+  "E_authorized": false,
+  "Final_C_D_authorized": false,
+  "M6_P17_authorized": false,
+  "public_transmission_authorized": false,
+  "historical_ftol": {
+    "R3": 1e-12,
+    "R4": 0.0,
+    "R5": 0.0
+  },
+  "no_counterfactual_execution_equivalence": true
+}

@@ -1,0 +1,112 @@
+{
+  "mission": "P16-M3-M5-RELIABILITY-GATED-RECOVERY-R6",
+  "created_UTC": "2026-10-22T03:04:04.364003+00:00",
+  "original_source": "ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/PRIMARY_SAVED_AUDIT_V2.py",
+  "original_sha256": "28c0a01329cdc97da844aceafbaae9eaf334e56d39db46b202f79034210e2c67",
+  "new_source": "ops/evidence/2026-10-21/p16-m3-m5-reliability-gated-recovery-r6/PRIMARY_REUSE_AUDIT_R6.py",
+  "new_sha256": "6adce7f0ab6e817e62b3ab52fcf7e90485db42718ea100e2daeafd7c94dc6ec5",
+  "explicit_substitutions": [
+    {
+      "old": "One registered primary R5 admission pass.",
+      "new": "One registered primary R6 admission pass.",
+      "occurrences": 1
+    },
+    {
+      "old": "P = R / 'paper16_development_r5'",
+      "new": "P = R / 'paper16_development_r6'\nFIVE = R / 'paper16_development_r5'",
+      "occurrences": 1
+    },
+    {
+      "old": "Q = R / 'paper16_shutdown_recovery_r5_protocol'",
+      "new": "Q = P",
+      "occurrences": 1
+    },
+    {
+      "old": "MISSION = 'P16-M3-M5-SHUTDOWN-RECOVERY-R5'",
+      "new": "MISSION = 'P16-M3-M5-RELIABILITY-GATED-RECOVERY-R6'",
+      "occurrences": 1
+    },
+    {
+      "old": "BASE = 'b7bb1227379462c2c7a1cef40ab0d0e99a6d020b'",
+      "new": "BASE = 'e1aab9622a7e63b99335a529d8ad0107f611dc8c'",
+      "occurrences": 1
+    },
+    {
+      "old": "if origin == 'R4':",
+      "new": "if origin in ['R4','R5']:",
+      "occurrences": 1
+    },
+    {
+      "old": "pins(Q/'SOURCE_PINS.json'); pins(V/'SOURCE_PINS.json'); pins(O/'SOURCE_PINS.json')",
+      "new": "manifest(P/'HISTORICAL_SOURCE_PINS.json'); pins(V/'SOURCE_PINS.json'); pins(O/'SOURCE_PINS.json')\n    manifest(FIVE/'LOCAL_ARCHIVE_MANIFEST.json')",
+      "occurrences": 1
+    },
+    {
+      "old": "    from paper16_development_r4 import models as models4",
+      "new": "    from paper16_development_r4 import models as models4\n    from paper16_development_r5 import models as models5",
+      "occurrences": 1
+    },
+    {
+      "old": "sum(t['origin']=='R4' for t in targets['optimizer_targets'])==3040,",
+      "new": "sum(t['origin']=='R4' for t in targets['optimizer_targets'])==3040 and sum(t['origin']=='R5' for t in targets['optimizer_targets'])==624,",
+      "occurrences": 1
+    },
+    {
+      "old": "    with contextlib.ExitStack() as stack:",
+      "new": "    r5term, provenance = original_R5_provenance(prior)\n    require({t['task']['id'] for t in targets['optimizer_targets'] if t['origin']=='R5'}==set(r5term), 'All and only624 originally completed R5 candidates')\n    with contextlib.ExitStack() as stack:",
+      "occurrences": 1
+    },
+    {
+      "old": "for mod in [models3,models4]:",
+      "new": "for mod in [models3,models4,models5]:",
+      "occurrences": 1
+    },
+    {
+      "old": "            folder=(R/target['result_path']).parent",
+      "new": "            require(origin in ['R3','R4','R5'], 'Unknown historical origin denied')\n            folder=(R/target['result_path']).parent",
+      "occurrences": 1
+    },
+    {
+      "old": "folder==(O if origin=='R3' else V)/'work/fits'",
+      "new": "folder=={'R3':O,'R4':V,'R5':FIVE}[origin]/'work/fits'",
+      "occurrences": 1
+    },
+    {
+      "old": "            if origin=='R4':require(r4term[task['id']]['result_sha256']==target['result_sha256'] and r4term[task['id']]['result_path']==target['result_path'] and r4term[task['id']]['PG']==result['projected_gradient_inf'], 'R4 terminal journal binding')",
+      "new": "            if origin in ['R4','R5']:\n                terminal={'R4':r4term,'R5':r5term}[origin][task['id']]\n                require(terminal['result_sha256']==target['result_sha256'] and terminal['result_path']==target['result_path'] and terminal['PG']==result['projected_gradient_inf'], 'Original R4/R5 completed terminal binding')",
+      "occurrences": 1
+    },
+    {
+      "old": "constructor=(models3 if origin=='R3' else models4).Objective",
+      "new": "constructor={'R3':models3,'R4':models4,'R5':models5}[origin].Objective",
+      "occurrences": 1
+    },
+    {
+      "old": "    CLAIM = load(P/'PHASE_A_CLAIM.json')",
+      "new": "    CLAIM = load(P/'PHASE_A_CLAIM.json')\n    require_host_acceptance()",
+      "occurrences": 1
+    },
+    {
+      "old": "    guard(); path = Path(path); st = path.stat()",
+      "new": "    guard(); path = local_file(path); st = path.stat()",
+      "occurrences": 1
+    },
+    {
+      "old": "\ndef execute():",
+      "new": "\n\ndef local_file(path):\n    import stat\n    path=Path(path)\n    name=path.relative_to(R).as_posix()\n    require(name and '\\\\' not in name and ':' not in name and all(x not in ['.','..'] for x in Path(name).parts), 'Canonical local saved evidence')\n    cursor=R\n    for component in Path(name).parts:\n        cursor=cursor/component;entry=cursor.lstat()\n        require(not stat.S_ISLNK(entry.st_mode) and not getattr(entry,'st_file_attributes',0)&stat.FILE_ATTRIBUTE_REPARSE_POINT, 'No redirected saved evidence')\n    return path\n\n\ndef require_host_acceptance():\n    value=load(E/'HOST_RELIABILITY_ACCEPTANCE.json')\n    require(value['decision']=='ACCEPTED_R6_HOST_RELIABILITY' and value['open_P0']==value['open_P1']==0, 'New independent actual host reliability acceptance required')\n    require(value['phase_claim_sha256']==sha(P/'PHASE_A_CLAIM.json'), 'Host accepted exact unique PhaseA')\n    for row in value['bound_files']:identity(R/row['path'],row['sha256'],row.get('bytes'))\n    require(value['real_A_optimization_authorized'] is False, 'Saved audit only; no realA unlock from host gate')\n\n\ndef original_R5_provenance(prior):\n    snap=manifest(FIVE/'EXTERNAL_INTERRUPTION_SNAPSHOT.json')\n    stop=load(R/'ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/EXTERNAL_SCIENTIFIC_STOP.json')\n    reg=load(R/'ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/EXTERNAL_CLOSEOUT_REGISTRATION_1.json')\n    require((snap['attempted'],snap['completed'],snap['partial'],snap['unattempted'])==(625,624,1,1854), 'Frozen R5 interrupted accounting')\n    require(stop['scientific_status']=='STOP_EXECUTION_INTERRUPTED_REQUIRED_GATE' and stop['M4_complete'] is False and stop['native_worker_exit_code'] is None, 'R5 globalSTOP not reclassified or given invented exit')\n    expected={x['path'] for x in snap['files']};actual=set(reg['snapshot_extra_files'])|{x['path'] for x in reg['original_claims']}\n    for name in reg['snapshot_roots']:\n        for current,dirs,files in os.walk(R/name,followlinks=False):\n            for entry in [*dirs,*files]:local_file(Path(current)/entry)\n            actual.update((Path(current)/x).relative_to(R).as_posix() for x in files)\n    require(actual==expected,'Complete R5 saved inventory including partial, no missing/extra states')\n    rows=prior.rows(FIVE/'results/FIT_JOURNAL.jsonl')\n    attempts=[x['task'] for x in rows if x['event']=='ATTEMPTED'];completed=[x for x in rows if x['event']=='COMPLETED']\n    oldplan=[x['task'] for x in load(R/'paper16_shutdown_recovery_r5_protocol/RECOVERY_TASK_PLAN.json')['tasks']]\n    require(attempts==oldplan[:625] and [x['task'] for x in completed]==oldplan[:624] and not any(x['event']=='FAILED' for x in rows), 'Original ordered625/624/1 R5 prefix')\n    require(attempts[-1]['id']=='774672366:S01:D:None:11:GLOBAL','Original partial not eligible')\n    for name in ['SUPERVISION.json','SCIENTIFIC_STOP.json','SUPERVISOR_FAILURE.json','WORKER_COMPLETE.json']:\n        require(not (FIVE/'results'/name).exists(),'No fabricated R5 original native/complete terminal')\n    ledger=prior.rows(R/'ops/evidence/2026-10-21/p16-m3-m5-shutdown-recovery-r5/INDEPENDENT_R5_M4_NEW_STATE_LEDGER.jsonl')\n    require([x['task'] for x in ledger]==oldplan[:624],'Existing independent prefix only; not new admission')\n    for entry in ledger:\n        require(entry['origin']=='R5' and entry['status']=='INDEPENDENTLY_QUALIFIED_NEW_STATE' and entry['new_evaluations']==0,'Original R5 observer identity')\n        for row in entry['files']:identity(R/row['path'],row['sha256'],row.get('bytes'))\n    partial=FIVE/'work/fits'/hashlib.sha256(attempts[-1]['id'].encode()).hexdigest()\n    require({x.name for x in partial.iterdir()}=={'ATTEMPT.json','initial.npz','CLIENT.json','CLIENT_STDERR.log','CALLS.jsonl','ACCEPTED.jsonl','DIAGNOSTIC_CALLS.jsonl'},'Partial ineligible; no endpoint certificate')\n    return {x['task']['id']:x for x in completed},{'R5_attempts':625,'R5_completed_candidates':624,'R5_partial':1,'R5_unattempted':1854,'new_R5_eligibility_audit_pending':True,'original_globalSTOP_preserved':True}\n\n\ndef execute():",
+      "occurrences": 1
+    }
+  ],
+  "new_source_only_not_audit_execution": true,
+  "new_host_gate_required_before_private_evidence": "HOST_RELIABILITY_ACCEPTANCE.json",
+  "private_arrays_fit_journals_or_constructor_calls": 0,
+  "new_real_optimization_calls": 0,
+  "review_and_synthetic_tests_pending": true,
+  "counts": {
+    "R3": 952,
+    "R4": 3040,
+    "R5": 624,
+    "optimizer": 4616,
+    "B0": 216
+  }
+}

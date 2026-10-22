@@ -1,0 +1,78 @@
+{
+  "mission": "P16-M3-M5-RELIABILITY-GATED-RECOVERY-R6",
+  "registered_UTC": "2026-10-22T02:56:49.465630+00:00",
+  "phase_claim_sha256": "e1ce9b98b8953c8ccd566333ad2bf11dc828522688a8c8bcc165435a6d61a727",
+  "source_files": [
+    {
+      "path": "paper16_development_r6/native_process.py",
+      "sha256": "fedca80618b6bf05f5b158d566e79e5a4b0e8c1ef49bc78360d6948a80caadef"
+    },
+    {
+      "path": "paper16_development_r6/test_native_lifecycle.py",
+      "sha256": "11c06153e60a05bb2d2b37c026652443d541f95d4e155cfc53ad9b9adfd15018"
+    },
+    {
+      "path": "paper16_dev_r3/windows_job.py",
+      "sha256": "8fbe70bb6083177ea5a57b64b77ec7902e6735d2add2010206d2e364f43058af"
+    }
+  ],
+  "requirements_sha256": "9d3ce2043b20da370d7c0defb494a8e4cae89d4859b72a312cbf7bc3ff5a403e",
+  "host_audit_sha256": "49f2c0b0bb9def3087fbe831b128f152c575b2e3d98b0429bc7d6b0fcb70b5ae",
+  "registered_command": [
+    "paper16_m1/work/runtime/Scripts/python.exe",
+    "-B",
+    "-m",
+    "paper16_development_r6.test_native_lifecycle",
+    "exercise"
+  ],
+  "synthetic_output_root": "paper16_development_r6/work/native_lifecycle_2",
+  "result_path": "ops/evidence/2026-10-21/p16-m3-m5-reliability-gated-recovery-r6/NATIVE_LIFECYCLE_RESULT_2.json",
+  "test_cases": [
+    {
+      "id": "H01",
+      "oracle": "Actual launcher creates detached broker with CREATE_BREAKAWAY_FROM_JOB; broker and supervisor outside inherited tool Job; fail without fallback if denied"
+    },
+    {
+      "id": "H02",
+      "oracle": "Actual launcher and broker exit0 before independent driver sees supervisor alive; no interactive console or retained broker handle required"
+    },
+    {
+      "id": "H03",
+      "oracle": "Actual Job suspended assignment/resume; exact native Job membership; strict exact frozen completion certificate required for native0 acceptance"
+    },
+    {
+      "id": "H04",
+      "oracle": "Injected worker17, emptyzero, missing/malformed/altered-identity completion all produce STOP via shared strict production-capable native classifier; no retries"
+    },
+    {
+      "id": "H05",
+      "oracle": "2second deadline kills own synthetic worker and grandchild under kill-on-close Job"
+    },
+    {
+      "id": "H06",
+      "oracle": "Retained creationFILETIME/image-verified supervisor handle terminated; Job descendants die; shared classifier of actualnativeexit+missingcomplete yieldsSTOP"
+    },
+    {
+      "id": "H07",
+      "oracle": "Immutable single claim denies duplicate; no overwriting original evidence"
+    }
+  ],
+  "first_actual_host_capability_failure_action": "STOP_HOST_RELIABILITY_REQUIRED_GATE; do not change oracle or retry launch inside inherited Job",
+  "max_fixture_seconds": 120,
+  "neural_arrays_models_or_network": false,
+  "OS_settings_changes": false,
+  "scientific_stage_start": false,
+  "new_real_A_fits_authorized": false,
+  "before_actual_native_synthetic_execution": true,
+  "independent_preexecution_review_pending": true,
+  "candidate": 2,
+  "supersedes_unexecuted_candidate": 1,
+  "previous_rejected_review_sha256": "95babd8326c5e3de4c808980b40448e1cb08b77062f28c2d6ab72e70a8ccc9ca",
+  "candidate1_preservation_sha256": "1f1e69f5015de47e2f60efe149123d907a2eea3e34fc31865482222a6c2361f0",
+  "repair_notes": [
+    "Shared strict native terminal classifier rejects missing/malformed/wrong-identity completion even native0; native containment is not scientificPASS",
+    "One original120-second fixture clock with five-second cleanup reserve; all waits bounded and driver finally cancels launches, terminates only verified owned handles, reconciles cleanup",
+    "Stable native handles verified by creationFILETIME/image; retain supervisor handle through liveness and injected termination; no PID taskkill",
+    "Publish both actualPopen-handle and self-role identities before ownership transfer; retain rejectedsourcebytecopies and no actualcandidate1exercise"
+  ]
+}

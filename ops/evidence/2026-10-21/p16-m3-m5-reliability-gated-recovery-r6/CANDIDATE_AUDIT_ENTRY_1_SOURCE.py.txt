@@ -1,0 +1,24 @@
+"""Repository-module entry; individual auditors enforce actual saved-only gates."""
+import hashlib
+import json
+from pathlib import Path
+import runpy
+import sys
+
+R=Path(__file__).resolve().parents[1]
+E=R/'ops/evidence/2026-10-21/p16-m3-m5-reliability-gated-recovery-r6'
+
+def main(role):
+    names={'primary':'PRIMARY_REUSE_AUDIT_R6.py',
+           'independent':'INDEPENDENT_REUSE_AUDIT_R6.py'}
+    if role not in names:raise ValueError('One exact registered audit role required')
+    if Path.cwd()!=R:raise RuntimeError('Audit must start at the registered repository root')
+    freeze=json.loads((E/'REUSE_AUDIT_PREEXECUTION_FREEZE.json').read_bytes())
+    row=[v for v in freeze['bound_files'] if v['path']==Path(__file__).relative_to(R).as_posix()]
+    if len(row)!=1 or row[0]['sha256']!=hashlib.sha256(Path(__file__).read_bytes()).hexdigest():
+        raise RuntimeError('Exact audit entry source must be prospectively frozen')
+    runpy.run_path(str(E/names[role]),run_name='__main__')
+
+if __name__=='__main__':
+    if len(sys.argv)!=2:raise SystemExit('Usage: python -B -m paper16_development_r6.audit_entry primary|independent')
+    main(sys.argv[1])

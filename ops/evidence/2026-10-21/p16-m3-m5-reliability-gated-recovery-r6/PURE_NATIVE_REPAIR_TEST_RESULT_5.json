@@ -1,0 +1,247 @@
+{
+  "mission": "P16-M3-M5-RELIABILITY-GATED-RECOVERY-R6",
+  "scope": "AST_ONLY_PREDICATE_AND_IN_MEMORY_FAKE_PROCESS_TESTS",
+  "registered_test_sha256": "979ec874ae075e559ab730899efc16763454e306c17164243ec60ecf8b4c4bf6",
+  "source_files": [
+    {
+      "path": "paper16_development_r6/native_process.py",
+      "sha256": "a90ac375cdfb7caae07aa322baa4877bd038164a5a7ba1dce0c8712650592899",
+      "bytes": 13822
+    },
+    {
+      "path": "paper16_development_r6/test_native_lifecycle.py",
+      "sha256": "882be97a0d6bd3ca9adc1d1d8e5e93e4e7e592c9cfa5cb1256a5c5b1750b3c41",
+      "bytes": 22112
+    }
+  ],
+  "tests": [
+    {
+      "name": "strict_reject_bool_int",
+      "status": "PASS"
+    },
+    {
+      "name": "strict_reject_int_float",
+      "status": "PASS"
+    },
+    {
+      "name": "strict_reject_nested_bool",
+      "status": "PASS"
+    },
+    {
+      "name": "strict_reject_nested_float",
+      "status": "PASS"
+    },
+    {
+      "name": "strict_reject_nan",
+      "status": "PASS"
+    },
+    {
+      "name": "strict_reject_inf",
+      "status": "PASS"
+    },
+    {
+      "name": "strict_reject_nonstringkey",
+      "status": "PASS"
+    },
+    {
+      "name": "strict_reject_tuple",
+      "status": "PASS"
+    },
+    {
+      "name": "strict_equal_nested_accepts",
+      "status": "PASS"
+    },
+    {
+      "name": "strict_native_field_returncode_True",
+      "status": "PASS"
+    },
+    {
+      "name": "strict_native_field_returncode_1.0",
+      "status": "PASS"
+    },
+    {
+      "name": "strict_native_field_returncode_17",
+      "status": "PASS"
+    },
+    {
+      "name": "strict_native_field_assigned_before_resume_1",
+      "status": "PASS"
+    },
+    {
+      "name": "strict_native_field_native_job_tree_enforced_1",
+      "status": "PASS"
+    },
+    {
+      "name": "strict_native_field_killed_at_deadline_None",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid_expected_None",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid_expected_{}",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid_expected_[]",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid_expected_{'n': nan}",
+      "status": "PASS"
+    },
+    {
+      "name": "cancel_create_failure_still_cleans",
+      "status": "PASS"
+    },
+    {
+      "name": "cancel_write_failure_still_cleans",
+      "status": "PASS"
+    },
+    {
+      "name": "cancel_flush_failure_still_cleans",
+      "status": "PASS"
+    },
+    {
+      "name": "cancel_fsync_failure_still_cleans",
+      "status": "PASS"
+    },
+    {
+      "name": "cancel_and_cleanup_failures_both_preserved",
+      "status": "PASS"
+    },
+    {
+      "name": "silent_breakaway_0x3000_omits_explicit_flag",
+      "status": "PASS"
+    },
+    {
+      "name": "explicit_breakaway_only_if_permitted",
+      "status": "PASS"
+    },
+    {
+      "name": "outside_job_no_breakaway_flag",
+      "status": "PASS"
+    },
+    {
+      "name": "unsupported_breakaway_denied_before_Popen",
+      "status": "PASS"
+    },
+    {
+      "name": "malformed_job_flags_rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "zero_deadline_not_extended_by_minimum_wait",
+      "status": "PASS"
+    },
+    {
+      "name": "fake_kernel_mutex_state_0",
+      "status": "PASS"
+    },
+    {
+      "name": "fake_kernel_mutex_state_128",
+      "status": "PASS"
+    },
+    {
+      "name": "fake_kernel_mutex_state_258",
+      "status": "PASS"
+    },
+    {
+      "name": "fake_kernel_mutex_state_4294967295",
+      "status": "PASS"
+    },
+    {
+      "name": "publication_delay_cancel_serializes_and_forbids_late_birth",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_cancel_AST_kernel_event_precedes_disk_failure",
+      "status": "PASS"
+    },
+    {
+      "name": "only_one_Popen_site_inside_spawn_owned",
+      "status": "PASS"
+    },
+    {
+      "name": "native_supervise_has_no_direct_Popen_bypass",
+      "status": "PASS"
+    },
+    {
+      "name": "no_PID_taskkill_calls",
+      "status": "PASS"
+    },
+    {
+      "name": "no_old_candidate2_names",
+      "status": "PASS"
+    },
+    {
+      "name": "fixed_real_PE_command_independent_of_sys_executable",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime_guard_rejects_registered_path",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime_guard_rejects_registered_hash",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime_guard_rejects_loader_evidence_hash",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime_guard_rejects_loader_base_path",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime_guard_rejects_loader_base_hash",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime_guard_rejects_actual_PE_hash",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime_guard_rejects_current_executable",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime_guard_rejects_actual_process_image",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime_guard_rejects_site_enabled",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime_guard_rejects_bytecode_enabled",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime_guard_rejects_Python_version",
+      "status": "PASS"
+    },
+    {
+      "name": "strict_PID_FILETIME_image_cleanup_unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "native_handle_primitives_unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "candidate4_namespace_exact",
+      "status": "PASS"
+    }
+  ],
+  "test_count": 55,
+  "failures": 0,
+  "actual_native_fixture_executed": false,
+  "actual_WinAPI_calls": 0,
+  "actual_Popen_calls": 0,
+  "protected_state_reads": 0,
+  "model_or_scientific_calls": 0,
+  "native_candidate_final_freeze_or_approval": false
+}
